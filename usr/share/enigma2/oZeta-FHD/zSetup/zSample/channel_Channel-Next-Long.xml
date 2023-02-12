@@ -1,0 +1,7 @@
+	<!-- *** oZeta - XML Version 2.27 Radio Blue By zSetup v2.0.0 *** -->  
+	<!-- Author lululla : Modules : TempChannelSelectionLong2 + PartChannelSelectionNext2 -->
+
+	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="TempChannelSelectionLong2"/>
+		<panel name="PartChannelSelectionNext2" />
+	</screen>

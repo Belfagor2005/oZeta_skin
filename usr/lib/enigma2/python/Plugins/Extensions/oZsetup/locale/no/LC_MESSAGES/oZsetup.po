@@ -1,0 +1,519 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: oZsetup\n"
+"POT-Creation-Date: 2022-09-14 19:27+0200\n"
+"PO-Revision-Date: 2022-09-14 19:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: It\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: plugin.py\n"
+"X-Poedit-SearchPath-1: Uri.py\n"
+
+#: Uri.py:31
+#, python-format
+msgid "Status Internet: %s:%s -> OK"
+msgstr ""
+
+#: Uri.py:35
+#, python-format
+msgid "Status Internet: %s:%s -> KO"
+msgstr ""
+
+#: Uri.py:38
+msgid "Restart Check 1 Internet."
+msgstr ""
+
+#: Uri.py:42
+msgid "Restart Check 2 Internet."
+msgstr ""
+
+#: Uri.py:99
+msgid "ZPICONS NOT INSTALLED"
+msgstr "ZPICONS IKKE INSTALLERT"
+
+#: Uri.py:116
+msgid ""
+"Plugin mmPicons installed!\n"
+"Restart Gui Please"
+msgstr ""
+"Plugin mmPicons installert!\n"
+"Start Gui på nytt"
+
+#: plugin.py:331
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: plugin.py:332
+msgid "Save"
+msgstr "Lagre"
+
+#: plugin.py:333
+msgid "Preview"
+msgstr "Forhåndsvisning"
+
+#: plugin.py:334
+msgid "Restart"
+msgstr "Start på nytt"
+
+#: plugin.py:339
+msgid "by Lululla"
+msgstr ""
+
+#: plugin.py:383
+msgid "Dismiss all setting changes"
+msgstr "Avvis alle innstillingsendringer"
+
+#: plugin.py:386
+msgid "Save settings and close screen"
+msgstr "Lagre innstillinger og lukk skjermen"
+
+#: plugin.py:389
+msgid "Edit selected"
+msgstr "Rediger valgt"
+
+#: plugin.py:392
+msgid "Load Api-Key"
+msgstr "Last inn API-nøkkel"
+
+#: plugin.py:395
+msgid "Show Picture Preview"
+msgstr "Forhåndsvisning av bilde"
+
+#: plugin.py:398
+msgid "Restart Gui"
+msgstr "Start Gui på nytt"
+
+#: plugin.py:401
+msgid "Save settings"
+msgstr "Lagre innstillinger"
+
+#: plugin.py:404
+msgid "zSetup Info"
+msgstr "zOppsett info"
+
+#: plugin.py:414
+msgid "SKIN SETUP SECTION"
+msgstr "SKIN OPPSETT SEKSJON"
+
+#: plugin.py:416 plugin.py:462
+msgid "Config Menu Image Panel"
+msgstr "Konfigurasjonsmeny Bildepanel"
+
+#: plugin.py:418 plugin.py:464
+msgid "Config Infobar Panels"
+msgstr "Konfigurer infolinjepaneler"
+
+#: plugin.py:420 plugin.py:466
+msgid "Config SecInfobar Panels"
+msgstr "Konfigurer SecInfobar-paneler"
+
+#: plugin.py:422 plugin.py:468
+msgid "Config Channel Panels"
+msgstr "Konfigurer kanalpaneler"
+
+#: plugin.py:424 plugin.py:470
+msgid "Config Volume Panels"
+msgstr "Konfigurer volumpaneler"
+
+#: plugin.py:426 plugin.py:472
+msgid "Config Radio Panels"
+msgstr "Konfigurer radiopaneler"
+
+#: plugin.py:428 plugin.py:474
+msgid "Config MediaPlayer Panels"
+msgstr "Konfigurer MediaPlayer-paneler"
+
+#: plugin.py:430 plugin.py:476
+msgid "Config Eventview Panels"
+msgstr "Konfigurer EPG paneler"
+
+#: plugin.py:432 plugin.py:478
+msgid "Config Logo Image Top"
+msgstr "Konfigurer Logo bilde Top"
+
+#: plugin.py:434 plugin.py:480
+msgid "Config Logo Image Bottom"
+msgstr "Konfigurer Logo bilde Bunn"
+
+#: plugin.py:436
+msgid "API SETUP SECTION"
+msgstr "API SETUP SEKSJON"
+
+#: plugin.py:437 plugin.py:490
+msgid "Config TMDB ApiKey"
+msgstr "Konfigurer TMDB ApiKey"
+
+#: plugin.py:439
+msgid "Load TMDB Apikey from /tmp/apikey.txt"
+msgstr "Last inn TMDB Apikey fra /tmp/apikey.txt"
+
+#: plugin.py:440 plugin.py:494
+msgid "Signup on TMDB and input free personal ApiKey"
+msgstr "Registrer deg på TMDB og skriv inn gratis personlig ApiKey"
+
+#: plugin.py:441 plugin.py:496
+msgid "Configure OMDB APIKEY"
+msgstr "Konfigurer OMDB APIKEY"
+
+#: plugin.py:443
+msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
+msgstr "Last inn OMDB Apikey fra /tmp/omdbkey.txt"
+
+#: plugin.py:444 plugin.py:500
+msgid "Signup on OMDB and input free personal ApiKey"
+msgstr "Registrer deg på IMDB og skriv inn gratis personlig Api-nøkkel"
+
+#: plugin.py:446
+msgid "MISC SETUP SECTION"
+msgstr "DIVERSE OPPSETT DEL"
+
+#: plugin.py:447
+msgid "Install or Open z-Picons Plugin"
+msgstr "Installer eller åpne z-Picons Plugin"
+
+#: plugin.py:448
+msgid "Autoupdate oZeta Skin on both"
+msgstr "Autooppdater oZeta Skin på begge"
+
+#: plugin.py:450 plugin.py:487
+msgid "Check for updates on the oZeta skin server"
+msgstr "Se etter oppdateringer på oZeta skin-serveren"
+
+#: plugin.py:483
+msgid "Install or Open zPicons Plugin by mmark"
+msgstr "Installer eller åpne zPicons Plugin av mmark"
+
+#: plugin.py:485
+msgid "Autoupdate oZeta Skin"
+msgstr "Autooppdater oZeta Skin"
+
+#: plugin.py:492
+msgid "Load your free TMDB Apikey from /tmp/apikey.txt"
+msgstr "Last inn din gratis TMDB Apikey fra /tmp/omdbkey.txt"
+
+#: plugin.py:498
+msgid "Load your free OMDB Apikey from /tmp/omdbkey.txt"
+msgstr "Last inn din gratis OMDB Apikey fra /tmp/omdbkey.txt"
+
+#: plugin.py:502
+msgid "Configure this Section"
+msgstr "Konfigurer denne delen"
+
+#: plugin.py:775
+msgid ""
+"Restart E2 Now..\n"
+"Do you really want to restart GUI now?"
+msgstr ""
+"Start E2 på nytt nå..\n"
+"Vil du virkelig starte GUI på nytt nå?"
+
+#: plugin.py:776
+msgid "Mode Restart"
+msgstr "Modus omstart"
+
+#: plugin.py:945
+msgid "Successfully creating Skin!"
+msgstr "Vellykket å lage Skin!"
+
+#: plugin.py:947
+msgid "Error creating Skin!"
+msgstr "Feil ved opprettelse av skin!"
+
+#: plugin.py:960
+msgid "Import Api Key TMDB from /tmp/apikey.txt?"
+msgstr "Importere Api Key TMDB fra /tmp/apikey.txt?"
+
+#: plugin.py:962 plugin.py:969 plugin.py:989 plugin.py:1011
+#, python-format
+msgid "Missing %s !"
+msgstr "Mangler %s !"
+
+#: plugin.py:967
+msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
+msgstr "Importere Api Key OMDB fra /tmp/omdbkey.txt?"
+
+#: plugin.py:983
+msgid "TMDB ApiKey Imported!"
+msgstr "TMDB ApiKey importert!"
+
+#: plugin.py:987
+msgid "TMDB ApiKey Stored!"
+msgstr "TMDB ApiKey lagret!"
+
+#: plugin.py:1005
+msgid "OMDB ApiKey Imported!"
+msgstr "OMDB ApiKey importert!"
+
+#: plugin.py:1009
+msgid "OMDB ApiKey Stored!"
+msgstr "OMDB ApiKey lagret!"
+
+#: plugin.py:1024
+msgid "Really close without saving settings?"
+msgstr "Virkeligen lukke uten å lagre innstillinger?"
+
+#: plugin.py:1036
+msgid "Reset Config to Defaults Parameters?"
+msgstr "Tilbakestill til standardinnstillinger?"
+
+#: plugin.py:1056
+msgid ""
+"Do you really want to update the zSkin ??\n"
+"Do it at your own risk.\n"
+"Do you want to continue?"
+msgstr ""
+"Vil du virkelig oppdatere zSkin ??\n"
+"Gjør det på egen risiko.\n"
+"Vil du fortsette?"
+
+#: plugin.py:1082
+msgid "NO UPDATE zSkin ON SERVER !"
+msgstr "INGEN OPPDATERING av zSkin PÅ SERVER!"
+
+#: plugin.py:1120
+msgid ""
+"ZSKIN UPDATE\n"
+"PLEASE RESTART GUI"
+msgstr ""
+"ZSKIN OPPDATERING\n"
+"VENNLIGST START GUI på nytt"
+
+#: plugin.py:1122
+msgid "NO EXIST /tmp/ozeta.tar !"
+msgstr "EKSISTER INGEN /tmp/ozeta.tar !"
+
+#: plugin.py:1137
+msgid ""
+"mmPicons Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+"mmPicons Plugin ikke installert!!\n"
+"Vil du virkelig installere nå?"
+
+#: plugin.py:1138
+msgid "Install mmPicons"
+msgstr "Installer mmPicons"
+
+#: plugin.py:1151
+msgid "Data entered for the Weather, do you want to continue the same?"
+msgstr "Data som er lagt inn for været, vil du fortsette det samme?"
+
+#: plugin.py:1155
+msgid ""
+"WeatherPlugin Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+"WeatherPlugin-plugin ikke installert!!\n"
+"Vil du virkelig installere nå?"
+
+#: plugin.py:1156
+msgid "Install WeatherPlugin and Reboot"
+msgstr "Installer WeatherPlugin og start på nytt"
+
+#: plugin.py:1166
+msgid "Install WeatherPlugin"
+msgstr "Installer WeatherPlugin"
+
+#: plugin.py:1179
+msgid "Plugin WeatherPlugin not installed!!!"
+msgstr "Plugin WeatherPlugin ikke installert!!!"
+
+#: plugin.py:1257
+msgid "Back"
+msgstr "Tilbake"
+
+#: plugin.py:1258
+msgid "ApiKey Info"
+msgstr "ApiKey Info"
+
+#: plugin.py:1259
+msgid "Preview Info"
+msgstr "Forhåndsvisningsinformasjon"
+
+#: plugin.py:1260
+msgid "Restart Info"
+msgstr "Start Info"
+
+#: plugin.py:1298
+msgid ""
+"     Exit zSetup\n"
+"\n"
+msgstr ""
+"     Avslutt zSetup\n"
+"\n"
+
+#: plugin.py:1300
+msgid ""
+"     Save and Copy changes in the xml file config\n"
+"\n"
+msgstr ""
+"     Lagre og kopier endringer i xml-filens konfigurasjon\n"
+"\n"
+
+#: plugin.py:1302
+msgid ""
+"     View Pic of Panels preview, in the FullHD mode\n"
+"\n"
+msgstr ""
+"     Se forhåndsvisning av bilde av paneler i FullHD-modus\n"
+"\n"
+
+#: plugin.py:1304
+msgid ""
+"     Restart E2 but not apply changes\n"
+"\n"
+msgstr ""
+"     Start E2 på nytt, men ikke bruk endringer\n"
+"\n"
+
+#: plugin.py:1306
+msgid ""
+"     Reset Config\n"
+"\n"
+msgstr ""
+"     Tilbakestill konfig\n"
+"\n"
+
+#: plugin.py:1308
+msgid ""
+"     Install or Set Weather Plugin if installed\n"
+"\n"
+msgstr ""
+"     Installer eller still inn Weather Plugin hvis installert\n"
+"\n"
+
+#: plugin.py:1310
+msgid "     Menu/Setup/Graphic Interface/OSD Setup\n"
+msgstr "     Meny/Oppsett/Grafisk grensesnitt/OSD-oppsett\n"
+
+#: plugin.py:1311
+msgid "     Alternative Radio Mode= Yes\n"
+msgstr "     Alternativ radiomodus= Ja\n"
+
+#: plugin.py:1321
+msgid "    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
+msgstr "    For bruk The OMDB Covers, kopier omdbkey-filen i skin-mappen:\n"
+
+#: plugin.py:1322
+msgid "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+
+#: plugin.py:1323
+msgid "    Or manually enter the key, created on the OMDB portal'\n"
+msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på OMDB-portalen'\n"
+
+#: plugin.py:1324
+msgid ""
+"    use the virtual keyboard.'\n"
+"\n"
+"\n"
+msgstr ""
+"    bruk det virtuelle tastaturet.'\n"
+"\n"
+"\n"
+
+#: plugin.py:1326
+msgid "    For use The TMDB Covers, copy the apikey file in the skin folder:\n"
+msgstr "    For bruk The TMDB Covers, kopier apikey-filen i skin-mappen:\n"
+
+#: plugin.py:1327
+msgid "    /usr/share/enigma2/oZeta-FHD/apikey\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\n"
+
+#: plugin.py:1328
+msgid "    Or manually enter the key, created on the TMDB portal\n"
+msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\n"
+
+#: plugin.py:1329
+msgid ""
+"    use the virtual keyboard.\n"
+"\n"
+msgstr ""
+"    bruk det virtuelle tastaturet.\n"
+"\n"
+
+#: plugin.py:1330
+msgid "    Or import from /tmp the file\n"
+msgstr "    Eller importer fra /tmp filen\n"
+
+#: plugin.py:1331
+msgid "    omdbkey.txt or apikey.txt\n"
+msgstr "    omdbkey.txt eller apikey.txt\n"
+
+#: plugin.py:1339
+msgid ""
+"SAVE & RESTART\n"
+"\n"
+msgstr ""
+"LAGRE OG START PÅ NYTT\n"
+"\n"
+
+#: plugin.py:1341
+msgid "     Save and Copy changes in the xml file config\n"
+msgstr "     Lagre og kopier endringer i xml-filens konfigurasjon\n"
+
+#: plugin.py:1343
+msgid "     Restart E2 but not apply changes\n"
+msgstr "     Start E2 på nytt, men ikke bruk endringer\n"
+
+#: plugin.py:1363
+msgid "Click Exit for close this window"
+msgstr "Klikk Avslutt for å lukke dette vinduet"
+
+#: plugin.py:1377 plugin.py:1408
+msgid "oZsetup"
+msgstr "oZoppsett"
+
+#: plugin.py:1407 plugin.py:1408
+msgid "Customization tool for ozeta skin"
+msgstr "Tilpasningsverktøy for ozeta skin"
+
+#~ msgid "Config Menu Image"
+#~ msgstr "Konfigurasjonsmenybilde"
+
+#~ msgid "SELECT YOUR CHOICE"
+#~ msgstr "VELG DITT VALG"
+
+#~ msgid "WELCOME"
+#~ msgstr "VELKOMMEN"
+
+#~ msgid "Input TMDB ApiKey"
+#~ msgstr "Skriv inn TMDB ApiKey"
+
+#~ msgid "Input OMDB ApiKey"
+#~ msgstr "Skriv inn OMDB ApiKey"
+
+#~ msgid "Input Your TMDB ApiKey"
+#~ msgstr "Skriv inn din TMDB ApiKey"
+
+#~ msgid "Input Your OMDB ApiKey"
+#~ msgstr "Skriv inn din OMDB ApiKey"
+
+#~ msgid ""
+#~ "     Exit zSetup'\n"
+#~ "\n"
+#~ msgstr ""
+#~ "     Avslutt zSetup'\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "     Open/Install mmPicons Plugin\n"
+#~ "\n"
+#~ msgstr ""
+#~ "     Åpne/installer mmPicons Plugin\n"
+#~ "\n"
+
+#~ msgid "zPicons Setup"
+#~ msgstr "zPicons oppsett"
+
+#~ msgid "SKIN PARTS SECTION"
+#~ msgstr "SKIN PARTS SEKJSON"
+
+#~ msgid "Plugin mmPicons not installed!"
+#~ msgstr "Plugin mmPicons ikke installert!"

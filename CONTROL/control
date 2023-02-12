@@ -1,0 +1,10 @@
+Package: enigma2-plugin-skins-ozeta
+Version: 2.0.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: MMark & Lululla
+Description: Universal Skin Fhd by MMark and Lululla packed
+Source: http://e2skin.blogspot.com/
+OE: Enigma2 Skin
+License: open

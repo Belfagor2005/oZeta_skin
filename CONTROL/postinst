@@ -1,0 +1,64 @@
+#!/bin/sh
+# <!-- **************************************  -->
+# <!-- Install skin oZeta-FHD by mmark         -->
+# <!-- Don't Remove this Disclaimer            -->
+# <!-- **************************************  -->
+cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_menuOrig.xml > /dev/null 2>&1
+if grep -qs -i "openpli" /etc/issue; then
+	echo "distro= OpenPLI image"
+	cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teampli.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
+fi
+if grep -qs -i "openatv" /etc/image-version; then
+    echo "distro= Openatv image"
+	if grep -qs -i "version=6" /etc/image-version; then
+		echo "distro= Openatv image < 6.4"
+		cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamatv6.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
+	fi
+	if grep -qs -i "version=7" /etc/image-version; then
+		echo "distro= Openatv image > 6.4"
+		cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamatv.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
+	fi	
+fi
+if grep -qs -i "openspa" /etc/issue; then
+	echo "distro= Openspa image"
+	cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamspa.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
+fi
+if grep -qs -i "egami" /etc/image-version; then
+	echo "distro= Egami image"
+	echo "NO WORK ON EGAMI IMAGE"	
+	echo "REMOVE SKIN PLEASE....."		
+	rm -rf /usr/lib/enigma2/python/Components/Converter/zCryptoInfo.*
+	# rm -rf /usr/lib/enigma2/python/Components/Converter/genre.*
+	rm -rf /usr/lib/enigma2/python/Components/Converter/zEventList.*
+	rm -rf /usr/lib/enigma2/python/Components/Converter/zExtra.*
+	rm -rf /usr/lib/enigma2/python/Components/Converter/zMenuDescription.*
+	rm -rf /usr/lib/enigma2/python/Components/Converter/zMenuEntryCompare.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zChannelNumber.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zEmptyEpg.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zEventListDisplay.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zGenre.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zInfoEvents.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zNxtEvnt.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zParental.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zPosterX.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zPosterXDownloadThread.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zRunningText.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zSingleEpgList.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zStarX.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zVolumeText.*
+	rm -rf /usr/lib/enigma2/python/Components/Renderer/zVolz.*
+	rm -rf /usr/lib/enigma2/python/Plugins/Extensions/oZsetup
+	rm -rf /usr/share/enigma2/oZeta-FHD
+	echo "*****************************************"
+	echo "*             regards Lululla           *"
+	echo "*       oZeta not skin installed        *"
+	echo "*****************************************"	
+	
+fi
+sleep 2
+rm -r /var/volatile/tmp/*.ipk > /dev/null 2>&1
+echo "*****************************************"
+echo "*             regards Lululla           *"
+echo "*           oZeta skin installed        *"
+echo "*****************************************"
+exit 0

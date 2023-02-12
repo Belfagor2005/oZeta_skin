@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<setups>
+		<setup key="default" image="iconsmenu/setup.png" />
+		<setup key="Recording" image="iconsmenu/menu_extended_recording_setup.png" />
+		<setup key="Timeshift" image="iconsmenu/menu_extended_timshift_setup.png" />
+		<setup key="Usage" image="iconsmenu/menu_system_usage_setup.png" />
+		<setup key="Subtitle" image="iconsmenu/menu_extended_subtitle_setup.png" />
+		<setup key="AutoLanguage" image="iconsmenu/menu_system_autolanguage_setup.png" />
+		<setup key="UserInterface" image="iconsmenu/menu_osd_menu_user_interface.png" />
+		<setup key="RemoteButton" image="iconsmenu/menu_system_remote_setup.png" />
+		<setup key="ChannelSelection" image="iconsmenu/menu_system_channelselection_setup.png" />
+		<setup key="Display" image="iconsmenu/menu_display_display_setup.png" />
+		<setup key="Keyboard" image="iconsmenu/menu_extended_keyboard.png" />
+		<setup key="EPGMulti" image="iconsmenu/menu_epg_setup_epgmulti.png" />
+		<setup key="EPGEnhanced" image="iconsmenu/menu_epg_setup_epgenhanced.png" />
+		<setup key="EPGInfobar" image="iconsmenu/menu_epg_setup_epginfobar.png" />
+		<setup key="EPGInfobarGraphical" image="iconsmenu/menu_epg_setup_epginfobargraphical.png" />
+		<setup key="EPGGraphical" image="iconsmenu/menu_epg_setup_epggraphical.png" />
+		<setup key="EPGVertical" image="iconsmenu/menu_epg_setup_epgmulti.png" />
+		<setup key="EPG" image="iconsmenu/menu_epg_epg_setup.png" />
+		<setup key="HardDisk" image="iconsmenu/hdd.png" />
+		<setup key="Time" image="iconsmenu/menu_extended_time_setup.png" />
+		<setup key="Logs" image="iconsmenu/menu_extended_logs_setup.png" />
+		<setup key="dvdplayer" image="iconsmenu/menu_extended_dvdplayer_setup.png" />
+		<setup key="SpecialFeatures" image="iconsmenu/menu_extended_specialfeatures_menu.png" />
+		<setup key="OSD3D" image="iconsmenu/menu_osd_menu_osd3dsetup.png" />
+		<setup key="OscamInfo" image="iconsmenu/softcam.png" />
+		<setup key="HDMICEC" image="iconsmenu/hdmicec.png" />
+		<setup key="Audio" image="iconsmenu/audio.png" />
+		<setup key="SleepTimer" image="iconsmenu/power_timer.png" />
+		<setup key="VolumeAdjust" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png" />
+		<setup key="Tuner" image="iconsmenu/menu_tuner_basic_settings.png" />
+		<setup key="CISettings" image="iconsmenu/menu_ci_settings.png" />
+		<setup key="RecordTimer" image="iconsmenu/timer.png" />
+	</setups>
+
+	<menus>
+		<menu key="default" image="iconsmenu/default.png" />
+		<menu key="animation_setup" image="iconsmenu/usage_setup.png" />
+		<menu key="audio_menu" image="iconsmenu/menu_setup_audio.png" />
+		<menu key="audio_setup" image="iconsmenu/menu_setup_audio.png" />
+		<menu key="auto_scan" image="iconsmenu/menu_scan_auto_scan.png" />
+		<menu key="autobouquetsmakermaker" image="iconsmenu/menu_scan_autobouquetsmakermaker.png" />
+		<menu key="autolanguage_setup" image="iconsmenu/menu_system_autolanguage_setup.png" />
+		<menu key="AutomaticVolumeAdjustment" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png" />
+		<menu key="autores_setup" image="iconsmenu/menu_system_autores_setup.png" />
+		<menu key="autotimer_setup" image="iconsmenu/menu_timermenu_autotimers.png" />
+		<menu key="av_setup" image="iconsmenu/menu_system_av_setup.png" />
+		<menu key="blindscan" image="iconsmenu/menu_scan_blindscan.png" />
+		<menu key="bluetooth_setup" image="iconsmenu/bluetooth.png" />
+		<menu key="build_info_screen" image="iconsmenu/menu_information_device.png" />
+		<menu key="buttonsetup_setup" image="iconsmenu/menu_osd_menu_buttonsetup.png" />
+		<menu key="cablescan" image="iconsmenu/search.png" />
+		<menu key="channelselection_setup" image="iconsmenu/menu_system_channelselection_setup.png" />
+		<menu key="Chromium Plugin" image="iconsmenu/browser.png" />
+		<menu key="ci_assign" image="iconsmenu/menu_setup_ci.png" />
+		<menu key="ci_setup" image="iconsmenu/menu_setup_ci.png" />
+		<menu key="crontimer_edit" image="iconsmenu/menu_timermenu_crontimers.png" />
+		<menu key="Dazn" image="iconsmenu/dazn.png" />
+		<menu key="deep_standby" image="iconsmenu/power_off.png" />
+		<menu key="deleteepgcache" image="iconsmenu/menu_epgloadsave_menu_deleteepgcache.png" />
+		<menu key="device_screen" image="iconsmenu/menu_information_device.png" />
+		<menu key="device_setup" image="iconsmenu/menu_network_device_setup.png" />
+		<menu key="Disney Plugin" image="iconsmenu/disney.png" />
+		<menu key="display_setup" image="iconsmenu/menu_display_display_setup.png" />
+		<menu key="dmc_mainmenu" image="iconsmenu/menu_mainmenu_dmc_mainmenu.png" />
+		<menu key="dreamplex" image="iconsmenu/plex.png" />
+		<menu key="dual_mode" image="iconsmenu/dualmode.png" />
+		<menu key="dvd_player" image="iconsmenu/dvd.png" />
+		<menu key="dvdplayer_setup" image="iconsmenu/menu_extended_dvdplayer_setup.png" />
+		<menu key="emc" image="iconsmenu/emc.png" />
+		<menu key="epg_setup" image="iconsmenu/menu_epg_epg_setup.png" />
+		<menu key="epgimporter" image="iconsmenu/menu_epgloadsave_menu_loadepgcache.png" />
+		<menu key="epgloadsave_menu" image="iconsmenu/menu_epg_epgloadsave_menu.png" />
+		<menu key="epgrefresh" image="iconsmenu/menu_epg_refresh.png" />
+		<menu key="factory_reset" image="iconsmenu/menu_setup_reset.png" />
+		<menu key="fansetup_config" image="iconsmenu/fan.png" />
+		<menu key="fastscan" image="iconsmenu/menu_scan_fast_scan.png" />
+		<menu key="FCCSetup" image="iconsmenu/fcc.png" />
+		<menu key="filecommand" image="iconsmenu/filecom.png" />
+		<menu key="googlemaps" image="iconsmenu/google.png" />
+		<menu key="harddisk_check" image="iconsmenu/menu_harddisk_harddisk_check.png" />
+		<menu key="harddisk_convert" image="iconsmenu/menu_harddisk_harddisk_convert.png" />
+		<menu key="harddisk_init" image="iconsmenu/menu_harddisk_harddisk_init.png" />
+		<menu key="harddisk_setup" image="iconsmenu/menu_harddisk_harddisk_setup.png" />
+		<menu key="Hardreset" image="iconsmenu/restart.png" />
+		<menu key="hdmicec" image="iconsmenu/menu_extended_hdmicec.png" />
+		<menu key="hdmirecord_setup" image="iconsmenu/menu_extended_hdmirecord_setup.png" />
+		<menu key="Inadyn_setup" image="iconsmenu/menu_network_Inadyn_setup.png" />
+		<menu key="Infopanel" image="iconsmenu/menu_information_about.png" />
+		<menu key="input_device_setup" image="iconsmenu/menu_extended_input_device_setup.png" />
+		<menu key="ipbox_client_Start" image="iconsmenu/menu_scan_streamconvert.png" />
+		<menu key="IPTV Bouquet Maker" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+		<menu key="iptv_config" image="iconsmenu/setup.png" />
+		<menu key="iptv_main" image="iconsmenu/pplayer.png" />
+		<menu key="keyboard" image="iconsmenu/menu_extended_keyboard.png" />
+		<menu key="keymap" image="iconsmenu/menu_extended_input_device_setup.png" />
+		<menu key="lcd4linux" image="iconsmenu/menu_display_lcd_skin_setup.png" />
+		<menu key="lcd_skin_setup" image="iconsmenu/menu_display_lcd_skin_setup.png" />
+		<menu key="LED_Giga" image="iconsmenu/menu_display_LED_Giga.png" />
+		<menu key="ledManager" image="iconsmenu/led.png" />
+		<menu key="loadepgcache" image="iconsmenu/menu_epgloadsave_menu_loadepgcache.png" />
+		<menu key="locale_setup" image="iconsmenu/menu_system_language_setup.png" />
+		<menu key="logs_setup" image="iconsmenu/menu_extended_logs_setup.png" />
+		<menu key="maintenance_mode" image="iconsmenu/usage_setup.png" />
+		<menu key="manual_scan" image="iconsmenu/menu_scan_manual_scan.png" />
+		<menu key="media_player" image="iconsmenu/media.png" />
+		<menu key="merlin_music_player" image="iconsmenu/music.png" />
+		<menu key="minidlna_setup" image="iconsmenu/menu_network_minidlna_setup.png" />
+		<menu key="mount_manager" image="iconsmenu/menu_extended_hardisk_selection.png" />
+		<menu key="moviebrowser" image="iconsmenu/service_info.png" />
+		<menu key="multi_quick" image="iconsmenu/remotecontrol.png" />
+		<menu key="multiboot" image="iconsmenu/restart.png" />
+		<menu key="netafp_setup" image="iconsmenu/menu_network_netafp_setup.png" />
+		<menu key="Netflix Plugin" image="iconsmenu/menu_mainmenu_netflix.png" />
+		<menu key="netftp_setup" image="iconsmenu/menu_network_netftp_setup.png" />
+		<menu key="netmounts_setup" image="iconsmenu/menu_network_netmounts_setup.png" />
+		<menu key="netnfs_setup" image="iconsmenu/menu_network_netnfs_setup.png" />
+		<menu key="netrts_setup" image="iconsmenu/menu_network_netnfs_setup.png" />
+		<menu key="netsabnzbd_setup" image="iconsmenu/menu_network_netsabnzbd_setup.png" />
+		<menu key="netsatpi_setup" image="iconsmenu/menu_scan_satip.png" />
+		<menu key="netsmba_setup" image="iconsmenu/menu_network_netsmba_setup.png" />
+		<menu key="nettelnet_setup" image="iconsmenu/menu_network_nettelnet_setup.png" />
+		<menu key="netushare_setup" image="iconsmenu/menu_network_netushare_setup.png" />
+		<menu key="netvpn_setup" image="iconsmenu/menu_network_netvpn_setup.png" />
+		<menu key="numzapext_setup" image="iconsmenu/menu_numzapext_setup.png" />
+		<menu key="OpenStore" image="iconsmenu/menu_mainmenu_openstore.png" />
+		<menu key="openwebif" image="iconsmenu/menu_network_webif.png" />
+		<menu key="osdsetup" image="iconsmenu/menu_osd_menu_osdsetup.png" />
+		<menu key="parental_setup" image="iconsmenu/menu_setup_parental.png" />
+		<menu key="password_setup" image="iconsmenu/menu_network_passwd_setup.png" />
+		<menu key="permanent_clock" image="iconsmenu/menu_extended_time_setup.png" />
+		<menu key="pip_setup" image="iconsmenu/setup.png" />
+		<menu key="play_cd" image="iconsmenu/dvd.png" />
+		<menu key="plugin_selection" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+		<menu key="pluginhider_setup" image="iconsmenu/menu_mainmenu_pluginhider.png" />
+		<menu key="positioner_setup" image="iconsmenu/menu_scan_positioner_setup.png" />
+		<menu key="powertimer_edit" image="iconsmenu/menu_timermenu_powertimers.png" />
+		<menu key="PrimeVideo" image="iconsmenu/prime.png" />
+		<menu key="pvmc_mainmenu" image="iconsmenu/pvmc.png" />
+		<menu key="RCU Select" image="iconsmenu/remotecontrol.png" />
+		<menu key="recording_setup" image="iconsmenu/menu_extended_recording_setup.png" />
+		<menu key="remote_setup" image="iconsmenu/menu_system_remote_setup.png" />
+		<menu key="remotecode" image="iconsmenu/menu_extended_remotecode.png" />
+		<menu key="remotecontrolcode" image="iconsmenu/remotecontrol.png" />
+		<menu key="remotetimer" image="iconsmenu/menu_timermenu_timers.png" />
+		<menu key="restart" image="iconsmenu/restart.png" />
+		<menu key="restart_enigma" image="iconsmenu/reboot.png" />
+		<menu key="rfmod_setup" image="iconsmenu/menu_extended_rfmod_setup.png" />
+		<menu key="run_kodi" image="iconsmenu/menu_kodi.png" />
+		<menu key="sat_ip_client" image="iconsmenu/menu_scan_satip.png" />
+		<menu key="satellite_equipment_setup" image="iconsmenu/setup.png" />
+		<menu key="satfinder" image="iconsmenu/menu_scan_satfinder.png" />
+		<menu key="saveepgcache" image="iconsmenu/menu_epgloadsave_menu_saveepgcache.png" />
+		<menu key="scart_switch" image="iconsmenu/menu_mainmenu_scart.png" />
+		<menu key="script_manager" image="iconsmenu/menu_setup_software_manager.png" />
+		<menu key="serviceapp_setup" image="iconsmenu/pplayer.png" />
+		<menu key="setup_epgenhanced" image="iconsmenu/menu_epg_setup_epgenhanced.png" />
+		<menu key="setup_epggraphical" image="iconsmenu/menu_epg_setup_epggraphical.png" />
+		<menu key="setup_epginfobar" image="iconsmenu/menu_epg_setup_epginfobar.png" />
+		<menu key="setup_epginfobargraphical" image="iconsmenu/menu_epg_setup_epginfobargraphical.png" />
+		<menu key="setup_epgmulti" image="iconsmenu/menu_epg_setup_epgmulti.png" />
+		<menu key="setup_epgvertical" image="iconsmenu/menu_epg_setup_epgmulti.png" />
+		<menu key="setup_osd3d" image="iconsmenu/menu_osd_menu_osd3dsetup.png" />
+		<menu key="shutdown" image="iconsmenu/power_off.png" />
+		<menu key="skin_setup" image="iconsmenu/menu_osd_menu_skin_setup.png" />
+		<menu key="sleep" image="iconsmenu/power_timer.png" />
+		<menu key="specialfeatures_menu" image="iconsmenu/menu_extended_specialfeatures_menu.png" />
+		<menu key="Stalker Plugin" image="iconsmenu/portal.png" />
+		<menu key="standby" image="iconsmenu/power.png" />
+		<menu key="start_kodi" image="iconsmenu/menu_kodi.png" />
+		<menu key="startimport" image="iconsmenu/iptvimport.png" />
+		<menu key="startsetup" image="iconsmenu/alexa.png" />
+		<menu key="streamconvert" image="iconsmenu/menu_scan_streamconvert.png" />
+		<menu key="subtitle_selection" image="iconsmenu/sub.png" />
+		<menu key="subtitle_setup" image="iconsmenu/menu_extended_subtitle_setup.png" />
+		<menu key="sundtek_control_enter" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+		<menu key="supportchannel_YTChannel" image="iconsmenu/menu_information_supportchannel.png" />
+		<menu key="swap_manager" image="iconsmenu/menu_harddisk_ram.png" />
+		<menu key="tempfancontrol" image="iconsmenu/fan.png" />
+		<menu key="time_setup" image="iconsmenu/menu_extended_time_setup.png" />
+		<menu key="timer_edit" image="iconsmenu/menu_timermenu_timers.png" />
+		<menu key="timshift_setup" image="iconsmenu/menu_extended_timshift_setup.png" />
+		<menu key="tuner_screen" image="iconsmenu/menu_information_device.png" />
+		<menu key="tuner_setup" image="iconsmenu/menu_scan_tuner_setup.png" />
+		<menu key="usage_setup" image="iconsmenu/menu_system_usage_setup.png" />
+		<menu key="user_interface" image="iconsmenu/menu_osd_menu_user_interface.png" />
+		<menu key="vfd_ew" image="iconsmenu/menu_system_VFD_INI.png" />
+		<menu key="VFD_INI" image="iconsmenu/menu_system_VFD_INI.png" />
+		<menu key="video_clipping" image="iconsmenu/service_info.png" />
+		<menu key="video_finetune" image="iconsmenu/menu_system_videofinetune_setup.png" />
+		<menu key="video_menu" image="iconsmenu/service_info.png" />
+		<menu key="video_setup" image="iconsmenu/service_info.png" />
+		<menu key="videoenhancement_setup" image="iconsmenu/menu_system_videoenhancement_setup.png" />
+		<menu key="vmc_init_setup" image="iconsmenu/menu_setup_vmc_setup.png" />
+		<menu key="vmc_init_startvmc" image="iconsmenu/menu_mainmenu_vmc.png" />
+		<menu key="volume_adjust" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png" />
+		<menu key="vps" image="iconsmenu/menu_scan_streamconvert.png" />
+		<menu key="Weather_MSN" image="iconsmenu/weather.png" />
+		<menu key="webradioFS" image="iconsmenu/webradioFS.png" />
+		<menu key="wol_standby" image="iconsmenu/power_off.png" />
+		<menu key="XCplugin" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+		<menu key="XStreamity" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+		<menu key="youtubetv" image="iconsmenu/youtube.png" />
+		<menu key="oZsetup" image="iconsmenu/oZsetup.png" />
+
+		<menu key="software_manager" image="iconsmenu/menu_setup_software_manager.png" />
+		<menu key="manage_extensions" image="iconsmenu/menu_manage_extensions.png" />
+		<menu key="software_update" image="iconsmenu/menu_software_update.png" />
+		<menu key="software_restore" image="iconsmenu/menu_software_restore.png" />
+		<menu key="flash_online" image="iconsmenu/menu_flash_online.png" />
+		<menu key="backup_image_dflash" image="iconsmenu/menu_backup_image.png" />
+		<menu key="backup_image_dbackup" image="iconsmenu/menu_backup_image.png" />
+		<menu key="backup_image" image="iconsmenu/menu_backup_image.png" />
+		<menu key="multiboot" image="iconsmenu/menu_multiboot.png" />
+		<menu key="backup_system" image="iconsmenu/menu_backup_system.png" />
+		<menu key="restore_system" image="iconsmenu/menu_restore_system.png" />
+		<menu key="install_local" image="iconsmenu/menu_install_local.png" />
+		<menu key="advanced_software" image="iconsmenu/menu_advanced_software.png" />
+		<menu key="advanced_restore" image="iconsmenu/menu_advanced_restore.png" />
+		<menu key="backup_location" image="iconsmenu/menu_backup_location.png" />
+		<menu key="backup_default" image="iconsmenu/menu_backup_default.png" />
+		<menu key="backup_additional" image="iconsmenu/menu_backup_additional.png" />
+		<menu key="backup_excluded" image="iconsmenu/menu_backup_excluded.png" />
+		<menu key="package_manager" image="iconsmenu/menu_package_manager.png" />
+		<menu key="upgrade_source" image="iconsmenu/menu_upgrade_source.png" />
+
+		<menu key="timermenu" image="iconsmenu/menu_mainmenu_timer.png" />
+		<menu key="setup" image="iconsmenu/setup.png" />
+		<menu key="rec" image="iconsmenu/menu_extended_recording_setup.png" />
+		<menu key="display" image="iconsmenu/menu_extended_display_selection.png" />
+		<menu key="osd_menu" image="iconsmenu/menu_extended_osd_setup.png" />
+		<menu key="scan" image="iconsmenu/menu_setup_tuner.png" />
+		<menu key="cam" image="iconsmenu/menu_setup_ci.png" />
+		<menu key="extended" image="iconsmenu/menu_system_extended_selection.png" />
+		<menu key="harddisk" image="iconsmenu/menu_extended_hardisk_selection.png" />
+		<menu key="network" image="iconsmenu/menu_system_network_menu.png" />
+		<menu key="shutdown" image="iconsmenu/reset.png" />
+		<menu key="epg" image="iconsmenu/menu_epg_epg_setup.png" />
+		<menu key="system" image="iconsmenu/menu_setup_setup.png" />
+
+		<!--<menu key="information" image="iconsmenu/menu_information.png" />-->
+		<menu key="information" image="iconsmenu/info.png" />
+		<menu key="distribution_info_screen" image="iconsmenu/menu_information_about.png" />
+		<menu key="receiver_info_screen" image="iconsmenu/menu_receiver_info.png" />
+		<menu key="images_info_screen" image="iconsmenu/menu_images_info.png" />
+		<menu key="tuner_info_screen" image="iconsmenu/menu_tuner_info.png" />
+		<menu key="network_info_screen" image="iconsmenu/menu_network_info.png" />
+		<menu key="storage_info_screen" image="iconsmenu/menu_storage_info.png" />
+		<menu key="memory_info_screen" image="iconsmenu/menu_memory_info.png" />
+		<menu key="multiboot_info_screen" image="iconsmenu/menu_multiboot_info.png" />
+		<menu key="streaming_info_screen" image="iconsmenu/menu_streaming_clients_info.png" />
+		<menu key="geolocation_info_screen" image="iconsmenu/menu_geolocation_info.png" />
+		<menu key="service_info_screen" image="iconsmenu/menu_service_info.png" />
+
+		<menu key="softcam_settings" image="iconsmenu/menu_softcam_settings.png" />
+		<menu key="oscam_info" image="iconsmenu/menu_oscam_info.png" />
+		<menu key="cccam_info" image="iconsmenu/menu_cccam_info.png" />
+
+		<menu key="ci_settings" image="iconsmenu/menu_ci_settings.png" />
+		<menu key="ci_selection" image="iconsmenu/menu_ci_selection.png" />
+		<menu key="tuner_basic_settings" image="iconsmenu/menu_tuner_basic_settings.png" />
+	</menus>
+
+	<!-- ***************************************************************************************************************** -->
+	<!-- ************ MENUS ***************************** MENUS ************************************ MENUS *************** -->
+	<!-- ***************************************************************************************************************** -->
+
+	<!-- MainMenu OK -->
+	<screen name="Menu" position="0,0" size="1920,1080" Title="StandBy Menu" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="MenuTemplate" zPosition="2"/>
+	</screen>
+
+	<!--Main Menu Icons -->
+	<screen name="menu_mainmenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<!-- InfoMenu OK -->
+	<screen name="menu_timermenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+	
+	<!-- VideoMenu OK -->
+	<screen name="menu_video_menu" position="0,0" size="1920,1080" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+	
+	<!-- InfoMenu OK -->
+	<screen name="MenuSort" position="0,0" size="1920,1080" Title="Setup" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="MenuTemplate"/>
+		<ePixmap pixmap="skin_default/buttons/key_prev.png" alphatest="blend" position="230,1000" size="52,38"/>
+		<ePixmap pixmap="skin_default/buttons/key_next.png" alphatest="blend" position="300,1000" size="52,38"/>
+	</screen>
+	
+	<screen name="menu_information" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_setup" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_audio_menu" position="0,0" size="1920,1080" title="Audio menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_rec" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_cam" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_system" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_extended" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_display" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_osd_menu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_harddisk" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_epg" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_epgloadsave_menu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_network" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_scan" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_shutdown" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<!-- ***************************************************************************************************************** -->
+	<!-- ************ MENUS ***************************** MENUS ************************************ MENUS *************** -->
+	<!-- ***************************************************************************************************************** -->
+
+	<screen name="MenuTemplate" >
+		<panel name="LayerMenu1000-nl" />
+		<panel name="vButtonTemplate-m1000" />
+		<widget name="menuimage" position="930,5" size="110,110" scale = "1"  alphatest="blend" zPosition="2" />
+		<widget source="menu" render="Listbox" position="230,150" size="810,780" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"templates":
+					{"default": (60,[
+						MultiContentEntryText(pos = (20, 5), size = (780, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+						]),
+					"text": (60,[
+						MultiContentEntryText(pos = (20, 5), size = (780, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+						]),
+					"number": (60,[
+						MultiContentEntryText(pos = (20, 5), size = (30, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryText(pos = (70, 5), size = (720, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						]),
+					"image": (60,[
+						MultiContentEntryPixmapAlphaBlend(pos = (10, 4), size = (50, 50), png = 1, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos = (80, 5), size = (720, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						]),
+					"both": (60,[
+						MultiContentEntryPixmapAlphaBlend(pos = (10, 4), size = (50, 50), png = 1, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos = (80, 5), size = (30, 50), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryText(pos = (120, 5), size = (680, 50), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						])
+					},
+				"fonts": [gFont("Regular", 36),gFont("Regular", 36),gFont("Regular", 36)],
+				"itemHeight": 60,
+				"scrollbarMode": "showNever"
+				}
+			</convert>
+		</widget>
+		<widget source="menu" render="FixedLabel" text="&#x25ba;" position="1890,1050" size="20,20" font="Regular;24" foregroundColor="#ffffff" backgroundColor="#000000" halign="right" valign="bottom" transparent="1">
+			<convert type="zMenuEntryCompare" />
+			<convert type="ValueRange">0,9</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget source="description" render="Label" position="1400,1800" size="500,300" conditional="description" font="Regular;28" valign="center" halign="center" foregroundColor="#ffffff" backgroundColor="#000000">
+			<convert type="zMenuDescription" />
+		</widget>
+	</screen>
+
+	<!--Setup Configs OK -->
+	<screen name="Setup" position="0,0" size="1920,1080" Title="Timer-Off" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="setup_common"/>
+		<!-- widget name="introduction" conditional="introduction" position="0,0" size="0,0"/-->
+		<ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1400,1030" size="80,40" zPosition="2"/>
+		<ePixmap pixmap="skin_default/buttons/80/key_help.png" alphatest="blend" position="1400,980" size="80,40" zPosition="2"/>
+ 		<widget name="setupimage" position="1370,0" size="110,110" alphatest="blend" conditional="setupimage" transparent="1" scale="1" zPosition="2" />
+	</screen>
+	
+	<!-- Skin Selector ATV -->
+	<screen name="SkinSelector" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="LayerMenu1000-nl"/>
+		<panel name="vButtonTemplates1000"/>
+		<widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
+		<eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1"/>
+		<widget name="SkinList" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
+		<eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1"/>
+		<eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1"/>
+		<widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>
+
+<!-- 
+		<widget source="description" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
+		<widget name="skins" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
+		<widget name="preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>	
+ -->
+
+		<ePixmap pixmap="buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
+		<widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+		<ePixmap pixmap="buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
+		<widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+	</screen>
+
+  	<!-- *************************************** -->
+  	<!--   ATVPANELS * ATVPANELS * ATVPANELS *   -->
+  	<!-- **************************************  -->
+	<!-- MyMetrix Lite -->
+	<screen name="MainSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+		<panel name="bLogo" />
+		<widget source="titleText" render="Label" position="385,7" size="640,110" noWrap="1" font="Mmenu;102" foregroundColor="#808080" backgroundColor="barColor" transparent="1" />
+		<widget name="menuList" position="230,150"  size="760,540" itemHeight="60" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080"
+			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorColorSelected="barColor"
+			foregroundColorSelected="#ffffff" transparent="1" />
+		<widget name="helperimage" position="1100,150" size="256,256" backgroundColor="barColor" zPosition="1" transparent="1" alphatest="blend" scale="1" />
+		<widget name="helpertext"  position="990,510" size="500,440" font="Regular;24" foregroundColor="ltbluette" halign="center" backgroundColor="barColor" valign="center" transparent="1"/>
+		<eLabel text="The changes made in this section are not applicable to the current Zeta Skin" position="240,900" size="1500,45" font="Regular;28" backgroundColor="#17000000" foregroundColor="yellow" transparent="1" zPosition="3" />
+	</screen>
+
+	<!-- MyMetrix Lite Color -->
+	<screen name="ColorsSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MetrixMenu" />
+	</screen>
+
+	<!-- MyMetrix Lite SkinPart -->
+	<screen name="SkinpartSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MetrixMenu" />
+		<widget  source="zoomBtn" render="Label" font="Regular;30" position="1130,1005" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<!-- MyMetrix Lite Font -->
+	<screen name="FontsSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MetrixMenu" />
+	</screen>
+
+	<!-- MyMetrix Lite OtherSettings -->
+	<screen name="OtherSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1700" />
+		<widget source="titleText" render="Label" position="385,7" size="1500,110" noWrap="1" font="Mmenu;102" foregroundColor="#808080" backgroundColor="barColor" transparent="1" />
+		<widget name="config" position="230,140"  size="1450,660" itemHeight="60" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080"
+			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor"
+			foregroundColorSelected="#ffffff" transparent="1" />
+                <eLabel position="230,810" size="1450,3" backgroundColor="#202020" zPosition="1" />
+		<widget name="helperimage" position="1280,1150" size="300,300" backgroundColor="barColor" zPosition="1" transparent="1" alphatest="blend" scale="1" />
+		<widget name="helpertext"  position="230,820" size="1400,130" font="Regular;26" foregroundColor="yellow" halign="center" backgroundColor="barColor" valign="center" transparent="1"/>
+		<ePixmap position="230,1010"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="cancelBtn" render="Label" font="Regular;30" position="280,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="490,1010" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="saveBtn" render="Label" font="Regular;30" position="530,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="740,1010" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="defaultsBtn" render="Label" font="Regular;30" position="780,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<eLabel text="The changes made in this section are not applicable to the current Zeta Skin" position="240,900" size="1500,45" font="Regular;28" backgroundColor="#17000000" foregroundColor="yellow" transparent="1" zPosition="3" />
+	</screen>
+
+	<!-- MyMetrix Lite Backup -->
+	<screen name="BackupSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+		<widget source="titleText" render="Label" position="385,7" size="640,110" noWrap="1" font="Mmenu;102" foregroundColor="#808080" backgroundColor="barColor" transparent="1" />
+		<widget name="config" position="230,150"  size="760,780" itemHeight="60" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080"
+			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor"
+			foregroundColorSelected="#ffffff" transparent="1" />
+		<widget name="helperimage" position="1100,150" size="256,256" backgroundColor="barColor" zPosition="1" transparent="1" alphatest="blend" scale="1" />
+		<widget name="helpertext"  position="990,610" size="500,300" font="Regular;28" foregroundColor="ltbluette" halign="center" backgroundColor="barColor" valign="center" transparent="1"/>
+		<ePixmap position="230,1010"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="cancelBtn" render="Label" font="Regular;30" position="280,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="490,1010" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="loadBtn" render="Label" font="Regular;30" position="530,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="740,1010" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="saveBtn" render="Label" font="Regular;30" position="780,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1090,1010" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="deleteBtn" render="Label" font="Regular;30" position="1130,1005" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<eLabel text="The changes made in this section are not applicable to the current Zeta Skin" position="240,900" size="1500,45" font="Regular;28" backgroundColor="#17000000" foregroundColor="yellow" transparent="1" zPosition="3" />
+		<widget name="HelpWindow" position="1000,600" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
+	</screen>
+
+	<!-- MyMetrix Lite Weather -->
+	<screen name="WeatherSettingsView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="MetrixMenu" />
+		<widget  source="checkBtn" render="Label" font="Regular;30" position="1130,1005" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<widget name="resulttext" position="230,1800" size="760,200" font="Regular;20" backgroundColor="barColor" foregroundColor="red" halign="center" transparent="1"/>
+	</screen>
+
+	<!-- MyMetrix Lite Weather -->
+	<screen name="WeatherSettingsLocation" position="0,0" size="1920,1080" title="Location" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+		<panel name="bLogo" />
+		<widget name="menu" position="230,150"  size="760,780" itemHeight="60" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080"
+			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor"
+			foregroundColorSelected="#ffffff" transparent="1" />
+		<ePixmap position="1100,150" size="256,256" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyMetrixLite/images/MyMetrixLiteWeather.png" transparent="1" alphatest="blend" />
+	</screen>
+
+	<!-- StandardList -->
+	<screen name="mySmallChannelSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="standardList1000" />
+		<panel name="vButtonTemplate-1000"/>
+		<panel name="standardList1000" />
+	</screen>
+
+	<!-- Panel Info -->
+	<screen name="Info" position="0,0" size="1920,1080" title="Info" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+		<panel name="bLogo" />
+		<widget name="label2" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1" />
+                <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1" />
+		<widget name="label1" position="230,220" size="1250,726" font="Console;20" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"
+			backgroundColorSelected="barColor" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#808080" />
+                <eLabel position="230,940" size="1240,10" backgroundColor="#10000000" zPosition="2" />
+	</screen>
+
+	<!-- OS Info -->
+	<screen name="OPEN_SOURCE_INFO" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1000" />
+		<eLabel text="https://github.com/openatv"     position="230,150" size="810,40" font="Regular;26" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1" />
+		<eLabel text="https://github.com/oe-alliance" position="230,200" size="810,40" font="Regular;26" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- Translate Info -->
+	<screen name="TranslationInfo" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1000" />
+    		<panel name="vButtonTemplate-1000" />
+		<eLabel text="openATV" position="230,150" size="810,50" font="Regular;34" halign="center" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0" zPosition="1" />
+                <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="2" />
+		<widget source="TranslationInfo" render="Label" position="230,220" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1" />
+		<widget source="TranslatorName"  render="Label" position="230,270" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- Softcam Manager -->
+	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+    		<panel name="vButtonTemplate-1500" />
+		<eLabel text="OK  = Installare" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="2"/>
+		<widget source="key_ok" render="Label" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="1"/>
+                <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1" />
+   		<widget source="list" render="Listbox" position="230,220" size="1250,700" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060"
+   			scrollbarMode="showOnDemand" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+						MultiContentEntryText(pos = (65, 2), size = (1170, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (65, 37), size = (1170, 33), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0x8A8787, color_sel=0xffff00), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 61), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular",28),gFont("Regular",24)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="CommitLogInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1700" />
+		<panel name="information_common2" />
+		<panel name="vButtonTemplate-1500"/>
+		<ePixmap pixmap="buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend" />
+	</screen>
+
+	<screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1700" />
+		<panel name="vButtonTemplate-1500"/>
+		<panel name="information_common" />
+		<ePixmap pixmap="buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend" />
+	</screen>
+
+	<screen name="information_common">
+		<widget name="information" position="230,150" size="1450,780" colPosition="450" conditional="information" divideChar="|" font="Regular;28" noWrap="1" leftColAlign="left" rightColAlign="left" 
+			split="1" backgroundColor="#000000" transparent="1" />
+		<widget name="description" position="230,1385" size="415,220" font="Regular;30" conditional="description" foregroundColor="#ffffff" halign="center" backgroundColor="#000000" valign="center" transparent="1"/>
+	</screen>
+
+	<screen name="information_common2">
+		<widget name="description" position="230,2140" size="1450,60" font="egular;30" conditional="description" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0"/>
+		<widget name="information" position="230,150" size="1450,800" colPosition="280" conditional="information" divideChar="|" font="Console;26" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" 
+			backgroundColor="#000000" transparent="1" />
+	</screen>
+
+	<!-- Animazioni -->
+	<screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,830" size="1920,350" pixmap="picmenu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget source="label1" render="Label" position="20,900"   size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label2" render="Label" position="399,900"  size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label3" render="Label" position="782,900"  size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label4" render="Label" position="1171,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label5" render="Label" position="1552,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+	</screen>
+	
+	<!-- Icone Menu -->
+	<screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap position="0,830" size="1920,350" pixmap="picmenu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
+		<widget source="label1" render="Label" position="25,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label1s" render="Label" position="25,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap1" position="25,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label2" render="Label" position="348,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label2s" render="Label" position="348,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap2" position="348,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label3" render="Label" position="690,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label3s" render="Label" position="690,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap3" position="690,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label4" render="Label" position="1004,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label4s" render="Label" position="1004,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap4" position="1004,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label5" render="Label" position="1305,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label5s" render="Label" position="1305,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap5" position="1305,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label6" render="Label" position="1615,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label6s" render="Label" position="1615,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="pixmap6" position="1615,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
+	</screen>
+
+	<!-- Software Update -->
+	<screen name="SoftwareUpdate" position="0,0" size="1920,1080" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+    		<panel name="vButtonTemplate-1500" />
+		<widget name="package_count" position="230,140" size="100,60"  font="Regular;34" halign="center" valign="center" foregroundColor="yellow"  backgroundColor="#202020" transparent="0" zPosition="1" />
+		<widget name="package_text"  position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1" />
+		<eLabel                      position="230,210" size="1170,5"  backgroundColor="#404040" zPosition="1" />
+		<widget name="activity"      position="230,210" size="1170,5"  backgroundColor="#404040" zPosition="2" />
+		<widget name="feedmessage"   position="230,210" size="1170,600" font="Regular;34" halign="left" foregroundColor="#808080" backgroundColor="barColor" transparent="1"/>
+		<widget source="list" render="Listbox" position="230,230" size="1250,720" scrollbarSliderBorderWidth="1" scrollbarWidth="10" 
+			scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="barColor" scrollbarMode="showOnDemand" 
+			backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1">
+			<convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (10, 5), size = (1150, 40), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (30, 40), size = (1130, 40), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0xfedb7c), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (1180, 15), size = (50, 50), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaBlend(pos = (0, 79), size = (1240, 1), png = 5), # index 5 is the div pixmap
+						],
+					"fonts": [gFont("Regular",32),gFont("Regular",27)],
+					"itemHeight": 80
+					}
+			</convert>
+		</widget>
+ 		<widget name="traffic_off"         position="1402,135"  size="90,90" zPosition="1" pixmap="icons/aoff.png" scale="1" alphatest="on" />
+		<widget name="traffic_red"         position="1402,135"  size="90,90" zPosition="1" pixmap="icons/ared.png" scale="1" alphatest="on" />
+		<widget name="traffic_yellow"      position="1402,135"  size="90,90" zPosition="1" pixmap="icons/ayellow.png" scale="1" alphatest="on" />
+		<widget name="traffic_green"       position="1402,135"  size="90,90" zPosition="1" pixmap="icons/agreen.png" scale="1" alphatest="on" />
+		<widget name="feedstatus_off"      position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1" />
+		<widget name="feedstatus_red"      position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1" />
+		<widget name="feedstatus_yellow"   position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1" />
+		<widget name="feedstatus_green"    position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1" />
+	</screen>
+
+	<screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500" />
+    		<panel name="vButtonTemplate-1500" />
+		<widget name="packagenr" position="230,140" size="100,60"  font="Regular;34" halign="center" valign="center" foregroundColor="yellow"  backgroundColor="#202020" transparent="0" zPosition="1" />
+		<widget name="packagetext"  position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1" />
+		<eLabel                      position="230,210" size="1170,5"  backgroundColor="#404040" zPosition="1" />
+		<widget source="list" render="Listbox" position="230,230" size="1250,700" scrollbarSliderBorderWidth="1" scrollbarWidth="10" 
+			scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="barColor" scrollbarMode="showOnDemand" 
+			backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1">
+			<convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (10, 1), size = (1150, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (20, 37), size = (1130, 34), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0xfedb7c), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (1170, 10), size = (50, 50), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaBlend(pos = (0, 69), size = (1240, 1), png = 5), # index 5 is the div pixmap
+						],
+					"fonts": [gFont("Regular",32),gFont("Regular",26)],
+					"itemHeight": 70
+					}
+			</convert>
+		</widget>
+ 		<widget name="a_off"         position="1000,90"  size="70,70" zPosition="1" pixmap="icons/aoff.png"    alphatest="on" />
+		<widget name="a_red"         position="1000,90"  size="70,70" zPosition="1" pixmap="icons/ared.png"    alphatest="on" />
+		<widget name="a_yellow"      position="1000,90"  size="70,70" zPosition="1" pixmap="icons/ayellow.png" alphatest="on" />
+		<widget name="a_green"       position="1000,90"  size="70,70" zPosition="1" pixmap="icons/agreen.png"  alphatest="on" />
+		<widget name="feedstatusOFF"    position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
+		<widget name="feedstatusRED"    position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
+		<widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
+		<widget name="feedstatusGREEN"  position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
+	</screen>
+
+	<!-- NumberZap -->
+	<screen name="NumberZap" position="0,70" size="850,200" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
+		<panel name="NumberZapPicon" />
+	</screen>
+
+	<!-- NumberZap Picon -->
+	<screen name="NumberZapPicon" position="0,70" size="800,152" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
+		<eLabel position="260,0" size="540,150" backgroundColor="trbluette" />
+		<widget position="10,10" render="Picon" size="240,132" source="Service" transparent="1" alphatest="blend" zPosition="20">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="number"      position="280,10" size="260,70" halign="left" font="Regular;64" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="10"/>
+		<widget name="servicename" position="280,85" size="830,50" halign="left" font="Regular;46" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="10"/>
+	</screen>
+
+	<!-- HelpMenuNew -->
+	<screen name="HelpMenu" position="0,0" size="1920,1080" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500"/>
+		<panel name="bLogo" />
+		<widget name="buttonlist"   position="230,150" size="1000,50" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="3"/>
+		<widget name="description"  position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
+                <eLabel position="230,205" size="1000,3" backgroundColor="#202020" zPosition="10" />
+		<widget source="list" render="Listbox" position="230,220" size="1000,700" transparent="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+					"templates": {
+						# Simple help with no headings ("flat")
+						# data[1:] = [helpText]
+						"default": (50,[
+							MultiContentEntryText(pos=(5, 0), size=(990, 50), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+							]
+						),
+						# Simple help with headings
+						# data[1:] = [heading, None]  # For heading entries
+						# data[1:] = [None, helpText]  # For help entries
+						"default+headings": (50,[
+							MultiContentEntryText(pos=(5, 0), size=(990, 50), font=0, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+							MultiContentEntryText(pos=(28, 0), size=(960, 50), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+							]
+						),
+						# Extended help with no headings
+						# data[1:] = [helpText, extendedHelpText]
+						"extended": (150,[
+							MultiContentEntryText(pos=(5, 0), size=(990, 75), font=3, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+							MultiContentEntryText(pos=(5, 60), size=(990, 75), color=0x009e9fa4, color_sel=0x009e9fa4, font=3, flags=RT_WRAP | RT_VALIGN_TOP, text=2),
+							],
+						),
+						# Extended help with headings
+						# data[1:] = [heading, None, None]  # For heading entries
+						# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+						"extended+headings": (150,[
+							MultiContentEntryText(pos=(5, 0), size=(950, 150), font=3, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+							MultiContentEntryText(pos=(28, 0), size=(950, 60), font=3, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+							MultiContentEntryText(pos=(28, 50), size=(990, 90), color=0x009e9fa4, color_sel=0x009e9fa4, font=3, flags=RT_WRAP | RT_VALIGN_TOP, text=3),
+							],
+						),
+					},
+					"fonts": [gFont("Regular", 32), gFont("Regular", 30), gFont("Regular", 30), gFont("Regular", 30)],
+					"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1300,150" zPosition="10" size="154,500" alphatest="blend" transparent="0" />
+		<widget alphatest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU2" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU3" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU4" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU5" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU6" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU7" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU8" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU9" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU10" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU11" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU12" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU13" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU14" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorU15" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL2" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL3" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL4" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL5" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL6" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL7" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL8" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL9" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL10" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL11" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL12" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL13" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL14" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphatest="blend" name="indicatorL15" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
+	</screen>
+</skin>

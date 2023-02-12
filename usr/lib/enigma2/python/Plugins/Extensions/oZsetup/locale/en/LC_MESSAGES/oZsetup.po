@@ -1,0 +1,501 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: oZsetup\n"
+"POT-Creation-Date: 2022-10-09 22:24+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: plugin.py\n"
+
+#: plugin.py:366
+msgid "Cancel"
+msgstr ""
+
+#: plugin.py:367
+msgid "Save"
+msgstr ""
+
+#: plugin.py:368
+msgid "Preview"
+msgstr ""
+
+#: plugin.py:369
+msgid "Restart"
+msgstr ""
+
+#: plugin.py:374
+msgid "by Lululla"
+msgstr ""
+
+#: plugin.py:427
+msgid ""
+"This operation checks if the skin has its components (is not sure)..\n"
+"Do you really want to continue?"
+msgstr ""
+
+#: plugin.py:428
+msgid "Check OZeta"
+msgstr ""
+
+#: plugin.py:445
+msgid "SKIN SETUP SECTION"
+msgstr ""
+
+#: plugin.py:447 plugin.py:504
+msgid "Settings Menu Image Panel"
+msgstr ""
+
+#: plugin.py:449 plugin.py:506
+msgid "Settings Infobar Panels"
+msgstr ""
+
+#: plugin.py:451 plugin.py:508
+msgid "Settings SecInfobar Panels"
+msgstr ""
+
+#: plugin.py:453 plugin.py:510
+msgid "Settings Channel Panels"
+msgstr ""
+
+#: plugin.py:455 plugin.py:512
+msgid "Settings Volume Panels"
+msgstr ""
+
+#: plugin.py:457 plugin.py:514
+msgid "Settings Radio Panels"
+msgstr ""
+
+#: plugin.py:459 plugin.py:516
+msgid "Settings MediaPlayer Panels"
+msgstr ""
+
+#: plugin.py:461 plugin.py:518
+msgid "Settings Eventview Panels"
+msgstr ""
+
+#: plugin.py:463 plugin.py:520
+msgid "Settings Logo Image Top"
+msgstr ""
+
+#: plugin.py:465 plugin.py:522
+msgid "Settings Logo Image Bottom"
+msgstr ""
+
+#: plugin.py:467 plugin.py:524
+msgid ""
+"Settings Bootlogo Image\n"
+"Press Ok for change"
+msgstr ""
+
+#: plugin.py:469
+msgid "API SETUP SECTION"
+msgstr ""
+
+#: plugin.py:470 plugin.py:527
+msgid "Settings TMDB ApiKey"
+msgstr ""
+
+#: plugin.py:472
+msgid "Load TMDB Apikey from /tmp/apikey.txt"
+msgstr ""
+
+#: plugin.py:473 plugin.py:531
+msgid "Signup on TMDB and input free personal ApiKey"
+msgstr ""
+
+#: plugin.py:474 plugin.py:533
+msgid "Settings OMDB APIKEY"
+msgstr ""
+
+#: plugin.py:476
+msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
+msgstr ""
+
+#: plugin.py:477 plugin.py:537
+msgid "Signup on OMDB and input free personal ApiKey"
+msgstr ""
+
+#: plugin.py:478 plugin.py:539
+msgid "Settings VISUALWEATHER APIKEY"
+msgstr ""
+
+#: plugin.py:480 plugin.py:541
+msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
+msgstr ""
+
+#: plugin.py:481 plugin.py:543
+msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
+msgstr ""
+
+#: plugin.py:483
+msgid "MISC SETUP SECTION"
+msgstr ""
+
+#: plugin.py:484
+msgid ""
+"Install Test Options oZeta Skin\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:485
+msgid ""
+"Install or Open mmPicons Plugin\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:486 plugin.py:551
+msgid "Settings oZeta Weather"
+msgstr ""
+
+#: plugin.py:488 plugin.py:553
+msgid ""
+"Install or Open Weather Plugin\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:489 plugin.py:555
+msgid "Settings City Weather Plugin"
+msgstr ""
+
+#: plugin.py:490
+msgid "Autoupdate oZeta Skin on both"
+msgstr ""
+
+#: plugin.py:492 plugin.py:560
+msgid ""
+"Check for updates on the oZeta skin server\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:529
+msgid "Load your free TMDB from tmp/apikey.txt"
+msgstr ""
+
+#: plugin.py:535
+msgid "Load your free OMDB Apikey from /tmp/omdbkey.txt"
+msgstr ""
+
+#: plugin.py:546
+msgid ""
+"Install Options oZeta Skin\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:548
+msgid ""
+"Install or Open mmPicons Plugin by mmark\n"
+"Press OK"
+msgstr ""
+
+#: plugin.py:558
+msgid "Autoupdate oZeta Skin"
+msgstr ""
+
+#: plugin.py:562
+msgid "SELECT YOUR CHOICE"
+msgstr ""
+
+#: plugin.py:634
+msgid "Do you really want to change Bootlogo image?"
+msgstr ""
+
+#: plugin.py:642
+msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
+msgstr ""
+
+#: plugin.py:658
+msgid ""
+"Bootlogo changed!\n"
+"Restart Gui please"
+msgstr ""
+
+#: plugin.py:993
+msgid "Successfully creating Skin!"
+msgstr ""
+
+#: plugin.py:995
+msgid "Error creating Skin!"
+msgstr ""
+
+#: plugin.py:1048
+msgid "Import Api Key TMDB from /tmp/apikey.txt?"
+msgstr ""
+
+#: plugin.py:1050 plugin.py:1067 plugin.py:1076 plugin.py:1093 plugin.py:1102
+#: plugin.py:1119
+#, python-format
+msgid "Missing %s !"
+msgstr ""
+
+#: plugin.py:1061
+msgid "TMDB ApiKey Imported!"
+msgstr ""
+
+#: plugin.py:1065
+msgid "TMDB ApiKey Stored!"
+msgstr ""
+
+#: plugin.py:1074
+msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
+msgstr ""
+
+#: plugin.py:1087
+msgid "OMDB ApiKey Imported!"
+msgstr ""
+
+#: plugin.py:1091
+msgid "OMDB ApiKey Stored!"
+msgstr ""
+
+#: plugin.py:1100
+msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
+msgstr ""
+
+#: plugin.py:1113
+msgid "VISUALWEATHER ApiKey Imported!"
+msgstr ""
+
+#: plugin.py:1117
+msgid "VISUALWEATHER ApiKey Stored!"
+msgstr ""
+
+#: plugin.py:1124
+msgid ""
+"Restart E2 Now..\n"
+"Do you really want to restart GUI now?"
+msgstr ""
+
+#: plugin.py:1132
+msgid "Really close without saving settings?"
+msgstr ""
+
+#: plugin.py:1144
+msgid "Reset Settings to Defaults Parameters?"
+msgstr ""
+
+#: plugin.py:1163
+msgid ""
+"Do you really want to update the zSkin ??\n"
+"Do it at your own risk.\n"
+"Do you want to continue?"
+msgstr ""
+
+#: plugin.py:1183
+msgid "NO UPDATE zSkin ON SERVER !"
+msgstr ""
+
+#: plugin.py:1224
+msgid "IMAGE NO COMPATIBLE WITH OZETA SKIN"
+msgstr ""
+
+#: plugin.py:1232
+msgid "NO EXIST /tmp/ozeta.tar !"
+msgstr ""
+
+#: plugin.py:1239
+msgid ""
+"OZSKIN UPDATE\n"
+"PLEASE RESTART GUI"
+msgstr ""
+
+#: plugin.py:1257
+msgid ""
+"mmPicons Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+
+#: plugin.py:1258
+msgid "Install mmPicons"
+msgstr ""
+
+#: plugin.py:1266
+msgid ""
+"Install Test Options for oZeta skin\n"
+"Do you really want to install now?"
+msgstr ""
+
+#: plugin.py:1269
+msgid ""
+"Install Test Options...\n"
+"Please Wait"
+msgstr ""
+
+#: plugin.py:1270
+msgid "Install Options"
+msgstr ""
+
+#: plugin.py:1285
+msgid "Data entered for the Weather, do you want to continue the same?"
+msgstr ""
+
+#: plugin.py:1289
+msgid ""
+"WeatherPlugin Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+
+#: plugin.py:1290
+msgid "Install WeatherPlugin and Reboot"
+msgstr ""
+
+#: plugin.py:1309
+msgid "Install WeatherPlugin"
+msgstr ""
+
+#: plugin.py:1321
+msgid "Plugin WeatherPlugin not installed!!!"
+msgstr ""
+
+#: plugin.py:1478
+msgid "Back"
+msgstr ""
+
+#: plugin.py:1479
+msgid "ApiKey Info"
+msgstr ""
+
+#: plugin.py:1480
+msgid "Preview Info"
+msgstr ""
+
+#: plugin.py:1481
+msgid "Restart Info"
+msgstr ""
+
+#: plugin.py:1519
+msgid ""
+"         Exit zSetup\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1521
+msgid ""
+"         Save and Copy changes in the Settings xml file\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1523
+msgid ""
+"         View Pic of Panels preview, in the FullHD mode\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1525
+msgid ""
+"         Restart E2 but not apply changes\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1527
+msgid ""
+"         Reset Settings\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1529
+msgid ""
+"         Install or Set Weather Plugin if installed\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1531
+msgid "         Menu/Setup/Graphic Interface/OSD Setup\n"
+msgstr ""
+
+#: plugin.py:1532
+msgid "         Alternative Radio Mode= Yes\n"
+msgstr ""
+
+#: plugin.py:1542
+msgid "    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
+msgstr ""
+
+#: plugin.py:1543
+msgid "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgstr ""
+
+#: plugin.py:1544
+msgid "    Or manually enter the key, created on the OMDB portal'\n"
+msgstr ""
+
+#: plugin.py:1545
+msgid ""
+"    use the virtual keyboard.'\n"
+"\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1547
+msgid "    For use The TMDB Covers, copy the apikey file in the skin folder:\n"
+msgstr ""
+
+#: plugin.py:1548
+msgid "    /usr/share/enigma2/oZeta-FHD/apikey\n"
+msgstr ""
+
+#: plugin.py:1549
+msgid "    Or manually enter the key, created on the TMDB portal\n"
+msgstr ""
+
+#: plugin.py:1550
+msgid ""
+"    use the virtual keyboard.\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1551
+msgid "    Or import from /tmp the file\n"
+msgstr ""
+
+#: plugin.py:1552
+msgid "    omdbkey.txt or apikey.txt\n"
+msgstr ""
+
+#: plugin.py:1554
+msgid "    For use The WeatherPlugin:\n"
+msgstr ""
+
+#: plugin.py:1555
+msgid "    --Automatic Import from Plugin\n"
+msgstr ""
+
+#: plugin.py:1556
+msgid "    For use VisualWeather\n"
+msgstr ""
+
+#: plugin.py:1557
+msgid "    --use the virtual keyboard or import from default config plugin\n"
+msgstr ""
+
+#: plugin.py:1565
+msgid ""
+"SAVE & RESTART\n"
+"\n"
+msgstr ""
+
+#: plugin.py:1567
+msgid "         Save and Copy changes in the xml file config\n"
+msgstr ""
+
+#: plugin.py:1569
+msgid "         Restart E2 but not apply changes\n"
+msgstr ""
+
+#: plugin.py:1586
+msgid "Click Exit for close this window"
+msgstr ""
+
+#: plugin.py:1601
+msgid "oZsetup"
+msgstr ""
+
+#: plugin.py:1601
+msgid "Customization tool for oZeta skin"
+msgstr ""
