@@ -1,4 +1,6 @@
-# Skin for Box
+# Skin for Box Enigma2
+![](https://komarev.com/ghpvc/?username=Belfagor2005)
+
 by Mmark
 
 Adapted for Enigma2 by Lululla
