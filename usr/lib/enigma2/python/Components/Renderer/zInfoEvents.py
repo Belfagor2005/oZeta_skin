@@ -41,7 +41,9 @@ epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
+
 path_folder = "/tmp/poster/"
+
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
@@ -137,6 +139,7 @@ class zInfoEvents(Renderer, VariableText):
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
             self.text = ""
+            return
         if what[0] != self.CHANGED_CLEAR:
             self.showInfos()
 
@@ -219,7 +222,7 @@ class zInfoEvents(Renderer, VariableText):
         self.year = self.filterSearch()
         try:
             try:
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, apikey, quote(self.evntNm))
+                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, apikey, quote(self.evntNm))
                 if self.year is not None:
                     url_tmdb += "&year={}".format(self.year)
                 if PY3:
@@ -276,7 +279,6 @@ class zInfoEvents(Renderer, VariableText):
         for i in range(9):
             titleNxt = events[i][4]
             # self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
-
             self.evntNm = cleantitle(titleNxt).rstrip().replace('ё', 'е')
             infos_file = "{}{}.json".format(path_folder, self.evntNm)
             if not os.path.exists(infos_file):
@@ -290,13 +292,6 @@ class zInfoEvents(Renderer, VariableText):
         except:
             self.timer.callback.append(self.dwn)
         self.timer.start(50, True)
-    
-        # self.timer = eTimer()
-        # try:
-            # self.timer_conn = self.timer.timeout.disconnect(self.dwn)
-        # except:
-            # self.timer.callback.remove(self.dwn)
-        # self.timer.start(50, True)
 
     def dwn(self):
         start_new_thread(self.epgs, ())

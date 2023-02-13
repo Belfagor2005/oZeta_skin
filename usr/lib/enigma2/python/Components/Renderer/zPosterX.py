@@ -71,7 +71,10 @@ thetvdbkey = 'D19315B88B2DE21F'
 
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+
+
 path_folder = "/tmp/poster/"
+
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
@@ -243,7 +246,7 @@ class PosterDB(zPosterXDownloadThread):
 
     def logDB(self, logmsg):
         if self.logdbg:
-            w = open(path_folder + "PosterDB.log", "a+")
+            w = open("/tmp/PosterDB.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
 
@@ -314,7 +317,7 @@ class PosterAutoDB(zPosterXDownloadThread):
 
     def logAutoDB(self, logmsg):
         if self.logdbg:
-            w = open(path_folder + "PosterAutoDB.log", "a+")
+            w = open("/tmp/PosterAutoDB.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
 
@@ -457,6 +460,6 @@ class zPosterX(Renderer):
 
     def logPoster(self, logmsg):
         if self.logPoster:
-            w = open(self.path + "zPosterX.log", "a+")
+            w = open("/tmp/zPosterX.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()

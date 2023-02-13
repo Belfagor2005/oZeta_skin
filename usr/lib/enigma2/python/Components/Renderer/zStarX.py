@@ -22,6 +22,7 @@ import re
 import json
 
 
+
 path_folder = "/tmp/poster/"
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
@@ -71,7 +72,9 @@ def cleantitle(text):
         pass
     text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
     text = text.lower()
-    return str(text)                    
+    return str(text)
+
+
 class zStarX(VariableValue, Renderer):
     def __init__(self):
         Renderer.__init__(self)
@@ -86,10 +89,9 @@ class zStarX(VariableValue, Renderer):
             (self.range, self.value) = ((0, 1), 0)
             return
         rtng = 0
+        range = 0
+        value = 0
         try:
-            # event = ""
-            # evntNm = ""
-            # evnt = ""
             event = self.source.event
             if event:
                 evnt = event.getEventName().encode('utf-8')
@@ -110,14 +112,9 @@ class zStarX(VariableValue, Renderer):
             else:
                 rtng = 0
         except Exception as e:
-            # if os.path.exists("%surl_rate" % path_folder):
-                # os.remove("%surl_rate" % path_folder)
-            # if os.path.exists("/tmp/rating"):
-                # os.remove("/tmp/rating")
             print('my e ', str(e))
         range = 100
         value = rtng
-
         (self.range, self.value) = ((0, range), value)
 
     def postWidgetCreate(self, instance):

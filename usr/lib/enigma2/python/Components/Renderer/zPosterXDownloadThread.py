@@ -40,7 +40,9 @@ omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+
 path_folder = "/tmp/poster/"
+
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
@@ -135,7 +137,7 @@ class zPosterXDownloadThread(threading.Thread):
                         srch = "tv"
                         break
 
-            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(srch, apikey, quote(title))
+            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, apikey, quote(title))
             # id = requests.get(url_tmdb).json()['results'][0]['id']
             # url_tmdb = "https://api.themoviedb.org/3/{}/{}?api_key={}&append_to_response=images".format(srch, int(id), apikey)
             if year:
