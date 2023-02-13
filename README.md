@@ -11,6 +11,8 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/infobar.jpg?raw=true">
 
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/second_infobar.jpg?raw=true">
+
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/info_epg.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/channell-next.jpg?raw=true">
