@@ -272,17 +272,20 @@ class zInfoEvents(Renderer, VariableText):
             pass
 
     def epgs(self):
-        events = None
-        ref = NavigationInstance.instance.getCurrentlyPlayingServiceReference().toString()
-        events = epgcache.lookupEvent(['IBDCT', (ref, 0, -1, -1)])
-        for i in range(9):
-            titleNxt = events[i][4]
-            # self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
-            self.evntNm = cleantitle(titleNxt).rstrip().replace('ё', 'е')
-            infos_file = "{}{}.json".format(path_folder, self.evntNm)
-            if not os.path.exists(infos_file):
-                self.downloadInfos(infos_file)
-        return
+        try:
+            events = None
+            ref = NavigationInstance.instance.getCurrentlyPlayingServiceReference().toString()
+            events = epgcache.lookupEvent(['IBDCT', (ref, 0, -1, -1)])
+            for i in range(9):
+                titleNxt = events[i][4]
+                self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
+                # self.evntNm = cleantitle(titleNxt).rstrip().replace('ё', 'е')
+                infos_file = "{}{}.json".format(path_folder, self.evntNm)
+                if not os.path.exists(infos_file):
+                    self.downloadInfos(infos_file)
+        except:
+            pass                    
+        # return
 
     def delay2(self):
         self.timer = eTimer()

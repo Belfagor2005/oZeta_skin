@@ -95,7 +95,7 @@ class zStarX(VariableValue, Renderer):
             event = self.source.event
             if event:
                 evnt = event.getEventName().encode('utf-8')
-                evntNm = cleantitle(self.evnt).strip()
+                evntNm = cleantitle(evnt).strip()
                 rating_json = "{}{}.json".format(path_folder, evntNm)
                 if os.path.exists(rating_json) and os.stat(rating_json).st_size > 0:
                     with open(rating_json) as f:
