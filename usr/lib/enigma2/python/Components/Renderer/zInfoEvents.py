@@ -41,7 +41,6 @@ epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
-
 path_folder = "/tmp/poster/"
 
 if os.path.isdir("/media/hdd"):
