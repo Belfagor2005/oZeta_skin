@@ -222,8 +222,8 @@
 	<include filename="zSkin/skin_templatepanels.xml"/>
 	<include filename="zSkin/skin_infochannel.xml"/>
 	<include filename="zSkin/skin_plugins.xml"/>
-	<include filename="zSkin/skin_xtreaamity.xml"/>	
-	<include filename="zSkin/skin_teamatv.xml"/>	
+	<!-- <include filename="zSkin/skin_xtreaamity.xml"/>	 -->
+	<!-- <include filename="zSkin/skin_teamatv.xml"/>	 -->
 	<!-- include filename="zSkin/skin_teamatv6.xml"/-->	
 	<!-- include filename="zSkin/skin_teamspa.xml"/-->	
 	<!-- include filename="zSkin/skin_teampli.xml"/-->	
