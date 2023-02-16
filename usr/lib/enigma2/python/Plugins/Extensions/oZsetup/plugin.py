@@ -105,7 +105,7 @@ version = '2.0'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'
-SkinName = cur_skin
+# SkinName = cur_skin
 sample = mvi + 'enigma2/' + cur_skin + '/zSetup/zSample'
 config.ozeta = ConfigSubsection()
 

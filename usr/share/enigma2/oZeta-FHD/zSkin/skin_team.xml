@@ -420,13 +420,6 @@
 		<eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1"/>
 		<eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1"/>
 		<widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>
-
-<!-- 
-		<widget source="description" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
-		<widget name="skins" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
-		<widget name="preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>	
- -->
-
 		<ePixmap pixmap="buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
 		<ePixmap pixmap="buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
@@ -718,6 +711,45 @@
 		</widget>
 		<widget name="number"      position="280,10" size="260,70" halign="left" font="Regular;64" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="10"/>
 		<widget name="servicename" position="280,85" size="830,50" halign="left" font="Regular;46" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="10"/>
+	</screen>
+
+	<!-- E2 LocationBox -->
+	<screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LocationBoxOld" conditional="textbook" />
+		<panel name="LocationBoxNew" conditional="fileheading" />
+	</screen>
+
+	<screen name="LocationBoxOld" position="0,0" size="1280,720" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500"/>
+		<panel name="ButtonTemplate"/>
+		<widget name="text"            position="230,150"  size="500,50"  font="Regular;40" halign="left"  backgroundColor="#000000" foregroundColor="white"  transparent="1" />
+		<widget name="targetfreespace" position="1180,150" size="300,50"  font="Regular;40" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1" />
+		<eLabel                        position="230,210"  size="1250,3" backgroundColor="#303030" zPosition="1"/>
+		<widget name="target"          position="230,220"  size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1" />
+		<widget name="textbook"        position="230,270"  size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="white"     transparent="1" />
+		<eLabel                        position="230,330"  size="1000,2" backgroundColor="#303030" />
+		<widget name="filelist"        position="230,340"  size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" 
+			backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1" />
+		<eLabel                        position="230,750"  size="1250,2" backgroundColor="#303030" />
+		<widget name="booklist"        position="230,760" size="1250,210" itemHeight="30" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#303030" foregroundColor="#ffffff" 
+			backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1" zPosition="3"/>
+	</screen>
+
+	<screen name="LocationBoxNew" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1500"/>
+		<panel name="ButtonTemplate"/>
+		<widget name="text"            position="230,140"  size="500,50"  font="Regular;36" halign="left"  backgroundColor="#000000" foregroundColor="white"  transparent="1" />
+		<widget name="targetfreespace" position="1180,140" size="300,50"  font="Regular;36" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1" />
+		<eLabel                        position="230,200"  size="1250,3" backgroundColor="#303030" zPosition="1"/>
+		<widget name="filelist"        position="230,220"  size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" 
+			backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1" />
+		<eLabel                        position="230,630"  size="1250,3" backgroundColor="#303030" zPosition="1"/>
+		<widget name="fileheading"     position="230,640" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+		<widget name="bookmarkheading" position="230,680" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1" />
+		<eLabel                        position="230,720" size="1250,2" backgroundColor="#303030" />
+		<widget name="bookmarklist"    position="230,740" size="1250,200" itemHeight="40" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" 
+			backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1" selection="0" zPosition="3" />
+		<widget name="quickselect"     position="230,1000" size="1000,525" backgroundColor="#000000" foregroundColor="#ffffff" font="Regular;100" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<!-- HelpMenuNew -->

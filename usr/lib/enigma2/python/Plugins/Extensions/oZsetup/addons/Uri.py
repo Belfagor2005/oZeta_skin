@@ -14,7 +14,7 @@ from Tools.Directories import fileExists
 import os
 import sys
 PY3 = sys.version_info.major >= 3
-print("Update oZeta")
+print("oZeta Uri")
 
 global CountConnOk
 CountConnOk = 0
@@ -274,6 +274,7 @@ def upd_zz(fplug):
         os.system(cmd1)
         messageText = _("Restart Gui Please")
         Notifications.AddPopup(messageText, MessageBox.TYPE_INFO, timeout=5)
+        print('upd_zz Done!!!')
 
 
 def errorLoad(error):
