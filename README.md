@@ -25,6 +25,8 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/info_image.jpg?raw=true">
 
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/pli_info.jpg?raw=true">
+
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/info_device.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/plugin_browser.jpg?raw=true">
