@@ -1251,10 +1251,11 @@ class oZsetup(ConfigListScreen, Screen):
     def zSkin(self):
         if fileExists(tarfile):
             remove(tarfile)
-        from twisted.web.client import downloadPage
         xfile = 'http://patbuweb.com/ozeta/tar'
         if PY3:
             xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
+        
+        from twisted.web.client import downloadPage
         import requests
         response = requests.head(xfile)
         if response.status_code == 200:
@@ -1268,8 +1269,8 @@ class oZsetup(ConfigListScreen, Screen):
 # not tested
     def upd_zeta(self, fplug):
         import time
-        time.sleep(5)
-        if fileExists(tarfile) and os.stat(tarfile).st_size > 100:
+        time.sleep(8)
+        if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             cmd = "tar -xvf /tmp/ozeta.tar -C /"
             # print( "cmd ozeta      =", cmd)
             os.system(cmd)
@@ -1311,7 +1312,7 @@ class oZsetup(ConfigListScreen, Screen):
         cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
         self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
         time.sleep(5)
-        self.mbox = self.session.open(MessageBox, _("OZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
+        self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
 
     def starts(self):
         pass

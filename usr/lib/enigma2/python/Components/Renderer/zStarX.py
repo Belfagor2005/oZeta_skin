@@ -22,12 +22,14 @@ import re
 import json
 
 
-
 path_folder = "/tmp/poster/"
+
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
     path_folder = "/media/usb/poster/"
+elif os.path.isdir("/media/mmc"):
+    path_folder = "/media/mmc/poster/"
 else:
     path_folder = "/tmp/poster/"
 if not os.path.isdir(path_folder):

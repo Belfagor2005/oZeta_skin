@@ -277,5 +277,30 @@ def upd_zz(fplug):
         print('upd_zz Done!!!')
 
 
+
+#  install update zskin
+# def zSkin():
+    # if fileExists('/tmp/ozeta.tar'):
+        # remove('/tmp/ozeta.tar')
+    # from twisted.web.client import downloadPage
+    # xfile = 'http://patbuweb.com/ozeta/tar'
+    # if PY3:
+        # xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
+    # import requests
+    # response = requests.head(xfile)
+    # if response.status_code == 200:
+        # fdest = '/tmp/ozeta.tar'
+        # downloadPage(xfile, fdest).addCallback(upd_zeta).addErrback(errorLoad)
+        # print('zSkin Update 200 Ok !!!')
+    # elif response.status_code == 404:
+        # messageText = _("NO UPDATE 404 zSkin !")
+        # Notifications.AddPopup(messageText, MessageBox.TYPE_INFO, timeout=5)
+        # print('zSkin Update failled !!!')
+    # else:
+        # return
+
+
+
+
 def errorLoad(error):
     print(str(error))

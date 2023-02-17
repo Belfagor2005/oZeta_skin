@@ -42,36 +42,18 @@ my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 
-
-# def isMountReadonly(mnt):
-    # with open('/proc/mounts') as f:
-        # for line in f:
-            # line = line.split(',')[0]
-            # line = line.split()            
-            # try:
-                # device, mount_point, filesystem, flags = line
-            # except Exception as err:
-                   # print("Error: %s" % err)                    
-            # if mount_point == mnt:
-                # return 'ro' in flags            
-    # return "mount: '%s' doesn't exist" % mnt        
-# # print("read only: %s" % isMountReadonly('mnt'))
-
 path_folder = "/tmp/poster/"
+
 if os.path.isdir("/media/hdd"):
     path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
     path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     path_folder = "/media/mmc/poster/"
-# else:
-    # path_folder = "/tmp/poster/"
+else:
+    path_folder = "/tmp/poster/"
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
-
-# if isMountReadonly(path_folder):
-    # path_folder = "/tmp/poster/"    
-
 
 
 try:

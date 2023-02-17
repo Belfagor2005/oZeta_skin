@@ -15,7 +15,7 @@
 		<panel name="TempInfoBar"/>
 		<panel name="PartInfoDataTime"/>
 		<panel name="PartInfoPoster"/>
-		<panel name="PartInfoMeteo"/>
+		<!-- <panel name="PartInfoMeteo"/> -->
 		<panel name="PartInfoCrypt"/>
 	</screen>
 
