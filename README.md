@@ -19,9 +19,19 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/epg-poster.jpg?raw=true">
 
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/epg_info.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/epg_event.jpg?raw=true">
+
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/channell-next.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/channel_next_long.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/menu_setup.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/menu_info.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/setup_osd_pic.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/info_image.jpg?raw=true">
 
