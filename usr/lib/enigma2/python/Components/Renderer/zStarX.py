@@ -22,18 +22,35 @@ import re
 import json
 
 
-path_folder = "/tmp/poster/"
+def isMountReadonly(mnt):
+    with open('/proc/mounts') as f:
+        for line in f:
+            line = line.split(',')[0]
+            line = line.split()   
+            print('line ', line)
+            try:
+                device, mount_point, filesystem, flags = line
+            except Exception as err:
+                   print("Error: %s" % err)                    
+            if mount_point == mnt:
+                return 'ro' in flags            
+    return "mount: '%s' doesn't exist" % mnt        
 
 if os.path.isdir("/media/hdd"):
-    path_folder = "/media/hdd/poster/"
+    if not isMountReadonly("/media/hdd"):
+        path_folder = "/media/hdd/poster/"
 elif os.path.isdir("/media/usb"):
-    path_folder = "/media/usb/poster/"
+    if not isMountReadonly("/media/usb"):
+        path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
-    path_folder = "/media/mmc/poster/"
+    if not isMountReadonly("/media/mmc"):
+        path_folder = "/media/usb/mmc/"    
 else:
-    path_folder = "/tmp/poster/"
+    path_folder = "/tmp/poster/" 
+
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
+
 
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
