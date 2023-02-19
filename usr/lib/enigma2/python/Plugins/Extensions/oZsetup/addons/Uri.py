@@ -9,12 +9,7 @@
 
 from __future__ import absolute_import
 from Screens.MessageBox import MessageBox
-# from Tools import Notifications
 from Tools.Directories import fileExists
-import os
-import sys
-import re
-PY3 = sys.version_info.major >= 3
 print("oZeta Uri")
 
 global CountConnOk
@@ -51,14 +46,17 @@ def zCheckInternet(opt=1, server=None, port=None):  # opt=5 custom server and po
 
 
 #  install update oZsetup
+
+
 def upd_done():
     # from twisted.web.client import downloadPage
     print("In upd_done")
+    import sys
+    PY3 = sys.version_info.major >= 3
     xfile = 'http://patbuweb.com/ozeta/zsetup.tar'
     if PY3:
         xfile = b"http://patbuweb.com/ozeta/zsetup.tar"
         print("Update.py in PY3")
-
     import requests
     response = requests.head(xfile)
     if response.status_code == 200:
@@ -115,6 +113,7 @@ def imagevers():
         creator = ''
         type = ''
         if fileExists('/etc/image-version'):
+            import re
             content1 = '/etc/image-version'
             with open(content1, 'r') as f:
                 content = f.read()
@@ -152,7 +151,7 @@ def imagevers():
             type = content.strip()
             print('type 4   ', str(type))
             type = 'OpenSPA'
-            print('type 5   ', str(type))
+            # print('type 5   ', str(type))
             return 'OpenSPA'
         else:
             type = 'Unknow '
@@ -189,7 +188,7 @@ def zPicons(answer):
                 import time
                 import os
                 time.sleep(5)
-                if os.path.isfile('/tmp/mmpicons.tar') and os.stat('/tmp/mmpicons.tar').st_size > 100:
+                if fileExists('/tmp/mmpicons.tar') and os.stat('/tmp/mmpicons.tar').st_size > 100:
                     cmd = "tar -xvf /tmp/mmpicons.tar -C /"
                     os.system(cmd)
                     os.remove('/tmp/mmpicons.tar')
@@ -225,6 +224,7 @@ def zPicons(answer):
 def zXStreamop(answer=True):
     if answer is True:
         try:
+            # import os
             import sys
             # from twisted.web.client import downloadPage
             PY3 = sys.version_info.major >= 3
@@ -244,7 +244,7 @@ def zXStreamop(answer=True):
                 import time
                 time.sleep(5)
                 from Tools import Notifications
-                if os.path.isfile('/tmp/Zeta_4_xtreamity_opt.tar') and os.stat('/tmp/Zeta_4_xtreamity_opt.tar').st_size > 100:
+                if fileExists('/tmp/Zeta_4_xtreamity_opt.tar') and os.stat('/tmp/Zeta_4_xtreamity_opt.tar').st_size > 100:
                     cmd = "tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
                     os.system(cmd)
                     time.sleep(2)
@@ -280,6 +280,7 @@ def zxOptions(answer=True):
     if answer is True:
         try:
             import sys
+            import os
             # from twisted.web.client import downloadPage
             from Tools import Notifications
             PY3 = sys.version_info.major >= 3
@@ -291,11 +292,9 @@ def zxOptions(answer=True):
             response = requests.head(zfile)
             if response.status_code == 200:
                 fdest = "/tmp/options.tar"
-
                 r = requests.get(zfile)
                 with open(fdest, 'wb') as f:
                     f.write(r.content)
-
                 import time
                 time.sleep(5)
                 if os.path.isfile('/tmp/options.tar') and os.stat('/tmp/options.tar').st_size > 100:
@@ -309,7 +308,6 @@ def zxOptions(answer=True):
                     messageText = "Restart Gui Please"
                     Notifications.AddPopup(messageText, MessageBox.TYPE_INFO, timeout=5)
                     print('upd_zz Done!!!')
-
                 # downloadPage(zfile, fdest).addCallback(upd_zz).addErrback(errorLoad)
             elif response.status_code == 404:
                 print("Error 404")

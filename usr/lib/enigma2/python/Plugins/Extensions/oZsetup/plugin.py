@@ -39,8 +39,18 @@ PY3 = sys.version_info.major >= 3
 pythonFull = float(str(sys.version_info.major) + "." + str(sys.version_info.minor))
 thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+# config.skin.primary_skin=oZeta-FHD/skin.xml
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
+
+def getDesktopSize():
+    from enigma import getDesktop
+    s = getDesktop(0).size()
+    return (s.width(), s.height())
+
+def isHD():
+    desktopSize = getDesktopSize()
+    return desktopSize[0] >= 1280 and desktopSize[0] < 1920
 
 
 if os.path.exists(zaddons):
@@ -259,36 +269,41 @@ if f:
 
 
 class oZsetup(ConfigListScreen, Screen):
-    skin = """<screen name="oZsetup" position="0,0" size="1920,1080" title="oZeta Skin Setup" backgroundColor="#10000000" flags="wfNoBorder">
-                <ePixmap position="230,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
-                <ePixmap position="230,1025" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/green.png" size="30,30" alphatest="blend" zPosition="2" />
-                <ePixmap position="910,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
-                <ePixmap position="910,1020" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
-                <widget name="key_red" font="Regular;28" position="275,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-                <widget name="key_green" font="Regular;28" position="275,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-                <widget name="key_yellow" font="Regular;28" position="945,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-                <widget name="key_blue" font="Regular;28" position="940,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-                <widget name="config" position="230,150" size="1010,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
-                <eLabel position="1240,150" size="3,800" backgroundColor="#303030" zPosition="10" />
-                <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1" />
-                <widget name="description" render="Label" position="1260,770" size="420,173" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-                <widget name="status" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-                <eLabel position="1260,760" size="420,3" backgroundColor="#303030" zPosition="10" />
-                <widget name="author" position="1260,394" size="420,362" font="Regular;30" halign="center" valign="top" foregroundColor="white" backgroundColor="#202020" transparent="1" />
-                <widget name="HelpWindow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/vkey_icon.png" position="230,705" size="1,1" transparent="1" zPosition="10" alphatest="on" />
-                <widget name="image" position="1230,80" size="450,70" font="Regular; 32" foregroundColor="#007fcfff" halign="right" backgroundColor="#000000" transparent="1" />
-                <widget name="city" font="Regular; 26" position="1260,960" size="420,70" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="4" halign="right" valign="center" />
-                <ePixmap position="1600,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_menu.png" size="80,40" alphatest="blend" zPosition="2" />
-                <ePixmap position="1500,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_info.png" size="80,40" alphatest="blend" zPosition="2" />
-                <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend" />
-                <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2" />
-            </screen>"""
+    # skin = """<screen name="oZsetup" position="0,0" size="1920,1080" title="oZeta Skin Setup" backgroundColor="#10000000" flags="wfNoBorder">
+                # <ePixmap position="230,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
+                # <ePixmap position="230,1025" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/green.png" size="30,30" alphatest="blend" zPosition="2" />
+                # <ePixmap position="910,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+                # <ePixmap position="910,1020" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
+                # <widget name="key_red" font="Regular;28" position="275,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+                # <widget name="key_green" font="Regular;28" position="275,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+                # <widget name="key_yellow" font="Regular;28" position="945,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+                # <widget name="key_blue" font="Regular;28" position="940,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+                # <widget name="config" position="230,150" size="1010,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
+                # <eLabel position="1240,150" size="3,800" backgroundColor="#303030" zPosition="10" />
+                # <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1" />
+                # <widget name="description" render="Label" position="1260,770" size="420,173" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
+                # <widget name="status" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
+                # <eLabel position="1260,760" size="420,3" backgroundColor="#303030" zPosition="10" />
+                # <widget name="author" position="1260,394" size="420,362" font="Regular;30" halign="center" valign="top" foregroundColor="white" backgroundColor="#202020" transparent="1" />
+                # <widget name="HelpWindow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/vkey_icon.png" position="230,705" size="1,1" transparent="1" zPosition="10" alphatest="on" />
+                # <widget name="image" position="1230,80" size="450,70" font="Regular; 32" foregroundColor="#007fcfff" halign="right" backgroundColor="#000000" transparent="1" />
+                # <widget name="city" font="Regular; 26" position="1260,960" size="420,70" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="4" halign="right" valign="center" />
+                # <ePixmap position="1600,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_menu.png" size="80,40" alphatest="blend" zPosition="2" />
+                # <ePixmap position="1500,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_info.png" size="80,40" alphatest="blend" zPosition="2" />
+                # <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend" />
+                # <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2" />
+            # </screen>"""
 
     def __init__(self, session):
         Screen.__init__(self, session)
         global _session
         _session = session
         self.session = session
+        skin = os.path.join(thisdir, 'skin/oZsetup.xml')
+        if isHD:
+            skin = os.path.join(thisdir, 'skin/oZsetupHD.xml')
+        with open(skin, 'r') as f:
+            self.skin = f.read()
 
         self.onChangedEntry = []
         self.list = []
@@ -397,71 +412,85 @@ class oZsetup(ConfigListScreen, Screen):
         tab = " " * 9
         sep = "-"
         try:
-            section = ("SKIN PARTS SETUP")
-            self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
-            if ozetamenupredefinedlist:
-                self.list.append(getConfigListEntry('Menu:', config.ozeta.FirstMenuFHD, _("Settings Menu Image Panel")))
-            if ozetainfobarpredefinedlist:
-                self.list.append(getConfigListEntry('Infobar:', config.ozeta.FirstInfobarFHD, _("Settings Infobar Panels")))
-            if ozetainfobarsecpredefinedlist:
-                self.list.append(getConfigListEntry('Second Infobar:', config.ozeta.SecondInfobarFHD, _("Settings SecInfobar Panels")))
-            if ozetachannelselectionpredefinedlist:
-                self.list.append(getConfigListEntry('Channel Selection:', config.ozeta.ChannSelectorFHD, _("Settings Channel Panels")))
-            if ozetavolumepredefinedlist:
-                self.list.append(getConfigListEntry('Volume Panel:', config.ozeta.VolumeFHD, _("Settings Volume Panels")))
-            if ozetaradiopredefinedlist:
-                self.list.append(getConfigListEntry('Radio Panel:', config.ozeta.RadioFHD, _("Settings Radio Panels")))
-            if ozetamediaplayerpredefinedlist:
-                self.list.append(getConfigListEntry('MediaPlayer Panel:', config.ozeta.MediaPlayerFHD, _("Settings MediaPlayer Panels")))
-            if ozetaeventviewpredefinedlist:
-                self.list.append(getConfigListEntry('Eventview Panel:', config.ozeta.EventviewFHD, _("Settings Eventview Panels")))
-            if ozetaalogopredefinedlist:
-                self.list.append(getConfigListEntry('Logo Image Top:', config.ozeta.LogoaFHD, _("Settings Logo Image Top")))
-            if ozetablogopredefinedlist:
-                self.list.append(getConfigListEntry('Logo Image Bottom:', config.ozeta.LogobFHD, _("Settings Logo Image Bottom")))
-            if ozetamvipredefinedlist:
-                self.list.append(getConfigListEntry('Bootlogo Image:', config.ozeta.Logoboth, _("Settings Bootlogo Image\nPress Ok for change")))
-            
-            section = ("SKIN API SETUP       ")
-            self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("API SETUP SECTION")))
-            self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
-            if config.ozeta.data.value is True:
-                self.list.append(getConfigListEntry("--Load TMDB Apikey", config.ozeta.api, _("Load TMDB Apikey from /tmp/apikey.txt")))
-                self.list.append(getConfigListEntry("--Set TMDB Apikey", config.ozeta.txtapi, _("Signup on TMDB and input free personal ApiKey")))
-            self.list.append(getConfigListEntry("OMDB API:", config.ozeta.data2, _("Settings OMDB APIKEY")))
-            if config.ozeta.data2.value is True:
-                self.list.append(getConfigListEntry("--Load OMDB Apikey", config.ozeta.api2, _("Load OMDB Apikey from /tmp/omdbkey.txt")))
-                self.list.append(getConfigListEntry("--Set OMDB Apikey", config.ozeta.txtapi2, _("Signup on OMDB and input free personal ApiKey")))
-            self.list.append(getConfigListEntry("THETVDB API:", config.ozeta.data4, _("Settings THETVDB APIKEY")))
-            if config.ozeta.data4.value is True:
-                self.list.append(getConfigListEntry("--Load THETVDB Apikey", config.ozeta.api4, _("Load THETVDB Apikey from /tmp/thetvdbkey.txt")))
-                self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
 
-            VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
-            if os.path.isdir(VisualWeather):
-                self.list.append(getConfigListEntry("VISUALWEATHER API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
-                if config.ozeta.data3.value is True:
-                    self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
-                    self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
+            self.list.append(getConfigListEntry("Install/Autoupdate:", config.ozeta.update, _("Install/Autoupdate oZeta Plugin & Skin on both")))
+            if config.ozeta.update.value is True:
+                self.list.append(getConfigListEntry("--Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
 
-            section = ("MISC SETUP            ")
-            self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
-            self.list.append(getConfigListEntry("Install Options oZeta Skin", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
-            self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
-           
+
+            optionx = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZeta-FHD'))
+            if os.path.isdir(optionx):
+                self.list.append(getConfigListEntry("Install Options oZeta Skin", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
+
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
             
-            weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
-            if os.path.isdir(weatherz):
-                self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
-                if config.ozeta.zweather.value is True:
-                    self.list.append(getConfigListEntry("--Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
-                    self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
-            
-            self.list.append(getConfigListEntry("Autoupdate:", config.ozeta.update, _("Autoupdate oZeta Plugin & Skin on both")))
-            if config.ozeta.update.value is True:
-                self.list.append(getConfigListEntry("--Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
+            print('current skin is: ', cur_skin)
+            if str(cur_skin) == 'oZeta-FHD':
+
+                self.list.append(getConfigListEntry("Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
+                
+                section = ("SKIN PARTS SETUP")
+                self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
+                if ozetamenupredefinedlist:
+                    self.list.append(getConfigListEntry('Menu:', config.ozeta.FirstMenuFHD, _("Settings Menu Image Panel")))
+                if ozetainfobarpredefinedlist:
+                    self.list.append(getConfigListEntry('Infobar:', config.ozeta.FirstInfobarFHD, _("Settings Infobar Panels")))
+                if ozetainfobarsecpredefinedlist:
+                    self.list.append(getConfigListEntry('Second Infobar:', config.ozeta.SecondInfobarFHD, _("Settings SecInfobar Panels")))
+                if ozetachannelselectionpredefinedlist:
+                    self.list.append(getConfigListEntry('Channel Selection:', config.ozeta.ChannSelectorFHD, _("Settings Channel Panels")))
+                if ozetavolumepredefinedlist:
+                    self.list.append(getConfigListEntry('Volume Panel:', config.ozeta.VolumeFHD, _("Settings Volume Panels")))
+                if ozetaradiopredefinedlist:
+                    self.list.append(getConfigListEntry('Radio Panel:', config.ozeta.RadioFHD, _("Settings Radio Panels")))
+                if ozetamediaplayerpredefinedlist:
+                    self.list.append(getConfigListEntry('MediaPlayer Panel:', config.ozeta.MediaPlayerFHD, _("Settings MediaPlayer Panels")))
+                if ozetaeventviewpredefinedlist:
+                    self.list.append(getConfigListEntry('Eventview Panel:', config.ozeta.EventviewFHD, _("Settings Eventview Panels")))
+                if ozetaalogopredefinedlist:
+                    self.list.append(getConfigListEntry('Logo Image Top:', config.ozeta.LogoaFHD, _("Settings Logo Image Top")))
+                if ozetablogopredefinedlist:
+                    self.list.append(getConfigListEntry('Logo Image Bottom:', config.ozeta.LogobFHD, _("Settings Logo Image Bottom")))
+                if ozetamvipredefinedlist:
+                    self.list.append(getConfigListEntry('Bootlogo Image:', config.ozeta.Logoboth, _("Settings Bootlogo Image\nPress Ok for change")))
+
+                section = ("SKIN API SETUP       ")
+                self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("API SETUP SECTION")))
+                self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
+                if config.ozeta.data.value is True:
+                    self.list.append(getConfigListEntry("--Load TMDB Apikey", config.ozeta.api, _("Load TMDB Apikey from /tmp/apikey.txt")))
+                    self.list.append(getConfigListEntry("--Set TMDB Apikey", config.ozeta.txtapi, _("Signup on TMDB and input free personal ApiKey")))
+                self.list.append(getConfigListEntry("OMDB API:", config.ozeta.data2, _("Settings OMDB APIKEY")))
+                if config.ozeta.data2.value is True:
+                    self.list.append(getConfigListEntry("--Load OMDB Apikey", config.ozeta.api2, _("Load OMDB Apikey from /tmp/omdbkey.txt")))
+                    self.list.append(getConfigListEntry("--Set OMDB Apikey", config.ozeta.txtapi2, _("Signup on OMDB and input free personal ApiKey")))
+                self.list.append(getConfigListEntry("THETVDB API:", config.ozeta.data4, _("Settings THETVDB APIKEY")))
+                if config.ozeta.data4.value is True:
+                    self.list.append(getConfigListEntry("--Load THETVDB Apikey", config.ozeta.api4, _("Load THETVDB Apikey from /tmp/thetvdbkey.txt")))
+                    self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
+
+                VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
+                if os.path.isdir(VisualWeather):
+                    self.list.append(getConfigListEntry("VISUALWEATHER API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
+                    if config.ozeta.data3.value is True:
+                        self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
+                        self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
+
+                section = ("MISC SETUP            ")
+                self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
+                self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
+                
+                weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
+                if os.path.isdir(weatherz):
+                    self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
+                    if config.ozeta.zweather.value is True:
+                        self.list.append(getConfigListEntry("--Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
+                        self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
+                
+                # self.list.append(getConfigListEntry("Autoupdate:", config.ozeta.update, _("Autoupdate oZeta Plugin & Skin on both")))
+                # if config.ozeta.update.value is True:
+                    # self.list.append(getConfigListEntry("--Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
             
             self["config"].list = self.list
             self["config"].l.setList(self.list)
@@ -535,9 +564,9 @@ class oZsetup(ConfigListScreen, Screen):
         if entry == ('--Setting Weather City'):
             self['description'].setText(_("Settings City Weather Plugin"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Autoupdate:'):
-            self['description'].setText(_("Autoupdate oZeta Skin"))
-        if entry == ('--Check Update on Server'):
+        if entry == ('Install/Autoupdate:'):
+            self['description'].setText(_("Install/Autoupdate oZeta Skin"))
+        if entry == ('Check Update on Server'):
             self['description'].setText(_("Check for updates on the oZeta skin server\nPress OK"))
         if 'setup' in entry.lower():
             self['description'].setText(_("SELECT YOUR CHOICE"))
@@ -1269,7 +1298,7 @@ class oZsetup(ConfigListScreen, Screen):
 # not tested
     def upd_zeta(self, fplug):
         import time
-        time.sleep(8)
+        time.sleep(10)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             cmd = "tar -xvf /tmp/ozeta.tar -C /"
             # print( "cmd ozeta      =", cmd)
@@ -1288,21 +1317,22 @@ class oZsetup(ConfigListScreen, Screen):
                 os.system(cmd1)
                 os.system(cmd2)
                 self.goUp()
-            elif 'openatv' in Uri.imagevers():
-                if '6.4' in Uri.imagevers():
-                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv6.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    os.system(cmd1)
-                    os.system(cmd2)
-                if '7.' in Uri.imagevers():
-                    print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
-                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    os.system(cmd1)
-                    os.system(cmd2)
-                self.goUp()
             else:
-                self.mbox = self.session.open(MessageBox, _("IMAGE NO COMPATIBLE WITH OZETA SKIN"), MessageBox.TYPE_INFO, timeout=4)
+                if 'openatv' in Uri.imagevers():
+                    if '6.4' in Uri.imagevers():
+                        cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                        cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv6.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                        os.system(cmd1)
+                        os.system(cmd2)
+                    if '7.' in Uri.imagevers():
+                        print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
+                        cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                        cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                        os.system(cmd1)
+                        os.system(cmd2)
+                    self.goUp()
+            # else:
+                # self.mbox = self.session.open(MessageBox, _("IMAGE NO COMPATIBLE WITH OZETA SKIN"), MessageBox.TYPE_INFO, timeout=4)
 
         else:
             self.mbox = self.session.open(MessageBox, _("NO EXIST /tmp/ozeta.tar !"), MessageBox.TYPE_INFO, timeout=4)
