@@ -25,7 +25,7 @@ from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
 from Screens.Standby import TryQuitMainloop
 from Tools.Directories import fileExists
-from Tools.Directories import SCOPE_PLUGINS
+from Tools.Directories import SCOPE_PLUGINS, SCOPE_SKIN
 from Tools.Directories import resolveFilename
 from enigma import ePicLoad, loadPic, eTimer
 import os
@@ -418,8 +418,8 @@ class oZsetup(ConfigListScreen, Screen):
                 self.list.append(getConfigListEntry("--Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
 
 
-            optionx = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZeta-FHD'))
-            if os.path.isdir(optionx):
+            optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
+            if os.path.exists(optionx):
                 self.list.append(getConfigListEntry("Install Options oZeta Skin", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
 
             if XStreamity is True:
