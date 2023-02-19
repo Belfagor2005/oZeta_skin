@@ -44,7 +44,7 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster/"    
 else:
     path_folder = "/tmp/poster/" 
 

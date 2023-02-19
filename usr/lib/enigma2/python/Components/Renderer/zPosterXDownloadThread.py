@@ -64,7 +64,7 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster/"    
 else:
     path_folder = "/tmp/poster/" 
 
@@ -173,13 +173,13 @@ class zPosterXDownloadThread(threading.Thread):
                     open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                     # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(formatImg.split(",")[0]), poster)
                     # self.savePoster(dwn_poster, url_poster)
-                    print('=============11111111=================\n')
+                    # print('=============11111111=================\n')
                     return True, "[SUCCESS : tmdb] {} => {} => {}".format(title, url_tmdb, url_poster)
                 except:
                     # open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                     # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(formatImg.split(",")[0]), poster)
                     self.savePoster(dwn_poster, url_poster)
-                    print('===========2222222222==================\n')
+                    # print('===========2222222222==================\n')
                     return True, "[SUCCESS : tmdb] {} => {} => {}".format(title, url_tmdb, url_poster)
             else:
                 return False, "[ERROR : tmdb] {} => {} (None)".format(title, url_tmdb)
@@ -214,7 +214,7 @@ class zPosterXDownloadThread(threading.Thread):
                     open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                     return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title, url_tmdb, url_poster)
                 except Exception as e:
-                    print('search_molotov_google ', str(e))
+                    # print('search_molotov_google ', str(e))
                     self.savePoster(dwn_poster, url_poster)
                     return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title, url_tmdb, url_poster)
             else:
@@ -250,7 +250,7 @@ class zPosterXDownloadThread(threading.Thread):
                 open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                 return True, "[SUCCESS : google] {} => {} => {}". format(title, url_tmdb, url_poster)
             except Exception as e:
-                print('search_google ', str(e))
+                # print('search_google ', str(e))
                 self.savePoster(dwn_poster, url_poster)
                 return True, "[SUCCESS : google] {} => {} => {}". format(title, url_tmdb, url_poster)
         except Exception as e:

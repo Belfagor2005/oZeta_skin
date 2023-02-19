@@ -64,13 +64,12 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster/"    
 else:
     path_folder = "/tmp/poster/" 
 
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
-
 
 
 try:
@@ -150,9 +149,10 @@ class zInfoEvents(Renderer, VariableText):
 
     def __init__(self):
         Renderer.__init__(self)
-        VariableText.__init__(self)
-        if not intCheck:
+        adsl = intCheck()
+        if not adsl:
             return
+        VariableText.__init__(self)
 
     GUI_WIDGET = eLabel
 
@@ -305,7 +305,7 @@ class zInfoEvents(Renderer, VariableText):
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
         except:
-            pass                    
+            pass
         # return
 
     def delay2(self):

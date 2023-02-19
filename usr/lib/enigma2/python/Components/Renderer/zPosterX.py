@@ -95,7 +95,7 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster/"    
 else:
     path_folder = "/tmp/poster/" 
 
@@ -199,19 +199,7 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
-def intCheck():
-    import socket
-    try:
-        response = urlopen("http://google.com", None, 5)
-        response.close()
-    except HTTPError:
-        return False
-    except URLError:
-        return False
-    except socket.timeout:
-        return False
-    else:
-        return True
+
 
 
 def cleantitle(text):
@@ -298,7 +286,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                         canal[3] = evt[5]
                         canal[4] = evt[6]
                         canal[5] = cleantitle(canal[2])
-                        #  self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
+                        # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
                         dwn_poster = path_folder + canal[5] + ".jpg"
                         if os.path.exists(dwn_poster):
                             os.utime(dwn_poster, (time.time(), time.time()))
@@ -360,7 +348,7 @@ class zPosterX(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
         except:
             self.timer.callback.append(self.showPoster)
-        self.timer.start(200, True)
+        self.timer.start(100, True)
         self.logdbg = None
 
     def applySkin(self, desktop, parent):
@@ -432,10 +420,6 @@ class zPosterX(Renderer):
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstrNm = self.path + self.canal[5] + ".jpg"
                 if os.path.exists(pstrNm):
-                    # if(self.timer is not None):
-                        # self.timer.stop()
-                    # else:
-                        # self.timer.start(100, True)
                     self.timer.start(50, True)
                 else:
                     canal = self.canal[:]
@@ -471,11 +455,7 @@ class zPosterX(Renderer):
                 time.sleep(0.5)
                 loop = loop - 1
             if found:
-                # if(self.timer is not None):
-                    # self.timer.stop()
-                # else:
-                    # self.timer.start(100, True)
-                self.timer.start(150, True)
+                self.timer.start(10, True)
 
     def logPoster(self, logmsg):
         if self.logPoster:
