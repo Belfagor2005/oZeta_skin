@@ -79,7 +79,7 @@
 		<!-- DEVICE CRYPT -->
 		<widget source="session.CurrentService" render="Label" position="505,805" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1" 
 			borderColor="#202020" transparent="1" zPosition="10" valign="center" halign="right">
-			<convert type="CryptoInfo">VerboseInfo</convert>
+			<convert type="zCryptoInfo">VerboseInfo</convert>
 		</widget>
 		<!-- CLOCK 
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1703,970" size="210,40" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10" 
@@ -400,7 +400,7 @@
 		<!-- DEVICE CRYPT -->
 		<widget source="session.CurrentService" render="Label" position="390,1025" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1" 
 			borderColor="#202020" transparent="1" zPosition="10" valign="center" halign="left">
-			<convert type="CryptoInfo">VerboseInfo</convert>
+			<convert type="zCryptoInfo">VerboseInfo</convert>
 		</widget>
 		<!-- TUNER -->
 		<eLabel text="Tun:" position="1590,870" size="120,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
