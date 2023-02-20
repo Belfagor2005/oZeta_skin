@@ -64,7 +64,7 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster/"    
+        path_folder = "/media/usb/mmc/"    
 else:
     path_folder = "/tmp/poster/" 
 
@@ -117,7 +117,8 @@ def intCheck():
 class zPosterXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        if not intCheck():
+        adsl = intCheck()
+        if not adsl:
             return
 
     def search_tmdb(self, dwn_poster, title, shortdesc, fulldesc, channel=None):

@@ -95,7 +95,7 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster/"    
+        path_folder = "/media/usb/mmc/"    
 else:
     path_folder = "/tmp/poster/" 
 
@@ -199,7 +199,18 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
-
+def intCheck():
+    try:
+        response = urlopen("http://google.com", None, 5)
+        response.close()
+    except HTTPError:
+        return False
+    except URLError:
+        return False
+    except socket.timeout:
+        return False
+    else:
+        return True
 
 
 def cleantitle(text):
