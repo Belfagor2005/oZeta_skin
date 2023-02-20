@@ -291,7 +291,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                     newcn = None
                     for evt in events:
                         canal = [None, None, None, None, None, None]
-                        canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                        canal[0] = ServiceReference(service).getServiceName()  # .replace('\xc2\x86', '').replace('\xc2\x87', '')
                         canal[1] = evt[1]
                         canal[2] = evt[4]
                         canal[3] = evt[5]
@@ -301,6 +301,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                         dwn_poster = path_folder + canal[5] + ".jpg"
                         if os.path.exists(dwn_poster):
                             os.utime(dwn_poster, (time.time(), time.time()))
+                            
                         elif not os.path.exists(dwn_poster):
                             val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                             if val and log.find("SUCCESS"):
@@ -406,7 +407,7 @@ class zPosterX(Renderer):
                     servicetype = "Event"
                 if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
-                    self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                    self.canal[0] = ServiceReference(service).getServiceName()  # .replace('\xc2\x86', '').replace('\xc2\x87', '')
                     self.canal[1] = events[self.nxts][1]
                     self.canal[2] = events[self.nxts][4]
                     self.canal[3] = events[self.nxts][5]

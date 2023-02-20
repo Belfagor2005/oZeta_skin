@@ -5,6 +5,7 @@ from enigma import iServiceInformation
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
+
 import os
 import six
 ECM_INFO = '/tmp/ecm.info'
@@ -29,6 +30,7 @@ class zCryptoInfo(Poll, Converter, object):
     BETAECM = 13
     CRWECM = 14
     NDSECM = 15
+    GETECM = 16
 
     def __init__(self, type):
         Converter.__init__(self, type)
@@ -67,6 +69,8 @@ class zCryptoInfo(Poll, Converter, object):
             self.type = self.CRWECM
         elif type == 'NdsEcm':
             self.type = self.NDSECM
+        elif type == "VerboseInfo":
+            self.type = self.GETECM  # Info()
 
     @cached
     def getBoolean(self):
@@ -74,9 +78,11 @@ class zCryptoInfo(Poll, Converter, object):
         info = service and service.info()
         if not info:
             return False
+
         if info.getInfo(iServiceInformation.sIsCrypted) == 1:
             currentcaid = self.getCaid()
             searchcaids = info.getInfoObject(iServiceInformation.sCAIDs)
+
             if self.type == self.IRDCRYPT:
                 caemm = self.getCrypt('06', searchcaids)
                 return caemm
@@ -125,6 +131,22 @@ class zCryptoInfo(Poll, Converter, object):
             elif self.type == self.NDSECM:
                 if currentcaid == '09':
                     return True
+                    
+            #add lululla for sf8008
+            elif self.type == self.GETECM:
+                data = ''
+                try:
+                    from Tools.GetEcmInfo import GetEcmInfo
+                    self.ecmdata = GetEcmInfo()
+                    data = self.ecmdata.getEcmData()[0]
+                    return data
+                except:
+                    from Tools.GetEcmInfo import GetEcmInfo
+                    self.ecmdata = GetEcmInfo()
+                    data = self.ecmdata.getInfo(self.type)
+                    return data  
+            #end edit
+                    
         else:
             self.poll_enabled = False
         return False
