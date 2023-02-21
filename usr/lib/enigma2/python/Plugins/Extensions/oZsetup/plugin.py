@@ -106,13 +106,8 @@ version = '2.0'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'
-# SkinName = cur_skin
 sample = mvi + 'enigma2/' + cur_skin + '/zSetup/zSample'
 config.ozeta = ConfigSubsection()
-
-# config.plugins.ozeta = ConfigSubsection()
-# config.ozeta = config.plugins.ozeta
-
 ozetamenupredefinedlist = []
 ozetainfobarpredefinedlist = []
 ozetainfobarsecpredefinedlist = []
@@ -157,6 +152,7 @@ config.ozeta.LogoaFHD = ConfigSelection(default='TopLogo Default', choices=ozeta
 config.ozeta.LogobFHD = ConfigSelection(default='BottomLogo Default', choices=ozetablogopredefinedlist)
 config.ozeta.Logoboth = ConfigSelection(default='Bootlogo Default', choices=ozetamvipredefinedlist)
 config.ozeta.XStreamity = NoSave(ConfigSelection(['-> Ok']))
+
 #  parameters - =============
 try:
     f = listdir('%s/' % sample)
@@ -260,45 +256,14 @@ if f:
 
 
 class oZsetup(ConfigListScreen, Screen):
-    # skin = """<screen name="oZsetup" position="0,0" size="1920,1080" title="oZeta Skin Setup" backgroundColor="#10000000" flags="wfNoBorder">
-                # <ePixmap position="230,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
-                # <ePixmap position="230,1025" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/green.png" size="30,30" alphatest="blend" zPosition="2" />
-                # <ePixmap position="910,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
-                # <ePixmap position="910,1020" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
-                # <widget name="key_red" font="Regular;28" position="275,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-                # <widget name="key_green" font="Regular;28" position="275,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-                # <widget name="key_yellow" font="Regular;28" position="945,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-                # <widget name="key_blue" font="Regular;28" position="940,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-                # <widget name="config" position="230,150" size="1010,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
-                # <eLabel position="1240,150" size="3,800" backgroundColor="#303030" zPosition="10" />
-                # <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1" />
-                # <widget name="description" render="Label" position="1260,770" size="420,173" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-                # <widget name="status" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-                # <eLabel position="1260,760" size="420,3" backgroundColor="#303030" zPosition="10" />
-                # <widget name="author" position="1260,394" size="420,362" font="Regular;30" halign="center" valign="top" foregroundColor="white" backgroundColor="#202020" transparent="1" />
-                # <widget name="HelpWindow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/vkey_icon.png" position="230,705" size="1,1" transparent="1" zPosition="10" alphatest="on" />
-                # <widget name="image" position="1230,80" size="450,70" font="Regular; 32" foregroundColor="#007fcfff" halign="right" backgroundColor="#000000" transparent="1" />
-                # <widget name="city" font="Regular; 26" position="1260,960" size="420,70" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="4" halign="right" valign="center" />
-                # <ePixmap position="1600,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_menu.png" size="80,40" alphatest="blend" zPosition="2" />
-                # <ePixmap position="1500,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_info.png" size="80,40" alphatest="blend" zPosition="2" />
-                # <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend" />
-                # <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2" />
-            # </screen>"""
-
     def __init__(self, session):
         Screen.__init__(self, session)
         global _session
         _session = session
         self.session = session
-        # from enigma import getDesktop
-        # sz_w = getDesktop(0).size().width()
-        # if sz_w == 1280:
-            # skin = os.path.join(thisdir, 'skin/oZsetupHD.xml')
-        # else:
         skin = os.path.join(thisdir, 'skin/oZsetup.xml')
         with open(skin, 'r') as f:
             self.skin = f.read()
-
         self.onChangedEntry = []
         self.list = []
         ConfigListScreen.__init__(self, self.list, session=self.session, on_change=self.changedEntry)
@@ -379,19 +344,20 @@ class oZsetup(ConfigListScreen, Screen):
         self.setTitle(self.setup_title)
 
     def answercheck(self, answer=None):
-        if answer is None:
-            self.session.openWithCallback(self.answercheck, MessageBox, _("This operation checks if the skin has its components (is not sure)..\nDo you really want to continue?"), MessageBox.TYPE_YESNO)
-        else:
-            if zaddon is True:
-                from .addons import checkskin
-                self.check_module = eTimer()
-                check = checkskin.check_module_skin()
-                try:
-                    self.check_module_conn = self.check_module.timeout.connect(check)
-                except:
-                    self.check_module.callback.append(check)
-                self.check_module.start(100, True)
-                self.openVi()
+        if str(cur_skin) == 'oZeta-FHD':
+            if answer is None:
+                self.session.openWithCallback(self.answercheck, MessageBox, _("This operation checks if the skin has its components (is not sure)..\nDo you really want to continue?"), MessageBox.TYPE_YESNO)
+            else:
+                if zaddon is True:
+                    from .addons import checkskin
+                    self.check_module = eTimer()
+                    check = checkskin.check_module_skin()
+                    try:
+                        self.check_module_conn = self.check_module.timeout.connect(check)
+                    except:
+                        self.check_module.callback.append(check)
+                    self.check_module.start(100, True)
+                    self.openVi()
 
     def openVi(self):
         from .addons.type_utils import zEditor
@@ -411,19 +377,17 @@ class oZsetup(ConfigListScreen, Screen):
             if config.ozeta.update.value is True:
                 self.list.append(getConfigListEntry("--Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
 
-
             optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
             if os.path.exists(optionx):
                 self.list.append(getConfigListEntry("Install Options oZeta Skin", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
 
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
-            
+
             print('current skin is: ', cur_skin)
             if str(cur_skin) == 'oZeta-FHD':
-
                 self.list.append(getConfigListEntry("Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
-                
+
                 section = ("SKIN PARTS SETUP")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
                 if ozetamenupredefinedlist:
@@ -474,18 +438,12 @@ class oZsetup(ConfigListScreen, Screen):
                 section = ("MISC SETUP            ")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
                 self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
-                
                 weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
                 if os.path.isdir(weatherz):
                     self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
                     if config.ozeta.zweather.value is True:
                         self.list.append(getConfigListEntry("--Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
                         self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
-                
-                # self.list.append(getConfigListEntry("Autoupdate:", config.ozeta.update, _("Autoupdate oZeta Plugin & Skin on both")))
-                # if config.ozeta.update.value is True:
-                    # self.list.append(getConfigListEntry("--Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
-            
             self["config"].list = self.list
             self["config"].l.setList(self.list)
             self.handleInputHelpers()
@@ -545,7 +503,7 @@ class oZsetup(ConfigListScreen, Screen):
             self['description'].setText(_("Signup on www.visualcrossing.com and input free personal ApiKey"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
         if entry == ('Install Options XStreamity Skin'):
-            self['description'].setText(_("Install Optional XStreamity Skin\nPress Ok"))   
+            self['description'].setText(_("Install Optional XStreamity Skin\nPress Ok"))
         if entry == ('Install Options oZeta Skin'):
             self['description'].setText(_("Install Options oZeta Skin\nPress OK"))
         if entry == ('Install or Open mmPicons Plugin'):
@@ -1245,22 +1203,23 @@ class oZsetup(ConfigListScreen, Screen):
 
 #  reset config
     def zDefault(self, answer=None):
-        if answer is None:
-            self.session.openWithCallback(self.zDefault, MessageBox, _("Reset Settings to Defaults Parameters?"))
-        else:
-            config.ozeta.FirstMenuFHD.value = 'Menu Default'
-            config.ozeta.FirstInfobarFHD.value = 'InfoBar Default'
-            config.ozeta.SecondInfobarFHD.value = 'SecondInfoBar Default'
-            config.ozeta.ChannSelectorFHD.value = 'Channel Default'
-            config.ozeta.VolumeFHD.value = 'Volume Default'
-            config.ozeta.RadioFHD.value = 'RadioInfoBar Default'
-            config.ozeta.MediaPlayerFHD.value = 'MediaPlayer Default'
-            config.ozeta.EventviewFHD.value = 'Eventview Default'
-            config.ozeta.LogoaFHD.value = 'TopLogo Default'
-            config.ozeta.LogobFHD.value = 'BottomLogo Default'
-            config.ozeta.Logoboth.value = 'Bootlogo Default'
-            self.createSetup()
-            self.UpdatePicture()
+        if str(cur_skin) == 'oZeta-FHD':
+            if answer is None:
+                self.session.openWithCallback(self.zDefault, MessageBox, _("Reset Settings to Defaults Parameters?"))
+            else:
+                config.ozeta.FirstMenuFHD.value = 'Menu Default'
+                config.ozeta.FirstInfobarFHD.value = 'InfoBar Default'
+                config.ozeta.SecondInfobarFHD.value = 'SecondInfoBar Default'
+                config.ozeta.ChannSelectorFHD.value = 'Channel Default'
+                config.ozeta.VolumeFHD.value = 'Volume Default'
+                config.ozeta.RadioFHD.value = 'RadioInfoBar Default'
+                config.ozeta.MediaPlayerFHD.value = 'MediaPlayer Default'
+                config.ozeta.EventviewFHD.value = 'Eventview Default'
+                config.ozeta.LogoaFHD.value = 'TopLogo Default'
+                config.ozeta.LogobFHD.value = 'BottomLogo Default'
+                config.ozeta.Logoboth.value = 'Bootlogo Default'
+                self.createSetup()
+                self.UpdatePicture()
 
 # update zskin
     def zUpdate(self, answer=None):
@@ -1278,18 +1237,15 @@ class oZsetup(ConfigListScreen, Screen):
         xfile = 'http://patbuweb.com/ozeta/tar'
         if PY3:
             xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
-        
         from twisted.web.client import downloadPage
-        
         try:
-            import requests        
+            import requests
         except:
             os.chmod(os.path.join(thisdir, 'dependencies.sh', 0o0755))
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
             # self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
             # time.sleep(5)
-
         response = requests.head(xfile)
         if response.status_code == 200:
             fdest = tarfile
@@ -1301,7 +1257,6 @@ class oZsetup(ConfigListScreen, Screen):
 
     def start(self):
         pass
-
 
 # not tested
     def upd_zeta(self, fplug):
@@ -1458,7 +1413,8 @@ class oZsetup(ConfigListScreen, Screen):
 
 
 class ozHelp(Screen):
-    skin = """<screen name="ozHelp" position="center,center" size="1700,1000" title="oZeta Skin Help" backgroundColor="#10000000" flags="wfNoBorder">
+    skin = """
+              <screen name="ozHelp" position="center,center" size="1700,1000" title="oZeta Skin Help" backgroundColor="#10000000" flags="wfNoBorder">
                     <widget name="helpdesc" position="20,20" font="Regular;28" size="1640,960" halign="left" foregroundColor="#ffffff" backgroundColor="#101010" transparent="1" zPosition="1" />
                     <eLabel position="10,900" size="1680,3" backgroundColor="#303030" zPosition="1" />
                     <ePixmap position="30,930"      pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png"    size="30,30" alphatest="blend" zPosition="2" />
@@ -1469,7 +1425,8 @@ class ozHelp(Screen):
                     <widget name="key_green"  font="Regular;28" position="370,930" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
                     <widget name="key_yellow" font="Regular;28" position="670,930" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
                     <widget name="key_blue"   font="Regular;28" position="970,930" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-              </screen>"""
+              </screen>
+            """
 
     def __init__(self, session):
         Screen.__init__(self, session)
@@ -1582,10 +1539,11 @@ class ozHelp(Screen):
 
 
 class ShowPictureFullX(Screen):
-    skin = """<screen position="0,0" size="1920,1080" title="Preview" backgroundColor="transparent" flags="wfNoBorder">
+    skin = """
+            <screen position="0,0" size="1280,720" title="Preview" backgroundColor="transparent" flags="wfNoBorder">
                 <widget name="PreviewFull" position="0,0" size="1920,1080" zPosition="0" />
                 <widget name="lab2" position="0,0" size="1920,0" zPosition="2" font="Regular;30" halign="center" valign="center" backgroundColor="green" foregroundColor="white" />
-              </screen>
+            </screen>
            """
 
     def __init__(self, session, myprev):
@@ -1599,7 +1557,7 @@ class ShowPictureFullX(Screen):
     def PreviewPictureFull(self):
         myicon = self.path
         if myicon:
-            png = loadPic(myicon, 1920, 1080, 0, 0, 0, 1)
+            png = loadPic(myicon, 1280, 720, 0, 0, 0, 1)
         self["PreviewFull"].instance.setPixmap(png)
 
 

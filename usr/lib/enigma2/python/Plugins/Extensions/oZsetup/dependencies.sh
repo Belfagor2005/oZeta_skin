@@ -14,6 +14,7 @@ if [ -d /etc/opkg ]; then
         if python -c "import requests" &> /dev/null; then
             echo "Requests library already installed"
         else
+            echo "install python3-requests"
             opkg install python3-requests
         fi
         echo ""
@@ -23,12 +24,11 @@ if [ -d /etc/opkg ]; then
         if python -c "import requests" &> /dev/null; then
             echo "Requests library already installed"
         else
+            echo "install python-requests"
             opkg install python-requests
         fi
         echo ""
     fi
 
-else
-	echo "checking python-requests"
 fi
 exit 0
