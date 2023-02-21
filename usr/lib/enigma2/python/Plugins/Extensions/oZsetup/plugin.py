@@ -375,7 +375,7 @@ class oZsetup(ConfigListScreen, Screen):
 
             self.list.append(getConfigListEntry("Install/Autoupdate:", config.ozeta.update, _("Install/Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
-                self.list.append(getConfigListEntry("--Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
+                self.list.append(getConfigListEntry("Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
 
             optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
             if os.path.exists(optionx):
@@ -1234,13 +1234,13 @@ class oZsetup(ConfigListScreen, Screen):
     def zSkin(self):
         if fileExists(tarfile):
             remove(tarfile)
-        xfile = 'http://patbuweb.com/ozeta/tar'
+        xfile = 'http://patbuweb.com/ozeta/ozeta.tar'
         if PY3:
             xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
         from twisted.web.client import downloadPage
         try:
             import requests
-        except:
+        except ImportError:
             os.chmod(os.path.join(thisdir, 'dependencies.sh', 0o0755))
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
