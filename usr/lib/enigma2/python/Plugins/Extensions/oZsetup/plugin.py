@@ -43,15 +43,18 @@ cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
 
-def getDesktopSize():
-    from enigma import getDesktop
-    s = getDesktop(0).size()
-    return (s.width(), s.height())
+# def getDesktopSize():
+    # from enigma import getDesktop
+    # s = getDesktop(0).size()
+    # return (s.width(), s.height())
 
-def isHD():
-    desktopSize = getDesktopSize()
-    return desktopSize[0] >= 1280 and desktopSize[0] < 1920
+# def isHD():
+    # desktopSize = getDesktopSize()
+    # return desktopSize[0] >= 1280 and desktopSize[0] < 1920
 
+# from enigma import getDesktop
+# sz_w = getDesktop(0).size().width()
+# if sz_w == 1280:
 
 if os.path.exists(zaddons):
     zaddon = True
@@ -299,9 +302,13 @@ class oZsetup(ConfigListScreen, Screen):
         global _session
         _session = session
         self.session = session
-        skin = os.path.join(thisdir, 'skin/oZsetup.xml')
-        if isHD:
+
+        from enigma import getDesktop
+        sz_w = getDesktop(0).size().width()
+        if sz_w == 1280:
             skin = os.path.join(thisdir, 'skin/oZsetupHD.xml')
+        else:
+            skin = os.path.join(thisdir, 'skin/oZsetup.xml')
         with open(skin, 'r') as f:
             self.skin = f.read()
 
@@ -1385,17 +1392,18 @@ class oZsetup(ConfigListScreen, Screen):
 # config.plugins.ozeta.weather = NoSave(ConfigSelection(['-> Ok']))
 # config.plugins.ozeta.city = ConfigText(default='', visible_width=50, fixed_size=False)
     def KeyMenu(self):
-        weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
-        if os.path.isdir(weatherz):
-            weatherPluginEntryCount = config.plugins.WeatherPlugin.entrycount.value
-            if weatherPluginEntryCount >= 1:
-                self.session.openWithCallback(self.goWeather, MessageBox, _('Data entered for the Weather, do you want to continue the same?'), MessageBox.TYPE_YESNO)
+        if str(cur_skin) == 'oZeta-FHD':
+            weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
+            if os.path.isdir(weatherz):
+                weatherPluginEntryCount = config.plugins.WeatherPlugin.entrycount.value
+                if weatherPluginEntryCount >= 1:
+                    self.session.openWithCallback(self.goWeather, MessageBox, _('Data entered for the Weather, do you want to continue the same?'), MessageBox.TYPE_YESNO)
+                else:
+                    self.goWeather(True)
             else:
-                self.goWeather(True)
-        else:
-            restartbox = self.session.openWithCallback(self.goWeatherInstall, MessageBox, _('WeatherPlugin Plugin Not Installed!!\nDo you really want to install now?'), MessageBox.TYPE_YESNO)
-            restartbox.setTitle(_('Install WeatherPlugin and Reboot'))
-        self.UpdatePicture()
+                restartbox = self.session.openWithCallback(self.goWeatherInstall, MessageBox, _('WeatherPlugin Plugin Not Installed!!\nDo you really want to install now?'), MessageBox.TYPE_YESNO)
+                restartbox.setTitle(_('Install WeatherPlugin and Reboot'))
+            self.UpdatePicture()
 
     def goWeather(self, result=False):
         if result:
