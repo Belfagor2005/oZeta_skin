@@ -1280,7 +1280,16 @@ class oZsetup(ConfigListScreen, Screen):
             xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
         
         from twisted.web.client import downloadPage
-        import requests
+        
+        try:
+            import requests        
+        except:
+            os.chmod(os.path.join(thisdir, 'dependencies.sh', 0o0755))
+            cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
+            self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
+            # self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
+            # time.sleep(5)
+
         response = requests.head(xfile)
         if response.status_code == 200:
             fdest = tarfile
@@ -1289,6 +1298,10 @@ class oZsetup(ConfigListScreen, Screen):
             self.mbox = self.session.open(MessageBox, _("NO UPDATE zSkin ON SERVER !"), MessageBox.TYPE_INFO, timeout=4)
         else:
             return
+
+    def start(self):
+        pass
+
 
 # not tested
     def upd_zeta(self, fplug):
