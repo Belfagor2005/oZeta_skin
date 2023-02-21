@@ -1,33 +1,12 @@
 <!-- Skin oZsetup 19/02/2024 -->
-<screen name="oZsetup" position="0,0" size="1920,1080" title="oZeta Skin Setup" backgroundColor="#10000000" flags="wfNoBorder">
-
-        <ePixmap position="220,32" size="160,81" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1" />
-		<widget source="Title" render="Label" position="385,7" size="1290,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
-		<eLabel position="230,120" size="1450,3" backgroundColor="#303030" zPosition="4" />
-		<ePixmap position="0,0" size="1700,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/main2.png" zPosition="-2" />
-		<ePixmap position="1700,0" size="480,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/menu/pC.png" zPosition="-1" />
-		<eLabel position="230,960" size="1450,3" backgroundColor="#303030" zPosition="4" />
-
-        <ePixmap position="230,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
-        <ePixmap position="230,1025" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/green.png" size="30,30" alphatest="blend" zPosition="2" />
-        <ePixmap position="910,985" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
-        <ePixmap position="910,1020" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
-        <widget name="key_red" font="Regular;28" position="275,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-        <widget name="key_green" font="Regular;28" position="275,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-        <widget name="key_yellow" font="Regular;28" position="945,985" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-        <widget name="key_blue" font="Regular;28" position="940,1020" size="300,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-        <widget name="config" position="230,150" size="1010,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
-        <eLabel position="1240,150" size="3,800" backgroundColor="#303030" zPosition="10" />
-        <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1" />
-        <widget name="description" render="Label" position="1260,770" size="420,173" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-        <widget name="status" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
-        <eLabel position="1260,760" size="420,3" backgroundColor="#303030" zPosition="10" />
-        <widget name="author" position="1260,394" size="420,362" font="Regular;30" halign="center" valign="top" foregroundColor="white" backgroundColor="#202020" transparent="1" />
-        <widget name="HelpWindow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/vkey_icon.png" position="230,705" size="1,1" transparent="1" zPosition="10" alphatest="on" />
-        <widget name="image" position="1230,80" size="450,70" font="Regular; 32" foregroundColor="#007fcfff" halign="right" backgroundColor="#000000" transparent="1" />
-        <widget name="city" font="Regular; 26" position="1260,960" size="420,70" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="4" halign="right" valign="center" />
-        <ePixmap position="1600,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_menu.png" size="80,40" alphatest="blend" zPosition="2" />
-        <ePixmap position="1500,1030" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_info.png" size="80,40" alphatest="blend" zPosition="2" />
-        <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend" />
-        <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2" />
+<screen name="oZsetup" position="center,150" size="800,300" title="oZeta Skin Setup" backgroundColor="#10000000">
+	<ePixmap position="0,30" size="160,81" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1" />
+        <widget name="config" position="170,30" size="620,150" font="Regular;30" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
+	<eLabel position="10,230" size="780,3" backgroundColor="#303030" zPosition="4" />
+        <ePixmap position="10,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_red" font="Regular;28" position="50,250" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+        <ePixmap position="270,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_yellow" font="Regular;28" position="310,250" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="540,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_blue" font="Regular;28" position="580,250" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
 </screen>
