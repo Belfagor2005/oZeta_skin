@@ -43,18 +43,6 @@ cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
 
-# def getDesktopSize():
-    # from enigma import getDesktop
-    # s = getDesktop(0).size()
-    # return (s.width(), s.height())
-
-# def isHD():
-    # desktopSize = getDesktopSize()
-    # return desktopSize[0] >= 1280 and desktopSize[0] < 1920
-
-# from enigma import getDesktop
-# sz_w = getDesktop(0).size().width()
-# if sz_w == 1280:
 
 if os.path.exists(zaddons):
     zaddon = True
@@ -302,13 +290,12 @@ class oZsetup(ConfigListScreen, Screen):
         global _session
         _session = session
         self.session = session
-
-        from enigma import getDesktop
-        sz_w = getDesktop(0).size().width()
-        if sz_w == 1280:
-            skin = os.path.join(thisdir, 'skin/oZsetupHD.xml')
-        else:
-            skin = os.path.join(thisdir, 'skin/oZsetup.xml')
+        # from enigma import getDesktop
+        # sz_w = getDesktop(0).size().width()
+        # if sz_w == 1280:
+            # skin = os.path.join(thisdir, 'skin/oZsetupHD.xml')
+        # else:
+        skin = os.path.join(thisdir, 'skin/oZsetup.xml')
         with open(skin, 'r') as f:
             self.skin = f.read()
 
@@ -940,154 +927,155 @@ class oZsetup(ConfigListScreen, Screen):
         self.ShowPicture()
 
     def zSave(self):
-        infobar_file = self.chooseFile + 'infobar_' + config.ozeta.FirstInfobarFHD.value + '.xml'
-        infobar_file = infobar_file.replace(" ", "-")
-        secinfobar_file = self.chooseFile + 'second_' + config.ozeta.SecondInfobarFHD.value + '.xml'
-        secinfobar_file = secinfobar_file.replace(" ", "-")
-        chansel_file = self.chooseFile + 'channel_' + config.ozeta.ChannSelectorFHD.value + '.xml'
-        chansel_file = chansel_file.replace(" ", "-")
-        volume_file = self.chooseFile + 'volume_' + config.ozeta.VolumeFHD.value + '.xml'
-        volume_file = volume_file.replace(" ", "-")
-        radio_file = self.chooseFile + 'radio_' + config.ozeta.RadioFHD.value + '.xml'
-        radio_file = radio_file.replace(" ", "-")
-        mediaplayer_file = self.chooseFile + 'mediaplayer_' + config.ozeta.MediaPlayerFHD.value + '.xml'
-        mediaplayer_file = mediaplayer_file.replace(" ", "-")
-        eventview_file = self.chooseFile + 'eventview_' + config.ozeta.EventviewFHD.value + '.xml'
-        eventview_file = eventview_file.replace(" ", "-")
-        alogo_file = self.chooseFile + 'alogo_' + config.ozeta.LogoaFHD.value + '.xml'
-        alogo_file = alogo_file.replace(" ", "-")
-        blogo_file = self.chooseFile + 'blogo_' + config.ozeta.LogobFHD.value + '.xml'
-        blogo_file = blogo_file.replace(" ", "-")
-        menu_file = self.chooseFile + 'menu_' + config.ozeta.FirstMenuFHD.value + '.xml'
-        menu_file = menu_file.replace(" ", "-")
-        try:
-            init_file = '%s/basefile/init' % thisdir
-            #  print (init_file + "\n#########################")
-            skFile = open(init_file, 'r')
-            file_lines = skFile.read()
-            skFile.close()
-            skFilew = open(self.skinFileTmp, 'w')
-            skFilew.write(file_lines+'\n')
-            skFilew.close()
-
-            if fileExists(menu_file):
-                # print("Menu file %s found, reading....." % menu_file)
-                menu_file = open(menu_file, 'r')
-                file_menu = menu_file.read()
-                skinMenu = mvi + 'enigma2/oZeta-FHD/zSkin/skin_menu.xml'  # % (mvi, cur_skin)
-                skFilewM = open(skinMenu, 'w')
-                skFilewM.write('<?xml version="1.0" encoding="UTF-8"?>\n<skin>\n' + file_menu + '\n</skin>\n')
-                skFilewM.close()
-
-            #  print (infobar_file + "\n#########################")
-            if fileExists(infobar_file):
-                # print("Infobar file %s found, writing....." % infobar_file)
-                skFile = open(infobar_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (secinfobar_file + "\n#########################")
-            if fileExists(secinfobar_file):
-                # print("Second Infobar file %s found, writing....." % secinfobar_file)
-                skFile = open(secinfobar_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (radio_file + "\n#########################")
-            if fileExists(radio_file):
-                # print("Radio file %s found, writing....." % volume_file)
-                skFile = open(radio_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (chansel_file + "\n#########################")
-            if fileExists(chansel_file):
-                # print("Channel Selection file %s found, writing....." % chansel_file)
-                skFile = open(chansel_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (volume_file + "\n#########################")
-            if fileExists(volume_file):
-                # print("Volume file %s found, writing....." % volume_file)
-                skFile = open(volume_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (mediaplayer_file + "\n#########################")
-            if fileExists(mediaplayer_file):
-                # print("mediaplayer file %s found, writing....." % mediaplayer_file)
-                skFile = open(mediaplayer_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (eventview_file + "\n#########################")
-            if fileExists(eventview_file):
-                # print("eventview file %s found, writing....." % eventview_file)
-                skFile = open(eventview_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (alogo_file + "\n#########################")        alogo_TopLogo-Zeta.xml
-            if fileExists(alogo_file):
-                # print("Logo Top file %s found, writing....." % alogo_file)
-                skFile = open(alogo_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            #  print (blogo_file + "\n#########################")        blogo_BottomLogo-Zeta.xml
-            if fileExists(blogo_file):
-                # print("Logo Bottom file %s found, writing....." % blogo_file)
-                skFile = open(blogo_file, 'r')
-                file_lines = skFile.read()
-                skFile.close()
-                skFilew = open(self.skinFileTmp, 'a')
-                skFilew.write('\n'+file_lines+'\n')
-                skFilew.close()
-
-            skFilew = open(self.skinFileTmp, 'a')
-            skFilew.write('\n</skin>\n')
-            skFilew.close()
-            #  final write
-            if fileExists(self.skinFile):
-                remove(self.skinFile)
-                # print("********** Removed %s" % self.skinFile)
-            rename(self.skinFileTmp, self.skinFile)
-            # print("********** Renamed %s" % self.skinFileTmp)
+        if str(cur_skin) == 'oZeta-FHD':
+            infobar_file = self.chooseFile + 'infobar_' + config.ozeta.FirstInfobarFHD.value + '.xml'
+            infobar_file = infobar_file.replace(" ", "-")
+            secinfobar_file = self.chooseFile + 'second_' + config.ozeta.SecondInfobarFHD.value + '.xml'
+            secinfobar_file = secinfobar_file.replace(" ", "-")
+            chansel_file = self.chooseFile + 'channel_' + config.ozeta.ChannSelectorFHD.value + '.xml'
+            chansel_file = chansel_file.replace(" ", "-")
+            volume_file = self.chooseFile + 'volume_' + config.ozeta.VolumeFHD.value + '.xml'
+            volume_file = volume_file.replace(" ", "-")
+            radio_file = self.chooseFile + 'radio_' + config.ozeta.RadioFHD.value + '.xml'
+            radio_file = radio_file.replace(" ", "-")
+            mediaplayer_file = self.chooseFile + 'mediaplayer_' + config.ozeta.MediaPlayerFHD.value + '.xml'
+            mediaplayer_file = mediaplayer_file.replace(" ", "-")
+            eventview_file = self.chooseFile + 'eventview_' + config.ozeta.EventviewFHD.value + '.xml'
+            eventview_file = eventview_file.replace(" ", "-")
+            alogo_file = self.chooseFile + 'alogo_' + config.ozeta.LogoaFHD.value + '.xml'
+            alogo_file = alogo_file.replace(" ", "-")
+            blogo_file = self.chooseFile + 'blogo_' + config.ozeta.LogobFHD.value + '.xml'
+            blogo_file = blogo_file.replace(" ", "-")
+            menu_file = self.chooseFile + 'menu_' + config.ozeta.FirstMenuFHD.value + '.xml'
+            menu_file = menu_file.replace(" ", "-")
             try:
-                for x in self["config"].list:
-                    x[1].save()
-                configfile.save()
+                init_file = '%s/basefile/init' % thisdir
+                #  print (init_file + "\n#########################")
+                skFile = open(init_file, 'r')
+                file_lines = skFile.read()
+                skFile.close()
+                skFilew = open(self.skinFileTmp, 'w')
+                skFilew.write(file_lines+'\n')
+                skFilew.close()
+
+                if fileExists(menu_file):
+                    # print("Menu file %s found, reading....." % menu_file)
+                    menu_file = open(menu_file, 'r')
+                    file_menu = menu_file.read()
+                    skinMenu = mvi + 'enigma2/oZeta-FHD/zSkin/skin_menu.xml'  # % (mvi, cur_skin)
+                    skFilewM = open(skinMenu, 'w')
+                    skFilewM.write('<?xml version="1.0" encoding="UTF-8"?>\n<skin>\n' + file_menu + '\n</skin>\n')
+                    skFilewM.close()
+
+                #  print (infobar_file + "\n#########################")
+                if fileExists(infobar_file):
+                    # print("Infobar file %s found, writing....." % infobar_file)
+                    skFile = open(infobar_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (secinfobar_file + "\n#########################")
+                if fileExists(secinfobar_file):
+                    # print("Second Infobar file %s found, writing....." % secinfobar_file)
+                    skFile = open(secinfobar_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (radio_file + "\n#########################")
+                if fileExists(radio_file):
+                    # print("Radio file %s found, writing....." % volume_file)
+                    skFile = open(radio_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (chansel_file + "\n#########################")
+                if fileExists(chansel_file):
+                    # print("Channel Selection file %s found, writing....." % chansel_file)
+                    skFile = open(chansel_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (volume_file + "\n#########################")
+                if fileExists(volume_file):
+                    # print("Volume file %s found, writing....." % volume_file)
+                    skFile = open(volume_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (mediaplayer_file + "\n#########################")
+                if fileExists(mediaplayer_file):
+                    # print("mediaplayer file %s found, writing....." % mediaplayer_file)
+                    skFile = open(mediaplayer_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (eventview_file + "\n#########################")
+                if fileExists(eventview_file):
+                    # print("eventview file %s found, writing....." % eventview_file)
+                    skFile = open(eventview_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (alogo_file + "\n#########################")        alogo_TopLogo-Zeta.xml
+                if fileExists(alogo_file):
+                    # print("Logo Top file %s found, writing....." % alogo_file)
+                    skFile = open(alogo_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (blogo_file + "\n#########################")        blogo_BottomLogo-Zeta.xml
+                if fileExists(blogo_file):
+                    # print("Logo Bottom file %s found, writing....." % blogo_file)
+                    skFile = open(blogo_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                skFilew = open(self.skinFileTmp, 'a')
+                skFilew.write('\n</skin>\n')
+                skFilew.close()
+                #  final write
+                if fileExists(self.skinFile):
+                    remove(self.skinFile)
+                    # print("********** Removed %s" % self.skinFile)
+                rename(self.skinFileTmp, self.skinFile)
+                # print("********** Renamed %s" % self.skinFileTmp)
+                try:
+                    for x in self["config"].list:
+                        x[1].save()
+                    configfile.save()
+                except:
+                    pass
+                # self.applySkin()
+                self.session.open(MessageBox, _('Successfully creating Skin!'), MessageBox.TYPE_INFO, timeout=5)
             except:
-                pass
-            # self.applySkin()
-            self.session.open(MessageBox, _('Successfully creating Skin!'), MessageBox.TYPE_INFO, timeout=5)
-        except:
-            self.session.open(MessageBox, _('Error creating Skin!'), MessageBox.TYPE_ERROR, timeout=5)
+                self.session.open(MessageBox, _('Error creating Skin!'), MessageBox.TYPE_ERROR, timeout=5)
 
 # why don't work
     def keySave(self):
