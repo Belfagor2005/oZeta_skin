@@ -144,7 +144,7 @@ class zCryptoInfo(Poll, Converter, object):
                     from Tools.GetEcmInfo import GetEcmInfo
                     self.ecmdata = GetEcmInfo()
                     data = self.ecmdata.getInfo(self.type)
-                    return data  
+                    return data
             #end edit
                     
         else:

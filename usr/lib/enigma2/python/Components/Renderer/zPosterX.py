@@ -200,6 +200,7 @@ REGEX = re.compile(
 
 
 def intCheck():
+    import socket
     try:
         response = urlopen("http://google.com", None, 5)
         response.close()
