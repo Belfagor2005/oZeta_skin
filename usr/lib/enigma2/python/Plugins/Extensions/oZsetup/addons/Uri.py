@@ -136,23 +136,28 @@ def imagevers():
             print('type 1    ', str(type))
             type = 'OpenPLi'
             print('type 2    ', str(type))
-            return 'OpenPLi'
+            return type
         #  used confirmed
         elif os.path.isdir('/usr/lib/enigma2/python/Plugins/PLi'):
             type = 'OpenPLi'
             print('type 3    ', str(type))
-            return 'OpenPLi'
+            return type
         elif fileExists('/etc/issue'):
             content1 = '/etc/issue'
             with open(content1, 'r') as f:
                 content = f.read()
                 if 'openspa' in content:
                     print("In version =", content)
-            type = content.strip()
-            print('type 4   ', str(type))
-            type = 'OpenSPA'
-            # print('type 5   ', str(type))
-            return 'OpenSPA'
+                    type = content.strip()
+                    print('type 4   ', str(type))
+                    type = 'OpenSPA'     
+                    return 'OpenSPA'
+                if 'openatv' in content:
+                    print("In version =", content)
+                    type = content.strip()
+                    print('type 5   ', str(type))
+                    type = type   
+                    return 'openatv'
         else:
             type = 'Unknow '
             print('type 6  ', str(type))

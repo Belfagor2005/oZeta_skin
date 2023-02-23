@@ -31,7 +31,6 @@ from enigma import ePicLoad, loadPic, eTimer
 import os
 import sys
 import time
-from os import listdir, remove, rename
 
 global my_cur_skin, sample, zaddon
 
@@ -42,13 +41,8 @@ cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 # config.skin.primary_skin=oZeta-FHD/skin.xml
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
-
-
 if os.path.exists(zaddons):
     zaddon = True
-# print('zaddon ', zaddon)
-
-
 my_cur_skin = False
 _firstStartZ = True
 mvi = '/usr/share/'
@@ -155,7 +149,7 @@ config.ozeta.XStreamity = NoSave(ConfigSelection(['-> Ok']))
 
 #  parameters - =============
 try:
-    f = listdir('%s/' % sample)
+    f = os.listdir('%s/' % sample)
 except:
     f = []
 if f:
@@ -253,6 +247,29 @@ if f:
         config.ozeta.Logoboth = ConfigSelection(default='Bootlogo Default', choices=ozetamvipredefinedlist)
     else:
         config.ozeta.Logoboth = ConfigSelection(choices=ozetamvipredefinedlist)
+
+
+def localreturn(name):
+    retr = [
+        ["omdb", "omdb"],
+        ["tmdb", "tmdb"],
+        ["thetvdb", "thetvdb"],
+        ["weather", "weather"],
+        ["autoupdate", "autoupdate"],
+        ["update", "update"],
+        ["ok", "ok"],
+        ["mmpicons", "mmpicons"],
+        ["bootlogo", "bootlogo"],
+        ["setup", "setup"],
+        ["options", "options"],
+        ["tmdb api:", "tmdb api:"],
+        ["omdb api:", "omdb api:"],
+        ["visualweather api:", "visualweather api:"],
+    ]
+    for nname in retr:
+        if nname[0] in str(name).lower():
+            return True
+    return False
 
 
 class oZsetup(ConfigListScreen, Screen):
@@ -681,38 +698,7 @@ class oZsetup(ConfigListScreen, Screen):
         selx = self['config'].getCurrent()[0]
         print('sel1 zXml --->>> ', sel1)
         print('selx zXml --->>> ', selx)
-        '''
-        # a = 'omdb', 'tmdb', 'weather', 'thetvdb', 'autoupdate', 'update', 'ok', 'mmpicons', 'options', 'bootlogo', 'setup', 'tmdb api:', 'omdb api:', 'visualweather api:'
-        # if any(s in selx.lower() for s in a):
-            # return
-        '''
-        if 'omdb' in selx.lower():
-            return
-        if 'tmdb' in selx.lower():
-            return
-        if 'thetvdb' in selx.lower():
-            return
-        if 'weather' in selx.lower():
-            return
-        if 'autoupdate' in selx.lower():
-            return
-        if 'update' in selx.lower():
-            return
-        if 'ok' in selx.lower():
-            return
-        if 'mmpicons' in selx.lower():
-            return
-        if 'bootlogo' in selx.lower():
-            return
-        if 'setup' in selx.lower():
-            return
-        if 'options' in selx.lower():
-            return
-        if 'tmdb api:' in selx.lower():
-            return
-        if 'omdb api:' in selx.lower():
-            return
-        if 'visualweather api:' in selx.lower():
+        if localreturn(selx):
             return
 
         sel2 = sel1.replace(" ", "-")
@@ -766,18 +752,14 @@ class oZsetup(ConfigListScreen, Screen):
 
     def GetPicturePath(self):
         PicturePath = '%sbasefile/default.jpg' % thisdir
-        # entry = str(self.getCurrentEntry())
-        # print('Entry GetPicturePath: ', entry)
         sel = self["config"].getCurrent()[1]
         sel2 = self['config'].getCurrent()[1].value
         xxxx = self["config"].getCurrent()[0]
-        print('sel GetPicturePath: ', sel)
-        print('sel2 GetPicturePath: ', sel2)
-        print('xxxx GetPicturePath: ', xxxx)
+        # print('sel GetPicturePath: ', sel)
+        # print('sel2 GetPicturePath: ', sel2)
+        # print('xxxx GetPicturePath: ', xxxx)
         try:
-            if 'setup' in xxxx.lower():
-                PicturePath = '%sbasefile/default.jpg' % thisdir
-                return PicturePath
+
             if 'tmdb api:' in xxxx.lower():
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'tmdb'))
                 return PicturePath
@@ -790,13 +772,22 @@ class oZsetup(ConfigListScreen, Screen):
             if 'visualweather api:' in xxxx.lower():
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'visualweather'))
                 return PicturePath
-            if 'autoupdate:' in xxxx.lower():
-                PicturePath = '%sbasefile/default.jpg' % thisdir
-                return PicturePath
-            if 'weather:' in xxxx.lower():
-                PicturePath = '%sbasefile/default.jpg' % thisdir
-                return PicturePath
 
+            c = ['aaaaa', 'autoupdate', ' weather']
+            if xxxx.lower() in c:
+                PicturePath = '%sbasefile/default.jpg' % thisdir
+                return PicturePath
+            '''
+            # if 'setup' in xxxx.lower():
+                # PicturePath = '%sbasefile/default.jpg' % thisdir
+                # return PicturePath
+            # if 'autoupdate:' in xxxx.lower():
+                # PicturePath = '%sbasefile/default.jpg' % thisdir
+                # return PicturePath
+            # if 'weather:' in xxxx.lower():
+                # PicturePath = '%sbasefile/default.jpg' % thisdir
+                # return PicturePath
+            '''
             if sel and sel == config.ozeta.data:
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'tmdb'))
             if sel and sel == config.ozeta.data2:
@@ -828,7 +819,6 @@ class oZsetup(ConfigListScreen, Screen):
             if fileExists('%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)):
                 PicturePath = '%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)
             if not fileExists(PicturePath):
-                # print('not exist path')
                 PicturePath = '%sbasefile/default.jpg' % thisdir
             return PicturePath
         except Exception as e:
@@ -1020,9 +1010,9 @@ class oZsetup(ConfigListScreen, Screen):
                 skFilew.close()
                 #  final write
                 if fileExists(self.skinFile):
-                    remove(self.skinFile)
+                    os.remove(self.skinFile)
                     # print("********** Removed %s" % self.skinFile)
-                rename(self.skinFileTmp, self.skinFile)
+                os.rename(self.skinFileTmp, self.skinFile)
                 # print("********** Renamed %s" % self.skinFileTmp)
                 try:
                     for x in self["config"].list:
@@ -1049,7 +1039,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.Timer.callback.append(self.zUpdate)
         except:
             self.Timer_conn = self.Timer.timeout.connect(self.zUpdate)
-        self.Timer.start(2000, 1)
+        self.Timer.start(500, 1)
         self.createSetup()
 
     def upOptions(self):
@@ -1091,14 +1081,11 @@ class oZsetup(ConfigListScreen, Screen):
                 self.mbox = self.session.open(MessageBox, (_("Missing %s !") % api), MessageBox.TYPE_INFO, timeout=4)
         elif answer:
             if fileExists(api) and os.stat(api).st_size > 0:
-                # global apis
-                # apis = False
                 with open(api, 'r') as f:
                     fpage = f.readline()
                     with open(tmdb_skin, "w") as t:
                         t.write(str(fpage))
                         t.close()
-                    # apis = True
                     config.ozeta.txtapi.setValue(str(fpage))
                     config.ozeta.txtapi.save()
                     self.createSetup()
@@ -1116,14 +1103,11 @@ class oZsetup(ConfigListScreen, Screen):
                 self.mbox = self.session.open(MessageBox, (_("Missing %s !") % api2), MessageBox.TYPE_INFO, timeout=4)
         elif answer:
             if fileExists(api2) and os.stat(api2).st_size > 0:
-                # global api2s
-                # api2s = False
                 with open(api2, 'r') as f:
                     fpage = f.readline()
                     with open(omdb_skin, "w") as t:
                         t.write(str(fpage))
                         t.close()
-                    # api2s = True
                     config.ozeta.txtapi2.setValue(str(fpage))
                     config.ozeta.txtapi2.save()
                     self.createSetup()
@@ -1141,14 +1125,11 @@ class oZsetup(ConfigListScreen, Screen):
                 self.mbox = self.session.open(MessageBox, (_("Missing %s !") % api3), MessageBox.TYPE_INFO, timeout=4)
         elif answer:
             if fileExists(api3) and os.stat(api3).st_size > 0:
-                # global api3s
-                # api3s = False
                 with open(api3, 'r') as f:
                     fpage = f.readline()
                     with open(visual_skin, "w") as t:
                         t.write(str(fpage))
                         t.close()
-                    # api3s = True
                     config.ozeta.txtapi3.setValue(str(fpage))
                     config.ozeta.txtapi3.save()
                     self.createSetup()
@@ -1166,14 +1147,11 @@ class oZsetup(ConfigListScreen, Screen):
                 self.mbox = self.session.open(MessageBox, (_("Missing %s !") % api4), MessageBox.TYPE_INFO, timeout=4)
         elif answer:
             if fileExists(api4) and os.stat(api4).st_size > 0:
-                # global api4s
-                # api4s = False
                 with open(api4, 'r') as f:
                     fpage = f.readline()
                     with open(thetvdb_skin, "w") as t:
                         t.write(str(fpage))
                         t.close()
-                    # api4s = True
                     config.ozeta.txtapi4.setValue(str(fpage))
                     config.ozeta.txtapi4.save()
                     self.createSetup()
@@ -1233,7 +1211,7 @@ class oZsetup(ConfigListScreen, Screen):
 #  install update zskin
     def zSkin(self):
         if fileExists(tarfile):
-            remove(tarfile)
+            os.remove(tarfile)
         xfile = 'http://patbuweb.com/ozeta/ozeta.tar'
         if PY3:
             xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
@@ -1244,8 +1222,6 @@ class oZsetup(ConfigListScreen, Screen):
             os.chmod(os.path.join(thisdir, 'dependencies.sh', 0o0755))
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
-            # self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
-            # time.sleep(5)
         response = requests.head(xfile)
         if response.status_code == 200:
             fdest = tarfile
@@ -1261,12 +1237,11 @@ class oZsetup(ConfigListScreen, Screen):
 # not tested
     def upd_zeta(self, fplug):
         import time
-        time.sleep(10)
+        time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             cmd = "tar -xvf /tmp/ozeta.tar -C /"
-            # print( "cmd ozeta      =", cmd)
+            time.sleep(8)
             os.system(cmd)
-            import time
             time.sleep(5)
             if 'OpenSPA' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
@@ -1294,11 +1269,9 @@ class oZsetup(ConfigListScreen, Screen):
                         os.system(cmd1)
                         os.system(cmd2)
                     self.goUp()
-            # else:
-                # self.mbox = self.session.open(MessageBox, _("IMAGE NO COMPATIBLE WITH OZETA SKIN"), MessageBox.TYPE_INFO, timeout=4)
 
         else:
-            self.mbox = self.session.open(MessageBox, _("NO EXIST /tmp/ozeta.tar !"), MessageBox.TYPE_INFO, timeout=4)
+            self.mbox = self.session.open(MessageBox, _("Unknow!! or FILE NO EXIST /tmp/ozeta.tar!"), MessageBox.TYPE_INFO, timeout=4)
 
     def goUp(self):
         os.chmod(os.path.join(thisdir, 'postUpd.sh', 0o0755))
@@ -1322,7 +1295,6 @@ class oZsetup(ConfigListScreen, Screen):
             self.session.open(SelectPicons)
         else:
             try:
-                # from . import Uri
                 restartbox = self.session.openWithCallback(Uri.zPicons, MessageBox, _('mmPicons Plugin Not Installed!!\nDo you really want to install now?'), MessageBox.TYPE_YESNO)
                 restartbox.setTitle(_('Install mmPicons'))
                 print('mmPicons - Done!!!')
