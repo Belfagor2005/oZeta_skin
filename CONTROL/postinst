@@ -3,29 +3,40 @@
 # <!-- Install skin oZeta-FHD by mmark         -->
 # <!-- Don't Remove this Disclaimer            -->
 # <!-- **************************************  -->
+pyv="$(python -V 2>&1)"
+echo "$pyv"
+lulu='skin_templatepanelslulu.xml'
+filename='/usr/share/enigma2/oZeta-FHD/skin.xml'
+isInFile=$(cat $filename | grep -c $lulu)
+echo "WAIT PLEASE..."
 cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_menuOrig.xml > /dev/null 2>&1
 if grep -qs -i "openpli" /etc/issue; then
 	echo "distro= OpenPLI image"
 	cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teampli.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
 fi
+echo ""
 if grep -qs -i "openatv" /etc/image-version; then
     echo "distro= Openatv image"
 	if grep -qs -i "version=6" /etc/image-version; then
 		echo "distro= Openatv image < 6.4"
 		cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamatv6.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
 	fi
+    echo ""
 	if grep -qs -i "version=7" /etc/image-version; then
 		echo "distro= Openatv image > 6.4"
 		cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamatv.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
-	fi	
+	fi
+    echo ""
 fi
+echo ""
 if grep -qs -i "openspa" /etc/issue; then
 	echo "distro= Openspa image"
 	cp -rf /usr/share/enigma2/oZeta-FHD/zSkin/skin_teamspa.xml /usr/share/enigma2/oZeta-FHD/zSkin/skin_team.xml > /dev/null 2>&1
 fi
+echo ""
 if grep -qs -i "egami" /etc/image-version; then
 	echo "distro= Egami image"
-	echo "NO WORK ON EGAMI IMAGE"	
+	echo "NOT TESTED ON EGAMI IMAGE"	
 	echo "REMOVE SKIN PLEASE....."		
 	rm -rf /usr/lib/enigma2/python/Components/Converter/zCryptoInfo.*
 	# rm -rf /usr/lib/enigma2/python/Components/Converter/genre.*
@@ -55,8 +66,30 @@ if grep -qs -i "egami" /etc/image-version; then
 	echo "*****************************************"	
 	
 fi
+echo ""
 sleep 2
+
+if [ -f /usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml ];	then
+
+    echo "skin_templatepanelslulu file exist"
+    if [ $isInFile -eq 0 ]; then
+
+        sed -i 's%</skin>%\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>%' $filename
+        echo "skin.xml no content skin_templatepanelslulu.xml"
+        echo "append skin_templatepanelslulu.xml to skin.xml"
+        echo "done...  reboot please"
+    else
+        echo "skin.xml content skin_templatepanelslulu"
+
+    fi
+    echo ""
+
+fi
+echo ""
+
+sleep 2;
 rm -r /var/volatile/tmp/*.ipk > /dev/null 2>&1
+rm -r /var/volatile/tmp/*.tar > /dev/null 2>&1
 echo "*****************************************"
 echo "*             regards Lululla           *"
 echo "*           oZeta skin installed        *"
