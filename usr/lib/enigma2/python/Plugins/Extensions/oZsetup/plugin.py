@@ -396,14 +396,14 @@ class oZsetup(ConfigListScreen, Screen):
 
             optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
             if os.path.exists(optionx):
-                self.list.append(getConfigListEntry("Install Options oZeta Skin", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
+                self.list.append(getConfigListEntry("Install Options Developer", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
 
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
 
             print('current skin is: ', cur_skin)
             if str(cur_skin) == 'oZeta-FHD':
-                self.list.append(getConfigListEntry("Check Update on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
+                self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
 
                 section = ("SKIN PARTS SETUP")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
@@ -521,7 +521,7 @@ class oZsetup(ConfigListScreen, Screen):
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
         if entry == ('Install Options XStreamity Skin'):
             self['description'].setText(_("Install Optional XStreamity Skin\nPress Ok"))
-        if entry == ('Install Options oZeta Skin'):
+        if entry == ('Install Options Developer'):
             self['description'].setText(_("Install Options oZeta Skin\nPress OK"))
         if entry == ('Install or Open mmPicons Plugin'):
             self['description'].setText(_("Install or Open mmPicons Plugin by mmark\nPress OK"))
@@ -535,7 +535,7 @@ class oZsetup(ConfigListScreen, Screen):
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
         if entry == ('Install/Autoupdate:'):
             self['description'].setText(_("Install/Autoupdate oZeta Skin"))
-        if entry == ('Check Update on Server'):
+        if entry == ('Update Stable Version on Server'):
             self['description'].setText(_("Check for updates on the oZeta skin server\nPress OK"))
         if 'setup' in entry.lower():
             self['description'].setText(_("SELECT YOUR CHOICE"))

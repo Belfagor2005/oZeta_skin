@@ -77,15 +77,15 @@ def isMountReadonly(mnt):
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]
-            line = line.split()   
+            line = line.split()
             print('line ', line)
             try:
                 device, mount_point, filesystem, flags = line
             except Exception as err:
-                   print("Error: %s" % err)                    
+                   print("Error: %s" % err)
             if mount_point == mnt:
-                return 'ro' in flags            
-    return "mount: '%s' doesn't exist" % mnt        
+                return 'ro' in flags
+    return "mount: '%s' doesn't exist" % mnt
 
 if os.path.isdir("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
@@ -95,9 +95,9 @@ elif os.path.isdir("/media/usb"):
         path_folder = "/media/usb/poster/"
 elif os.path.isdir("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/usb/mmc/"
 else:
-    path_folder = "/tmp/poster/" 
+    path_folder = "/tmp/poster/"
 
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
@@ -215,6 +215,7 @@ def intCheck():
 
 
 def cleantitle(text):
+    import unicodedata
     text = text.replace('\xc2\x86', '')
     text = text.replace('\xc2\x87', '')
     text = REGEX.sub('', text)
@@ -302,7 +303,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                         dwn_poster = path_folder + canal[5] + ".jpg"
                         if os.path.exists(dwn_poster):
                             os.utime(dwn_poster, (time.time(), time.time()))
-                            
+
                         elif not os.path.exists(dwn_poster):
                             val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                             if val and log.find("SUCCESS"):
