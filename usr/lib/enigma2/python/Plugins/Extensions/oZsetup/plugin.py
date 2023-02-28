@@ -1564,11 +1564,18 @@ def autostart(reason, session=None, **kwargs):
     return
 
 
-def mainmenu(menuid):
-    if menuid != 'setup':
-        return []
+def mainmenu(menuid, **kwargs):
+    if menuid == "setup":
+        return [('oZsetup', main, _('oZsetup'), None)]
     else:
-        return [(_('oZsetup'), main, _('Customization tool for oZeta skin'), None)]
+        return []
+
+
+# def mainmenu(menuid):
+    # if menuid != 'setup':
+        # return []
+    # else:
+        # return [('oZsetup', main, _('oZsetup Customization tool for oZeta skin'), None)]
 
 
 def main(session, **kwargs):
@@ -1584,7 +1591,7 @@ def main(session, **kwargs):
 def Plugins(**kwargs):
     result = [
               PluginDescriptor(name='oZsetup', description=descplug, where=[PluginDescriptor.WHERE_SESSIONSTART], fnc=autostart),
-              PluginDescriptor(name='oZsetup', description=descplug, where=PluginDescriptor.WHERE_MENU, icon=None, fnc=mainmenu),
+              PluginDescriptor(name='oZsetup', description=descplug, where=PluginDescriptor.WHERE_MENU, icon=iconpic, fnc=mainmenu),
               PluginDescriptor(name='oZsetup', description=descplug, where=PluginDescriptor.WHERE_PLUGINMENU, icon=iconpic, fnc=main)
                ]
     return result
