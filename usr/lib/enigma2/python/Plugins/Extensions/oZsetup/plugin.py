@@ -646,39 +646,40 @@ class oZsetup(ConfigListScreen, Screen):
             self.mbox = self.session.open(MessageBox, _("Missing XStreamity Plugins!"), MessageBox.TYPE_INFO, timeout=4)
 
     def zLogoboth(self, answer=None):
-        sel2 = self['config'].getCurrent()[1].value
-        print('sel2-- ', sel2)
-        sel2 = sel2.replace(" ", "-")
-        filemvi = self.chooseFile + 'bootlogo_' + sel2 + '.mvi'
-        origmvi = self.chooseFile + 'bootlogo_Original-Bootlogo.mvi'
-        print('filemvi ', filemvi)
-        if answer is None:
-            self.session.openWithCallback(self.zLogoboth, MessageBox, _("Do you really want to change Bootlogo image?"))
-        elif answer:
-            print('answer True')
-            if filemvi == origmvi:
-                os.remove('%s%s' % (mvi, 'default_bootlogo.mvi'))
-            if fileExists('%s%s' % (mvi, 'default_bootlogo.mvi')):
-                # overwrite
-                cmdz = 'cp -rf %s %sbootlogo.mvi > /dev/null 2>&1' % (filemvi, mvi)
-                print(cmdz)
-                os.system(cmdz)
-                self.session.open(MessageBox, _('Bootlogo changed and backup to default_bootlogo.mvi!'), MessageBox.TYPE_INFO, timeout=5)
-            else:
-                if fileExists('%sbootlogo.mvi' % mvi):
-                    cmdk = 'cp -rf %sbootlogo.mvi %sdefault_bootlogo.mvi > /dev/null 2>&1' % (mvi, mvi)
-                    print('file moved to default_bootlogo.mvi ', cmdk)
-                    os.system(cmdk)
-                    # copy original mvi to zsetup only the first time
-                    if not fileExists(origmvi):
-                        cmdk = 'cp -rf %sbootlogo.mvi %s > /dev/null 2>&1' % (mvi, origmvi)
-                        print('file moved to bootlogo_Original-Bootlogo.mvi ', cmdk)
-                        os.system(cmdk)
+        if str(cur_skin) == 'oZeta-FHD':
+            sel2 = self['config'].getCurrent()[1].value
+            print('sel2-- ', sel2)
+            sel2 = sel2.replace(" ", "-")
+            filemvi = self.chooseFile + 'bootlogo_' + sel2 + '.mvi'
+            origmvi = self.chooseFile + 'bootlogo_Original-Bootlogo.mvi'
+            print('filemvi ', filemvi)
+            if answer is None:
+                self.session.openWithCallback(self.zLogoboth, MessageBox, _("Do you really want to change Bootlogo image?"))
+            elif answer:
+                print('answer True')
+                if filemvi == origmvi:
+                    os.remove('%s%s' % (mvi, 'default_bootlogo.mvi'))
+                if fileExists('%s%s' % (mvi, 'default_bootlogo.mvi')):
                     # overwrite
                     cmdz = 'cp -rf %s %sbootlogo.mvi > /dev/null 2>&1' % (filemvi, mvi)
-                    print('apply bootlogo ', cmdz)
+                    print(cmdz)
                     os.system(cmdz)
-                    self.session.open(MessageBox, _('Bootlogo changed!\nRestart Gui please'), MessageBox.TYPE_INFO, timeout=5)
+                    self.session.open(MessageBox, _('Bootlogo changed and backup to default_bootlogo.mvi!'), MessageBox.TYPE_INFO, timeout=5)
+                else:
+                    if fileExists('%sbootlogo.mvi' % mvi):
+                        cmdk = 'cp -rf %sbootlogo.mvi %sdefault_bootlogo.mvi > /dev/null 2>&1' % (mvi, mvi)
+                        print('file moved to default_bootlogo.mvi ', cmdk)
+                        os.system(cmdk)
+                        # copy original mvi to zsetup only the first time
+                        if not fileExists(origmvi):
+                            cmdk = 'cp -rf %sbootlogo.mvi %s > /dev/null 2>&1' % (mvi, origmvi)
+                            print('file moved to bootlogo_Original-Bootlogo.mvi ', cmdk)
+                            os.system(cmdk)
+                        # overwrite
+                        cmdz = 'cp -rf %s %sbootlogo.mvi > /dev/null 2>&1' % (filemvi, mvi)
+                        print('apply bootlogo ', cmdz)
+                        os.system(cmdz)
+                        self.session.open(MessageBox, _('Bootlogo changed!\nRestart Gui please'), MessageBox.TYPE_INFO, timeout=5)
 
     def zHelp(self):
         self.session.open(ozHelp)

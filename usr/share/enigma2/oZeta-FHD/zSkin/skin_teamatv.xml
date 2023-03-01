@@ -203,17 +203,17 @@
 		<menu key="youtubetv" image="iconsmenu/youtube.png" />
 
 		<menu key="XCplugin" image="iconsmenu/xc.png" />
-		<menu key="XCforever" image="iconsmenu/xc.png" />        
-		<menu key="XStreamity" image="iconsmenu/menu_mainmenu_pluginmanager.png" />		
+		<menu key="XCforever" image="iconsmenu/xc.png" />
+		<menu key="XStreamity" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
         <menu key="oZsetup" image="iconsmenu/oZsetup.png" />
-		<menu key="ozeta" image="iconsmenu/oZsetup.png" />        
+		<menu key="ozeta" image="iconsmenu/oZsetup.png" />
 		<menu key="TivuStreamProRevolutionLite" image="iconsmenu/tvstream.png" />
-		<menu key="tvspro" image="iconsmenu/tvstream.png" />        
-		<menu key="tvaddon" image="iconsmenu/tvstream.png" /> 
-		<menu key="TiVuStreamAddonPanel" image="iconsmenu/tvstream.png" />         
-		<menu key="tvManager" image="iconsmenu/tvstream.png" />     
-		<menu key="Softcam_Manager" image="iconsmenu/tvstream.png" />   
-        
+		<menu key="tvspro" image="iconsmenu/tvstream.png" />
+		<menu key="tvaddon" image="iconsmenu/tvstream.png" />
+		<menu key="TiVuStreamAddonPanel" image="iconsmenu/tvstream.png" />
+		<menu key="tvManager" image="iconsmenu/tvstream.png" />
+		<menu key="Softcam_Manager" image="iconsmenu/tvstream.png" />
+
 		<menu key="software_manager" image="iconsmenu/menu_setup_software_manager.png" />
 		<menu key="manage_extensions" image="iconsmenu/menu_manage_extensions.png" />
 		<menu key="software_update" image="iconsmenu/menu_software_update.png" />

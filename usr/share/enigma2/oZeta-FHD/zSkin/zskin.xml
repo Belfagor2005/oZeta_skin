@@ -1940,7 +1940,9 @@
         <widget name="menu" position="230,220" size="810,600" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
     <!-- JobView -->
-    <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
+    
+    <!--
+     <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
         <widget source="job_name" render="Label" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
@@ -1952,7 +1954,22 @@
         </widget>
         <widget source="job_status" render="Label" position="230,360" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <widget name="config" position="230,430" size="1250,36" itemHeight="50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
+    </screen> -->
+    
+    <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
+        <panel name="LayerMenu1500"/>
+        <panel name="ButtonTemplate"/>
+        <widget source="job_name" render="Label" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
+        <widget source="job_task" render="Label" position="230,210" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
+        <eLabel position="230,270" size="1250,3" backgroundColor="#202020" zPosition="1"/>
+        <widget source="job_progress" render="Progress" position="230,290" size="1250,50" borderWidth="2" foregroundColor="#ffff00" backgroundColor="#124b97"/>
+        <widget source="job_progress" render="Label" position="230,290" size="1250,50" font="Regular;42" foregroundColor="#101010" halign="center" transparent="1" zPosition="2">
+            <convert type="ProgressToText"/>
+        </widget>
+        <widget source="job_status" render="Label" position="230,360" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
+        <widget name="config" position="230,430" size="1250,36" itemHeight="50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
     </screen>
+    
     <!-- Standby -->
     <screen name="Standby" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Standby" flags="wfNoBorder">
         <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1"/>
