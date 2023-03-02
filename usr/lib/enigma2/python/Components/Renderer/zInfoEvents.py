@@ -56,20 +56,23 @@ def isMountReadonly(mnt):
                 return 'ro' in flags            
     return "mount: '%s' doesn't exist" % mnt        
 
-if os.path.isdir("/media/hdd"):
+path_folder = "/tmp/poster" 
+if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
-        path_folder = "/media/hdd/poster/"
-elif os.path.isdir("/media/usb"):
+        path_folder = "/media/hdd/poster"
+elif os.path.exists("/media/usb"):
     if not isMountReadonly("/media/usb"):
-        path_folder = "/media/usb/poster/"
-elif os.path.isdir("/media/mmc"):
+        path_folder = "/media/usb/poster"
+elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster"    
 else:
-    path_folder = "/tmp/poster/" 
+    path_folder = "/tmp/poster" 
 
-if not os.path.isdir(path_folder):
+if not os.path.exists(path_folder):
     os.makedirs(path_folder)
+if not os.path.exists(path_folder):    
+    path_folder = "/tmp/poster" 
 
 
 
@@ -169,7 +172,7 @@ class zInfoEvents(Renderer, VariableText):
         if self.event:
             self.delay2()
             self.evntNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё', 'е')
-            infos_file = "{}{}.json".format(path_folder, quote(self.evntNm))
+            infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
             if not os.path.exists(infos_file):
                 self.downloadInfos(infos_file)
             if os.path.exists(infos_file):
@@ -259,7 +262,7 @@ class zInfoEvents(Renderer, VariableText):
             try:
                 url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quote(title))
                 data_omdb = json.load(urlopen(url_omdb))
-                dwn_infos = "{}{}.json".format(path_folder, quote(self.evntNm))
+                dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 open(dwn_infos, "w").write(json.dumps(data_omdb))
             except:
                 pass
@@ -302,7 +305,7 @@ class zInfoEvents(Renderer, VariableText):
                 titleNxt = events[i][4]
                 self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
                 # self.evntNm = cleantitle(titleNxt).rstrip().replace('ё', 'е')
-                infos_file = "{}{}.json".format(path_folder, self.evntNm)
+                infos_file = "{}/{}.json".format(path_folder, self.evntNm)
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
         except:

@@ -212,7 +212,9 @@
 		<menu key="tvaddon" image="iconsmenu/tvstream.png" />
 		<menu key="TiVuStreamAddonPanel" image="iconsmenu/tvstream.png" />
 		<menu key="tvManager" image="iconsmenu/tvstream.png" />
-		<menu key="Softcam_Manager" image="iconsmenu/tvstream.png" />
+		<menu key="SoftcamManager" image="iconsmenu/tvstream.png" />
+        <menu key="TiVuStream" image="iconsmenu/tvstream.png" />
+        <menu key="mmPicons" image="iconsmenu/mmpicons.png" />
 
 		<menu key="software_manager" image="iconsmenu/menu_setup_software_manager.png" />
 		<menu key="manage_extensions" image="iconsmenu/menu_manage_extensions.png" />

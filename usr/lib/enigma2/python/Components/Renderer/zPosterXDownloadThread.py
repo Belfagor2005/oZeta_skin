@@ -56,20 +56,23 @@ def isMountReadonly(mnt):
                 return 'ro' in flags            
     return "mount: '%s' doesn't exist" % mnt        
 
-if os.path.isdir("/media/hdd"):
+path_folder = "/tmp/poster" 
+if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
-        path_folder = "/media/hdd/poster/"
-elif os.path.isdir("/media/usb"):
+        path_folder = "/media/hdd/poster"
+elif os.path.exists("/media/usb"):
     if not isMountReadonly("/media/usb"):
-        path_folder = "/media/usb/poster/"
-elif os.path.isdir("/media/mmc"):
+        path_folder = "/media/usb/poster"
+elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"    
+        path_folder = "/media/mmc/poster"    
 else:
-    path_folder = "/tmp/poster/" 
+    path_folder = "/tmp/poster" 
 
-if not os.path.isdir(path_folder):
+if not os.path.exists(path_folder):
     os.makedirs(path_folder)
+if not os.path.exists(path_folder):    
+    path_folder = "/tmp/poster" 
 
 
 try:

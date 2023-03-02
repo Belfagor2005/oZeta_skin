@@ -390,7 +390,7 @@ class oZsetup(ConfigListScreen, Screen):
         sep = "-"
         try:
 
-            self.list.append(getConfigListEntry("Install/Autoupdate:", config.ozeta.update, _("Install/Autoupdate oZeta Plugin & Skin on both")))
+            self.list.append(getConfigListEntry("Install or Autoupdate oZeta:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
                 self.list.append(getConfigListEntry("Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
 
@@ -533,8 +533,8 @@ class oZsetup(ConfigListScreen, Screen):
         if entry == ('--Setting Weather City'):
             self['description'].setText(_("Settings City Weather Plugin"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Install/Autoupdate:'):
-            self['description'].setText(_("Install/Autoupdate oZeta Skin"))
+        if entry == ('Install or Autoupdate oZeta:'):
+            self['description'].setText(_("Install or Autoupdate oZeta: Skin"))
         if entry == ('Update Stable Version on Server'):
             self['description'].setText(_("Check for updates on the oZeta skin server\nPress OK"))
         if 'setup' in entry.lower():

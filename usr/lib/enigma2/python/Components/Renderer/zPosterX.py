@@ -87,20 +87,23 @@ def isMountReadonly(mnt):
                 return 'ro' in flags
     return "mount: '%s' doesn't exist" % mnt
 
-if os.path.isdir("/media/hdd"):
+path_folder = "/tmp/poster" 
+if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
-        path_folder = "/media/hdd/poster/"
-elif os.path.isdir("/media/usb"):
+        path_folder = "/media/hdd/poster"
+elif os.path.exists("/media/usb"):
     if not isMountReadonly("/media/usb"):
-        path_folder = "/media/usb/poster/"
-elif os.path.isdir("/media/mmc"):
+        path_folder = "/media/usb/poster"
+elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/usb/mmc/"
+        path_folder = "/media/mmc/poster"    
 else:
-    path_folder = "/tmp/poster/"
+    path_folder = "/tmp/poster" 
 
-if not os.path.isdir(path_folder):
+if not os.path.exists(path_folder):
     os.makedirs(path_folder)
+if not os.path.exists(path_folder):    
+    path_folder = "/tmp/poster" 
 
 
 try:
@@ -248,7 +251,7 @@ class PosterDB(zPosterXDownloadThread):
             try:
                 canal = pdb.get()
                 self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
-                dwn_poster = path_folder + canal[5] + ".jpg"
+                dwn_poster = path_folder + '/' + canal[5] + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
                 elif not os.path.exists(dwn_poster):
@@ -300,7 +303,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                         canal[4] = evt[6]
                         canal[5] = cleantitle(canal[2])
                         # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
-                        dwn_poster = path_folder + canal[5] + ".jpg"
+                        dwn_poster = path_folder + '/' + canal[5] + ".jpg"
                         if os.path.exists(dwn_poster):
                             os.utime(dwn_poster, (time.time(), time.time()))
 
@@ -324,13 +327,14 @@ class PosterAutoDB(zPosterXDownloadThread):
             now_tm = time.time()
             emptyfd = 0
             oldfd = 0
-            for f in os.listdir(path_folder):
-                diff_tm = now_tm - os.path.getmtime(path_folder + f)
-                if diff_tm > 120 and os.path.getsize(path_folder + f) == 0:  # Detect empty files > 2 minutes
-                    os.remove(path_folder + f)
+            pathlist = path_folder + '/'
+            for f in os.listdir(pathlist):
+                diff_tm = now_tm - os.path.getmtime(pathlist + f)
+                if diff_tm > 120 and os.path.getsize(pathlist + f) == 0:  # Detect empty files > 2 minutes
+                    os.remove(pathlist + f)
                     emptyfd = emptyfd + 1
                 if diff_tm > 259200:  # Detect old files > 3 days old
-                    os.remove(path_folder + f)
+                    os.remove(pathlist + f)
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
@@ -354,7 +358,7 @@ class zPosterX(Renderer):
         if not adsl:
             return
         self.nxts = 0
-        self.path = path_folder
+        self.path = path_folder + '/'
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.timer = eTimer()
