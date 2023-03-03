@@ -6,18 +6,15 @@ from Components.config import config
 import os
 import re
 import requests
-import sys
 import threading
 import socket
 
 global my_cur_skin
 
-PY3 = sys.version_info.major >= 3
 try:
     from urllib.parse import quote
 except:
     from urllib import quote
-
 
 try:
     from urllib.error import URLError, HTTPError
@@ -34,7 +31,6 @@ except:
 # formatImg = "w780"
 # formatImg = "original"
 formatImg = "w185"
-
 apikey = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
@@ -46,17 +42,18 @@ def isMountReadonly(mnt):
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]
-            line = line.split()   
+            line = line.split()
             print('line ', line)
             try:
                 device, mount_point, filesystem, flags = line
             except Exception as err:
-                   print("Error: %s" % err)                    
+                print("Error: %s" % err)
             if mount_point == mnt:
-                return 'ro' in flags            
-    return "mount: '%s' doesn't exist" % mnt        
+                return 'ro' in flags
+    return "mount: '%s' doesn't exist" % mnt
 
-path_folder = "/tmp/poster" 
+
+path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
         path_folder = "/media/hdd/poster"
@@ -65,14 +62,14 @@ elif os.path.exists("/media/usb"):
         path_folder = "/media/usb/poster"
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster"    
+        path_folder = "/media/mmc/poster"
 else:
-    path_folder = "/tmp/poster" 
+    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):    
-    path_folder = "/tmp/poster" 
+if not os.path.exists(path_folder):
+    path_folder = "/tmp/poster"
 
 
 try:
@@ -122,6 +119,7 @@ class zPosterXDownloadThread(threading.Thread):
         threading.Thread.__init__(self)
         adsl = intCheck()
         if not adsl:
+            print('not adsl')
             return
 
     def search_tmdb(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
@@ -162,38 +160,30 @@ class zPosterXDownloadThread(threading.Thread):
                         break
 
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, apikey, quote(title))
-            # id = requests.get(url_tmdb).json()['results'][0]['id']
-            # url_tmdb = "https://api.themoviedb.org/3/{}/{}?api_key={}&append_to_response=images".format(srch, int(id), apikey)
+            print('search_tmdb url tmdb: ', url_tmdb)
             if year:
                 url_tmdb += "&year={}".format(year)
             if language:
                 url_tmdb += "&language={}".format(language)
             poster = requests.get(url_tmdb).json()['results'][0]['poster_path']
-            # url_poster = "https://image.tmdb.org/t/p/{}{}".format(str(formatImg), poster)
             url_poster = "https://image.tmdb.org/t/p/{}{}".format(str(formatImg), poster)
-            # url_poster = requests.get(url_tmdb).json()['results'][0]['poster_path']  # poster = json.load(urlopen(url_tmdb))['results'][0]['poster_path']
             if poster:
                 try:
                     open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
-                    # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(formatImg.split(",")[0]), poster)
-                    # self.savePoster(dwn_poster, url_poster)
-                    # print('=============11111111=================\n')
                     return True, "[SUCCESS : tmdb] {} => {} => {}".format(title, url_tmdb, url_poster)
                 except:
-                    # open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
-                    # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(formatImg.split(",")[0]), poster)
                     self.savePoster(dwn_poster, url_poster)
-                    # print('===========2222222222==================\n')
                     return True, "[SUCCESS : tmdb] {} => {} => {}".format(title, url_tmdb, url_poster)
             else:
                 return False, "[ERROR : tmdb] {} => {} (None)".format(title, url_tmdb)
-        except Exception as e:
+            print('url tmdb 2: ', url_tmdb)
+        except:
             if os.path.exists(dwn_poster):
                 os.remove(dwn_poster)
-            return False, "[ERROR : tmdb] {} => {} ({})".format(title, url_tmdb, str(e))
+            return False, "[ERROR : tmdb] {} => {}".format(title, url_tmdb)
 
     def search_molotov_google(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
-        # if intCheck():
+        print('search_molotov_google: ')
         try:
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
             fd = "{}\n{}".format(shortdesc, fulldesc)
@@ -217,19 +207,18 @@ class zPosterXDownloadThread(threading.Thread):
                 try:
                     open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                     return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title, url_tmdb, url_poster)
-                except Exception as e:
-                    # print('search_molotov_google ', str(e))
+                except:
                     self.savePoster(dwn_poster, url_poster)
                     return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title, url_tmdb, url_poster)
             else:
                 return False, "[ERROR : molotov-google] {} => {} (not in molotov site)".format(title, url_tmdb)
-        except Exception as e:
+        except:
             if os.path.exists(dwn_poster):
                 os.remove(dwn_poster)
-            return False, "[ERROR : molotov-google] {} => {} ({})".format(title, url_tmdb, str(e))
+            return False, "[ERROR : molotov-google] {} => {}".format(title, url_tmdb)
 
     def search_google(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
-        # if intCheck():
+        print('search_google: ')
         try:
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
             fd = "{}\n{}".format(shortdesc, fulldesc)
@@ -241,11 +230,9 @@ class zPosterXDownloadThread(threading.Thread):
             except:
                 year = None
                 pass
-            #  url_tmdb = quote(title) + "%20" + quote(channel)
             url_tmdb = quote(title)
             if year:
                 url_tmdb += "+{}".format(year)
-            #  url_tmdb = url_tmdb + "%20imagesize:" + re.sub(',','x',formatImg)
             url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
             ff = requests.get(url_tmdb, stream=True, headers=headers).text
             poster = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
@@ -253,8 +240,7 @@ class zPosterXDownloadThread(threading.Thread):
             try:
                 open(dwn_poster, 'wb').write(requests.get(url_poster, stream=True, allow_redirects=True).content)
                 return True, "[SUCCESS : google] {} => {} => {}". format(title, url_tmdb, url_poster)
-            except Exception as e:
-                # print('search_google ', str(e))
+            except:
                 self.savePoster(dwn_poster, url_poster)
                 return True, "[SUCCESS : google] {} => {} => {}". format(title, url_tmdb, url_poster)
         except Exception as e:

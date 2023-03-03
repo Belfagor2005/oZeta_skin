@@ -20,23 +20,28 @@ from enigma import eSlider
 import os
 import re
 import json
+try:
+    from urllib.parse import quote
+except:
+    from urllib import quote
 
 
 def isMountReadonly(mnt):
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]
-            line = line.split()   
+            line = line.split()
             print('line ', line)
             try:
                 device, mount_point, filesystem, flags = line
             except Exception as err:
-                   print("Error: %s" % err)                    
+                print("Error: %s" % err)
             if mount_point == mnt:
-                return 'ro' in flags            
-    return "mount: '%s' doesn't exist" % mnt        
+                return 'ro' in flags
+    return "mount: '%s' doesn't exist" % mnt
 
-path_folder = "/tmp/poster" 
+
+path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
         path_folder = "/media/hdd/poster"
@@ -45,14 +50,14 @@ elif os.path.exists("/media/usb"):
         path_folder = "/media/usb/poster"
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster"    
+        path_folder = "/media/mmc/poster"
 else:
-    path_folder = "/tmp/poster" 
+    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):    
-    path_folder = "/tmp/poster" 
+if not os.path.exists(path_folder):
+    path_folder = "/tmp/poster"
 
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
@@ -79,21 +84,41 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
-def cleantitle(text):
-    import unicodedata
-    text = text.replace('\xc2\x86', '')
-    text = text.replace('\xc2\x87', '')
-    text = REGEX.sub('', text)
-    text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
-    text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-    text = text.strip()
+def unicodify(s, encoding='utf-8', norm=None):
+    if not isinstance(s, unicode):
+        s = unicode(s, encoding)
+    if norm:
+        from unicodedata import normalize
+        s = normalize(norm, s)
+    return s
+
+
+def cleantitle(text=''):
     try:
-        text = unicode(text, 'utf-8')
-    except NameError:
-        pass
-    text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
-    text = text.lower()
-    return str(text)
+        print('text ->>> ', text)
+        # import unicodedata
+        if text != '' or text is not None:
+            '''
+            # text = text.replace('\xc2\x86', '')
+            # text = text.replace('\xc2\x87', '')
+            '''
+            text = REGEX.sub('', text)
+            text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = text.strip()
+            '''
+            # try:
+                # text = unicode(text, 'utf-8')
+            # except Exception as e:
+                # print('error name ',e)
+                # pass
+            # text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
+            '''
+            text = unicodify(text)
+            text = text.lower()
+            return text
+    except Exception as e:
+        print('cleantitle error: ', e)
 
 
 class zStarX(VariableValue, Renderer):
@@ -117,7 +142,7 @@ class zStarX(VariableValue, Renderer):
             if event:
                 evnt = event.getEventName().encode('utf-8')
                 evntNm = cleantitle(evnt).strip()
-                rating_json = "{}{}.json".format(path_folder, evntNm)
+                rating_json = "{}{}.json".format(path_folder, quote(evntNm))
                 if os.path.exists(rating_json) and os.stat(rating_json).st_size > 0:
                     with open(rating_json) as f:
                         try:

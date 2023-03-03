@@ -21,6 +21,7 @@ import os
 import re
 import sys
 import NavigationInstance
+
 PY3 = sys.version_info.major >= 3
 
 global my_cur_skin, path_folder
@@ -29,10 +30,22 @@ try:
     from urllib.parse import quote
     from urllib.request import urlopen
     from _thread import start_new_thread
+    from urllib.error import HTTPError, URLError
+    PY3 = True
+    unicode = str
+    unichr = chr
+    long = int
+    xrange = range
 except:
     from urllib import quote
     from urllib2 import urlopen
     from thread import start_new_thread
+    from urllib2 import HTTPError, URLError
+    _str = str
+    str = unicode
+    range = xrange
+    unicode = unicode
+    basestring = basestring
 
 apikey = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
@@ -46,17 +59,18 @@ def isMountReadonly(mnt):
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]
-            line = line.split()   
+            line = line.split()
             print('line ', line)
             try:
                 device, mount_point, filesystem, flags = line
             except Exception as err:
-                   print("Error: %s" % err)                    
+                print("Error: %s" % err)
             if mount_point == mnt:
-                return 'ro' in flags            
-    return "mount: '%s' doesn't exist" % mnt        
+                return 'ro' in flags
+    return "mount: '%s' doesn't exist" % mnt
 
-path_folder = "/tmp/poster" 
+
+path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
         path_folder = "/media/hdd/poster"
@@ -65,15 +79,14 @@ elif os.path.exists("/media/usb"):
         path_folder = "/media/usb/poster"
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster"    
+        path_folder = "/media/mmc/poster"
 else:
-    path_folder = "/tmp/poster" 
+    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):    
-    path_folder = "/tmp/poster" 
-
+if not os.path.exists(path_folder):
+    path_folder = "/tmp/poster"
 
 
 try:
@@ -119,6 +132,7 @@ REGEX = re.compile(
 
 
 def intCheck():
+    import socket
     try:
         response = urlopen("http://google.com", None, 5)
         response.close()
@@ -132,21 +146,41 @@ def intCheck():
         return True
 
 
-def cleantitle(text):
-    import unicodedata
-    text = text.replace('\xc2\x86', '')
-    text = text.replace('\xc2\x87', '')
-    text = REGEX.sub('', text)
-    text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
-    text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-    text = text.strip()
+def unicodify(s, encoding='utf-8', norm=None):
+    if not isinstance(s, unicode):
+        s = unicode(s, encoding)
+    if norm:
+        from unicodedata import normalize
+        s = normalize(norm, s)
+    return s
+
+
+def cleantitle(text=''):
     try:
-        text = unicode(text, 'utf-8')
-    except NameError:
-        pass
-    text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
-    text = text.lower()
-    return str(text)
+        print('text ->>> ', text)
+        # import unicodedata
+        if text != '' or text is not None:
+            '''
+            # text = text.replace('\xc2\x86', '')
+            # text = text.replace('\xc2\x87', '')
+            '''
+            text = REGEX.sub('', text)
+            text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = text.strip()
+            '''
+            # try:
+                # text = unicode(text, 'utf-8')
+            # except Exception as e:
+                # print('error name ',e)
+                # pass
+            # text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
+            '''
+            text = unicodify(text)
+            text = text.lower()
+            return text
+    except Exception as e:
+        print('cleantitle error: ', e)
 
 
 class zInfoEvents(Renderer, VariableText):
@@ -179,7 +213,7 @@ class zInfoEvents(Renderer, VariableText):
                 try:
                     with open(infos_file) as f:
                         data = json.load(f)
-                        Title =''
+                        Title = ''
                         imdbRating = ''
                         Country = ''
                         Year = ''
@@ -197,17 +231,17 @@ class zInfoEvents(Renderer, VariableText):
                             Country = data["Country"]
                         if 'year' in data:
                             Year = data["Year"]
-                        if 'rated' in data:                        
+                        if 'rated' in data:
                             Rated = data["Rated"]
-                        if 'genre' in data:                        
+                        if 'genre' in data:
                             Genre = data["Genre"]
-                        if 'awards' in data: 
+                        if 'awards' in data:
                             Awards = data["Awards"]
-                        if 'director' in data: 
+                        if 'director' in data:
                             Director = data["Director"]
-                        if 'writer' in data: 
+                        if 'writer' in data:
                             Writer = data["Writer"]
-                        if 'actors' in data:     
+                        if 'actors' in data:
                             Actors = data["Actors"]
 
                         # if Title != "N/A" or Title != "":
@@ -304,13 +338,17 @@ class zInfoEvents(Renderer, VariableText):
             for i in range(9):
                 titleNxt = events[i][4]
                 self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
-                # self.evntNm = cleantitle(titleNxt).rstrip().replace('ё', 'е')
-                infos_file = "{}/{}.json".format(path_folder, self.evntNm)
+                # self.evntNm = html_escape(titleNxt).rstrip().replace('ё', 'е')
+                infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
+                '''
+                # # evnt = event.getEventName().encode('utf-8')
+                # evntNm = html_escape(titleNxt).strip()
+                # rating_json = "{}{}.json".format(path_folder, evntNm)
+                '''
         except:
-            pass                    
-        # return
+            pass
 
     def delay2(self):
         self.timer = eTimer()
