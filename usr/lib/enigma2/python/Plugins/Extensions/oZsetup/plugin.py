@@ -390,9 +390,9 @@ class oZsetup(ConfigListScreen, Screen):
         sep = "-"
         try:
 
-            self.list.append(getConfigListEntry("Install or Autoupdate oZeta:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
+            self.list.append(getConfigListEntry("Install or Update oZeta:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
-                self.list.append(getConfigListEntry("Install/Restore oZeta Skin", config.ozeta.upfind, _("Install/Restore oZeta Skin\nPress OK")))
+                self.list.append(getConfigListEntry("Install/Update/Restore oZeta Skin", config.ozeta.upfind, _("Install/Update/Restore oZeta Skin\nPress OK")))
 
             optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
             if os.path.exists(optionx):
@@ -403,7 +403,7 @@ class oZsetup(ConfigListScreen, Screen):
 
             print('current skin is: ', cur_skin)
             if str(cur_skin) == 'oZeta-FHD':
-                self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
+                # self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
 
                 section = ("SKIN PARTS SETUP")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
@@ -519,6 +519,8 @@ class oZsetup(ConfigListScreen, Screen):
         if entry == ('--Set VISUALWEATHER Apikey'):
             self['description'].setText(_("Signup on www.visualcrossing.com and input free personal ApiKey"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
+        if entry == ('Install oZeta:'):
+            self['description'].setText(_("Install a oZeta skin by Mmark\nPress Ok"))
         if entry == ('Install Options XStreamity Skin'):
             self['description'].setText(_("Install Optional XStreamity Skin\nPress Ok"))
         if entry == ('Install Options Developer'):
@@ -533,8 +535,10 @@ class oZsetup(ConfigListScreen, Screen):
         if entry == ('--Setting Weather City'):
             self['description'].setText(_("Settings City Weather Plugin"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Install or Autoupdate oZeta:'):
-            self['description'].setText(_("Install or Autoupdate oZeta: Skin"))
+        if entry == ('Install or Update oZeta:'):
+            self['description'].setText(_("Install or Update oZeta: Skin"))
+        if entry == ('Install/Update/Restore oZeta Skin'):
+            self['description'].setText(_("Install Update Restore oZeta Skin"))
         if entry == ('Update Stable Version on Server'):
             self['description'].setText(_("Check for updates on the oZeta skin server\nPress OK"))
         if 'setup' in entry.lower():
@@ -1275,10 +1279,13 @@ class oZsetup(ConfigListScreen, Screen):
             self.mbox = self.session.open(MessageBox, _("Unknow!! or FILE NO EXIST /tmp/ozeta.tar!"), MessageBox.TYPE_INFO, timeout=4)
 
     def goUp(self):
+        self.mbox = self.session.open(MessageBox, _("Updating oZeta Skin...\nPlease wait...\nat the end of the process restart gui!"), MessageBox.TYPE_INFO, timeout=4)
         os.chmod(os.path.join(thisdir, 'postUpd.sh', 0o0755))
         cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
         self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
         time.sleep(5)
+        mbox = self.session.openWithCallback(Uri.zxOptions, MessageBox, _('O-ZSKIN UPDATED\nPLEASE RESTART GUI'), MessageBox.TYPE_INFO, timeout=4)
+        mbox.setTitle(_('Install Update oZeta Skin'))
         self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
 
     def starts(self):
@@ -1513,7 +1520,7 @@ class ozHelp(Screen):
 
 class ShowPictureFullX(Screen):
     skin = """
-            <screen position="0,0" size="1280,720" title="Preview" backgroundColor="transparent" flags="wfNoBorder">
+            <screen position="center,center" size="1280,720" title="Preview" backgroundColor="transparent" flags="wfNoBorder">
                 <widget name="PreviewFull" position="0,0" size="1920,1080" zPosition="0" />
                 <widget name="lab2" position="0,0" size="1920,0" zPosition="2" font="Regular;30" halign="center" valign="center" backgroundColor="green" foregroundColor="white" />
             </screen>

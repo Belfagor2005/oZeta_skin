@@ -165,6 +165,7 @@ def imagevers():
     except:
         print('no line image- - -  ')
         return 'by Lululla'
+    return
 
 
 #  install mmpicons
