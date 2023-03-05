@@ -20,10 +20,32 @@ from enigma import eSlider
 import os
 import re
 import json
+import socket
+import unicodedata
 try:
     from urllib.parse import quote
 except:
     from urllib import quote
+
+
+PY3 = sys.version_info.major >= 3
+
+try:
+    if PY3:
+        PY3 = True
+        unicode = str
+        unichr = chr
+        long = int
+        xrange = range
+    else:
+        _str = str
+        str = unicode
+        range = xrange
+        unicode = unicode
+        basestring = basestring
+except:
+    pass
+
 
 
 def isMountReadonly(mnt):
@@ -51,8 +73,6 @@ elif os.path.exists("/media/usb"):
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
         path_folder = "/media/mmc/poster"
-else:
-    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)

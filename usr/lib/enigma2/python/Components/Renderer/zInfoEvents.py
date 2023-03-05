@@ -21,7 +21,7 @@ import os
 import re
 import sys
 import NavigationInstance
-
+import unicodedata
 PY3 = sys.version_info.major >= 3
 
 global my_cur_skin, path_folder
@@ -80,8 +80,6 @@ elif os.path.exists("/media/usb"):
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
         path_folder = "/media/mmc/poster"
-else:
-    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
