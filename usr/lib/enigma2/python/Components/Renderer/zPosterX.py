@@ -507,7 +507,7 @@ class zPosterX(Renderer):
                 time.sleep(0.5)
                 loop = loop - 1
             if found:
-                self.timer.start(10, True)
+                self.timer.start(50, True)
                 print('if found')
 
     def logPoster(self, logmsg):
