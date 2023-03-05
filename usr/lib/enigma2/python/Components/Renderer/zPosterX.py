@@ -31,9 +31,10 @@ from enigma import eTimer
 import NavigationInstance
 import os
 import re
+import socket             
 import sys
 import time
-import socket
+
 import unicodedata
 
 PY3 = sys.version_info.major >= 3
@@ -198,7 +199,7 @@ REGEX = re.compile(
         r'/.*|'
         r'\|\s[0-9]+\+|'
         r'[0-9]+\+|'
-        r'\s\d{4}\Z|'
+        r'\s\*\d{4}\Z|'
         r'([\(\[\|].*?[\)\]\|])|'
         r'(\"|\"\.|\"\,|\.)\s.+|'
         r'\"|:|'
@@ -282,17 +283,22 @@ class PosterDB(zPosterXDownloadThread):
                 canal = pdb.get()
                 self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
                 dwn_poster = path_folder + '/' + canal[5] + ".jpg"
+
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3])
+
+                if not os.path.exists(dwn_poster) and language == "it":
+                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
-                elif not os.path.exists(dwn_poster) and language == "it":
-                    val, log = self.search_molotov_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+
+                if not os.path.exists(dwn_poster):
+                    val, log = self.search_tmdb(dwn_poster, canal[5], canal[4], canal[3])
                     self.logDB(log)
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+
+                if not os.path.exists(dwn_poster):
+                    val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
+
                 pdb.task_done()
                 print('zPosterX task_done')
             except Exception as e:
@@ -328,28 +334,32 @@ class PosterAutoDB(zPosterXDownloadThread):
                     for evt in events:
                         canal = [None, None, None, None, None, None]
                         canal[0] = ServiceReference(service).getServiceName()  # .replace('\xc2\x86', '').replace('\xc2\x87', '')
-                        canal[1] = evt[1]
-                        canal[2] = evt[4]
-                        canal[3] = evt[5]
-                        canal[4] = evt[6]
-                        canal[5] = cleantitle(canal[2])
-                        self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
-                        dwn_poster = path_folder + '/' + canal[5] + ".jpg"
-                        if os.path.exists(dwn_poster):
-                            os.utime(dwn_poster, (time.time(), time.time()))
+                        if evt[1] is None or evt[4] is None or evt[5] is None or evt[6] is None:
+                            self.logAutoDB("[AutoDB] *** missing epg for {}".format(canal[0]))
+                        else:
+                            canal[1] = evt[1]
+                            canal[2] = evt[4]
+                            canal[3] = evt[5]
+                            canal[4] = evt[6]
+                            canal[5] = cleantitle(canal[2])
+                            self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
+                            dwn_poster = path_folder + '/' + canal[5] + ".jpg"
+                            if os.path.exists(dwn_poster):
+                                os.utime(dwn_poster, (time.time(), time.time()))
 
-                        elif not os.path.exists(dwn_poster):
-                            val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                            if val and log.find("SUCCESS"):
-                                newfd = newfd + 1
-                        elif not os.path.exists(dwn_poster):
-                            val, log = self.search_molotov_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                            if val and log.find("SUCCESS"):
-                                newfd = newfd + 1
-                        elif not os.path.exists(dwn_poster):
-                            val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                            if val and log.find("SUCCESS"):
-                                newfd = newfd + 1
+                            if not os.path.exists(dwn_poster) and language == "it":
+                                val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
+                            if not os.path.exists(dwn_poster):
+                                val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
+
+                            if not os.path.exists(dwn_poster):
+                                val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                         newcn = canal[0]
                     self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
@@ -394,13 +404,13 @@ class zPosterX(Renderer):
         self.path = path_folder + '/'
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
-        self.logdbg = None
         self.timer = eTimer()
         try:
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
         except:
             self.timer.callback.append(self.showPoster)
         self.timer.start(100, True)
+        self.logdbg = None
 
     def applySkin(self, desktop, parent):
         attribs = []
@@ -459,7 +469,7 @@ class zPosterX(Renderer):
             except Exception as e:
                 print('changed error exc 2 ', e)
                 self.instance.hide()
-
+                return
             if not servicetype:
                 self.instance.hide()
                 return
