@@ -1,20 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
 from Components.config import config
 import os
 import re
 import requests
-import threading
 import socket
-import unicodedata
+import sys
+import threading
 global my_cur_skin
 
+PY3 = (sys.version_info[0] == 3)                                
 try:
     from urllib.parse import quote
 except:
-    from urllib import quote
+    from urllib2 import quote
 
 try:
     from urllib.error import URLError, HTTPError
@@ -24,6 +24,13 @@ except:
     from urllib2 import urlopen
 
 
+try:
+    language = config.osd.language.value
+    language = language[:-3]
+except:
+    language = 'en'
+    pass
+              
 # formatImg = "w92"
 # formatImg = "w154"
 # formatImg = "w342"
@@ -34,6 +41,7 @@ formatImg = "w185"
 apikey = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
+# thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"                                               
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -86,16 +94,6 @@ try:
                 thetvdbkey = f.read()
 except:
     my_cur_skin = False
-
-
-try:
-    from Components.config import config
-    language = config.osd.language.value
-    language = language[:-3]
-except:
-    language = 'en'
-    pass
-print('language: ', language)
 
 
 def intCheck():

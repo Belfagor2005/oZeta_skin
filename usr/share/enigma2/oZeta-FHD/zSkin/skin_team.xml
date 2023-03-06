@@ -200,10 +200,21 @@
 		<menu key="Weather_MSN" image="iconsmenu/weather.png" />
 		<menu key="webradioFS" image="iconsmenu/webradioFS.png" />
 		<menu key="wol_standby" image="iconsmenu/power_off.png" />
-		<menu key="XCplugin" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
-		<menu key="XStreamity" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
 		<menu key="youtubetv" image="iconsmenu/youtube.png" />
-		<menu key="oZsetup" image="iconsmenu/oZsetup.png" />
+
+		<menu key="XCplugin" image="iconsmenu/xc.png" />
+		<menu key="XCforever" image="iconsmenu/xc.png" />
+		<menu key="XStreamity" image="iconsmenu/menu_mainmenu_pluginmanager.png" />
+        <menu key="oZsetup" image="iconsmenu/oZsetup.png" />
+		<menu key="ozeta" image="iconsmenu/oZsetup.png" />
+		<menu key="TivuStreamProRevolutionLite" image="iconsmenu/tvstream.png" />
+		<menu key="tvspro" image="iconsmenu/tvstream.png" />
+		<menu key="tvaddon" image="iconsmenu/tvstream.png" />
+		<menu key="TiVuStreamAddonPanel" image="iconsmenu/tvstream.png" />
+		<menu key="tvManager" image="iconsmenu/tvstream.png" />
+		<menu key="SoftcamManager" image="iconsmenu/tvstream.png" />
+        <menu key="TiVuStream" image="iconsmenu/tvstream.png" />
+        <menu key="mmPicons" image="iconsmenu/mmpicons.png" />
 
 		<menu key="software_manager" image="iconsmenu/menu_setup_software_manager.png" />
 		<menu key="manage_extensions" image="iconsmenu/menu_manage_extensions.png" />

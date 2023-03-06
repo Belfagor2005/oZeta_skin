@@ -536,7 +536,7 @@ class oZsetup(ConfigListScreen, Screen):
             self['description'].setText(_("Settings City Weather Plugin"))
         #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
         if entry == ('Install or Update oZeta:'):
-            self['description'].setText(_("Install or Update oZeta: Skin"))
+            self['description'].setText(_("Install or Update oZeta Skin"))
         if entry == ('Install/Update/Restore oZeta Skin'):
             self['description'].setText(_("Install Update Restore oZeta Skin"))
         if entry == ('Update Stable Version on Server'):
@@ -823,12 +823,16 @@ class oZsetup(ConfigListScreen, Screen):
             print('returnValue GetPicturePath: ', returnValue)
             if fileExists('%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)):
                 PicturePath = '%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)
-            if not fileExists(PicturePath):
-                PicturePath = '%sbasefile/default.jpg' % thisdir
-            return PicturePath
+            # if not fileExists(PicturePath):
+                # PicturePath = '%sbasefile/default.jpg' % thisdir
+            # return PicturePath
+        
+            else:
+                return '%sbasefile/default.jpg' % thisdir
+            # return PicturePath
         except Exception as e:
             print(str(e))
-        return
+        return PicturePath
 
     def UpdatePicture(self):
         self.onLayoutFinish.append(self.ShowPicture)

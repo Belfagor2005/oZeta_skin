@@ -5,16 +5,22 @@
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
 # © Provided that digiteng rights are protected, all or part of the code can be used, modified...
+# 02.2023 fix major Lululla
+
 # for infobar,
 # <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
 # <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
 # <widget source="session.Event_Now" render="zPosterX" position="100,100" size="185,278" nexts="2" />
 # <widget source="session.CurrentService" render="zPosterX" position="100,100" size="185,278" nexts="3" />
+
 # for ch,
-# <widget source="ServiceEvent" render="zPosterX" position="820,100" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" path="/media/hdd/poster/" nexts="2" zPosition="9" />
+
 # for secondInfobar,
 # <widget source="session.Event_Now" render="zPosterX" position="20,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
 # <widget source="session.Event_Next" render="zPosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+
 # for epg, event
 # <widget source="Event" render="zPosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
 from __future__ import absolute_import
@@ -31,11 +37,10 @@ from enigma import eTimer
 import NavigationInstance
 import os
 import re
-import socket             
+import socket
 import sys
 import time
 
-import unicodedata
 
 PY3 = sys.version_info.major >= 3
 
@@ -120,11 +125,8 @@ if not os.path.exists(path_folder):
 try:
     if my_cur_skin is False:
         myz_skin = "/usr/share/enigma2/%s/apikey" % cur_skin
-        # print('skinz namez', myz_skin)
         omdb_skin = "/usr/share/enigma2/%s/omdbkey" % cur_skin
-        # print('skinz namez', omdb_skin)
         thetvdb_skin = "/usr/share/enigma2/%s/thetvdbkey" % (cur_skin)
-        # print('skinz namez', thetvdb_skin)
         if os.path.exists(myz_skin):
             with open(myz_skin, "r") as f:
                 apikey = f.read()
@@ -149,7 +151,6 @@ try:
 except:
     language = 'en'
     pass
-print('language: ', language)
 
 '''
 # def setupTimer(method):
@@ -287,10 +288,6 @@ class PosterDB(zPosterXDownloadThread):
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
 
-                if not os.path.exists(dwn_poster) and language == "it":
-                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                    self.logDB(log)
-
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, canal[5], canal[4], canal[3])
                     self.logDB(log)
@@ -305,10 +302,13 @@ class PosterDB(zPosterXDownloadThread):
                 print('zPosterX exceptions', str(e))
 
     def logDB(self, logmsg):
-        if self.logdbg:
+        # if self.logdbg:
+        try:
             w = open("/tmp/PosterDB.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
+        except Exception as e:
+            print('logDB exceptions', str(e))
 
 
 threadDB = PosterDB()
@@ -347,10 +347,6 @@ class PosterAutoDB(zPosterXDownloadThread):
                             if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
 
-                            if not os.path.exists(dwn_poster) and language == "it":
-                                val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -364,7 +360,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                     self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     print('error logAutoDB ', e)
-                    self.logAutoDB("[AutoDB] *** service")
+                    self.logAutoDB("[AutoDB] *** service error : {} ({})".format(service, e))
 
             # AUTO REMOVE OLD FILES
             now_tm = time.time()
@@ -378,16 +374,20 @@ class PosterAutoDB(zPosterXDownloadThread):
                     emptyfd = emptyfd + 1
                 if diff_tm > 259200:  # Detect old files > 3 days old
                     os.remove(pathlist + f)
+                    os.remove("/tmp/PosterAutoDB.log")  # remove PosterAutoDB > 3 days old
+                    os.remove("/tmp/zPosterX.log")  # remove zPosterX > 3 days old
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
             self.logAutoDB("[AutoDB] *** Stopping ***")
 
     def logAutoDB(self, logmsg):
-        if self.logdbg:
+        try:
             w = open("/tmp/PosterAutoDB.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
+        except Exception as e:
+            print('error logAutoDB 2 ', e)
 
 
 threadAutoDB = PosterAutoDB()
@@ -467,10 +467,11 @@ class zPosterX(Renderer):
                             apdb[self.canal[0]] = service.toString()
 
             except Exception as e:
-                print('changed error exc 2 ', e)
+                self.logPoster("Error (service) : " + str(e))
                 self.instance.hide()
                 return
             if not servicetype:
+                self.logPoster("Error service type undefined")
                 self.instance.hide()
                 return
             try:
@@ -478,6 +479,7 @@ class zPosterX(Renderer):
                 if curCanal == self.oldCanal:
                     return
                 self.oldCanal = curCanal
+                self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstrNm = self.path + self.canal[5] + ".jpg"
                 if os.path.exists(pstrNm):
                     self.timer.start(50, True)
@@ -487,28 +489,28 @@ class zPosterX(Renderer):
                     start_new_thread(self.waitPoster, ())
             except Exception as e:
                 print('changed error 1', e)
+                self.logPoster("Error (eFile) : " + str(e))
                 self.instance.hide()
                 return
 
     def showPoster(self):
         self.instance.hide()
         if self.canal[5]:
-            print('show poster init')
             pstrNm = self.path + self.canal[5] + ".jpg"
             if os.path.exists(pstrNm):
-                # self.logPoster("[LOAD : showPoster] {}".format(pstrNm))
+                self.logPoster("[LOAD : showPoster] {}".format(pstrNm))
                 self.instance.setPixmap(loadJPG(pstrNm))
                 self.instance.setScale(1)
+                # self.instance.setScale(2)
                 self.instance.show()
 
     def waitPoster(self):
         self.instance.hide()
-        print('show poster init')
         if self.canal[5]:
             pstrNm = self.path + self.canal[5] + ".jpg"
             loop = 180
             found = None
-            # self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
+            self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
             while loop >= 0:
                 if os.path.exists(pstrNm):
                     if os.path.getsize(pstrNm) > 0:
@@ -517,11 +519,12 @@ class zPosterX(Renderer):
                 time.sleep(0.5)
                 loop = loop - 1
             if found:
-                self.timer.start(50, True)
-                print('if found')
+                self.timer.start(20, True)
 
     def logPoster(self, logmsg):
-        if self.logPoster:
+        try:
             w = open("/tmp/zPosterX.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
+        except Exception as e:
+            print('logPoster error', e)
