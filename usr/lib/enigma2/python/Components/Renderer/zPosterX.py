@@ -1,12 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+
 # by digiteng...07.2021,
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
 # © Provided that digiteng rights are protected, all or part of the code can be used, modified...
+# russian and py3 support by sunriser...
+# downloading in the background while zaping...
+# by beber...03.2022,
+# 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 # 02.2023 fix major Lululla
-
+#
 # for infobar,
 # <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
 # <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
@@ -23,7 +28,8 @@
 
 # for epg, event
 # <widget source="Event" render="zPosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
-from __future__ import absolute_import
+
+from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
 from Components.Sources.CurrentService import CurrentService
@@ -41,9 +47,7 @@ import socket
 import sys
 import time
 
-
-PY3 = sys.version_info.major >= 3
-
+PY3 = (sys.version_info[0] == 3)
 try:
     if PY3:
         import queue
@@ -71,23 +75,6 @@ try:
     from urllib.request import urlopen
 except:
     from urllib2 import urlopen
-
-
-# w92
-# w154
-# w185
-# w342
-# w500
-# w780
-# original
-formatImg = 'w185'
-apikey = "3c3efcf47c3577558812bb9d64019d65"
-omdb_api = "cb1d9f55"
-thetvdbkey = 'D19315B88B2DE21F'
-
-
-my_cur_skin = False
-cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 
 def isMountReadonly(mnt):
@@ -121,54 +108,23 @@ if not os.path.exists(path_folder):
 if not os.path.exists(path_folder):
     path_folder = "/tmp/poster"
 
-
-try:
-    if my_cur_skin is False:
-        myz_skin = "/usr/share/enigma2/%s/apikey" % cur_skin
-        omdb_skin = "/usr/share/enigma2/%s/omdbkey" % cur_skin
-        thetvdb_skin = "/usr/share/enigma2/%s/thetvdbkey" % (cur_skin)
-        if os.path.exists(myz_skin):
-            with open(myz_skin, "r") as f:
-                apikey = f.read()
-        if os.path.exists(omdb_skin):
-            with open(omdb_skin, "r") as f:
-                omdb_api = f.read()
-        if os.path.exists(thetvdb_skin):
-            with open(thetvdb_skin, "r") as f:
-                thetvdbkey = f.read()
-except:
-    my_cur_skin = False
-
-
 epgcache = eEPGCache.getInstance()
 apdb = dict()
 
-
 try:
-    from Components.config import config
     language = config.osd.language.value
     language = language[:-3]
 except:
     language = 'en'
     pass
 
-'''
-# def setupTimer(method):
-    # from enigma import eTimer  # @UnresolvedImport
-    # timer = eTimer()
-    # try:
-        # conn = timer.timeout.connect(method)
-        # return (timer, conn)
-    # except AttributeError:
-        # timer.callback.append(method)
-        # return (timer, None)
-'''
+
+#
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
-
-
+#
 autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
 autobouquet_count = 32
 # Short script for Automatic poster generation on your preferred bouquet
@@ -215,7 +171,6 @@ REGEX = re.compile(
 
 
 def intCheck():
-    import socket
     try:
         response = urlopen("http://google.com", None, 5)
         response.close()
@@ -284,25 +239,32 @@ class PosterDB(zPosterXDownloadThread):
                 canal = pdb.get()
                 self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
                 dwn_poster = path_folder + '/' + canal[5] + ".jpg"
-
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-
+                if language == "fr":
+                    if not os.path.exists(dwn_poster):
+                        val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        self.logDB(log)
+                    if not os.path.exists(dwn_poster):
+                        val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        self.logDB(log)
+                if not os.path.exists(dwn_poster):
+                    val, log = self.search_imdb(dwn_poster, canal[5], canal[4], canal[3])
+                    self.logDB(log)
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, canal[5], canal[4], canal[3])
                     self.logDB(log)
-
+                if not os.path.exists(dwn_poster):
+                    val, log = self.search_tvdb(dwn_poster, canal[5], canal[4], canal[3])
+                    self.logDB(log)
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
-
                 pdb.task_done()
-                print('zPosterX task_done')
             except Exception as e:
                 print('zPosterX exceptions', str(e))
 
     def logDB(self, logmsg):
-        # if self.logdbg:
         try:
             w = open("/tmp/PosterDB.log", "a+")
             w.write("%s\n" % logmsg)
@@ -346,22 +308,36 @@ class PosterAutoDB(zPosterXDownloadThread):
                             dwn_poster = path_folder + '/' + canal[5] + ".jpg"
                             if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
-
+                            if language == "fr":
+                                if not os.path.exists(dwn_poster):
+                                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd = newfd + 1
+                                if not os.path.exists(dwn_poster):
+                                    val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd += 1
+                            if not os.path.exists(dwn_poster):
+                                val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-
+                            if not os.path.exists(dwn_poster):
+                                val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                        newcn = canal[0]
+                            newcn = canal[0]
                     self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     print('error logAutoDB ', e)
                     self.logAutoDB("[AutoDB] *** service error : {} ({})".format(service, e))
-
             # AUTO REMOVE OLD FILES
             now_tm = time.time()
             emptyfd = 0
@@ -465,7 +441,6 @@ class zPosterX(Renderer):
                     if not autobouquet_file:
                         if self.canal[0] not in apdb:
                             apdb[self.canal[0]] = service.toString()
-
             except Exception as e:
                 self.logPoster("Error (service) : " + str(e))
                 self.instance.hide()
@@ -480,6 +455,7 @@ class zPosterX(Renderer):
                     return
                 self.oldCanal = curCanal
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
+                # Service : EventInfo [1] : Rai 5 : 1678165205-Save the Date Speciale 'Farnesina. Digit
                 pstrNm = self.path + self.canal[5] + ".jpg"
                 if os.path.exists(pstrNm):
                     self.timer.start(50, True)
@@ -488,7 +464,6 @@ class zPosterX(Renderer):
                     pdb.put(canal)
                     start_new_thread(self.waitPoster, ())
             except Exception as e:
-                print('changed error 1', e)
                 self.logPoster("Error (eFile) : " + str(e))
                 self.instance.hide()
                 return

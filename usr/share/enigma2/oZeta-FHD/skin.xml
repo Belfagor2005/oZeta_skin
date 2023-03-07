@@ -218,17 +218,14 @@
 
 	<!-- Include Files -->
 	<include filename="zSkin/skin_layercolors.xml"/>
-	<!-- include filename="zSkin/skin_menuspic.xml"/-->	
 	<include filename="zSkin/skin_templatepanels.xml"/>
+
+	<include filename="zSkin/zskin.xml"/>
+
 	<include filename="zSkin/skin_infochannel.xml"/>
 	<include filename="zSkin/skin_plugins.xml"/>
-	<!-- <include filename="zSkin/skin_xtreaamity.xml"/>	 -->
-	<!-- <include filename="zSkin/skin_teamatv.xml"/>	 -->
-	<!-- include filename="zSkin/skin_teamatv6.xml"/-->	
-	<!-- include filename="zSkin/skin_teamspa.xml"/-->	
-	<!-- include filename="zSkin/skin_teampli.xml"/-->	
 	<include filename="zSkin/skin_logo.xml"/>	
-	<include filename="zSkin/zskin.xml"/>
+
 	<!-- add lululla -->
 	<include filename="zSkin/skin_team.xml"/>
 </skin>

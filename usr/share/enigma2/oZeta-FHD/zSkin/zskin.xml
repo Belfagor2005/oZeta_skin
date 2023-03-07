@@ -1657,22 +1657,24 @@
             <convert type="EventName">Genre</convert>
         </widget>
         <!--
-    		<ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_red.png" size="80,40" alphatest="blend" zPosition="2" />
-    		<widget name="key_red" font="Regular;30" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-    		<widget source="key_red" render="Label" font="Regular;30" position="660,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-    		-->
+        <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_red.png" size="80,40" alphatest="blend" zPosition="2" />
+        <widget name="key_red" font="Regular;30" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+        <widget source="key_red" render="Label" font="Regular;30" position="660,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+        -->
         <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
         <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
         <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
         <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
         <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" scrollbarSliderForegroundColor="#404040" scrollbarSliderBorderColor="#606060"/>
     </screen>
+    
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,150" size="810,800" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showNever" itemHeight="40" enableWrapAround="1" transparent="1"/>
     </screen>
+    
     <!-- EPG Stuff -->
     <screen name="EPGSelection" title="EGP Selection" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <eLabel position="0,0" size="1920,1080" backgroundColor="#20000000" zPosition="-1"/>
