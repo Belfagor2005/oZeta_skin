@@ -778,7 +778,7 @@ class oZsetup(ConfigListScreen, Screen):
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'visualweather'))
                 return PicturePath
 
-            c = ['aaaaa', 'autoupdate', ' weather']
+            c = ['setup', 'autoupdate', ' weather']
             if xxxx.lower() in c:
                 PicturePath = '%sbasefile/default.jpg' % thisdir
                 return PicturePath
@@ -1257,13 +1257,13 @@ class oZsetup(ConfigListScreen, Screen):
                 cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamspa.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 os.system(cmd1)
                 os.system(cmd2)
-                self.goUp()
+                self.check_line()
             elif 'OpenPLi' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teampli.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 os.system(cmd1)
                 os.system(cmd2)
-                self.goUp()
+                self.check_line()
             else:
                 if 'openatv' in Uri.imagevers():
                     if '6.4' in Uri.imagevers():
@@ -1277,24 +1277,82 @@ class oZsetup(ConfigListScreen, Screen):
                         cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                         os.system(cmd1)
                         os.system(cmd2)
-                    self.goUp()
-
+                    self.check_line()
         else:
             self.mbox = self.session.open(MessageBox, _("Unknow!! or FILE NO EXIST /tmp/ozeta.tar!"), MessageBox.TYPE_INFO, timeout=4)
 
-    def goUp(self):
-        self.mbox = self.session.open(MessageBox, _("Updating oZeta Skin...\nPlease wait...\nat the end of the process restart gui!"), MessageBox.TYPE_INFO, timeout=4)
-        os.chmod(os.path.join(thisdir, 'postUpd.sh', 0o0755))
-        cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
-        self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
-        time.sleep(5)
-        mbox = self.session.openWithCallback(Uri.zxOptions, MessageBox, _('O-ZSKIN UPDATED\nPLEASE RESTART GUI'), MessageBox.TYPE_INFO, timeout=4)
-        mbox.setTitle(_('Install Update oZeta Skin'))
-        self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
+    def goUp(self, answer=True):
+        if answer:
+            try:
+                import sys
+                import os
+                # from twisted.web.client import downloadPage
+                from Tools import Notifications
+                PY3 = sys.version_info.major >= 3
+                zfile = 'http://patbuweb.com/ozeta/options.tar'
+                if PY3:
+                    zfile = b"http://patbuweb.com/ozeta/options.tar"
+                    print("Update.py in PY3")
+                import requests
+                response = requests.head(zfile)
+                if response.status_code == 200:
+                    fdest = "/tmp/options.tar"
+                    r = requests.get(zfile)
+                    with open(fdest, 'wb') as f:
+                        f.write(r.content)
+                    import time
+                    time.sleep(5)
+                    if os.path.isfile('/tmp/options.tar') and os.stat('/tmp/options.tar').st_size > 100:
+                        cmd = "tar -xvf /tmp/options.tar -C /"
+                        os.system(cmd)
+                        time.sleep(2)
+                        os.remove('/tmp/options.tar')
+                elif response.status_code == 404:
+                    print("Error 404")
+                    messageText = "zOptions NOT INSTALLED"
+                    Notifications.AddPopup(messageText, MessageBox.TYPE_ERROR, timeout=5)
+                else:
+                    return
+            except Exception as e:
+                print('error download ', str(e))
+
+        self.check_line()
+
+        # self.mbox = self.session.open(MessageBox, _("Updating oZeta Skin...\nPlease wait...\nat the end of the process restart gui!"), MessageBox.TYPE_INFO, timeout=4)
+        # os.chmod(os.path.join(thisdir, 'postUpd.sh', 0o0755))
+        # cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
+        # self.session.openWithCallback(self.starts, Console, title="Checking Update", cmdlist=[cmd1], closeOnSuccess=False)
+        # time.sleep(5)
+        # mbox = self.session.openWithCallback(Uri.zxOptions, MessageBox, _('O-ZSKIN UPDATED\nPLEASE RESTART GUI'), MessageBox.TYPE_INFO, timeout=4)
+        # mbox.setTitle(_('Install Update oZeta Skin'))
+        # self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
 
     def starts(self):
         pass
 
+    def check_line(self):
+        if str(cur_skin) == 'oZeta-FHD':
+            lulu='skin_templatepanelslulu.xml'
+            fldlulu='/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
+            filename='/usr/share/enigma2/oZeta-FHD/skin.xml'
+            filename2='/usr/share/enigma2/oZeta-FHD/skin2.xml'
+            with open(filename, 'r') as f:
+                fpage = f.readline()
+                if lulu in fpage:
+                    print('line lulu exist')
+                    f.close()
+                else:
+                    print('line lulu not exist')
+                    fin = open(filename, "rt")
+                    fout = open(filename2, "wt")
+                    for line in fin:
+                        fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
+                    fin.close()
+                    fout.close()
+                    cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2 , filename)
+                    os.system(cmd1)
+                    self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
+    
 #  error load
     def errorLoad(self):
         print('error: errorLoad')
@@ -1320,7 +1378,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.session.openWithCallback(self.zOptions, MessageBox, _('Install Test Options for oZeta skin\nDo you really want to install now?'))
         elif answer:
             try:
-                Options = self.session.openWithCallback(Uri.zxOptions, MessageBox, _('Install Test Options...\nPlease Wait'), MessageBox.TYPE_INFO, timeout=4)
+                Options = self.session.openWithCallback(self.goUp, MessageBox, _('Install Test Options...\nPlease Wait'), MessageBox.TYPE_INFO, timeout=4)
                 Options.setTitle(_('Install Options'))
                 print('Options - Done!!!')
                 self.createSetup()
