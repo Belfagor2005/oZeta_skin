@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Components.config import config
-from PIL import Image
 import os
 import re
 import requests
 import socket
 import sys
 import threading
+from Components.config import config
+from PIL import Image
 global my_cur_skin
 PY3 = (sys.version_info[0] == 3)
 try:
@@ -31,7 +31,7 @@ except:
     language = 'en'
     pass
 
-isz = "original"
+isz = "w154"
 # isz = "w780"
 # "backdrop_sizes": [
       # "w45",
@@ -135,7 +135,7 @@ class zPosterXDownloadThread(threading.Thread):
 
             poster = requests.get(url_tmdb).json()
             if poster and poster['results'] and poster['results'][0] and poster['results'][0]['poster_path']:
-                url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(isz), poster['results'][0]['poster_path'])
+                url_poster = "https://image.tmdb.org/t/p/{}{}".format(str(isz), poster['results'][0]['poster_path'])
                 self.savePoster(dwn_poster, url_poster)
                 return True, "[SUCCESS : tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_poster)
             else:
