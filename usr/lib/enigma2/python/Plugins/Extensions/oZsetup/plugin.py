@@ -288,7 +288,7 @@ class oZsetup(ConfigListScreen, Screen):
         self.skinFileTmp = '%senigma2/%s/zSkin/skin_infochannel.tmp' % (mvi, cur_skin)
         self.skinFile = '%senigma2/%s/zSkin/skin_infochannel.xml' % (mvi, cur_skin)
         self.chooseFile = '%s/' % sample
-        print('current option file : ', self.chooseFile)
+        # print('current option file : ', self.chooseFile)
         self.getImg = Uri.imagevers()
         self.setup_title = ('oZeta Skin Setup')
         self['Preview'] = Pixmap()
@@ -389,22 +389,17 @@ class oZsetup(ConfigListScreen, Screen):
         tab = " " * 9
         sep = "-"
         try:
-
             self.list.append(getConfigListEntry("Install or Update oZeta:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
                 self.list.append(getConfigListEntry("Install/Update/Restore oZeta Skin", config.ozeta.upfind, _("Install/Update/Restore oZeta Skin\nPress OK")))
-
             optionx = resolveFilename(SCOPE_SKIN, "oZeta-FHD")
             if os.path.exists(optionx):
                 self.list.append(getConfigListEntry("Install Options Developer", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
-
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
-
-            print('current skin is: ', cur_skin)
+            # print('current skin is: ', cur_skin)
             if str(cur_skin) == 'oZeta-FHD':
                 # self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
-
                 section = ("SKIN PARTS SETUP")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
                 if ozetamenupredefinedlist:
@@ -468,82 +463,16 @@ class oZsetup(ConfigListScreen, Screen):
             print("keyError")
 
     def setInfo(self):
-        entry = str(self.getCurrentEntry())
-        print('data entry setInfo: ', entry)
-        #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Menu:'):
-            self['description'].setText(_("Settings Menu Image Panel"))
-        if entry == ('Infobar:'):
-            self['description'].setText(_("Settings Infobar Panels"))
-        if entry == ('Second Infobar:'):
-            self['description'].setText(_("Settings SecInfobar Panels"))
-        if entry == ('Channel Selection:'):
-            self['description'].setText(_("Settings Channel Panels"))
-        if entry == ('Volume Panel:'):
-            self['description'].setText(_("Settings Volume Panels"))
-        if entry == ('Radio Panel:'):
-            self['description'].setText(_("Settings Radio Panels"))
-        if entry == ('MediaPlayer Panel:'):
-            self['description'].setText(_("Settings MediaPlayer Panels"))
-        if entry == ('Eventview Panel:'):
-            self['description'].setText(_("Settings Eventview Panels"))
-        if entry == ('Logo Image Top:'):
-            self['description'].setText(_("Settings Logo Image Top"))
-        if entry == ('Logo Image Bottom:'):
-            self['description'].setText(_("Settings Logo Image Bottom"))
-        if entry == ('Bootlogo Image:'):
-            self['description'].setText(_("Settings Bootlogo Image\nPress Ok for change"))
-        #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('TMDB API:'):
-            self['description'].setText(_("Settings TMDB ApiKey"))
-        if entry == ('--Load TMDB Apikey'):
-            self['description'].setText(_("Load your free TMDB from tmp/apikey.txt"))
-        if entry == ('--Set TMDB Apikey'):
-            self['description'].setText(_("Signup on TMDB and input free personal ApiKey"))
-        if entry == ('OMDB API:'):
-            self['description'].setText(_("Settings OMDB APIKEY"))
-        if entry == ('--Load OMDB Apikeyt'):
-            self['description'].setText(_("Load your free OMDB Apikey from /tmp/omdbkey.txt"))
-        if entry == ('--Set OMDB Apikey'):
-            self['description'].setText(_("Signup on OMDB and input free personal ApiKey"))
-        if entry == ('THETVDB API:'):
-            self['description'].setText(_("Settings THETVDB APIKEY"))
-        if entry == ('--Load THETVDB Apikeyt'):
-            self['description'].setText(_("Load your free THETVDB Apikey from /tmp/thetvdbkey.txt"))
-        if entry == ('--Set THETVDB Apikey'):
-            self['description'].setText(_("Signup on THETVDB and input free personal ApiKey"))
-        if entry == ('VISUALWEATHER API:'):
-            self['description'].setText(_("Settings VISUALWEATHER APIKEY"))
-        if entry == ('--Load VISUALWEATHER Apikey'):
-            self['description'].setText(_("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"))
-        if entry == ('--Set VISUALWEATHER Apikey'):
-            self['description'].setText(_("Signup on www.visualcrossing.com and input free personal ApiKey"))
-        #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Install oZeta:'):
-            self['description'].setText(_("Install a oZeta skin by Mmark\nPress Ok"))
-        if entry == ('Install Options XStreamity Skin'):
-            self['description'].setText(_("Install Optional XStreamity Skin\nPress Ok"))
-        if entry == ('Install Options Developer'):
-            self['description'].setText(_("Install Options oZeta Skin\nPress OK"))
-        if entry == ('Install or Open mmPicons Plugin'):
-            self['description'].setText(_("Install or Open mmPicons Plugin by mmark\nPress OK"))
-        #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Weather:'):
-            self['description'].setText(_("Settings oZeta Weather"))
-        if entry == ('--Install or Open Weather Plugin'):
-            self['description'].setText(_("Install or Open Weather Plugin\nPress OK"))
-        if entry == ('--Setting Weather City'):
-            self['description'].setText(_("Settings City Weather Plugin"))
-        #  - o - o - o - o - o - o - o - o - o - o - o - o - o - o - o
-        if entry == ('Install or Update oZeta:'):
-            self['description'].setText(_("Install or Update oZeta Skin"))
-        if entry == ('Install/Update/Restore oZeta Skin'):
-            self['description'].setText(_("Install Update Restore oZeta Skin"))
-        if entry == ('Update Stable Version on Server'):
-            self['description'].setText(_("Check for updates on the oZeta skin server\nPress OK"))
-        if 'setup' in entry.lower():
-            self['description'].setText(_("SELECT YOUR CHOICE"))
-        return
+        try:
+            sel = self['config'].getCurrent()[2]
+            if sel:
+                # print('sel =: ', sel)
+                self['description'].setText(str(sel))
+            else:
+                self['description'].setText(_('SELECT YOUR CHOICE'))
+            return
+        except Exception as e:
+            print("Error ", e)
 
     def handleInputHelpers(self):
         from enigma import ePoint
@@ -691,7 +620,7 @@ class oZsetup(ConfigListScreen, Screen):
     def ShowPictureFull(self):
         try:
             self.path = self.GetPicturePath()
-            print('self.path ', self.path)
+            # print('self.path ', self.path)
             if fileExists(self.path):
                 self.session.open(ShowPictureFullX, self.path)
         except:
@@ -701,11 +630,10 @@ class oZsetup(ConfigListScreen, Screen):
         self['author'].setText(welcome)
         sel1 = self['config'].getCurrent()[1].value  # InfoBar-Meteo
         selx = self['config'].getCurrent()[0]
-        print('sel1 zXml --->>> ', sel1)
-        print('selx zXml --->>> ', selx)
+        # print('sel1 zXml --->>> ', sel1)
+        # print('selx zXml --->>> ', selx)
         if localreturn(selx):
             return
-
         sel2 = sel1.replace(" ", "-")
         filexml = ''
         if 'menu' in sel2.lower():
@@ -760,9 +688,6 @@ class oZsetup(ConfigListScreen, Screen):
         sel = self["config"].getCurrent()[1]
         sel2 = self['config'].getCurrent()[1].value
         xxxx = self["config"].getCurrent()[0]
-        # print('sel GetPicturePath: ', sel)
-        # print('sel2 GetPicturePath: ', sel2)
-        # print('xxxx GetPicturePath: ', xxxx)
         try:
 
             if 'tmdb api:' in xxxx.lower():
@@ -820,16 +745,10 @@ class oZsetup(ConfigListScreen, Screen):
             if sel and sel == config.ozeta.txtapi4:
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'API-Manualkey'))
             returnValue = sel2.replace(" ", "-")
-            print('returnValue GetPicturePath: ', returnValue)
             if fileExists('%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)):
                 PicturePath = '%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)
-            # if not fileExists(PicturePath):
-                # PicturePath = '%sbasefile/default.jpg' % thisdir
-            # return PicturePath
-        
             else:
                 return '%sbasefile/default.jpg' % thisdir
-            # return PicturePath
         except Exception as e:
             print(str(e))
         return PicturePath
@@ -855,9 +774,6 @@ class oZsetup(ConfigListScreen, Screen):
             self["Preview"].instance.setPixmap(ptr)
             self["Preview"].instance.show()
         return
-
-    # def getCurrentEntry(self):
-        # return self["config"].getCurrent()[0]
 
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
@@ -1037,7 +953,6 @@ class oZsetup(ConfigListScreen, Screen):
 # why don't work
     def keySave(self):
         for i in range(0, len(config.ozeta)):
-            # print('config list ', i)
             config.ozeta[i].save()
         ConfigListScreen.keySave(self)
 
@@ -1245,7 +1160,6 @@ class oZsetup(ConfigListScreen, Screen):
 
 # not tested
     def upd_zeta(self, fplug):
-        import time
         time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             cmd = "tar -xvf /tmp/ozeta.tar -C /"
@@ -1300,7 +1214,6 @@ class oZsetup(ConfigListScreen, Screen):
                     r = requests.get(zfile)
                     with open(fdest, 'wb') as f:
                         f.write(r.content)
-                    import time
                     time.sleep(5)
                     if os.path.isfile('/tmp/options.tar') and os.stat('/tmp/options.tar').st_size > 100:
                         cmd = "tar -xvf /tmp/options.tar -C /"
@@ -1332,10 +1245,10 @@ class oZsetup(ConfigListScreen, Screen):
 
     def check_line(self):
         if str(cur_skin) == 'oZeta-FHD':
-            lulu='skin_templatepanelslulu.xml'
-            fldlulu='/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
-            filename='/usr/share/enigma2/oZeta-FHD/skin.xml'
-            filename2='/usr/share/enigma2/oZeta-FHD/skin2.xml'
+            lulu = 'skin_templatepanelslulu.xml'
+            fldlulu = '/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
+            filename = '/usr/share/enigma2/oZeta-FHD/skin.xml'
+            filename2 = '/usr/share/enigma2/oZeta-FHD/skin2.xml'
             with open(filename, 'r') as f:
                 fpage = f.readline()
                 if lulu in fpage:
@@ -1349,10 +1262,10 @@ class oZsetup(ConfigListScreen, Screen):
                         fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
                     fin.close()
                     fout.close()
-                    cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2 , filename)
+                    cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2, filename)
                     os.system(cmd1)
                     self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
-    
+
 #  error load
     def errorLoad(self):
         print('error: errorLoad')
@@ -1420,7 +1333,6 @@ class oZsetup(ConfigListScreen, Screen):
             try:
                 cmd = 'enigma2-plugin-extensions-weatherplugin'
                 self.session.open(Console, _('Install WeatherPlugin'), ['opkg install %s' % cmd], closeOnSuccess=False)
-                import time
                 time.sleep(5)
                 self.zSwitchMode()
             except:
