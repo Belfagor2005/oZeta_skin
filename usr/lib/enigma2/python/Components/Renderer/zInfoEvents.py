@@ -163,7 +163,7 @@ def cleantitle(text=''):
             # text = text.replace('\xc2\x87', '')
             '''
             text = REGEX.sub('', text)
-            text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             text = text.strip()
             '''

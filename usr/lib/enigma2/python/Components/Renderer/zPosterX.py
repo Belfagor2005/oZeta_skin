@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-
 # by digiteng...07.2021,
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
@@ -11,7 +10,6 @@
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 # 02.2023 fix major Lululla
-#
 # for infobar,
 # <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
 # <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
@@ -47,7 +45,9 @@ import socket
 import sys
 import time
 
-PY3 = (sys.version_info[0] == 3)
+
+PY3 = sys.version_info.major >= 3
+
 try:
     if PY3:
         import queue
@@ -108,8 +108,10 @@ if not os.path.exists(path_folder):
 if not os.path.exists(path_folder):
     path_folder = "/tmp/poster"
 
+
 epgcache = eEPGCache.getInstance()
 apdb = dict()
+
 
 try:
     language = config.osd.language.value
@@ -118,13 +120,21 @@ except:
     language = 'en'
     pass
 
-
-#
+# def setupTimer(method):
+    # from enigma import eTimer  # @UnresolvedImport
+    # timer = eTimer()
+    # try:
+        # conn = timer.timeout.connect(method)
+        # return (timer, conn)
+    # except AttributeError:
+        # timer.callback.append(method)
+        # return (timer, None)
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
-#
+
+
 autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
 autobouquet_count = 32
 # Short script for Automatic poster generation on your preferred bouquet
@@ -203,7 +213,7 @@ def cleantitle(text=''):
             # text = text.replace('\xc2\x87', '')
             '''
             text = REGEX.sub('', text)
-            text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space #removed space lululla
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             text = text.strip()
             '''
@@ -241,28 +251,16 @@ class PosterDB(zPosterXDownloadThread):
                 dwn_poster = path_folder + '/' + canal[5] + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-                if language == "fr":
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
-                if not os.path.exists(dwn_poster):
-                    val, log = self.search_imdb(dwn_poster, canal[5], canal[4], canal[3])
-                    self.logDB(log)
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, canal[5], canal[4], canal[3])
                     self.logDB(log)
-                if not os.path.exists(dwn_poster):
-                    val, log = self.search_tvdb(dwn_poster, canal[5], canal[4], canal[3])
-                    self.logDB(log)
+
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
                 pdb.task_done()
             except Exception as e:
-                print('zPosterX exceptions', str(e))
+                print('ZPoster exceptions', str(e))
 
     def logDB(self, logmsg):
         try:
@@ -308,25 +306,12 @@ class PosterAutoDB(zPosterXDownloadThread):
                             dwn_poster = path_folder + '/' + canal[5] + ".jpg"
                             if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
-                            if language == "fr":
-                                if not os.path.exists(dwn_poster):
-                                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                                    if val and log.find("SUCCESS"):
-                                        newfd = newfd + 1
-                                if not os.path.exists(dwn_poster):
-                                    val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                                    if val and log.find("SUCCESS"):
-                                        newfd += 1
-                            if not os.path.exists(dwn_poster):
-                                val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             if not os.path.exists(dwn_poster):
-                                val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                val, log = self.search_molotov_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             if not os.path.exists(dwn_poster):
@@ -334,10 +319,9 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
-                    self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                        self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
-                    print('error logAutoDB ', e)
-                    self.logAutoDB("[AutoDB] *** service error : {} ({})".format(service, e))
+                    self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
             now_tm = time.time()
             emptyfd = 0
@@ -351,7 +335,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                 if diff_tm > 259200:  # Detect old files > 3 days old
                     os.remove(pathlist + f)
                     os.remove("/tmp/PosterAutoDB.log")  # remove PosterAutoDB > 3 days old
-                    os.remove("/tmp/zPosterX.log")  # remove zPosterX > 3 days old
+                    os.remove("/tmp/zPoster.log")  # remove zPosterX > 3 days old
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
@@ -455,7 +439,6 @@ class zPosterX(Renderer):
                     return
                 self.oldCanal = curCanal
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
-                # Service : EventInfo [1] : Rai 5 : 1678165205-Save the Date Speciale 'Farnesina. Digit
                 pstrNm = self.path + self.canal[5] + ".jpg"
                 if os.path.exists(pstrNm):
                     self.timer.start(50, True)
@@ -498,7 +481,8 @@ class zPosterX(Renderer):
 
     def logPoster(self, logmsg):
         try:
-            w = open("/tmp/zPosterX.log", "a+")
+
+            w = open("/tmp/zPoster.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
         except Exception as e:
