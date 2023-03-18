@@ -176,9 +176,12 @@ def cleantitle(text=''):
             '''
             text = unicodify(text)
             text = text.lower()
-            return text
+        else:
+            text = ''
+        return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        # print('cleantitle error: ', e)
+        pass
 
 
 class zInfoEvents(Renderer, VariableText):

@@ -213,7 +213,7 @@ def cleantitle(text=''):
             # text = text.replace('\xc2\x87', '')
             '''
             text = REGEX.sub('', text)
-            text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space #removed space lululla
+            text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             text = text.strip()
             '''
@@ -226,9 +226,12 @@ def cleantitle(text=''):
             '''
             text = unicodify(text)
             text = text.lower()
-            return text
+        else:
+            text = ''
+        return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        # print('cleantitle error: ', e)
+        pass
 
 
 if PY3:
