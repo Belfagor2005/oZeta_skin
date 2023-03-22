@@ -443,6 +443,7 @@ class zPosterX(Renderer):
                 self.oldCanal = curCanal
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstrNm = self.path + self.canal[5] + ".jpg"
+                pstrNm = str(pstrNm)
                 if os.path.exists(pstrNm):
                     self.timer.start(50, True)
                 else:
@@ -458,6 +459,7 @@ class zPosterX(Renderer):
         self.instance.hide()
         if self.canal[5]:
             pstrNm = self.path + self.canal[5] + ".jpg"
+            pstrNm = str(pstrNm)
             if os.path.exists(pstrNm):
                 self.logPoster("[LOAD : showPoster] {}".format(pstrNm))
                 self.instance.setPixmap(loadJPG(pstrNm))
@@ -469,6 +471,7 @@ class zPosterX(Renderer):
         self.instance.hide()
         if self.canal[5]:
             pstrNm = self.path + self.canal[5] + ".jpg"
+            pstrNm = str(pstrNm)
             loop = 180
             found = None
             self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
