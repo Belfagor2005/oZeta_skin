@@ -20,8 +20,7 @@ from enigma import eSlider
 import os
 import re
 import json
-import socket
-import unicodedata
+import sys
 try:
     from urllib.parse import quote
 except:
@@ -45,7 +44,6 @@ try:
         basestring = basestring
 except:
     pass
-
 
 
 def isMountReadonly(mnt):
@@ -116,7 +114,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 def cleantitle(text=''):
     try:
         print('text ->>> ', text)
-        # import unicodedata
         if text != '' or text is not None:
             '''
             # text = text.replace('\xc2\x86', '')
@@ -127,6 +124,7 @@ def cleantitle(text=''):
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             # text = text.strip()
             '''
+            # import unicodedata
             # try:
                 # text = unicode(text, 'utf-8')
             # except Exception as e:

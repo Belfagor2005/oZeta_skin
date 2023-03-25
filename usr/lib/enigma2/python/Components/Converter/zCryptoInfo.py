@@ -132,7 +132,7 @@ class zCryptoInfo(Poll, Converter, object):
                 if currentcaid == '09':
                     return True
                     
-            #add lululla for sf8008
+            # add lululla for sf8008
             elif self.type == self.GETECM:
                 data = ''
                 try:
@@ -145,7 +145,7 @@ class zCryptoInfo(Poll, Converter, object):
                     self.ecmdata = GetEcmInfo()
                     data = self.ecmdata.getInfo(self.type)
                     return data
-            #end edit
+            # end edit
                     
         else:
             self.poll_enabled = False

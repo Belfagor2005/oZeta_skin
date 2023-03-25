@@ -21,7 +21,6 @@ import os
 import re
 import sys
 import NavigationInstance
-import unicodedata
 PY3 = sys.version_info.major >= 3
 
 global my_cur_skin, path_folder
@@ -156,7 +155,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 def cleantitle(text=''):
     try:
         print('text ->>> ', text)
-        # import unicodedata
         if text != '' or text is not None:
             '''
             # text = text.replace('\xc2\x86', '')
@@ -167,6 +165,7 @@ def cleantitle(text=''):
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             # text = text.strip()
             '''
+            # import unicodedata
             # try:
                 # text = unicode(text, 'utf-8')
             # except Exception as e:
@@ -180,7 +179,7 @@ def cleantitle(text=''):
             text = ''
         return text
     except Exception as e:
-        # print('cleantitle error: ', e)
+        print('cleantitle error: ', e)
         pass
 
 

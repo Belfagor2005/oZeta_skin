@@ -30,6 +30,7 @@ except:
     language = 'en'
     pass
 formatImg = "w154"
+
 # w92
 # w154
 # w185
@@ -97,8 +98,6 @@ class zPosterXDownloadThread(threading.Thread):
 
             for i in checkMovie:
                 if i in fd.lower():
-
-
                     srch = "movie"
                     break
 
