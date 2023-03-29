@@ -155,6 +155,7 @@ def unicodify(s, encoding='utf-8', norm=None):
 def cleantitle(text=''):
     try:
         print('text ->>> ', text)
+        # import unicodedata
         if text != '' or text is not None:
             '''
             # text = text.replace('\xc2\x86', '')
@@ -165,7 +166,6 @@ def cleantitle(text=''):
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             # text = text.strip()
             '''
-            # import unicodedata
             # try:
                 # text = unicode(text, 'utf-8')
             # except Exception as e:
@@ -205,7 +205,8 @@ class zInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event:
             self.delay2()
-            self.evntNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё', 'е')
+            evntNm = REGEX.sub("", self.event.getEventName())
+            self.evntNm = evntNm.strip().replace('ё', 'е')
             infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
             if not os.path.exists(infos_file):
                 self.downloadInfos(infos_file)
