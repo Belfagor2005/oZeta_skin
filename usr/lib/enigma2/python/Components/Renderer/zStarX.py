@@ -115,7 +115,7 @@ def cleantitle(text=''):
     try:
         print('text ->>> ', text)
         # import unicodedata
-        if text != '' or text is not None:
+        if text != '' or text is not None or text != 'None':
             '''
             # text = text.replace('\xc2\x86', '')
             # text = text.replace('\xc2\x87', '')
@@ -135,7 +135,7 @@ def cleantitle(text=''):
             text = unicodify(text)
             text = text.lower()
         else:
-            text = ''
+            text = text
         return text
     except Exception as e:
         print('cleantitle error: ', e)

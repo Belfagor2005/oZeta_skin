@@ -136,8 +136,23 @@ IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 '''
 
-autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
+
+def SearchBouquetTerrestrial():
+    import glob
+    for file in sorted(glob.glob('/etc/enigma2/*.tv')):
+        f = open(file, 'r').read()
+        x = f.strip().lower()
+        if x.find('eeee0000') != -1:
+            if x.find('82000') == -1 and x.find('c0000') == -1:
+                return file
+                break
+try:
+    autobouquet_file = SearchBouquetTerrestrial()
+except:
+    autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
+print('autobouquet_file = ', autobouquet_file)
 autobouquet_count = 32
+
 # Short script for Automatic poster generation on your preferred bouquet
 if not os.path.exists(autobouquet_file):
     autobouquet_file = None
@@ -208,7 +223,7 @@ def cleantitle(text=''):
     try:
         print('text ->>> ', text)
         # import unicodedata
-        if text != '' or text is not None:
+        if text != '' or text is not None or text != 'None':
             '''
             # text = text.replace('\xc2\x86', '')
             # text = text.replace('\xc2\x87', '')
@@ -228,7 +243,7 @@ def cleantitle(text=''):
             text = unicodify(text)
             text = text.lower()
         else:
-            text = ''
+            text = text
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -418,7 +433,7 @@ class zPosterX(Renderer):
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = cleantitle(self.canal[2])
                     servicetype = "Event"
-                if service:
+                if service and service is not None:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
                     self.canal[0] = ServiceReference(service).getServiceName()  # .replace('\xc2\x86', '').replace('\xc2\x87', '')
                     self.canal[1] = events[self.nxts][1]
