@@ -71,6 +71,8 @@ elif os.path.exists("/media/usb"):
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
         path_folder = "/media/mmc/poster"
+else:
+    folder_poster = "/tmp/poster"     
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)

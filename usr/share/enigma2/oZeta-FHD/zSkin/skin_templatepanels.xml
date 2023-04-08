@@ -81,6 +81,7 @@
 			borderColor="#202020" transparent="1" zPosition="10" valign="center" halign="right">
 			<convert type="eCryptoInfo">VerboseInfo</convert>
 		</widget>
+        
 		<!-- CLOCK 
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1703,970" size="210,40" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10" 
 			foregroundColor="#707070" font="Regular;32" valign="center" halign="right">
@@ -217,7 +218,63 @@
 
 	<!-- TEMPLATE Infobar Crypt -->
 	<screen name="PartInfoCrypt">
-		<!-- eLabel position="1660,964" size="260,50" backgroundColor="#20000000" zPosition="1" /-->
+		<eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3" />
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="EMU" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Emu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>        
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="NET" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Net</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="Card" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Crd</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>        
+		<eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3" />
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">BetaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Via Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">ViaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Irdeto" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">IrdCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Seca Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">SecaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NDS-VideoGuard" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NdsCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>        
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NagraCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="CryptoWork" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">CrwCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Conax Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">ConaxCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+        <!--         
+        <widget source="session.CurrentService" render="Label" position="1116,783" size="800,30" font="Regular; 24" halign="center" valign="center" backgroundColor="#20000000" foregroundColor="green" transparent="1" zPosition="2" noWrap="1">
+            <convert type="zCryptoInfo">Prov: %p Caid: %C %S %SP %PR %T</convert>
+        </widget>  
+        -->
+	</screen>
+
+
+    <!-- paused lululla -->
+    <!--
+ 	<screen name="PartInfoCrypt">
 		<eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3" />
 		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">BetaCrypt</convert>
@@ -251,7 +308,8 @@
 			<convert type="zCryptoInfo">ConaxCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-	</screen>
+	</screen> -->
+
 
 	<!-- TEMPLATE Infobar IP Data -->
 	<screen name="PartInfoIP">

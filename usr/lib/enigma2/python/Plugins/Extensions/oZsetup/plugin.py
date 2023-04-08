@@ -363,7 +363,7 @@ class oZsetup(ConfigListScreen, Screen):
     def answercheck(self, answer=None):
         if str(cur_skin) == 'oZeta-FHD':
             if answer is None:
-                self.session.openWithCallback(self.answercheck, MessageBox, _("This operation checks if the skin has its components (is not sure)..\nDo you really want to continue?"), MessageBox.TYPE_YESNO)
+                self.session.openWithCallback(self.answercheck, MessageBox, _("This operation checks if the skin has its components (is not sure)..\nDo you really want to continue?"))
             else:
                 if zaddon is True:
                     from .addons import checkskin
@@ -1143,8 +1143,9 @@ class oZsetup(ConfigListScreen, Screen):
         try:
             import requests
         except ImportError:
-            os.chmod(os.path.join(thisdir, 'dependencies.sh', 0o0755))
-            cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
+            # os.chmod('/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh', 0o0755))
+            # cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
+            os.system('chmod 755 /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh')
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
         response = requests.head(xfile)
         if response.status_code == 200:
