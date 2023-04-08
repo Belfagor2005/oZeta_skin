@@ -252,10 +252,7 @@
 			<convert type="zCryptoInfo">NdsCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>        
-		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">NagraCrypt</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
+
 		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="CryptoWork" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">CrwCrypt</convert>
 			<convert type="ConditionalShowHide" />
@@ -264,6 +261,14 @@
 			<convert type="zCryptoInfo">ConaxCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NagraEcm</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>        
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NagraCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>        
         <!--         
         <widget source="session.CurrentService" render="Label" position="1116,783" size="800,30" font="Regular; 24" halign="center" valign="center" backgroundColor="#20000000" foregroundColor="green" transparent="1" zPosition="2" noWrap="1">
             <convert type="zCryptoInfo">Prov: %p Caid: %C %S %SP %PR %T</convert>
