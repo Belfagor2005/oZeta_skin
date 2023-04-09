@@ -1144,7 +1144,7 @@ class oZsetup(ConfigListScreen, Screen):
             import requests
         except ImportError:
             # os.chmod('/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh', 0o0755))
-            # cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
+            cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             os.system('chmod 755 /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh')
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
         response = requests.head(xfile)
