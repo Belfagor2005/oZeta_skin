@@ -231,7 +231,6 @@
 			<convert type="zCryptoInfo">Crd</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>        
-		<eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3" />
 		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">BetaCrypt</convert>
 			<convert type="ConditionalShowHide" />

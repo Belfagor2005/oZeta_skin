@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# update to: 20230410
 import os
 import re
 import requests
@@ -95,28 +96,28 @@ class zPosterXDownloadThread(threading.Thread):
             poster = None
 
             checkMovie = ["film", "movie", "фильм", "кино", "ταινία", "película", "cinéma", "cine", "cinema", "filma"]
-
             for i in checkMovie:
                 if i in fd.lower():
                     srch = "movie"
                     break
 
-            checkTV = ["serial", "series", "serie", "serien", "série", "séries",
-                       "serious", "folge", "episodio", "episode", "épisode",
-                       "l'épisode", "ep.", "staffel", "soap", "doku", "tv", "talk",
-                       "show", "news", "factual", "entertainment", "telenovela",
-                       "dokumentation", "dokutainment", "documentary", "informercial",
-                       "information", "sitcom", "reality", "program", "magazine", "mittagsmagazin",
-                       "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
-                       "magazine", "actualité", "discussion", "interview", "débat",
-                       "émission", "divertissement", "jeu", "information", "météo", "journal",
-                       "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
-                       "société", "clips"]
-            if srch != "movie":
-                for i in checkTV:
-                    if i in fd.lower():
-                        srch = "tv"
-                        break
+            # checkTV = ["serial", "series", "serie", "serien", "série", "séries",
+                       # "serious", "folge", "episodio", "episode", "épisode",
+                       # "l'épisode", "ep.", "staffel", "soap", "doku", "tv", "talk",
+                       # "show", "news", "factual", "entertainment", "telenovela",
+                       # "dokumentation", "dokutainment", "documentary", "informercial",
+                       # "information", "sitcom", "reality", "program", "magazine", "mittagsmagazin",
+                       # "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
+                       # "magazine", "actualité", "discussion", "interview", "débat",
+                       # "émission", "divertissement", "jeu", "information", "météo", "journal",
+                       # "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
+                       # "société", "clips"]
+            # if srch != "movie":
+                # for i in checkTV:
+                    # if i in fd.lower():
+                        # srch = "tv"
+                        # break
+
             try:
                 pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
                 pattern = re.findall('\d{4}', pattern[0])
@@ -127,7 +128,11 @@ class zPosterXDownloadThread(threading.Thread):
 
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, apikey, quote(title))
             if year:
-                url_tmdb += "&year={}".format(year)
+                # url_tmdb += "&primary_release_year={}".format(year)
+                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&primary_release_year={}&include_adult=true&query={}".format(srch, apikey, str(year), quote(title))
+                
+            # if year:
+                # url_tmdb += "&year={}".format(year)
             if language:
                 url_tmdb += "&language={}".format(language)
 

@@ -5,7 +5,7 @@
 #  ver 1.2.8 28.03.2023
 #
 #  Coded by bigroma & 2boom
-
+# update lululla
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation  # , iPlayableService
 from Tools.Directories import fileExists
@@ -54,6 +54,8 @@ class zCryptoInfo(Poll, Converter, object):
     CRD = 33
     CRDTXT = 34
     SHORT = 35
+    IS_FTA = 36
+    IS_CRYPTED = 37
     my_interval = 1000
 
     def __init__(self, type):
@@ -79,7 +81,9 @@ class zCryptoInfo(Poll, Converter, object):
             self.type = self.CRYPT2
         elif type == "BetaCrypt":
             self.type = self.BETA
-        elif type == "CrwCrypt":
+        elif type == 'ConaxCrypt':
+            self.type = self.CONAX
+        elif type == 'CrwCrypt':
             self.type = self.CRW
         elif type == "DreamCrypt":
             self.type = self.DRE
@@ -125,6 +129,10 @@ class zCryptoInfo(Poll, Converter, object):
             self.type = self.CRD
         elif type == "CrdTxt":
             self.type = self.CRDTXT
+        elif  type == "IsFta":
+            self.type = self.IS_FTA
+        elif  type == "IsCrypted":
+            self.type = self.IS_CRYPTED
         elif type == "Short":
             self.type = self.SHORT
         elif type == "Default" or type == "" or type is None or type == "%":
@@ -153,7 +161,7 @@ class zCryptoInfo(Poll, Converter, object):
             "17": "BetaCrypt",
             "05": "Viacces",
             "09": "NDS-Videoguard",
-            "18": "Nagravision",            
+            "18": "Nagravision",
             "0B": "Conax",
             "0D": "Cryptoworks",
             "4A": "DRE-Crypt",
@@ -172,9 +180,10 @@ class zCryptoInfo(Poll, Converter, object):
             "17": "BET",
             "05": "VIA",
             "09": "NDS",
-            "18": "NAG",            
+            "18": "NAG",
             "0B": "CON",
             "0D": "CRW",
+            "0E" : "PWV",
             "27": "EXS",
             "7B": "DRE",
             "4A": "DRE"}
@@ -186,141 +195,151 @@ class zCryptoInfo(Poll, Converter, object):
         info = service and service.info()
         if not info:
             return False
+        else:
+            caids = info.getInfoObject(iServiceInformation.sCAIDs)
+            if caids:
 
-        caids = info.getInfoObject(iServiceInformation.sCAIDs)
-        if caids:
-            if self.type == self.SECA:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "01":
-                        return True
-                return False
-            if self.type == self.BETA:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "17":
-                        return True
-                return False
-            if self.type == self.CONAX:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "0B":
-                        return True
-                return False
-            if self.type == self.CRW:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "0D":
-                        return True
-                return False
-            if self.type == self.DRE:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "7B" or ("%0.4X" % int(caid))[:2] == "4A":
-                        return True
-                return False
-            if self.type == self.EXS:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "27":
-                        return True
-            if self.type == self.NAGRA:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "18":
-                        return True
-                        
-                return False
-            if self.type == self.NDS:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "09":
-                        return True
-                return False
-            if self.type == self.IRD:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "06":
-                        return True
-                return False
-            if self.type == self.VIA:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "05":
-                        return True
-                return False
-            if self.type == self.BISS:
-                for caid in caids:
-                    if ("%0.4X" % int(caid))[:2] == "26":
-                        return True
-                return False
-            self.poll_interval = self.my_interval
-            self.poll_enabled = True
-            ecm_info = self.ecmfile()
-            if ecm_info:
-                caid = ("%0.4X" % int(ecm_info.get("caid", ""), 16))[:2]
-                if self.type == self.SECA_C:
-                    if caid == "01":
-                        return True
-                    return False
-                if self.type == self.BETA_C:
-                    if caid == "17":
-                        return True
-                    return False
-                if self.type == self.CONAX_C:
-                    if caid == "0B":
-                        return True
-                    return False
-                if self.type == self.CRW_C:
-                    if caid == "0D":
-                        return True
-                    return False
-                if self.type == self.DRE_C:
-                    if caid == "4A" or caid == "7B":
-                        return True
-                    return False
-                if self.type == self.EXS_C:
-                    if caid == "27":
-                        return True
-                    return False
-                if self.type == self.NAGRA_C:
-                    if caid == "18":
-                        return True
-                    return False
-                if self.type == self.NDS_C:
-                    if caid == "09":
-                        return True
-                    return False
-                if self.type == self.IRD_C:
-                    if caid == "06":
-                        return True
-                    return False
-                if self.type == self.VIA_C:
-                    if caid == "05":
-                        return True
-                    return False
-                if self.type == self.BISS_C:
-                    if caid == "26":
-                        return True
-                    return False
-                # oscam
-                reader = ecm_info.get("reader", None)
-                # cccam
-                using = ecm_info.get("using", "")
-                # mgcamd
-                source = ecm_info.get("source", "")
-                if self.type == self.CRD:
-                    # oscam
-                    if source == "sci":
-                        return True
-                    # wicardd
-                    if source != "cache" and source != "net" and source.find("emu") == -1:
-                        return True
-                    return False
-                source = ecm_info.get("source", "")
-                if self.type == self.IS_EMU:
-                    return using == "emu" or source == "emu" or source == "card" or reader == "emu" or source.find("card") > -1 or source.find("emu") > -1 or source.find("biss") > -1 or source.find("cache") > -1
-                source = ecm_info.get("source", "")
-                if self.type == self.IS_NET:
-                    if using == "CCcam-s2s":
-                        return 1
-                    else:
-                        if source != "cache" and source == "net" and source.find("emu") == -1:
+                if self.type is self.IS_FTA:
+                    if caids:
+                        return False
+                    return True
+                if self.type is self.IS_CRYPTED:
+                    if caids:
+                        return False
+                    return True
+
+                if self.type == self.SECA:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "01":
                             return True
-                        # return  (source != None and source == "net") or (source != None and source != "sci") or (source != None and source != "emu") or (reader != None and reader != "emu") or (source != None and source != "card")
-
-                else:
                     return False
+                if self.type == self.BETA:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "17":
+                            return True
+                    return False
+                if self.type == self.CONAX:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "0B":
+                            return True
+                    return False
+                if self.type == self.CRW:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "0D":
+                            return True
+                    return False
+                if self.type == self.DRE:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "7B" or ("%0.4X" % int(caid))[:2] == "4A":
+                            return True
+                    return False
+                if self.type == self.EXS:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "27":
+                            return True
+                if self.type == self.NAGRA:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "18":
+                            return True
+
+                    return False
+                if self.type == self.NDS:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "09":
+                            return True
+                    return False
+                if self.type == self.IRD:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "06":
+                            return True
+                    return False
+                if self.type == self.VIA:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "05":
+                            return True
+                    return False
+                if self.type == self.BISS:
+                    for caid in caids:
+                        if ("%0.4X" % int(caid))[:2] == "26":
+                            return True
+                    return False
+                self.poll_interval = self.my_interval
+                self.poll_enabled = True
+                ecm_info = self.ecmfile()
+                if ecm_info:
+                    caid = ("%0.4X" % int(ecm_info.get("caid", ""), 16))[:2]
+                    if self.type == self.SECA_C:
+                        if caid == "01":
+                            return True
+                        return False
+                    if self.type == self.BETA_C:
+                        if caid == "17":
+                            return True
+                        return False
+                    if self.type == self.CONAX_C:
+                        if caid == "0B":
+                            return True
+                        return False
+                    if self.type == self.CRW_C:
+                        if caid == "0D":
+                            return True
+                        return False
+                    if self.type == self.DRE_C:
+                        if caid == "4A" or caid == "7B":
+                            return True
+                        return False
+                    if self.type == self.EXS_C:
+                        if caid == "27":
+                            return True
+                        return False
+                    if self.type == self.NAGRA_C:
+                        if caid == "18":
+                            return True
+                        return False
+                    if self.type == self.NDS_C:
+                        if caid == "09":
+                            return True
+                        return False
+                    if self.type == self.IRD_C:
+                        if caid == "06":
+                            return True
+                        return False
+                    if self.type == self.VIA_C:
+                        if caid == "05":
+                            return True
+                        return False
+                    if self.type == self.BISS_C:
+                        if caid == "26":
+                            return True
+                        return False
+                    # oscam
+                    reader = ecm_info.get("reader", None)
+                    # cccam
+                    using = ecm_info.get("using", "")
+                    # mgcamd
+                    source = ecm_info.get("source", "")
+                    if self.type == self.CRD:
+                        # oscam
+                        if source == "sci":
+                            return True
+                        # wicardd
+                        if source != "cache" and source != "net" and source.find("emu") == -1:
+                            return True
+                        return False
+                    source = ecm_info.get("source", "")
+                    if self.type == self.IS_EMU:
+                        return using == "emu" or source == "emu" or source == "card" or reader == "emu" or source.find("card") > -1 or source.find("emu") > -1 or source.find("biss") > -1 or source.find("cache") > -1
+                    source = ecm_info.get("source", "")
+                    if self.type == self.IS_NET:
+                        if using == "CCcam-s2s":
+                            return 1
+                        else:
+                            if source != "cache" and source == "net" and source.find("emu") == -1:
+                                return True
+                            # return  (source != None and source == "net") or (source != None and source != "sci") or (source != None and source != "emu") or (reader != None and reader != "emu") or (source != None and source != "card")
+
+                    else:
+                        return False
 
         return False
 

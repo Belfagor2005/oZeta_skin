@@ -96,7 +96,7 @@ def applySkin():
         pass
 '''
 #  config section - ===========
-version = '2.1a'
+version = '2.2'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'

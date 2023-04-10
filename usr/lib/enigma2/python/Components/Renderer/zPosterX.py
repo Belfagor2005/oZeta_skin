@@ -10,6 +10,7 @@
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 # 02.2023 fix major Lululla
+# 04.2023 fix major Lululla
 # for infobar,
 # <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
 # <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
@@ -243,7 +244,7 @@ def cleantitle(text=''):
             text = unicodify(text)
             text = text.lower()
         else:
-            text = text
+            text = ''
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -275,8 +276,13 @@ class PosterDB(zPosterXDownloadThread):
                     self.logDB(log)
 
                 if not os.path.exists(dwn_poster):
-                    val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
+
+                # if not os.path.exists(dwn_poster):
+                    # val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                    # self.logDB(log)
+
                 pdb.task_done()
             except Exception as e:
                 print('ZPoster exceptions', str(e))
@@ -333,10 +339,10 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 val, log = self.search_molotov_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                            if not os.path.exists(dwn_poster):
-                                val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
+                            # if not os.path.exists(dwn_poster):
+                                # val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                # if val and log.find("SUCCESS"):
+                                    # newfd += 1
                             newcn = canal[0]
                         self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
@@ -388,7 +394,7 @@ class zPosterX(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
         except:
             self.timer.callback.append(self.showPoster)
-        self.timer.start(100, True)
+        self.timer.start(50, True)
         self.logdbg = None
 
     def applySkin(self, desktop, parent):
@@ -407,8 +413,9 @@ class zPosterX(Renderer):
     def changed(self, what):
         if not self.instance:
             return
-        if what[0] == self.CHANGED_CLEAR:
-            self.instance.hide()
+        # if what[0] == self.CHANGED_CLEAR:
+            # self.instance.hide()
+            # return
         if what[0] != self.CHANGED_CLEAR:
             servicetype = None
             try:
@@ -433,7 +440,7 @@ class zPosterX(Renderer):
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = cleantitle(self.canal[2])
                     servicetype = "Event"
-                if service and service is not None:
+                if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
                     self.canal[0] = ServiceReference(service).getServiceName()  # .replace('\xc2\x86', '').replace('\xc2\x87', '')
                     self.canal[1] = events[self.nxts][1]
@@ -470,6 +477,10 @@ class zPosterX(Renderer):
                 self.logPoster("Error (eFile) : " + str(e))
                 self.instance.hide()
                 return
+        else:
+            self.instance.hide()
+            return
+
 
     def showPoster(self):
         self.instance.hide()
@@ -500,6 +511,7 @@ class zPosterX(Renderer):
                 loop = loop - 1
             if found:
                 self.timer.start(20, True)
+        return
 
     def logPoster(self, logmsg):
         try:
