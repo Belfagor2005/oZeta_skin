@@ -38,7 +38,8 @@ PY3 = sys.version_info.major >= 3
 pythonFull = float(str(sys.version_info.major) + "." + str(sys.version_info.minor))
 thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
-# config.skin.primary_skin=oZeta-FHD/skin.xml
+OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
+weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
 if os.path.exists(zaddons):
@@ -350,7 +351,6 @@ class oZsetup(ConfigListScreen, Screen):
         self.onLayoutFinish.append(self.layoutFinished)
 
     def layoutFinished(self):
-        weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
         if os.path.isdir(weatherz):
             self.UpdateComponents()
         self.createSetup()
@@ -439,14 +439,6 @@ class oZsetup(ConfigListScreen, Screen):
                     self.list.append(getConfigListEntry("--Load THETVDB Apikey", config.ozeta.api4, _("Load THETVDB Apikey from /tmp/thetvdbkey.txt")))
                     self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
 
-            VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
-            if os.path.isdir(VisualWeather):
-                self.list.append(getConfigListEntry("VISUALWEATHER API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
-                if config.ozeta.data3.value is True:
-                    self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
-                    self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
-
-
             section = ("MISC SETUP            ")
             self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
@@ -454,13 +446,19 @@ class oZsetup(ConfigListScreen, Screen):
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
 
-            weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
-            OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
-            if os.path.isdir(weatherz) or os.path.isdir(OAWeather):
+            if os.path.isdir(weatherz):  # or os.path.isdir(OAWeather):
                 self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
                 if config.ozeta.zweather.value is True:
                     self.list.append(getConfigListEntry("--Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
                     self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
+
+            VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
+            if os.path.isdir(VisualWeather):
+                self.list.append(getConfigListEntry("VISUALWEATHER API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
+                if config.ozeta.data3.value is True:
+                    self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
+                    self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
+
             self["config"].list = self.list
             self["config"].l.setList(self.list)
             self.handleInputHelpers()
@@ -1177,13 +1175,11 @@ class oZsetup(ConfigListScreen, Screen):
                 cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamspa.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 os.system(cmd1)
                 os.system(cmd2)
-                # self.check_line()
             elif 'OpenPLi' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teampli.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 os.system(cmd1)
                 os.system(cmd2)
-                # self.check_line()
             else:
                 if 'openatv' in Uri.imagevers():
                     if '6.4' in Uri.imagevers():
@@ -1204,9 +1200,6 @@ class oZsetup(ConfigListScreen, Screen):
     def goUp(self, answer=True):
         if answer:
             try:
-                import sys
-                import os
-                # from twisted.web.client import downloadPage
                 from Tools import Notifications
                 PY3 = sys.version_info.major >= 3
                 zfile = 'http://patbuweb.com/ozeta/options.tar'
@@ -1255,21 +1248,22 @@ class oZsetup(ConfigListScreen, Screen):
             fldlulu = '/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
             filename = '/usr/share/enigma2/oZeta-FHD/skin.xml'
             filename2 = '/usr/share/enigma2/oZeta-FHD/skin2.xml'
-            with open(filename, 'r') as f:
-                fpage = f.readline()
-                if lulu in fpage:
-                    print('line lulu exist')
-                    f.close()
-                else:
-                    print('line lulu not exist')
-                    fin = open(filename, "rt")
-                    fout = open(filename2, "wt")
-                    for line in fin:
-                        fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
-                    fin.close()
-                    fout.close()
-                    cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2, filename)
-                    os.system(cmd1)
+            if os.path.exists(fldlulu):
+                with open(filename, 'r') as f:
+                    fpage = f.readline()
+                    if lulu in fpage:
+                        print('line lulu exist')
+                        f.close()
+                    else:
+                        print('line lulu not exist')
+                        fin = open(filename, "rt")
+                        fout = open(filename2, "wt")
+                        for line in fin:
+                            fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
+                        fin.close()
+                        fout.close()
+                        cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2, filename)
+                        os.system(cmd1)
             self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
 
 #  error load
@@ -1310,15 +1304,12 @@ class oZsetup(ConfigListScreen, Screen):
 # config.plugins.ozeta.city = ConfigText(default='', visible_width=50, fixed_size=False)
     def KeyMenu(self):
         if str(cur_skin) == 'oZeta-FHD':
-            OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
-            weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))            
-            # OAWeather.WeatherHandler()
-            
+
             # if os.path.isdir(OAWeather):
                 # self.goOAWeather(True)
-                # self.session.openWithCallback(self.goOAWeather, MessageBox, _('Open OAWeather, do you want to continue?'), MessageBox.TYPE_YESNO)
+                # # self.session.openWithCallback(self.goOAWeather, MessageBox, _('Open OAWeather, do you want to continue?'), MessageBox.TYPE_YESNO)
                 # return
-                
+
             if os.path.isdir(weatherz):
                 weatherPluginEntryCount = config.plugins.WeatherPlugin.entrycount.value
                 if weatherPluginEntryCount >= 1:
@@ -1351,12 +1342,8 @@ class oZsetup(ConfigListScreen, Screen):
                 else:
                     from Plugins.Extensions.WeatherPlugin import plugin
                     self.session.openWithCallback(self.UpdateComponents, plugin.MSNWeatherPlugin)
-                
             except:
                 pass
-
-        # else:
-            # self.UpdateComponents()
 
     def goWeatherInstall(self, result=False):
         if result:
@@ -1375,7 +1362,6 @@ class oZsetup(ConfigListScreen, Screen):
         else:
             message = (_('Plugin WeatherPlugin not installed!!!'))
             self.mbox = self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
-        # self.UpdatePicture()
 
     def UpdateComponents(self):
         try:
@@ -1393,7 +1379,6 @@ class oZsetup(ConfigListScreen, Screen):
                 return
         except:
             pass
-        # self.UpdatePicture()
 
 
 class ozHelp(Screen):
@@ -1442,7 +1427,7 @@ class ozHelp(Screen):
         conthelp += "Skin Author: Mmark - Info: e2skin.blogspot.it\n\n"
         conthelp += "*************************************\n\n"
         conthelp += "Tested on:\n"
-        conthelp += " openATV 7.x - OpenPLi 8.x - OpenSPA\n"        
+        conthelp += " openATV 7.x - OpenPLi 8.x - OpenSPA\n"
         conthelp += "\n"
         conthelp += "zSetup Base Release: 2.0.0 - 30/06/2022\n\n"
         conthelp += "*************************************\n\n"
@@ -1586,7 +1571,7 @@ def mainmenu(menuid, **kwargs):
 
 def main(session, **kwargs):
     try:
-        session.open(oZsetup)  # suspend viceversa
+        session.open(oZsetup)
     except:
         import traceback
         traceback.print_exc()
