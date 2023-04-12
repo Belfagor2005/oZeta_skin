@@ -515,7 +515,6 @@ class zPosterX(Renderer):
 
     def logPoster(self, logmsg):
         try:
-
             w = open("/tmp/zPoster.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()

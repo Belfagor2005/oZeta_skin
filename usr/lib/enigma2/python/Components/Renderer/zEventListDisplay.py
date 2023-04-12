@@ -15,6 +15,7 @@
 # on hardware which is NOT licensed by Dream Property GmbH.
 # If you want to use or modify the code or parts of it,
 # you have to keep MY license and inform me about the modifications by mail.
+
 # <widget source = "ServiceEvent" render="zEventListDisplay" position="1080,610" size="1070,180" column0="0,100,yellow,Regular,30,0,0" column1="100,950,white,Regular,28,0,1" primetimeoffset="0"
 # rowHeight="35" backgroundColor="#FF101010" transparent="1" zPosition="50">
 # <convert type="EventList">primetime=yed,eventcount=4</convert>
