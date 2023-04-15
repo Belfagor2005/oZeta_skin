@@ -72,7 +72,7 @@ elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
         path_folder = "/media/mmc/poster"
 else:
-    folder_poster = "/tmp/poster"     
+    folder_poster = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
@@ -115,7 +115,7 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def cleantitle(text=''):
     try:
-        print('text ->>> ', text)
+        print('zStarX text ->>> ', text)
         # import unicodedata
         if text != '' or text is not None or text != 'None':
             '''
@@ -136,8 +136,10 @@ def cleantitle(text=''):
             '''
             text = unicodify(text)
             text = text.lower()
+            print('zStarX text <<<- ', text)
         else:
             text = text
+            print('zStarX text <<<->>> ', text)
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -165,7 +167,7 @@ class zStarX(VariableValue, Renderer):
             if event:
                 evnt = event.getEventName().encode('utf-8')
                 evntNm = cleantitle(evnt)
-                evntNm = evntNm.strip()
+                # evntNm = evntNm.strip()
                 rating_json = "{}{}.json".format(path_folder, quote(evntNm))
                 if os.path.exists(rating_json) and os.stat(rating_json).st_size > 0:
                     with open(rating_json) as f:

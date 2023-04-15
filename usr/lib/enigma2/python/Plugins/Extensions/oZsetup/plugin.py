@@ -339,7 +339,7 @@ class oZsetup(ConfigListScreen, Screen):
             '0': self.zDefault,
             'yellowlong': self.answercheck,
             'cancel': self.zExit}, -2)
-        self.onLayoutFinish.append(self.UpdatePicture)
+        # self.onLayoutFinish.append(self.UpdatePicture)
 
         self.createSetup()
         if self.setInfo not in self['config'].onSelectionChanged:
@@ -355,7 +355,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.UpdateComponents()
         self.createSetup()
         self.zXml()
-        self.ShowPicture()
+        self.UpdatePicture()
         self['image'].setText("%s" % Uri.imagevers())
         self['city'].setText("%s" % str(config.ozeta.city.value))
         self.setTitle(self.setup_title)
@@ -440,13 +440,13 @@ class oZsetup(ConfigListScreen, Screen):
             self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
 
-            if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
-                self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
-                if config.ozeta.zweather.value is True:
-                    if os.path.isdir(OAWeather):
-                        self.list.append(getConfigListEntry("Install or Open OAWeather Plugin", config.ozeta.oaweather, _("Install or Open OAWeather Plugin\nPress OK")))
+            # if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
+            self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
+            if config.ozeta.zweather.value is True:
+                # if os.path.isdir(OAWeather):
+                    self.list.append(getConfigListEntry("Install or Open OAWeather Plugin", config.ozeta.oaweather, _("Install or Open OAWeather Plugin\nPress OK")))
+                    self.list.append(getConfigListEntry("Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
                     if os.path.isdir(weatherz):
-                        self.list.append(getConfigListEntry("Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
                         self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
 
             if XStreamity is True:
