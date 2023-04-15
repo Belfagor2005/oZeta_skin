@@ -45,37 +45,28 @@ import re
 import socket
 import sys
 import time
-
-
 PY3 = sys.version_info.major >= 3
 
 try:
-    if PY3:
-        import queue
-        from _thread import start_new_thread
-        from urllib.error import HTTPError, URLError
-        PY3 = True
-        unicode = str
-        unichr = chr
-        long = int
-        xrange = range
-    else:
-        import Queue
-        from thread import start_new_thread
-        from urllib2 import HTTPError, URLError
-        _str = str
-        str = unicode
-        range = xrange
-        unicode = unicode
-        basestring = basestring
-except:
-    pass
-
-
-try:
+    import queue
+    from _thread import start_new_thread
+    from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
+    PY3 = True
+    unicode = str
+    unichr = chr
+    long = int
+    xrange = range
 except:
+    import Queue
+    from thread import start_new_thread
+    from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
+    _str = str
+    str = unicode
+    range = xrange
+    unicode = unicode
+    basestring = basestring
 
 
 def isMountReadonly(mnt):
@@ -394,11 +385,12 @@ class zPosterX(Renderer):
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.timer = eTimer()
-        try:
-            self.timer_conn = self.timer.timeout.connect(self.showPoster)
-        except:
-            self.timer.callback.append(self.showPoster)
-        self.timer.start(50, True)
+        # try:
+            # self.timer_conn = self.timer.timeout.connect(self.showPoster)
+        # except:
+            # self.timer.callback.append(self.showPoster)
+        # self.timer.start(50, True)
+        self.timer.callback.append(self.showPoster)
         self.logdbg = None
 
     def applySkin(self, desktop, parent):
@@ -470,7 +462,7 @@ class zPosterX(Renderer):
                 self.oldCanal = curCanal
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstrNm = self.path + self.canal[5] + ".jpg"
-                pstrNm = str(pstrNm)
+                # pstrNm = str(pstrNm)
                 if os.path.exists(pstrNm):
                     self.timer.start(50, True)
                 else:
@@ -490,7 +482,7 @@ class zPosterX(Renderer):
         self.instance.hide()
         if self.canal[5]:
             pstrNm = self.path + self.canal[5] + ".jpg"
-            pstrNm = str(pstrNm)
+            # pstrNm = str(pstrNm)
             if os.path.exists(pstrNm):
                 self.logPoster("[LOAD : showPoster] {}".format(pstrNm))
                 self.instance.setPixmap(loadJPG(pstrNm))
@@ -502,7 +494,7 @@ class zPosterX(Renderer):
         self.instance.hide()
         if self.canal[5]:
             pstrNm = self.path + self.canal[5] + ".jpg"
-            pstrNm = str(pstrNm)
+            # pstrNm = str(pstrNm)
             loop = 180
             found = None
             self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
