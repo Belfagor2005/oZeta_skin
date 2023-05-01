@@ -229,4 +229,6 @@
 
 	<!-- add lululla -->
 	<include filename="zSkin/skin_team.xml"/>
+	<include filename="zSkin/skin_templatepanelslulu.xml"/>    
+    
 </skin>
