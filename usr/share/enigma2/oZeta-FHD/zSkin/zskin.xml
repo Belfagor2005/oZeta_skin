@@ -1653,9 +1653,12 @@
             <convert type="EventName">Name</convert>
         </widget>
         <eLabel position="660,400" size="820,3" backgroundColor="#202020" zPosition="1"/>
+        <!-- 
         <widget source="session.Event_Now" render="Label" position="1000,417" size="480,40" font="Regular;34" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
             <convert type="EventName">Genre</convert>
         </widget>
+         -->
+        
         <!--
         <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_red.png" size="80,40" alphatest="blend" zPosition="2" />
         <widget name="key_red" font="Regular;30" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />

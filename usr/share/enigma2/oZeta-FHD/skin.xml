@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-	<!-- **************************************  -->
-	<!-- Skin oZeta-FHD by mmark v1.6.0 	     -->
-	<!-- released for use on Open images         -->
-	<!-- Currently Tested on ATV v6.X            -->
-	<!-- Don't Remove this Disclaimer            -->
-	<!-- **************************************  -->
+	<!-- **************************************	 -->
+	<!-- Skin oZeta-FHD by mmark v1.6.0			 -->
+	<!-- released for use on Open images		 -->
+	<!-- Currently Tested on ATV v6.X			 -->
+	<!-- Don't Remove this Disclaimer			 -->
+	<!-- **************************************	 -->
 	<copyright>
 		<abouth name="oZeta-FHD">
 			author="mmark"
@@ -16,8 +16,8 @@
 		</abouth>
 	</copyright>
 	<!-- *************************************** -->
-	<!--    SKIN PARAMETERS * SKIN PARAMETERS    -->
-	<!-- **************************************  -->
+	<!--	SKIN PARAMETERS * SKIN PARAMETERS	 -->
+	<!-- **************************************	 -->
 	<output id="0">
 		<resolution bpp="32" xres="1920" yres="1080"/>
 	</output>
@@ -217,8 +217,9 @@
 	</switchpixmap>
 
 	<!-- Include Files -->
+	<include filename="zSkin/skin_templatepanels.xml"/>	   
 	<include filename="zSkin/skin_layercolors.xml"/>
-	<include filename="zSkin/skin_templatepanels.xml"/>
+
 
 	<include filename="zSkin/zskin.xml"/>
 
