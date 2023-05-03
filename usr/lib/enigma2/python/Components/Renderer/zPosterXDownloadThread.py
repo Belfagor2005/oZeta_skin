@@ -65,6 +65,7 @@ try:
 except:
     my_cur_skin = False
 
+no_poster = os.path.join(cur_skin, 'menu/panels/nocover.png')
 
 def intCheck():
     try:

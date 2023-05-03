@@ -432,7 +432,7 @@
 	<screen name="HdmiCECSetupScreen" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="LayerMenu1500-nl" zPosition="4" />
 		<panel name="ButtonTemplate"/>
-		<widget name="description" position="230,150" size="1250,90" font="screen_info;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" />
+		<widget name="description" position="230,150" size="1250,90" font="Fixed;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" />
 		<eLabel position="230,250" size="1250,3" backgroundColor="#303030" zPosition="1" />
 		<widget name="config" position="230,260" size="1250,600" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" />
 		<widget source="current_address" render="Label" position="230,870" size="1250,40" font="Regular;28" foregroundColor="green" halign="center" backgroundColor="black" valign="center" transparent="1" />
@@ -624,7 +624,7 @@
 	<screen name="filtersServicesSetup" position="0,0" size="1920,1080" title="Ignore services list" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="LayerMenu1500" />
 		<panel name="ButtonTemplate"/>
-		<widget source="introduction" render="Label" position="230,150" size="1250,140" font="screen_info;26" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0" />
+		<widget source="introduction" render="Label" position="230,150" size="1250,140" font="Fixed;26" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0" />
 		<eLabel position="230,300" size="1250,3" backgroundColor="#202020" zPosition="1" />
 		<widget source="list" render="Listbox" position="230,310" size="1250,600" scrollbarWidth="10" scrollbarMode="showOnDemand" transparent="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff">
 			<convert type="TemplatedMultiContent">
@@ -2448,7 +2448,7 @@
 	<!-- [047] File Commander 047/03 -->
 	<screen name="setup_filecommander" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="setup_common" />
-		<!-- widget name="labelInfo" position="810,385" size="415,220" font="screen_info;20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="#000000" valign="center" transparent="1"/-->
+		<!-- widget name="labelInfo" position="810,385" size="415,220" font="Fixed;20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="#000000" valign="center" transparent="1"/-->
 	</screen>
 
 	<!-- [047] File Commander 047/04 -->
@@ -3272,10 +3272,10 @@
 		<widget source="Titel2" render="Label" position="340,140" size="900,100"  font="Regular;34" valign="center" halign="right" transparent="1" foregroundColor="yellow" zPosition="2" />
 		<eLabel position="230,250" size="1250,3" backgroundColor="#202020" />
 		<widget name="MainList" position="230,280" size="1250,640" zPosition="3" foregroundColor="#ffffff" backgroundColor="#000000" foregroundColorSelected="#ffffff" backgroundColorSelected="barColor" alphatest="1" 
-			font0="screen_text;30"
-			font1="screen_info;30"
-			font2="screen_info;28"
-			font3="screen_text;30"
+			font0="Regular;30"
+			font1="Fixed;30"
+			font2="Fixed;28"
+			font3="Regular;30"
 			itemHeight="160"
 			setTime="15,40,90,36"
 			setPict="100,0,150,125"

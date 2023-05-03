@@ -1320,7 +1320,7 @@
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1000" size="80,40" alphatest="blend"/>
     </screen>
     <screen name="VideoEnhancementPreview" position="center,200" size="800,240" title="VideoEnhancementPreview" backgroundColor="#20000000">
-        <widget name="config" position="10,20" size="780,80" zPosition="2" itemHeight="40" font="Regula;28" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+        <widget name="config" position="10,20" size="780,80" zPosition="2" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
         <eLabel position="10,110" size="780,1" backgroundColor="#404040" zPosition="2"/>
         <widget source="introduction" render="Label" position="10,130" size="780,40" font="Regular;34" halign="center" valign="center" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="2"/>
         <eLabel position="10,190" size="780,1" backgroundColor="#404040" zPosition="2"/>
@@ -1611,22 +1611,32 @@
         </widget>
         <ePixmap position="1390,900" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+
     <!-- EventView -->
     <screen name="EventView" title="EventView" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
-       <panel name="bLogo"/>
+        <panel name="bLogo"/>
         <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
         <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
         <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
         <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
 
         <!-- PICON Pli/ATV -->
+        <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
         <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
             <convert type="ServiceName">Reference</convert>
         </widget>
-        <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
+
+       <!-- edit lululla -->
+        <!--         
+        <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
+            <convert type="ServiceName">Reference</convert>
+        </widget>
+
         <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" alphatest="blend" scale="1" zPosition="2"/>
+        <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" alphatest="on" scale="1" zPosition="2"/>
         <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
+        -->
+        <!-- end edit lululla -->
 
         <!-- Event Now -->
         <widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
@@ -1664,14 +1674,21 @@
         <widget name="key_red" font="Regular;30" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
         <widget source="key_red" render="Label" font="Regular;30" position="660,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
         -->
+        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" />
+        
         <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
         <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
         <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
         <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
-        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" scrollbarSliderForegroundColor="#404040" scrollbarSliderBorderColor="#606060"/>
-
+        
+        <!-- end edit lululla -->
+        
+        <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
+        <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
+        <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
+        
    </screen>
-    
+
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>

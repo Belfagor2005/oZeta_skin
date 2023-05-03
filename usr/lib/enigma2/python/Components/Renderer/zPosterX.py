@@ -385,12 +385,12 @@ class zPosterX(Renderer):
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.timer = eTimer()
-        # try:
-            # self.timer_conn = self.timer.timeout.connect(self.showPoster)
-        # except:
-            # self.timer.callback.append(self.showPoster)
-        # self.timer.start(50, True)
-        self.timer.callback.append(self.showPoster)
+        try:
+            self.timer_conn = self.timer.timeout.connect(self.showPoster)
+        except:
+            self.timer.callback.append(self.showPoster)
+        self.timer.start(50, True)
+        # self.timer.callback.append(self.showPoster)
         self.logdbg = None
 
     def applySkin(self, desktop, parent):

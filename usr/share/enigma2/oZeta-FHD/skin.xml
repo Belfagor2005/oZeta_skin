@@ -176,7 +176,7 @@
 	
 	<!-- Window -->
 	<windowstyle id="0" type="skinned">
-		<configList entryFont="Regular;30" valueFont="Regular;28" />
+		<configList entryFont="Regular;30" valueFont="Regular;28"/>
 		<title offset="30,25" font="Regular;32"/>
 		<color name="Background" color="background"/>
 		<color name="LabelForeground" color="foreground"/>
@@ -210,22 +210,39 @@
 		<scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1"/>
 		<listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1"/>
 	</windowstyle>
-	
+    <!-- add lululla -->
+	<windowstyle id="1" type="skinned">
+		<color name="Background" color="background"/>
+		<color name="LabelForeground" color="foreground"/>
+		<color name="ListboxBackground" color="background"/>
+		<color name="ListboxForeground" color="foreground"/>
+		<color name="ListboxSelectedBackground" color="#124582"/>
+		<color name="ListboxSelectedForeground" color="#ffffff"/>
+		<color name="ListboxMarkedBackground" color="un40a0aa0"/>
+		<color name="ListboxMarkedForeground" color="red"/>
+		<color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a"/>
+		<color name="ListboxMarkedAndSelectedForeground" color="red"/>
+		<color name="WindowTitleForeground" color="foreground"/>
+		<color name="WindowTitleBackground" color="background"/>
+		<color name="ScrollbarForeground" color="foreground" />
+		<color name="ScrollbarBorder" color="foreground" />
+	</windowstyle>
+    <!-- end add lululla -->
+
+
 	<switchpixmap>
-		<pixmap name="menu_on" filename="oZeta-FHD/icons/menu_on.png" />
-		<pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png" />
+		<pixmap name="menu_on" filename="oZeta-FHD/icons/menu_on.png"/>
+		<pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
 	</switchpixmap>
 
 	<!-- Include Files -->
 	<include filename="zSkin/skin_templatepanels.xml"/>	   
 	<include filename="zSkin/skin_layercolors.xml"/>
-
-
-	<include filename="zSkin/zskin.xml"/>
-
-	<include filename="zSkin/skin_infochannel.xml"/>
 	<include filename="zSkin/skin_plugins.xml"/>
 	<include filename="zSkin/skin_logo.xml"/>	
+	<include filename="zSkin/skin_infochannel.xml"/>
+
+	<include filename="zSkin/zskin.xml"/>                                      
 
 	<!-- add lululla -->
 	<include filename="zSkin/skin_team.xml"/>

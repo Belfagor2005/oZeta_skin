@@ -106,7 +106,7 @@
 	<screen name="MetrixMenu">
 		<panel name="LayerMenu1700" />
 		<widget source="titleText" render="Label" position="385,7" size="1500,110" noWrap="1" font="Mmenu;102" foregroundColor="#808080" backgroundColor="#000000" transparent="1" />
-		<widget name="config" position="230,140" size="1060,720" itemHeight="60" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" 
+		<widget name="config" position="230,140" size="1060,720" itemHeight="60" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080"
 			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" 
 			foregroundColorSelected="ffffff" transparent="1" />
 		<widget name="helperimage" position="1360,150" size="300,300" backgroundColor="#000000" zPosition="1" transparent="1" alphatest="blend" scale="1" />

@@ -27,7 +27,10 @@
 
 	<!-- TEMPLATE Infobar -->
 	<screen name="TempInfoBar">
+    
 		<ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/>
+        <!--  <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" /> -->
+        
 		<!-- SMALL PICON -->
 		<widget source="session.CurrentService" render="Picon" position="320,790" size="110,70" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
@@ -350,6 +353,7 @@
 		<eLabel text="Ch:" position="20,840" size="60,40" font="Regular;32" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
 		<widget source="session.CurrentService" render="zChannelNumber" position="85,830" size="250,50" font="Regular;44" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" />
 		<ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/>
+        <!-- <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" /> -->
 		<!-- SMALL PICON -->
 		<widget source="session.CurrentService" render="Picon" position="320,790" size="110,70" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>

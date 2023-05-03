@@ -86,7 +86,8 @@
 	<!-- **** INFOBAR2 PANEL ***** -->
 	<!-- ************************ -->
 	<screen name="TempInfoBar2">
-		<ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/>
+		<!-- <ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/> -->
+        <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" />
 		<!-- SMALL PICON -->
 		<widget source="session.CurrentService" render="Picon" position="320,790" size="110,70" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
