@@ -27,7 +27,7 @@ from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
 import os
-import socket
+# import socket
 
 
 class zExtra(Poll, Converter):
@@ -142,26 +142,39 @@ class zExtra(Poll, Converter):
             return self.hddtemp
         if self.type == self.IPLOCAL:
             try:
-                ipaddr = ''
-                gw = os.popen("ip -4 route show default").read().split()
-                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                s.connect((gw[2], 0))
-                ipaddr = s.getsockname()[0]
-                return "Lan Ip " + "%s" % ipaddr
+                c = '127.0.0.1'
+                # gw = os.popen("ip -4 route show default").read().split()
+                # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                # s.connect((gw[2], 0))
+                # c = s.getsockname()[0]
+                file = os.popen('ifconfig')
+                cmd = file.readlines()
+                for line in cmd:
+                    if 'inet addr:' in line:
+                        c = line.split('inet addr:')[1].split(' ')[0]
+                        if c != '127.0.0.1':
+                            return "Lan Ip " + "%s" % c
+                # return "Lan Ip " + "%s" % c
             except:
                 return ''
         if self.type == self.IPWAN:
             try:
-                mycur = '/tmp/currentip'
-                if not os.path.exists(mycur):
-                    os.system('wget -qO- https://checkip.amazonaws.com > /tmp/currentip')
+                # mycur = '/tmp/currentip'
+                # if not os.path.exists(mycur):
+                    # os.system('wget -qO- https://checkip.amazonaws.com > /tmp/currentip')
+                # if os.path.exists(mycur):
+                    # publicIp = open('/tmp/currentip', 'r')
+                    # public = publicIp.read()
+                    # publicIp = "Wan Ip %s" % (str(public))
+                    # # print('publicIp= ', publicIp)
+                # return "%s" % publicIp
 
-                if os.path.exists(mycur):
-                    publicIp = open('/tmp/currentip', 'r')
-                    public = publicIp.read()
-                    publicIp = "Wan Ip %s" % (str(public))
-                    # print('publicIp= ', publicIp)
+                file = os.popen('wget -qO - ifconfig.me')
+                public = file.readlines()
+                publicIp = "Wan Ip %s" % (str(public))
+                # print('publicIp= ', publicIp)
                 return "%s" % publicIp
+
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")
