@@ -8,6 +8,7 @@ import requests
 import socket
 import sys
 import threading
+import json
 from Components.config import config
 global my_cur_skin
 

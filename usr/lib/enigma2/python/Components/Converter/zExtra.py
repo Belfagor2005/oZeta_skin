@@ -26,7 +26,7 @@ from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
-import os
+import os, re
 # import socket
 
 
@@ -153,28 +153,16 @@ class zExtra(Poll, Converter):
                     if 'inet addr:' in line:
                         c = line.split('inet addr:')[1].split(' ')[0]
                         if c != '127.0.0.1':
-                            return "Lan Ip " + "%s" % c
+                            return "Lan Ip %s" % c
                 # return "Lan Ip " + "%s" % c
             except:
                 return ''
         if self.type == self.IPWAN:
             try:
-                # mycur = '/tmp/currentip'
-                # if not os.path.exists(mycur):
-                    # os.system('wget -qO- https://checkip.amazonaws.com > /tmp/currentip')
-                # if os.path.exists(mycur):
-                    # publicIp = open('/tmp/currentip', 'r')
-                    # public = publicIp.read()
-                    # publicIp = "Wan Ip %s" % (str(public))
-                    # # print('publicIp= ', publicIp)
-                # return "%s" % publicIp
-
                 file = os.popen('wget -qO - ifconfig.me')
-                public = file.readlines()
-                publicIp = "Wan Ip %s" % (str(public))
-                # print('publicIp= ', publicIp)
+                public = file.read()
+                publicIp = "Local Ip %s" % (str(public))
                 return "%s" % publicIp
-
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")
