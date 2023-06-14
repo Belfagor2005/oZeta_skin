@@ -74,7 +74,7 @@ class zExtra(Poll, Converter):
         if 'HDDTemp' in type:
             self.poll_interval = 500
         else:
-            self.poll_interval = 60000
+            self.poll_interval = 7000
         self.poll_enabled = True
 
     def dataAvail(self, strData):
@@ -143,25 +143,20 @@ class zExtra(Poll, Converter):
         if self.type == self.IPLOCAL:
             try:
                 c = '127.0.0.1'
-                # gw = os.popen("ip -4 route show default").read().split()
-                # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                # s.connect((gw[2], 0))
-                # c = s.getsockname()[0]
                 file = os.popen('ifconfig')
                 cmd = file.readlines()
                 for line in cmd:
                     if 'inet addr:' in line:
                         c = line.split('inet addr:')[1].split(' ')[0]
                         if c != '127.0.0.1':
-                            return "Lan Ip %s" % c
-                # return "Lan Ip " + "%s" % c
+                            return "Local %s" % c
             except:
                 return ''
         if self.type == self.IPWAN:
             try:
                 file = os.popen('wget -qO - ifconfig.me')
                 public = file.read()
-                publicIp = "Local Ip %s" % (str(public))
+                publicIp = "Wan %s" % (str(public))
                 return "%s" % publicIp
             except:
                 if os.path.exists("/tmp/currentip"):

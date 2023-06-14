@@ -944,6 +944,7 @@ class oZsetup(ConfigListScreen, Screen):
         self.Timer.start(500, 1)
         self.createSetup()
 
+
     def upOptions(self):
         self.Timer = eTimer()
         try:
@@ -1085,7 +1086,10 @@ class oZsetup(ConfigListScreen, Screen):
 # update zskin
     def zUpdate(self, answer=None):
         if answer is None:
-            self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to update the zSkin ??\nDo it at your own risk.\nDo you want to continue?'))
+            if os.path.exist(mvi + 'enigma2/' +  'oZeta-FHD'):
+                self.session.openWithCallback(self.zWaitReload, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
+            else:
+                self.session.openWithCallback(self.zWaitReload, MessageBox, _('Do you really want to install the zSkin ??\nDo it at your own risk.\nDo you want to continue?'))
         elif answer:
             if config.ozeta.update:
                 self.zSkin()
