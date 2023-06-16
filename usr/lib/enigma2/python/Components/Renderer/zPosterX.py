@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # by digiteng...07.2021,
@@ -9,27 +8,28 @@
 # downloading in the background while zaping...
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
-# 02.2023 fix major Lululla
-# 04.2023 fix major Lululla
+#
+                           
 # for infobar,
-# <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
-# <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
+# <widget source="session.Event_Now" render="zPosterX" position="100,100" size="185,278" />
+# <widget source="session.Event_Next" render="zPosterX" position="100,100" size="100,150" />
 # <widget source="session.Event_Now" render="zPosterX" position="100,100" size="185,278" nexts="2" />
 # <widget source="session.CurrentService" render="zPosterX" position="100,100" size="185,278" nexts="3" />
 
 # for ch,
-# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" path="/media/hdd/poster/" zPosition="9" />
-# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" path="/media/hdd/poster/" nexts="2" zPosition="9" />
+# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" />
+# <widget source="ServiceEvent" render="zPosterX" position="100,100" size="185,278" nexts="2" />
 
-# for secondInfobar,
-# <widget source="session.Event_Now" render="zPosterX" position="20,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
-# <widget source="session.Event_Next" render="zPosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+                    
+                                                                                                                                  
+                                                                                                                                     
 
 # for epg, event
-# <widget source="Event" render="zPosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="Event" render="zPosterX" position="100,100" size="185,278" />
+# <widget source="Event" render="zPosterX" position="100,100" size="185,278" nexts="2" />
 
-from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
+from Components.Renderer.Renderer import Renderer
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.Event import Event
 from Components.Sources.EventInfo import EventInfo
@@ -77,21 +77,7 @@ def isMountReadonly(mnt):
     return "mount: '%s' doesn't exist" % mnt
 
 
-path_folder = "/tmp/poster"
-if os.path.exists("/media/hdd"):
-    if not isMountReadonly("/media/hdd"):
-        path_folder = "/media/hdd/poster"
-elif os.path.exists("/media/usb"):
-    if not isMountReadonly("/media/usb"):
-        path_folder = "/media/usb/poster"
-elif os.path.exists("/media/mmc"):
-    if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster"
 
-if not os.path.exists(path_folder):
-    os.makedirs(path_folder)
-if not os.path.exists(path_folder):
-    path_folder = "/tmp/poster"
 
 epgcache = eEPGCache.getInstance()
 
@@ -104,16 +90,12 @@ except:
     pass
 
 apdb = dict()
-
-
 #
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 #
-
-
 def SearchBouquetTerrestrial():
     import glob
     for file in sorted(glob.glob('/etc/enigma2/*.tv')):
@@ -149,22 +131,37 @@ else:
                     service = ':'.join((line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10]))
                     apdb[i] = service
 
+path_folder = "/tmp/poster/"
+if os.path.exists("/media/hdd"):
+    if not isMountReadonly("/media/hdd"):
+        path_folder = "/media/hdd/poster/"
+elif os.path.exists("/media/usb"):
+    if not isMountReadonly("/media/usb"):
+        path_folder = "/media/usb/poster/"
+elif os.path.exists("/media/mmc"):
+    if not isMountReadonly("/media/mmc"):
+        path_folder = "/media/mmc/poster/"
+
+if not os.path.exists(path_folder):
+    os.makedirs(path_folder)
+if not os.path.exists(path_folder):
+    path_folder = "/tmp/poster/"
+
 
 REGEX = re.compile(
         r'\s\*\d{4}\Z|'                 # remove ( *1234)
         r'([\(\[\|].*?[\)\]\|])|'       # remove ([xxx] or (xxx) or |xxx|)
-        # r'(\s{1,}\:\s{1,}).+|'          # remove ( : xxx)
+#       r'(\s{1,}\:\s{1,}).+|'          # remove ( : xxx)
         r'(\.\s{1,}\").+|'              # remove (. "xxx)
         r'(\?\s{1,}\").+|'              # remove (? "xxx)
         r'(\.{2,}\Z)'                   # remove (..)
         , re.DOTALL)
 
-
 def convtext(text):
     text = text.replace('\xc2\x86', '')
     text = text.replace('\xc2\x87', '')
     text = REGEX.sub('', text)
-    text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+    text = re.sub(r"[-,!/\.\":]",' ',text)  # replace (- or , or ! or / or . or " or :) by space
     text = re.sub(r'\s{1,}', ' ', text)     # replace multiple space by one space
     text = text.strip()
 
@@ -195,7 +192,6 @@ def intCheck():
         return False
     else:
         return True
-
 
 class PosterDB(zPosterXDownloadThread):
     def __init__(self):
@@ -308,14 +304,13 @@ class PosterAutoDB(zPosterXDownloadThread):
             now_tm = time.time()
             emptyfd = 0
             oldfd = 0
-            pathlist = path_folder + '/'
-            for f in os.listdir(pathlist):
-                diff_tm = now_tm - os.path.getmtime(pathlist + f)
-                if diff_tm > 120 and os.path.getsize(pathlist + f) == 0:  # Detect empty files > 2 minutes
-                    os.remove(pathlist + f)
+            for f in os.listdir(path_folder):
+                diff_tm = now_tm - os.path.getmtime(path_folder + f)
+                if diff_tm > 120 and os.path.getsize(path_folder + f) == 0:  # Detect empty files > 2 minutes
+                    os.remove(path_folder + f)
                     emptyfd = emptyfd + 1
                 if diff_tm > 259200:  # Detect old files > 3 days old
-                    os.remove(pathlist + f)
+                    os.remove(path_folder + f)
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
@@ -341,7 +336,7 @@ class zPosterX(Renderer):
         if not adsl:
             return
         self.nxts = 0
-        self.path = path_folder + '/'
+        self.path = path_folder
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.timer = eTimer()
