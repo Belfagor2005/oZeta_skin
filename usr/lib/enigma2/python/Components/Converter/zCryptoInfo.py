@@ -81,9 +81,9 @@ class zCryptoInfo(Poll, Converter, object):
             self.type = self.CRYPT2
         elif type == "BetaCrypt":
             self.type = self.BETA
-        elif type == 'ConaxCrypt':
-            self.type = self.CONAX
-        elif type == 'CrwCrypt':
+        # elif type == 'ConaxCrypt':
+            # self.type = self.CONAX
+        # elif type == 'CrwCrypt':
             self.type = self.CRW
         elif type == "DreamCrypt":
             self.type = self.DRE
