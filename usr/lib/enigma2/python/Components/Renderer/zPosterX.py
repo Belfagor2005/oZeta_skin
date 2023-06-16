@@ -60,6 +60,8 @@ try:
         from urllib2 import urlopen
 except:
     pass
+
+
 def isMountReadonly(mnt):
     with open('/proc/mounts') as f:
         for line in f:
@@ -102,12 +104,16 @@ except:
     pass
 
 apdb = dict()
+
+
 #
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 #
+
+
 def SearchBouquetTerrestrial():
     import glob
     for file in sorted(glob.glob('/etc/enigma2/*.tv')):
@@ -140,24 +146,25 @@ else:
             if len(line) == 11:
                 value = ':'.join((line[3], line[4], line[5], line[6]))
                 if value != '0:0:0:0':
-                    service = ':'.join((line[0], line[1], line[2], line[3], line[4], line[5], line[6],line[7], line[8], line[9], line[10]))
+                    service = ':'.join((line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8], line[9], line[10]))
                     apdb[i] = service
 
 
 REGEX = re.compile(
         r'\s\*\d{4}\Z|'                 # remove ( *1234)
         r'([\(\[\|].*?[\)\]\|])|'       # remove ([xxx] or (xxx) or |xxx|)
-#       r'(\s{1,}\:\s{1,}).+|'          # remove ( : xxx)
+        # r'(\s{1,}\:\s{1,}).+|'          # remove ( : xxx)
         r'(\.\s{1,}\").+|'              # remove (. "xxx)
         r'(\?\s{1,}\").+|'              # remove (? "xxx)
         r'(\.{2,}\Z)'                   # remove (..)
         , re.DOTALL)
 
+
 def convtext(text):
     text = text.replace('\xc2\x86', '')
     text = text.replace('\xc2\x87', '')
     text = REGEX.sub('', text)
-    text = re.sub(r"[-,!/\.\":]",' ',text)  # replace (- or , or ! or / or . or " or :) by space
+    text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
     text = re.sub(r'\s{1,}', ' ', text)     # replace multiple space by one space
     text = text.strip()
 
@@ -189,9 +196,10 @@ def intCheck():
     else:
         return True
 
-class PosterDB(PosterXDownloadThread):
+
+class PosterDB(zPosterXDownloadThread):
     def __init__(self):
-        PosterXDownloadThread.__init__(self)
+        zPosterXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
@@ -236,9 +244,9 @@ threadDB = PosterDB()
 threadDB.start()
 
 
-class PosterAutoDB(PosterXDownloadThread):
+class PosterAutoDB(zPosterXDownloadThread):
     def __init__(self):
-        PosterXDownloadThread.__init__(self)
+        zPosterXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
