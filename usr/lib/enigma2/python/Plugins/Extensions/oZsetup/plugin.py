@@ -27,7 +27,7 @@ from Screens.Standby import TryQuitMainloop
 from Tools.Directories import fileExists
 from Tools.Directories import SCOPE_PLUGINS
 from Tools.Directories import resolveFilename
-from enigma import ePicLoad, loadPic, eTimer
+from enigma import ePicLoad, loadPic, eTimer, eConsoleAppContainer
 import os
 import sys
 import time
@@ -348,6 +348,13 @@ class oZsetup(ConfigListScreen, Screen):
             # self["config"].onSelectionChanged.append(self.selectionChanged)
         # self.onLayoutFinish.append(self.zXml)
         # self.onLayoutFinish.append(self.UpdatePicture)
+        
+        # self.container = eConsoleAppContainer()
+        # self.container.appClosed.append(self.runFinished)
+        # self.containerExtra = eConsoleAppContainer()
+        # self.containerExtra.appClosed.append(self.runFinishedExtra)
+        
+        
         self.onLayoutFinish.append(self.layoutFinished)
 
     def layoutFinished(self):
@@ -1086,10 +1093,10 @@ class oZsetup(ConfigListScreen, Screen):
 # update zskin
     def zUpdate(self, answer=None):
         if answer is None:
-            if os.path.exist(mvi + 'enigma2/' +  'oZeta-FHD'):
-                self.session.openWithCallback(self.zWaitReload, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
+            if os.path.exists(mvi + 'enigma2/' +  'oZeta-FHD'):
+                self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
             else:
-                self.session.openWithCallback(self.zWaitReload, MessageBox, _('Do you really want to install the zSkin ??\nDo it at your own risk.\nDo you want to continue?'))
+                self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the zSkin ??\nDo it at your own risk.\nDo you want to continue?'))
         elif answer:
             if config.ozeta.update:
                 self.zSkin()
@@ -1100,8 +1107,8 @@ class oZsetup(ConfigListScreen, Screen):
         if fileExists(tarfile):
             os.remove(tarfile)
         xfile = 'http://patbuweb.com/ozeta/ozeta.tar'
-        if PY3:
-            xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
+        # if PY3:
+            # xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
         from twisted.web.client import downloadPage
         try:
             import requests
@@ -1110,25 +1117,44 @@ class oZsetup(ConfigListScreen, Screen):
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             os.system('chmod 755 /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh')
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
-        response = requests.head(xfile)
-        if response.status_code == 200:
-            fdest = tarfile
-            downloadPage(xfile, fdest).addCallback(self.upd_zeta).addErrback(self.errorLoad)
-        elif response.status_code == 404:
-            self.mbox = self.session.open(MessageBox, _("NO UPDATE zSkin ON SERVER !"), MessageBox.TYPE_INFO, timeout=4)
-        else:
+        # response = requests.head(xfile)
+        # if response.status_code == 200:
+        try:
+            cmd = "wget -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
+            if "https" in str(xfile):
+                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
+            # self.containerExtra.execute(cmd)
+            self.session.open(Console, _('Downloading: %s') % xfile, [cmd], closeOnSuccess=True)
+
+            # r = requests.get(xfile)
+            # with open(xfile, 'wb') as f:
+                # f.write(r.content) 
+            # self.upd_zeta()
+            # downloadPage(xfile, tarfile).addCallback(self.upd_zeta).addErrback(self.errorLoad)
+        except Exception as e:
+            print('error download: ', e)
             return
+        # if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
+        print('update tarfile')
+        self.upd_zeta()
+        # if response.status_code == 404:
+            # self.mbox = self.session.open(MessageBox, _("NO UPDATE zSkin ON SERVER !"), MessageBox.TYPE_INFO, timeout=4)
+        # else:
+            # return
 
     def start(self):
         pass
 
 # not tested
-    def upd_zeta(self, fplug):
+    # def upd_zeta(self, fplug):
+    def upd_zeta(self):    
         time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
+            print('init update tarfile')
             cmd = "tar -xvf /tmp/ozeta.tar -C /"
-            time.sleep(8)
-            os.system(cmd)
+            self.session.open(Console, _('Extract: %s') % tarfile, [cmd], closeOnSuccess=True)
+            # time.sleep(8)
+            # os.system(cmd)
             time.sleep(5)
             if 'OpenSPA' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
@@ -1190,6 +1216,38 @@ class oZsetup(ConfigListScreen, Screen):
 
         self.check_line()
 
+    # def goUp(self, answer=True):
+        # if answer:
+            # try:
+                # from Tools import Notifications
+                # PY3 = sys.version_info.major >= 3
+                # zfile = 'http://patbuweb.com/ozeta/options.tar'
+                # if PY3:
+                    # zfile = b"http://patbuweb.com/ozeta/options.tar"
+                    # print("Update.py in PY3")
+                # import requests
+                # response = requests.head(zfile)
+                # if response.status_code == 200:
+                    # fdest = "/tmp/options.tar"
+                    # r = requests.get(zfile)
+                    # with open(fdest, 'wb') as f:
+                        # f.write(r.content)
+                    # time.sleep(5)
+                    # if os.path.isfile('/tmp/options.tar') and os.stat('/tmp/options.tar').st_size > 100:
+                        # cmd = "tar -xvf /tmp/options.tar -C /"
+                        # os.system(cmd)
+                        # time.sleep(2)
+                        # os.remove('/tmp/options.tar')
+                # elif response.status_code == 404:
+                    # print("Error 404")
+                    # messageText = "zOptions NOT INSTALLED"
+                    # Notifications.AddPopup(messageText, MessageBox.TYPE_ERROR, timeout=5)
+                # else:
+                    # return
+            # except Exception as e:
+                # print('error download ', str(e))
+
+        # self.check_line()
     def starts(self):
         pass
 
