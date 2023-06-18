@@ -27,7 +27,7 @@ from Screens.Standby import TryQuitMainloop
 from Tools.Directories import fileExists
 from Tools.Directories import SCOPE_PLUGINS
 from Tools.Directories import resolveFilename
-from enigma import ePicLoad, loadPic, eTimer, eConsoleAppContainer
+from enigma import ePicLoad, loadPic, eTimer
 import os
 import sys
 import time
@@ -95,7 +95,7 @@ def applySkin():
         pass
 '''
 #  config section - ===========
-version = '2.2'
+version = '2.3'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'
@@ -348,13 +348,6 @@ class oZsetup(ConfigListScreen, Screen):
             # self["config"].onSelectionChanged.append(self.selectionChanged)
         # self.onLayoutFinish.append(self.zXml)
         # self.onLayoutFinish.append(self.UpdatePicture)
-        
-        # self.container = eConsoleAppContainer()
-        # self.container.appClosed.append(self.runFinished)
-        # self.containerExtra = eConsoleAppContainer()
-        # self.containerExtra.appClosed.append(self.runFinishedExtra)
-        
-        
         self.onLayoutFinish.append(self.layoutFinished)
 
     def layoutFinished(self):
@@ -446,9 +439,11 @@ class oZsetup(ConfigListScreen, Screen):
             section = ("MISC SETUP            ")
             self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
+            if XStreamity is True:
+                self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
 
             # if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
-            self.list.append(getConfigListEntry("Weather:", config.ozeta.zweather, _("Settings oZeta Weather")))
+            self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
             if config.ozeta.zweather.value is True:
                 # if os.path.isdir(OAWeather):
                     self.list.append(getConfigListEntry("Install or Open OAWeather Plugin", config.ozeta.oaweather, _("Install or Open OAWeather Plugin\nPress OK")))
@@ -456,15 +451,12 @@ class oZsetup(ConfigListScreen, Screen):
                     if os.path.isdir(weatherz):
                         self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
 
-            if XStreamity is True:
-                self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
-
-            VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
-            if os.path.isdir(VisualWeather):
-                self.list.append(getConfigListEntry("VISUALWEATHER API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
-                if config.ozeta.data3.value is True:
-                    self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
-                    self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
+                    VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
+                    if os.path.isdir(VisualWeather):
+                        self.list.append(getConfigListEntry("VisualWeather Plugin API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
+                        if config.ozeta.data3.value is True:
+                            self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
+                            self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
 
             self["config"].list = self.list
             self["config"].l.setList(self.list)
@@ -1096,7 +1088,7 @@ class oZsetup(ConfigListScreen, Screen):
             if os.path.exists(mvi + 'enigma2/' +  'oZeta-FHD'):
                 self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
             else:
-                self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the zSkin ??\nDo it at your own risk.\nDo you want to continue?'))
+                self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
         elif answer:
             if config.ozeta.update:
                 self.zSkin()
@@ -1138,7 +1130,7 @@ class oZsetup(ConfigListScreen, Screen):
         print('update tarfile')
         self.upd_zeta()
         # if response.status_code == 404:
-            # self.mbox = self.session.open(MessageBox, _("NO UPDATE zSkin ON SERVER !"), MessageBox.TYPE_INFO, timeout=4)
+            # self.mbox = self.session.open(MessageBox, _("NO UPDATE oZeta Skin ON SERVER !"), MessageBox.TYPE_INFO, timeout=4)
         # else:
             # return
 
@@ -1216,38 +1208,6 @@ class oZsetup(ConfigListScreen, Screen):
 
         self.check_line()
 
-    # def goUp(self, answer=True):
-        # if answer:
-            # try:
-                # from Tools import Notifications
-                # PY3 = sys.version_info.major >= 3
-                # zfile = 'http://patbuweb.com/ozeta/options.tar'
-                # if PY3:
-                    # zfile = b"http://patbuweb.com/ozeta/options.tar"
-                    # print("Update.py in PY3")
-                # import requests
-                # response = requests.head(zfile)
-                # if response.status_code == 200:
-                    # fdest = "/tmp/options.tar"
-                    # r = requests.get(zfile)
-                    # with open(fdest, 'wb') as f:
-                        # f.write(r.content)
-                    # time.sleep(5)
-                    # if os.path.isfile('/tmp/options.tar') and os.stat('/tmp/options.tar').st_size > 100:
-                        # cmd = "tar -xvf /tmp/options.tar -C /"
-                        # os.system(cmd)
-                        # time.sleep(2)
-                        # os.remove('/tmp/options.tar')
-                # elif response.status_code == 404:
-                    # print("Error 404")
-                    # messageText = "zOptions NOT INSTALLED"
-                    # Notifications.AddPopup(messageText, MessageBox.TYPE_ERROR, timeout=5)
-                # else:
-                    # return
-            # except Exception as e:
-                # print('error download ', str(e))
-
-        # self.check_line()
     def starts(self):
         pass
 
