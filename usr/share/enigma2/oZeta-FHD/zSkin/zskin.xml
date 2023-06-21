@@ -2220,23 +2220,23 @@
     </screen>
     <!-- QuickSubtitlesConfigMenu ??? -->
     <screen name="QuickSubtitlesConfigMenu" title="Subtitle settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
-        <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
-        <widget name="videofps" position="230,150" size="810,50" font="Regular;30" valign="center" halign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
-        <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+      <panel name="LayerMenu1000" />
+      <panel name="ButtonTemplate" />
+      <widget name="videofps" position="230,150" size="810,50" font="Regular;30" valign="center" halign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1" />
+      <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1" />
+      <widget name="config" position="230,220" size="809,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97" />
     </screen>
     <!-- QuickSubtitlesClearRests -->
     <screen name="QuickSubtitlesClearRests" title="Subtitle settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
-        <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+      <panel name="LayerMenu1000" />
+      <panel name="ButtonTemplate" />
+      <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97" />
     </screen>
     <!-- OSD3D Setup -->
     <screen name="OSD3DSetupScreen" title="Select Location" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
-        <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+      <panel name="LayerMenu1000" />
+      <panel name="ButtonTemplate" />
+      <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97" />
     </screen>
     <!-- Subservices Quickzap ??? -->
     <screen name="SubservicesQuickzap" position="center,center" size="900,300" title="Subservices" backgroundColor="#20202020" flags="wfNoBorder">
@@ -2379,34 +2379,34 @@
     </screen>
     <!-- Default wizard -->
     <screen name="DefaultWizard" position="0,0" size="1920,1080" title="Video" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="RemoteControlTemplate"/>
-        <ePixmap pixmap="oZeta-FHD/icons/wizard.png" position="1590,820" size="273,200" alphatest="blend" zPosition="1"/>
-        <eLabel text="Default Wizard" position="40,30" size="1000,60" font="Regular;50" foregroundColor="yellow" backgroundColor="#000000" transparent="0" zPosition="10"/>
-        <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1"/>
-        <widget source="global.CurrentTime" render="Label" position="1470,33" size="400,40" font="Regular;34" halign="right" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="5">
-            <convert type="ClockToText">Format:%a %d %b %Y</convert>
-        </widget>
-        <widget source="global.CurrentTime" render="Label" position="1645,70" size="225,37" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
-            <convert type="ClockToText">Format:%-H:%M</convert>
-        </widget>
-        <eLabel position="1570,0" size="350,1080" backgroundColor="#101010" zPosition="0"/>
-        <ePixmap position="800,0" size="1120,1080" pixmap="oZeta-FHD/menu/fill.png" alphatest="blend" scale="1" zPosition="-1"/>
-        <eLabel position="0,120" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
-        <widget name="text" position="50,140" size="1500,300" font="Regular;32" halign="left" zPosition="10" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
-        <eLabel position="0,450" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
-        <widget name="config" position="50,470" size="1365,500" zPosition="1" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1"/>
-        <widget source="list" render="Listbox" position="50,470" size="1365,440" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1">
-            <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,40),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
-					"fonts": [gFont("Regular",34)],
-					"itemHeight": 40 }
-			</convert>
-        </widget>
-        <ePixmap pixmap="oZeta-FHD/buttons/80/key_red.png" position="1475,980" size="80,40" alphatest="blend" transparent="1" zPosition="5"/>
-        <widget name="languagetext" position="1160,980" size="300,40" font="Regular;34" halign="richt" foregroundColor="yellow" backgroundColor="#000000" transparent="5"/>
-        <widget name="portpic" position="1600,770" size="250,250" alphatest="on" scale="1" transparent="1" zPosition="10"/>
-        <eLabel position="0,920" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
-        <ePixmap position="50,950" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1"/>
+      <panel name="RemoteControlTemplate" />
+      <ePixmap pixmap="oZeta-FHD/icons/wizard.png" position="1590,820" size="273,200" alphatest="blend" zPosition="1" />
+      <eLabel text="Default Wizard" position="40,30" size="1000,60" font="Regular;50" foregroundColor="yellow" backgroundColor="#000000" transparent="0" zPosition="10" />
+      <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1" />
+      <widget source="global.CurrentTime" render="Label" position="1470,33" size="400,40" font="Regular;34" halign="right" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="5">
+        <convert type="ClockToText">Format:%a %d %b %Y</convert>
+      </widget>
+      <widget source="global.CurrentTime" render="Label" position="1645,70" size="225,37" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="right">
+        <convert type="ClockToText">Format:%-H:%M</convert>
+      </widget>
+      <eLabel position="1570,0" size="350,1080" backgroundColor="#101010" zPosition="0" />
+      <ePixmap position="800,0" size="1120,1080" pixmap="oZeta-FHD/menu/fill.png" alphatest="blend" scale="1" zPosition="-1" />
+      <eLabel position="0,120" size="1920,3" backgroundColor="#303030" zPosition="-1" />
+      <widget name="text" position="50,140" size="1500,300" font="Regular;32" halign="left" zPosition="10" foregroundColor="white" backgroundColor="#000000" transparent="1" />
+      <eLabel position="0,450" size="1920,3" backgroundColor="#303030" zPosition="-1" />
+      <widget name="config" position="50,470" size="1365,432" zPosition="1" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
+      <widget source="list" render="Listbox" position="50,470" size="1365,440" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1">
+        <convert type="TemplatedMultiContent">
+                    {"template": [ MultiContentEntryText(pos = (0,0),size = (1035,40),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+                        "fonts": [gFont("Regular",34)],
+                        "itemHeight": 40 }
+                </convert>
+      </widget>
+      <ePixmap pixmap="oZeta-FHD/buttons/80/key_red.png" position="1475,980" size="80,40" alphatest="blend" transparent="1" zPosition="5" />
+      <widget name="languagetext" position="1160,980" size="300,40" font="Regular;34" halign="richt" foregroundColor="yellow" backgroundColor="#000000" transparent="5" />
+      <widget name="portpic" position="1600,770" size="250,250" alphatest="on" scale="1" transparent="1" zPosition="10" />
+      <eLabel position="0,920" size="1920,3" backgroundColor="#303030" zPosition="-1" />
+      <ePixmap position="50,950" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1" />
     </screen>
     <!-- ImageWizard -->
     <screen name="ImageWizard" position="0,0" size="1920,1080" title="Video" backgroundColor="transparent" flags="wfNoBorder">
