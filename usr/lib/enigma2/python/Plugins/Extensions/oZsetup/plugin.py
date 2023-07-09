@@ -444,6 +444,8 @@ class oZsetup(ConfigListScreen, Screen):
                         self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
 
             # if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
+            section = ("SKIN WEATHER SETUP       ")
+            self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("WEATHER SETUP SECTION")))
             self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
             if config.ozeta.zweather.value is True:
                 # if os.path.isdir(OAWeather):
