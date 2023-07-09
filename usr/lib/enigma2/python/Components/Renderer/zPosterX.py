@@ -112,7 +112,7 @@ try:
 except:
     autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
 print('autobouquet_file = ', autobouquet_file)
-autobouquet_count = 32
+autobouquet_count = 85
 # Short script for Automatic poster generation on your preferred bouquet
 if not os.path.exists(autobouquet_file):
     autobouquet_file = None
@@ -151,7 +151,7 @@ if not os.path.exists(path_folder):
 REGEX = re.compile(
         r'\s\*\d{4}\Z|'                 # remove ( *1234)
         r'([\(\[\|].*?[\)\]\|])|'       # remove ([xxx] or (xxx) or |xxx|)
-#       r'(\s{1,}\:\s{1,}).+|'          # remove ( : xxx)
+        # r'(\s{1,}\:\s{1,}).+|'        # remove ( : xxx)
         r'(\.\s{1,}\").+|'              # remove (. "xxx)
         r'(\?\s{1,}\").+|'              # remove (? "xxx)
         r'(\.{2,}\Z)'                   # remove (..)

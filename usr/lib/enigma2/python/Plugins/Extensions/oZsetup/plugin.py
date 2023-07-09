@@ -113,6 +113,9 @@ ozetaalogopredefinedlist = []
 ozetablogopredefinedlist = []
 ozetamvipredefinedlist = []
 
+
+config.ozeta.actapi = NoSave(ConfigOnOff(default=False))
+
 config.ozeta.data = NoSave(ConfigOnOff(default=False))
 config.ozeta.api = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.txtapi = ConfigText(default=tmdb_api, visible_width=50, fixed_size=False)
@@ -129,6 +132,8 @@ config.ozeta.mmpicons = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.update = ConfigOnOff(default=False)
 config.ozeta.upfind = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.options = NoSave(ConfigSelection(['-> Ok']))
+
+
 config.ozeta.zweather = ConfigOnOff(default=False)
 config.ozeta.weather = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.oaweather = NoSave(ConfigSelection(['-> Ok']))
@@ -423,40 +428,42 @@ class oZsetup(ConfigListScreen, Screen):
 
                 section = ("SKIN API SETUP       ")
                 self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("API SETUP SECTION")))
-                self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
-                if config.ozeta.data.value is True:
-                    self.list.append(getConfigListEntry("--Load TMDB Apikey", config.ozeta.api, _("Load TMDB Apikey from /tmp/apikey.txt")))
-                    self.list.append(getConfigListEntry("--Set TMDB Apikey", config.ozeta.txtapi, _("Signup on TMDB and input free personal ApiKey")))
-                self.list.append(getConfigListEntry("OMDB API:", config.ozeta.data2, _("Settings OMDB APIKEY")))
-                if config.ozeta.data2.value is True:
-                    self.list.append(getConfigListEntry("--Load OMDB Apikey", config.ozeta.api2, _("Load OMDB Apikey from /tmp/omdbkey.txt")))
-                    self.list.append(getConfigListEntry("--Set OMDB Apikey", config.ozeta.txtapi2, _("Signup on OMDB and input free personal ApiKey")))
-                self.list.append(getConfigListEntry("THETVDB API:", config.ozeta.data4, _("Settings THETVDB APIKEY")))
-                if config.ozeta.data4.value is True:
-                    self.list.append(getConfigListEntry("--Load THETVDB Apikey", config.ozeta.api4, _("Load THETVDB Apikey from /tmp/thetvdbkey.txt")))
-                    self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
+                self.list.append(getConfigListEntry("API KEY SETUP:", config.ozeta.actapi, _("Settings oZeta Apikey Server")))
+                if config.ozeta.actapi.value is True:
+                    self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
+                    if config.ozeta.data.value is True:
+                        self.list.append(getConfigListEntry("--Load TMDB Apikey", config.ozeta.api, _("Load TMDB Apikey from /tmp/apikey.txt")))
+                        self.list.append(getConfigListEntry("--Set TMDB Apikey", config.ozeta.txtapi, _("Signup on TMDB and input free personal ApiKey")))
+                    self.list.append(getConfigListEntry("OMDB API:", config.ozeta.data2, _("Settings OMDB APIKEY")))
+                    if config.ozeta.data2.value is True:
+                        self.list.append(getConfigListEntry("--Load OMDB Apikey", config.ozeta.api2, _("Load OMDB Apikey from /tmp/omdbkey.txt")))
+                        self.list.append(getConfigListEntry("--Set OMDB Apikey", config.ozeta.txtapi2, _("Signup on OMDB and input free personal ApiKey")))
+                    self.list.append(getConfigListEntry("THETVDB API:", config.ozeta.data4, _("Settings THETVDB APIKEY")))
+                    if config.ozeta.data4.value is True:
+                        self.list.append(getConfigListEntry("--Load THETVDB Apikey", config.ozeta.api4, _("Load THETVDB Apikey from /tmp/thetvdbkey.txt")))
+                        self.list.append(getConfigListEntry("--Set THETVDB Apikey", config.ozeta.txtapi4, _("Signup on THETVDB and input free personal ApiKey")))
+
+            # if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
+            self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
+            if config.ozeta.zweather.value is True:
+                # if os.path.isdir(OAWeather):
+                self.list.append(getConfigListEntry("Install or Open OAWeather Plugin", config.ozeta.oaweather, _("Install or Open OAWeather Plugin\nPress OK")))
+                self.list.append(getConfigListEntry("Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
+                if os.path.isdir(weatherz):
+                    self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
+
+                VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
+                if os.path.isdir(VisualWeather):
+                    self.list.append(getConfigListEntry("VisualWeather Plugin API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
+                    if config.ozeta.data3.value is True:
+                        self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
+                        self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
 
             section = ("MISC SETUP            ")
             self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
-
-            # if (os.path.isdir(weatherz) or os.path.isdir(OAWeather)):
-            self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
-            if config.ozeta.zweather.value is True:
-                # if os.path.isdir(OAWeather):
-                    self.list.append(getConfigListEntry("Install or Open OAWeather Plugin", config.ozeta.oaweather, _("Install or Open OAWeather Plugin\nPress OK")))
-                    self.list.append(getConfigListEntry("Install or Open Weather Plugin", config.ozeta.weather, _("Install or Open Weather Plugin\nPress OK")))
-                    if os.path.isdir(weatherz):
-                        self.list.append(getConfigListEntry("--Setting Weather City", config.ozeta.city, _("Settings City Weather Plugin")))
-
-                    VisualWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('VisualWeather'))
-                    if os.path.isdir(VisualWeather):
-                        self.list.append(getConfigListEntry("VisualWeather Plugin API:", config.ozeta.data3, _("Settings VISUALWEATHER APIKEY")))
-                        if config.ozeta.data3.value is True:
-                            self.list.append(getConfigListEntry("--Load VISUALWEATHER Apikey", config.ozeta.api3, _("Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt")))
-                            self.list.append(getConfigListEntry("--Set VISUALWEATHER Apikey", config.ozeta.txtapi3, _("Signup on www.visualcrossing.com and input free personal ApiKey")))
 
             self["config"].list = self.list
             self["config"].l.setList(self.list)
@@ -943,7 +950,6 @@ class oZsetup(ConfigListScreen, Screen):
         self.Timer.start(500, 1)
         self.createSetup()
 
-
     def upOptions(self):
         self.Timer = eTimer()
         try:
@@ -1085,7 +1091,7 @@ class oZsetup(ConfigListScreen, Screen):
 # update zskin
     def zUpdate(self, answer=None):
         if answer is None:
-            if os.path.exists(mvi + 'enigma2/' +  'oZeta-FHD'):
+            if os.path.exists(mvi + 'enigma2/' + 'oZeta-FHD'):
                 self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
             else:
                 self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
@@ -1120,7 +1126,7 @@ class oZsetup(ConfigListScreen, Screen):
 
             # r = requests.get(xfile)
             # with open(xfile, 'wb') as f:
-                # f.write(r.content) 
+                # f.write(r.content)
             # self.upd_zeta()
             # downloadPage(xfile, tarfile).addCallback(self.upd_zeta).addErrback(self.errorLoad)
         except Exception as e:
@@ -1139,7 +1145,7 @@ class oZsetup(ConfigListScreen, Screen):
 
 # not tested
     # def upd_zeta(self, fplug):
-    def upd_zeta(self):    
+    def upd_zeta(self):
         time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             print('init update tarfile')
