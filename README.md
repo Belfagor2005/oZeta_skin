@@ -31,7 +31,6 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/menu_icon2.jpg?raw=true">
 
-
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/menu_info.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/setup_osd_pic.jpg?raw=true">
@@ -43,6 +42,8 @@ Support: http://e2skin.blogspot.com/
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/info_device.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/plugin_browser.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/plugin_grid.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/ozsetup.jpg?raw=true">
 
