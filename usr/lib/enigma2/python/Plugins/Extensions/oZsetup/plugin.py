@@ -1098,30 +1098,29 @@ class oZsetup(ConfigListScreen, Screen):
         if fileExists(tarfile):
             os.remove(tarfile)
         xfile = 'http://patbuweb.com/ozeta/ozeta.tar'
-        # if PY3:
-            # xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
+        if PY3:
+            xfile = b"http://patbuweb.com/ozeta/ozeta.tar"
         from twisted.web.client import downloadPage
         try:
             import requests
         except ImportError:
-            # os.chmod('/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh', 0o0755))
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             os.system('chmod 755 /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh')
             self.session.open(Console, _('Install Requests'), ['%s' % cmd1], closeOnSuccess=False)
         # response = requests.head(xfile)
         # if response.status_code == 200:
         try:
-            cmd = "wget -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
-            if "https" in str(xfile):
-                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
-            # self.containerExtra.execute(cmd)
-            self.session.open(Console, _('Downloading: %s') % xfile, [cmd], closeOnSuccess=True)
+            # cmd = "wget -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
+            # if "https" in str(xfile):
+                # cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s' > /dev/null" % ('Enigma2 - zSetup Plugin', xfile, tarfile)
+            # # self.containerExtra.execute(cmd)
+            # self.session.open(Console, _('Downloading: %s') % xfile, [cmd], closeOnSuccess=True)
 
-            # r = requests.get(xfile)
-            # with open(xfile, 'wb') as f:
-                # f.write(r.content)
-            # self.upd_zeta()
-            # downloadPage(xfile, tarfile).addCallback(self.upd_zeta).addErrback(self.errorLoad)
+            r = requests.get(xfile)
+            with open(xfile, 'wb') as f:
+                f.write(r.content)
+            self.upd_zeta()
+            downloadPage(xfile, tarfile).addCallback(self.upd_zeta).addErrback(self.errorLoad)
         except Exception as e:
             print('error download: ', e)
             return
