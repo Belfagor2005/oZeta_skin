@@ -27,23 +27,23 @@ except:
     from urllib import quote
 
 
-PY3 = sys.version_info.major >= 3
+# PY3 = sys.version_info.major >= 3
 
-try:
-    if PY3:
-        PY3 = True
-        unicode = str
-        unichr = chr
-        long = int
-        xrange = range
-    else:
-        _str = str
-        str = unicode
-        range = xrange
-        unicode = unicode
-        basestring = basestring
-except:
-    pass
+# try:
+    # if PY3:
+        # PY3 = True
+        # unicode = str
+        # unichr = chr
+        # long = int
+        # xrange = range
+    # else:
+        # _str = str
+        # str = unicode
+        # range = xrange
+        # unicode = unicode
+        # basestring = basestring
+# except:
+    # pass
 
 
 def isMountReadonly(mnt):

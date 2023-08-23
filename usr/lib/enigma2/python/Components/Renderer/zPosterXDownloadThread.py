@@ -76,6 +76,9 @@ def intCheck():
         return False
     else:
         return True
+adsl = intCheck()
+if not adsl:
+    return
 
 
 class zPosterXDownloadThread(threading.Thread):
