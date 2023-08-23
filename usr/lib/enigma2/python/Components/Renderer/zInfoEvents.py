@@ -142,23 +142,20 @@ def intCheck():
     else:
         return True
 adsl = intCheck()
-if not adsl:
-    return
+
 
 class zInfoEvents(Renderer, VariableText):
 
     def __init__(self):
         Renderer.__init__(self)
         VariableText.__init__(self)
-        adsl = intCheck()
         if not adsl:
             return
-
+        self.text = ""
     GUI_WIDGET = eLabel
 
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
-            self.text = ""
             return
         if what[0] != self.CHANGED_CLEAR:
             self.showInfos()
@@ -232,12 +229,11 @@ class zInfoEvents(Renderer, VariableText):
                             if os.path.exists("/tmp/rating"):
                                 os.remove("/tmp/rating")
                                 print('/tmp/rating removed')
-                                self.text = None
                             return self.text
                 except Exception as e:
                     print(e)
             else:
-                self.text = None
+                return self.text
 
     def downloadInfos(self, infos_file):
         self.year = self.filterSearch()
@@ -305,11 +301,6 @@ class zInfoEvents(Renderer, VariableText):
                 infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
-                '''
-                # # evnt = event.getEventName().encode('utf-8')
-                # evntNm = html_escape(titleNxt).strip()
-                # rating_json = "{}{}.json".format(path_folder, evntNm)
-                '''
         except:
             pass
 

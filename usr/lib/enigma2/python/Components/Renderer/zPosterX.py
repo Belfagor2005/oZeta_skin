@@ -159,6 +159,11 @@ REGEX = re.compile(
         r'(\?\s{1,}\").+|'              # remove (? "xxx)
         r'(\.{2,}\Z)', re.DOTALL)       # remove (..)
 
+                                                    
+                                            
+                                              
+                                          
+                                                  
 
 def convtext(text):
     text = text.replace('\xc2\x86', '')
@@ -170,6 +175,8 @@ def convtext(text):
 
     try:
         text = unicode(text, 'utf-8')
+                                                            
+                                      
     except NameError:
         pass
     text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
@@ -196,8 +203,6 @@ def intCheck():
     else:
         return True
 adsl = intCheck()
-if not adsl:
-    return
 
 class PosterDB(zPosterXDownloadThread):
     def __init__(self):
@@ -338,7 +343,6 @@ threadAutoDB.start()
 class zPosterX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
-        adsl = intCheck()
         if not adsl:
             return
         self.nxts = 0
@@ -351,7 +355,6 @@ class zPosterX(Renderer):
         except:
             self.timer.callback.append(self.showPoster)
         self.timer.start(50, True)
-        # self.timer.callback.append(self.showPoster)
         self.logdbg = None
 
     def applySkin(self, desktop, parent):

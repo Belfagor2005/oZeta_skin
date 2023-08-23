@@ -20,30 +20,11 @@ from enigma import eSlider
 import os
 import re
 import json
-import sys
+
 try:
     from urllib.parse import quote
 except:
     from urllib import quote
-
-
-# PY3 = sys.version_info.major >= 3
-
-# try:
-    # if PY3:
-        # PY3 = True
-        # unicode = str
-        # unichr = chr
-        # long = int
-        # xrange = range
-    # else:
-        # _str = str
-        # str = unicode
-        # range = xrange
-        # unicode = unicode
-        # basestring = basestring
-# except:
-    # pass
 
 
 def isMountReadonly(mnt):
@@ -116,24 +97,10 @@ def unicodify(s, encoding='utf-8', norm=None):
 def cleantitle(text=''):
     try:
         print('zStarX text ->>> ', text)
-        # import unicodedata
         if text != '' or text is not None or text != 'None':
-            '''
-            # text = text.replace('\xc2\x86', '')
-            # text = text.replace('\xc2\x87', '')
-            '''
             text = REGEX.sub('', text)
             text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            # text = text.strip()
-            '''
-            # try:
-                # text = unicode(text, 'utf-8')
-            # except Exception as e:
-                # print('error name ',e)
-                # pass
-            # text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
-            '''
             text = unicodify(text)
             text = text.lower()
             print('zStarX text <<<- ', text)

@@ -77,17 +77,13 @@ def intCheck():
     else:
         return True
 adsl = intCheck()
-if not adsl:
-    return
 
 
 class zPosterXDownloadThread(threading.Thread):
     def __init__(self):
-        adsl = intCheck()
         if not adsl:
             return
         threading.Thread.__init__(self)
-
         self.checkMovie = ["film", "movie", "фильм", "кино", "ταινία",
                            "película", "cinéma", "cine", "cinema",
                            "filma"]
