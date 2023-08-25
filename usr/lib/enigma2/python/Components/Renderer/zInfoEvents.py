@@ -152,6 +152,7 @@ class zInfoEvents(Renderer, VariableText):
         if not adsl:
             return
         self.text = ""
+
     GUI_WIDGET = eLabel
 
     def changed(self, what):

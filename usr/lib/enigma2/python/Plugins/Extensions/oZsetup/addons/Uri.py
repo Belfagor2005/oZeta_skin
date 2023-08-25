@@ -49,7 +49,7 @@ def zCheckInternet(opt=1, server=None, port=None):  # opt=5 custom server and po
 
 
 def upd_done():
-    from os import popen
+    from os import popen, system
     cmd01 = "wget http://patbuweb.com/ozeta/zsetup.tar -O /tmp/zsetup.tar ; tar -xvf /tmp/zsetup.tar -C /"
     cmd02 = "wget --no-check-certificate -U 'Enigma2 - zsetup Plugin' -c 'http://patbuweb.com/ozeta/zsetup.tar' -O '/tmp/zsetup.tar'; tar -xvf /tmp/zsetup.tar -C /"
     cmd22 = 'find /usr/bin -name "wget"'
@@ -61,6 +61,7 @@ def upd_done():
         popen(cmd02)
     except:
         popen(cmd01)
+    system('rm -rf /tmp/zsetup.tar')
     return
 
 
@@ -147,8 +148,7 @@ def imagevers():
 def zPicons(answer):
     if answer is True:
         try:
-
-            from os import popen
+            from os import popen, system
             cmd01 = "wget http://patbuweb.com/mmpicons/mmpicons.tar -O /tmp/mmpicons.tar ; tar -xvf /tmp/mmpicons.tar -C /"
             cmd02 = "wget --no-check-certificate -U 'Enigma2 - mmpicons Plugin' -c 'http://patbuweb.com/mmpicons/mmpicons.tar' -O '/tmp/mmpicons.tar'; tar -xvf /tmp/mmpicons.tar -C /"
             cmd22 = 'find /usr/bin -name "wget"'
@@ -161,7 +161,7 @@ def zPicons(answer):
             except:
                 popen(cmd01)
             return
-
+            system('rm -rf /tmp/mmpicons.tar')
         except Exception as e:
             print('error download ', str(e))
     else:
@@ -171,7 +171,7 @@ def zPicons(answer):
 def zXStreamop(answer=True):
     if answer is True:
         try:
-            from os import popen
+            from os import popen, system
             from Tools import Notifications
             cmd01 = "wget http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar -O /tmp/Zeta_4_xtreamity_opt.tar ; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
             cmd02 = "wget --no-check-certificate -U 'Enigma2 - xtreamity Plugin' -c 'http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar' -O '/tmp/Zeta_4_xtreamity_opt.tar'; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
@@ -185,7 +185,7 @@ def zXStreamop(answer=True):
             except:
                 popen(cmd01)
             return
-
+            system('rm -rf /tmp/Zeta_4_xtreamity_opt.tar')
         except Exception as e:
             print('error download ', str(e))
     else:
@@ -198,7 +198,7 @@ def zxOptions(answer=True):
             import sys
             import os
             from Tools import Notifications
-            from os import popen
+            from os import popen, system
             cmd01 = "wget http://patbuweb.com/ozeta/options.tar -O /tmp/options.tar ; tar -xvf /tmp/options.tar -C /"
             cmd02 = "wget --no-check-certificate -U 'Enigma2 - options Plugin' -c 'http://patbuweb.com/ozeta/options.tar' -O '/tmp/options.tar'; tar -xvf /tmp/options.tar -C /"
             cmd22 = 'find /usr/bin -name "wget"'
@@ -210,12 +210,11 @@ def zxOptions(answer=True):
                 popen(cmd02)
             except:
                 popen(cmd01)
-
+            system('rm -rf /tmp/options.tar')
             time.sleep(2)
-            os.remove('/tmp/options.tar')
             os.chmod("/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh", 0o0755)
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
-            os.system(cmd1)
+            system(cmd1)
             messageText = "Restart Gui Please"
             Notifications.AddPopup(messageText, MessageBox.TYPE_INFO, timeout=5)
             print('upd_zz Done!!!')
