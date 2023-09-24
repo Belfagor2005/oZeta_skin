@@ -1,92 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin>
-	<!--
+    <!--
 	######################### mmark_oZeta_Setup #############################
 	#      mmark             Version 2.0.0 released          13-07-2022     #
 	#########################################################################
 	-->
-	<!-- ***** Created by zSetup Plugin v2.0 ***** -->
-
-
-	<!-- *** oZeta - XML Version 2.27 Infobar Meteo By zSetup v2.0.0 *** -->
-	<!-- Author mmark : Modules : PartInfobarDataChannel + TempInfobar + PartInfoDataTime + PartInfoPoster + PartInfoMeteo + PartInfoCrypt -->
-	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="PartInfobarDataChannel"/>
-		<panel name="TempInfoBar"/>
-		<panel name="PartInfoDataTime"/>
-		<panel name="PartInfoPoster"/>
-		<!-- <panel name="PartInfoMeteo"/> -->
-		<panel name="PartInfoCrypt"/>
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 Second Infobar Star by zSetup v2.0.0 ***  -->
-	<!-- Author mmark : Modules : TempInfoBar2 + TempSecondInfobar + zParental + Rating + PartInfobarDataChannel + PartInfoCrypt + PartInfoIP-->
-	<screen name="SecondInfoBar" title="Second Infobar" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
-		<panel name="PartInfobarDataChannel"/>										  
-		<panel name="TempInfoBar"/>
-		<panel name="TempSecondInfobar" />
-		<panel name="PartInfoIP"/>
-		<panel name="PartInfoCrypt"/>
-	</screen>
-
-
-
-	<!-- *** oZeta - XML Version 2.27 Radio Blue By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : TempChannelSelectionRadio + PartChannelSelectionRadioInfo + PartRadioInfoBar -->
-	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" zPosition="-10" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="TempChannelSelectionRadio"/>
-		<panel name="PartChannelSelectionRadioInfo"/>
-	</screen>
-	<screen name="RadioInfoBar" position="1020,890" size="850,150" title="Radio" zPosition="1" flags="wfNoBorder" >
-		<panel name="PartRadioInfoBar"/>
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 Channel Selection Cover Events By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : TempChannelSelectionLong + PartChannelSelectionPosterEvent -->
-	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="TempChannelSelectionLong"/>
-		<panel name="PartChannelSelectionPosterEvent"/>
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Volume Text Default -->
-	<screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
-		<ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" blend="blend" zPosition="2" transparent="1" />
-		<widget source="global.CurrentTime" render="zVolumeText" position="120,0" size="120,110" font="LCD;90" halign="center" valign="center" foregroundColor="#ffffff" 
-			backgroundColor="bluette" transparent="1" zPosition="4"/>
-	</screen>
-	
-
-	<!-- *** oZETA 2.0 - XML Version 2.27 MediaPlayer Technics By oZetaSetup v2.0.0 ***  -->
-	<!-- Author mmark Modules : TechnicsMediaPlayer -->
-	<screen name="MediaPlayer" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="TechnicsMediaPlayer"/>
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : EventView -->
-	<screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="EventView" />
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 Top Logo Team By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : TopLogo Zeta Default -->
-	<screen name="Logo" >
-		<ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10" />
-		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="20" />
-	</screen>
-
-
-	<!-- *** oZeta - XML Version 2.27 Bottom Logo Team By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Bottom Logo Zeta Default -->
-	<screen name="bLogo" >
-		<ePixmap position="230,980" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" transparent="1" zPosition="1" />
-	</screen>
-
-
+    <!-- ***** Created by zSetup Plugin v2.0 ***** -->
+    <!-- *** oZeta - XML Version 2.27 Infobar Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : PartInfobarDataChannel + TempInfobar + PartInfoDataTime + PartInfoCrypt -->
+    <screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="PartInfobarDataChannel"/>
+        <panel name="TempInfoBar"/>
+        <panel name="PartInfoDataTime"/>
+                                      
+                                              
+        <panel name="PartInfoCrypt"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Second Infobar Default by zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : PartInfobarDataChannel + TempInfoBar + PartInfoIP + PartSecondInfoSimple + PartInfoCrypt -->
+    <screen name="SecondInfoBar" title="Second Infobar" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+        <panel name="PartInfobarDataChannel"/>
+        <panel name="TempInfoBar"/>
+                                         
+        <panel name="PartInfoIP"/>
+        <panel name="PartSecondInfoSimple"/>
+        <panel name="PartInfoCrypt"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Radio Blue By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : TempChannelSelectionRadio + PartChannelSelectionRadioInfo + PartRadioInfoBar -->
+    <screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" zPosition="-10" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="TempChannelSelectionRadio"/>
+        <panel name="PartChannelSelectionRadioInfo"/>
+    </screen>
+    <screen name="RadioInfoBar" position="1020,890" size="850,150" title="Radio" zPosition="1" flags="wfNoBorder">
+        <panel name="PartRadioInfoBar"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Channel Selection Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : TempChannelSelectionSmall + PartChannelSelectionNext -->
+    <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection Default" backgroundColor="#FF000000" flags="wfNoBorder">
+        <panel name="TempChannelSelectionSmall"/>
+        <panel name="PartChannelSelectionNext"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : Volume Text Default -->
+    <screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
+        <ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" blend="blend" zPosition="2" transparent="1"/>
+        <widget source="global.CurrentTime" render="zVolumeText" position="120,0" size="120,110" font="LCD;90" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="4"/>
+    </screen>
+    <!-- *** oZETA 2.0 - XML Version 2.27 MediaPlayer Default By oZetaSetup v2.0.0 ***  -->
+    <!-- Author mmark Modules : SlimMediaPlayer Default -->
+    <screen name="MediaPlayer" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="SlimMediaPlayer"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : EventView -->
+    <screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="EventView"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Top Logo Team By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : TopLogo Zeta Default -->
+    <screen name="Logo">
+        <ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10"/>
+        <ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="20"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Bottom Logo Team By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : Bottom Logo Zeta Default -->
+    <screen name="bLogo">
+        <ePixmap position="230,980" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" transparent="1" zPosition="1"/>
+    </screen>
 </skin>
