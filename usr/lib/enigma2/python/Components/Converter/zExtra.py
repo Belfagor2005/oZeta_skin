@@ -88,7 +88,7 @@ class zExtra(Poll, Converter):
             temp = int(temp)
             if temp > 0:
                 temp = str(temp)
-                self.hddtemp = 'HDD Temp: %s\xc2\xb0C' % temp
+                self.hddtemp = 'HDD Temp: %s\xc2\xb0C' % str(temp)
             else:
                 self.hddtemp = 'HDD idle or N/A'
 
@@ -105,7 +105,7 @@ class zExtra(Poll, Converter):
                     load = ''
 
                 cpuload = load.replace('\n', '').replace(' ', '')
-                return 'CPU : %s' % cpuload
+                return 'CPU : %s' % str(cpuload)
         if self.type == self.TEMPERATURE:
             systemp = ""
             cputemp = ""
@@ -134,7 +134,7 @@ class zExtra(Poll, Converter):
             if systemp == "" and cputemp == "":
                 return "N/A"
             if systemp == "":
-                return "%s" % cputemp
+                return "%s" % str(cputemp)
             if cputemp == "":
                 return systemp
             return "%s" % (cputemp)
@@ -149,7 +149,7 @@ class zExtra(Poll, Converter):
                     if 'inet addr:' in line:
                         c = line.split('inet addr:')[1].split(' ')[0]
                         if c != '127.0.0.1':
-                            return "Local %s" % c
+                            return "Local %s" % str(c)
             except:
                 return ''
         if self.type == self.IPWAN:
@@ -157,7 +157,7 @@ class zExtra(Poll, Converter):
                 file = os.popen('wget -qO - ifconfig.me')
                 public = file.read()
                 publicIp = "Wan %s" % (str(public))
-                return "%s" % publicIp
+                return "%s" % str(publicIp)
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")
@@ -181,7 +181,7 @@ class zExtra(Poll, Converter):
                         except:
                             cpuspeed = '-'
 
-                return 'CPU Speed: %s MHz' % cpuspeed
+                return 'CPU Speed: %s MHz' % str(cpuspeed)
             except:
                 return ''
 
@@ -234,7 +234,7 @@ class zExtra(Poll, Converter):
                         uptime += hours + ' ' + (hours == '1' and 'hr' or 'hrs') + ', '
                     if len(uptime) > 0 or minutes > '0':
                         uptime += minutes + ' ' + (minutes == '1' and 'min' or 'mins')
-                return 'Uptime: %s' % uptime
+                return 'Uptime: %s' % str(uptime)
         return text
 
     text = property(getText)

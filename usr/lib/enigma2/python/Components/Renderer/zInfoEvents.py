@@ -223,7 +223,7 @@ class zInfoEvents(Renderer, VariableText):
                             self.text += "\nCast : %s" % str(Actors)  # .encode('utf-8').decode('utf-8')
                             self.text += "\nRated : %s" % str(Rated)  # .encode('utf-8').decode('utf-8')
                             self.text += "\nImdb : %s" % str(imdbRating)  # .encode('utf-8').decode('utf-8')
-                            print("text= ", self.text)
+                            # print("text= ", self.text)
                             self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
 
                         else:
