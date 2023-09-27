@@ -1,251 +1,240 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-	<!-- **************************************	 -->
-	<!-- Skin oZeta-FHD by mmark v1.6.0			 -->
-	<!-- released for use on Open images		 -->
-	<!-- Currently Tested on ATV v6.X			 -->
-	<!-- Don't Remove this Disclaimer			 -->
-	<!-- **************************************	 -->
-	<copyright>
-		<abouth name="oZeta-FHD">
+    <!-- **************************************	 -->
+    <!-- Skin oZeta-FHD by mmark v1.6.0			 -->
+    <!-- released for use on Open images		 -->
+    <!-- Currently Tested on ATV v6.X			 -->
+    <!-- Don't Remove this Disclaimer			 -->
+    <!-- **************************************	 -->
+    <copyright>
+        <abouth name="oZeta-FHD">
 			author="mmark"
 			license="Open"
-			Support="openATV 7.x" 
+			Support="openATV 7.x"
 			Release="2.0.0 30/06/2022"
 			supporturl="http://e2skin.blogspot.com"
 		</abouth>
-	</copyright>
-	<!-- *************************************** -->
-	<!--	SKIN PARAMETERS * SKIN PARAMETERS	 -->
-	<!-- **************************************	 -->
-	<output id="0">
-		<resolution bpp="32" xres="1920" yres="1080"/>
-	</output>
-	
-	<fonts>
-		<font name="Regular" filename="/usr/share/enigma2/oZeta-FHD/fonts/verdana.ttf" scale="95"/>
-		<font name="Mmenu" filename="/usr/share/enigma2/oZeta-FHD/fonts/mmenu.ttf" scale="100"/>
-		<font name="LCD" filename="lcd.ttf" scale="100"/>
-		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
-		<font name="Fixed" filename="andale.ttf" scale="100"/>
-		<font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100"/>
-		<alias name="ChoiceList" font="Regular" size="28" height="38"/>
-		<alias name="ChoiceBoxDescription" font="Regular" size="28" height="38"/>
-		<alias name="TextNormal" font="Regular" size="28" height="38"/>
-		<alias name="FileList" font="Regular" size="28" height="40"/>
-		<alias name="FileListMulti" font="Regular" size="28" height="40"/>
-		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
-		<alias name="PluginBrowser1" font="Regular" size="22"/>
-		<alias name="ServiceInfo" font="Regular" size="28" height="45"/>
-		<alias name="SelectionList" font="Regular" size="28" height="40"/>
-		<alias name="PartnerBoxEntryList0" font="Regular" size="28" height="38"/>
-		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
-		<alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="45"/>
-		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
-		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="VirtualKeyBoard" font="DejaVuSans" size="42" height="68"/>
-		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
-		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
-		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
-		<alias name="Dreamexplorer" font="Regular" size="34" height="50"/>
-		<alias name="PlayList" font="Regular" size="28" height="40"/>
-		<alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
-		<alias name="FallbackReceiverList1" font="Regular" size="28"/>
-	</fonts>
-	
-	<!-- Colors -->
-	<colors>
-		<color name="#124582" value="#00124582"/>
-		<color name="#ffffff" value="#00ffffff"/>
-		<color name="background" value="#10000000"/>
-		<color name="barColor" value="#001b3c85"/>
-		<color name="basictemplatecolor" value="#00000000"/>
-		<color name="black" value="#00000000"/>
-		<color name="blue" value="#00879ce1"/>
-		<color name="bluetransparent" value="#08001e4b"/>
-		<color name="bluette" value="#001b3c85"/>
-		<color name="dark" value="#00242424"/>
-		<color name="darkgrey" value="#00555556"/>
-		<color name="fallback" value="#00b0b0c0"/>
-		<color name="foreground" value="#00f0f0f0"/>
-		<color name="gradient" value="#060e1618"/>
-		<color name="green" value="#0056c856"/>
-		<color name="greentransparent" value="#08004c00"/>
-		<color name="grey" value="#00b6b6b6"/>
-		<color name="header" value="#20000000"/>
-		<color name="infobarBG" value="#41080808"/>
-		<color name="listbox" value="#000f56a4"/>
-		<color name="ltbluette" value="#007fcfff"/>
-		<color name="ltbluette2" value="#00229eff"/>
-		<color name="notavailable" value="#005e5e5e"/>
-		<color name="noTransBG" value="#00101214"/>
-		<color name="orange" value="#00ffc000"/>
-		<color name="rds_text_bg" value="#00003258"/>
-		<color name="red" value="#00ff4a3c"/>
-		<color name="redtransparent" value="#084c0000"/>
-		<color name="rssviewtop" value="#00005050"/>
-		<color name="secondBG" value="#18101214"/>
-		<color name="secondFG" value="#00f9c731"/>
-		<color name="selectedBG" value="#06303240"/>
-		<color name="selectedFG" value="#00fcc000"/>
-		<color name="selectorcolor" value="#06303240"/>
-		<color name="toptemplatecolor" value="#000d0f16"/>
-		<color name="transparent" value="#ff000000"/>
-		<color name="transpBlack" value="#54111112"/>
-		<color name="transpDark" value="#54242424"/>
-		<color name="transponderinfo" value="#00f0f0f0"/>
-		<color name="transpWhite" value="#70f0f0f0"/>
-		<color name="trbarColor" value="#201b3c85"/>
-		<color name="trbluette" value="#201b3c85"/>
-		<color name="un33333a" value="#0033333a"/>
-		<color name="un40a0aa0" value="#040a0aa0"/>
-		<color name="un4a00a0a" value="#04a00a0a"/>
-		<color name="uncccccc" value="#00cccccc"/>
-		<color name="white" value="#00f0f0f0"/>
-		<color name="yellow" value="#00f9c731"/>
-		<color name="yellowsoft" value="#00ccac68"/>
-		<color name="yellowtransparent" value="#084b4b00"/>
-	</colors>
-
-	<parameters>
-		<parameter name="AllowUserDatesAndTimes" value="5,5"/>
-		<parameter name="AutotimerEnabledIcon" value="5,2,38,36"/>
-		<parameter name="AutotimerRecordIcon" value="46,5,20,20"/>
-		<parameter name="ChoicelistIcon" value="5,2,80,40"/>
-		<parameter name="ChoicelistName" value="80,3,1000,40"/>
-		<parameter name="ChoicelistDash" value="5,2,700,2"/>
-		<parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
-		<parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
-		<parameter name="ChoicelistNameSingle" value="10,0,690,38"/>
-		<parameter name="ConfigListSlider" value="10,3"/>
-		<parameter name="ConfigListSeperator" value="360"/>
-		<parameter name="DreamexplorerName" value="70,2,1200,50"/>
-		<parameter name="DreamexplorerIcon" value="10,5,40,40"/>
-		<parameter name="EpgListIcon" value="2,12,25,25,2"/>
-		<parameter name="EpgListMulti" value="360,170,170,10"/>
-		<parameter name="EpgListMultiProgressBar" value="170,15,1"/>
-		<parameter name="EpgListSingle" value="80,220"/>
-		<parameter name="ExpandableListIcon" value="5,2,55,38"/>
-		<parameter name="ExpandableListDescr" value="55,2,1000,45"/>
-		<parameter name="FileListName" value="60,5,1700,40"/>
-		<parameter name="FileListIcon" value="7,5,52,50"/>
-		<parameter name="FileListMultiName" value="125,4,1700,50"/>
-		<parameter name="FileListMultiIcon" value="60, 5, 40, 40"/>
-		<parameter name="FileListMultiLock" value="7,5,40,40"/>
-		<parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
-		<parameter name="HelpMenuListExtHlp0" value="5,5,1200,40"/>
-		<parameter name="HelpMenuListExtHlp1" value="5,35,1200,40"/>
-		<parameter name="HelpMenuListHlp" value="5,5,1200,30"/>
-		<parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
-		<parameter name="ImsSelectionListLock" value="5,2,36,36"/>
-		<parameter name="PiconManagerList" value="10,0,1120,40"/>
-		<parameter name="PiconManagerListFont" value="Regular;28"/>
-		<parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
-		<parameter name="PlayListName" value="45,1,1600,40"/>
-		<parameter name="PlayListIcon" value="3,8,33,30"/>
-		<parameter name="PluginBrowserIcon" value="10,10,150,60"/>
-		<parameter name="PluginBrowserName" value="180,6,40"/>
-		<parameter name="PluginBrowserDescr" value="180,44,36"/>
-		<parameter name="PluginBrowserDownloadName" value="120,6,40"/>
-		<parameter name="PluginBrowserDownloadDescr" value="120,44,36"/>
-		<parameter name="PluginBrowserDownloadIcon" value="10,0,90,76"/>
-		<parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40"/>
-		<parameter name="ProgrammlistenUpdaterListFont" value="Regular;26"/>
-		<parameter name="SelectionListDescr" value="50,2,900,40"/>
-		<parameter name="SelectionListLock" value="5,5,40,40"/>
-		<parameter name="SelectionListLockOff" value="5,5,40,40"/>
-		<parameter name="ServiceInfo" value="0,0,1200,40"/>
-		<parameter name="ServiceInfoLeft" value="0,0,680,40"/>
-		<parameter name="ServiceInfoRight" value="700,0,550,40"/>
-		<parameter name="ServiceInfoFont" value="Regular;26"/>
-		<parameter name="VirtualKeyBoard" value="69,68"/>
-		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
-		<parameter name="VirtualKeyBoardPadding" value="4,4"/>
-		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
-	</parameters>
-
-	<switchpixmap>
-		<pixmap name="menu_on" filename="skin_default/icons/menu_on.png"/>
-		<pixmap name="menu_off" filename="skin_default/icons/menu_off.png"/>
-	</switchpixmap>
-	
-	<!-- Window -->
-	<windowstyle id="0" type="skinned">
-		<configList entryFont="Regular;30" valueFont="Regular;28"/>
-		<title offset="30,25" font="Regular;32"/>
-		<color name="Background" color="background"/>
-		<color name="LabelForeground" color="foreground"/>
-		<color name="ListboxBackground" color="background"/>
-		<color name="ListboxForeground" color="foreground"/>
-		<color name="ListboxSelectedBackground" color="#124582"/>
-		<color name="ListboxSelectedForeground" color="#ffffff"/>
-		<color name="ListboxMarkedBackground" color="un40a0aa0"/>
-		<color name="ListboxMarkedForeground" color="red"/>
-		<color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a"/>
-		<color name="ListboxMarkedAndSelectedForeground" color="red"/>
-		<color name="WindowTitleForeground" color="foreground"/>
-		<color name="WindowTitleBackground" color="background"/>
-		<borderset name="bsWindow">
-			<pixmap filename="oZeta-FHD/window/top_left_corner.png" pos="bpTopLeft"/>
-			<pixmap filename="oZeta-FHD/window/top_edge.png" pos="bpTop"/>
-			<pixmap filename="oZeta-FHD/window/top_right_corner.png" pos="bpTopRight"/>
-			<pixmap filename="oZeta-FHD/window/left_edge.png" pos="bpLeft"/>
-			<pixmap filename="oZeta-FHD/window/right_edge.png" pos="bpRight"/>
-			<pixmap filename="oZeta-FHD/window/bottom_left_corner.png" pos="bpBottomLeft"/>
-			<pixmap filename="oZeta-FHD/window/bottom_edge.png" pos="bpBottom"/>
-			<pixmap filename="oZeta-FHD/window/bottom_right_corner.png" pos="bpBottomRight"/>
-		</borderset>
-		<borderset name="bsListboxEntry">
-			<!-- pixmap filename="oZeta-FHD/skin_default/line1.png" pos="bpTop" /-->
-			<!-- pixmap filename="oZeta-FHD/skin_default/line2.png" pos="bpBottom" /-->
-			<!-- pixmap filename="oZeta-FHD/skin_default/vline.png" pos="bpLeft" /-->
-			<!-- pixmap filename="oZeta-FHD/skin_default/vline.png" pos="bpRight" /-->
-		</borderset>
-		<!-- <slider borderWidth="0" /> -->
-		<scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1"/>
-		<listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1"/>
-	</windowstyle>
+    </copyright>
+    <!-- *************************************** -->
+    <!--	SKIN PARAMETERS * SKIN PARAMETERS	 -->
+    <!-- **************************************	 -->
+    <output id="0">
+        <resolution bpp="32" xres="1920" yres="1080"/>
+    </output>
+    <fonts>
+        <font name="Regular" filename="/usr/share/enigma2/oZeta-FHD/fonts/verdana.ttf" scale="95"/>
+        <font name="Mmenu" filename="/usr/share/enigma2/oZeta-FHD/fonts/mmenu.ttf" scale="100"/>
+        <font name="LCD" filename="lcd.ttf" scale="100"/>
+        <font name="Console" filename="tuxtxt.ttf" scale="100"/>
+        <font name="Fixed" filename="andale.ttf" scale="100"/>
+        <font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100"/>
+        <alias name="ChoiceList" font="Regular" size="28" height="38"/>
+        <alias name="ChoiceBoxDescription" font="Regular" size="28" height="38"/>
+        <alias name="TextNormal" font="Regular" size="28" height="38"/>
+        <alias name="FileList" font="Regular" size="28" height="40"/>
+        <alias name="FileListMulti" font="Regular" size="28" height="40"/>
+        <alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
+        <alias name="PluginBrowser1" font="Regular" size="22"/>
+        <alias name="ServiceInfo" font="Regular" size="28" height="45"/>
+        <alias name="SelectionList" font="Regular" size="28" height="40"/>
+        <alias name="PartnerBoxEntryList0" font="Regular" size="28" height="38"/>
+        <alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
+        <alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
+        <alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
+        <alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="45"/>
+        <alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
+        <alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
+        <alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
+        <alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
+        <alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
+        <alias name="VirtualKeyBoard" font="DejaVuSans" size="42" height="68"/>
+        <alias name="HelpMenuList" font="Regular" size="30" height="45"/>
+        <alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
+        <alias name="HelpMenuListExt1" font="Regular" size="28"/>
+        <alias name="Dreamexplorer" font="Regular" size="34" height="50"/>
+        <alias name="PlayList" font="Regular" size="28" height="40"/>
+        <alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
+        <alias name="FallbackReceiverList1" font="Regular" size="28"/>
+    </fonts>
+    <!-- Colors -->
+    <colors>
+        <color name="#124582" value="#00124582"/>
+        <color name="#ffffff" value="#00ffffff"/>
+        <color name="background" value="#10000000"/>
+        <color name="barColor" value="#001b3c85"/>
+        <color name="basictemplatecolor" value="#00000000"/>
+        <color name="black" value="#00000000"/>
+        <color name="blue" value="#00879ce1"/>
+        <color name="bluetransparent" value="#08001e4b"/>
+        <color name="bluette" value="#001b3c85"/>
+        <color name="dark" value="#00242424"/>
+        <color name="darkgrey" value="#00555556"/>
+        <color name="fallback" value="#00b0b0c0"/>
+        <color name="foreground" value="#00f0f0f0"/>
+        <color name="gradient" value="#060e1618"/>
+        <color name="green" value="#0056c856"/>
+        <color name="greentransparent" value="#08004c00"/>
+        <color name="grey" value="#00b6b6b6"/>
+        <color name="header" value="#20000000"/>
+        <color name="infobarBG" value="#41080808"/>
+        <color name="listbox" value="#000f56a4"/>
+        <color name="ltbluette" value="#007fcfff"/>
+        <color name="ltbluette2" value="#00229eff"/>
+        <color name="notavailable" value="#005e5e5e"/>
+        <color name="noTransBG" value="#00101214"/>
+        <color name="orange" value="#00ffc000"/>
+        <color name="rds_text_bg" value="#00003258"/>
+        <color name="red" value="#00ff4a3c"/>
+        <color name="redtransparent" value="#084c0000"/>
+        <color name="rssviewtop" value="#00005050"/>
+        <color name="secondBG" value="#18101214"/>
+        <color name="secondFG" value="#00f9c731"/>
+        <color name="selectedBG" value="#06303240"/>
+        <color name="selectedFG" value="#00fcc000"/>
+        <color name="selectorcolor" value="#06303240"/>
+        <color name="toptemplatecolor" value="#000d0f16"/>
+        <color name="transparent" value="#ff000000"/>
+        <color name="transpBlack" value="#54111112"/>
+        <color name="transpDark" value="#54242424"/>
+        <color name="transponderinfo" value="#00f0f0f0"/>
+        <color name="transpWhite" value="#70f0f0f0"/>
+        <color name="trbarColor" value="#201b3c85"/>
+        <color name="trbluette" value="#201b3c85"/>
+        <color name="un33333a" value="#0033333a"/>
+        <color name="un40a0aa0" value="#040a0aa0"/>
+        <color name="un4a00a0a" value="#04a00a0a"/>
+        <color name="uncccccc" value="#00cccccc"/>
+        <color name="white" value="#00f0f0f0"/>
+        <color name="yellow" value="#00f9c731"/>
+        <color name="yellowsoft" value="#00ccac68"/>
+        <color name="yellowtransparent" value="#084b4b00"/>
+    </colors>
+    <parameters>
+        <parameter name="AllowUserDatesAndTimes" value="5,5"/>
+        <parameter name="AutotimerEnabledIcon" value="5,2,38,36"/>
+        <parameter name="AutotimerRecordIcon" value="46,5,20,20"/>
+        <parameter name="ChoicelistIcon" value="5,2,80,40"/>
+        <parameter name="ChoicelistName" value="80,3,1000,40"/>
+        <parameter name="ChoicelistDash" value="5,2,700,2"/>
+        <parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
+        <parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
+        <parameter name="ChoicelistNameSingle" value="10,0,690,38"/>
+        <parameter name="ConfigListSlider" value="10,3"/>
+        <parameter name="ConfigListSeperator" value="360"/>
+        <parameter name="DreamexplorerName" value="70,2,1200,50"/>
+        <parameter name="DreamexplorerIcon" value="10,5,40,40"/>
+        <parameter name="EpgListIcon" value="2,12,25,25,2"/>
+        <parameter name="EpgListMulti" value="360,170,170,10"/>
+        <parameter name="EpgListMultiProgressBar" value="170,15,1"/>
+        <parameter name="EpgListSingle" value="80,220"/>
+        <parameter name="ExpandableListIcon" value="5,2,55,38"/>
+        <parameter name="ExpandableListDescr" value="55,2,1000,45"/>
+        <parameter name="FileListName" value="60,5,1700,40"/>
+        <parameter name="FileListIcon" value="7,5,52,50"/>
+        <parameter name="FileListMultiName" value="125,4,1700,50"/>
+        <parameter name="FileListMultiIcon" value="60, 5, 40, 40"/>
+        <parameter name="FileListMultiLock" value="7,5,40,40"/>
+        <parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
+        <parameter name="HelpMenuListExtHlp0" value="5,5,1200,40"/>
+        <parameter name="HelpMenuListExtHlp1" value="5,35,1200,40"/>
+        <parameter name="HelpMenuListHlp" value="5,5,1200,30"/>
+        <parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
+        <parameter name="ImsSelectionListLock" value="5,2,36,36"/>
+        <parameter name="PiconManagerList" value="10,0,1120,40"/>
+        <parameter name="PiconManagerListFont" value="Regular;28"/>
+        <parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
+        <parameter name="PlayListName" value="45,1,1600,40"/>
+        <parameter name="PlayListIcon" value="3,8,33,30"/>
+        <parameter name="PluginBrowserIcon" value="10,10,150,60"/>
+        <parameter name="PluginBrowserName" value="180,6,40"/>
+        <parameter name="PluginBrowserDescr" value="180,44,36"/>
+        <parameter name="PluginBrowserDownloadName" value="120,6,40"/>
+        <parameter name="PluginBrowserDownloadDescr" value="120,44,36"/>
+        <parameter name="PluginBrowserDownloadIcon" value="10,0,90,76"/>
+        <parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40"/>
+        <parameter name="ProgrammlistenUpdaterListFont" value="Regular;26"/>
+        <parameter name="SelectionListDescr" value="50,2,900,40"/>
+        <parameter name="SelectionListLock" value="5,5,40,40"/>
+        <parameter name="SelectionListLockOff" value="5,5,40,40"/>
+        <parameter name="ServiceInfo" value="0,0,1200,40"/>
+        <parameter name="ServiceInfoLeft" value="0,0,680,40"/>
+        <parameter name="ServiceInfoRight" value="700,0,550,40"/>
+        <parameter name="ServiceInfoFont" value="Regular;26"/>
+        <parameter name="VirtualKeyBoard" value="69,68"/>
+        <parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+        <parameter name="VirtualKeyBoardPadding" value="4,4"/>
+        <parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
+    </parameters>
+    <switchpixmap>
+        <pixmap name="menu_on" filename="skin_default/icons/menu_on.png"/>
+        <pixmap name="menu_off" filename="skin_default/icons/menu_off.png"/>
+    </switchpixmap>
+    <!-- Window -->
+    <windowstyle id="0" type="skinned">
+        <configList entryFont="Regular;30" valueFont="Regular;28"/>
+        <title offset="30,25" font="Regular;32"/>
+        <color name="Background" color="background"/>
+        <color name="LabelForeground" color="foreground"/>
+        <color name="ListboxBackground" color="background"/>
+        <color name="ListboxForeground" color="foreground"/>
+        <color name="ListboxSelectedBackground" color="#124582"/>
+        <color name="ListboxSelectedForeground" color="#ffffff"/>
+        <color name="ListboxMarkedBackground" color="un40a0aa0"/>
+        <color name="ListboxMarkedForeground" color="red"/>
+        <color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a"/>
+        <color name="ListboxMarkedAndSelectedForeground" color="red"/>
+        <color name="WindowTitleForeground" color="foreground"/>
+        <color name="WindowTitleBackground" color="background"/>
+        <borderset name="bsWindow">
+            <pixmap filename="oZeta-FHD/window/top_left_corner.png" pos="bpTopLeft"/>
+            <pixmap filename="oZeta-FHD/window/top_edge.png" pos="bpTop"/>
+            <pixmap filename="oZeta-FHD/window/top_right_corner.png" pos="bpTopRight"/>
+            <pixmap filename="oZeta-FHD/window/left_edge.png" pos="bpLeft"/>
+            <pixmap filename="oZeta-FHD/window/right_edge.png" pos="bpRight"/>
+            <pixmap filename="oZeta-FHD/window/bottom_left_corner.png" pos="bpBottomLeft"/>
+            <pixmap filename="oZeta-FHD/window/bottom_edge.png" pos="bpBottom"/>
+            <pixmap filename="oZeta-FHD/window/bottom_right_corner.png" pos="bpBottomRight"/>
+        </borderset>
+        <borderset name="bsListboxEntry">
+            <!-- pixmap filename="oZeta-FHD/skin_default/line1.png" pos="bpTop" /-->
+            <!-- pixmap filename="oZeta-FHD/skin_default/line2.png" pos="bpBottom" /-->
+            <!-- pixmap filename="oZeta-FHD/skin_default/vline.png" pos="bpLeft" /-->
+            <!-- pixmap filename="oZeta-FHD/skin_default/vline.png" pos="bpRight" /-->
+        </borderset>
+        <!-- <slider borderWidth="0" /> -->
+        <scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1"/>
+        <listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1"/>
+    </windowstyle>
     <!-- add lululla -->
-	<windowstyle id="1" type="skinned">
-		<color name="Background" color="background"/>
-		<color name="LabelForeground" color="foreground"/>
-		<color name="ListboxBackground" color="background"/>
-		<color name="ListboxForeground" color="foreground"/>
-		<color name="ListboxSelectedBackground" color="#124582"/>
-		<color name="ListboxSelectedForeground" color="#ffffff"/>
-		<color name="ListboxMarkedBackground" color="un40a0aa0"/>
-		<color name="ListboxMarkedForeground" color="red"/>
-		<color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a"/>
-		<color name="ListboxMarkedAndSelectedForeground" color="red"/>
-		<color name="WindowTitleForeground" color="foreground"/>
-		<color name="WindowTitleBackground" color="background"/>
-		<color name="ScrollbarForeground" color="foreground" />
-		<color name="ScrollbarBorder" color="foreground" />
-	</windowstyle>
+    <windowstyle id="1" type="skinned">
+        <color name="Background" color="background"/>
+        <color name="LabelForeground" color="foreground"/>
+        <color name="ListboxBackground" color="background"/>
+        <color name="ListboxForeground" color="foreground"/>
+        <color name="ListboxSelectedBackground" color="#124582"/>
+        <color name="ListboxSelectedForeground" color="#ffffff"/>
+        <color name="ListboxMarkedBackground" color="un40a0aa0"/>
+        <color name="ListboxMarkedForeground" color="red"/>
+        <color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a"/>
+        <color name="ListboxMarkedAndSelectedForeground" color="red"/>
+        <color name="WindowTitleForeground" color="foreground"/>
+        <color name="WindowTitleBackground" color="background"/>
+        <color name="ScrollbarForeground" color="foreground"/>
+        <color name="ScrollbarBorder" color="foreground"/>
+    </windowstyle>
     <!-- end add lululla -->
-
-
-	<switchpixmap>
-		<pixmap name="menu_on" filename="oZeta-FHD/icons/menu_on.png"/>
-		<pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
-	</switchpixmap>
-
-	<!-- Include Files -->
-	<include filename="zSkin/skin_templatepanels.xml"/>	   
-	<include filename="zSkin/skin_layercolors.xml"/>
-	<include filename="zSkin/skin_plugins.xml"/>
-	<include filename="zSkin/skin_logo.xml"/>	
-	<include filename="zSkin/skin_infochannel.xml"/>
-
-	<include filename="zSkin/zskin.xml"/>                                      
-
-	<!-- add lululla -->
-	<include filename="zSkin/skin_team.xml"/>
-	<include filename="zSkin/skin_templatepanelslulu.xml"/>    
-    
+    <switchpixmap>
+        <pixmap name="menu_on" filename="oZeta-FHD/icons/menu_on.png"/>
+        <pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
+    </switchpixmap>
+    <!-- Include Files -->
+    <include filename="zSkin/skin_templatepanels.xml"/>
+    <include filename="zSkin/skin_layercolors.xml"/>
+    <include filename="zSkin/skin_plugins.xml"/>
+    <include filename="zSkin/skin_logo.xml"/>
+    <include filename="zSkin/skin_infochannel.xml"/>
+    <include filename="zSkin/zskin.xml"/>
+    <!-- add lululla -->
+    <include filename="zSkin/skin_team.xml"/>
+    <include filename="zSkin/skin_templatepanelslulu.xml"/>
 </skin>

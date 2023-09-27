@@ -84,7 +84,7 @@ except:
 
 Uri.imagevers()
 #  config section - ===========
-version = '2.3'
+version = '2.6'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'
@@ -365,7 +365,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.session.open(zEditor, user_log)
 
     def _space(self):
-        self.list.append(getConfigListEntry("", config.ozeta.fake, False))
+        self.list.append(getConfigListEntry(" ", config.ozeta.fake, False))
 
     def createSetup(self):
         self.editListEntry = None
@@ -374,16 +374,17 @@ class oZsetup(ConfigListScreen, Screen):
         tab = " " * 9
         sep = "-"
         try:
-            self.list.append(getConfigListEntry(_("GENERAL"), config.ozeta.fake, _("GENERAL SECTION") ))
+            # self.list.append(getConfigListEntry(_("GENERAL"), config.ozeta.fake, _("GENERAL SECTION") ))
 
-            self.list.append(getConfigListEntry("Install or Update oZeta:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
+            self.list.append(getConfigListEntry("Install or Update oZeta Skin:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
                 self.list.append(getConfigListEntry("Install/Update/Restore oZeta Skin", config.ozeta.upfind, _("Install/Update/Restore Stable Version oZeta Skin\nPress OK")))
             if str(cur_skin) == 'oZeta-FHD':
                 self.list.append(getConfigListEntry("Install Options Developer", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
                 # self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
                 # self._space()
-                self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),config.ozeta.fake, _("SKIN SETUP SECTION")))
+                self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),))
+                # self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),config.ozeta.fake, _("SKIN SETUP SECTION")))
                 # section = ("SKIN PARTS SETUP")
                 # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
                 if ozetamenupredefinedlist:
@@ -411,7 +412,7 @@ class oZsetup(ConfigListScreen, Screen):
                 # # section = ("SKIN API SETUP       ")
                 # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("API SETUP SECTION")))
                 # self._space()
-                # self.list.append(getConfigListEntry(("API KEY SETUP"),))
+                self.list.append(getConfigListEntry(("SERVER API KEY SETUP"),))
                 self.list.append(getConfigListEntry("API KEY SETUP:", config.ozeta.actapi, _("Settings oZeta Apikey Server")))
                 if config.ozeta.actapi.value is True:
                     self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
@@ -429,7 +430,7 @@ class oZsetup(ConfigListScreen, Screen):
             # # section = ("SKIN WEATHER SETUP       ")
             # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("WEATHER SETUP SECTION")))
             # self._space()
-            # self.list.append(getConfigListEntry(("WEATHER SETUP"),))
+            self.list.append(getConfigListEntry(("WEATHER BOX SETUP"),))
             self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
             if config.ozeta.zweather.value is True:
                 # if os.path.isdir(OAWeather):
@@ -447,7 +448,7 @@ class oZsetup(ConfigListScreen, Screen):
             # # section = ("MISC SETUP            ")
             # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             # self._space()
-            # self.list.append(getConfigListEntry(("MISC SETUP"),))
+            self.list.append(getConfigListEntry(("MISC SETUP"),))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
@@ -686,11 +687,11 @@ class oZsetup(ConfigListScreen, Screen):
             if 'thetvdb api:' in xxxx.lower():
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'thetvdb'))
                 return PicturePath
-            if 'visualweather api:' in xxxx.lower():
+            if 'visualweather plugin api:' in xxxx.lower():
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'visualweather'))
                 return PicturePath
 
-            c = ['setup', 'autoupdate', ' weather', 'OAWeather']
+            c = ['setup', 'autoupdate', ' weather', 'oaweather']
             if xxxx.lower() in c:
                 PicturePath = '%sbasefile/default.jpg' % thisdir
                 return PicturePath
@@ -721,6 +722,8 @@ class oZsetup(ConfigListScreen, Screen):
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'API-Apikey4'))
             if sel and sel == config.ozeta.txtapi4:
                 PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'API-Manualkey'))
+            if sel and sel == config.ozeta.XStreamity:
+                PicturePath = ('%sbasefile/%s.jpg' % (thisdir, 'xstreamity'))
             returnValue = sel2.replace(" ", "-")
             if fileExists('%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)):
                 PicturePath = '%senigma2/%s/zSetup/zPreview/%s.jpg' % (mvi, cur_skin, returnValue)
@@ -916,12 +919,13 @@ class oZsetup(ConfigListScreen, Screen):
                     # print("********** Removed %s" % self.skinFile)
                 os.rename(self.skinFileTmp, self.skinFile)
                 # print("********** Renamed %s" % self.skinFileTmp)
-                try:
-                    for x in self["config"].list:
-                        x[1].save()
-                    configfile.save()
-                except:
-                    pass
+                self.saveAll()
+                # try:
+                    # for x in self["config"].list:
+                        # x[1].save()
+                    # configfile.save()
+                # except:
+                    # pass
                 # self.applySkin()
                 self.session.open(MessageBox, _('Successfully creating Skin!'), MessageBox.TYPE_INFO, timeout=5)
             except:
@@ -1078,7 +1082,7 @@ class oZsetup(ConfigListScreen, Screen):
 # update zskin
     def zUpdate(self, answer=None):
         if answer is None:
-            if os.path.exists(mvi + 'enigma2/' + 'oZeta-FHD'):
+            if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
                 self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
             else:
                 self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
@@ -1128,7 +1132,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
         except Exception as e:
             print('error download: ', e)
-            return          
+            return
 
         print('update tarfile')
         self.upd_zeta()

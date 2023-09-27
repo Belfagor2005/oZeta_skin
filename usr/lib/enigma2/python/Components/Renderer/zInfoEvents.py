@@ -25,28 +25,20 @@ PY3 = sys.version_info.major >= 3
 
 global my_cur_skin, path_folder
 
+
 try:
     from urllib.parse import quote
     from urllib.request import urlopen
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     PY3 = True
-    unicode = str
-    unichr = chr
-    long = int
-    xrange = range
 except:
     from urllib import quote
     from urllib2 import urlopen
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
-    _str = str
-    str = unicode
-    range = xrange
-    unicode = unicode
-    basestring = basestring
 
-apikey = "3c3efcf47c3577558812bb9d64019d65"
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
 epgcache = eEPGCache.getInstance()
@@ -93,7 +85,7 @@ try:
         thetvdb_skin = "/usr/share/enigma2/%s/thetvdbkey" % (cur_skin)
         if os.path.exists(myz_skin):
             with open(myz_skin, "r") as f:
-                apikey = f.read()
+                tmdb_api = f.read()
         if os.path.exists(omdb_skin):
             with open(omdb_skin, "r") as f:
                 omdb_api = f.read()
@@ -114,7 +106,7 @@ REGEX = re.compile(
         r'/.*|'
         r'\|\s[0-9]+\+|'
         r'[0-9]+\+|'
-        r'\s\d{4}\Z|'
+        r'\s\*\d{4}\Z|'
         r'([\(\[\|].*?[\)\]\|])|'
         r'(\"|\"\.|\"\,|\.)\s.+|'
         r'\"|:|'
@@ -141,7 +133,6 @@ def intCheck():
         return False
     else:
         return True
-adsl = intCheck()
 
 
 class zInfoEvents(Renderer, VariableText):
@@ -149,6 +140,7 @@ class zInfoEvents(Renderer, VariableText):
     def __init__(self):
         Renderer.__init__(self)
         VariableText.__init__(self)
+        adsl = intCheck()
         if not adsl:
             return
         self.text = ""
@@ -156,10 +148,13 @@ class zInfoEvents(Renderer, VariableText):
     GUI_WIDGET = eLabel
 
     def changed(self, what):
+            
         if what[0] == self.CHANGED_CLEAR:
-            return
+            return self.text
         if what[0] != self.CHANGED_CLEAR:
             self.showInfos()
+               
+                
 
     def showInfos(self):
         self.event = self.source.event
@@ -230,17 +225,18 @@ class zInfoEvents(Renderer, VariableText):
                             if os.path.exists("/tmp/rating"):
                                 os.remove("/tmp/rating")
                                 print('/tmp/rating removed')
+                                self.text = ''
                             return self.text
                 except Exception as e:
                     print(e)
             else:
-                return self.text
+                return ''
 
     def downloadInfos(self, infos_file):
         self.year = self.filterSearch()
         try:
             try:
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, apikey, quote(self.evntNm))
+                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
                 if self.year is not None:
                     url_tmdb += "&year={}".format(self.year)
                 if PY3:
@@ -254,7 +250,7 @@ class zInfoEvents(Renderer, VariableText):
             except:
                 pass
             try:
-                url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quote(title))
+                url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quote(title))
                 data_omdb = json.load(urlopen(url_omdb))
                 dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 open(dwn_infos, "w").write(json.dumps(data_omdb))

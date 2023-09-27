@@ -31,11 +31,11 @@ class zVolumeText(Renderer, VariableText):
         self.scaleX = 0
         self.scaleY = 0
         self.vol_timer = eTimer()
-        self.vol_timer.callback.append(self.pollme)
-        # try:
-            # self.vol_timer.callback.append(self.pollme)
-        # except:
-            # self.vol_timer_conn = self.vol_timer.timeout.connect(self.pollme)
+        # self.vol_timer.callback.append(self.pollme)
+        try:
+            self.vol_timer.callback.append(self.pollme)
+        except:
+            self.vol_timer_conn = self.vol_timer.timeout.connect(self.pollme)
 
     GUI_WIDGET = eLabel
 

@@ -1,0 +1,10 @@
+	<!-- *** oZeta - XML Version 2.27 Second Infobar Star by zSetup v2.0.0 ***  -->
+	<!-- Author mmark : Modules : TempInfoBar2 + TempSecondInfobar + zParental + Rating + PartInfobarDataChannel + PartInfoCrypt + PartInfoIP-->
+	<screen name="SecondInfoBar" title="Second Infobar" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+		<panel name="PartInfobarDataChannel"/>
+		<panel name="TempInfoBar"/>
+		<panel name="TempSecondInfobar" />
+		<panel name="PartInfoIP"/>
+		<panel name="PartInfoCrypt"/>
+	</screen>
+

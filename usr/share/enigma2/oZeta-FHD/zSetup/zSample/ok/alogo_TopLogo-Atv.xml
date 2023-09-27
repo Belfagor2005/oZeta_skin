@@ -1,0 +1,6 @@
+	<!-- *** oZeta - XML Version 2.27 Top Logo Team By zSetup v2.0.0 *** -->  
+	<!-- Author mmark : Modules : TopLogo Atv -->
+	<screen name="Logo" >
+		<ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10" />
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Atv-Logo.png" alphatest="blend" transparent="1" zPosition="20" />
+	</screen>

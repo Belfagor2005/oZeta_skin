@@ -9,14 +9,20 @@ import sys
 import threading
 import json
 from Components.config import config
-global cur_skin, my_cur_skin
+global my_cur_skin
 
 PY3 = (sys.version_info[0] == 3)
-
 try:
-    from urllib.parse import quote
+    if PY3:
+        from urllib.parse import quote
+        import html
+        html_parser = html
+    else:
+        from urllib2 import quote
+        from HTMLParser import HTMLParser
+        html_parser = HTMLParser()
 except:
-    from urllib2 import quote
+    pass
 
 try:
     from urllib.error import URLError, HTTPError
@@ -27,10 +33,10 @@ except:
 
 
 try:
-    language = config.osd.language.value
-    language = language[:-3]
+    lng = config.osd.language.value
+    lng = lng[:-3]
 except:
-    language = 'en'
+    lng = 'en'
     pass
 
 isz = "original"
@@ -52,7 +58,8 @@ isz = "w780"
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 # thetvdbkey = 'D19315B88B2DE21F'
-thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
+# thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
+thetvdbkey = "acbe31f8-f39a-4910-9b45-2c1d01c38478"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -144,8 +151,8 @@ class zBackdropXDownloadThread(threading.Thread):
             if year:
                 # url_tmdb += "&year={}".format(year)
                 url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&primary_release_year={}&include_adult=true&query={}".format(srch, tmdb_api, str(year), quote(title))
-            if language:
-                url_tmdb += "&language={}".format(language)
+            if lng:
+                url_tmdb += "&language={}".format(lng)
             backdrop = requests.get(url_tmdb).json()['results'][0]['backdrop_path']  # backdrop = json.load(urlopen(url_tmdb))['results'][0]['backdrop_path']
             if backdrop != 'null':
                 url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz), backdrop)

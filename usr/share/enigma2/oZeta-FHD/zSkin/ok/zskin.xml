@@ -248,6 +248,49 @@
         <widget name="list" position="230,140" size="1250,800" font="Regular;30" itemHeight="80" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" scrollbarSliderForegroundColor="#606060" scrollbarSliderBackgroundColor="#303030" backgroundColor="#000000" backgroundColorSelected="bluette" foregroundColorSelected="#ffffff"/>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
+    <screen name="PluginBrowserList" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1500"/>
+        <panel name="vButtonTemplate-1500"/>
+        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+        <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
+        <widget source="pluginList" render="Listbox" position="230,140" size="1240,725" itemHeight="80" scrollbarMode="showOnDemand" backgroundColor="background90" transparent="1" listOrientation="vertical">
+            <convert type="TemplatedMultiContent">
+                        {
+                        "template": [
+                        MultiContentEntryText(pos = (160, 8), size = (840, 38), font=0, flags = RT_HALIGN_LEFT, text = 1),
+                        MultiContentEntryText(pos = (180, 39), size = (840, 26), font=1, flags = RT_HALIGN_LEFT, text = 2),
+                        MultiContentEntryPixmapAlphaBlend(pos=(15, 20), size=(100, 40), png=3, flags=BT_SCALE)
+                                ],
+                        "fonts": [gFont("Regular", 27),gFont("Regular", 21)],
+                        "itemHeight" : 80
+                        }
+            </convert>
+        </widget>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+    </screen>
+    <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1500"/>
+        <panel name="vButtonTemplate-1500"/>
+        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+        <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
+        <widget source="pluginGrid" render="Listbox" position="230,140" size="1240,725" itemSpacing="15,15" selectionZoom="15" scrollbarMode="showAlways" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+            <convert type="TemplatedMultiContent">
+                        {
+                        "template": [
+                        MultiContentEntryText(pos = (0, 0), size = (222, 156), font=0, backcolor = 0x505050),
+                        MultiContentEntryText(pos = (0, 75), size = (222, 75), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+                        MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
+                        ],
+                        "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                        "itemWidth" : 222,
+                        "itemHeight" : 156
+                        }
+            </convert>
+        </widget>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+    </screen>
     <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500-nl"/>
         <panel name="bLogo"/>
@@ -1618,25 +1661,21 @@
         <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
         <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
         <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-
         <!-- PICON Pli/ATV -->
-        
         <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
-       
-
-       <!-- edit lululla -->
+        <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
+            <convert type="ServiceName">Reference</convert>
+        </widget>
+        <!-- edit lululla -->
         <!--         
         <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
             <convert type="ServiceName">Reference</convert>
         </widget>
-
-
         <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
         <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" alphatest="on" scale="1" zPosition="2"/>
         <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
         -->
         <!-- end edit lululla -->
-
         <!-- Event Now -->
         <widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
             <convert type="EventName">Name</convert>
@@ -1650,7 +1689,6 @@
         <widget source="session.Event_Now" render="Progress" position="660,260" size="820,7" foregroundColor="bluette" backgroundColor="#303030" zPosition="5">
             <convert type="EventTime">Progress</convert>
         </widget>
-        
         <!-- Event Next-->
         <eLabel text="Next Event :" position="660,290" size="250,50" font="Regular;32" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2"/>
         <widget source="session.Event_Next" render="Label" position="900,290" size="250,50" font="Regular;32" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
@@ -1672,40 +1710,24 @@
         <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_red.png" size="80,40" alphatest="blend" zPosition="2" />
         <widget name="key_red" font="Regular;30" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
         <widget source="key_red" render="Label" font="Regular;30" position="660,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" scrollbarSliderForegroundColor="#404040" scrollbarSliderBorderColor="#606060"/>
         -->
-        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" />
-        
-        
+        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5"/>
         <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
         <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
         <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
         <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
-        
-        <!-- edit lululla -->
-        <!--
-        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" scrollbarSliderForegroundColor="#404040" scrollbarSliderBorderColor="#606060"/>
-        -->
         <!-- end edit lululla -->
-        <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
-            <convert type="ServiceName">Reference</convert>
-        </widget>        
-
         <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
         <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
         <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
-   
-   </screen>
-
-
-
-
+    </screen>
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,150" size="810,800" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showNever" itemHeight="40" enableWrapAround="1" transparent="1"/>
     </screen>
-    
     <!-- EPG Stuff -->
     <screen name="EPGSelection" title="EGP Selection" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <eLabel position="0,0" size="1920,1080" backgroundColor="#20000000" zPosition="-1"/>
@@ -1973,9 +1995,8 @@
         <widget name="menu" position="230,220" size="810,600" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
     <!-- JobView -->
-    
     <!--
-     <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
+    <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
         <widget source="job_name" render="Label" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
@@ -1987,8 +2008,8 @@
         </widget>
         <widget source="job_status" render="Label" position="230,360" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <widget name="config" position="230,430" size="1250,36" itemHeight="50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
-    </screen> -->
-    
+    </screen>
+    -->
     <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
@@ -2002,7 +2023,6 @@
         <widget source="job_status" render="Label" position="230,360" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <widget name="config" position="230,430" size="1250,36" itemHeight="50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
     </screen>
-    
     <!-- Standby -->
     <screen name="Standby" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Standby" flags="wfNoBorder">
         <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1"/>
@@ -2234,19 +2254,19 @@
         <panel name="ButtonTemplate"/>
         <widget name="videofps" position="230,150" size="810,50" font="Regular;30" valign="center" halign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+        <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
     <!-- QuickSubtitlesClearRests -->
     <screen name="QuickSubtitlesClearRests" title="Subtitle settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="ButtonTemplate"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+        <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
     <!-- OSD3D Setup -->
     <screen name="OSD3DSetupScreen" title="Select Location" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="ButtonTemplate"/>
-        <widget name="config" position="230,220" size="1250,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+        <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
     <!-- Subservices Quickzap ??? -->
     <screen name="SubservicesQuickzap" position="center,center" size="900,300" title="Subservices" backgroundColor="#20202020" flags="wfNoBorder">
@@ -2404,13 +2424,13 @@
         <eLabel position="0,120" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
         <widget name="text" position="50,140" size="1500,300" font="Regular;32" halign="left" zPosition="10" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
         <eLabel position="0,450" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
-        <widget name="config" position="50,470" size="1365,500" zPosition="1" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1"/>
+        <widget name="config" position="50,470" size="1365,430" zPosition="1" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1"/>
         <widget source="list" render="Listbox" position="50,470" size="1365,440" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1">
             <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,40),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
-					"fonts": [gFont("Regular",34)],
-					"itemHeight": 40 }
-			</convert>
+                {"template": [ MultiContentEntryText(pos = (0,0),size = (1035,40),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+                    "fonts": [gFont("Regular",34)],
+                    "itemHeight": 40 }
+            </convert>
         </widget>
         <ePixmap pixmap="oZeta-FHD/buttons/80/key_red.png" position="1475,980" size="80,40" alphatest="blend" transparent="1" zPosition="5"/>
         <widget name="languagetext" position="1160,980" size="300,40" font="Regular;34" halign="richt" foregroundColor="yellow" backgroundColor="#000000" transparent="5"/>

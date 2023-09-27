@@ -53,7 +53,7 @@ elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
         path_folder = "/media/mmc/poster"
 else:
-    folder_poster = "/tmp/poster"
+    path_folder = "/tmp/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
@@ -70,11 +70,10 @@ REGEX = re.compile(
         r'/.*|'
         r'\|\s[0-9]+\+|'
         r'[0-9]+\+|'
-        r'\s\d{4}\Z|'
+        r'\s\*\d{4}\Z|'
         r'([\(\[\|].*?[\)\]\|])|'
         r'(\"|\"\.|\"\,|\.)\s.+|'
         r'\"|:|'
-
         r'Премьера\.\s|'
         r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
         r'(х|Х|м|М|т|Т|д|Д)/с\s|'
@@ -130,6 +129,9 @@ class zStarX(VariableValue, Renderer):
         range = 0
         value = 0
         try:
+            event = ""
+            evntNm = ""
+            evnt = ""
             event = self.source.event
             if event:
                 evnt = event.getEventName().encode('utf-8')

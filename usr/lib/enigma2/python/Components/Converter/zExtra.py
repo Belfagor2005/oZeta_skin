@@ -26,7 +26,8 @@ from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
-import os, re
+import os
+import re
 # import socket
 
 
@@ -74,7 +75,7 @@ class zExtra(Poll, Converter):
         if 'HDDTemp' in type:
             self.poll_interval = 500
         else:
-            self.poll_interval = 7000
+            self.poll_interval = 60000
         self.poll_enabled = True
 
     def dataAvail(self, strData):
@@ -157,7 +158,7 @@ class zExtra(Poll, Converter):
                 file = os.popen('wget -qO - ifconfig.me')
                 public = file.read()
                 publicIp = "Wan %s" % (str(public))
-                return "%s" % str(publicIp)
+                return "%s" % publicIp
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")

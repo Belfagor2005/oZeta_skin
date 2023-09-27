@@ -185,22 +185,22 @@
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<!-- TUNER TYPE -->
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-s.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="10" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-s.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="1" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-c.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="10" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-c.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="1" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-t.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="10" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-t.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="1" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-c.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="10" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="oZeta-FHD/icons/scan-c.png" position="200,936" size="70,70" alphatest="blend" zPosition="3" scale="1" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">3,3</convert>
 			<convert type="ConditionalShowHide"/>
