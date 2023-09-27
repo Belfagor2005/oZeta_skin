@@ -1,9 +1,0 @@
-	<!-- *** oZeta - XML Version 2.27 Radio Blue By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : TempChannelSelectionRadio + PartChannelSelectionRadioInfo + PartRadioInfoBar -->
-	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" zPosition="-10" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="TempChannelSelectionRadio"/>
-		<panel name="PartChannelSelectionRadioInfo"/>
-	</screen>
-	<screen name="RadioInfoBar" position="1020,890" size="850,150" title="Radio" zPosition="1" flags="wfNoBorder" >
-		<panel name="PartRadioInfoBar"/>
-	</screen>

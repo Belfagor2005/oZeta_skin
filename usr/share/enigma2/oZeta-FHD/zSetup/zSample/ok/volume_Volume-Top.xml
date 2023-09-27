@@ -1,6 +1,0 @@
-	<!-- *** oZeta - XML Version 2.27 Volume Panel By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Volume Top Center -->
-	<screen name="Volume" position="center,30" size="1100,80" zPosition="10" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
-		<ePixmap position="0,0" size="1100,80" pixmap="oZeta-FHD/menu/volume.png" zPosition="10"/>
-		<widget name="Volume" position="155,39" size="860,7" backgroundColor="#303030" transparent="1" foregroundColor="ltbluette" zPosition="20"/>
-	</screen>

@@ -1,8 +1,0 @@
-	<!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Volume Text Default -->
-	<screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
-		<ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" blend="blend" zPosition="2" transparent="1" />
-		<widget source="global.CurrentTime" render="zVolumeText" position="120,0" size="120,110" font="LCD;90" halign="center" valign="center" foregroundColor="#ffffff" 
-			backgroundColor="bluette" transparent="1" zPosition="4"/>
-	</screen>
-	
