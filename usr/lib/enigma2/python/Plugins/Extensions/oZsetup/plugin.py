@@ -1386,17 +1386,18 @@ class oZsetup(ConfigListScreen, Screen):
             self.session.open(TryQuitMainloop, 3)
         return
 
-    def zExit(self, answer=None):
-        if answer is None:
-            if self["config"].isChanged():
-                self.session.openWithCallback(self.zExit, MessageBox, _("Really close without saving settings?"))
-            else:
-                self.close(False)
-        elif answer:
-            for x in self["config"].list:
-                x[1].cancel()
-            self.close(True)
-        return
+    def zExit(self):
+        if self["config"].isChanged():
+            self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"))
+        else:
+            self.close()
+
+    def cancelConfirm(self, result):
+        if not result:
+            return
+        for x in self["config"].list:
+            x[1].cancel()
+        self.close()
 
 
 class ozHelp(Screen):
