@@ -1,11 +1,11 @@
 #!/bin/sh
+
 pyv="$(python -V 2>&1)"
 echo "$pyv"
 echo "Checking Dependencies"
 echo ""
 echo "updating feeds"
 if [ -d /etc/opkg ]; then
-
     opkg update
     echo ""
 
@@ -29,6 +29,5 @@ if [ -d /etc/opkg ]; then
         fi
         echo ""
     fi
-
 fi
 exit 0

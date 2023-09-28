@@ -27,10 +27,10 @@
 
 	<!-- TEMPLATE Infobar -->
 	<screen name="TempInfoBar">
-    
 		<ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/>
-        <!--  <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" /> -->
-        
+        <!--
+        <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" />
+        -->
 		<!-- SMALL PICON -->
 		<widget source="session.CurrentService" render="Picon" position="320,790" size="110,70" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
@@ -38,7 +38,7 @@
 		<!-- BIG NAME -->
 		<widget source="session.CurrentService" render="Label" position="450,780" size="1200,90" font="Regular;60" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" valign="center" halign="left">
 			<convert type="ServiceName">Name</convert>
-		</widget>		
+		</widget>
 		<!-- POSTER -->
 		<eLabel position="0,665" size="290,415" backgroundColor="#40000000" />
 		<!-- BIG PICON -->
@@ -80,13 +80,12 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<!-- DEVICE CRYPT -->
-		<widget source="session.CurrentService" render="Label" position="505,805" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1" 
+		<widget source="session.CurrentService" render="Label" position="505,805" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1"
 			borderColor="#202020" transparent="1" zPosition="10" valign="center" halign="right">
 			<convert type="eCryptoInfo">VerboseInfo</convert>
 		</widget>
-        
-		<!-- CLOCK 
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1703,970" size="210,40" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10" 
+		<!-- CLOCK
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1703,970" size="210,40" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10"
 			foregroundColor="#707070" font="Regular;32" valign="center" halign="right">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
@@ -113,12 +112,12 @@
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		
+
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4k.png" position="1656,1035" size="60,35" zPosition="6" alphatest="blend">
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		
+
 		<!-- WIDE -->
 		<ePixmap pixmap="icons/ico_format_off.png" position="1723,1035" size="60,35" alphatest="blend" zPosition="1"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_16_9.png" position="1723,1035" size="60,35" alphatest="blend" zPosition="2">
@@ -138,7 +137,7 @@
 		<ePixmap position="1480,1035" size="60,30" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" scale="1" zPosition="2"/>
 		<ePixmap position="1400,1035" size="60,30" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" scale="1" zPosition="2"/>
 		<ePixmap position="1320,1035" size="60,30" pixmap="oZeta-FHD/buttons/80/key_epg.png"  alphatest="blend" scale="1" zPosition="2"/>
-	</screen> 
+	</screen>
 
 	<!-- ************************ -->
 	<!-- **** INFOBAR BLOCK ***** -->
@@ -162,8 +161,8 @@
 		<!-- SMALL CHANNEL -->
 		<eLabel text="Ch:" position="20,840" size="60,40" font="Regular;32" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
 		<widget source="session.CurrentService" render="zChannelNumber" position="85,830" size="250,50" font="Regular;44" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="10" />
-		
-		
+
+
 		<!-- SATELLITE -->
 		<eLabel text="Pos:" position="20,890" size="60,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
 		<widget source="session.CurrentService" render="Label" position="85,890" size="150,33" font="Regular;28" halign="left" foregroundColor="green" backgroundColor="#101010" text="DVB-S" transparent="1" zPosition="1">
@@ -207,13 +206,13 @@
 		</widget>
 		<!-- INFO ZEXTRA -->
 		<ePixmap pixmap="oZeta-FHD/icons/cpu_load.png" position="20,1042" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="50,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" 
+		<widget source="session.CurrentService" render="Label" position="50,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff"
 			text="CPUload" halign="left" noWrap="1">
 			<convert type="zExtra">CPULoad</convert>
 		</widget>
 		<!-- INFO CPU -->
 		<ePixmap pixmap="oZeta-FHD/icons/cpu_temp.png" position="190,1042" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="215,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" 
+		<widget source="session.CurrentService" render="Label" position="215,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff"
 			text="Temperature" noWrap="1" halign="left">
 			<convert type="zExtra">Temperature</convert>
 		</widget>
@@ -222,18 +221,6 @@
 	<!-- TEMPLATE Infobar Crypt -->
 	<screen name="PartInfoCrypt">
 		<eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3" />
-		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="EMU" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">Emu</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>        
-		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="NET" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">Net</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="Card" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">Crd</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>        
 		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">BetaCrypt</convert>
 			<convert type="ConditionalShowHide" />
@@ -250,32 +237,39 @@
 			<convert type="zCryptoInfo">SecaCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NDS-VideoGuard" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">NdsCrypt</convert>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NagraCrypt</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>        
-
+		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="CryptoWork" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">CrwCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NDS-VideoGuard" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">NdsCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Conax Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">ConaxCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="EMU" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Emu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="NET" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Net</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="Card" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="zCryptoInfo">Crd</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
 			<convert type="zCryptoInfo">NagraEcm</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>        
-		<widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
-			<convert type="zCryptoInfo">NagraCrypt</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>        
-        <!--         
-        <widget source="session.CurrentService" render="Label" position="1116,783" size="800,30" font="Regular; 24" halign="center" valign="center" backgroundColor="#20000000" foregroundColor="green" transparent="1" zPosition="2" noWrap="1">
-            <convert type="zCryptoInfo">Prov: %p Caid: %C %S %SP %PR %T</convert>
-        </widget>  
-        -->
+		</widget>
 	</screen>
 
 
@@ -315,20 +309,21 @@
 			<convert type="zCryptoInfo">ConaxCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-	</screen> -->
+	</screen>
+    -->
 
 
 	<!-- TEMPLATE Infobar IP Data -->
 	<screen name="PartInfoIP">
 		<!-- EXTERNAL IP -->
-		<widget source="session.CurrentService" render="Label" position="1555,870" size="350,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" 
+		<widget source="session.CurrentService" render="Label" position="1555,870" size="350,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1"
 			foregroundColor="#ffd877" text="Ipwan" halign="right" noWrap="1">
 			<convert type="zExtra">Ipwan</convert>
 		</widget>
- 		<widget source="session.CurrentService" render="Label" position="1555,905" size="350,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" 
+ 		<widget source="session.CurrentService" render="Label" position="1555,905" size="350,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1"
  			foregroundColor="#87dffd" text="Iplocal" halign="right" noWrap="1">
 			<convert type="zExtra">Iplocal</convert>
-		</widget>	
+		</widget>
 		<eLabel position="1585,937" size="320,7" backgroundColor="#404040" zPosition="5"/>
 	</screen>
 
@@ -353,7 +348,6 @@
 		<eLabel text="Ch:" position="20,840" size="60,40" font="Regular;32" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
 		<widget source="session.CurrentService" render="zChannelNumber" position="85,830" size="250,50" font="Regular;44" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" />
 		<ePixmap pixmap="oZeta-FHD/menu/ibtopsm.png" position="0,733" size="1920,347" alphatest="blend"/>
-        <!-- <eLabel position="0,733" size="1920,347" backgroundColor="#20000000" /> -->
 		<!-- SMALL PICON -->
 		<widget source="session.CurrentService" render="Picon" position="320,790" size="110,70" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
@@ -361,7 +355,7 @@
 		<!-- BIG NAME -->
 		<widget source="session.CurrentService" render="Label" position="450,780" size="1200,90" font="Regular;60" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" valign="center" halign="left">
 			<convert type="ServiceName">Name</convert>
-		</widget>		
+		</widget>
 		<!-- POSTER -->
 		<eLabel position="0,665" size="290,415" backgroundColor="#40000000" />
 		<!-- BIG PICON -->
@@ -404,7 +398,7 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<!-- CLOCK -->
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1700,805" size="210,44" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10" 
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1700,805" size="210,44" backgroundColor="#10000000" noWrap="1" transparent="1" zPosition="10"
 			foregroundColor="#808080" font="Regular;38" valign="center" halign="right">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
@@ -453,20 +447,20 @@
 		<eLabel  position="15,1025" size="260,4" backgroundColor="#404040" zPosition="1"/>
 		<!-- INFO ZEXTRA -->
 		<ePixmap pixmap="oZeta-FHD/icons/cpu_load.png" position="20,1042" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="50,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" 
+		<widget source="session.CurrentService" render="Label" position="50,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff"
 			text="CPUload" halign="left" noWrap="1">
 			<convert type="zExtra">CPULoad</convert>
 		</widget>
 		<!-- INFO CPU -->
 		<ePixmap pixmap="oZeta-FHD/icons/cpu_temp.png" position="190,1042" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="215,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" 
+		<widget source="session.CurrentService" render="Label" position="215,1040" size="200,35" font="Regular; 24" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff"
 			text="Temperature" noWrap="1" halign="left">
 			<convert type="zExtra">Temperature</convert>
 		</widget>
 		<!-- DEVICE CRYPT -->
-		<widget source="session.CurrentService" render="Label" position="390,1025" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1" 
+		<widget source="session.CurrentService" render="Label" position="390,1025" size="1400,45" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" borderWidth="1"
 			borderColor="#202020" transparent="1" zPosition="10" valign="center" halign="left">
-			<convert type="eCryptoInfo">VerboseInfo</convert>
+            <convert type="eCryptoInfo">VerboseInfo</convert>
 		</widget>
 		<!-- TUNER -->
 		<eLabel text="Tun:" position="1590,870" size="120,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3"/>
@@ -519,15 +513,15 @@
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="0,0" size="120,120" source="session.MSNWeather" transparent="1" zPosition="20" scale="1">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/oZeta-FHD/weather_icons/,png</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="155,10" size="150,60" font="Regular; 50" text="54 `C" valign="center" halign="left" foregroundColor="red" backgroundColor="#000000" noWrap="1" 
+		<widget source="session.MSNWeather" render="Label" position="155,10" size="150,60" font="Regular; 50" text="54 `C" valign="center" halign="left" foregroundColor="red" backgroundColor="#000000" noWrap="1"
 			borderWidth="1" transparent="1" zPosition="10" >
 			<convert type="MSNWeather">temperature_current</convert>
-		</widget>				
-		<widget source="session.MSNWeather" render="Label" position="300,20" size="500,50" font="Regular; 40"  halign="left" foregroundColor="yellow" backgroundColor="#000000" noWrap="1" 
+		</widget>
+		<widget source="session.MSNWeather" render="Label" position="300,20" size="500,50" font="Regular; 40"  halign="left" foregroundColor="yellow" backgroundColor="#000000" noWrap="1"
 			typeSpeed="1500" typeCaret="_" zPosition="1" transparent="1">
 			<convert type="MSNWeather">city</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="160,65" size="600,50" font="Regular; 36" halign="left" foregroundColor="#ffffff"  backgroundColor="#000000" noWrap="1" 
+		<widget source="session.MSNWeather" render="Label" position="160,65" size="600,50" font="Regular; 36" halign="left" foregroundColor="#ffffff"  backgroundColor="#000000" noWrap="1"
 			typeSpeed="1500" typeCaret="_" zPosition="1" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
@@ -585,7 +579,7 @@
 		<ePixmap pixmap="menu/stargrey.png" position="310,79" size="316,27" alphatest="blend" zPosition="10" transparent="1" />
 		<eLabel position="310,115" size="630,5" backgroundColor="#404040" zPosition="3" />
 		<!-- FULL DESCRIPTION -->
-		<widget source="session.Event_Now" render="zRunningText" position="310,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center" 
+		<widget source="session.Event_Now" render="zRunningText" position="310,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center"
 			options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -602,7 +596,7 @@
 		<ePixmap pixmap="menu/stargrey.png" position="1275,79" size="316,27" alphatest="blend" zPosition="10" transparent="1" />
 		<eLabel position="1275,115" size="630,5" backgroundColor="#404040" zPosition="3" />
 		<!-- FULL NEXT DESCRIPTION -->
-		<widget source="session.Event_Next" render="zRunningText" position="1275,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center" 
+		<widget source="session.Event_Next" render="zRunningText" position="1275,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center"
 			options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=0">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -612,7 +606,7 @@
 	<!-- * SECOND INFOBAR BLOCK * -->
 	<!-- ************************ -->
 	<!-- ________________________ -->
-	
+
 	<!-- Second Infobar Simple -->
 	<screen name="PartSecondInfoSimple">
 		<panel name="TempInfoBar"/>
@@ -644,7 +638,7 @@
 	<!-- ________________________ -->
 
 	<!-- TEMPLATE Channel Selection Long List -->
-	<screen name="TempChannelSelectionLong"> 
+	<screen name="TempChannelSelectionLong">
 		<eLabel position="0,40"   size="1920,1040" backgroundColor="#20000000" />
 		<eLabel position="0,960"  size="930,120" backgroundColor="#20000000" />
 		<eLabel position="920,0"  size="10,1080" backgroundColor="#FF000000" />
@@ -652,15 +646,15 @@
 		<ePixmap position="30,15" size="37,50" pixmap="icons/listch.png" alphatest="blend" zPosition="2"/>
 		<eLabel text="C H A N N E L S" position="90,10" size="460,60" font="Regular;40" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="1"/>
 		<!-- List Channel -->
-		<widget name="list" position="20,95" size="880,950" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="50" itemWidth="1090" 
-			serviceItemHeight="50" serviceNumberFont="Regular;32" serviceNameFont="Regular;32" serviceInfoFont="Regular;32" progressPercentWidth="70" foregroundColor="#ffffff" 
-			foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;28" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette" 
-			colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey" 
-			colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="bluette" scrollbarSliderForegroundColor="ltbluette" 
+		<widget name="list" position="20,95" size="880,950" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="50" itemWidth="1090"
+			serviceItemHeight="50" serviceNumberFont="Regular;32" serviceNameFont="Regular;32" serviceInfoFont="Regular;32" progressPercentWidth="70" foregroundColor="#ffffff"
+			foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;28" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette"
+			colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey"
+			colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="bluette" scrollbarSliderForegroundColor="ltbluette"
 			scrollbarSliderBorderColor="#808080"/>
 		<!-- List Channel openSPA -->
-		<widget name="list2" zPosition="-10" valign="bottom" position="20,95" size="880,950" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" 
-			posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" 
+		<widget name="list2" zPosition="-10" valign="bottom" position="20,95" size="880,950" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1"
+			posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23"
 			selectionPixmap="menu/sl1000.png" />
 		<!-- Poster -->
 		<eLabel position="940,50" size="265,380" backgroundColor="#30000000" zPosition="1" />
@@ -671,7 +665,7 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!-- Event Selectet -->
-		<widget source="ServiceEvent" render="zRunningText" position="1210,60" size="470,50" font="Regular;40" halign="left" valign="top" foregroundColor="yellow" backgroundColor="#000000" transparent="1" 
+		<widget source="ServiceEvent" render="zRunningText" position="1210,60" size="470,50" font="Regular;40" halign="left" valign="top" foregroundColor="yellow" backgroundColor="#000000" transparent="1"
 			nowrap="1" zPosition="1" borderWidth="1" borderColor="#000000"
 			options="movetype=swimming,direction=right,repeat=4,steptime=40,startdelay=2000,halign=block,startpoint=0,wrap=1,always=0,oneshot=0">
 			<convert type="ServiceName">Name</convert>
@@ -691,7 +685,7 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<!-- *** Selected Event *** -->
-	       <widget source="ServiceEvent" render="zRunningText" position="1210,170" size="700,40" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="3" 
+	       <widget source="ServiceEvent" render="zRunningText" position="1210,170" size="700,40" font="Regular;30" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="3"
 	       		borderWidth="1" borderColor="#000000"
 	        	options="movetype=swimming,direction=right,repeat=4,steptime=40,startdelay=2000,halign=block,startpoint=0,wrap=1,always=0,oneshot=0" >
 	            	<convert type="EventName">Name</convert>
@@ -713,7 +707,7 @@
 		<ePixmap position="1840,285" size="60,30" pixmap="buttons/80/key_menu.png" alphatest="blend" scale="1" zPosition="2"/>
 		<ePixmap position="1840,335" size="60,30" pixmap="buttons/80/key_epg.png"  alphatest="blend" scale="1" zPosition="2"/>
 		<!-- FULL DESCRIPTION -->
-		<widget source="ServiceEvent" render="zRunningText" position="950,440" size="950,235" font="Regular;26" foregroundColor="#ffffff" backgroundColor="black" halign="block" transparent="1" zPosition="5" 
+		<widget source="ServiceEvent" render="zRunningText" position="950,440" size="950,235" font="Regular;26" foregroundColor="#ffffff" backgroundColor="black" halign="block" transparent="1" zPosition="5"
 			options="movetype=running,direction=top,startpoint=0,startdelay=4000, steptime=100, wrap=1,always=0,repeat=3,oneshot=1">
 		  	<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -722,7 +716,7 @@
  		<widget source="ServiceEvent" render="zRunningText" position="950,450" size="950,295" font="Regular;28" foregroundColor="#ffffff" backgroundColor="black" halign="block" transparent="1" zPosition="5"
 			options="movetype=running,direction=top,startpoint=0,startdelay=4000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
-		</widget> 
+		</widget>
 		<eLabel position="950,760" size="960,5" backgroundColor="#404040" zPosition="1" />
 		-->
 		<widget source="global.CurrentTime" render="Label" position="580,42" size="320,30" foregroundColor="grey" backgroundColor="#000000" transparent="1" zPosition="3" font="Regular;24" valign="center" halign="right" >
@@ -740,21 +734,21 @@
 		<ePixmap position="30,15" size="37,50" pixmap="icons/listch.png" alphatest="blend" zPosition="2"/>
 		<eLabel text="C H A N N E L S" position="90,10" size="460,60" font="Regular;40" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="1"/>
 		<!-- List Channel -->
-		<widget name="list" position="20,95" size="880,845" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="45" itemWidth="1090" 
-			serviceItemHeight="45" serviceNumberFont="Regular;32" serviceNameFont="Regular;30" serviceInfoFont="Regular;30" progressPercentWidth="70" foregroundColor="#ffffff" 
-			foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;30" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette" 
-			colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey" 
-			colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="bluette" scrollbarSliderForegroundColor="ltbluette" 
+		<widget name="list" position="20,95" size="880,845" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="45" itemWidth="1090"
+			serviceItemHeight="45" serviceNumberFont="Regular;32" serviceNameFont="Regular;30" serviceInfoFont="Regular;30" progressPercentWidth="70" foregroundColor="#ffffff"
+			foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;30" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette"
+			colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey"
+			colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="bluette" scrollbarSliderForegroundColor="ltbluette"
 			scrollbarSliderBorderColor="#808080"/>
-		<widget name="list2" zPosition="-10" valign="bottom" position="1140,78" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" 
-			posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" 
+		<widget name="list2" zPosition="-10" valign="bottom" position="1140,78" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1"
+			posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23"
 			selectionPixmap="menu/sl1000.png" />
 		<!-- BIG PICON -->
 		<widget source="ServiceEvent" render="Picon" position="1690,50" size="220,132" backgroundColor="#000000" alphatest="blend" valign="top" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!-- Event Selectet -->
-		<widget source="ServiceEvent" render="Label" position="950,70" size="500,50" font="Regular;40" halign="left" valign="top" foregroundColor="yellow" backgroundColor="#000000" transparent="1" 
+		<widget source="ServiceEvent" render="Label" position="950,70" size="500,50" font="Regular;40" halign="left" valign="top" foregroundColor="yellow" backgroundColor="#000000" transparent="1"
 			nowrap="1" zPosition="1" borderWidth="1" borderColor="#000000">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -811,14 +805,14 @@
 	<screen name="PartChannelSelectionNext">
 		<eLabel position="925,760" size="995,40" backgroundColor="#FF000000" zPosition="3"/>
 		<eLabel text=" N E X T " position="1600,770" size="300,60" font="Regular;46" backgroundColor="barColor" halign="center" valign="center" foregroundColor="#ffffff" zPosition="3"/>
-        	<widget source="ServiceEvent" render="zEventListDisplay" position="952,850" size="1070,200" column0="0,110,yellow,Regular,30,0,0" column1="125,950,white,Regular,30,0,1" primetimeoffset="0" 
+        	<widget source="ServiceEvent" render="zEventListDisplay" position="952,850" size="1070,200" column0="0,110,yellow,Regular,30,0,0" column1="125,950,white,Regular,30,0,1" primetimeoffset="0"
         		rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
         	    	<convert type="zEventList">primetime=yed,eventcount=5</convert>
         	</widget>
         	<!--
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" lines="3" position="1080,610" zPosition="3" size="1070,250" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Reference</convert>
-		</widget> 	
+		</widget>
 		-->
 	</screen>
 
@@ -834,8 +828,8 @@
 		<widget source="ServiceEvent" render="zPosterX" nexts="3" usedImage="poster" delayPic="0" position="1460,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
 		<widget source="ServiceEvent" render="zPosterX" nexts="4" usedImage="poster" delayPic="0" position="1715,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
 	</screen>
-	
-	
+
+
 	<!-- CHANNEL POSTERS -->
 	<screen name="PartChannelSelectionPosterEvent">
 	  <!-- Poster X -->
@@ -861,12 +855,12 @@
 
         <!-- Channel Radio -->
 	<screen name="TempChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" zPosition="1" flags="wfNoBorder" backgroundColor="transparent">
-		<ePixmap position="0,0" size="1920,1080" pixmap="menu/panels/radio1.jpg" transparent="1" zPosition="-1" /> 
+		<ePixmap position="0,0" size="1920,1080" pixmap="menu/panels/radio1.jpg" transparent="1" zPosition="-1" />
 		<widget source="Title" render="Label" position="70,20" size="880,90" font="Regular;36" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
-		<widget name="list" position="70,130" size="880,920" listMarginLeft="5" listMarginRight="5" scrollbarMode="showNever" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" zPosition="10" 
-			progressbarBorderWidth="1" colorServiceRecorded="#fa2900" colorServicePseudoRecorded="#f99e01" colorServiceStreamed="#ba60fe" colorServiceDescription="#ffffff" colorServiceDescriptionSelected="#fff76b" 
-			colorEventProgressbar="ltbluette" colorEventProgressbarBorder="#ffffff" colorEventProgressbarBorderSelected="#ffffff" foregroundColorServiceNotAvail="#404040" serviceItemHeight="40" 
-			font="Regular;28" serviceNumberFont="Regular;28" serviceNameFont="Regular;28" serviceInfoFont="Regular;28" progressInfoFont="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" 
+		<widget name="list" position="70,130" size="880,920" listMarginLeft="5" listMarginRight="5" scrollbarMode="showNever" fieldMargins="5" itemsDistances="5" progressbarHeight="8" progressBarWidth="50" zPosition="10"
+			progressbarBorderWidth="1" colorServiceRecorded="#fa2900" colorServicePseudoRecorded="#f99e01" colorServiceStreamed="#ba60fe" colorServiceDescription="#ffffff" colorServiceDescriptionSelected="#fff76b"
+			colorEventProgressbar="ltbluette" colorEventProgressbarBorder="#ffffff" colorEventProgressbarBorderSelected="#ffffff" foregroundColorServiceNotAvail="#404040" serviceItemHeight="40"
+			font="Regular;28" serviceNumberFont="Regular;28" serviceNameFont="Regular;28" serviceInfoFont="Regular;28" progressInfoFont="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff"
 			backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" itemHeight="60" transparent="1" />
 		<widget source="ServiceEvent" render="Picon" position="1020,20" size="417,240" alphatest="blend" transparent="1" zPosition="1">
 			<convert type="ServiceName">Reference</convert>
@@ -906,7 +900,7 @@
 
         <!-- Player Radio -->
 	<screen name="PartRadioInfoBar" position="1020,890" size="850,150" title="Radio" zPosition="1" flags="wfNoBorder" >
-		<ePixmap position="0,0" size="850,150" pixmap="menu/radiobar.png" zPosition="-1" scale="1" /> 
+		<ePixmap position="0,0" size="850,150" pixmap="menu/radiobar.png" zPosition="-1" scale="1" />
 		<widget source="session.CurrentService" render="Picon" position="0,35" size="130,80" backgroundColor="#000000" alphatest="blend" valign="top" transparent="1" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -948,11 +942,11 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Data -->
-		<eLabel text="Time :"  position="670,120" size="80,30" font="Regular;24" foregroundColor="#505050" backgroundColor="#000000" transparent="1" zPosition="1" /> 		
+		<eLabel text="Time :"  position="670,120" size="80,30" font="Regular;24" foregroundColor="#505050" backgroundColor="#000000" transparent="1" zPosition="1" />
 		<widget source="session.CurrentService" render="Label" position="670,140" size="200,60" font="Regular;44" halign="left" valign="center" foregroundColor="#808080" backgroundColor="#000000" transparent="1" noWrap="1" zPosition="2" >
 			<convert type="ServicePosition">Length,ShowHours</convert>
 		</widget>
-		<eLabel text="Year :" position="670,220" size="80,30" font="Regular;24" foregroundColor="#505050" backgroundColor="#000000" transparent="1" zPosition="1" /> 		
+		<eLabel text="Year :" position="670,220" size="80,30" font="Regular;24" foregroundColor="#505050" backgroundColor="#000000" transparent="1" zPosition="1" />
 		<widget name="year"   position="670,240" size="150,30" font="Regular;24" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="6" />
 		<ePixmap              position="670,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
 		<widget name="repeat" position="780,480" size="80,40" zPosition="10" pixmaps="skin_default/icons/repeat_off.png,skin_default/icons/repeat_on.png" scale="0" alphatest="blend"/>
@@ -979,7 +973,7 @@
 		<widget name="artist"      position="360,1035" size="410,30" font="Regular;26" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="6" />
 		<widget name="albumtext"   position="780,1035" size="120,30" font="Regular;26" foregroundColor="white"  backgroundColor="#101010" transparent="1" zPosition="6" />
 		<widget name="album"       position="880,1035" size="600,40" font="Regular;26" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="6" />
-		<!-- 
+		<!--
 		<widget name="titletext"   position="30,620"  size="120,40" font="Regular;30" foregroundColor="white"  backgroundColor="#101010" transparent="1" zPosition="6" />
 		<widget name="yeartext"    position="30,1770" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top" zPosition="6" />
 		<widget name="genretext"   position="30,1820" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top" zPosition="6" />
@@ -987,28 +981,28 @@
 		-->
 		<widget name="coverArt" pixmap="oZeta-FHD/menu/zlogo.png" position="20,880" size="210,180" transparent="0" scale="1" zPosition="6" />
 		<!-- PlayerKeys  FW -->
-		<eLabel text="3"      position="1595,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(+10s)" position="1615,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" /> 		
-		<eLabel text="6"      position="1705,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(+1m)"  position="1725,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" /> 		
+		<eLabel text="3"      position="1595,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(+10s)" position="1615,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
+		<eLabel text="6"      position="1705,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(+1m)"  position="1725,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
 		<eLabel text="9"      position="1815,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
 		<eLabel text="(+5m)"  position="1835,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
 		<!-- PlayerKeys  RW -->
-		<eLabel text="1"      position="1595,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-10s)" position="1615,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
-		<eLabel text="4"      position="1705,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-1m)"  position="1725,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
-		<eLabel text="7"      position="1815,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-5m)"  position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
+		<eLabel text="1"      position="1595,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-10s)" position="1615,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<eLabel text="4"      position="1705,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-1m)"  position="1725,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<eLabel text="7"      position="1815,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-5m)"  position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
 		<ePixmap pixmap="oZeta-FHD/icons/mp_buttonsw.png" position="1590,953" size="422,50" scale="1" alphatest="blend" zPosition="2" />
-		<!-- Panel Video Resolution --> 
+		<!-- Panel Video Resolution -->
 		<ePixmap pixmap="oZeta-FHD/icons/res.png" position="1740,1030" size="160,30" alphatest="blend" zPosition="3" />
 		<widget source="session.CurrentService" render="Label" position="1750,1033" size="60,26" font="Regular;20" halign="right" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="4" >
 			<convert type="ServiceInfo">VideoWidth</convert>
 		</widget>
 		<eLabel text="x" position="1815,1031" size="10,26" font="Regular;20" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="3" />
 		<widget source="session.CurrentService" render="Label" position="1830,1033" size="50,26" font="Regular;20" halign="left"  foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="4" >
-			<convert type="ServiceInfo">VideoHeight</convert>	
+			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>
 	</screen>
 
@@ -1024,7 +1018,7 @@
 		<eLabel position="50,1000" size="710,3" backgroundColor="trbluette" zPosition="1" />
 		<!-- FileLists -->
 		<eLabel position="50,20"  size="700,90" text="F i l e l i s t" foregroundColor="yellow" font="Mmenu;80" valign="center" halign="center" backgroundColor="#101010" transparent="1" zPosition="5" />
-		<widget name="filelist" position="50,150" size="710,250" itemHeight="50" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2" 
+		<widget name="filelist" position="50,150" size="710,250" itemHeight="50" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2"
 			scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="barColor" scrollbarSliderBackgroundColor="barColor" scrollbarMode="showOnDemand" />
 		<eLabel position="50,420" size="710,3" backgroundColor="trbluette" zPosition="1" />
 		<widget name="coverArt" pixmap="oZeta-FHD/menu/znocover.png" position="50,440" size="300,300" transparent="1" alphatest="on" zPosition="6" />
@@ -1051,7 +1045,7 @@
 		</widget>
 		<!-- PlayList -->
 		<eLabel position="830,20" size="1050,90" text="P l a y l i s t" foregroundColor="yellow" font="Mmenu;80" valign="center" halign="center" backgroundColor="#101010" transparent="1" zPosition="5"/>
-		<widget name="playlist" position="830,150" size="1045,800" itemHeight="50" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor" 
+		<widget name="playlist" position="830,150" size="1045,800" itemHeight="50" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor"
 		scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="barColor" scrollbarMode="showOnDemand" zPosition="2"/>
 		<widget name="currenttext" position="830,990" size="1040,60" font="Regular;28" foregroundColor="yellow" backgroundColor="#101010" transparent="1" valign="center" halign="center" noWrap="1" zPosition="6" />
 		<!-- Play -->
@@ -1066,26 +1060,26 @@
 			<convert type="ServicePosition">Remaining,ShowHours</convert>
 		</widget>
 		<widget name="repeat" position="685,1015"  size="60,40" zPosition="10" pixmaps="skin_default/icons/repeat_off.png,skin_default/icons/repeat_on.png" scale="1" alphatest="blend"/>
-		<!--  
+		<!--
 		<widget name="yeartext"    position="30,1770" size="150,37" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" font="Regular;30" valign="top" zPosition="6" />
 		<widget name="genretext"   position="30,1820" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top" zPosition="6" />
 		<widget name="genre"       position="350,1820" size="517,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top" zPosition="6" />
 		-->
-		<!-- PlayerKeys  FW 
-		<eLabel text="3"      position="1595,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(+10s)" position="1615,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" /> 		
-		<eLabel text="6"      position="1705,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(+1m)"  position="1725,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" /> 		
+		<!-- PlayerKeys  FW
+		<eLabel text="3"      position="1595,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(+10s)" position="1615,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
+		<eLabel text="6"      position="1705,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(+1m)"  position="1725,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
 		<eLabel text="9"      position="1815,870" size="20,35" font="Regular;26"  foregroundColor="green"   backgroundColor="#10000000" transparent="1" zPosition="6" />
 		<eLabel text="(+5m)"  position="1835,870" size="80,35" font="Regular;26" foregroundColor="#ffff00" backgroundColor="#10000000" transparent="1" zPosition="5" />
 		-->
-		<!-- PlayerKeys  RW 
-		<eLabel text="1"      position="1595,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-10s)" position="1615,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
-		<eLabel text="4"      position="1705,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-1m)"  position="1725,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
-		<eLabel text="7"      position="1815,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" /> 		
-		<eLabel text="(-5m)"  position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" /> 		
+		<!-- PlayerKeys  RW
+		<eLabel text="1"      position="1595,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-10s)" position="1615,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<eLabel text="4"      position="1705,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-1m)"  position="1725,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
+		<eLabel text="7"      position="1815,907" size="20,35" font="Regular;26" foregroundColor="red"     backgroundColor="#10000000" transparent="1" zPosition="6" />
+		<eLabel text="(-5m)"  position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1" />
 		-->
 	</screen>
 
@@ -1100,7 +1094,7 @@
 		<eLabel position="815,115" size="1070,3" backgroundColor="trbluette" zPosition="1" />
 		<!-- FileLists -->
 		<eLabel position="50,20"  size="700,90" text="F i l e l i s t" foregroundColor="yellow" font="Mmenu;80" valign="center" halign="center" backgroundColor="#101010" transparent="1" zPosition="5" />
-		<widget name="filelist" position="50,150" size="710,250" itemHeight="50" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2" 
+		<widget name="filelist" position="50,150" size="710,250" itemHeight="50" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2"
 			scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="barColor" scrollbarSliderBackgroundColor="barColor" scrollbarMode="showOnDemand" />
 		<!-- eLabel position="50,420" size="710,3" backgroundColor="trbluette" zPosition="1" /-->
 		<widget name="coverArt" pixmap="oZeta-FHD/menu/znocover.png" position="50,440" size="300,300" transparent="1" alphatest="on" zPosition="6" />
@@ -1138,10 +1132,10 @@
 		</widget>
 		<!-- PlayList -->
 		<eLabel position="830,20" size="1050,90" text="P l a y l i s t" foregroundColor="yellow" font="Mmenu;80" valign="center" halign="center" backgroundColor="#101010" transparent="1" zPosition="5"/>
-		<widget name="playlist" position="830,150" size="1045,800" itemHeight="50" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor" 
+		<widget name="playlist" position="830,150" size="1045,800" itemHeight="50" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor"
 		scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="barColor" scrollbarMode="showOnDemand" zPosition="2"/>
 		<widget name="currenttext" position="830,990" size="1040,60" font="Regular;28" foregroundColor="yellow" backgroundColor="#101010" transparent="1" valign="center" halign="center" noWrap="1" zPosition="6" />
-		<!--  
+		<!--
 		<widget name="titletext"   position="50,950"  size="170,40" font="Regular;26" foregroundColor="white"  backgroundColor="#101010" transparent="1" zPosition="6" />
 		<widget name="genretext"   position="30,1820" size="150,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top" zPosition="6" />
 		<widget name="genre"       position="350,1820" size="517,37" font="Regular;30" backgroundColor="noTransBG" transparent="1" foregroundColor="darkgrey" valign="top" zPosition="6" />
@@ -1156,10 +1150,10 @@
 			<convert type="ClockToText">Format:%-H:%M:%S</convert>
 		</widget>
 		<!-- FileLists -->
-		<widget name="filelist" position="50,38" size="1290,315" itemHeight="45" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2" 
+		<widget name="filelist" position="50,38" size="1290,315" itemHeight="45" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2"
 			scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="ltbluette" scrollbarSliderBackgroundColor="barColor" scrollbarMode="showOnDemand" />
 		<!-- PlayList -->
-		<widget name="playlist" position="50,415" size="1290,405" itemHeight="45" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor" 
+		<widget name="playlist" position="50,415" size="1290,405" itemHeight="45" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor"
 		scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="ltbluette" scrollbarMode="showOnDemand" zPosition="2"/>
 		<ePixmap pixmap="mmp/cddx.png"       position="1450,70" size="450,294" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="coverArt" pixmap="mmp/no_coverArt.png" position="1596,86" size="267,267" zPosition="2" transparent="1" alphatest="blend" />
@@ -1208,10 +1202,10 @@
 			<convert type="ClockToText">Format:%-H:%M:%S</convert>
 		</widget>
 		<!-- FileLists -->
-		<widget name="filelist" position="50,38" size="1290,315" itemHeight="45" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2" 
+		<widget name="filelist" position="50,38" size="1290,315" itemHeight="45" backgroundColor="#101010" backgroundColorSelected="#124b97" transparent="1" zPosition="2"
 			scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="#202020" scrollbarSliderBackgroundColor="barColor" scrollbarMode="showOnDemand" />
 		<!-- PlayList -->
-		<widget name="playlist" position="50,415" size="1290,495" itemHeight="45" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor" 
+		<widget name="playlist" position="50,415" size="1290,495" itemHeight="45" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" backgroundColorSelected="barColor"
 			scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="bluette" scrollbarSliderBorderColor="#202020" scrollbarMode="showOnDemand" zPosition="2"/>
 		<ePixmap pixmap="mmp/cddx.png"       position="1450,70" size="450,294" zPosition="1" transparent="1" alphatest="blend" />
 		<widget name="coverArt" pixmap="mmp/no_coverArt.png" position="1596,86" size="267,267" zPosition="2" transparent="1" alphatest="blend" />
@@ -1299,7 +1293,7 @@
 		<ePixmap pixmap="icons/vvcl.png" position="30,20" size="400,90" alphatest="blend" />
 		<widget source="datetime" render="Label" position="1300,90" size="600,36" font="Regular;28" noWrap="1" foregroundColor="#505050" backgroundColor="#000000" transparent="1" halign="right" valign="top" zPosition="3" />
                 <eLabel position="0,130" size="1920,4" backgroundColor="#202020" transparent="0" zPosition="10" />
-		<widget name="icon"                         position="30,150"  size="180,180" alphatest="blend" scale="1" zPosition="2" />	
+		<widget name="icon"                         position="30,150"  size="180,180" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="location" render="Label"    position="230,150" size="1000,90" font="Regular;60" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<ePixmap pixmap="weather_icons/temp.png"    position="230,245" size="70,70" alphatest="blend" />
 		<widget source="temp" render="Label"        position="300,260" size="210,60" font="Regular;54" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
@@ -1320,51 +1314,51 @@
 		<widget source="sunrise" render="Label" position="120,460" size="204,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget name="sunset-icon" position="300,450" size="70,70" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="sunset" render="Label" position="390,455" size="204,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
-		<widget name="moon-icon" position="560,455" size="50,50" alphatest="blend" scale="1" zPosition="2" />		
+		<widget name="moon-icon" position="560,455" size="50,50" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="moonphase" render="Label" position="620,455" size="204,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget name="uvindex-icon" position="30,550" size="50,50" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="uvindex" render="Label" position="120,550" size="300,50" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
-		<widget name="pressure-icon" position="30,640" size="50,50" alphatest="blend" scale="1" zPosition="2" />					
+		<widget name="pressure-icon" position="30,640" size="50,50" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="pressure" render="Label" position="120,640" size="300,50" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<!-- Day 1 -->
 		<widget name="day1-icon"                        position="1470,150" size="180,180" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day1-weekday" render="Label"    position="1800,150" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
-		<widget source="day1-tempmax" render="Label"    position="1800,200" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day1-weekday" render="Label"    position="1800,150" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
+		<widget source="day1-tempmax" render="Label"    position="1800,200" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day1-tempmin" render="Label"    position="1710,200" size="100,50" font="Regular;34" noWrap="1" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget name="day1-precip-icon"                 position="1850,250" size="50,50" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day1-precipprob" render="Label" position="1505,255" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day1-precipprob" render="Label" position="1505,255" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
                 <eLabel position="1450,325" size="470,2" backgroundColor="#303030" transparent="0" zPosition="10" />
 		<!-- Day 2 -->
 		<widget name="day2-icon"                        position="1470,330" size="180,180" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day2-weekday" render="Label"    position="1800,330" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
-		<widget source="day2-tempmax" render="Label"    position="1800,380" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day2-weekday" render="Label"    position="1800,330" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
+		<widget source="day2-tempmax" render="Label"    position="1800,380" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day2-tempmin" render="Label"    position="1710,380" size="100,50" font="Regular;34" noWrap="1" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget name="day2-precip-icon"                 position="1850,430" size="50,50" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day2-precipprob" render="Label" position="1505,435" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day2-precipprob" render="Label" position="1505,435" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
                 <eLabel position="1450,505" size="470,2" backgroundColor="#303030" transparent="0" zPosition="10" />
 		<!-- Day 3 -->
 		<widget name="day3-icon"                        position="1470,510" size="180,180" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day3-weekday" render="Label"    position="1800,510" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
-		<widget source="day3-tempmax" render="Label"    position="1800,560" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day3-weekday" render="Label"    position="1800,510" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
+		<widget source="day3-tempmax" render="Label"    position="1800,560" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day3-tempmin" render="Label"    position="1710,560" size="100,50" font="Regular;34" noWrap="1" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget name="day3-precip-icon"                 position="1850,610" size="50,50" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day3-precipprob" render="Label" position="1505,615" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day3-precipprob" render="Label" position="1505,615" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
                 <eLabel position="1470,685" size="470,2" backgroundColor="#303030" transparent="0" zPosition="10" />
 		<!-- Day 4 -->
 		<widget name="day4-icon"                        position="1470,690" size="180,180" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day4-weekday" render="Label"    position="1800,690" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
-		<widget source="day4-tempmax" render="Label"    position="1800,740" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day4-weekday" render="Label"    position="1800,690" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
+		<widget source="day4-tempmax" render="Label"    position="1800,740" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day4-tempmin" render="Label"    position="1710,740" size="100,50" font="Regular;34" noWrap="1" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget name="day4-precip-icon"                 position="1850,790" size="50,50" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day4-precipprob" render="Label" position="1505,795" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day4-precipprob" render="Label" position="1505,795" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
                 <eLabel position="1450,865" size="470,2" backgroundColor="#303030" transparent="0" zPosition="10" />
 		<!-- Day 5 -->
 		<widget name="day5-icon"                        position="1470,870" size="180,180" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day5-weekday" render="Label"    position="1800,870" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
-		<widget source="day5-tempmax" render="Label"    position="1800,920" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day5-weekday" render="Label"    position="1800,870" size="100,50" font="Regular;34" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
+		<widget source="day5-tempmax" render="Label"    position="1800,920" size="100,50" font="Regular;34" noWrap="1" foregroundColor="red" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day5-tempmin" render="Label"    position="1710,920" size="100,50" font="Regular;34" noWrap="1" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget name="day5-precip-icon"                 position="1850,970" size="50,50" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day5-precipprob" render="Label" position="1505,975" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day5-precipprob" render="Label" position="1505,975" size="300,40" font="Regular;34" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
                 <eLabel position="30,960" size="1000,5" backgroundColor="#404040" transparent="0" zPosition="10" />
 	</screen>
 
@@ -1374,7 +1368,7 @@
 		<widget source="datetime" render="Label" position="630,42" size="1290,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="top" zPosition="3" />
 		<widget source="description" render="Label" position="630,78" size="1290,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="top" zPosition="3" />
 		<widget source="conditions" render="Label" position="30,78" size="600,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="top" zPosition="3" />
-		<widget name="icon" position="30,120" size="96,96" alphatest="blend" scale="1" zPosition="2" />	
+		<widget name="icon" position="30,120" size="96,96" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="temp" render="Label" position="156,120" size="210,60" font="Regular;48" noWrap="1" foregroundColor="#00aeef" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="feelslike" render="Label" position="156,180" size="210,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget name="tempmax-icon" position="366,120" size="48,48" alphatest="blend" scale="1" zPosition="2" />
@@ -1391,15 +1385,15 @@
 		<widget source="humidity" render="Label" position="954,180" size="204,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget name="uvindex-icon" position="1158,120" size="48,48" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="uvindex" render="Label" position="1218,120" size="204,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
-		<widget name="pressure-icon" position="1158,180" size="48,48" alphatest="blend" scale="1" zPosition="2" />					
+		<widget name="pressure-icon" position="1158,180" size="48,48" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="pressure" render="Label" position="1218,180" size="204,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
-		<widget name="moon-icon" position="1422,120" size="48,48" alphatest="blend" scale="1" zPosition="2" />		
+		<widget name="moon-icon" position="1422,120" size="48,48" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="moonphase" render="Label" position="1482,120" size="204,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget name="wind-icon" position="1422,180" size="48,48" alphatest="blend" scale="1" zPosition="2" />
 		<widget source="windspeed" render="Label" position="1482,180" size="204,48" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="0,260" size="1920,5" backgroundColor="#404040" transparent="0" zPosition="1" />
 		<!-- 15 hours forecast -->
-		<widget source="hour0-time" render="Label" position="0,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="hour0-time" render="Label" position="0,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour1-time" render="Label" position="128,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour2-time" render="Label" position="256,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour3-time" render="Label" position="384,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1410,7 +1404,7 @@
 		<widget source="hour8-time" render="Label" position="1024,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour9-time" render="Label" position="1152,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour10-time" render="Label" position="1280,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
-		<widget source="hour11-time" render="Label" position="1408,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />		
+		<widget source="hour11-time" render="Label" position="1408,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour12-time" render="Label" position="1536,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour13-time" render="Label" position="1664,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour14-time" render="Label" position="1792,320" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1429,7 +1423,7 @@
 		<widget name="hour12-icon" position="1552,368" size="96,96" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="hour13-icon" position="1680,368" size="96,96" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="hour14-icon" position="1808,368" size="96,96" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="hour0-temp" render="Label" position="0,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="hour0-temp" render="Label" position="0,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour1-temp" render="Label" position="128,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour2-temp" render="Label" position="256,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour3-temp" render="Label" position="384,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1442,7 +1436,7 @@
 		<widget source="hour10-temp" render="Label" position="1280,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour11-temp" render="Label" position="1408,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour12-temp" render="Label" position="1536,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
-		<widget source="hour13-temp" render="Label" position="1664,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="hour13-temp" render="Label" position="1664,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour14-temp" render="Label" position="1792,464" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget name="hour0-precip-icon" position="48,509" size="32,32" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="hour1-precip-icon" position="176,509" size="32,32" alphatest="blend" scale="1" zPosition="2" />
@@ -1459,7 +1453,7 @@
 		<widget name="hour12-precip-icon" position="1584,509" size="32,32" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="hour13-precip-icon" position="1712,509" size="32,32" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="hour14-precip-icon" position="1840,509" size="32,32" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="hour0-precipprob" render="Label" position="0,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="hour0-precipprob" render="Label" position="0,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour1-precipprob" render="Label" position="128,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour2-precipprob" render="Label" position="256,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour3-precipprob" render="Label" position="384,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1470,13 +1464,13 @@
 		<widget source="hour8-precipprob" render="Label" position="1024,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour9-precipprob" render="Label" position="1152,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour10-precipprob" render="Label" position="1280,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
-		<widget source="hour11-precipprob" render="Label" position="1408,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />		
+		<widget source="hour11-precipprob" render="Label" position="1408,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour12-precipprob" render="Label" position="1536,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour13-precipprob" render="Label" position="1664,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="hour14-precipprob" render="Label" position="1792,548" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<eLabel position="0,620" size="1920,5" backgroundColor="#404040" transparent="0" zPosition="1" />
 		<!-- 15 day forecast -->
-		<widget source="day0-weekday" render="Label" position="0,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="day0-weekday" render="Label" position="0,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day1-weekday" render="Label" position="128,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day2-weekday" render="Label" position="256,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day3-weekday" render="Label" position="384,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1487,7 +1481,7 @@
 		<widget source="day8-weekday" render="Label" position="1024,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day9-weekday" render="Label" position="1152,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day10-weekday" render="Label" position="1280,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
-		<widget source="day11-weekday" render="Label" position="1408,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />		
+		<widget source="day11-weekday" render="Label" position="1408,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day12-weekday" render="Label" position="1536,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day13-weekday" render="Label" position="1664,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day14-weekday" render="Label" position="1792,670" size="128,48" font="Regular;30" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1506,7 +1500,7 @@
 		<widget name="day12-icon" position="1552,718" size="96,96" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="day13-icon" position="1680,718" size="96,96" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="day14-icon" position="1808,718" size="96,96" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day0-tempmax" render="Label" position="0,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />	
+		<widget source="day0-tempmax" render="Label" position="0,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day0-tempmin" render="Label" position="70,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day1-tempmax" render="Label" position="128,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day1-tempmin" render="Label" position="198,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
@@ -1517,11 +1511,11 @@
 		<widget source="day4-tempmax" render="Label" position="512,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day4-tempmin" render="Label" position="582,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day5-tempmax" render="Label" position="640,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
-		<widget source="day5-tempmin" render="Label" position="710,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />		
+		<widget source="day5-tempmin" render="Label" position="710,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day6-tempmax" render="Label" position="768,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day6-tempmin" render="Label" position="838,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day7-tempmax" render="Label" position="896,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
-		<widget source="day7-tempmin" render="Label" position="966,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />	
+		<widget source="day7-tempmin" render="Label" position="966,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day8-tempmax" render="Label" position="1024,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day8-tempmin" render="Label" position="1094,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day9-tempmax" render="Label" position="1152,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
@@ -1532,7 +1526,7 @@
 		<widget source="day11-tempmin" render="Label" position="1478,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day12-tempmax" render="Label" position="1536,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day12-tempmin" render="Label" position="1606,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
-		<widget source="day13-tempmax" render="Label" position="1664,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />		
+		<widget source="day13-tempmax" render="Label" position="1664,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day13-tempmin" render="Label" position="1734,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
 		<widget source="day14-tempmax" render="Label" position="1792,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="right" zPosition="3" />
 		<widget source="day14-tempmin" render="Label" position="1862,814" size="59,36" font="Regular;24" noWrap="1" foregroundColor="#a6a8ab" backgroundColor="#000000" transparent="1" valign="center" zPosition="3" />
@@ -1551,7 +1545,7 @@
 		<widget name="day12-precip-icon" position="1584,859" size="32,32" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="day13-precip-icon" position="1712,859" size="32,32" alphatest="blend" scale="1" zPosition="2" />
 		<widget name="day14-precip-icon" position="1840,859" size="32,32" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="day0-precipprob" render="Label" position="0,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />	
+		<widget source="day0-precipprob" render="Label" position="0,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day1-precipprob" render="Label" position="128,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day2-precipprob" render="Label" position="256,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day3-precipprob" render="Label" position="384,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1562,7 +1556,7 @@
 		<widget source="day8-precipprob" render="Label" position="1024,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day9-precipprob" render="Label" position="1152,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day10-precipprob" render="Label" position="1280,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
-		<widget source="day11-precipprob" render="Label" position="1408,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />		
+		<widget source="day11-precipprob" render="Label" position="1408,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day12-precipprob" render="Label" position="1536,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day13-precipprob" render="Label" position="1664,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
 		<widget source="day14-precipprob" render="Label" position="1792,898" size="128,36" font="Regular;24" noWrap="1" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" valign="center" halign="center" zPosition="3" />
@@ -1571,7 +1565,7 @@
 		<widget source="key_red" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/VisualWeather/visual-gfx/key_red.png" position="750,1031" size="38,38" alphatest="blend" zPosition="2" />
 		<widget source="key_red" render="Label" position="802,1020" size="240,60" font="Regular;24" foregroundColor="#ffffff" backgroundColor="#132132" valign="center" transparent="1" noWrap="1" zPosition="2" />
 		<widget source="key_green" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/VisualWeather/visual-gfx/key_green.png" position="1050,1031" size="38,38" alphatest="blend" zPosition="2" />
-		<widget source="key_green" render="Label" position="1102,1020" size="240,60" font="Regular;24" foregroundColor="#ffffff" backgroundColor="#132132" valign="center" transparent="1" noWrap="1" zPosition="2" />			
+		<widget source="key_green" render="Label" position="1102,1020" size="240,60" font="Regular;24" foregroundColor="#ffffff" backgroundColor="#132132" valign="center" transparent="1" noWrap="1" zPosition="2" />
 	</screen>
 
 </skin>

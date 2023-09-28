@@ -134,7 +134,6 @@
 		<ePixmap pixmap="skin_default/buttons/80/key_info.png" alphatest="blend" position="1300,910" size="80,40" zPosition="2"/>
 		<ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1400,910" size="80,40" zPosition="2"/>
 	</screen>
-	
 	<!-- Help -->
 	<screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="LayerMenu1500"/>

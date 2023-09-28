@@ -1093,13 +1093,22 @@ class oZsetup(ConfigListScreen, Screen):
                 self.UpdatePicture()
 
 # update zskin
-    def zUpdate(self, answer=None):
-        if answer is None:
-            if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
-                self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
-            else:
-                self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
-        elif answer:
+    def zUpdate(self):
+        if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
+            self.session.openWithCallback(self.zUpdate2, MessageBox, _("Skin exist!! Do you really want to Upgrade?"), MessageBox.TYPE_YESNO)
+        else:
+            self.session.openWithCallback(self.zUpdate2, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'), MessageBox.TYPE_YESNO)
+        return
+
+
+
+    def zUpdate2(self, answer=None):
+        if answer:
+            # if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
+                # self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
+            # else:
+                # self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
+        # elif answer:
             if config.ozeta.update:
                 self.zSkin()
         return
@@ -1112,8 +1121,8 @@ class oZsetup(ConfigListScreen, Screen):
         else:
             import urllib2
             import cookielib
-
-        headers = {'User-Agent': RequestAgent()}
+        Req = RequestAgent()
+        headers = {'User-Agent': Req}
         cookie_jar = cookielib.CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie_jar))
         urllib2.install_opener(opener)
@@ -1135,21 +1144,50 @@ class oZsetup(ConfigListScreen, Screen):
             os.remove(tarfile)
         try:
             self.com = 'http://patbuweb.com/ozeta/ozeta.tar'
-            # if PY3:
-                # self.com = b"http://patbuweb.com/ozeta/ozeta.tar"
             self.dest = self.dowfil()
-            # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
-            cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
-            self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
-            print('Download done !!!')
-            self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
+            Req = RequestAgent()
+            # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
+            # cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
+
+            # self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
+            # print('Download done !!!')
+            # self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
+
+            self.command = ["tar -xvf /tmp/ozeta.tar -C /"]
+            cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+            if "https" in str(self.com):
+                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+            print('cmd: ', cmd)
+            self.session.open(Console, title=_('Installation oZeta Skin'), cmdlist=[cmd, 'sleep 5'])  #, finishedCallback=self.upd_zeta)
+
         except Exception as e:
             print('error download: ', e)
             return
-
+        
         print('update tarfile')
         self.upd_zeta()
 
+
+# #  install update zskin
+    # def zSkin(self):
+        # if fileExists(tarfile):
+            # os.remove(tarfile)
+        # try:
+            # self.com = 'http://patbuweb.com/ozeta/ozeta.tar'
+            # # if PY3:
+                # # self.com = b"http://patbuweb.com/ozeta/ozeta.tar"
+            # self.dest = self.dowfil()
+            # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
+            # cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
+            
+            # self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
+            # print('Download done !!!')
+            # self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
+        # except Exception as e:
+            # print('error download: ', e)
+            # return
+        # print('update tarfile')
+        # self.upd_zeta()
     def start(self):
         pass
 
@@ -1159,10 +1197,23 @@ class oZsetup(ConfigListScreen, Screen):
         time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             print('init update tarfile')
-            cmd = "tar -xvf /tmp/ozeta.tar -C /"
-            self.session.open(Console, _('Extract: %s') % tarfile, [cmd], closeOnSuccess=True)
-            time.sleep(5)
-            if 'OpenSPA' in Uri.imagevers():
+            # cmd = "tar -xvf /tmp/ozeta.tar -C /"
+            # self.session.open(Console, _('Extract: %s') % tarfile, [cmd], closeOnSuccess=True)
+            # time.sleep(5)
+            if 'openatv' in Uri.imagevers():
+                if '6.4' in Uri.imagevers():
+                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv6.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                    os.system(cmd1)
+                    os.system(cmd2)
+                elif '7.' in Uri.imagevers():
+                    print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
+                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+                    os.system(cmd1)
+                    os.system(cmd2)            
+
+            elif 'OpenSPA' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamspa.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                 os.system(cmd1)
@@ -1173,21 +1224,12 @@ class oZsetup(ConfigListScreen, Screen):
                 os.system(cmd1)
                 os.system(cmd2)
             else:
-                if 'openatv' in Uri.imagevers():
-                    if '6.4' in Uri.imagevers():
-                        cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                        cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv6.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                        os.system(cmd1)
-                        os.system(cmd2)
-                    if '7.' in Uri.imagevers():
-                        print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
-                        cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                        cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                        os.system(cmd1)
-                        os.system(cmd2)
+                self.session.open(MessageBox, _('Image Box Not Tested!! Skin Not Installed'), MessageBox.TYPE_INFO, timeout=5)
             self.check_line()
         else:
-            self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/ozeta.tar!'), MessageBox.TYPE_INFO, timeout=5)
+            # self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/ozeta.tar!'), MessageBox.TYPE_INFO, timeout=5)
+            self.session.open(MessageBox, _('Download Error!!!\nUnknow or FILE NO EXIST /tmp/ozeta.tar!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
+            return
 
     def goUp(self, answer=True):
         if answer:
@@ -1219,6 +1261,8 @@ class oZsetup(ConfigListScreen, Screen):
                     return
             except Exception as e:
                 print('error download ', str(e))
+                self.session.open(MessageBox, _('Download Error!!!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
+                return
 
         self.check_line()
 
@@ -1226,30 +1270,28 @@ class oZsetup(ConfigListScreen, Screen):
         pass
 
     def check_line(self):
-        if str(cur_skin) == 'oZeta-FHD':
-            lulu = 'skin_templatepanelslulu.xml'
-            fldlulu = '/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
-            filename = '/usr/share/enigma2/oZeta-FHD/skin.xml'
-            filename2 = '/usr/share/enigma2/oZeta-FHD/skin2.xml'
-            if fileExists(fldlulu):
-                with open(filename, 'r') as f:
-                    fpage = f.readline()
-                    if lulu in fpage:
-                        print('line lulu exist')
-                        f.close()
-                    else:
-                        print('line lulu not exist')
-                        fin = open(filename, "rt")
-                        fout = open(filename2, "wt")
-                        for line in fin:
-                            fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
-                        fin.close()
-                        fout.close()
-                        cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2, filename)
-                        os.system(cmd1)
-            # self.mbox = self.session.open(MessageBox, _("O-ZSKIN UPDATE\nPLEASE RESTART GUI"), MessageBox.TYPE_INFO, timeout=4)
+        # if str(cur_skin) == 'oZeta-FHD':
+        lulu = 'skin_templatepanelslulu.xml'
+        fldlulu = '/usr/share/enigma2/oZeta-FHD/zSkin/skin_templatepanelslulu.xml'
+        filename = '/usr/share/enigma2/oZeta-FHD/skin.xml'
+        filename2 = '/usr/share/enigma2/oZeta-FHD/skin2.xml'
+        if fileExists(fldlulu):
+            with open(filename, 'r') as f:
+                fpage = f.readline()
+                if lulu in fpage:
+                    print('line lulu exist')
+                    f.close()
+                else:
+                    print('line lulu not exist')
+                    fin = open(filename, "rt")
+                    fout = open(filename2, "wt")
+                    for line in fin:
+                        fout.write(line.replace('</skin>', '\t<include filename="zSkin/skin_templatepanelslulu.xml"/>\n</skin>'))
+                    fin.close()
+                    fout.close()
+                    cmd1 = 'mv -f %s %s > /dev/null 2>&1' % (filename2, filename)
+                    os.system(cmd1)
         self.session.open(MessageBox, _('OZSKIN UPDATE\nPLEASE RESTART GUI'), MessageBox.TYPE_INFO, timeout=5)
-        # self.saveAll()
 
 #  error load
     def errorLoad(self):
