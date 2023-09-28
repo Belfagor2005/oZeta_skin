@@ -239,6 +239,19 @@ if f:
         config.ozeta.Logoboth = ConfigSelection(choices=ozetamvipredefinedlist)
 
 
+
+def fakeconfig(name):
+    retr = [
+            ['SKIN PARTS SETUP'],
+            ['SERVER API KEY SETUP'],
+            ['WEATHER BOX SETUP'],
+            ['MISC SETUP']
+            ]
+    for nname in retr:
+        if nname[0] in str(name):
+            return True
+    return False
+    
 def localreturn(name):
     retr = [
         ["omdb", "omdb"],
@@ -383,7 +396,7 @@ class oZsetup(ConfigListScreen, Screen):
                 self.list.append(getConfigListEntry("Install Options Developer", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
                 # self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
                 # self._space()
-                self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),))
+                self.list.append(getConfigListEntry(("SKIN PARTS SETUP")))
                 # self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),config.ozeta.fake, _("SKIN SETUP SECTION")))
                 # section = ("SKIN PARTS SETUP")
                 # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("SKIN SETUP SECTION")))
@@ -412,7 +425,7 @@ class oZsetup(ConfigListScreen, Screen):
                 # # section = ("SKIN API SETUP       ")
                 # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("API SETUP SECTION")))
                 # self._space()
-                self.list.append(getConfigListEntry(("SERVER API KEY SETUP"),))
+                self.list.append(getConfigListEntry(("SERVER API KEY SETUP")))
                 self.list.append(getConfigListEntry("API KEY SETUP:", config.ozeta.actapi, _("Settings oZeta Apikey Server")))
                 if config.ozeta.actapi.value is True:
                     self.list.append(getConfigListEntry("TMDB API:", config.ozeta.data, _("Settings TMDB ApiKey")))
@@ -430,7 +443,7 @@ class oZsetup(ConfigListScreen, Screen):
             # # section = ("SKIN WEATHER SETUP       ")
             # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("WEATHER SETUP SECTION")))
             # self._space()
-            self.list.append(getConfigListEntry(("WEATHER BOX SETUP"),))
+            self.list.append(getConfigListEntry(("WEATHER BOX SETUP")))
             self.list.append(getConfigListEntry("WEATHER:", config.ozeta.zweather, _("Settings oZeta Weather")))
             if config.ozeta.zweather.value is True:
                 # if os.path.isdir(OAWeather):
@@ -448,7 +461,7 @@ class oZsetup(ConfigListScreen, Screen):
             # # section = ("MISC SETUP            ")
             # # self.list.append(getConfigListEntry(section + tab + sep * (char - len(section) - len(tab)), config.ozeta.fake, _("MISC SETUP SECTION")))
             # self._space()
-            self.list.append(getConfigListEntry(("MISC SETUP"),))
+            self.list.append(getConfigListEntry(("MISC SETUP")))
             self.list.append(getConfigListEntry("Install or Open mmPicons Plugin", config.ozeta.mmpicons, _("Install or Open mmPicons Plugin\nPress OK")))
             if XStreamity is True:
                 self.list.append(getConfigListEntry('Install Options XStreamity Skin', config.ozeta.XStreamity, _("Install Optional XStreamity Skin\nPress Ok")))
@@ -1396,8 +1409,15 @@ class oZsetup(ConfigListScreen, Screen):
         if not result:
             return
         for x in self["config"].list:
+            # SKIN PARTS SETUP
+            # SERVER API KEY SETUP
+            # WEATHER BOX SETUP
+            # MISC SETUP
+            if fakeconfig(x):
+                continue
             x[1].cancel()
         self.close()
+        return
 
 
 class ozHelp(Screen):
