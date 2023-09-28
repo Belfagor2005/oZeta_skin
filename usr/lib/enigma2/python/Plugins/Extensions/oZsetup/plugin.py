@@ -16,7 +16,7 @@ from Components.ConfigList import ConfigListScreen
 from Components.Label import Label
 from Components.Pixmap import Pixmap
 from Components.Sources.StaticText import StaticText
-from Components.config import config, configfile, ConfigOnOff
+from Components.config import config, ConfigOnOff
 from Components.config import ConfigSubsection, getConfigListEntry
 from Components.config import ConfigSelection, ConfigText
 from Components.config import NoSave, ConfigNothing, ConfigYesNo
@@ -239,7 +239,6 @@ if f:
         config.ozeta.Logoboth = ConfigSelection(choices=ozetamvipredefinedlist)
 
 
-
 def fakeconfig(name):
     retr = [
             ['SKIN PARTS SETUP'],
@@ -251,7 +250,8 @@ def fakeconfig(name):
         if nname[0] in str(name):
             return True
     return False
-    
+
+
 def localreturn(name):
     retr = [
         ["omdb", "omdb"],
@@ -383,9 +383,9 @@ class oZsetup(ConfigListScreen, Screen):
     def createSetup(self):
         self.editListEntry = None
         self.list = []
-        char = 120
-        tab = " " * 9
-        sep = "-"
+        # char = 120
+        # tab = " " * 9
+        # sep = "-"
         try:
             # self.list.append(getConfigListEntry(_("GENERAL"), config.ozeta.fake, _("GENERAL SECTION") ))
 
@@ -1094,25 +1094,17 @@ class oZsetup(ConfigListScreen, Screen):
 
 # update zskin
     def zUpdate(self):
-        if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
+        if os.path.exists('/usr/share/enigma2/oZeta-FHD'):
             self.session.openWithCallback(self.zUpdate2, MessageBox, _("Skin exist!! Do you really want to Upgrade?"), MessageBox.TYPE_YESNO)
         else:
             self.session.openWithCallback(self.zUpdate2, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'), MessageBox.TYPE_YESNO)
         return
 
-
-
     def zUpdate2(self, answer=None):
         if answer:
-            # if os.path.exists( '/usr/share/enigma2/oZeta-FHD'):
-                # self.session.openWithCallback(self.zUpdate, MessageBox, _("Skin exist!! Do you really want to Upgrade?"))
-            # else:
-                # self.session.openWithCallback(self.zUpdate, MessageBox, _('Do you really want to install the oZeta Skin ??\nDo it at your own risk.\nDo you want to continue?'))
-        # elif answer:
             if config.ozeta.update:
                 self.zSkin()
         return
-
 
     def dowfil(self):
         if PY3:
@@ -1135,7 +1127,6 @@ class oZsetup(ConfigListScreen, Screen):
             print('MYDEBUG - download ok - URL: %s , filename: %s' % (self.com, tarfile))
         except:
             print('MYDEBUG - download failed - URL: %s , filename: %s' % (self.com, tarfile))
-            # tarfile = ''
         return tarfile
 
 #  install update zskin
@@ -1163,10 +1154,9 @@ class oZsetup(ConfigListScreen, Screen):
         except Exception as e:
             print('error download: ', e)
             return
-        
+
         print('update tarfile')
         self.upd_zeta()
-
 
 # #  install update zskin
     # def zSkin(self):
@@ -1179,7 +1169,7 @@ class oZsetup(ConfigListScreen, Screen):
             # self.dest = self.dowfil()
             # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
             # cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
-            
+
             # self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
             # print('Download done !!!')
             # self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
@@ -1188,6 +1178,7 @@ class oZsetup(ConfigListScreen, Screen):
             # return
         # print('update tarfile')
         # self.upd_zeta()
+
     def start(self):
         pass
 
@@ -1211,7 +1202,7 @@ class oZsetup(ConfigListScreen, Screen):
                     cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                     cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
                     os.system(cmd1)
-                    os.system(cmd2)            
+                    os.system(cmd2)
 
             elif 'OpenSPA' in Uri.imagevers():
                 cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
@@ -1252,7 +1243,7 @@ class oZsetup(ConfigListScreen, Screen):
                         cmd = "tar -xvf /tmp/options.tar -C /"
                         os.system(cmd)
                         time.sleep(2)
-                        os.remove('/tmp/options.tar')
+                        # os.remove('/tmp/options.tar')
                 elif response.status_code == 404:
                     print("Error 404")
                     messageText = "zOptions NOT INSTALLED"
@@ -1360,7 +1351,7 @@ class oZsetup(ConfigListScreen, Screen):
             except Exception as e:
                 print(e)
         else:
-            message = (_('Plugin WeatherPlugin not installed!!!'))
+            message = _('Plugin WeatherPlugin not installed!!!')
             self.mbox = self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
 
     def KeyMenu2(self, answer=None):
@@ -1394,7 +1385,7 @@ class oZsetup(ConfigListScreen, Screen):
             except Exception as e:
                 print(e)
         else:
-            message = (_('Plugin OAWeatherPlugin not installed!!!'))
+            message = _('Plugin OAWeatherPlugin not installed!!!')
             self.mbox = self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
 
     def UpdateComponents(self):
