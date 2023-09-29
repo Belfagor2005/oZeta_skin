@@ -36,9 +36,11 @@ import sys
 import time
 import unicodedata
 import shutil
-PY3 = (sys.version_info[0] == 3)
+PY3 = False
+PY3 = sys.version_info.major >= 3
 try:
     if PY3:
+        PY3 = True
         import queue
         from _thread import start_new_thread
         from urllib.error import HTTPError, URLError
@@ -156,7 +158,7 @@ REGEX = re.compile(
         r'(\d+: odc.\d+)|'
         # r'(\.\s{1,}\").+|'
         # r'\s\*\d{4}\Z|'
-        # r'(\?\s{1,}\").+|' 
+        # r'(\?\s{1,}\").+|'
         # r'(\.{2,}\Z)'
         r'(\d+ odc.\d+)|(:)|'
         r'( -(.*?).*)|(,)|'
@@ -177,6 +179,7 @@ REGEX = re.compile(
         r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 # name poster  .capitalize()
+
 
 def convtext(text):
     text = text.replace('\xc2\x86', '')
@@ -230,14 +233,14 @@ class PosterDB(zPosterXDownloadThread):
                 dwn_poster = path_folder + pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-                elif not os.path.exists(dwn_poster):
+                if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3])
                     self.logDB(log)
                 elif not os.path.exists(dwn_poster):
-                    val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3])
+                    val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3])
                     self.logDB(log)
                 elif not os.path.exists(dwn_poster):
-                    val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3])
+                    val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3])
                     self.logDB(log)
                 elif not os.path.exists(dwn_poster):
                     val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
@@ -295,6 +298,10 @@ class PosterAutoDB(zPosterXDownloadThread):
                             if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
                             if not os.path.exists(dwn_poster):
+                                val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
+                            elif not os.path.exists(dwn_poster):
                                 val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
@@ -302,10 +309,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                            elif not os.path.exists(dwn_poster):
-                                val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
+
                             elif not os.path.exists(dwn_poster):
                                 val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
