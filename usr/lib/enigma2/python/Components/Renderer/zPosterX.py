@@ -36,7 +36,7 @@ import sys
 import time
 import unicodedata
 import shutil
-PY3 = sys.version_info[0] == 3
+PY3 = (sys.version_info[0] == 3)
 try:
     if PY3:
         import queue

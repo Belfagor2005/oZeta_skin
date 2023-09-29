@@ -296,7 +296,9 @@ class oZsetup(ConfigListScreen, Screen):
         self['Preview'] = Pixmap()
         self['key_red'] = Label(_('Cancel'))
         self['key_green'] = Label(_('Save'))
-        self['key_yellow'] = Label(_('Preview'))
+        self['key_yellow'] = Label('')
+        if str(cur_skin) == 'oZeta-FHD':
+            self['key_yellow'] = Label(_('Preview'))
         self['key_blue'] = Label(_('Restart'))
         self["HelpWindow"] = Pixmap()
         self["HelpWindow"].hide()
