@@ -1,22 +1,27 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # by digiteng...07.2021,
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
 # © Provided that digiteng rights are protected, all or part of the code can be used, modified...
+# russian and py3 support by sunriser...
+# downloading in the background while zaping...
+# by beber...03.2022,
+# 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
+#
 # for infobar,
-# <widget source="session.Event_Now" render="zPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
-# <widget source="session.Event_Next" render="zPosterX" position="100,100" size="185,278" />
-# <widget source="session.Event_Now" render="zPosterX" position="100,100" size="185,278" nexts="2" />
-# <widget source="session.CurrentService" render="zPosterX" position="100,100" size="185,278" nexts="3" />
+# <widget source="session.Event_Now" render="ZPoster" position="100,100" size="185,278" />
+# <widget source="session.Event_Next" render="ZPoster" position="100,100" size="100,150" />
+# <widget source="session.Event_Now" render="ZPoster" position="100,100" size="185,278" nexts="2" />
+# <widget source="session.CurrentService" render="ZPoster" position="100,100" size="185,278" nexts="3" />
+
 # for ch,
-# <widget source="ServiceEvent" render="zPosterX" position="820,100" size="100,150" path="/media/hdd/poster/" zPosition="9" />
-# for secondInfobar,
-# <widget source="session.Event_Now" render="zPosterX" position="20,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
-# <widget source="session.Event_Next" render="zPosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="ServiceEvent" render="ZPoster" position="100,100" size="185,278" />
+# <widget source="ServiceEvent" render="ZPoster" position="100,100" size="185,278" nexts="2" />
+
 # for epg, event
-# <widget source="Event" render="zPosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="Event" render="ZPoster" position="100,100" size="185,278" />
+# <widget source="Event" render="ZPoster" position="100,100" size="185,278" nexts="2" />
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
@@ -37,15 +42,17 @@ import time
 import unicodedata
 import shutil
 PY3 = False
-PY3 = sys.version_info.major >= 3
+PY3 = (sys.version_info[0] == 3)
 try:
     if PY3:
         PY3 = True
+        unicode = str
         import queue
         from _thread import start_new_thread
         from urllib.error import HTTPError, URLError
         from urllib.request import urlopen
     else:
+        str = unicode
         import Queue
         from thread import start_new_thread
         from urllib2 import HTTPError, URLError
@@ -68,7 +75,6 @@ def isMountReadonly(mnt):
                 return 'ro' in flags
     return "mount: '%s' doesn't exist" % mnt
 
-
 path_folder = "/tmp/poster/"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
@@ -85,8 +91,6 @@ if not os.path.exists(path_folder):
 if not os.path.exists(path_folder):
     path_folder = "/tmp/poster/"
 epgcache = eEPGCache.getInstance()
-apdb = dict()
-
 
 try:
     lng = config.osd.language.value
@@ -94,9 +98,9 @@ try:
 except:
     lng = 'en'
     pass
-formatImg = 'w342'
 
-
+apdb = dict()
+#
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
@@ -152,14 +156,19 @@ except:
     pass
 
 
+def unicodify(s, encoding='utf-8', norm=None):
+    if not isinstance(s, unicode):
+        s = unicode(s, encoding)
+    if norm:
+        from unicodedata import normalize
+        s = normalize(norm, s)
+    return s
+
+
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
         r'(: odc.\d+)|'
         r'(\d+: odc.\d+)|'
-        # r'(\.\s{1,}\").+|'
-        # r'\s\*\d{4}\Z|'
-        # r'(\?\s{1,}\").+|'
-        # r'(\.{2,}\Z)'
         r'(\d+ odc.\d+)|(:)|'
         r'( -(.*?).*)|(,)|'
         r'!|'
@@ -178,24 +187,26 @@ REGEX = re.compile(
         r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
         r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
-# name poster  .capitalize()
 
 
-def convtext(text):
-    text = text.replace('\xc2\x86', '')
-    text = text.replace('\xc2\x87', '')
-    text = REGEX.sub('', text)
-    text = re.sub(r"[-,!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
-    text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-    text = text.strip()
+def convtext(text=''):
     try:
-        text = unicode(text, 'utf-8')
-    except NameError:
+        print('ZChannel text ->>> ', text)
+        if text != '' or text is not None or text != 'None':
+            text = REGEX.sub('', text)
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = unicodify(text)
+            # text = text.replace('?', '')
+            text = text.lower()
+            print('ZChannel text <<<- ', text)
+        else:
+            text = str(text)
+            print('ZChannel text <<<->>> ', text)
+        return text
+    except Exception as e:
+        print('cleantitle error: ', e)
         pass
-    text = unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode("utf-8")
-    text = text.lower()
-    # text = text.capitalize()
-    return str(text)
 
 
 if PY3:
@@ -226,31 +237,32 @@ class PosterDB(zPosterXDownloadThread):
     def run(self):
         self.logDB("[QUEUE] : Initialized")
         while True:
-            try:
-                canal = pdb.get()
-                self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
-                pstcanal = convtext(canal[5])
-                dwn_poster = path_folder + pstcanal + ".jpg"
-                if os.path.exists(dwn_poster):
-                    os.utime(dwn_poster, (time.time(), time.time()))
+            canal = pdb.get()
+            self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
+            pstcanal = convtext(canal[5])
+            dwn_poster = path_folder + pstcanal + ".jpg"
+            if os.path.exists(dwn_poster):
+                os.utime(dwn_poster, (time.time(), time.time()))
+            if lng == "fr":
                 if not os.path.exists(dwn_poster):
-                    val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3])
+                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_tvdb(dwn_poster, canal[2], canal[4], canal[3])
+                if not os.path.exists(dwn_poster):
+                    val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                     self.logDB(log)
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_poster):
-                    val, log = self.search_molotov_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                    self.logDB(log)
-                pdb.task_done()
-            except Exception as e:
-                print('zPosterX exceptions', str(e))
+            if not os.path.exists(dwn_poster):
+                val, log = self.search_imdb(dwn_poster, canal[5], canal[4], canal[3])
+                self.logDB(log)
+            if not os.path.exists(dwn_poster):
+                val, log = self.search_tmdb(dwn_poster, canal[5], canal[4], canal[3])
+                self.logDB(log)
+            if not os.path.exists(dwn_poster):
+                val, log = self.search_tvdb(dwn_poster, canal[5], canal[4], canal[3])
+                self.logDB(log)
+            if not os.path.exists(dwn_poster):
+                val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                self.logDB(log)
+            pdb.task_done()
 
     def logDB(self, logmsg):
         try:
@@ -297,7 +309,20 @@ class PosterAutoDB(zPosterXDownloadThread):
                             dwn_poster = path_folder + pstcanal + ".jpg"
                             if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
+                            if lng == "fr":
+                                if not os.path.exists(dwn_poster):
+                                    val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd += 1
+                                if not os.path.exists(dwn_poster):
+                                    val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd += 1
                             if not os.path.exists(dwn_poster):
+                                val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
+                            elif not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
@@ -306,18 +331,13 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_poster):
-                                val, log = self.search_imdb(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
-
-                            elif not os.path.exists(dwn_poster):
                                 val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                         newcn = canal[0]
                     self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
-                    self.logAutoDB("[AutoDB] *** service error ({})".format(e))
+                    self.logAutoDB("[AutoDB] *** service error : {} ({})".format(service, e))
             # AUTO REMOVE OLD FILES
             now_tm = time.time()
             emptyfd = 0
@@ -384,6 +404,7 @@ class zPosterX(Renderer):
         if what[0] == self.CHANGED_CLEAR:
             self.instance.hide()
         if what[0] != self.CHANGED_CLEAR:
+            print('zposter what[0] != self.CHANGED_CLEAR: ')
             servicetype = None
             try:
                 service = None
@@ -477,7 +498,7 @@ class zPosterX(Renderer):
                 time.sleep(0.5)
                 loop = loop - 1
             if found:
-                self.timer.start(100, True)
+                self.timer.start(10, True)
 
     def logPoster(self, logmsg):
         try:

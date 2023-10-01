@@ -34,11 +34,11 @@ class zEmptyEpg(VariableText, Renderer):
         VariableText.__init__(self)
         self.EmptyText = ""
         self.fillTimer = eTimer()
-        self.fillTimer.callback.append(self.__fillText)
-        # try:
-            # self.fillTimer.callback.append(self.__fillText)
-        # except:
-            # self.fillTimer_conn = self.fillTimer.timeout.connect(self.__fillText)
+        try:
+            self.fillTimer_conn = self.fillTimer.timeout.connect(self.__fillText)
+        except:
+            self.fillTimer.callback.append(self.__fillText)
+        # self.fillTimer.start(50, True)
         self.backText = ""
         self.vvv = ""
         self.testSizeLabel = None
@@ -108,10 +108,11 @@ class zEmptyEpg(VariableText, Renderer):
                         self.posIdx = 0
                         if self.fillTimer.isActive():
                             self.fillTimer.stop()
-                        self.fillTimer.start(150, True)
+                        self.fillTimer.start(100, True)
 
     def __fillText(self):
-        self.fillTimer.stop()
+        if self.fillTimer.isActive():
+            self.fillTimer.stop()
         self.posIdx += 1
         if self.posIdx <= self.endPoint:
             self.text = self.backText[:self.posIdx] + "_"

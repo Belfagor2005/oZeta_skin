@@ -17,10 +17,12 @@ try:
         from urllib.parse import quote
         import html
         html_parser = html
+        unicode = str
     else:
         from urllib2 import quote
         from HTMLParser import HTMLParser
         html_parser = HTMLParser()
+        str = unicode
 except:
     pass
 try:
