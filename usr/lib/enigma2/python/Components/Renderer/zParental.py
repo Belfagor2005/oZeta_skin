@@ -18,6 +18,7 @@ print('patch fsk', pratePath)
 
 
 def isMountReadonly(mnt):
+    mount_point = ''
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]

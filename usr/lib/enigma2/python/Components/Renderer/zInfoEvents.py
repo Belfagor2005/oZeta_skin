@@ -47,6 +47,7 @@ cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 
 def isMountReadonly(mnt):
+    mount_point = ''
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]

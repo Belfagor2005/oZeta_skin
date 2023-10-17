@@ -62,6 +62,7 @@ except:
 
 
 def isMountReadonly(mnt):
+    mount_point = ''
     with open('/proc/mounts') as f:
         for line in f:
             line = line.split(',')[0]
@@ -191,7 +192,7 @@ REGEX = re.compile(
 
 def convtext(text=''):
     try:
-        print('ZChannel text ->>> ', text)
+        print('zposter text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -199,10 +200,10 @@ def convtext(text=''):
             text = unicodify(text)
             # text = text.replace('?', '')
             text = text.lower()
-            print('ZChannel text <<<- ', text)
+            print('zposter text <<<- ', text)
         else:
             text = str(text)
-            print('ZChannel text <<<->>> ', text)
+            print('zposter text <<<->>> ', text)
         return text
     except Exception as e:
         print('cleantitle error: ', e)
