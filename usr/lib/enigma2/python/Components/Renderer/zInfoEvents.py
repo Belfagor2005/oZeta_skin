@@ -19,6 +19,7 @@ from time import gmtime
 import json
 import os
 import re
+import socket
 import sys
 import NavigationInstance
 PY3 = sys.version_info.major >= 3
@@ -75,8 +76,6 @@ elif os.path.exists("/media/mmc"):
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):
-    path_folder = "/tmp/poster"
 
 
 try:
@@ -121,8 +120,35 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
+def unicodify(s, encoding='utf-8', norm=None):
+    if not isinstance(s, unicode):
+        s = unicode(s, encoding)
+    if norm:
+        from unicodedata import normalize
+        s = normalize(norm, s)
+    return s
+
+
+def cleantitle(text=''):
+    try:
+        print('zStarX text ->>> ', text)
+        if text != '' or text is not None or text != 'None':
+            text = REGEX.sub('', text)
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = unicodify(text)
+            text = text.lower()
+            print('zStarX text <<<- ', text)
+        else:
+            text = str(text)
+            print('zStarX text <<<->>> ', text)
+        return text
+    except Exception as e:
+        print('cleantitle error: ', e)
+        pass
+
+
 def intCheck():
-    import socket
     try:
         response = urlopen("http://google.com", None, 5)
         response.close()
@@ -139,31 +165,34 @@ def intCheck():
 class zInfoEvents(Renderer, VariableText):
 
     def __init__(self):
-        Renderer.__init__(self)
-        VariableText.__init__(self)
         adsl = intCheck()
         if not adsl:
             return
+        Renderer.__init__(self)
+        VariableText.__init__(self)
         self.text = ""
 
     GUI_WIDGET = eLabel
 
     def changed(self, what):
-            
+
         if what[0] == self.CHANGED_CLEAR:
             return self.text
         if what[0] != self.CHANGED_CLEAR:
             self.showInfos()
-               
-                
 
     def showInfos(self):
         self.event = self.source.event
         if self.event:
             self.delay2()
-            evntNm = REGEX.sub("", self.event.getEventName())
-            self.evntNm = evntNm.strip().replace('ё', 'е')
-            infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
+            # evntNm = REGEX.sub("", self.event.getEventName())
+            # self.evntNm = evntNm.strip().replace('ё', 'е')
+            # infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
+            self.evnt = self.event.getEventName().encode('utf-8')
+            self.evntNm = cleantitle(self.evnt)
+            print('clean zInfoEvents: ', self.evntNm)
+            infos_file = "{}/{}".format(path_folder, self.evntNm)
+
             if not os.path.exists(infos_file):
                 self.downloadInfos(infos_file)
             if os.path.exists(infos_file):
@@ -209,16 +238,16 @@ class zInfoEvents(Renderer, VariableText):
                         if Title and Title != "N/A":
                             with open("/tmp/rating", "w") as f:
                                 f.write("%s\n%s" % (imdbRating, Rated))
-                            self.text = "Title : %s" % str(Title)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nYear : %s" % str(Year)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nCountry : %s" % str(Country)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nGenre : %s" % str(Genre)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nDirector : %s" % str(Director)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nAwards : %s" % str(Awards)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nWriter : %s" % str(Writer)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nCast : %s" % str(Actors)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nRated : %s" % str(Rated)  # .encode('utf-8').decode('utf-8')
-                            self.text += "\nImdb : %s" % str(imdbRating)  # .encode('utf-8').decode('utf-8')
+                            self.text = "Title: %s" % str(Title)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nYear: %s" % str(Year)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nCountry: %s" % str(Country)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nGenre: %s" % str(Genre)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nDirector: %s" % str(Director)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nAwards: %s" % str(Awards)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nWriter: %s" % str(Writer)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nCast: %s" % str(Actors)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nRated: %s" % str(Rated)  # .encode('utf-8').decode('utf-8')
+                            self.text += "\nImdb: %s" % str(imdbRating)  # .encode('utf-8').decode('utf-8')
                             # print("text= ", self.text)
                             self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
 
@@ -253,8 +282,12 @@ class zInfoEvents(Renderer, VariableText):
             try:
                 url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quote(title))
                 data_omdb = json.load(urlopen(url_omdb))
-                dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
+                # dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
+
+                dwn_infos = "{}/{}".format(path_folder, self.evntNm)
+
                 open(dwn_infos, "w").write(json.dumps(data_omdb))
+
             except:
                 pass
         except Exception as e:
@@ -294,9 +327,12 @@ class zInfoEvents(Renderer, VariableText):
             events = epgcache.lookupEvent(['IBDCT', (ref, 0, -1, -1)])
             for i in range(9):
                 titleNxt = events[i][4]
-                self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
-                # self.evntNm = html_escape(titleNxt).rstrip().replace('ё', 'е')
-                infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
+                # self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
+                # infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
+                self.evntNm = cleantitle(titleNxt)
+                print('clean epgs: ', self.evntNm)
+                infos_file = "{}/{}".format(path_folder, self.evntNm)
+
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
         except:

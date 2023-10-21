@@ -19,7 +19,6 @@ from Components.VariableValue import VariableValue
 from enigma import eSlider
 from Components.config import config
 from enigma import eTimer
-# from enigma import eLabel
 import re
 import json
 import os
@@ -27,24 +26,26 @@ import socket
 import sys
 
 
-global cur_skin, my_cur_skin, apikey
-PY3 = sys.version_info.major >= 3
-try:
-    from urllib.parse import quote
-except:
-    from urllib import quote
-try:
+global cur_skin, my_cur_skin, tmdb_api
+PY3 = (sys.version_info[0] == 3)
+if PY3:
+    PY3 = True
+    unicode = str
     from urllib.error import URLError, HTTPError
     from urllib.request import urlopen
-except:
+    from urllib.parse import quote
+else:
+    str = unicode
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
+    from urllib import quote
 
 
 formatImg = 'w185'
-apikey = "3c3efcf47c3577558812bb9d64019d65"
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
+# thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -65,38 +66,19 @@ def isMountReadonly(mnt):
     return "mount: '%s' doesn't exist" % mnt
 
 
-folder_poster = "/tmp/poster"
+path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
-        folder_poster = "/media/hdd/poster"
+        path_folder = "/media/hdd/poster"
 elif os.path.exists("/media/usb"):
     if not isMountReadonly("/media/usb"):
-        folder_poster = "/media/usb/poster"
+        path_folder = "/media/usb/poster"
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        folder_poster = "/media/mmc/poster"
-else:
-    folder_poster = "/tmp/poster"
+        path_folder = "/media/mmc/poster"
 
-
-if not os.path.exists(folder_poster):
-    os.makedirs(folder_poster)
-if not os.path.exists(folder_poster):
-    folder_poster = "/tmp/poster"
-
-
-def intCheck():
-    try:
-        response = urlopen("http://google.com", None, 5)
-        response.close()
-    except HTTPError:
-        return False
-    except URLError:
-        return False
-    except socket.timeout:
-        return False
-    else:
-        return True
+if not os.path.exists(path_folder):
+    os.makedirs(path_folder)
 
 
 REGEX = re.compile(
@@ -121,6 +103,20 @@ REGEX = re.compile(
         r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
         r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+
+
+def intCheck():
+    try:
+        response = urlopen("http://google.com", None, 5)
+        response.close()
+    except HTTPError:
+        return False
+    except URLError:
+        return False
+    except socket.timeout:
+        return False
+    else:
+        return True
 
 
 def unicodify(s, encoding='utf-8', norm=None):
@@ -152,6 +148,7 @@ def cleantitle(text=''):
 
 
 class zStarX(VariableValue, Renderer):
+
     def __init__(self):
         adsl = intCheck()
         if not adsl:
@@ -194,60 +191,62 @@ class zStarX(VariableValue, Renderer):
                 self.evnt = self.event.getEventName().encode('utf-8')
                 self.evntNm = cleantitle(self.evnt)
                 print('clean zstar: ', self.evntNm)
-                import requests
-                try:
-                    url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(apikey), quote(self.evntNm))
-                    if PY3:
-                        url = url.encode()
-                    print('url1:', url)
-                    # Title = requests.get(url).json()['results'][0]['original_title']
-                    ids = requests.get(url).json()['results'][0]['id']
-                    # print('url1 ids:', ids)
-                except:
+                if not os.path.exists("%s/%s" % (path_folder, self.evntNm)):
+                    import requests
                     try:
-                        url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(apikey), quote(self.evntNm))
+                        url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), quote(self.evntNm))
                         if PY3:
                             url = url.encode()
-                        # print('url2:', url)
+                        print('url1:', url)
+                        # Title = requests.get(url).json()['results'][0]['original_title']
                         ids = requests.get(url).json()['results'][0]['id']
-                        # print('url2 ids:', ids)
-                    except Exception as e:
-                        print('no ids in zstar', e)
+                        # print('url1 ids:', ids)
+                    except:
+                        try:
+                            url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), quote(self.evntNm))
+                            if PY3:
+                                url = url.encode()
+                            # print('url2:', url)
+                            ids = requests.get(url).json()['results'][0]['id']
+                            # print('url2 ids:', ids)
+                        except Exception as e:
+                            print('no ids in zstar', e)
 
-                if ids != '':
-                    try:
-                        url3 = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits'.format(str(ids), str(apikey))
+                    if ids != '':
+                        try:
+                            url3 = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits'.format(str(ids), str(tmdb_api))
 
-                        data2 = requests.get(url3, timeout=10)
-                        with open(("%s/url_rate" % folder_poster), "w") as f:
-                            json.dump(data2.json(), f)
-                        myFile = open(("%s/url_rate" % folder_poster), 'r')
-                        myObject = myFile.read()
-                        u = myObject.decode('utf-8-sig')
-                        data = u.encode('utf-8')
-                        # data.encoding
-                        # data.close()
-                        data = json.loads(myObject, 'utf-8')
-                        if "vote_average" in data:
-                            ImdbRating = data['vote_average']
-                            print('ImdbRating vote average', ImdbRating)
-                        elif "imdbRating" in data:
-                            print('ok vote imdbRating')
-                            ImdbRating = data['imdbRating']
-                        else:
-                            print('no vote starx')
-                            ImdbRating = '0'
-                        print('ImdbRating: ', ImdbRating)
-                        if ImdbRating and ImdbRating != '0':
-                            rtng = int(10 * (float(ImdbRating)))
-                        else:
-                            rtng = 0
-                        range = 100
-                        value = rtng
-                        (self.range, self.value) = ((0, range), value)
-                        self.instance.show()
-                    except Exception as e:
-                        print('pass: ', e)
+                            data2 = requests.get(url3, timeout=10)
+                            with open(("%s/%s" % (path_folder, self.evntNm)), "w") as f:
+                                json.dump(data2.json(), f)
+                        except Exception as e:
+                            print('pass: ', e)
+
+                myFile = open(("%s/%s" % (path_folder, self.evntNm)), 'r')
+                myObject = myFile.read()
+                u = myObject.decode('utf-8-sig')
+                data = u.encode('utf-8')
+                # data.encoding
+                # data.close()
+                data = json.loads(myObject, 'utf-8')
+                if "vote_average" in data:
+                    ImdbRating = data['vote_average']
+                    print('ImdbRating vote average', ImdbRating)
+                elif "imdbRating" in data:
+                    print('ok vote imdbRating')
+                    ImdbRating = data['imdbRating']
+                else:
+                    print('no vote starx')
+                    ImdbRating = '0'
+                print('ImdbRating: ', ImdbRating)
+                if ImdbRating and ImdbRating != '0':
+                    rtng = int(10 * (float(ImdbRating)))
+                else:
+                    rtng = 0
+                range = 100
+                value = rtng
+                (self.range, self.value) = ((0, range), value)
+                self.instance.show()
         except Exception as e:
             print('pass: ', e)
 

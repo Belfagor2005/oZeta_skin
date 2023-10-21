@@ -42,7 +42,7 @@ class zVolz(Renderer):
         if not self.suspended:
             value = str(eDVBVolumecontrol.getInstance().getVolume())
             png = ('/usr/share/enigma2/' + cur_skin + self.pth + value + '.png')
-            # print('path png volume : ', png)            
+            # print('path png volume : ', png)
             if PY3:
                 png = png
             else:

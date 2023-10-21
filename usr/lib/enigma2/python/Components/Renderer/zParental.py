@@ -33,21 +33,19 @@ def isMountReadonly(mnt):
     return "mount: '%s' doesn't exist" % mnt
 
 
-path_folder = "/tmp/poster/"
+path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if not isMountReadonly("/media/hdd"):
-        path_folder = "/media/hdd/poster/"
+        path_folder = "/media/hdd/poster"
 elif os.path.exists("/media/usb"):
     if not isMountReadonly("/media/usb"):
-        path_folder = "/media/usb/poster/"
+        path_folder = "/media/usb/poster"
 elif os.path.exists("/media/mmc"):
     if not isMountReadonly("/media/mmc"):
-        path_folder = "/media/mmc/poster/"
+        path_folder = "/media/mmc/poster"
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):
-    path_folder = "/tmp/poster/"
 
 
 REGEX = re.compile(
@@ -72,6 +70,34 @@ REGEX = re.compile(
         r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
         r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+
+
+def unicodify(s, encoding='utf-8', norm=None):
+    if not isinstance(s, unicode):
+        s = unicode(s, encoding)
+    if norm:
+        from unicodedata import normalize
+        s = normalize(norm, s)
+    return s
+
+
+def cleantitle(text=''):
+    try:
+        print('zStarX text ->>> ', text)
+        if text != '' or text is not None or text != 'None':
+            text = REGEX.sub('', text)
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = unicodify(text)
+            text = text.lower()
+            print('zStarX text <<<- ', text)
+        else:
+            text = str(text)
+            print('zStarX text <<<->>> ', text)
+        return text
+    except Exception as e:
+        print('cleantitle error: ', e)
+        pass
 
 
 class zParental(Renderer):
@@ -105,9 +131,15 @@ class zParental(Renderer):
                     cert = re.sub("\+", "", age.group()).strip()
                 else:
                     try:
-                        eventNm = REGEX.sub("", self.event.getEventName())
-                        eventNm = eventNm.replace('ё', 'е').strip()
-                        infos_file = "{}{}.json".format(path_folder, eventNm)
+                        # eventNm = REGEX.sub("", self.event.getEventName())
+                        # eventNm = eventNm.replace('ё', 'е').strip()
+                        # infos_file = "{}{}.json".format(path_folder, eventNm)
+
+                        self.evnt = self.event.getEventName().encode('utf-8')
+                        self.evntNm = cleantitle(self.evnt)
+                        print('clean zInfoEvents: ', self.evntNm)
+                        infos_file = "{}/{}".format(path_folder, self.evntNm)
+
                         if infos_file:
                             with open(infos_file) as f:
                                 age = json.load(f)['Rated']

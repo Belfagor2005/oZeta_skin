@@ -59,8 +59,6 @@ elif os.path.exists("/media/mmc"):
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-if not os.path.exists(path_folder):
-    path_folder = "/tmp/poster"
 
 
 REGEX = re.compile(
@@ -98,21 +96,20 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def cleantitle(text=''):
     try:
-        print('zGenre text ->>> ', text)
+        print('zStarX text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
-            text = re.sub(r"[-,!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             text = unicodify(text)
-            text = text.replace('?', '')
             text = text.lower()
-            print('zGenre text <<<- ', text)
+            print('zStarX text <<<- ', text)
         else:
             text = str(text)
-            print('zGenre text <<<->>> ', text)
+            print('zStarX text <<<->>> ', text)
         return text
     except Exception as e:
-        print('zGenre cleantitle error: ', e)
+        print('cleantitle error: ', e)
         pass
 
 
@@ -134,28 +131,29 @@ class zGenre(Renderer):
         global found
         # evName = ''
         self.pstrNm = ''
-        evntNm = ''
+        # evntNm = ''
         genreTxt = ''
         self.event = self.source.event
         if not self.event:
             return
         if self.event:
             try:
-                # evntNm = cleantitle(self.event.getEventName()).rstrip().replace('ё', 'е')
-                evntNm = REGEX.sub("", self.event.getEventName())
-                evntNm = evntNm.strip().replace('ё', 'е')
-                infos_file = "{}{}.json".format(path_folder, quote(evntNm))
-                # evName = self.event.getEventName().strip().replace('ё', 'е')
-                # eventNm = REGEX.sub("", evName)
-                # infos_file = "{}{}.json".format(path_folder, eventNm)
-                # print('Patch name: ', infos_file)
+                # evntNm = REGEX.sub("", self.event.getEventName())
+                # evntNm = evntNm.strip().replace('ё', 'е')
+                # infos_file = "{}{}.json".format(path_folder, quote(evntNm))
+
+                self.evnt = self.event.getEventName().encode('utf-8')
+                self.evntNm = cleantitle(self.evnt)
+                print('clean zstar: ', self.evntNm)
+                infos_file = "{}/{}".format(path_folder, self.evntNm)
+
                 if os.path.exists(infos_file):
                     with open(infos_file) as f:
                         genreTxt = json.load(f)['Genre']
                         genreTxt = genreTxt.split(",")[0]
                         print('genreTxt name: ', genreTxt)
 
-                if not genreTxt:
+                if genreTxt != '':
                     try:
                         gData = self.event.getGenreData()
                         if gData:

@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-################################################################################
+# ###############################################################################
 #    RunningText.py - Running Text Renderer for Enigma2
 #    Version: 1.5 (04.04.2012 23:40)
 #    Copyright (C) 2010-2012 vlamo <vlamodev@gmail.com>
@@ -17,9 +17,9 @@ from __future__ import absolute_import
 #    You should have received a copy of the GNU General Public License along
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-################################################################################
+# ###############################################################################
 
-################################################################################
+# ###############################################################################
 # several changes made by Dr.Best <dr.best@dreambox-tools.info> (07-18-2013)
 # - I got rid of eCanvas, instead I took a widget as a parent and scroll the label directly into the widget (this saves performance (about 30%))
 # - new property: mShown --> this fixes the bug that this renderer keeps running in background when its not shown
@@ -27,7 +27,7 @@ from __future__ import absolute_import
 # - due to changing to eWidget in combination with eLabel transparent flag is possible (still cpu killer!)
 # - fixed left / right scrolling , fixed nowrap-mode
 # take a look at the discussion: http://board.dreambox-tools.info/showthread.php?6050-Erweiterung-Running-Text-render
-################################################################################
+# ###############################################################################
 
 from enigma import eWidget, eLabel, eTimer, ePoint, eSize, gFont, \
     RT_HALIGN_LEFT, RT_HALIGN_CENTER, RT_HALIGN_RIGHT, RT_HALIGN_BLOCK, \
