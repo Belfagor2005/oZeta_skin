@@ -24,18 +24,18 @@ import json
 import os
 import socket
 import sys
+import unicodedata
 
 
 global cur_skin, my_cur_skin, tmdb_api
 PY3 = (sys.version_info[0] == 3)
 if PY3:
-    PY3 = True
     unicode = str
     from urllib.error import URLError, HTTPError
     from urllib.request import urlopen
     from urllib.parse import quote
 else:
-    str = unicode
+    # str = unicode
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
     from urllib import quote
@@ -128,13 +128,14 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
-def cleantitle(text=''):
+def convtext(text=''):
     try:
         print('zStarX text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = text.replace('PrimaTv', '')
             text = unicodify(text)
             text = text.lower()
             print('zStarX text <<<- ', text)
@@ -189,7 +190,7 @@ class zStarX(VariableValue, Renderer):
             self.event = self.source.event
             if self.event:  # and self.instance:
                 self.evnt = self.event.getEventName().encode('utf-8')
-                self.evntNm = cleantitle(self.evnt)
+                self.evntNm = convtext(self.evnt)
                 print('clean zstar: ', self.evntNm)
                 if not os.path.exists("%s/%s" % (path_folder, self.evntNm)):
                     import requests

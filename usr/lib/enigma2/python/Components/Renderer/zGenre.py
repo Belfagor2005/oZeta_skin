@@ -17,14 +17,17 @@ import re
 import json
 import os
 import sys
+import unicodedata
 
+PY3 = (sys.version_info[0] == 3)
 
 try:
+    unicode = str
     from urllib.parse import quote
 except:
     from urllib import quote
 
-PY3 = (sys.version_info[0] == 3)
+
 curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
 PIC_PATH = '/usr/share/enigma2/%s/genre_pic/' % curskin
 found = False
@@ -94,19 +97,20 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
-def cleantitle(text=''):
+def convtext(text=''):
     try:
-        print('zStarX text ->>> ', text)
+        print('zGenre text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = text.replace('PrimaTv', '')
             text = unicodify(text)
             text = text.lower()
-            print('zStarX text <<<- ', text)
+            print('zGenre text <<<- ', text)
         else:
             text = str(text)
-            print('zStarX text <<<->>> ', text)
+            print('zGenre text <<<->>> ', text)
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -143,7 +147,7 @@ class zGenre(Renderer):
                 # infos_file = "{}{}.json".format(path_folder, quote(evntNm))
 
                 self.evnt = self.event.getEventName().encode('utf-8')
-                self.evntNm = cleantitle(self.evnt)
+                self.evntNm = convtext(self.evnt)
                 print('clean zstar: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
 

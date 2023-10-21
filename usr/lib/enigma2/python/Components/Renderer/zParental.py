@@ -11,11 +11,20 @@ from enigma import ePixmap, eTimer, loadPNG
 import json
 import re
 import os
-
+import sys
 curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
 pratePath = '/usr/share/enigma2/%s/parental' % curskin
 print('patch fsk', pratePath)
 
+PY3 = False
+PY3 = (sys.version_info[0] == 3)
+if PY3:
+    PY3 = True
+    unicode = str
+else:
+    # str = unicode
+    # unicode = unicode
+    pass
 
 def isMountReadonly(mnt):
     mount_point = ''
@@ -81,19 +90,20 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
-def cleantitle(text=''):
+def convtext(text=''):
     try:
-        print('zStarX text ->>> ', text)
+        print('zParental text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = text.replace('PrimaTv', '')
             text = unicodify(text)
             text = text.lower()
-            print('zStarX text <<<- ', text)
+            print('zParental text <<<- ', text)
         else:
             text = str(text)
-            print('zStarX text <<<->>> ', text)
+            print('zParental text <<<->>> ', text)
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -124,6 +134,7 @@ class zParental(Renderer):
             return
         fd = "{}\n{}\n{}".format(self.event.getEventName(), self.event.getShortDescription(), self.event.getExtendedDescription())
         try:
+            cert = ''
             pattern = ["\d{1,2}\+"]
             for i in pattern:
                 age = re.search(i, fd)
@@ -134,9 +145,8 @@ class zParental(Renderer):
                         # eventNm = REGEX.sub("", self.event.getEventName())
                         # eventNm = eventNm.replace('ё', 'е').strip()
                         # infos_file = "{}{}.json".format(path_folder, eventNm)
-
                         self.evnt = self.event.getEventName().encode('utf-8')
-                        self.evntNm = cleantitle(self.evnt)
+                        self.evntNm = convtext(self.evnt)
                         print('clean zInfoEvents: ', self.evntNm)
                         infos_file = "{}/{}".format(path_folder, self.evntNm)
 
@@ -163,7 +173,7 @@ class zParental(Renderer):
                                         "Passed": "UN", }.get(age)
                     except:
                         pass
-                if cert:
+                if cert != '':
                     self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
                     self.instance.show()
                 else:
