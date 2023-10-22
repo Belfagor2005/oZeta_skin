@@ -232,8 +232,8 @@
     <include filename="zSkin/skin_layercolors.xml"/>
     <include filename="zSkin/skin_plugins.xml"/>
     <include filename="zSkin/skin_logo.xml"/>
-    <include filename="zSkin/skin_infochannel.xml"/>
     <include filename="zSkin/zskin.xml"/>
+    <include filename="zSkin/skin_infochannel.xml"/>
     <!-- add lululla -->
     <include filename="zSkin/skin_team.xml"/>
     <include filename="zSkin/skin_templatepanelslulu.xml"/>

@@ -15,6 +15,7 @@
 
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
+from Components.Sources.ServiceEvent import ServiceEvent
 from Components.VariableValue import VariableValue
 from enigma import eSlider
 from Components.config import config
@@ -24,7 +25,6 @@ import json
 import os
 import socket
 import sys
-import unicodedata
 
 
 global cur_skin, my_cur_skin, tmdb_api
