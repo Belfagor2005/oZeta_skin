@@ -22,7 +22,7 @@
 # for epg, event
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" />
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" nexts="2" />
-from __future__ import absolute_import
+from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
 from Components.Sources.CurrentService import CurrentService
@@ -39,7 +39,6 @@ import re
 import socket
 import sys
 import time
-import unicodedata
 import shutil
 
 
@@ -340,7 +339,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                         newcn = canal[0]
                         self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
-                    self.logAutoDB("[AutoDB] *** service error : {} ({})".format(service, e))
+                    self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
             now_tm = time.time()
             emptyfd = 0
@@ -407,7 +406,6 @@ class zPosterX(Renderer):
         if what[0] == self.CHANGED_CLEAR:
             self.instance.hide()
         if what[0] != self.CHANGED_CLEAR:
-            print('zposter what[0] != self.CHANGED_CLEAR: ')
             servicetype = None
             try:
                 service = None

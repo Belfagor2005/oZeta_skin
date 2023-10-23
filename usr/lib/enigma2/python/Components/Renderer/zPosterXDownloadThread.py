@@ -7,6 +7,7 @@ import requests
 import socket
 import sys
 import threading
+import json
 from Components.config import config
 
 global my_cur_skin
@@ -25,6 +26,8 @@ try:
         str = unicode
 except:
     pass
+
+
 try:
     from urllib.error import URLError, HTTPError
     from urllib.request import urlopen
@@ -32,12 +35,14 @@ except:
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
 
+
 try:
     lng = config.osd.language.value
     lng = lng[:-3]
 except:
     lng = 'en'
     pass
+
 
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
@@ -63,6 +68,7 @@ try:
                 thetvdbkey = f.read()
 except:
     my_cur_skin = False
+
 
 isz = "185,278"
 
