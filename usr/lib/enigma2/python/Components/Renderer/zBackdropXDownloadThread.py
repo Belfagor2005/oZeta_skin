@@ -72,7 +72,9 @@ except:
     my_cur_skin = False
 
 
-isz = "original"
+# isz = "original"
+isz = "w300"
+
 '''
 isz = "w780"
 "backdrop_sizes": [
@@ -137,12 +139,12 @@ class zBackdropXDownloadThread(threading.Thread):
             backdrop = None
 
             chkType, fd = self.checkType(shortdesc, fulldesc)
-            if chkType == "":
-                srch = "multi"
-            elif chkType.startswith("movie"):
-                srch = "movie"
-            else:
-                srch = "tv"
+            # if chkType == "":
+                # srch = "multi"
+            # elif chkType.startswith("movie"):
+                # srch = "movie"
+            # else:
+                # srch = "tv"
 
             try:
                 if re.findall('19\d{2}|20\d{2}', title):
@@ -154,7 +156,7 @@ class zBackdropXDownloadThread(threading.Thread):
                 pass
             # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, tmdb_api, quote(title))
 
-            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(srch, tmdb_api, quote(title))
+            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(chkType, tmdb_api, quote(title))
             if year:
                 url_tmdb += "&year={}".format(year)
             if lng:
@@ -164,7 +166,7 @@ class zBackdropXDownloadThread(threading.Thread):
             if backdrop and backdrop['results'] and backdrop['results'][0] and backdrop['results'][0]['backdrop_path']:
                 url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz.split(",")[0]), backdrop['results'][0]['backdrop_path'])
                 self.savebackdrop(dwn_backdrop, url_backdrop)
-                return True, "[SUCCESS : tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_backdrop)
+                return True, "[SUCCESS backdrop: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_backdrop)
             else:
                 return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tmdb)
         except Exception as e:
@@ -172,6 +174,153 @@ class zBackdropXDownloadThread(threading.Thread):
                 os.remove(dwn_backdrop)
             return False, "[ERROR : tmdb] {} [{}-{}] => {} ({})".format(title, chkType, year, url_tmdb, str(e))
 
+    def search_tvdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
+        try:
+            series_nb = -1
+
+            chkType, fd = self.checkType(shortdesc, fulldesc)
+
+            ptitle = self.UNAC(title)
+
+            year = re.findall('19\d{2}|20\d{2}', fd)
+            if len(year) > 0:
+                year = year[0]
+            else:
+                year = ''
+
+            url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(quote(title))
+            url_read = requests.get(url_tvdbg).text
+            series_id = re.findall('<seriesid>(.*?)</seriesid>', url_read)
+            series_name = re.findall('<SeriesName>(.*?)</SeriesName>', url_read)
+            series_year = re.findall('<FirstAired>(19\d{2}|20\d{2})-\d{2}-\d{2}</FirstAired>', url_read)
+            i = 0
+            for iseries_year in series_year:
+                if year == '':
+                    series_nb = 0
+                    break
+                elif year == iseries_year:
+                    series_nb = i
+                    break
+                i += 1
+
+            backdrop = ""
+            if series_nb >= 0 and series_id and series_id[series_nb]:
+                if series_name and series_name[series_nb]:
+                    series_name = self.UNAC(series_name[series_nb])
+                else:
+                    series_name = ''
+                if self.PMATCH(ptitle, series_name):
+                    url_tvdb = "https://thetvdb.com/api/{}/series/{}".format(thetvdbkey, series_id[series_nb])
+                    if lng:
+                        url_tvdb += "/{}".format(lng)
+                    else:
+                        url_tvdb += "/en"
+
+                    url_read = requests.get(url_tvdb).text
+                    backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
+
+            if backdrop and backdrop[0]:
+                url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
+                self.savebackdrop(dwn_backdrop, url_backdrop)
+                return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
+            else:
+                return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
+
+        except Exception as e:
+            if os.path.exists(dwn_backdrop):
+                os.remove(dwn_backdrop)
+            return False, "[ERROR : tvdb] {} => {} ({})".format(title, url_tvdbg, str(e))
+
+    def search_imdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
+        try:
+            url_backdrop = None
+
+            chkType, fd = self.checkType(shortdesc, fulldesc)
+
+            ptitle = self.UNAC(title)
+
+            aka = re.findall('\((.*?)\)', fd)
+            if len(aka) > 1 and not aka[1].isdigit():
+                aka = aka[1]
+            elif len(aka) > 0 and not aka[0].isdigit():
+                aka = aka[0]
+            else:
+                aka = None
+            if aka:
+                paka = self.UNAC(aka)
+            else:
+                paka = ''
+
+            year = re.findall('19\d{2}|20\d{2}', fd)
+            if len(year) > 0:
+                year = year[0]
+            else:
+                year = ''
+
+            imsg = ''
+            url_mimdb = ''
+            url_imdb = ''
+
+            if aka and aka != title:
+                url_mimdb = "https://m.imdb.com/find?q={}%20({})".format(quote(title), quote(aka))
+            else:
+                url_mimdb = "https://m.imdb.com/find?q={}".format(quote(title))
+            url_read = requests.get(url_mimdb).text
+            rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
+            url_imdb = rc.findall(url_read)
+
+            if len(url_imdb) == 0 and aka:
+                url_mimdb = "https://m.imdb.com/find?q={}".format(quote(title))
+                url_read = requests.get(url_mimdb).text
+                rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
+                url_imdb = rc.findall(url_read)
+
+            len_imdb = len(url_imdb)
+            idx_imdb = 0
+            pfound = False
+
+            for imdb in url_imdb:
+                imdb = list(imdb)
+                imdb[1] = self.UNAC(imdb[1])
+                tmp = re.findall('aka <i>"(.*?)"</i>', imdb[4])
+                if tmp:
+                    imdb[4] = tmp[0]
+                else:
+                    imdb[4] = ''
+                imdb[4] = self.UNAC(imdb[4])
+                imdb_backdrop = re.search("(.*?)._V1_.*?.jpg", imdb[0])
+                if imdb_backdrop:
+                    if imdb[3] == '':
+                        if year and year != '':
+                            if year == imdb[2]:
+                                url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
+                                imsg = "Found title : '{}', aka : '{}', year : '{}'".format(imdb[1], imdb[4], imdb[2])
+                                if self.PMATCH(ptitle, imdb[1]) or self.PMATCH(ptitle, imdb[4]) or (paka != '' and self.PMATCH(paka, imdb[1])) or (paka != '' and self.PMATCH(paka, imdb[4])):
+                                    pfound = True
+                                    break
+                            elif not url_backdrop and (int(year) - 1 == int(imdb[2]) or int(year) + 1 == int(imdb[2])):
+                                url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
+                                imsg = "Found title : '{}', aka : '{}', year : '+/-{}'".format(imdb[1], imdb[4], imdb[2])
+                                if ptitle == imdb[1] or ptitle == imdb[4] or (paka != '' and paka == imdb[1]) or (paka != '' and paka == imdb[4]):
+                                    pfound = True
+                                    break
+                        else:
+                            url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
+                            imsg = "Found title : '{}', aka : '{}', year : ''".format(imdb[1], imdb[4])
+                            if ptitle == imdb[1] or ptitle == imdb[4] or (paka != '' and paka == imdb[1]) or (paka != '' and paka == imdb[4]):
+                                pfound = True
+                                break
+                idx_imdb += 1
+
+            if url_backdrop and pfound:
+                self.savebackdrop(dwn_backdrop, url_backdrop)
+                return True, "[SUCCESS url_backdrop: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(title, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_backdrop)
+            else:
+                return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(title, chkType, year, url_mimdb, len_imdb)
+        except Exception as e:
+            if os.path.exists(dwn_backdrop):
+                os.remove(dwn_backdrop)
+            return False, "[ERROR : imdb] {} [{}-{}] => {} ({})".format(title, chkType, year, url_mimdb, str(e))
     def search_programmetv_google(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
         try:
             url_ptv = ''
@@ -215,7 +364,7 @@ class zBackdropXDownloadThread(threading.Thread):
                         url_backdrop = re.sub('crop-from/top/', '', url_backdrop)
                         self.savebackdrop(dwn_backdrop, url_backdrop)
                         if self.verifybackdrop(dwn_backdrop) and url_backdrop_size:
-                            return True, "[SUCCESS : programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_backdrop, url_backdrop_size, ptv_id)
+                            return True, "[SUCCESS url_backdrop: programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_backdrop, url_backdrop_size, ptv_id)
                         else:
                             if os.path.exists(dwn_backdrop):
                                 os.remove(dwn_backdrop)
@@ -336,7 +485,7 @@ class zBackdropXDownloadThread(threading.Thread):
                 url_backdrop = re.sub('/\d+x\d+/', "/" + re.sub(',', 'x', isz) + "/", backdrop)
                 self.savebackdrop(dwn_backdrop, url_backdrop)
                 if self.verifybackdrop(dwn_backdrop):
-                    return True, "[SUCCESS : molotov-google] {} ({}) [{}] => {} => {} => {}".format(title, channel, chkType, imsg, url_mgoo, url_backdrop)
+                    return True, "[SUCCESS url_backdrop: molotov-google] {} ({}) [{}] => {} => {} => {}".format(title, channel, chkType, imsg, url_mgoo, url_backdrop)
                 else:
                     if os.path.exists(dwn_backdrop):
                         os.remove(dwn_backdrop)
@@ -400,7 +549,7 @@ class zBackdropXDownloadThread(threading.Thread):
                     break
 
             if backdrop:
-                return True, "[SUCCESS : google] {} [{}-{}] => {} => {}".format(title, chkType, year, url_google, url_backdrop)
+                return True, "[SUCCESS backdrop: google] {} [{}-{}] => {} => {}".format(title, chkType, year, url_google, url_backdrop)
             else:
                 if os.path.exists(dwn_backdrop):
                     os.remove(dwn_backdrop)
@@ -410,154 +559,6 @@ class zBackdropXDownloadThread(threading.Thread):
             if os.path.exists(dwn_backdrop):
                 os.remove(dwn_backdrop)
             return False, "[ERROR : google] {} [{}-{}] => {} => {} ({})".format(title, chkType, year, url_google, url_backdrop, str(e))
-
-    def search_tvdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
-        try:
-            series_nb = -1
-
-            chkType, fd = self.checkType(shortdesc, fulldesc)
-
-            ptitle = self.UNAC(title)
-
-            year = re.findall('19\d{2}|20\d{2}', fd)
-            if len(year) > 0:
-                year = year[0]
-            else:
-                year = ''
-
-            url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(quote(title))
-            url_read = requests.get(url_tvdbg).text
-            series_id = re.findall('<seriesid>(.*?)</seriesid>', url_read)
-            series_name = re.findall('<SeriesName>(.*?)</SeriesName>', url_read)
-            series_year = re.findall('<FirstAired>(19\d{2}|20\d{2})-\d{2}-\d{2}</FirstAired>', url_read)
-            i = 0
-            for iseries_year in series_year:
-                if year == '':
-                    series_nb = 0
-                    break
-                elif year == iseries_year:
-                    series_nb = i
-                    break
-                i += 1
-
-            backdrop = ""
-            if series_nb >= 0 and series_id and series_id[series_nb]:
-                if series_name and series_name[series_nb]:
-                    series_name = self.UNAC(series_name[series_nb])
-                else:
-                    series_name = ''
-                if self.PMATCH(ptitle, series_name):
-                    url_tvdb = "https://thetvdb.com/api/{}/series/{}".format(thetvdbkey, series_id[series_nb])
-                    if lng:
-                        url_tvdb += "/{}".format(lng)
-                    else:
-                        url_tvdb += "/en"
-
-                    url_read = requests.get(url_tvdb).text
-                    backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
-
-            if backdrop and backdrop[0]:
-                url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
-                self.savebackdrop(dwn_backdrop, url_backdrop)
-                return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
-            else:
-                return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
-
-        except Exception as e:
-            if os.path.exists(dwn_backdrop):
-                os.remove(dwn_backdrop)
-            return False, "[ERROR : tvdb] {} => {} ({})".format(title, url_tvdbg, str(e))
-
-    def search_imdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
-        try:
-            url_backdrop = None
-
-            chkType, fd = self.checkType(shortdesc, fulldesc)
-
-            ptitle = self.UNAC(title)
-
-            aka = re.findall('\((.*?)\)', fd)
-            if len(aka) > 1 and not aka[1].isdigit():
-                aka = aka[1]
-            elif len(aka) > 0 and not aka[0].isdigit():
-                aka = aka[0]
-            else:
-                aka = None
-            if aka:
-                paka = self.UNAC(aka)
-            else:
-                paka = ''
-
-            year = re.findall('19\d{2}|20\d{2}', fd)
-            if len(year) > 0:
-                year = year[0]
-            else:
-                year = ''
-
-            imsg = ''
-            url_mimdb = ''
-            url_imdb = ''
-
-            if aka and aka != title:
-                url_mimdb = "https://m.imdb.com/find?q={}%20({})".format(quote(title), quote(aka))
-            else:
-                url_mimdb = "https://m.imdb.com/find?q={}".format(quote(title))
-            url_read = requests.get(url_mimdb).text
-            rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
-            url_imdb = rc.findall(url_read)
-
-            if len(url_imdb) == 0 and aka:
-                url_mimdb = "https://m.imdb.com/find?q={}".format(quote(title))
-                url_read = requests.get(url_mimdb).text
-                rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
-                url_imdb = rc.findall(url_read)
-
-            len_imdb = len(url_imdb)
-            idx_imdb = 0
-            pfound = False
-
-            for imdb in url_imdb:
-                imdb = list(imdb)
-                imdb[1] = self.UNAC(imdb[1])
-                tmp = re.findall('aka <i>"(.*?)"</i>', imdb[4])
-                if tmp:
-                    imdb[4] = tmp[0]
-                else:
-                    imdb[4] = ''
-                imdb[4] = self.UNAC(imdb[4])
-                imdb_backdrop = re.search("(.*?)._V1_.*?.jpg", imdb[0])
-                if imdb_backdrop:
-                    if imdb[3] == '':
-                        if year and year != '':
-                            if year == imdb[2]:
-                                url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
-                                imsg = "Found title : '{}', aka : '{}', year : '{}'".format(imdb[1], imdb[4], imdb[2])
-                                if self.PMATCH(ptitle, imdb[1]) or self.PMATCH(ptitle, imdb[4]) or (paka != '' and self.PMATCH(paka, imdb[1])) or (paka != '' and self.PMATCH(paka, imdb[4])):
-                                    pfound = True
-                                    break
-                            elif not url_backdrop and (int(year) - 1 == int(imdb[2]) or int(year) + 1 == int(imdb[2])):
-                                url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
-                                imsg = "Found title : '{}', aka : '{}', year : '+/-{}'".format(imdb[1], imdb[4], imdb[2])
-                                if ptitle == imdb[1] or ptitle == imdb[4] or (paka != '' and paka == imdb[1]) or (paka != '' and paka == imdb[4]):
-                                    pfound = True
-                                    break
-                        else:
-                            url_backdrop = "{}._V1_UY278,1,185,278_AL_.jpg".format(imdb_backdrop.group(1))
-                            imsg = "Found title : '{}', aka : '{}', year : ''".format(imdb[1], imdb[4])
-                            if ptitle == imdb[1] or ptitle == imdb[4] or (paka != '' and paka == imdb[1]) or (paka != '' and paka == imdb[4]):
-                                pfound = True
-                                break
-                idx_imdb += 1
-
-            if url_backdrop and pfound:
-                self.savebackdrop(dwn_backdrop, url_backdrop)
-                return True, "[SUCCESS : imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(title, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_backdrop)
-            else:
-                return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(title, chkType, year, url_mimdb, len_imdb)
-        except Exception as e:
-            if os.path.exists(dwn_backdrop):
-                os.remove(dwn_backdrop)
-            return False, "[ERROR : imdb] {} [{}-{}] => {} ({})".format(title, chkType, year, url_mimdb, str(e))
 
     def savebackdrop(self, dwn_backdrop, url_backdrop):
         print('url backdrop= ', url_backdrop)
@@ -608,16 +609,16 @@ class zBackdropXDownloadThread(threading.Thread):
         else:
             fd = ''
 
-        srch = ""
+        srch = "multi"
         fds = fd[:60]
         for i in self.checkMovie:
             if i in fds.lower():
-                srch = "movie:"+i
+                srch = "movie"  # :" + i
                 break
 
         for i in self.checkTV:
             if i in fds.lower():
-                srch = "tv:" + i
+                srch = "tv"  # :" + i
                 break
 
         return srch, fd
@@ -629,8 +630,7 @@ class zBackdropXDownloadThread(threading.Thread):
         string = re.sub(u"u0026", "&", string)
         string = re.sub(u"u003d", "=", string)
         string = html_parser.unescape(string)
-#       string = re.sub(r"[-,!/\.\":']",' ',string)
-        string = re.sub(r"[,!\.\"]", ' ', string)
+        string = re.sub(r"[,!?\.\"]", ' ', string)
         string = re.sub(r"[-/:']", '', string)
         string = re.sub(u"[ÀÁÂÃÄàáâãäåª]", 'a', string)
         string = re.sub(u"[ÈÉÊËèéêë]", 'e', string)
@@ -662,5 +662,5 @@ class zBackdropXDownloadThread(threading.Thread):
         for id in textA:
             if id in textB:
                 cId += len(id)
-        cId = 100 * cId/lId
+        cId = 100 * cId / lId
         return cId
