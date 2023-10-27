@@ -226,17 +226,18 @@ class zStarX(VariableValue, Renderer):
             if self.event:  # and self.instance:
                 self.evnt = self.event.getEventName()  # .encode('utf-8')
                 self.evntNm = convtext(self.evnt)
+                dwn_infos = "{}/{}".format(path_folder, self.evntNm)
                 print('clean zstar: ', self.evntNm)
-                if not os.path.exists("%s/%s" % (path_folder, self.evntNm)):
-                    try:
-                        url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
-                        if PY3:
-                            url = url.encode()
-                        url = checkRedirect(url)
-                        print('url1:', url)
-                        ids = url['results'][0]['id']
-                        print('url1 ids:', ids)
-                    except:
+                if not os.path.exists(dwn_infos):
+                    # try:
+                        # url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
+                        # if PY3:
+                            # url = url.encode()
+                        # url = checkRedirect(url)
+                        # print('url1:', url)
+                        # ids = url['results'][0]['id']
+                        # print('url1 ids:', ids)
+                    # except:
                         try:
                             url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                             if PY3:
@@ -248,31 +249,31 @@ class zStarX(VariableValue, Renderer):
                         except Exception as e:
                             print('Exception no ids in zstar ', e)
 
-                    if ids != '':
-                        try:
-                            data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)                        
-                            if PY3:
-                                import six
-                                data = six.ensure_str(data)
+                        if ids != '':
+                            try:
+                                data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)                        
+                                if PY3:
+                                    import six
+                                    data = six.ensure_str(data)
 
-                            dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-                            data = json.load(urlopen(data))
-                            open(dwn_infos, "w").write(json.dumps(data))                            
+                                if data:
+                                    data = json.load(urlopen(data))
+                                    open(dwn_infos, "w").write(json.dumps(data))
+                                else:
+                                    data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
+                                    if PY3:
+                                        import six
+                                        data = six.ensure_str(data)
+                                    print('pass Exception: ', e)
+                                    data = json.load(urlopen(data))
+                                    open(dwn_infos, "w").write(json.dumps(data))                                    
+                                    
+                            except Exception as e:
+                                print('pass Exception: ', e)
                                 
-                        except Exception as e:
-                            data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
-                            if PY3:
-                                import six
-                                data = six.ensure_str(data)
-
-                            print('pass Exception: ', e)
-                            dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-                            data = json.load(urlopen(data))
-                            open(dwn_infos, "w").write(json.dumps(data))
-                            
-                if os.path.exists("%s/%s" % (path_folder, self.evntNm)):
+                if os.path.exists(dwn_infos):
                     try:
-                        with open("%s/%s" % (path_folder, self.evntNm)) as f:
+                        with open(dwn_infos) as f:
                             data = json.load(f)
                             imdbRating = ''
                             if "vote_average" in data:
