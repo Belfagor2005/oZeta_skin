@@ -203,7 +203,7 @@ def convtext(text=''):
             text = text.lower()
             print('zposter text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zposter text <<<->>> ', text)
         return text
     except Exception as e:
@@ -476,9 +476,6 @@ class zPosterX(Renderer):
     def showPoster(self):
         self.instance.hide()
         if self.canal[5]:
-            # pstcanal = convtext(self.canal[5])
-            # pstrNm = self.path + pstcanal + ".jpg"
-            # pstrNm = str(pstrNm)
             if os.path.exists(self.pstrNm):
                 self.logPoster("[LOAD : showPoster] {}".format(self.pstrNm))
                 self.instance.setPixmap(loadJPG(self.pstrNm))
@@ -491,7 +488,6 @@ class zPosterX(Renderer):
             pstcanal = convtext(self.canal[5])
             pstrNm = self.path + pstcanal + ".jpg"
             pstrNm = str(pstrNm)
-            # pstrNm = self.pstrNm
             self.pstrNm = pstrNm
             loop = 180
             found = None

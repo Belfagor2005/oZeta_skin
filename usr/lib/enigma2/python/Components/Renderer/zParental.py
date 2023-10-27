@@ -102,7 +102,7 @@ def convtext(text=''):
             text = text.lower()
             print('zParental text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zParental text <<<->>> ', text)
         return text
     except Exception as e:
@@ -142,10 +142,7 @@ class zParental(Renderer):
                     cert = re.sub("\+", "", age.group()).strip()
                 else:
                     try:
-                        # eventNm = REGEX.sub("", self.event.getEventName())
-                        # eventNm = eventNm.replace('ё', 'е').strip()
-                        # infos_file = "{}{}.json".format(path_folder, eventNm)
-                        self.evnt = self.event.getEventName().encode('utf-8')
+                        self.evnt = self.event.getEventName()  # .encode('utf-8')
                         self.evntNm = convtext(self.evnt)
                         print('clean zInfoEvents: ', self.evntNm)
                         infos_file = "{}/{}".format(path_folder, self.evntNm)

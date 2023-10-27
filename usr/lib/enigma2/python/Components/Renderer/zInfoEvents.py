@@ -143,7 +143,7 @@ def convtext(text=''):
             text = text.lower()
             print('zInfoEvents text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zInfoEvents text <<<->>> ', text)
         return text
     except Exception as e:
@@ -178,7 +178,6 @@ class zInfoEvents(Renderer, VariableText):
     GUI_WIDGET = eLabel
 
     def changed(self, what):
-
         if what[0] == self.CHANGED_CLEAR:
             return self.text
         if what[0] != self.CHANGED_CLEAR:
@@ -188,10 +187,7 @@ class zInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event:
             self.delay2()
-            # evntNm = REGEX.sub("", self.event.getEventName())
-            # self.evntNm = evntNm.strip().replace('ё', 'е')
-            # infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
-            self.evnt = self.event.getEventName().encode('utf-8')
+            self.evnt = self.event.getEventName()  # .encode('utf-8')
             self.evntNm = convtext(self.evnt)
             print('clean zInfoEvents: ', self.evntNm)
             infos_file = "{}/{}".format(path_folder, self.evntNm)
@@ -258,8 +254,7 @@ class zInfoEvents(Renderer, VariableText):
                             if os.path.exists("/tmp/rating"):
                                 os.remove("/tmp/rating")
                                 print('/tmp/rating removed')
-                                self.text = ''
-                            return self.text
+                        return self.text
                 except Exception as e:
                     print(e)
             else:
@@ -286,9 +281,7 @@ class zInfoEvents(Renderer, VariableText):
                 url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quote(title))
                 data_omdb = json.load(urlopen(url_omdb))
                 # dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
-
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-
                 open(dwn_infos, "w").write(json.dumps(data_omdb))
 
             except:
@@ -330,8 +323,6 @@ class zInfoEvents(Renderer, VariableText):
             events = epgcache.lookupEvent(['IBDCT', (ref, 0, -1, -1)])
             for i in range(9):
                 titleNxt = events[i][4]
-                # self.evntNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
-                # infos_file = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 self.evntNm = convtext(titleNxt)
                 print('clean epgs: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)

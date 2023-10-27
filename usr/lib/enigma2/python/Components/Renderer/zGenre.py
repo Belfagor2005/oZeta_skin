@@ -109,7 +109,7 @@ def convtext(text=''):
             text = text.lower()
             print('zGenre text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zGenre text <<<->>> ', text)
         return text
     except Exception as e:
@@ -142,11 +142,7 @@ class zGenre(Renderer):
             return
         if self.event:
             try:
-                # evntNm = REGEX.sub("", self.event.getEventName())
-                # evntNm = evntNm.strip().replace('ё', 'е')
-                # infos_file = "{}{}.json".format(path_folder, quote(evntNm))
-
-                self.evnt = self.event.getEventName().encode('utf-8')
+                self.evnt = self.event.getEventName()  # .encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 print('clean zstar: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
@@ -189,7 +185,6 @@ class zGenre(Renderer):
                     self.instance.setScale(1)
                     self.instance.show()
                     # return
-
                 if not found:
                     try:
                         print('No Found Genre : ', found)

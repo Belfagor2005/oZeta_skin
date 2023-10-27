@@ -15,7 +15,6 @@
 # <widget source="session.Event_Now" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
 # <widget source="session.CurrentService" render="zBackdropX" position="100,100" size="680,1000" nexts="3" />
 # for ch,
-#
 # <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
 # for epg, event
 # <widget source="Event" render="zBackdropX" position="100,100" size="680,1000" />
@@ -201,7 +200,7 @@ def convtext(text=''):
             text = text.lower()
             print('zBackdropX text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zBackdropX text <<<->>> ', text)
         return text
     except Exception as e:

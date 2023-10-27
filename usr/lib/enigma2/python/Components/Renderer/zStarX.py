@@ -8,10 +8,10 @@
 # or
 # <widget source="ServiceEvent" render="zStarX" pixmap="xtra/star.png" position="750,390" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 # edit lululla 05-2022
-# <ePixmap pixmap="MetriXconfluencExp/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
-# <widget source="session.Event_Now" render="zStarX" pixmap="MetriXconfluencExp/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
-# <ePixmap pixmap="MetriXconfluencExp/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
-# <widget source="session.Event_Next" render="zStarX" pixmap="MetriXconfluencExp/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+# <ePixmap pixmap="oZeta-FHD/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
+# <widget source="session.Event_Now" render="zStarX" pixmap="oZeta-FHD/menu/staryellow.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+# <ePixmap pixmap="menu/stargrey.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
+# <widget source="session.Event_Next" render="zStarX" pixmap="oZeta-FHD/menu/staryellow.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
@@ -39,6 +39,16 @@ else:
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
     from urllib import quote
+
+
+try:
+    from Components.config import config
+    lng = config.osd.language.value
+    lng = lng[:-3]
+except:
+    lng = 'en'
+    pass
+print('language: ', lng)
 
 
 formatImg = 'w185'
@@ -79,6 +89,31 @@ elif os.path.exists("/media/mmc"):
 
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
+
+
+def checkRedirect(url):
+    # print("*** check redirect ***")
+    import requests
+    from requests.adapters import HTTPAdapter, Retry
+    hdr = {"User-Agent": "Enigma2 - Enigma2 Plugin"}
+    content = ""
+    retries = Retry(total=1, backoff_factor=1)
+    adapter = HTTPAdapter(max_retries=retries)
+    http = requests.Session()
+    http.mount("http://", adapter)
+    http.mount("https://", adapter)
+    try:
+        r = http.get(url, headers=hdr, timeout=(10, 30), verify=False)
+        r.raise_for_status()
+        if r.status_code == requests.codes.ok:
+            try:
+                content = r.json()
+            except Exception as e:
+                print(e)
+        return content
+    except Exception as e:
+        print('next ret: ', e)
+        return content
 
 
 REGEX = re.compile(
@@ -140,7 +175,7 @@ def convtext(text=''):
             text = text.lower()
             print('zStarX text <<<- ', text)
         else:
-            text = str(text)
+            text = text
             print('zStarX text <<<->>> ', text)
         return text
     except Exception as e:
@@ -189,65 +224,78 @@ class zStarX(VariableValue, Renderer):
             ids = ''
             self.event = self.source.event
             if self.event:  # and self.instance:
-                self.evnt = self.event.getEventName().encode('utf-8')
+                self.evnt = self.event.getEventName()  # .encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 print('clean zstar: ', self.evntNm)
                 if not os.path.exists("%s/%s" % (path_folder, self.evntNm)):
-                    import requests
                     try:
-                        url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), quote(self.evntNm))
+                        url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                         if PY3:
                             url = url.encode()
+                        url = checkRedirect(url)
                         print('url1:', url)
-                        # Title = requests.get(url).json()['results'][0]['original_title']
-                        ids = requests.get(url).json()['results'][0]['id']
-                        # print('url1 ids:', ids)
+                        ids = url['results'][0]['id']
+                        print('url1 ids:', ids)
                     except:
                         try:
-                            url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), quote(self.evntNm))
+                            url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                             if PY3:
                                 url = url.encode()
-                            # print('url2:', url)
-                            ids = requests.get(url).json()['results'][0]['id']
-                            # print('url2 ids:', ids)
+                            url = checkRedirect(url)
+                            print('url2:', url)
+                            ids = url['results'][0]['id']
+                            print('url2 ids:', ids)
                         except Exception as e:
-                            print('no ids in zstar', e)
+                            print('Exception no ids in zstar ', e)
 
                     if ids != '':
                         try:
-                            url3 = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits'.format(str(ids), str(tmdb_api))
+                            data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)                        
+                            if PY3:
+                                import six
+                                data = six.ensure_str(data)
 
-                            data2 = requests.get(url3, timeout=10)
-                            with open(("%s/%s" % (path_folder, self.evntNm)), "w") as f:
-                                json.dump(data2.json(), f)
+                            dwn_infos = "{}/{}".format(path_folder, self.evntNm)
+                            data = json.load(urlopen(data))
+                            open(dwn_infos, "w").write(json.dumps(data))                            
+                                
                         except Exception as e:
-                            print('pass: ', e)
+                            data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
+                            if PY3:
+                                import six
+                                data = six.ensure_str(data)
 
-                myFile = open(("%s/%s" % (path_folder, self.evntNm)), 'r')
-                myObject = myFile.read()
-                u = myObject.decode('utf-8-sig')
-                data = u.encode('utf-8')
-                # data.encoding
-                # data.close()
-                data = json.loads(myObject, 'utf-8')
-                if "vote_average" in data:
-                    ImdbRating = data['vote_average']
-                    print('ImdbRating vote average', ImdbRating)
-                elif "imdbRating" in data:
-                    print('ok vote imdbRating')
-                    ImdbRating = data['imdbRating']
-                else:
-                    print('no vote starx')
-                    ImdbRating = '0'
-                print('ImdbRating: ', ImdbRating)
-                if ImdbRating and ImdbRating != '0':
-                    rtng = int(10 * (float(ImdbRating)))
-                else:
-                    rtng = 0
-                range = 100
-                value = rtng
-                (self.range, self.value) = ((0, range), value)
-                self.instance.show()
+                            print('pass Exception: ', e)
+                            dwn_infos = "{}/{}".format(path_folder, self.evntNm)
+                            data = json.load(urlopen(data))
+                            open(dwn_infos, "w").write(json.dumps(data))
+                            
+                if os.path.exists("%s/%s" % (path_folder, self.evntNm)):
+                    try:
+                        with open("%s/%s" % (path_folder, self.evntNm)) as f:
+                            data = json.load(f)
+                            imdbRating = ''
+                            if "vote_average" in data:
+                                ImdbRating = data['vote_average']
+                                print('ImdbRating vote average', ImdbRating)
+                            elif "imdbRating" in data:
+                                print('ok vote imdbRating')
+                                ImdbRating = data['imdbRating']
+                            else:
+                                print('no vote starx')
+                                ImdbRating = '0'
+                            print('ImdbRating: ', ImdbRating)
+                            if ImdbRating and ImdbRating != '0':
+                                rtng = int(10 * (float(ImdbRating)))
+                            else:
+                                rtng = 0
+                            range = 100
+                            value = rtng
+                            (self.range, self.value) = ((0, range), value)
+                            self.instance.show()
+                    except Exception as e:
+                        print('ImdbRating Exception: ', e)    
+
         except Exception as e:
             print('pass: ', e)
 
