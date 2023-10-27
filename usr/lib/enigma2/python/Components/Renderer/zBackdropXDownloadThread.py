@@ -139,13 +139,6 @@ class zBackdropXDownloadThread(threading.Thread):
             backdrop = None
 
             chkType, fd = self.checkType(shortdesc, fulldesc)
-            # if chkType == "":
-                # srch = "multi"
-            # elif chkType.startswith("movie"):
-                # srch = "movie"
-            # else:
-                # srch = "tv"
-
             try:
                 if re.findall('19\d{2}|20\d{2}', title):
                     year = re.findall('19\d{2}|20\d{2}', fd)[1]
@@ -321,6 +314,7 @@ class zBackdropXDownloadThread(threading.Thread):
             if os.path.exists(dwn_backdrop):
                 os.remove(dwn_backdrop)
             return False, "[ERROR : imdb] {} [{}-{}] => {} ({})".format(title, chkType, year, url_mimdb, str(e))
+
     def search_programmetv_google(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
         try:
             url_ptv = ''

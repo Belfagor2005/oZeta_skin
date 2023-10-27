@@ -57,6 +57,16 @@ if not os.path.exists(path_folder):
     os.makedirs(path_folder)
 
 
+def OnclearMem():
+    try:
+        os.system('sync')
+        os.system('echo 1 > /proc/sys/vm/drop_caches')
+        os.system('echo 2 > /proc/sys/vm/drop_caches')
+        os.system('echo 3 > /proc/sys/vm/drop_caches')
+    except:
+        pass
+
+
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
         r'(: odc.\d+)|'
@@ -97,13 +107,14 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = text.replace('PrimaTv', '')
+            text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
             print('zParental text <<<- ', text)
         else:
             text = text
             print('zParental text <<<->>> ', text)
+        # OnclearMem()
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -143,31 +154,34 @@ class zParental(Renderer):
                 else:
                     try:
                         self.evnt = self.event.getEventName()  # .encode('utf-8')
-                        self.evntNm = convtext(self.evnt)
-                        print('clean zInfoEvents: ', self.evntNm)
-                        infos_file = "{}/{}".format(path_folder, self.evntNm)
+                        
+                        if self.evnt and self.evnt != 'None' or self.evnt != None:
+                        
+                            self.evntNm = convtext(self.evnt)
+                            # print('clean zInfoEvents: ', self.evntNm)
+                            infos_file = "{}/{}".format(path_folder, self.evntNm)
 
-                        if infos_file:
-                            with open(infos_file) as f:
-                                age = json.load(f)['Rated']
-                                cert = {
-                                        "TV-G": "0",
-                                        "G": "0",
-                                        "TV-Y7": "6",
-                                        "TV-Y": "6",
-                                        "TV-10": "10",
-                                        "TV-12": "12",
-                                        "TV-14": "14",
-                                        "TV-PG": "16",
-                                        "PG-13": "16",
-                                        "PG": "16",
-                                        "TV-MA": "18",
-                                        "R": "18",
-                                        "N/A": "UN",
-                                        "Not Rated": "UN",
-                                        "Unrated": "UN",
-                                        "": "UN",
-                                        "Passed": "UN", }.get(age)
+                            if infos_file:
+                                with open(infos_file) as f:
+                                    age = json.load(f)['Rated']
+                                    cert = {
+                                            "TV-G": "0",
+                                            "G": "0",
+                                            "TV-Y7": "6",
+                                            "TV-Y": "6",
+                                            "TV-10": "10",
+                                            "TV-12": "12",
+                                            "TV-14": "14",
+                                            "TV-PG": "16",
+                                            "PG-13": "16",
+                                            "PG": "16",
+                                            "TV-MA": "18",
+                                            "R": "18",
+                                            "N/A": "UN",
+                                            "Not Rated": "UN",
+                                            "Unrated": "UN",
+                                            "": "UN",
+                                            "Passed": "UN", }.get(age)
                     except:
                         pass
                 if cert != '':

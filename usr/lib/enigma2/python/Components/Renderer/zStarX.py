@@ -116,6 +116,16 @@ def checkRedirect(url):
         return content
 
 
+def OnclearMem():
+    try:
+        os.system('sync')
+        os.system('echo 1 > /proc/sys/vm/drop_caches')
+        os.system('echo 2 > /proc/sys/vm/drop_caches')
+        os.system('echo 3 > /proc/sys/vm/drop_caches')
+    except:
+        pass
+
+
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
         r'(: odc.\d+)|'
@@ -170,7 +180,7 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = text.replace('PrimaTv', '')
+            text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
             print('zStarX text <<<- ', text)
@@ -223,12 +233,14 @@ class zStarX(VariableValue, Renderer):
             ImdbRating = "0"
             ids = ''
             self.event = self.source.event
-            if self.event:  # and self.instance:
+            if self.event and self.event != 'None' or self.event != None:  # and self.instance:
                 self.evnt = self.event.getEventName()  # .encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-                print('clean zstar: ', self.evntNm)
+                # print('clean zstar: ', self.evntNm)
+                
                 if not os.path.exists(dwn_infos):
+                        OnclearMem()
                     # try:
                         # url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                         # if PY3:
@@ -251,7 +263,7 @@ class zStarX(VariableValue, Renderer):
 
                         if ids != '':
                             try:
-                                data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)                        
+                                data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language) 
                                 if PY3:
                                     import six
                                     data = six.ensure_str(data)
@@ -264,26 +276,28 @@ class zStarX(VariableValue, Renderer):
                                     if PY3:
                                         import six
                                         data = six.ensure_str(data)
-                                    print('pass Exception: ', e)
-                                    data = json.load(urlopen(data))
-                                    open(dwn_infos, "w").write(json.dumps(data))                                    
+                                    print('pass ids Else: ', e)
+                                    if data:
+                                        data = json.load(urlopen(data))
+                                        open(dwn_infos, "w").write(json.dumps(data))                                    
                                     
                             except Exception as e:
                                 print('pass Exception: ', e)
                                 
-                if os.path.exists(dwn_infos):
+                # if os.path.exists(dwn_infos):
+                else:
                     try:
                         with open(dwn_infos) as f:
                             data = json.load(f)
                             imdbRating = ''
                             if "vote_average" in data:
                                 ImdbRating = data['vote_average']
-                                print('ImdbRating vote average', ImdbRating)
+                                # print('ImdbRating vote average', ImdbRating)
                             elif "imdbRating" in data:
-                                print('ok vote imdbRating')
+                                # print('ok vote imdbRating')
                                 ImdbRating = data['imdbRating']
                             else:
-                                print('no vote starx')
+                                # print('no vote starx')
                                 ImdbRating = '0'
                             print('ImdbRating: ', ImdbRating)
                             if ImdbRating and ImdbRating != '0':
@@ -296,9 +310,8 @@ class zStarX(VariableValue, Renderer):
                             self.instance.show()
                     except Exception as e:
                         print('ImdbRating Exception: ', e)    
-
         except Exception as e:
-            print('pass: ', e)
+            print('passImdbRating: ', e)
 
     def postWidgetCreate(self, instance):
         instance.setRange(self.__start, self.__end)

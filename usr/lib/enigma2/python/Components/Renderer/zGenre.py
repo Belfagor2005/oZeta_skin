@@ -64,6 +64,16 @@ if not os.path.exists(path_folder):
     os.makedirs(path_folder)
 
 
+def OnclearMem():
+    try:
+        os.system('sync')
+        os.system('echo 1 > /proc/sys/vm/drop_caches')
+        os.system('echo 2 > /proc/sys/vm/drop_caches')
+        os.system('echo 3 > /proc/sys/vm/drop_caches')
+    except:
+        pass
+
+
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
         r'(: odc.\d+)|'
@@ -104,13 +114,14 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = text.replace('PrimaTv', '')
+            text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
             print('zGenre text <<<- ', text)
         else:
             text = text
             print('zGenre text <<<->>> ', text)
+        # OnclearMem()
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -140,11 +151,12 @@ class zGenre(Renderer):
         self.event = self.source.event
         if not self.event:
             return
-        if self.event:
+        if self.event and self.event != 'None' or self.event != None:
             try:
                 self.evnt = self.event.getEventName()  # .encode('utf-8')
+                
                 self.evntNm = convtext(self.evnt)
-                print('clean zstar: ', self.evntNm)
+                # print('clean zstar: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
 
                 if os.path.exists(infos_file):

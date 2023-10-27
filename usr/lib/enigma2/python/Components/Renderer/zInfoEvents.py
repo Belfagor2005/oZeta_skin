@@ -98,6 +98,16 @@ except:
     my_cur_skin = False
 
 
+def OnclearMem():
+    try:
+        os.system('sync')
+        os.system('echo 1 > /proc/sys/vm/drop_caches')
+        os.system('echo 2 > /proc/sys/vm/drop_caches')
+        os.system('echo 3 > /proc/sys/vm/drop_caches')
+    except:
+        pass
+
+
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
         r'(: odc.\d+)|'
@@ -138,13 +148,14 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = text.replace('PrimaTv', '')
+            text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
             print('zInfoEvents text <<<- ', text)
         else:
             text = text
             print('zInfoEvents text <<<->>> ', text)
+        # OnclearMem()
         return text
     except Exception as e:
         print('cleantitle error: ', e)
@@ -185,13 +196,13 @@ class zInfoEvents(Renderer, VariableText):
 
     def showInfos(self):
         self.event = self.source.event
-        if self.event:
+        if self.event and self.event != 'None' or self.event != None:
             self.delay2()
             self.evnt = self.event.getEventName()  # .encode('utf-8')
             self.evntNm = convtext(self.evnt)
-            print('clean zInfoEvents: ', self.evntNm)
+            # print('clean zInfoEvents: ', self.evntNm)
             infos_file = "{}/{}".format(path_folder, self.evntNm)
-
+            
             if not os.path.exists(infos_file):
                 self.downloadInfos(infos_file)
             if os.path.exists(infos_file):
@@ -283,7 +294,7 @@ class zInfoEvents(Renderer, VariableText):
                 # dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
                 open(dwn_infos, "w").write(json.dumps(data_omdb))
-
+                OnclearMem()
             except:
                 pass
         except Exception as e:
@@ -324,7 +335,7 @@ class zInfoEvents(Renderer, VariableText):
             for i in range(9):
                 titleNxt = events[i][4]
                 self.evntNm = convtext(titleNxt)
-                print('clean epgs: ', self.evntNm)
+                # print('clean epgs: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
 
                 if not os.path.exists(infos_file):
