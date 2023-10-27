@@ -470,7 +470,7 @@ class zBackdropX(Renderer):
                 self.logBackdrop("Error (service) : " + str(e))
                 self.instance.hide()
                 return
-            if not servicetype:
+            if not servicetype or servicetype != None:
                 self.logBackdrop("Error service type undefined")
                 self.instance.hide()
                 return
@@ -520,7 +520,7 @@ class zBackdropX(Renderer):
                         found = True
                 time.sleep(0.3)
                 loop = loop - 1
-            if found:
+            if found is True:
                 self.timer.start(10, True)
 
     def logBackdrop(self, logmsg):

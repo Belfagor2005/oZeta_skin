@@ -231,7 +231,7 @@ class zStarX(VariableValue, Renderer):
             range = 0
             value = 0
             ImdbRating = "0"
-            ids = ''
+            ids = None
             self.event = self.source.event
             if self.event and self.event != 'None' or self.event != None:  # and self.instance:
                 self.evnt = self.event.getEventName()  # .encode('utf-8')
@@ -261,7 +261,7 @@ class zStarX(VariableValue, Renderer):
                         except Exception as e:
                             print('Exception no ids in zstar ', e)
 
-                        if ids != '':
+                        if ids != None:
                             try:
                                 data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language) 
                                 if PY3:
