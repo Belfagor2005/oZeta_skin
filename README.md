@@ -4,7 +4,7 @@
 by Mmark
 
 Adapted for Enigma2 by Lululla
-Version 2.0.0
+Version 2.0.3
 Support: http://e2skin.blogspot.com/
 
 
@@ -23,9 +23,11 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/epg_event.jpg?raw=true">
 
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/Eventview-Backdrop-Star.jpg?raw=true">
+
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/channell-next.jpg?raw=true">
 
-<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/channel_next_long.jpg?raw=true">
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/Channel-Backdrop.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/menu_icon.jpg?raw=true">
 

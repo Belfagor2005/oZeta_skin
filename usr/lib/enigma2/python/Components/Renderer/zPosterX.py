@@ -491,6 +491,9 @@ class zPosterX(Renderer):
     def showPoster(self):
         self.instance.hide()
         if self.canal[5]:
+            pstcanal = convtext(self.canal[5])
+            pstrNm = self.path + pstcanal + ".jpg"
+            self.pstrNm = str(pstrNm)
             if os.path.exists(self.pstrNm):
                 self.logPoster("[LOAD : showPoster] {}".format(self.pstrNm))
                 self.instance.setPixmap(loadJPG(self.pstrNm))
@@ -502,8 +505,7 @@ class zPosterX(Renderer):
         if self.canal[5]:
             pstcanal = convtext(self.canal[5])
             pstrNm = self.path + pstcanal + ".jpg"
-            pstrNm = str(pstrNm)
-            self.pstrNm = pstrNm
+            self.pstrNm = str(pstrNm)
             loop = 180
             found = None
             self.logPoster("[LOOP : waitPoster] {}".format(self.pstrNm))

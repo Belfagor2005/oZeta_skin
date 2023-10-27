@@ -497,6 +497,9 @@ class zBackdropX(Renderer):
     def showBackdrop(self):
         self.instance.hide()
         if self.canal[5]:
+            pstcanal = convtext(self.canal[5])
+            backrNm = self.path + pstcanal + ".jpg"
+            self.backrNm = str(backrNm)
             if os.path.exists(self.backrNm):
                 self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
                 self.instance.setPixmap(loadJPG(self.backrNm))
@@ -508,8 +511,7 @@ class zBackdropX(Renderer):
         if self.canal[5]:
             pstcanal = convtext(self.canal[5])
             backrNm = self.path + pstcanal + ".jpg"
-            backrNm = str(backrNm)
-            self.backrNm = backrNm
+            self.backrNm = str(backrNm)
             loop = 180
             found = None
             self.logBackdrop("[LOOP : waitBackdrop] {}".format(self.backrNm))
