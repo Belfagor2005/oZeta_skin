@@ -277,7 +277,8 @@
         <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
         <widget source="pluginGrid" render="Listbox" position="230,140" size="1240,725" itemSpacing="15,15" selectionZoom="15" scrollbarMode="showAlways" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
             <convert type="TemplatedMultiContent">
-<!--                         {
+                        <!--
+                        {
                         "template": [
                         MultiContentEntryText(pos = (0, 0), size = (222, 156), font=0, backcolor = 0x505050),
                         MultiContentEntryText(pos = (0, 75), size = (222, 75), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
@@ -1665,18 +1666,18 @@
         <ePixmap position="1390,900" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
     <!-- EventView -->
-    
-     <screen name="EventView" title="EventView" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+    <screen name="EventView" title="EventView" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="bLogo"/>
         <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
         <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
         <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
         <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-
+        <!-- PICON Pli/ATV -->
         <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
         <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
             <convert type="ServiceName">Reference</convert>
         </widget>
+        <!-- Event Now -->
         <widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
             <convert type="EventName">Name</convert>
         </widget>
@@ -1689,7 +1690,7 @@
         <widget source="session.Event_Now" render="Progress" position="660,260" size="820,7" foregroundColor="bluette" backgroundColor="#303030" zPosition="5">
             <convert type="EventTime">Progress</convert>
         </widget>
-
+        <!-- Event Next-->
         <eLabel text="Next Event :" position="660,290" size="250,50" font="Regular;32" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2"/>
         <widget source="session.Event_Next" render="Label" position="900,290" size="250,50" font="Regular;32" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
             <convert type="EventTime">StartTime</convert>
@@ -1711,11 +1712,11 @@
         <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
         <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
         <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
+        <!-- end edit lululla -->
         <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
         <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
         <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
     </screen>
-
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>

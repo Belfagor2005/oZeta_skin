@@ -210,7 +210,6 @@
     <!-- ________________________ -->
     <screen name="zParental">
         <!-- zParental -->
-        <widget source="Event" render="zInfoEvents"/>
         <widget source="session.Event_Now" render="zInfoEvents"/>
         <widget render="zParental" source="session.Event_Now" position="315,872" alphatest="blend" size="50,50" zPosition="10" transparent="1"/>
         <!-- NEXT PARENTAL -->

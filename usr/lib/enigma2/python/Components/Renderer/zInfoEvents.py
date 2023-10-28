@@ -198,7 +198,7 @@ class zInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event and self.event != 'None' or self.event != None:
             self.delay2()
-            self.evnt = self.event.getEventName()  # .encode('utf-8')
+            self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
             self.evntNm = convtext(self.evnt)
             # print('clean zInfoEvents: ', self.evntNm)
             infos_file = "{}/{}".format(path_folder, self.evntNm)
@@ -239,12 +239,10 @@ class zInfoEvents(Renderer, VariableText):
                             Writer = data["Writer"]
                         if 'actors' in data:
                             Actors = data["Actors"]
-
                         # if Title != "N/A" or Title != "":
                             # self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
                         # else:
                             # self.text = None
-
                         if Title and Title != "N/A":
                             with open("/tmp/rating", "w") as f:
                                 f.write("%s\n%s" % (imdbRating, Rated))
@@ -335,9 +333,7 @@ class zInfoEvents(Renderer, VariableText):
             for i in range(9):
                 titleNxt = events[i][4]
                 self.evntNm = convtext(titleNxt)
-                # print('clean epgs: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
-
                 if not os.path.exists(infos_file):
                     self.downloadInfos(infos_file)
         except:

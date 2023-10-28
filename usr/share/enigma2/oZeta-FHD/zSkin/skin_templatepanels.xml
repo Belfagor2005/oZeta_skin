@@ -238,6 +238,7 @@
             <convert type="zCryptoInfo">ConaxCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
+        <!-- lululla -->
         <widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="EMU" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
             <convert type="zCryptoInfo">Emu</convert>
             <convert type="ConditionalShowHide"/>
@@ -254,6 +255,7 @@
             <convert type="zCryptoInfo">NagraEcm</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
+        <!-- lululla -->
     </screen>
     <!-- paused lululla -->
     <!--
@@ -291,6 +293,24 @@
 			<convert type="zCryptoInfo">ConaxCrypt</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                              
+                                            
+                                         
+           
+                                                                                                                                                                                                                              
+                                            
+                                         
+           
+                                                                                                                                                                                                                               
+                                            
+                                         
+           
+                                                                                                                                                                                                                                      
+                                                 
+                                         
+           
+                                
 	</screen>
     -->
     <!-- TEMPLATE Infobar IP Data -->
@@ -539,6 +559,7 @@
         </widget>
         <!-- RATING -->
         <ePixmap pixmap="menu/stargrey.png" position="310,79" size="316,27" alphatest="blend" zPosition="10" transparent="1"/>
+        <!-- <widget source="session.Event_Now" render="zStarX" position="310,79" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="22"/> -->
         <eLabel position="310,115" size="630,5" backgroundColor="#404040" zPosition="3"/>
         <!-- FULL DESCRIPTION -->
         <widget source="session.Event_Now" render="zRunningText" position="310,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
@@ -555,6 +576,7 @@
         </widget>
         <!-- NEXT RATING -->
         <ePixmap pixmap="menu/stargrey.png" position="1275,79" size="316,27" alphatest="blend" zPosition="10" transparent="1"/>
+        <!-- <widget source="session.Event_Next" render="zStarX" position="1275,79" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="22"/> -->
         <eLabel position="1275,115" size="630,5" backgroundColor="#404040" zPosition="3"/>
         <!-- FULL NEXT DESCRIPTION -->
         <widget source="session.Event_Next" render="zRunningText" position="1275,130" size="630,480" font="Regular;28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=0">

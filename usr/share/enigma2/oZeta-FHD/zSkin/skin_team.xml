@@ -772,7 +772,6 @@
 			backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1" selection="0" zPosition="3" />
 		<widget name="quickselect"     position="230,1000" size="1000,525" backgroundColor="#000000" foregroundColor="#ffffff" font="Regular;100" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
-
 	<!-- HelpMenuNew -->
 	<screen name="HelpMenu" position="0,0" size="1920,1080" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="LayerMenu1500"/>

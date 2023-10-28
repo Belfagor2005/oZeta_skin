@@ -53,7 +53,6 @@ if PY3:
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
 else:
-    # str = unicode
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
@@ -253,33 +252,28 @@ class PosterDB(zPosterXDownloadThread):
             canal = pdb.get()
             self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
             pstcanal = convtext(canal[5])
-            
             if pstcanal and pstcanal != 'None' or pstcanal != None:
-            
                 dwn_poster = path_folder + '/' + pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-                if lng == "fr":
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
+                # if lng == "fr":
+                    # if not os.path.exists(dwn_poster):
+                        # val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
+                    # if not os.path.exists(dwn_poster):
+                        # val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, pstcanal, canal[4], canal[3])
-                    # print('val - log tmdb: %s - %s ' % (val, log))
                     self.logDB(log)
                 elif not os.path.exists(dwn_poster):
                     val, log = self.search_tvdb(dwn_poster, pstcanal, canal[4], canal[3])
-                    # print('val - log tvdb: %s - %s ' % (val, log))
                     self.logDB(log)
                 # elif not os.path.exists(dwn_poster):
                     # val, log = self.search_imdb(dwn_poster, pstcanal, canal[4], canal[3])
-                    # print('val - log imdb: %s - %s ' % (val, log))
                     # self.logDB(log)
-                # if not os.path.exists(dwn_poster):
-                    # val, log = self.search_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                # elif not os.path.exists(dwn_poster):
+                    # val, log = self.search_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
                     # self.logDB(log)
                 pdb.task_done()
 
@@ -323,7 +317,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
+                            # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
                             pstcanal = convtext(canal[5])
                             dwn_poster = path_folder + '/' + pstcanal + ".jpg"
                             if os.path.exists(dwn_poster):
@@ -372,7 +366,7 @@ class PosterAutoDB(zPosterXDownloadThread):
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
             self.logAutoDB("[AutoDB] *** Stopping ***")
-            OnclearMem()
+            # OnclearMem()
 
     def logAutoDB(self, logmsg):
         try:

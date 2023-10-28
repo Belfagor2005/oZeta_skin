@@ -14,19 +14,18 @@ from Components.config import config
 global my_cur_skin
 
 PY3 = (sys.version_info[0] == 3)
-try:
-    if PY3:
-        from urllib.parse import quote
-        import html
-        html_parser = html
-        unicode = str
-    else:
-        from urllib2 import quote
-        from HTMLParser import HTMLParser
-        html_parser = HTMLParser()
-        str = unicode
-except:
-    pass
+
+if PY3:
+    from urllib.parse import quote
+    import html
+    html_parser = html
+    unicode = str
+else:
+    from urllib2 import quote
+    from HTMLParser import HTMLParser
+    html_parser = HTMLParser()
+    # str = unicode
+
 
 
 try:

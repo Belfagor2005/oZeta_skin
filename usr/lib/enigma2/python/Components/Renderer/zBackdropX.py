@@ -205,7 +205,7 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = text.replace('PrimaTv', '')
+            text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
             print('zBackdropX text <<<- ', text)
@@ -250,31 +250,31 @@ class BackdropDB(zBackdropXDownloadThread):
             canal = pdb.get()
             self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
             pstcanal = convtext(canal[5])
-            dwn_backdrop = path_folder + '/' + pstcanal + ".jpg"
-            if os.path.exists(dwn_backdrop):
-                os.utime(dwn_backdrop, (time.time(), time.time()))
-            # if lng == "fr":
-                # if not os.path.exists(dwn_backdrop):
-                    # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                    # self.logDB(log)
-                # if not os.path.exists(dwn_backdrop):
-                    # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                    # self.logDB(log)
+            if pstcanal and pstcanal != 'None' or pstcanal != None:
+                dwn_backdrop = path_folder + '/' + pstcanal + ".jpg"
+                if os.path.exists(dwn_backdrop):
+                    os.utime(dwn_backdrop, (time.time(), time.time()))
+                # if lng == "fr":
+                    # if not os.path.exists(dwn_backdrop):
+                        # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
+                    # if not os.path.exists(dwn_backdrop):
+                        # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
 
-            if not os.path.exists(dwn_backdrop):
-                val, log = self.search_tmdb(dwn_backdrop, canal[5], canal[4], canal[3])
-                self.logDB(log)
-            elif not os.path.exists(dwn_backdrop):
-                val, log = self.search_tvdb(dwn_backdrop, canal[5], canal[4], canal[3])
-                self.logDB(log)
-            elif not os.path.exists(dwn_backdrop):
-                val, log = self.search_imdb(dwn_backdrop, canal[5], canal[4], canal[3])
-                self.logDB(log)            
-            # if not os.path.exists(dwn_backdrop):
-                # val, log = self.search_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                # self.logDB(log)
-            pdb.task_done()
-            # OnclearMem()
+                if not os.path.exists(dwn_backdrop):
+                    val, log = self.search_tmdb(dwn_backdrop, canal[5], canal[4], canal[3])
+                    self.logDB(log)
+                elif not os.path.exists(dwn_backdrop):
+                    val, log = self.search_tvdb(dwn_backdrop, canal[5], canal[4], canal[3])
+                    self.logDB(log)
+                # elif not os.path.exists(dwn_backdrop):
+                    # val, log = self.search_imdb(dwn_backdrop, canal[5], canal[4], canal[3])
+                    # self.logDB(log)            
+                # if not os.path.exists(dwn_backdrop):
+                    # val, log = self.search_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                    # self.logDB(log)
+                pdb.task_done()
 
     def logDB(self, logmsg):
         try:
@@ -316,20 +316,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            # # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
-                            # pstcanal = convtext(canal[5])
-                            # dwn_backdrop = path_folder + '/' + pstcanal + ".jpg"
-                            # if os.path.exists(dwn_backdrop):
-                                # os.utime(dwn_backdrop, (time.time(), time.time()))
-                            # if not os.path.exists(dwn_backdrop):
-                                # val, log = self.search_tmdb(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
-                            # if not os.path.exists(dwn_backdrop):
-                                # val, log = self.search_molotov_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
-
+                            # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
                             pstcanal = convtext(canal[5])
                             dwn_backdrop = path_folder + '/' + pstcanal + ".jpg"
                             if os.path.exists(dwn_backdrop):
@@ -351,15 +338,14 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 val, log = self.search_tvdb(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                            elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_imdb(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
-                                if val and log.find("SUCCESS"):
-                                    newfd += 1
+                            # elif not os.path.exists(dwn_backdrop):
+                                # val, log = self.search_imdb(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
+                                # if val and log.find("SUCCESS"):
+                                    # newfd += 1
                             # elif not os.path.exists(dwn_backdrop):
                                 # val, log = self.search_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
-
                         newcn = canal[0]
                         self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
@@ -379,6 +365,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
             self.logAutoDB("[AutoDB] *** Stopping ***")
+            # OnclearMem()
 
     def logAutoDB(self, logmsg):
         try:
@@ -470,7 +457,7 @@ class zBackdropX(Renderer):
                 self.logBackdrop("Error (service) : " + str(e))
                 self.instance.hide()
                 return
-            if not servicetype or servicetype != None:
+            if not servicetype or servicetype is None:
                 self.logBackdrop("Error service type undefined")
                 self.instance.hide()
                 return
@@ -484,7 +471,7 @@ class zBackdropX(Renderer):
                 backrNm = self.path + pstcanal + ".jpg"
                 self.backrNm = str(backrNm)
                 if os.path.exists(self.backrNm):
-                    self.timer.start(50, True)
+                    self.timer.start(70, True)
                 else:
                     canal = self.canal[:]
                     pdb.put(canal)
@@ -520,9 +507,9 @@ class zBackdropX(Renderer):
                     if os.path.getsize(self.backrNm) > 0:
                         loop = 0
                         found = True
-                time.sleep(0.3)
+                time.sleep(0.5)
                 loop = loop - 1
-            if found is True:
+            if found:
                 self.timer.start(10, True)
 
     def logBackdrop(self, logmsg):

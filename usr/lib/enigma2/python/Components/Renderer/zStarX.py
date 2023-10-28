@@ -30,6 +30,7 @@ import sys
 global cur_skin, my_cur_skin, tmdb_api
 PY3 = (sys.version_info[0] == 3)
 if PY3:
+    PY3 = True
     unicode = str
     from urllib.error import URLError, HTTPError
     from urllib.request import urlopen
@@ -189,7 +190,7 @@ def convtext(text=''):
             print('zStarX text <<<->>> ', text)
         return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        print('convtext error: ', e)
         pass
 
 
@@ -232,13 +233,13 @@ class zStarX(VariableValue, Renderer):
             value = 0
             ImdbRating = "0"
             ids = None
+            data = ''
             self.event = self.source.event
             if self.event and self.event != 'None' or self.event != None:  # and self.instance:
                 self.evnt = self.event.getEventName()  # .encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
                 # print('clean zstar: ', self.evntNm)
-                
                 if not os.path.exists(dwn_infos):
                         OnclearMem()
                     # try:
@@ -263,7 +264,7 @@ class zStarX(VariableValue, Renderer):
 
                         if ids != None:
                             try:
-                                data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language) 
+                                data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
                                 if PY3:
                                     import six
                                     data = six.ensure_str(data)
@@ -279,37 +280,43 @@ class zStarX(VariableValue, Renderer):
                                     print('pass ids Else: ', e)
                                     if data:
                                         data = json.load(urlopen(data))
-                                        open(dwn_infos, "w").write(json.dumps(data))                                    
-                                    
+                                        open(dwn_infos, "w").write(json.dumps(data))
+
                             except Exception as e:
                                 print('pass Exception: ', e)
-                                
+
                 # if os.path.exists(dwn_infos):
                 else:
                     try:
-                        with open(dwn_infos) as f:
-                            data = json.load(f)
-                            imdbRating = ''
-                            if "vote_average" in data:
-                                ImdbRating = data['vote_average']
-                                # print('ImdbRating vote average', ImdbRating)
-                            elif "imdbRating" in data:
-                                # print('ok vote imdbRating')
-                                ImdbRating = data['imdbRating']
-                            else:
-                                # print('no vote starx')
-                                ImdbRating = '0'
-                            print('ImdbRating: ', ImdbRating)
-                            if ImdbRating and ImdbRating != '0':
-                                rtng = int(10 * (float(ImdbRating)))
-                            else:
-                                rtng = 0
-                            range = 100
-                            value = rtng
-                            (self.range, self.value) = ((0, range), value)
-                            self.instance.show()
+                        if not PY3:
+                            myFile = open(("%s/%s" % (path_folder, self.evntNm)), 'r')
+                            myObject = myFile.read()
+                            u = myObject.decode('utf-8-sig')
+                            data = u.encode('utf-8')
+                            # data.encoding
+                            # data.close()
+                            data = json.loads(myObject, 'utf-8')
+                        else:
+                            with open(dwn_infos) as f:
+                                data = json.load(f)
+                        ImdbRating = ''
+                        if "vote_average" in data:
+                            ImdbRating = data['vote_average']
+                        elif "imdbRating" in data:
+                            ImdbRating = data['imdbRating']
+                        else:
+                            ImdbRating = '0'
+                        print('ImdbRating: ', ImdbRating)
+                        if ImdbRating and ImdbRating != '0':
+                            rtng = int(10 * (float(ImdbRating)))
+                        else:
+                            rtng = 0
+                        range = 100
+                        value = rtng
+                        (self.range, self.value) = ((0, range), value)
+                        self.instance.show()
                     except Exception as e:
-                        print('ImdbRating Exception: ', e)    
+                        print('ImdbRating Exception: ', e)
         except Exception as e:
             print('passImdbRating: ', e)
 
