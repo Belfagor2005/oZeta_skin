@@ -6,6 +6,7 @@
 # <widget source="global.CurrentTime" render="zVolz" path="/volume/" zPosition="5" position="0,1" size="150,135" alphatest="blend" transparent="1" />
 # <widget name="VolumeText" position="44,104" size="60,30" font="Regular; 32" foregroundColor="ltbluette" backgroundColor="background" halign="center" valign="center" transparent="1" zPosition="20" />
 # </screen>
+# init from lululla 2023
 # by Lululla  @
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
@@ -42,7 +43,6 @@ class zVolz(Renderer):
         if not self.suspended:
             value = str(eDVBVolumecontrol.getInstance().getVolume())
             png = ('/usr/share/enigma2/' + cur_skin + self.pth + value + '.png')
-            # print('path png volume : ', png)
             if PY3:
                 png = png
             else:

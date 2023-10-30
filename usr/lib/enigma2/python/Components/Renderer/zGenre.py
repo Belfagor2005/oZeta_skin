@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 # edit lululla to 30.07.2022
+# recode from lululla 2023
 # channelselections
 # <widget render="zGenre" source="ServiceEvent" position="793,703" size="300,438" zPosition="3" transparent="1" />
 # infobar
 # <widget render="zGenre" source="session.Event_Now" position="54,315" size="300,438" zPosition="22" transparent="1" />
 # <widget render="zGenre" source="session.Event_Next" position="54,429" size="300,438" zPosition="22" transparent="1" />
-# recode from lululla 2023
+
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
 from Components.Sources.ServiceEvent import ServiceEvent

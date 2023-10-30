@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# edit by lululla 07.2022
+# recode from lululla 2023
 from PIL import Image
 import os
 import re
@@ -8,7 +10,6 @@ import requests
 import socket
 import sys
 import threading
-# import json
 from Components.config import config
 
 global my_cur_skin
@@ -24,8 +25,6 @@ else:
     from urllib2 import quote
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
-    # str = unicode
-
 
 
 try:
@@ -73,7 +72,6 @@ except:
 
 # isz = "original"
 isz = "w300"
-
 '''
 isz = "w780"
 "backdrop_sizes": [
@@ -136,7 +134,6 @@ class zBackdropXDownloadThread(threading.Thread):
             year = None
             url_tmdb = ""
             backdrop = None
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
             try:
                 if re.findall('19\d{2}|20\d{2}', title):
@@ -169,17 +166,13 @@ class zBackdropXDownloadThread(threading.Thread):
     def search_tvdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
         try:
             series_nb = -1
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = ''
-
             url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(quote(title))
             url_read = requests.get(url_tvdbg).text
             series_id = re.findall('<seriesid>(.*?)</seriesid>', url_read)
@@ -226,11 +219,8 @@ class zBackdropXDownloadThread(threading.Thread):
     def search_imdb(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
         try:
             url_backdrop = None
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
-
             aka = re.findall('\((.*?)\)', fd)
             if len(aka) > 1 and not aka[1].isdigit():
                 aka = aka[1]
@@ -242,7 +232,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 paka = self.UNAC(aka)
             else:
                 paka = ''
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
@@ -318,15 +307,11 @@ class zBackdropXDownloadThread(threading.Thread):
         try:
             url_ptv = ''
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             if chkType.startswith("movie"):
                 return False, "[SKIP : programmetv-google] {} [{}] => Skip movie title".format(title, chkType)
-
             ptitle = self.UNAC(title)
             ptitle = ptitle.replace(' ', '')
-
             url_ptv = "site:programme-tv.net+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
                 url_ptv += "+" + quote(channel)
@@ -373,9 +358,7 @@ class zBackdropXDownloadThread(threading.Thread):
         try:
             url_mgoo = ''
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
             if channel:
                 pchannel = self.UNAC(channel).replace(' ', '')
@@ -493,14 +476,11 @@ class zBackdropXDownloadThread(threading.Thread):
     def search_google(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
         try:
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             backdrop = None
             url_backdrop = ''
             year = None
             srch = None
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
