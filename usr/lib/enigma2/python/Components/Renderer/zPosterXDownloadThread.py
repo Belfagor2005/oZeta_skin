@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# edit by lululla 07.2022
+# recode from lululla 2023
+from __future__ import absolu
 from PIL import Image
 import os
 import re
@@ -8,7 +11,6 @@ import requests
 import socket
 import sys
 import threading
-# import json
 from Components.config import config
 
 global my_cur_skin
@@ -23,7 +25,7 @@ else:
     from urllib2 import quote
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
-    str = unicode
+    # str = unicode
 
 
 
@@ -119,12 +121,6 @@ class zPosterXDownloadThread(threading.Thread):
             poster = None
 
             chkType, fd = self.checkType(shortdesc, fulldesc)
-            # if chkType == "multi":
-                # srch = "multi"
-            # elif chkType.startswith("movie"):
-                # srch = "movie"
-            # else:
-                # srch = "tv"
             try:
                 if re.findall('19\d{2}|20\d{2}', title):
                     year = re.findall('19\d{2}|20\d{2}', fd)[1]
@@ -158,17 +154,13 @@ class zPosterXDownloadThread(threading.Thread):
     def search_tvdb(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
         try:
             series_nb = -1
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = ''
-
             url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(quote(title))
             url_read = requests.get(url_tvdbg).text
             series_id = re.findall('<seriesid>(.*?)</seriesid>', url_read)
@@ -183,7 +175,6 @@ class zPosterXDownloadThread(threading.Thread):
                     series_nb = i
                     break
                 i += 1
-
             poster = ""
             if series_nb >= 0 and series_id and series_id[series_nb]:
                 if series_name and series_name[series_nb]:
@@ -196,14 +187,12 @@ class zPosterXDownloadThread(threading.Thread):
                         url_tvdb += "/{}".format(lng)
                     else:
                         url_tvdb += "/en"
-                    # print('url_tvdb= ', url_tvdb)
                     url_read = requests.get(url_tvdb).text
                     poster = re.findall('<poster>(.*?)</poster>', url_read)
 
             if poster and poster[0]:
                 url_poster = "https://artworks.thetvdb.com/banners/{}".format(poster[0])
                 self.savePoster(dwn_poster, url_poster)
-                # print('url_poster= ', url_poster)
                 return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_poster)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
@@ -216,11 +205,8 @@ class zPosterXDownloadThread(threading.Thread):
     def search_imdb(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
         try:
             url_poster = None
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
-
             aka = re.findall('\((.*?)\)', fd)
             if len(aka) > 1 and not aka[1].isdigit():
                 aka = aka[1]
@@ -232,13 +218,11 @@ class zPosterXDownloadThread(threading.Thread):
                 paka = self.UNAC(aka)
             else:
                 paka = ''
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = ''
-
             imsg = ''
             url_mimdb = ''
             url_imdb = ''
@@ -296,7 +280,6 @@ class zPosterXDownloadThread(threading.Thread):
 
             if url_poster and pfound:
                 self.savePoster(dwn_poster, url_poster)
-                # print('url_poster imdb= ', url_poster)
                 return True, "[SUCCESS url_poster: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(title, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_poster)
             else:
                 return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(title, chkType, year, url_mimdb, len_imdb)
@@ -309,24 +292,18 @@ class zPosterXDownloadThread(threading.Thread):
         try:
             url_ptv = ''
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             if chkType.startswith("movie"):
                 return False, "[SKIP : programmetv-google] {} [{}] => Skip movie title".format(title, chkType)
-
             ptitle = self.UNAC(title)
             ptitle = ptitle.replace(' ', '')
-
             url_ptv = "site:programme-tv.net+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
                 url_ptv += "+" + quote(channel)
-
             url_ptv = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_ptv)
             ff = requests.get(url_ptv, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
             if not PY3:
                 ff = ff.encode('utf-8')
-
             ptv_id = 0
             plst = re.findall('\],\["https://www.programme-tv.net(.*?)",\d+,\d+]', ff)
             for posterlst in plst:
@@ -364,9 +341,7 @@ class zPosterXDownloadThread(threading.Thread):
         try:
             url_mgoo = ''
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             ptitle = self.UNAC(title)
             if channel:
                 pchannel = self.UNAC(channel).replace(' ', '')
@@ -375,7 +350,6 @@ class zPosterXDownloadThread(threading.Thread):
             poster = None
             pltc = None
             imsg = ''
-
             url_mgoo = "site:molotov.tv+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
                 url_mgoo += "+"+quote(channel)
@@ -484,26 +458,20 @@ class zPosterXDownloadThread(threading.Thread):
     def search_google(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
         try:
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-
             chkType, fd = self.checkType(shortdesc, fulldesc)
-
             poster = None
             url_poster = ''
             year = None
             srch = None
-
             year = re.findall('19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = None
-
             if chkType.startswith("movie"):
                 srch = chkType[6:]
             elif chkType.startswith("tv"):
                 srch = chkType[3:]
-
-            # url_google = quote(title)
             url_google = '"'+quote(title)+'"'
             if channel and title.find(channel) < 0:
                 url_google += "+{}".format(quote(channel))
@@ -511,7 +479,6 @@ class zPosterXDownloadThread(threading.Thread):
                 url_google += "+{}".format(srch)
             if year:
                 url_google += "+{}".format(year)
-
             # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
             url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text

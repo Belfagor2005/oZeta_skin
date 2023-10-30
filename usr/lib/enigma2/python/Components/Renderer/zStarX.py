@@ -3,6 +3,7 @@
 
 # by digiteng
 # v1 07.2020, 11.2021
+# recode from lululla 2022
 # for channellist
 # <widget source="ServiceEvent" render="zStarX" position="750,390" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 # or
@@ -36,7 +37,6 @@ if PY3:
     from urllib.request import urlopen
     from urllib.parse import quote
 else:
-    # str = unicode
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
     from urllib import quote
@@ -176,7 +176,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def convtext(text=''):
     try:
-        print('zStarX text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -184,10 +183,8 @@ def convtext(text=''):
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
-            print('zStarX text <<<- ', text)
         else:
             text = text
-            print('zStarX text <<<->>> ', text)
         return text
     except Exception as e:
         print('convtext error: ', e)
@@ -236,21 +233,22 @@ class zStarX(VariableValue, Renderer):
             data = ''
             self.event = self.source.event
             if self.event and self.event != 'None' or self.event != None:  # and self.instance:
-                self.evnt = self.event.getEventName()  # .encode('utf-8')
+                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-                # print('clean zstar: ', self.evntNm)
                 if not os.path.exists(dwn_infos):
                         OnclearMem()
-                    # try:
-                        # url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
-                        # if PY3:
-                            # url = url.encode()
-                        # url = checkRedirect(url)
-                        # print('url1:', url)
-                        # ids = url['results'][0]['id']
-                        # print('url1 ids:', ids)
-                    # except:
+                        '''
+                        try:
+                            url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
+                            if PY3:
+                                url = url.encode()
+                            url = checkRedirect(url)
+                            print('url1:', url)
+                            ids = url['results'][0]['id']
+                            print('url1 ids:', ids)
+                        except:
+                        '''
                         try:
                             url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                             if PY3:
@@ -284,7 +282,6 @@ class zStarX(VariableValue, Renderer):
 
                             except Exception as e:
                                 print('pass Exception: ', e)
-
                 # if os.path.exists(dwn_infos):
                 else:
                     try:

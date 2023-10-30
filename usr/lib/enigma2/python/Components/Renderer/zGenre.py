@@ -7,7 +7,7 @@
 # infobar
 # <widget render="zGenre" source="session.Event_Now" position="54,315" size="300,438" zPosition="22" transparent="1" />
 # <widget render="zGenre" source="session.Event_Next" position="54,429" size="300,438" zPosition="22" transparent="1" />
-
+# recode from lululla 2023
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
 from Components.Sources.ServiceEvent import ServiceEvent
@@ -109,7 +109,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def convtext(text=''):
     try:
-        print('zGenre text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -117,14 +116,11 @@ def convtext(text=''):
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
-            print('zGenre text <<<- ', text)
         else:
             text = text
-            print('zGenre text <<<->>> ', text)
-        # OnclearMem()
         return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        print('convtext error: ', e)
         pass
 
 
@@ -144,27 +140,21 @@ class zGenre(Renderer):
 
     def delay(self):
         global found
-        # evName = ''
         self.pstrNm = ''
-        # evntNm = ''
         genreTxt = ''
         self.event = self.source.event
         if not self.event:
             return
         if self.event and self.event != 'None' or self.event != None:
             try:
-                self.evnt = self.event.getEventName()  # .encode('utf-8')
-                
+                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                 self.evntNm = convtext(self.evnt)
-                # print('clean zstar: ', self.evntNm)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
-
                 if os.path.exists(infos_file):
                     with open(infos_file) as f:
                         genreTxt = json.load(f)['Genre']
                         genreTxt = genreTxt.split(",")[0]
                         print('genreTxt name: ', genreTxt)
-
                 if genreTxt != '':
                     try:
                         gData = self.event.getGenreData()

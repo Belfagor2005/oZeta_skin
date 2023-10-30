@@ -3,6 +3,8 @@
 # by digiteng...07.2021,
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
+# edit by lululla 07.2022
+# recode from lululla 2023
 # © Provided that digiteng rights are protected, all or part of the code can be used, modified...
 # russian and py3 support by sunriser...
 # downloading in the background while zaping...
@@ -22,6 +24,7 @@
 # for epg, event
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" />
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" nexts="2" />
+
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
@@ -107,7 +110,7 @@ except:
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 
-
+# add lululla
 def SearchBouquetTerrestrial():
     import glob
     import codecs
@@ -177,7 +180,7 @@ REGEX = re.compile(
         r'/.*|'
         r'\|\s[0-9]+\+|'
         r'[0-9]+\+|'
-        r'\s\d{4}\Z|'
+        r'\s\*\d{4}\Z|'
         r'([\(\[\|].*?[\)\]\|])|'
         r'(\"|\"\.|\"\,|\.)\s.+|'
         r'\"|:|'
@@ -202,7 +205,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def convtext(text=''):
     try:
-        print('zposter text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -210,14 +212,11 @@ def convtext(text=''):
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
-            print('zposter text <<<- ', text)
         else:
             text = text
-            print('zposter text <<<->>> ', text)
-        # OnclearMem()
         return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        print('convtext error: ', e)
         pass
 
 
@@ -348,7 +347,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
                         newcn = canal[0]
-                        self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                    self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
@@ -366,7 +365,6 @@ class PosterAutoDB(zPosterXDownloadThread):
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
             self.logAutoDB("[AutoDB] {} empty file(s) removed".format(emptyfd))
             self.logAutoDB("[AutoDB] *** Stopping ***")
-            # OnclearMem()
 
     def logAutoDB(self, logmsg):
         try:
@@ -436,7 +434,7 @@ class zPosterX(Renderer):
                     else:
                         self.canal[0] = None
                         self.canal[1] = self.source.event.getBeginTime()
-                        self.canal[2] = self.source.event.getEventName()
+                        self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         self.canal[3] = self.source.event.getExtendedDescription()
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = self.canal[2]
@@ -444,7 +442,7 @@ class zPosterX(Renderer):
                     servicetype = "Event"
                 if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
-                    self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                    self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                     self.canal[1] = events[self.nxts][1]
                     self.canal[2] = events[self.nxts][4]
                     self.canal[3] = events[self.nxts][5]

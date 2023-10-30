@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 # by digiteng...04.2020
-# file for skin MetriXconfluencExp by sunriser 07.2021
+# file for skin oZeta
 # <widget render="zParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" alphatest="blend"/>
+# recode from lululla 2023
+
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.config import config
@@ -22,8 +24,6 @@ if PY3:
     PY3 = True
     unicode = str
 else:
-    # str = unicode
-    # unicode = unicode
     pass
 
 def isMountReadonly(mnt):
@@ -102,7 +102,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def convtext(text=''):
     try:
-        print('zParental text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -110,14 +109,11 @@ def convtext(text=''):
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
-            print('zParental text <<<- ', text)
         else:
             text = text
-            print('zParental text <<<->>> ', text)
-        # OnclearMem()
         return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        print('convtext error: ', e)
         pass
 
 
@@ -153,14 +149,10 @@ class zParental(Renderer):
                     cert = re.sub("\+", "", age.group()).strip()
                 else:
                     try:
-                        self.evnt = self.event.getEventName()  # .encode('utf-8')
-                        
+                        self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         if self.evnt and self.evnt != 'None' or self.evnt != None:
-                        
                             self.evntNm = convtext(self.evnt)
-                            # print('clean zInfoEvents: ', self.evntNm)
                             infos_file = "{}/{}".format(path_folder, self.evntNm)
-
                             if infos_file:
                                 with open(infos_file) as f:
                                     age = json.load(f)['Rated']

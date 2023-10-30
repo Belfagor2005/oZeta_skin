@@ -7,7 +7,7 @@
 # <widget source="session.Event_Next" render="zInfoEvents"/>
 # <widget source="Event" render="zInfoEvents"/>
 # edit by lululla 07.2022
-
+# recode from lululla 2023
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from Components.VariableText import VariableText
@@ -143,7 +143,6 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def convtext(text=''):
     try:
-        print('zInfoEvents text ->>> ', text)
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -151,14 +150,11 @@ def convtext(text=''):
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = unicodify(text)
             text = text.lower()
-            print('zInfoEvents text <<<- ', text)
         else:
             text = text
-            print('zInfoEvents text <<<->>> ', text)
-        # OnclearMem()
         return text
     except Exception as e:
-        print('cleantitle error: ', e)
+        print('convtext error: ', e)
         pass
 
 
@@ -200,14 +196,12 @@ class zInfoEvents(Renderer, VariableText):
             self.delay2()
             self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
             self.evntNm = convtext(self.evnt)
-            # print('clean zInfoEvents: ', self.evntNm)
-            infos_file = "{}/{}".format(path_folder, self.evntNm)
-            
-            if not os.path.exists(infos_file):
-                self.downloadInfos(infos_file)
-            if os.path.exists(infos_file):
+            self.infos_file = "{}/{}".format(path_folder, self.evntNm)
+            if not os.path.exists(self.infos_file):
+                self.downloadInfos()
+            if os.path.exists(self.infos_file):
                 try:
-                    with open(infos_file) as f:
+                    with open(self.infos_file) as f:
                         data = json.load(f)
                         Title = ''
                         imdbRating = ''
@@ -239,10 +233,7 @@ class zInfoEvents(Renderer, VariableText):
                             Writer = data["Writer"]
                         if 'actors' in data:
                             Actors = data["Actors"]
-                        # if Title != "N/A" or Title != "":
-                            # self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
-                        # else:
-                            # self.text = None
+
                         if Title and Title != "N/A":
                             with open("/tmp/rating", "w") as f:
                                 f.write("%s\n%s" % (imdbRating, Rated))
@@ -269,7 +260,7 @@ class zInfoEvents(Renderer, VariableText):
             else:
                 return ''
 
-    def downloadInfos(self, infos_file):
+    def downloadInfos(self):
         self.year = self.filterSearch()
         try:
             try:
@@ -289,9 +280,7 @@ class zInfoEvents(Renderer, VariableText):
             try:
                 url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quote(title))
                 data_omdb = json.load(urlopen(url_omdb))
-                # dwn_infos = "{}/{}.json".format(path_folder, quote(self.evntNm))
-                dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-                open(dwn_infos, "w").write(json.dumps(data_omdb))
+                open(self.infos_file, "w").write(json.dumps(data_omdb))
                 OnclearMem()
             except:
                 pass
@@ -333,9 +322,9 @@ class zInfoEvents(Renderer, VariableText):
             for i in range(9):
                 titleNxt = events[i][4]
                 self.evntNm = convtext(titleNxt)
-                infos_file = "{}/{}".format(path_folder, self.evntNm)
-                if not os.path.exists(infos_file):
-                    self.downloadInfos(infos_file)
+                self.infos_file = "{}/{}".format(path_folder, self.evntNm)
+                if not os.path.exists(self.infos_file):
+                    self.downloadInfos()
         except:
             pass
 
