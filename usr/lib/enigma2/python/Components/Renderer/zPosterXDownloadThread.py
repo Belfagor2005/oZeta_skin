@@ -3,7 +3,7 @@
 
 # edit by lululla 07.2022
 # recode from lululla 2023
-from __future__ import absolu
+from __future__ import absolute_import
 from PIL import Image
 import os
 import re

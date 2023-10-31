@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 # edit lululla to 30.07.2022
-# recode from lululla 2023
 # channelselections
 # <widget render="zGenre" source="ServiceEvent" position="793,703" size="300,438" zPosition="3" transparent="1" />
 # infobar
 # <widget render="zGenre" source="session.Event_Now" position="54,315" size="300,438" zPosition="22" transparent="1" />
 # <widget render="zGenre" source="session.Event_Next" position="54,429" size="300,438" zPosition="22" transparent="1" />
-
+# recode from lululla 2023
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
 from Components.Sources.ServiceEvent import ServiceEvent
@@ -148,7 +147,9 @@ class zGenre(Renderer):
             return
         if self.event and self.event != 'None' or self.event != None:
             try:
-                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                if not PY3:
+                    self.evnt = self.evnt.encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
                 if os.path.exists(infos_file):
@@ -180,9 +181,7 @@ class zGenre(Renderer):
                 if os.path.exists(png):
                     found = True
                     print('PNG name: ', png)
-                    if PY3:
-                        png = png
-                    else:
+                    if not PY3:
                         png = png.encode()
                     self.instance.setPixmap(loadPNG(png))
                     self.instance.setScale(1)

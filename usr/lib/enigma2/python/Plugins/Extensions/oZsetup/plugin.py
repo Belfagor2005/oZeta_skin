@@ -40,6 +40,9 @@ thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
 weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
+SkinSelectorD = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('SystemPlugins/SkinSelector'))
+SkinSelectorE = '/usr/lib/enigma2/python/Screens/SkinSelector.pyo'
+SkinSelectorF = '/usr/lib/enigma2/python/Screens/SkinSelector.pyc'
 zaddon = False
 zaddons = os.path.join(thisdir, 'addons')
 if os.path.exists(zaddons):
@@ -296,10 +299,12 @@ class oZsetup(ConfigListScreen, Screen):
         self['Preview'] = Pixmap()
         self['key_red'] = Label(_('Cancel'))
         self['key_green'] = Label(_('Save'))
+
         self['key_yellow'] = Label('')
         if str(cur_skin) == 'oZeta-FHD':
             self['key_yellow'] = Label(_('Preview'))
-        self['key_blue'] = Label(_('Restart'))
+        # self['key_blue'] = Label(_('Restart'))
+        self["key_blue"] = StaticText(self.getSkinSelector() is not None and "Skin" or "")
         self["HelpWindow"] = Pixmap()
         self["HelpWindow"].hide()
         self["VKeyIcon"] = Pixmap()
@@ -335,7 +340,8 @@ class oZsetup(ConfigListScreen, Screen):
             'InfoPressed': self.zHelp,
             'EPGPressed': self.zHelp,
             'yellow': self.ShowPictureFull,
-            'blue': self.zSwitchMode,
+            # 'blue': self.zSwitchMode,
+            'blue': self.keyOpenSkinselector,
             'menu': self.KeyMenu,
             'showVirtualKeyboard': self.KeyText,
             'ok': self.keyRun,
@@ -345,6 +351,9 @@ class oZsetup(ConfigListScreen, Screen):
         self.createSetup()
         if self.setInfo not in self['config'].onSelectionChanged:
             self['config'].onSelectionChanged.append(self.setInfo)
+
+        self.current_skin = config.skin.primary_skin.value
+
         self.onLayoutFinish.append(self.layoutFinished)
 
     def layoutFinished(self):
@@ -356,6 +365,26 @@ class oZsetup(ConfigListScreen, Screen):
         self['image'].setText("%s" % Uri.imagevers())
         self['city'].setText("%s" % str(config.ozeta.city.value))
         self.setTitle(self.setup_title)
+
+    def getSkinSelector(self):
+        try:
+            if os.path.exists(SkinSelectorD):
+                from Plugins.SystemPlugins.SkinSelector.plugin import SkinSelector
+                return SkinSelector
+            elif os.path.exists(SkinSelectorE) or os.path.exists(SkinSelectorF):
+                from Screens.SkinSelector import SkinSelector
+                return SkinSelector            
+        except Exception as e:
+            print(e)
+
+    def keyOpenSkinselector(self):
+        if self.getSkinSelector() is not None:
+            self.session.openWithCallback(self.restoreCurrentSkin, self.getSkinSelector())
+
+    def restoreCurrentSkin(self, **kwargs):
+        print("[oZeta] restore current skin")
+        config.skin.primary_skin.value = self.current_skin
+        config.skin.primary_skin.save()
 
     def answercheck(self, answer=None):
         if str(cur_skin) == 'oZeta-FHD':
@@ -378,6 +407,16 @@ class oZsetup(ConfigListScreen, Screen):
         user_log = '/tmp/debug_my_skin.log'
         if fileExists(user_log):
             self.session.open(zEditor, user_log)
+
+    # def selectskin(self):
+        # if fileExists('/usr/lib/enigma2/python/Plugins/SystemPlugins/SkinSelector/plugin.pyc') or fileExists('/usr/lib/enigma2/python/Plugins/SystemPlugins/SkinSelector/plugin.pyo'):
+            # try:
+                # from Plugins.SystemPlugins.SkinSelector.plugin import SkinSelector
+                # self.session.openWithCallback(self.close, SkinSelector)
+            # except:
+                # self.session.openWithCallback(self.close, MessageBox, _('Sorry, this feature is not available in your image'), MessageBox.TYPE_INFO, timeout=4)
+        # else:
+            # self.session.openWithCallback(self.close, MessageBox, _('Sorry, this feature is not available in your image'), MessageBox.TYPE_INFO, timeout=4)
 
     def _space(self):
         self.list.append(getConfigListEntry(" ", config.ozeta.fake, False))
@@ -587,7 +626,7 @@ class oZsetup(ConfigListScreen, Screen):
                     print('Options zXStreamity - Done!!!')
                     self.createSetup()
                 except Exception as e:
-                    print('error zXStreamity ', str(e))
+                    print('error zXStreamity ', e)
         else:
             self.mbox = self.session.open(MessageBox, _("Missing XStreamity Plugins!"), MessageBox.TYPE_INFO, timeout=4)
 
@@ -683,7 +722,7 @@ class oZsetup(ConfigListScreen, Screen):
                 cpr = Uri.get_cpyright()
                 self['description'].setText(cpr)
             except Exception as e:
-                print(str(e))
+                print(e)
                 self['author'].setText(welcome)
                 self['description'].setText('-')
 
@@ -745,7 +784,7 @@ class oZsetup(ConfigListScreen, Screen):
             else:
                 return '%sbasefile/default.jpg' % thisdir
         except Exception as e:
-            print(str(e))
+            print(e)
         return PicturePath
 
     def UpdatePicture(self):
@@ -943,6 +982,8 @@ class oZsetup(ConfigListScreen, Screen):
                     # pass
                 # self.applySkin()
                 self.session.open(MessageBox, _('Successfully creating Skin!'), MessageBox.TYPE_INFO, timeout=5)
+                # add
+                # self.keyOpenSkinselector()
             except:
                 self.session.open(MessageBox, _('Error creating Skin!'), MessageBox.TYPE_ERROR, timeout=5)
 
@@ -1253,7 +1294,7 @@ class oZsetup(ConfigListScreen, Screen):
                 else:
                     return
             except Exception as e:
-                print('error download ', str(e))
+                print('error download ', e)
                 self.session.open(MessageBox, _('Download Error!!!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
                 return
 
@@ -1303,7 +1344,7 @@ class oZsetup(ConfigListScreen, Screen):
                 print('mmPicons - Done!!!')
                 self.createSetup()
             except Exception as e:
-                print('error download ', str(e))
+                print('error download ', e)
 
 # install default options
     def zOptions(self, answer=None):
@@ -1316,7 +1357,7 @@ class oZsetup(ConfigListScreen, Screen):
                 print('Options - Done!!!')
                 self.createSetup()
             except Exception as e:
-                print('error zxOptions ', str(e))
+                print('error zxOptions ', e)
 
 # weather search
 # config.plugins.ozeta.zweather = ConfigOnOff(default=False)
@@ -1349,7 +1390,7 @@ class oZsetup(ConfigListScreen, Screen):
                 cmd = 'enigma2-plugin-extensions-weatherplugin'
                 self.session.open(Console, _('Install WeatherPlugin'), ['opkg install %s' % cmd], closeOnSuccess=False)
                 time.sleep(5)
-                self.zSwitchMode()
+                # self.zSwitchMode()
             except Exception as e:
                 print(e)
         else:
@@ -1383,7 +1424,7 @@ class oZsetup(ConfigListScreen, Screen):
                 cmd = 'enigma2-plugin-extensions-oaweather'
                 self.session.open(Console, _('Install OAWeatherPlugin'), ['opkg install %s' % cmd], closeOnSuccess=False)
                 time.sleep(5)
-                self.zSwitchMode()
+                # self.zSwitchMode()
             except Exception as e:
                 print(e)
         else:
@@ -1427,12 +1468,12 @@ class oZsetup(ConfigListScreen, Screen):
         except:
             pass
 
-    def zSwitchMode(self, answer=None):
-        if answer is None:
-            self.session.openWithCallback(self.zSwitchMode, MessageBox, _("Restart E2 Now..\nDo you really want to restart GUI now?"))
-        elif answer:
-            self.session.open(TryQuitMainloop, 3)
-        return
+    # def zSwitchMode(self, answer=None):
+        # if answer is None:
+            # self.session.openWithCallback(self.zSwitchMode, MessageBox, _("Restart E2 Now..\nDo you really want to restart GUI now?"))
+        # elif answer:
+            # self.session.open(TryQuitMainloop, 3)
+        # return
 
     def zExit(self):
         if self["config"].isChanged():
@@ -1622,7 +1663,7 @@ class AutoStartTimerZ:
                 Uri.upd_done()
                 _firstStartZ = False
         except Exception as e:
-            print('error AutoStartTimerZ', str(e))
+            print('error AutoStartTimerZ', e)
 
 
 def autostart(reason, session=None, **kwargs):

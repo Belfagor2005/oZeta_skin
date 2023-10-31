@@ -8,9 +8,8 @@
 # downloading in the background while zaping...
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
-# edit by lululla 07.2022
+# edit lululla to 30.07.2022
 # recode from lululla 2023
-
 
 # for infobar,
 # <widget source="session.Event_Now" render="zBackdropX" position="100,100" size="680,1000" />
@@ -309,6 +308,8 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                     for evt in events:
                         canal = [None, None, None, None, None, None]
                         canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                        if not PY3:
+                            canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         if evt[1] is None or evt[4] is None or evt[5] is None or evt[6] is None:
                             self.logAutoDB("[AutoDB] *** missing epg for {}".format(canal[0]))
                         else:
@@ -439,7 +440,9 @@ class zBackdropX(Renderer):
                     else:
                         self.canal[0] = None
                         self.canal[1] = self.source.event.getBeginTime()
-                        self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+                        self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                        if not PY3:
+                            self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         self.canal[3] = self.source.event.getExtendedDescription()
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = self.canal[2]
@@ -448,6 +451,8 @@ class zBackdropX(Renderer):
                 if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
                     self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                    if not PY3:
+                        self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')                    
                     self.canal[1] = events[self.nxts][1]
                     self.canal[2] = events[self.nxts][4]
                     self.canal[3] = events[self.nxts][5]

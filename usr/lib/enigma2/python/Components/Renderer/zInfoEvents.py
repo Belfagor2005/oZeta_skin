@@ -194,7 +194,9 @@ class zInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event and self.event != 'None' or self.event != None:
             self.delay2()
-            self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+            self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+            if not PY3:
+                self.evnt = self.evnt.encode('utf-8')
             self.evntNm = convtext(self.evnt)
             self.infos_file = "{}/{}".format(path_folder, self.evntNm)
             if not os.path.exists(self.infos_file):
@@ -248,6 +250,8 @@ class zInfoEvents(Renderer, VariableText):
                             self.text += "\nRated: %s" % str(Rated)  # .encode('utf-8').decode('utf-8')
                             self.text += "\nImdb: %s" % str(imdbRating)  # .encode('utf-8').decode('utf-8')
                             # print("text= ", self.text)
+                            if not PY3:
+                                self.text = self.text.encode('utf-8')
                             self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
 
                         else:

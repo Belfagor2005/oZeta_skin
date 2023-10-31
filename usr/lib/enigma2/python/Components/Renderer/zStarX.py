@@ -233,7 +233,9 @@ class zStarX(VariableValue, Renderer):
             data = ''
             self.event = self.source.event
             if self.event and self.event != 'None' or self.event != None:  # and self.instance:
-                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                if not PY3:
+                    self.evnt = self.evnt.encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
                 if not os.path.exists(dwn_infos):

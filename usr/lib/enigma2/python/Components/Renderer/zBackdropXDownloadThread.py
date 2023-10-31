@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# edit by lululla 07.2022
+# edit lululla to 30.07.2022
 # recode from lululla 2023
 from PIL import Image
 import os
@@ -25,6 +25,8 @@ else:
     from urllib2 import quote
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
+    # str = unicode
+
 
 
 try:
@@ -72,6 +74,7 @@ except:
 
 # isz = "original"
 isz = "w300"
+
 '''
 isz = "w780"
 "backdrop_sizes": [
@@ -144,13 +147,11 @@ class zBackdropXDownloadThread(threading.Thread):
                 year = ''
                 pass
             # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, tmdb_api, quote(title))
-
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(chkType, tmdb_api, quote(title))
             if year:
                 url_tmdb += "&year={}".format(year)
             if lng:
                 url_tmdb += "&language={}".format(lng)
-
             backdrop = requests.get(url_tmdb).json()
             if backdrop and backdrop['results'] and backdrop['results'][0] and backdrop['results'][0]['backdrop_path']:
                 url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz.split(",")[0]), backdrop['results'][0]['backdrop_path'])
@@ -237,7 +238,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 year = year[0]
             else:
                 year = ''
-
             imsg = ''
             url_mimdb = ''
             url_imdb = ''
@@ -255,7 +255,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 url_read = requests.get(url_mimdb).text
                 rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
                 url_imdb = rc.findall(url_read)
-
             len_imdb = len(url_imdb)
             idx_imdb = 0
             pfound = False
@@ -367,7 +366,6 @@ class zBackdropXDownloadThread(threading.Thread):
             backdrop = None
             pltc = None
             imsg = ''
-
             url_mgoo = "site:molotov.tv+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
                 url_mgoo += "+"+quote(channel)
@@ -486,12 +484,10 @@ class zBackdropXDownloadThread(threading.Thread):
                 year = year[0]
             else:
                 year = None
-
             if chkType.startswith("movie"):
                 srch = chkType[6:]
             elif chkType.startswith("tv"):
                 srch = chkType[3:]
-
             # url_google = quote(title)
             url_google = '"'+quote(title)+'"'
             if channel and title.find(channel) < 0:
@@ -500,7 +496,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 url_google += "+{}".format(srch)
             if year:
                 url_google += "+{}".format(year)
-
             # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
             url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text

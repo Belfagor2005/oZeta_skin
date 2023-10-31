@@ -149,7 +149,9 @@ class zParental(Renderer):
                     cert = re.sub("\+", "", age.group()).strip()
                 else:
                     try:
-                        self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+                        self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                        if not PY3:
+                            self.evnt = self.evnt.encode('utf-8')
                         if self.evnt and self.evnt != 'None' or self.evnt != None:
                             self.evntNm = convtext(self.evnt)
                             infos_file = "{}/{}".format(path_folder, self.evntNm)
