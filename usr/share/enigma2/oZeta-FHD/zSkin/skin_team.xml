@@ -623,7 +623,7 @@
 
 	<!-- Animazioni -->
 	<screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap position="0,830" size="1920,350" pixmap="picmenu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
+		<ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
 		<widget source="label1" render="Label" position="20,900"   size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
 		<widget source="label2" render="Label" position="399,900"  size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
 		<widget source="label3" render="Label" position="782,900"  size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1" />
@@ -633,7 +633,7 @@
 	
 	<!-- Icone Menu -->
 	<screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap position="0,830" size="1920,350" pixmap="picmenu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
+		<ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1" />
 		<widget source="label1" render="Label" position="25,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
 		<widget source="label1s" render="Label" position="25,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
 		<widget name="pixmap1" position="25,900" size="250,130" zPosition="1" transparent="1" alphatest="on" />
