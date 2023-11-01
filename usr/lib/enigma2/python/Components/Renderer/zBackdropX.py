@@ -446,7 +446,7 @@ class zBackdropX(Renderer):
                         self.canal[3] = self.source.event.getExtendedDescription()
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = self.canal[2]
-                        pstcanal = convtext(self.canal[5])
+                        # pstcanal = convtext(self.canal[5])
                     servicetype = "Event"
                 if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
@@ -458,7 +458,7 @@ class zBackdropX(Renderer):
                     self.canal[3] = events[self.nxts][5]
                     self.canal[4] = events[self.nxts][6]
                     self.canal[5] = self.canal[2]
-                    pstcanal = convtext(self.canal[5])
+                    # pstcanal = convtext(self.canal[5])
                     if not autobouquet_file:
                         if self.canal[0] not in apdb:
                             apdb[self.canal[0]] = service.toString()
