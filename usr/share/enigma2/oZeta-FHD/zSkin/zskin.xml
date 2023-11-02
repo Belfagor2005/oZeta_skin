@@ -1049,7 +1049,9 @@
         <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2" />
         <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97" />
         <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1" />
-        <widget name="info" position="230,330" size="810,520" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1" />
+		<widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow" />
 		<!-- add lululla -->
         <!--
         <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
@@ -1064,7 +1066,9 @@
         <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2" />
         <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97" />
         <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1" />
-        <widget name="info" position="230,330" size="810,520" font="Fixed;28" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1" />
+		<widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow" />
 		<!-- add lululla -->
         <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
 		<widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center" />
