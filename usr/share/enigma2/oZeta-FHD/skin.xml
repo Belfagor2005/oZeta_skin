@@ -247,5 +247,6 @@
     <include filename="zSkin/skin_team.xml"/>
     <include filename="zSkin/skin_infochannel.xml"/>   
     <include filename="zSkin/skin_templatepanelslulu.xml"/>
+    <include filename="zSkin/epg-vertical.xml"/>
 </skin>
 
