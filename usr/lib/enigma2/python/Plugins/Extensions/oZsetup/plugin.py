@@ -863,8 +863,9 @@ class oZsetup(ConfigListScreen, Screen):
             mediaplayer_file = self.chooseFile + 'mediaplayer_' + config.ozeta.MediaPlayerFHD.value + '.xml'
             mediaplayer_file = mediaplayer_file.replace(" ", "-")
             eventview_file = self.chooseFile + 'eventview_' + config.ozeta.EventviewFHD.value + '.xml'
-            plugins_file = self.chooseFile + 'plugins_' + config.ozeta.PluginsFHD.value + '.xml'
             eventview_file = eventview_file.replace(" ", "-")
+            plugins_file = self.chooseFile + 'plugins_' + config.ozeta.PluginsFHD.value + '.xml'
+            plugins_file = plugins_file.replace(" ", "-")
             alogo_file = self.chooseFile + 'alogo_' + config.ozeta.LogoaFHD.value + '.xml'
             alogo_file = alogo_file.replace(" ", "-")
             blogo_file = self.chooseFile + 'blogo_' + config.ozeta.LogobFHD.value + '.xml'
@@ -996,7 +997,7 @@ class oZsetup(ConfigListScreen, Screen):
                 #  final write
                 if fileExists(self.skinFile):
                     os.remove(self.skinFile)
-                    # print("********** Removed %s" % self.skinFile)
+                    print("********** Removed %s" % self.skinFile)
                 os.rename(self.skinFileTmp, self.skinFile)
                 # print("********** Renamed %s" % self.skinFileTmp)
                 self.saveAll()
