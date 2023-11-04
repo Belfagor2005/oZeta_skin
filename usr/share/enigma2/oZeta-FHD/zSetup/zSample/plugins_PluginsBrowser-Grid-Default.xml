@@ -1,0 +1,24 @@
+<!-- *** oZeta - XML Version 2.27 Channel Selection Cover By zSetup v2.0.0 *** -->
+<!-- Author lululla : Modules : PluginBrowserGrid Default -->
+<screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="LayerMenu1500"/>
+    <panel name="vButtonTemplate-1500"/>
+    <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+    <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+    <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
+    <widget source="pluginGrid" render="Listbox" position="230,140" size="1240,725" itemSpacing="15,15" selectionZoom="15" scrollbarMode="showAlways" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+        <convert type="TemplatedMultiContent">
+                    {
+                    "template": [
+                    MultiContentEntryText(pos = (0, 0), size = (150, 60), font=0, backcolor = 0x505050),
+                    MultiContentEntryText(pos = (40, 85), size = (150, 25), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+                    MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
+                    ],
+                    "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                    "itemWidth" : 230,
+                    "itemHeight" : 120
+                    }
+        </convert>
+    </widget>
+    <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+</screen>

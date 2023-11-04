@@ -22,7 +22,7 @@
 
 	<screen name="LayerMenu1000">
 		<panel name="Logo" />
-        <widget source="Title" render="Label" position="380,7" size="640,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
+        <widget source="Title" render="Label" position="400,7" size="640,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
 		<eLabel position="230,120" size="810,3" backgroundColor="#303030" zPosition="4" />
 		<ePixmap position="0,0" size="1920,1080" pixmap="oZeta-FHD/menu/panels/main1.png" zPosition="-1" />
 		<eLabel position="230,960" size="810,3" backgroundColor="#303030" zPosition="4" />
@@ -37,7 +37,7 @@
 
 	<screen name="LayerMenu1300">
 		<panel name="Logo" />
-		<widget source="Title" render="Label" position="390,7" size="891,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<widget source="Title" render="Label" position="400,7" size="891,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
 		<eLabel position="230,120" size="1050,3" backgroundColor="#303030" zPosition="4" />
 		<ePixmap position="0,0" size="1300,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2" />
 		<ePixmap position="1300,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1" />
@@ -45,7 +45,7 @@
 	</screen>
 
 	<screen name="LayerMenu1300-nl">
-		<widget source="Title" render="Label" position="385,7" size="1090,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<widget source="Title" render="Label" position="400,7" size="1090,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
 		<eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4" />
 		<ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2" />
 		<ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1" />
@@ -88,7 +88,7 @@
 
 	<screen name="LayerFull">
 		<panel name="Logo" />
-		<widget source="Title" render="Label" position="385,7" size="1490,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<widget source="Title" render="Label" position="400,7" size="1490,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
 		<eLabel position="0,120" size="1920,3"    backgroundColor="#303030" zPosition="4" />
 		<eLabel position="30,30" size="1860,1020" backgroundColor="#303030" zPosition="-2" />
 		<eLabel position="50,50" size="1820,980"  backgroundColor="#303030" zPosition="-1" />

@@ -101,6 +101,7 @@ ozetavolumepredefinedlist = []
 ozetaradiopredefinedlist = []
 ozetamediaplayerpredefinedlist = []
 ozetaeventviewpredefinedlist = []
+ozetapluginspredefinedlist = []
 ozetaalogopredefinedlist = []
 ozetablogopredefinedlist = []
 ozetamvipredefinedlist = []
@@ -134,6 +135,7 @@ config.ozeta.VolumeFHD = ConfigSelection(default='Volume Default', choices=ozeta
 config.ozeta.RadioFHD = ConfigSelection(default='RadioInfoBar Default', choices=ozetaradiopredefinedlist)
 config.ozeta.MediaPlayerFHD = ConfigSelection(default='MediaPlayer Default', choices=ozetamediaplayerpredefinedlist)
 config.ozeta.EventviewFHD = ConfigSelection(default='Eventview Default', choices=ozetaeventviewpredefinedlist)
+config.ozeta.PluginsFHD = ConfigSelection(default='PluginBrowser Default', choices=ozetapluginspredefinedlist)
 config.ozeta.LogoaFHD = ConfigSelection(default='TopLogo Default', choices=ozetaalogopredefinedlist)
 config.ozeta.LogobFHD = ConfigSelection(default='BottomLogo Default', choices=ozetablogopredefinedlist)
 config.ozeta.Logoboth = ConfigSelection(default='Bootlogo Default', choices=ozetamvipredefinedlist)
@@ -178,6 +180,9 @@ if f:
         elif 'eventview_' in ozetaline:
             ozetaeventview = ozetaline[10:].replace("-", " ")
             ozetaeventviewpredefinedlist.append(ozetaeventview)
+        elif 'plugins_' in ozetaline:
+            ozetaplugins = ozetaline[8:].replace("-", " ")
+            ozetapluginspredefinedlist.append(ozetaplugins)
         elif 'alogo_' in ozetaline:
             ozetalogo = ozetaline[6:].replace("-", " ")
             ozetaalogopredefinedlist.append(ozetalogo)
@@ -196,6 +201,7 @@ if f:
     ozetaradiopredefinedlist.sort()
     ozetamediaplayerpredefinedlist.sort()
     ozetaeventviewpredefinedlist.sort()
+    ozetapluginspredefinedlist.sort()
     if ozetamenupredefinedlist and 'Menu Default' in ozetamenupredefinedlist:
         config.ozeta.FirstMenuFHD = ConfigSelection(default='Menu Default', choices=ozetamenupredefinedlist)
     else:
@@ -227,7 +233,12 @@ if f:
     if ozetaeventviewpredefinedlist and 'Eventview Default' in ozetaeventviewpredefinedlist:
         config.ozeta.EventviewFHD = ConfigSelection(default='Eventview Default', choices=ozetaeventviewpredefinedlist)
     else:
-        config.ozeta.EventviewFHD = ConfigSelection(choices=ozetaeventviewpredefinedlist)
+        config.ozeta.EventviewFHD = ConfigSelection(choices=ozetapluginspredefinedlist)
+    if ozetapluginspredefinedlist and 'PluginBrowser Default' in ozetapluginspredefinedlist:
+        config.ozeta.PluginsFHD = ConfigSelection(default='PluginBrowser Default', choices=ozetapluginspredefinedlist)
+    else:
+        config.ozeta.PluginsFHD = ConfigSelection(choices=ozetapluginspredefinedlist)
+
     if ozetaalogopredefinedlist and 'TopLogo Default' in ozetaalogopredefinedlist:
         config.ozeta.LogoaFHD = ConfigSelection(default='TopLogo Default', choices=ozetaalogopredefinedlist)
     else:
@@ -373,7 +384,7 @@ class oZsetup(ConfigListScreen, Screen):
                 return SkinSelector
             elif os.path.exists(SkinSelectorE) or os.path.exists(SkinSelectorF):
                 from Screens.SkinSelector import SkinSelector
-                return SkinSelector            
+                return SkinSelector
         except Exception as e:
             print(e)
 
@@ -457,6 +468,8 @@ class oZsetup(ConfigListScreen, Screen):
                     self.list.append(getConfigListEntry('MediaPlayer Panel:', config.ozeta.MediaPlayerFHD, _("Settings MediaPlayer Panels")))
                 if ozetaeventviewpredefinedlist:
                     self.list.append(getConfigListEntry('Eventview Panel:', config.ozeta.EventviewFHD, _("Settings Eventview Panels")))
+                if ozetapluginspredefinedlist:
+                    self.list.append(getConfigListEntry('PluginBrowser Panel:', config.ozeta.PluginsFHD, _("Settings PluginBrowser Panels")))
                 if ozetaalogopredefinedlist:
                     self.list.append(getConfigListEntry('Logo Image Top:', config.ozeta.LogoaFHD, _("Settings Logo Image Top")))
                 if ozetablogopredefinedlist:
@@ -698,6 +711,8 @@ class oZsetup(ConfigListScreen, Screen):
             filexml = self.chooseFile + 'mediaplayer_' + sel2 + '.xml'
         if 'eventview' in sel2.lower():
             filexml = self.chooseFile + 'eventview_' + sel2 + '.xml'
+        if 'plugins' in sel2.lower():
+            filexml = self.chooseFile + 'plugins_' + sel2 + '.xml'
         if 'bottom' in sel2.lower():
             filexml = self.chooseFile + 'blogo_' + sel2 + '.xml'
         if 'top' in sel2.lower():
@@ -848,6 +863,7 @@ class oZsetup(ConfigListScreen, Screen):
             mediaplayer_file = self.chooseFile + 'mediaplayer_' + config.ozeta.MediaPlayerFHD.value + '.xml'
             mediaplayer_file = mediaplayer_file.replace(" ", "-")
             eventview_file = self.chooseFile + 'eventview_' + config.ozeta.EventviewFHD.value + '.xml'
+            plugins_file = self.chooseFile + 'plugins_' + config.ozeta.PluginsFHD.value + '.xml'
             eventview_file = eventview_file.replace(" ", "-")
             alogo_file = self.chooseFile + 'alogo_' + config.ozeta.LogoaFHD.value + '.xml'
             alogo_file = alogo_file.replace(" ", "-")
@@ -938,6 +954,16 @@ class oZsetup(ConfigListScreen, Screen):
                 if fileExists(eventview_file):
                     # print("eventview file %s found, writing....." % eventview_file)
                     skFile = open(eventview_file, 'r')
+                    file_lines = skFile.read()
+                    skFile.close()
+                    skFilew = open(self.skinFileTmp, 'a')
+                    skFilew.write('\n'+file_lines+'\n')
+                    skFilew.close()
+
+                #  print (plugins_file + "\n#########################")
+                if fileExists(plugins_file):
+                    # print("eventview file %s found, writing....." % eventview_file)
+                    skFile = open(plugins_file, 'r')
                     file_lines = skFile.read()
                     skFile.close()
                     skFilew = open(self.skinFileTmp, 'a')
@@ -1129,6 +1155,7 @@ class oZsetup(ConfigListScreen, Screen):
                 config.ozeta.RadioFHD.value = 'RadioInfoBar Default'
                 config.ozeta.MediaPlayerFHD.value = 'MediaPlayer Default'
                 config.ozeta.EventviewFHD.value = 'Eventview Default'
+                config.ozeta.PluginsFHD.value = 'PluginBrowser Default'
                 config.ozeta.LogoaFHD.value = 'TopLogo Default'
                 config.ozeta.LogobFHD.value = 'BottomLogo Default'
                 config.ozeta.Logoboth.value = 'Bootlogo Default'
@@ -1192,7 +1219,7 @@ class oZsetup(ConfigListScreen, Screen):
             if "https" in str(self.com):
                 cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             print('cmd: ', cmd)
-            self.session.open(Console, title=_('Installation oZeta Skin'), cmdlist=[cmd, 'sleep 5'])  #, finishedCallback=self.upd_zeta)
+            self.session.open(Console, title=_('Installation oZeta Skin'), cmdlist=[cmd, 'sleep 5'])  # , finishedCallback=self.upd_zeta)
 
         except Exception as e:
             print('error download: ', e)

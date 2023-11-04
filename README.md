@@ -47,6 +47,10 @@ Support: http://e2skin.blogspot.com/
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/plugin_grid.jpg?raw=true">
 
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/PluginsBrowser-GridH.jpg?raw=true">
+
+<img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/PluginsBrowser-GridV.jpg?raw=true">
+
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/ozsetup.jpg?raw=true">
 
 <img src="https://github.com/Belfagor2005/oZeta_skin/blob/main/screen/xstreamity1.jpg?raw=true">
