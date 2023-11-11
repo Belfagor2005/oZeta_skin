@@ -43,6 +43,7 @@ else:
 
 
 try:
+    from Components.config import config
     lng = config.osd.language.value
     lng = lng[:-3]
 except:
@@ -179,13 +180,7 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
-            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             text = text.replace('PrimaTv', '').replace(' mag', '')
-            text = text.replace(' prima pagina', '')
-            # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
-            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
-            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
             text = unicodify(text)
             text = text.lower()
         else:
@@ -204,30 +199,29 @@ class zStarX(VariableValue, Renderer):
             return
         Renderer.__init__(self)
         VariableValue.__init__(self)
+        self.timer30 = eTimer()
         self.__start = 0
         self.__end = 100
         self.text = ''
-        self.timer30 = eTimer()
 
     GUI_WIDGET = eSlider
 
     def changed(self, what):
-        # if not self.instance:
-            # print('zstar event not istance')
-            # return
+        if not self.instance:
+            print('zstar event not istance')
+            return
         if what[0] == self.CHANGED_CLEAR:
             print('zstar event A what[0] == self.CHANGED_CLEAR')
             (self.range, self.value) = ((0, 1), 0)
             return
         if what[0] != self.CHANGED_CLEAR:
             print('zstar event B what[0] != self.CHANGED_CLEAR')
-            if self.instance:
-                self.instance.hide()
+            self.instance.hide()
             try:
                 self.timer30.callback.append(self.infos)
             except:
                 self.timer30_conn = self.timer30.timeout.connect(self.infos)
-            self.timer30.start(50, True)
+            self.timer30.start(100, True)
 
     def infos(self):
         try:
@@ -238,7 +232,7 @@ class zStarX(VariableValue, Renderer):
             ids = None
             data = ''
             self.event = self.source.event
-            if self.event and self.event != 'None' or self.event is not None:  # and self.instance:
+            if self.event and self.event != 'None' or self.event != None:  # and self.instance:
                 self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
                 if not PY3:
                     self.evnt = self.evnt.encode('utf-8')
@@ -274,7 +268,7 @@ class zStarX(VariableValue, Renderer):
                                 if PY3:
                                     import six
                                     data = six.ensure_str(data)
-                                print('zstar pass ids Else: ', e)
+
                                 if data:
                                     data = json.load(urlopen(data))
                                     open(dwn_infos, "w").write(json.dumps(data))
@@ -283,7 +277,7 @@ class zStarX(VariableValue, Renderer):
                                     if PY3:
                                         import six
                                         data = six.ensure_str(data)
-                                    print('zstar pass ids Else: ', e)
+                                    print('pass ids Else: ', e)
                                     if data:
                                         data = json.load(urlopen(data))
                                         open(dwn_infos, "w").write(json.dumps(data))
@@ -311,7 +305,7 @@ class zStarX(VariableValue, Renderer):
                             ImdbRating = data['imdbRating']
                         else:
                             ImdbRating = '0'
-                        print('zstar ImdbRating: ', ImdbRating)
+                        print('ImdbRating: ', ImdbRating)
                         if ImdbRating and ImdbRating != '0':
                             rtng = int(10 * (float(ImdbRating)))
                         else:
@@ -323,7 +317,7 @@ class zStarX(VariableValue, Renderer):
                     except Exception as e:
                         print('ImdbRating Exception: ', e)
         except Exception as e:
-            print('zstar passImdbRating: ', e)
+            print('passImdbRating: ', e)
 
     def postWidgetCreate(self, instance):
         instance.setRange(self.__start, self.__end)

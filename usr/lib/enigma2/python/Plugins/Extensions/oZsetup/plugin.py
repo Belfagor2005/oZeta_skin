@@ -1503,25 +1503,50 @@ class oZsetup(ConfigListScreen, Screen):
             # self.session.open(TryQuitMainloop, 3)
         # return
 
-    def zExit(self):
-        if self["config"].isChanged():
-            self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"))
-        else:
-            self.close()
+    def isChanged(self):
+        is_changed = False
+        for x in self.list:
+            is_changed |= x[1].isChanged()
+        return is_changed
 
-    def cancelConfirm(self, result):
-        if not result:
-            return
-        for x in self["config"].list:
-            # SKIN PARTS SETUP
-            # SERVER API KEY SETUP
-            # WEATHER BOX SETUP
-            # MISC SETUP
-            if fakeconfig(x):
-                continue
-            x[1].cancel()
-        self.close()
+    # def zExit(self):
+        # if self["config"].isChanged():
+            # self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), MessageBox.TYPE_YESNO)
+        # else:
+            # self.close()
+
+    def zExit(self, answer=None):
+        if answer is None:
+            if self["config"].isChanged():
+                self.session.openWithCallback(self.zExit, MessageBox, _("Really close without saving settings?"))
+            else:
+                self.close()
+        elif answer:
+            for x in self["config"].list:
+                # SKIN PARTS SETUP
+                # SERVER API KEY SETUP
+                # WEATHER BOX SETUP
+                # MISC SETUP
+                if fakeconfig(x):
+                    continue
+                x[1].cancel()
+
+            self.close()
         return
+
+    # def cancelConfirm(self, result):
+        # if not result:
+            # return
+        # for x in self["config"].list:
+            # # SKIN PARTS SETUP
+            # # SERVER API KEY SETUP
+            # # WEATHER BOX SETUP
+            # # MISC SETUP
+            # if fakeconfig(x):
+                # continue
+            # x[1].cancel()
+        # self.close()
+        # return
 
 
 class ozHelp(Screen):

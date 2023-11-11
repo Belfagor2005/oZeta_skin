@@ -106,13 +106,13 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
-            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+            text = re.sub('\ \(\d+\)$', '', text) #remove episode-number " (xxx)" at the end
+            text = re.sub('\ \(\d+\/\d+\)$', '', text) #remove episode-number " (xx/xx)" at the end
             text = text.replace('PrimaTv', '').replace(' mag', '')
-            text = text.replace(' prima pagina', '')
+            # text = text.replace(' 1', '').replace(' 2', '').replace(' 3', '').replace(' 4', '').replace(' 5', '')
             # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
-            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
-            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
+            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')            
+            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '') 
             text = unicodify(text)
             text = text.lower()
         else:
@@ -135,8 +135,7 @@ class zParental(Renderer):
             if not self.instance:
                 return
             if what[0] == self.CHANGED_CLEAR:
-                if self.instance:
-                    self.instance.hide()
+                self.instance.hide()
             if what[0] != self.CHANGED_CLEAR:
                 self.delay()
         except:
@@ -189,11 +188,9 @@ class zParental(Renderer):
                     self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
                     self.instance.show()
                 else:
-                    if self.instance:
-                        self.instance.hide()
+                    self.instance.hide()
         except:
-            if self.instance:
-                self.instance.hide()
+            self.instance.hide()
 
     def delay(self):
         self.timer = eTimer()

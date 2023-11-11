@@ -206,7 +206,13 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
+            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             text = text.replace('PrimaTv', '').replace(' mag', '')
+            text = text.replace(' prima pagina', '')
+            # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
+            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
+            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
             text = unicodify(text)
             text = text.lower()
         else:
@@ -420,7 +426,8 @@ class zBackdropX(Renderer):
         if not self.instance:
             return
         if what[0] == self.CHANGED_CLEAR:
-            self.instance.hide()
+            if self.instance:
+                self.instance.hide()
         if what[0] != self.CHANGED_CLEAR:
             servicetype = None
             try:
@@ -464,11 +471,13 @@ class zBackdropX(Renderer):
                             apdb[self.canal[0]] = service.toString()
             except Exception as e:
                 self.logBackdrop("Error (service) : " + str(e))
-                self.instance.hide()
+                if self.instance:
+                    self.instance.hide()
                 return
             if not servicetype or servicetype is None:
                 self.logBackdrop("Error service type undefined")
-                self.instance.hide()
+                if self.instance:
+                    self.instance.hide()
                 return
             try:
                 curCanal = "{}-{}".format(self.canal[1], self.canal[2])
@@ -487,11 +496,13 @@ class zBackdropX(Renderer):
                     start_new_thread(self.waitBackdrop, ())
             except Exception as e:
                 self.logBackdrop("Error (eFile) : " + str(e))
-                self.instance.hide()
+                if self.instance:
+                    self.instance.hide()
                 return
 
     def showBackdrop(self):
-        self.instance.hide()
+        if self.instance:
+            self.instance.hide()
         if self.canal[5]:
             pstcanal = convtext(self.canal[5])
             backrNm = self.path + pstcanal + ".jpg"
@@ -503,7 +514,8 @@ class zBackdropX(Renderer):
                 self.instance.show()
 
     def waitBackdrop(self):
-        self.instance.hide()
+        if self.instance:
+            self.instance.hide()
         if self.canal[5]:
             pstcanal = convtext(self.canal[5])
             backrNm = self.path + pstcanal + ".jpg"

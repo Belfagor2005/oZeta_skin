@@ -44,6 +44,7 @@ except:
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
+# thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
 epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -147,7 +148,13 @@ def convtext(text=''):
             text = REGEX.sub('', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
+            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             text = text.replace('PrimaTv', '').replace(' mag', '')
+            text = text.replace(' prima pagina', '')
+            # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
+            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
+            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
             text = unicodify(text)
             text = text.lower()
         else:
@@ -188,12 +195,14 @@ class zInfoEvents(Renderer, VariableText):
         if what[0] == self.CHANGED_CLEAR:
             return self.text
         if what[0] != self.CHANGED_CLEAR:
+            if self.instance:
+                self.instance.hide()
             self.showInfos()
 
     def showInfos(self):
         self.event = self.source.event
         if self.event and self.event != 'None' or self.event != None:
-            self.delay2()
+            # self.delay2()
             self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
             if not PY3:
                 self.evnt = self.evnt.encode('utf-8')
@@ -253,7 +262,7 @@ class zInfoEvents(Renderer, VariableText):
                             if not PY3:
                                 self.text = self.text.encode('utf-8')
                             self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
-
+                            self.instance.show()
                         else:
                             if os.path.exists("/tmp/rating"):
                                 os.remove("/tmp/rating")
