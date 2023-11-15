@@ -19,12 +19,14 @@ import os
 import sys
 import unicodedata
 
-PY3 = (sys.version_info[0] == 3)
-
-try:
+PY3 = False
+if sys.version_info[0] >= 3:
+    PY3 = True
     unicode = str
+    unichr = chr
+    long = int
     from urllib.parse import quote
-except:
+else:
     from urllib import quote
 
 
@@ -111,17 +113,26 @@ def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
-            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            # # add
+            text = text.replace("\xe2\x80\x93","") # replace special '-'            
+            # # add end
+            text = re.sub(r"[-,?!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
+            # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
             text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+            # # add
+            # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)
+            # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
+            # text = re.sub('\Teil\d+$', '', text)
+            # text = re.sub('\Folge\d+$', '', text)     
+            # # add end
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = text.replace(' prima pagina', '')
-            # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
-            # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
-            # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
+            # # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
+            # # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
+            # # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
             text = unicodify(text)
-            text = text.lower()
+            text = text.capitalize()
         else:
             text = text
         return text

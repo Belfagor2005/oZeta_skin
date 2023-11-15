@@ -1,37 +1,32 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#  modded by lululla
+# modded by lululla
 # <ePixmap pixmap="icons/cpu_temp.png" position="744,1038" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="770,1036" size="200,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Temperature" noWrap="1" halign="left">
-# <convert type="zExtra">Temperature</convert>
+    # <convert type="zExtra">Temperature</convert>
 # </widget>
 # <ePixmap pixmap="icons/cpu_load.png" position="623,1039" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="659,1037" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="CPUload" halign="left" noWrap="1">
-# <convert type="zExtra">CPULoad</convert>
+    # <convert type="zExtra">CPULoad</convert>
 # </widget>
 # <ePixmap pixmap="icons/cpu_ip.png" position="68,1005" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="96,1004" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Iplocal" halign="left" noWrap="1">
-# <convert type="zExtra">Iplocal</convert>
-# </widget>
-# <widget source="session.CurrentService" render="Label" position="71,1040" size="250,30" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Ipwan" halign="left" noWrap="1">
-# <convert type="xExtra">Ipwan</convert>
-# </widget>
-# <widget source="session.CurrentService" render="Label" position="71,1040" size="250,30" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Pli" halign="left" noWrap="1">
-# <convert type="xExtra">True</convert>
+    # <convert type="zExtra">Iplocal</convert>
 # </widget>
 
-from __future__ import print_function
+# <widget source="session.CurrentService" render="Label" position="71,1040" size="250,30" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Ipwan" halign="left" noWrap="1">
+    # <convert type="xExtra">Ipwan</convert>
+# </widget>
+
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
 import os
 import re
-# import socket
-
 
 class zExtra(Poll, Converter):
+
     TEMPERATURE = 0
     HDDTEMP = 1
     CPULOAD = 2
@@ -40,12 +35,10 @@ class zExtra(Poll, Converter):
     UPTIME = 5
     IPLOCAL = 6
     IPWAN = 7
-    # PLI = 8
 
     def __init__(self, type):
         Converter.__init__(self, type)
         Poll.__init__(self)
-
         self.container = eConsoleAppContainer()
         type = type.split(',')
         self.short_list = True
@@ -75,7 +68,7 @@ class zExtra(Poll, Converter):
         if 'HDDTemp' in type:
             self.poll_interval = 500
         else:
-            self.poll_interval = 60000
+            self.poll_interval = 7000
         self.poll_enabled = True
 
     def dataAvail(self, strData):
@@ -89,7 +82,7 @@ class zExtra(Poll, Converter):
             temp = int(temp)
             if temp > 0:
                 temp = str(temp)
-                self.hddtemp = 'HDD Temp: %s\xc2\xb0C' % str(temp)
+                self.hddtemp = 'HDD Temp: %s\xc2\xb0C' % temp
             else:
                 self.hddtemp = 'HDD idle or N/A'
 
@@ -106,7 +99,7 @@ class zExtra(Poll, Converter):
                     load = ''
 
                 cpuload = load.replace('\n', '').replace(' ', '')
-                return 'CPU : %s' % str(cpuload)
+                return 'CPU : %s' % cpuload
         if self.type == self.TEMPERATURE:
             systemp = ""
             cputemp = ""
@@ -135,7 +128,7 @@ class zExtra(Poll, Converter):
             if systemp == "" and cputemp == "":
                 return "N/A"
             if systemp == "":
-                return "%s" % str(cputemp)
+                return "%s" % cputemp
             if cputemp == "":
                 return systemp
             return "%s" % (cputemp)
@@ -150,19 +143,20 @@ class zExtra(Poll, Converter):
                     if 'inet addr:' in line:
                         c = line.split('inet addr:')[1].split(' ')[0]
                         if c != '127.0.0.1':
-                            return "Local %s" % str(c)
+                            return "Lan Ip %s" % c
             except:
                 return ''
         if self.type == self.IPWAN:
+            publicIp = ''
             try:
                 file = os.popen('wget -qO - ifconfig.me')
                 public = file.read()
-                publicIp = "Wan %s" % (str(public))
-                return "%s" % publicIp
+                publicIp = "Local Ip %s" % (str(public))
+                # return "%s" % publicIp
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")
-                return ''
+            return str(publicIp)
 
         if self.type == self.CPUSPEED:
             try:
@@ -182,7 +176,7 @@ class zExtra(Poll, Converter):
                         except:
                             cpuspeed = '-'
 
-                return 'CPU Speed: %s MHz' % str(cpuspeed)
+                return 'CPU Speed: %s MHz' % cpuspeed
             except:
                 return ''
 
@@ -235,7 +229,7 @@ class zExtra(Poll, Converter):
                         uptime += hours + ' ' + (hours == '1' and 'hr' or 'hrs') + ', '
                     if len(uptime) > 0 or minutes > '0':
                         uptime += minutes + ' ' + (minutes == '1' and 'min' or 'mins')
-                return 'Uptime: %s' % str(uptime)
+                return 'Uptime: %s' % uptime
         return text
 
     text = property(getText)

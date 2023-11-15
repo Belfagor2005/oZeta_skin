@@ -15,18 +15,19 @@ from Components.config import config
 
 global my_cur_skin
 
-PY3 = (sys.version_info[0] == 3)
-if PY3:
+PY3 = False
+if sys.version_info[0] >= 3:
+    PY3 = True
+    unicode = str
+    unichr = chr
+    long = int
     from urllib.parse import quote
     import html
     html_parser = html
-    unicode = str
 else:
     from urllib2 import quote
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
-    # str = unicode
-
 
 
 try:

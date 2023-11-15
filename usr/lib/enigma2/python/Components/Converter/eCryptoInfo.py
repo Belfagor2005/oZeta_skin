@@ -9,6 +9,7 @@ from Tools.GetEcmInfo import GetEcmInfo
 
 
 class eCryptoInfo(Poll, Converter):
+
     def __init__(self, type):
         Converter.__init__(self, type)
         Poll.__init__(self)
