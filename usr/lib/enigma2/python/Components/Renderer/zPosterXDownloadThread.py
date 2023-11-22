@@ -142,7 +142,7 @@ class zPosterXDownloadThread(threading.Thread):
 
             poster = requests.get(url_tmdb).json()
             if poster and poster['results'] and poster['results'][0] and poster['results'][0]['poster_path']:
-                if poster and poster != 'null' or poster != None or poster != '':
+                if poster and poster != 'null' or poster is not None or poster != '':
                     url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), poster['results'][0]['poster_path'])
                     self.savePoster(dwn_poster, url_poster)
                     return True, "[SUCCESS poster: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_poster)
@@ -193,7 +193,7 @@ class zPosterXDownloadThread(threading.Thread):
                     poster = re.findall('<poster>(.*?)</poster>', url_read)
 
             if poster and poster[0]:
-                if poster and poster != 'null' or poster != None or poster != '':
+                if poster and poster != 'null' or poster is not None or poster != '':
                     url_poster = "https://artworks.thetvdb.com/banners/{}".format(poster[0])
                     self.savePoster(dwn_poster, url_poster)
                     return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_poster)
@@ -502,7 +502,7 @@ class zPosterXDownloadThread(threading.Thread):
                     poster = pl
                     break
 
-            if poster and poster != 'null' or poster != None or poster != '':
+            if poster and poster != 'null' or poster is not None or poster != '':
                 return True, "[SUCCESS poster: google] {} [{}-{}] => {} => {}".format(title, chkType, year, url_google, url_poster)
             else:
                 if os.path.exists(dwn_poster):

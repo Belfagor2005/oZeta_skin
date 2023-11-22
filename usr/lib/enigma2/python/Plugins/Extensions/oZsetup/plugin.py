@@ -1530,6 +1530,7 @@ class oZsetup(ConfigListScreen, Screen):
                 if fakeconfig(x):
                     continue
                 x[1].cancel()
+
             self.close()
         return
 

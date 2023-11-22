@@ -10,7 +10,7 @@
 # recode from lululla 2023
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
-from Components.Sources.ServiceEvent import ServiceEvent
+# from Components.Sources.ServiceEvent import ServiceEvent
 from enigma import ePixmap, loadPNG
 from Components.config import config
 import re
@@ -114,7 +114,7 @@ def convtext(text=''):
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             # # add
-            text = text.replace("\xe2\x80\x93","") # replace special '-'            
+            text = text.replace("\xe2\x80\x93", "")  # replace special '-'
             # # add end
             text = re.sub(r"[-,?!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
@@ -124,7 +124,7 @@ def convtext(text=''):
             # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)
             # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
             # text = re.sub('\Teil\d+$', '', text)
-            # text = re.sub('\Folge\d+$', '', text)     
+            # text = re.sub('\Folge\d+$', '', text)
             # # add end
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = text.replace(' prima pagina', '')
@@ -163,7 +163,7 @@ class zGenre(Renderer):
         self.event = self.source.event
         if not self.event:
             return
-        if self.event and self.event != 'None' or self.event != None:
+        if self.event and self.event != 'None' or self.event is not None:
             try:
                 self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
                 if not PY3:

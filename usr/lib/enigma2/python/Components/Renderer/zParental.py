@@ -27,6 +27,7 @@ if sys.version_info[0] >= 3:
 else:
     pass
 
+
 def isMountReadonly(mnt):
     mount_point = ''
     with open('/proc/mounts') as f:
@@ -106,7 +107,7 @@ def convtext(text=''):
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             # # add
-            text = text.replace("\xe2\x80\x93","") # replace special '-'            
+            text = text.replace("\xe2\x80\x93", "")  # replace special '-'
             # # add end
             text = re.sub(r"[-,?!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
@@ -116,7 +117,7 @@ def convtext(text=''):
             # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)
             # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
             # text = re.sub('\Teil\d+$', '', text)
-            # text = re.sub('\Folge\d+$', '', text)     
+            # text = re.sub('\Folge\d+$', '', text)
             # # add end
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = text.replace(' prima pagina', '')
@@ -169,7 +170,7 @@ class zParental(Renderer):
                         self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
                         if not PY3:
                             self.evnt = self.evnt.encode('utf-8')
-                        if self.evnt and self.evnt != 'None' or self.evnt != None:
+                        if self.evnt and self.evnt != 'None' or self.evnt is not None:
                             self.evntNm = convtext(self.evnt)
                             infos_file = "{}/{}".format(path_folder, self.evntNm)
                             if infos_file:

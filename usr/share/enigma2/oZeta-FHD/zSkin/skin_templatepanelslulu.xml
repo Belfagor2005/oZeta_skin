@@ -76,8 +76,8 @@
     <screen name="PartChannelSelectionNext2">
         <eLabel position="925,440" size="995,40" backgroundColor="#FF000000" zPosition="3"/>
         <eLabel text=" N E X T " position="1602,373" size="300,60" font="Regular;46" backgroundColor="barColor" halign="center" valign="center" foregroundColor="#ffffff" zPosition="3"/>
-        <widget source="ServiceEvent" render="zEventListDisplay" position="1454,485" size="448,560" column0="0,110,yellow,Regular,30,0,0" column1="125,950,white,Regular,30,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-            <convert type="zEventList">primetime=yed,eventcount=14</convert>
+        <widget source="ServiceEvent" render="zEventListDisplay" position="1454,485" size="448,560" column0="0,110,yellow,Regular,30,0,0" column1="111,950,white,Regular,30,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+            <convert type="zEventList">beginOnly=yes,primetime=yes,eventcount=14</convert>
         </widget>
     </screen>
     <!-- ************************ -->

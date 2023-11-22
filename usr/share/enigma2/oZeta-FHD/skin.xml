@@ -228,25 +228,21 @@
         <pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
     </switchpixmap>
     <!-- Include Files -->
-    
-<!--     <include filename="zSkin/zskin.xml"/>    
+    <!-- don't touch this order -->
     <include filename="zSkin/skin_templatepanels.xml"/>
     <include filename="zSkin/skin_layercolors.xml"/>
     <include filename="zSkin/skin_plugins.xml"/>
     <include filename="zSkin/skin_logo.xml"/>
     <include filename="zSkin/skin_team.xml"/>
-    <include filename="zSkin/skin_infochannel.xml"/>    
-    <include filename="zSkin/skin_templatepanelslulu.xml"/>
-     -->
-    
-    <include filename="zSkin/skin_layercolors.xml"/>
-    <include filename="zSkin/skin_templatepanels.xml"/>
-    <include filename="zSkin/skin_logo.xml"/>
+    <include filename="zSkin/skin_epgvertical.xml"/>
+     <!-- don't touch this order end -->
+
+    <!-- infochannel should be loaded after zskin.xml -->
+    <include filename="zSkin/skin_infochannel.xml"/>
     <include filename="zSkin/zskin.xml"/>
-    <include filename="zSkin/skin_plugins.xml"/>    
-    <include filename="zSkin/skin_team.xml"/>
-    <include filename="zSkin/skin_infochannel.xml"/>   
+    <!-- infochannel should be loaded after zskin.xml -->
+
+     <!-- don't change this: must be last -->                               
     <include filename="zSkin/skin_templatepanelslulu.xml"/>
-    <include filename="zSkin/epg-vertical.xml"/>
 </skin>
 

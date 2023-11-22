@@ -58,14 +58,14 @@ def check_module_skin():
     checklogskin("skin_base_fold %s" % skin_base_fold)
     checklogskin("python ver. %s" % pythonFull)
     # if os.path.exists(skin_base_fold + folderskinfiles):
-    
+
     for f in listdir(skin_base_fold):
         if f.endswith('.xml'):
             checklogskin("update write myFile %s" % f)
             user_skin = user_skin + readXMLfile(skin_base_fold + f)
 
     if os.path.exists(skin_base_fold + folderskinfiles):
-            user_skin3 = skin_base_fold + folderskinfiles 
+            user_skin3 = skin_base_fold + folderskinfiles
             user_skin3 = user_skin3 + '/'
             for f in listdir(user_skin3):
                 if f.endswith('.xml'):
@@ -108,23 +108,24 @@ def checkComponent(myContent, look4Component, myPath):
             for ComponentFind in set(r):
                 # varShowFile = ''
                 if 'Renderer' in myPath:
-                    if not PY3:
+                    if PY3:
+                        if not fileExists(myPath + str(ComponentFind) + ".pyc") and fileExists(myPath + str(ComponentFind) + ".py"):
+                            upShowFile(myPath + str(ComponentFind) + ".pyc")
+                    else:
                         if not fileExists(myPath + str(ComponentFind) + ".pyo") and fileExists(myPath + str(ComponentFind) + ".py"):
                             upShowFile(myPath + str(ComponentFind) + ".pyo")
+                    # if not fileExists(myPath + str(ComponentFind) + ".py"):
+                        # upShowFile(myPath + str(ComponentFind) + ".py")
+                elif 'Converter' in myPath:
                     if PY3:
                         if not fileExists(myPath + str(ComponentFind) + ".pyc") and fileExists(myPath + str(ComponentFind) + ".py"):
                             upShowFile(myPath + str(ComponentFind) + ".pyc")
-                    if not fileExists(myPath + str(ComponentFind) + ".py"):
-                        upShowFile(myPath + str(ComponentFind) + ".py")
-                if 'Converter' in myPath:
-                    if not PY3:
-                        if not fileExists(myPath + str(ComponentFind) + ".pyo") and fileExists(myPath + str(ComponentFind) + ".py"):
-                            upShowFile(myPath + str(ComponentFind) + ".py")
-                    if PY3:
-                        if not fileExists(myPath + str(ComponentFind) + ".pyc") and fileExists(myPath + str(ComponentFind) + ".py"):
-                            upShowFile(myPath + str(ComponentFind) + ".pyc")
-                    if not fileExists(myPath + str(ComponentFind) + ".py"):
-                        upShowFile(myPath + str(ComponentFind) + ".py")
+                    else:
+                        if not PY3:
+                            if not fileExists(myPath + str(ComponentFind) + ".pyo") and fileExists(myPath + str(ComponentFind) + ".py"):
+                                upShowFile(myPath + str(ComponentFind) + ".pyo")
+                        # if not fileExists(myPath + str(ComponentFind) + ".py"):
+                            # upShowFile(myPath + str(ComponentFind) + ".py")
                 else:
                     for i in listdir(mvi + "enigma2/" + cur_skin + '/'):
                         if ComponentFind.startswith(str(i)):

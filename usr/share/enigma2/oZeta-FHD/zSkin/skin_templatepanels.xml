@@ -742,8 +742,8 @@
     <screen name="PartChannelSelectionNext">
         <eLabel position="925,760" size="995,40" backgroundColor="#FF000000" zPosition="3"/>
         <eLabel text=" N E X T " position="1600,770" size="300,60" font="Regular;46" backgroundColor="barColor" halign="center" valign="center" foregroundColor="#ffffff" zPosition="3"/>
-        <widget source="ServiceEvent" render="zEventListDisplay" position="952,850" size="1070,200" column0="0,110,yellow,Regular,30,0,0" column1="125,950,white,Regular,30,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-            <convert type="zEventList">primetime=yed,eventcount=5</convert>
+        <widget source="ServiceEvent" render="zEventListDisplay" position="952,850" size="1070,200" column0="0,110,yellow,Regular,30,0,0" column1="111,950,white,Regular,30,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+            <convert type="zEventList">beginOnly=yes,primetime=yes,eventcount=5</convert>
         </widget>
         <!--
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" lines="3" position="1080,610" zPosition="3" size="1070,250" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">

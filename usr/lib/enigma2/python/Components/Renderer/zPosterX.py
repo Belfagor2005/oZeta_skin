@@ -111,6 +111,8 @@ except:
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 
 # add lululla
+
+
 def SearchBouquetTerrestrial():
     import glob
     import codecs
@@ -208,7 +210,7 @@ def convtext(text=''):
         if text != '' or text is not None or text != 'None':
             text = REGEX.sub('', text)
             # # add
-            text = text.replace("\xe2\x80\x93","") # replace special '-'            
+            text = text.replace("\xe2\x80\x93", "")  # replace special '-'
             # # add end
             text = re.sub(r"[-,?!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
@@ -218,7 +220,7 @@ def convtext(text=''):
             # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)
             # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
             # text = re.sub('\Teil\d+$', '', text)
-            # text = re.sub('\Folge\d+$', '', text)     
+            # text = re.sub('\Folge\d+$', '', text)
             # # add end
             text = text.replace('PrimaTv', '').replace(' mag', '')
             text = text.replace(' prima pagina', '')
@@ -266,7 +268,7 @@ class PosterDB(zPosterXDownloadThread):
             canal = pdb.get()
             self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
             pstcanal = convtext(canal[5])
-            if pstcanal and pstcanal != 'None' or pstcanal != None:
+            if pstcanal and pstcanal != 'None' or pstcanal is not None:
                 dwn_poster = path_folder + '/' + pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
