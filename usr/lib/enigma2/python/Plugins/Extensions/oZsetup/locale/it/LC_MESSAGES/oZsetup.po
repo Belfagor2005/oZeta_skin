@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: oZsetup\n"
-"POT-Creation-Date: 2023-09-28 20:48+0200\n"
-"PO-Revision-Date: 2023-09-28 20:49+0200\n"
+"POT-Creation-Date: 2023-11-27 21:34+0100\n"
+"PO-Revision-Date: 2023-11-27 21:35+0100\n"
 "Last-Translator: Lululla\n"
 "Language-Team: Lululla\n"
 "Language: it_IT\n"
@@ -13,27 +13,23 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: plugin.py\n"
 
-#: plugin.py:297
+#: plugin.py:311
 msgid "Cancel"
 msgstr "Annulla"
 
-#: plugin.py:298
+#: plugin.py:312
 msgid "Save"
 msgstr "Salva"
 
-#: plugin.py:299
+#: plugin.py:316
 msgid "Preview"
 msgstr "Anteprima"
 
-#: plugin.py:300
-msgid "Restart"
-msgstr "Riavvio"
-
-#: plugin.py:307
+#: plugin.py:325
 msgid "by Lululla"
 msgstr ""
 
-#: plugin.py:361
+#: plugin.py:403
 msgid ""
 "This operation checks if the skin has its components (is not sure)..\n"
 "Do you really want to continue?"
@@ -42,11 +38,11 @@ msgstr ""
 "sicuro)..\n"
 "Vuoi davvero continuare?"
 
-#: plugin.py:392
+#: plugin.py:444
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
 msgstr "Installa o aggiorna automaticamente oZeta Plugin & Skin all'avvio"
 
-#: plugin.py:394
+#: plugin.py:446
 msgid ""
 "Install/Update/Restore Stable Version oZeta Skin\n"
 "Press OK"
@@ -54,7 +50,7 @@ msgstr ""
 "Installa/Aggiorna/Ripristina oZeta Skin\n"
 "premere OK"
 
-#: plugin.py:396
+#: plugin.py:448
 msgid ""
 "Install Test Options oZeta Skin\n"
 "Press OK"
@@ -62,47 +58,51 @@ msgstr ""
 "Installa le opzioni di test oZeta Skin\n"
 "premere OK"
 
-#: plugin.py:404
+#: plugin.py:456
 msgid "Settings Menu Image Panel"
 msgstr "Impostazioni del pannello Menu dell'Immagine"
 
-#: plugin.py:406
+#: plugin.py:458
 msgid "Settings Infobar Panels"
 msgstr "Impostazioni del pannello Infobar"
 
-#: plugin.py:408
+#: plugin.py:460
 msgid "Settings SecInfobar Panels"
 msgstr "Impostazioni del pannello SecondInfobar"
 
-#: plugin.py:410
+#: plugin.py:462
 msgid "Settings Channel Panels"
 msgstr "Impostazioni del pannello Lista Canali"
 
-#: plugin.py:412
+#: plugin.py:464
 msgid "Settings Volume Panels"
 msgstr "Impostazioni del pannello Volume"
 
-#: plugin.py:414
+#: plugin.py:466
 msgid "Settings Radio Panels"
 msgstr "Impostazioni del pannello Radio"
 
-#: plugin.py:416
+#: plugin.py:468
 msgid "Settings MediaPlayer Panels"
 msgstr "Impostazioni del pannello MediaPlayer"
 
-#: plugin.py:418
+#: plugin.py:470
 msgid "Settings Eventview Panels"
 msgstr "Impostazioni pannello visualizzazione eventi"
 
-#: plugin.py:420
+#: plugin.py:472
+msgid "Settings PluginBrowser Panels"
+msgstr "Impostazioni pannello Plugins Browser"
+
+#: plugin.py:474
 msgid "Settings Logo Image Top"
 msgstr "Impostazioni Logo Immagine in alto"
 
-#: plugin.py:422
+#: plugin.py:476
 msgid "Settings Logo Image Bottom"
 msgstr "Impostazioni Logo Immagine in basso"
 
-#: plugin.py:424
+#: plugin.py:478
 msgid ""
 "Settings Bootlogo Image\n"
 "Press Ok for change"
@@ -110,51 +110,51 @@ msgstr ""
 "Impostazioni Bootlogo Immagine\n"
 "Premi Ok per cambiare"
 
-#: plugin.py:429
+#: plugin.py:483
 msgid "Settings oZeta Apikey Server"
 msgstr "Impostazioni oZeta Apikey Server"
 
-#: plugin.py:431
+#: plugin.py:485
 msgid "Settings TMDB ApiKey"
 msgstr "Impostazioni TMDB ApiKey"
 
-#: plugin.py:433
+#: plugin.py:487
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
 msgstr "Carica Apikey TMDB da /tmp/apikey.txt"
 
-#: plugin.py:434
+#: plugin.py:488
 msgid "Signup on TMDB and input free personal ApiKey"
 msgstr "Iscriviti su TMDB e inserisci ApiKey personale gratuita"
 
-#: plugin.py:435
+#: plugin.py:489
 msgid "Settings OMDB APIKEY"
 msgstr "Impostazioni OMDB APIKEY"
 
-#: plugin.py:437
+#: plugin.py:491
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
 msgstr "Carica Apikey OMDB da /tmp/omdbkey.txt"
 
-#: plugin.py:438
+#: plugin.py:492
 msgid "Signup on OMDB and input free personal ApiKey"
 msgstr "Iscriviti su OMDB e inserisci ApiKey personale gratuita"
 
-#: plugin.py:439
+#: plugin.py:493
 msgid "Settings THETVDB APIKEY"
 msgstr "Impostazioni THETVDB APIKEY"
 
-#: plugin.py:441
+#: plugin.py:495
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
 msgstr "Carica Apikey THETVDB da /tmp/thetvdbkey.txt"
 
-#: plugin.py:442
+#: plugin.py:496
 msgid "Signup on THETVDB and input free personal ApiKey"
 msgstr "Iscriviti su THETVDB e inserisci ApiKey personale gratuita"
 
-#: plugin.py:447
+#: plugin.py:501
 msgid "Settings oZeta Weather"
 msgstr "Impostazioni oZeta Meteo"
 
-#: plugin.py:450
+#: plugin.py:504
 msgid ""
 "Install or Open OAWeather Plugin\n"
 "Press OK"
@@ -162,7 +162,7 @@ msgstr ""
 "Installa o apri il plugin OAWeather \n"
 "premere OK"
 
-#: plugin.py:451
+#: plugin.py:505
 msgid ""
 "Install or Open Weather Plugin\n"
 "Press OK"
@@ -170,24 +170,24 @@ msgstr ""
 "Installa o apri il plugin meteo\n"
 "premere OK"
 
-#: plugin.py:453
+#: plugin.py:507
 msgid "Settings City Weather Plugin"
 msgstr "Plugin Impostazioni meteo città"
 
-#: plugin.py:457
+#: plugin.py:511
 msgid "Settings VISUALWEATHER APIKEY"
 msgstr "Impostazioni VISUALWEATHER APIKEY"
 
-#: plugin.py:459
+#: plugin.py:513
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
 msgstr "Carica VISUALWEATHER Apikey da /etc/enigma2/VisualWeather/apikey.txt"
 
-#: plugin.py:460
+#: plugin.py:514
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
 msgstr ""
 "Iscriviti su www.visualcrossing.com e inserisci ApiKey personale gratuita"
 
-#: plugin.py:465
+#: plugin.py:519
 msgid ""
 "Install or Open mmPicons Plugin\n"
 "Press OK"
@@ -195,7 +195,7 @@ msgstr ""
 "Installa o apri il plugin mmPicons\n"
 "premere OK"
 
-#: plugin.py:467
+#: plugin.py:521
 msgid ""
 "Install Optional XStreamity Skin\n"
 "Press Ok"
@@ -203,11 +203,11 @@ msgstr ""
 "Installa la skin XStreamity opzionale\n"
 "Premere OK"
 
-#: plugin.py:481
+#: plugin.py:535
 msgid "SELECT YOUR CHOICE"
 msgstr "SELEZIONA LA TUA SCELTA"
 
-#: plugin.py:580
+#: plugin.py:634
 msgid ""
 "Install Optional XStreamity skin\n"
 "Do you really want to install now?"
@@ -215,7 +215,7 @@ msgstr ""
 "Installa la skin XStreamity opzionale\n"
 "Vuoi davvero installare ora?"
 
-#: plugin.py:583
+#: plugin.py:637
 msgid ""
 "Install Optional XStreamity skin...\n"
 "Please Wait"
@@ -223,23 +223,23 @@ msgstr ""
 "Installa skin XStreamity opzionale...\n"
 "Attendere prego"
 
-#: plugin.py:584 plugin.py:1313
+#: plugin.py:638 plugin.py:1342
 msgid "Install Options"
 msgstr "Opzioni di installazione"
 
-#: plugin.py:590
+#: plugin.py:644
 msgid "Missing XStreamity Plugins!"
 msgstr "Plugin XStreamity non trovato!"
 
-#: plugin.py:600
+#: plugin.py:654
 msgid "Do you really want to change Bootlogo image?"
 msgstr "Vuoi davvero cambiare l'immagine Bootlogo?"
 
-#: plugin.py:609
+#: plugin.py:663
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
 msgstr "Bootlogo modificato e backup su default_bootlogo.mvi!"
 
-#: plugin.py:624
+#: plugin.py:678
 msgid ""
 "Bootlogo changed!\n"
 "Restart Gui please"
@@ -247,63 +247,63 @@ msgstr ""
 "Bootlogo cambiato!\n"
 "Riavvia Gui per favore"
 
-#: plugin.py:943
+#: plugin.py:969
 msgid "Successfully creating Skin!"
 msgstr "Creazione riuscita della Skin!"
 
-#: plugin.py:945
+#: plugin.py:972
 msgid "Error creating Skin!"
 msgstr "Errore durante la creazione della Skin!"
 
-#: plugin.py:991
+#: plugin.py:1018
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
 msgstr "Importare Api Key TMDB da /tmp/apikey.txt?"
 
-#: plugin.py:993 plugin.py:1006 plugin.py:1015 plugin.py:1028 plugin.py:1037
-#: plugin.py:1050 plugin.py:1059 plugin.py:1072
+#: plugin.py:1020 plugin.py:1033 plugin.py:1042 plugin.py:1055 plugin.py:1064
+#: plugin.py:1077 plugin.py:1086 plugin.py:1099
 #, python-format
 msgid "Missing %s !"
 msgstr "Non trovo %s!"
 
-#: plugin.py:1004
+#: plugin.py:1031
 msgid "TMDB ApiKey Imported & Stored!"
 msgstr "TMDB ApiKey Importata e Memorizzata!"
 
-#: plugin.py:1013
+#: plugin.py:1040
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
 msgstr "Importare Api Key OMDB da /tmp/omdbkey.txt?"
 
-#: plugin.py:1026
+#: plugin.py:1053
 msgid "OMDB ApiKey Imported & Stored!"
 msgstr "OMDB ApiKey Importata e Memorizzata!"
 
-#: plugin.py:1035
+#: plugin.py:1062
 msgid ""
 "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
 msgstr ""
 "Importare Api Key VISUALWEATHER da /etc/enigma2/VisualWeather/apikey.txt?"
 
-#: plugin.py:1048
+#: plugin.py:1075
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
 msgstr "VISUALWEATHER ApiKey Importata e Memorizzata!"
 
-#: plugin.py:1057
+#: plugin.py:1084
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
 msgstr "Carica Apikey THETVDB da /tmp/thetvdbkey.txt?"
 
-#: plugin.py:1070
+#: plugin.py:1097
 msgid "THETVDB ApiKey Imported & Stored!"
 msgstr "THETVDB ApiKey Importata e Memorizzata!"
 
-#: plugin.py:1079
+#: plugin.py:1106
 msgid "Reset Settings to Defaults Parameters?"
 msgstr "Ripristinare le impostazioni sui parametri predefiniti?"
 
-#: plugin.py:1098
+#: plugin.py:1126
 msgid "Skin exist!! Do you really want to Upgrade?"
 msgstr "La Skin è già presente nel box!! Vuoi davvero aggiornare?"
 
-#: plugin.py:1100
+#: plugin.py:1128
 msgid ""
 "Do you really want to install the oZeta Skin ??\n"
 "Do it at your own risk.\n"
@@ -313,28 +313,28 @@ msgstr ""
 "Fallo a tuo rischio e pericolo.\n"
 "Vuoi continuare?"
 
-#: plugin.py:1152
+#: plugin.py:1180
 msgid "Installation oZeta Skin"
 msgstr "Installazione oZeta Skin"
 
-#: plugin.py:1218
-msgid "Image Box Not Tested!! Skin Not Installed"
+#: plugin.py:1246
+msgid "Image Box Not Tested!!"
 msgstr ""
 
-#: plugin.py:1222
+#: plugin.py:1251
 msgid ""
 "Download Error!!!\n"
 "Unknow or FILE NO EXIST /tmp/ozeta.tar!\n"
 "Please Report Issue on forum"
 msgstr ""
 
-#: plugin.py:1255
+#: plugin.py:1284
 msgid ""
 "Download Error!!!\n"
 "Please Report Issue on forum"
 msgstr ""
 
-#: plugin.py:1285
+#: plugin.py:1314
 msgid ""
 "OZSKIN UPDATE\n"
 "PLEASE RESTART GUI"
@@ -342,7 +342,7 @@ msgstr ""
 "OZSKIN AGGIORNATA\n"
 "PER FAVORE, RIAVVIA GUI"
 
-#: plugin.py:1299
+#: plugin.py:1328
 msgid ""
 "mmPicons Plugin Not Installed!!\n"
 "Do you really want to install now?"
@@ -350,11 +350,11 @@ msgstr ""
 "Plugin mmPicons non installato!!\n"
 "Vuoi installare ora?"
 
-#: plugin.py:1300
+#: plugin.py:1329
 msgid "Install mmPicons"
 msgstr "Installazione Plugin mmPicons"
 
-#: plugin.py:1309
+#: plugin.py:1338
 msgid ""
 "Install Test Options for oZeta skin\n"
 "Do you really want to install now?"
@@ -362,7 +362,7 @@ msgstr ""
 "Installa le opzioni di test per oZeta skin\n"
 "Vuoi installare ora?"
 
-#: plugin.py:1312
+#: plugin.py:1341
 msgid ""
 "Install Test Options...\n"
 "Please Wait"
@@ -370,11 +370,11 @@ msgstr ""
 "Installa opzioni di test...\n"
 "Attendere prego"
 
-#: plugin.py:1327
+#: plugin.py:1356
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "Dati inseriti per il Meteo, vuoi continuare lo stesso?"
 
-#: plugin.py:1331
+#: plugin.py:1360
 msgid ""
 "Weather Plugin Plugin Not Installed!!\n"
 "Do you really want to install now?"
@@ -382,23 +382,23 @@ msgstr ""
 "Weather Plugin non installato!!\n"
 "Vuoi davvero installare ora?"
 
-#: plugin.py:1332
+#: plugin.py:1361
 msgid "Install Weather Plugin and Reboot"
 msgstr "Installa il Weather Plugin e riavvia"
 
-#: plugin.py:1348
+#: plugin.py:1377
 msgid "Install WeatherPlugin"
 msgstr "Installa WeatherPlugin"
 
-#: plugin.py:1354
+#: plugin.py:1383
 msgid "Plugin WeatherPlugin not installed!!!"
 msgstr "Plugin WeatherPlugin non installato!!!"
 
-#: plugin.py:1360
+#: plugin.py:1389
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Apri OAWeather, vuoi continuare?"
 
-#: plugin.py:1364
+#: plugin.py:1393
 msgid ""
 "OAWeather Plugin Plugin Not Installed!!\n"
 "Do you really want to install now?"
@@ -406,47 +406,39 @@ msgstr ""
 "Plugin OAWeather Plugin non installato!!\n"
 "Vuoi davvero installare ora?"
 
-#: plugin.py:1365
+#: plugin.py:1394
 msgid "Install OAWeather Plugin and Reboot"
 msgstr "Installa OAWeather Plugin e Riavvia"
 
-#: plugin.py:1382
+#: plugin.py:1411
 msgid "Install OAWeatherPlugin"
 msgstr "Installa OAWeatherPlugin"
 
-#: plugin.py:1388
+#: plugin.py:1417
 msgid "Plugin OAWeatherPlugin not installed!!!"
 msgstr "Plugin OAWeather non installato!!!"
 
-#: plugin.py:1430
-msgid ""
-"Restart E2 Now..\n"
-"Do you really want to restart GUI now?"
-msgstr ""
-"Riavvia E2 ora..\n"
-"Vuoi davvero riavviare la GUI ora?"
-
-#: plugin.py:1437
+#: plugin.py:1479
 msgid "Really close without saving settings?"
 msgstr "Chiudere senza salvare le impostazioni?"
 
-#: plugin.py:1477
+#: plugin.py:1531
 msgid "Back"
 msgstr "Torna"
 
-#: plugin.py:1478
+#: plugin.py:1532
 msgid "ApiKey Info"
 msgstr "Info ApiKey"
 
-#: plugin.py:1479
+#: plugin.py:1533
 msgid "Preview Info"
 msgstr "Info Anteprima"
 
-#: plugin.py:1480
+#: plugin.py:1534
 msgid "Restart Info"
 msgstr "Info Riavvio"
 
-#: plugin.py:1520
+#: plugin.py:1574
 msgid ""
 "         Exit zSetup\n"
 "\n"
@@ -454,7 +446,7 @@ msgstr ""
 "         Uscita zSetup\n"
 "\n"
 
-#: plugin.py:1522
+#: plugin.py:1576
 msgid ""
 "         Save and Copy changes in the Settings xml file\n"
 "\n"
@@ -462,7 +454,7 @@ msgstr ""
 "         Salva e copia le modifiche nel file xml delle impostazioni\n"
 "\n"
 
-#: plugin.py:1524
+#: plugin.py:1578
 msgid ""
 "         View Pic of Panels preview, in the FullHD mode\n"
 "\n"
@@ -470,7 +462,7 @@ msgstr ""
 "         Visualizza l'anteprima della foto dei pannelli, in modalità FullHD\n"
 "\n"
 
-#: plugin.py:1526
+#: plugin.py:1580
 msgid ""
 "         Restart E2 but not apply changes\n"
 "\n"
@@ -478,7 +470,7 @@ msgstr ""
 "         Riavvia E2 ma non applica le modifiche\n"
 "\n"
 
-#: plugin.py:1528
+#: plugin.py:1582
 msgid ""
 "         Reset Settings\n"
 "\n"
@@ -486,7 +478,7 @@ msgstr ""
 "         Ripristina le impostazioni\n"
 "\n"
 
-#: plugin.py:1530
+#: plugin.py:1584
 msgid ""
 "         Install or Set Weather Plugin if installed\n"
 "\n"
@@ -494,34 +486,34 @@ msgstr ""
 "         Installa o imposta il plugin meteo se installato\n"
 "\n"
 
-#: plugin.py:1532
+#: plugin.py:1586
 msgid "         Menu/Setup/Graphic Interface/OSD Setup\n"
 msgstr "         Menu/Impostazione/Interfaccia grafica/Impostazione OSD\n"
 
-#: plugin.py:1533
+#: plugin.py:1587
 msgid "         Alternative Radio Mode= Yes\n"
 msgstr "         Modalità radio alternativa = Sì\n"
 
-#: plugin.py:1543
+#: plugin.py:1597
 msgid ""
 "    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
 msgstr ""
 "    Per utilizzare le copertine OMDB, copia il file apikey nella cartella "
 "skin:\n"
 
-#: plugin.py:1544
+#: plugin.py:1598
 msgid "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
 
-#: plugin.py:1545
+#: plugin.py:1599
 msgid "    Or manually enter the key, created on the OMDB portal'\n"
 msgstr "    Oppure inserire manualmente la chiave, creata sul portale OMDB'\n"
 
-#: plugin.py:1546
+#: plugin.py:1600
 msgid "    use the virtual keyboard.\n"
 msgstr "    usa la tastiera virtuale.\n"
 
-#: plugin.py:1547
+#: plugin.py:1601
 msgid ""
 "    Or import from /tmp the file omdbkey.txt\n"
 "\n"
@@ -529,27 +521,27 @@ msgstr ""
 "     O importa dal file in /tmp/omdbkey.txt\n"
 "\n"
 
-#: plugin.py:1549
+#: plugin.py:1603
 msgid "    For use The TMDB Covers, copy the apikey file in the skin folder:\n"
 msgstr ""
 "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella "
 "skin:\n"
 
-#: plugin.py:1550
+#: plugin.py:1604
 msgid "    /usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\n"
 
-#: plugin.py:1551
+#: plugin.py:1605
 msgid "    Or manually enter the key, created on the TMDB portal\n"
 msgstr "    Oppure inserire manualmente la chiave, creata sul portale TMDB\n"
 
-#: plugin.py:1552 plugin.py:1558
+#: plugin.py:1606 plugin.py:1612
 msgid ""
 "    use the virtual keyboard.\n"
 "\n"
 msgstr "    usa la tastiera virtuale.\n"
 
-#: plugin.py:1553
+#: plugin.py:1607
 msgid ""
 "    Or import from /tmp the file apikey.txt\n"
 "\n"
@@ -557,23 +549,23 @@ msgstr ""
 "     O importa dal file in /tmp/apikey.txt\n"
 "\n"
 
-#: plugin.py:1555
+#: plugin.py:1609
 msgid ""
 "    For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
 msgstr ""
 "    Per utilizzare le copertine THETMDB, copia il file apikey nella cartella "
 "skin:\n"
 
-#: plugin.py:1556
+#: plugin.py:1610
 msgid "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 
-#: plugin.py:1557
+#: plugin.py:1611
 msgid "    Or manually enter the key, created on the THETMDB portal\n"
 msgstr ""
 "    Oppure inserire manualmente la chiave, creata sul portale  THETMDB\n"
 
-#: plugin.py:1559
+#: plugin.py:1613
 msgid ""
 "    Or import from /tmp the file thetvdbkey.txt\n"
 "\n"
@@ -581,25 +573,25 @@ msgstr ""
 "    O importa dal file in /tmp/thetvdbkey.txt\n"
 "\n"
 
-#: plugin.py:1561
+#: plugin.py:1615
 msgid "    For use The WeatherPlugin:\n"
 msgstr "    Per utilizzare il WeatherPlugin:\n"
 
-#: plugin.py:1562
+#: plugin.py:1616
 msgid "    --Automatic Import from Plugin\n"
 msgstr "    --Importazione automatica dal plugin\n"
 
-#: plugin.py:1563
+#: plugin.py:1617
 msgid "    For use VisualWeather\n"
 msgstr "    Per utilizzare VisualWeather\n"
 
-#: plugin.py:1564
+#: plugin.py:1618
 msgid "    --use the virtual keyboard or import from default config plugin"
 msgstr ""
 "    --usa la tastiera virtuale o importa dal plugin di configurazione "
 "predefinito"
 
-#: plugin.py:1572
+#: plugin.py:1626
 msgid ""
 "SAVE & RESTART\n"
 "\n"
@@ -607,21 +599,31 @@ msgstr ""
 "SALVA & RIAVVIA\n"
 "\n"
 
-#: plugin.py:1574
+#: plugin.py:1628
 msgid "         Save and Copy changes in the xml file config\n"
 msgstr "         Salva e copia le modifiche nel file xml config\n"
 
-#: plugin.py:1576
+#: plugin.py:1630
 msgid "         Restart E2 but not apply changes\n"
 msgstr "         Riavvia E2 ma non applica le modifiche\n"
 
-#: plugin.py:1595
+#: plugin.py:1649
 msgid "Click Exit for close this window"
 msgstr "Esci per chiudere questa finestra"
 
-#: plugin.py:1639
+#: plugin.py:1693
 msgid "oZsetup"
 msgstr "oZsetup"
+
+#~ msgid "Restart"
+#~ msgstr "Riavvio"
+
+#~ msgid ""
+#~ "Restart E2 Now..\n"
+#~ "Do you really want to restart GUI now?"
+#~ msgstr ""
+#~ "Riavvia E2 ora..\n"
+#~ "Vuoi davvero riavviare la GUI ora?"
 
 #~ msgid "Unknow!! or FILE NO EXIST /tmp/ozeta.tar!"
 #~ msgstr "Errore Sconosciuto!! o FILE NON ESISTENTE /tmp/ozeta.tar!"
