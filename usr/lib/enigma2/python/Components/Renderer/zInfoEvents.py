@@ -341,7 +341,8 @@ class zInfoEvents(Renderer, VariableText):
         self.year = self.filterSearch()
         try:
             try:
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
+                # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
+                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
                 if self.year is not None:
                     url_tmdb += "&year={}".format(self.year)
                 if PY3:
