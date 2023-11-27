@@ -269,7 +269,6 @@
         </widget>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
-
     <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <panel name="vButtonTemplate-1500"/>
@@ -292,7 +291,6 @@
         </widget>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
-    
     <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500-nl"/>
         <panel name="bLogo"/>
@@ -1035,37 +1033,35 @@
     </screen>
     <!-- Softcam Setup -->
     <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftCam" backgroundColor=" transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1000" />
-        <panel name="vButtonTemplate-1000" />
-        <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2" />
-        <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97" />
-        <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1" />
-        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" />
-        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1" />
-		<widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow" />
-		<!-- add lululla -->
+        <panel name="LayerMenu1000"/>
+        <panel name="vButtonTemplate-1000"/>
+        <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2"/>
+        <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
+        <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1"/>
+        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2"/>
+        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1"/>
+        <widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow"/>
+        <!-- add lululla -->
         <!--
         <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
 		<widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center" />
 		<widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1" /> -->
     </screen>
-    
     <!-- Softcam Panel add lululla -->
     <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="SoftCam" backgroundColor=" transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1000" />
-        <panel name="vButtonTemplate-1000" />
-        <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2" />
-        <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97" />
-        <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1" />
-        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" />
-        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1" />
-		<widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow" />
-		<!-- add lululla -->
-        <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
-		<widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center" />
-		<widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1" />
-    </screen>    
-    
+        <panel name="LayerMenu1000"/>
+        <panel name="vButtonTemplate-1000"/>
+        <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2"/>
+        <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
+        <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1"/>
+        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2"/>
+        <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1"/>
+        <widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow"/>
+        <!-- add lululla -->
+        <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center"/>
+        <widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center"/>
+        <widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1"/>
+    </screen>
     <!-- PPanel -->
     <screen name="ToplevelPPanel" position="0,0" size="1920,1080" title="TopLevel Panel" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1680,7 +1676,58 @@
         </widget>
         <ePixmap position="1390,900" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
-
+    <!-- EventView -->
+    <screen name="EventView" title="EventView" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="bLogo"/>
+        <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
+        <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
+        <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
+        <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
+        <!-- PICON Pli/ATV -->
+        <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
+        <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
+            <convert type="ServiceName">Reference</convert>
+        </widget>
+        <!-- Event Now -->
+        <widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
+            <convert type="EventName">Name</convert>
+        </widget>
+        <widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <widget name="duration" position="1030,200" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <widget source="session.Event_Now" render="Label" position="1180,200" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
+            <convert type="EventTime">Remaining</convert>
+            <convert type="RemainingToText">InMinutes</convert>
+        </widget>
+        <widget source="session.Event_Now" render="Progress" position="660,260" size="820,7" foregroundColor="bluette" backgroundColor="#303030" zPosition="5">
+            <convert type="EventTime">Progress</convert>
+        </widget>
+        <!-- Event Next-->
+        <eLabel text="Next Event :" position="660,290" size="250,50" font="Regular;32" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2"/>
+        <widget source="session.Event_Next" render="Label" position="900,290" size="250,50" font="Regular;32" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
+            <convert type="EventTime">StartTime</convert>
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="session.Event_Next" render="Label" position="1180,280" size="300,50" halign="right" font="Regular;36" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="2">
+            <convert type="EventTime">Duration</convert>
+            <convert type="ClockToText">InMinutes</convert>
+        </widget>
+        <widget source="session.Event_Next" render="Label" position="660,345" size="820,50" font="Regular;36" foregroundColor="yellow" backgroundColor="header" transparent="1" noWrap="1" zPosition="2">
+            <convert type="EventName">Name</convert>
+        </widget>
+        <eLabel position="660,400" size="820,3" backgroundColor="#202020" zPosition="1"/>
+        <widget source="session.Event_Now" render="Label" position="1000,417" size="480,40" font="Regular;34" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
+            <convert type="EventName">Genre</convert>
+        </widget>
+        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
+        <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+        <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
+        <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
+        <!-- end edit lululla -->
+        <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
+        <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
+        <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
+    </screen>
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>

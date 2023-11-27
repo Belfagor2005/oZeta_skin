@@ -1,5 +1,5 @@
-	<!-- *** oZeta - XML Version 2.27 Bottom Logo Team By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Bottom Logo Atv -->
-	<screen name="bLogo" >
-		<ePixmap position="230,980" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Atv.png" alphatest="blend" zPosition="1" />
-	</screen>
+<!-- *** oZeta - XML Version 2.27 Bottom Logo Team By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : Bottom Logo Atv -->
+<screen name="bLogo">
+    <ePixmap position="230,980" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Atv.png" alphatest="blend" zPosition="1"/>
+</screen>

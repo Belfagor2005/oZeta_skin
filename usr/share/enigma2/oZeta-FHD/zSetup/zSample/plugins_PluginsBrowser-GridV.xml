@@ -20,10 +20,8 @@
                         }
             </convert>
     </widget>
-
     <eLabel position="5,8" size="280,150" cornerRadius="20" backgroundColor="#20000000"/>
     <eLabel position="5,173" size="280,900" cornerRadius="20" backgroundColor="#20000000"/>
-
     <ePixmap pixmap="buttons/80/key_menu.png" position="11,105" size="80,40" alphatest="blend" zPosition="1"/>
     <ePixmap objectTypes="key_red,Button,Label" pixmap="buttons/button_red.png" position="11,20" size="30,30" zPosition="1" alphatest="blend"/>
     <widget objectTypes="key_red,Label,Button" name="key_red" position="50,20" size="250,32" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>

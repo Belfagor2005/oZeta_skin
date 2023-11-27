@@ -1,5 +1,5 @@
-	<!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : EventView -->
-	<screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="EventView"/>
-	</screen>
+<!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : EventView -->
+<screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="EventView"/>
+</screen>

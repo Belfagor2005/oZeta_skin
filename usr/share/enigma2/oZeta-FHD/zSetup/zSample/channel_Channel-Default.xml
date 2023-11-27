@@ -1,6 +1,6 @@
-	<!-- *** oZeta - XML Version 2.27 Channel Selection Default By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : TempChannelSelectionSmall + PartChannelSelectionNext -->
-	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection Default" backgroundColor="#FF000000" flags="wfNoBorder">
-		<panel name="TempChannelSelectionSmall"/>
-		<panel name="PartChannelSelectionNext" />
-	</screen>
+<!-- *** oZeta - XML Version 2.27 Channel Selection Default By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : TempChannelSelectionSmall + PartChannelSelectionNext -->
+<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection Default" backgroundColor="#FF000000" flags="wfNoBorder">
+    <panel name="TempChannelSelectionSmall"/>
+    <panel name="PartChannelSelectionNext"/>
+</screen>

@@ -205,30 +205,83 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
+def transEpis(text):
+    text = text.lower() + '+FIN'
+    text = text.replace('  ', '+').replace(' ', '+').replace('&', '+').replace(':', '+').replace('_', '+').replace('u.s.', 'us').replace('l.a.', 'la').replace('.', '+').replace('"', '+').replace('(', '+').replace(')', '+').replace('[', '+').replace(']', '+').replace('!', '+').replace('++++', '+').replace('+++', '+').replace('++', '+')
+    text = text.replace('+720p+', '++').replace('+1080i+', '+').replace('+1080p+', '++').replace('+dtshd+', '++').replace('+dtsrd+', '++').replace('+dtsd+', '++').replace('+dts+', '++').replace('+dd5+', '++').replace('+5+1+', '++').replace('+3d+', '++').replace('+ac3d+', '++').replace('+ac3+', '++').replace('+avchd+', '++').replace('+avc+', '++').replace('+dubbed+', '++').replace('+subbed+', '++').replace('+stereo+', '++')
+    text = text.replace('+x264+', '++').replace('+mpeg2+', '++').replace('+avi+', '++').replace('+xvid+', '++').replace('+blu+', '++').replace('+ray+', '++').replace('+bluray+', '++').replace('+3dbd+', '++').replace('+bd+', '++').replace('+bdrip+', '++').replace('+dvdrip+', '++').replace('+rip+', '++').replace('+hdtv+', '++').replace('+hddvd+', '++')
+    text = text.replace('+german+', '++').replace('+ger+', '++').replace('+english+', '++').replace('+eng+', '++').replace('+spanish+', '++').replace('+spa+', '++').replace('+italian+', '++').replace('+ita+', '++').replace('+russian+', '++').replace('+rus+', '++').replace('+dl+', '++').replace('+dc+', '++').replace('+sbs+', '++').replace('+se+', '++').replace('+ws+', '++').replace('+cee+', '++')
+    text = text.replace('+remux+', '++').replace('+directors+', '++').replace('+cut+', '++').replace('+uncut+', '++').replace('+extended+', '++').replace('+repack+', '++').replace('+unrated+', '++').replace('+rated+', '++').replace('+retail+', '++').replace('+remastered+', '++').replace('+edition+', '++').replace('+version+', '++')
+    text = text.replace('\xc3\x9f', '%C3%9F').replace('\xc3\xa4', '%C3%A4').replace('\xc3\xb6', '%C3%B6').replace('\xc3\xbc', '%C3%BC')
+    text = re.sub('\\+tt[0-9]+\\+', '++', text)
+    text = re.sub('\\+\\+\\+\\+.*?FIN', '', text)
+    text = re.sub('\\+FIN', '', text)
+    return text
+
+
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
-            text = REGEX.sub('', text)
+            print('original text: ', text)
+            text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
+            print('\xe2\x80\x93 text: ', text)
+            text = text.lower()
+            text = text.replace('studio aperto mag', 'Studio Aperto').replace('primatv', '').replace('1^tv', '')
+            text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
+            if text.endswith("the"):
+                text.rsplit(" ", 1)[0]
+                text = text.rsplit(" ", 1)[0]
+                text = "the " + str(text)
+                print('the from last to start text: ', text)
+            text = text + 'FIN'
+            text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
+            text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
+            text = re.sub('FIN', '', text)
+            # text = transEpis(text)
+            # text = text.replace('+', ' ')
+            print('transEpis text: ', text)
+
+            text = text.replace(' .', '.').replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
+
+            # text = REGEX.sub('', text)  # paused
             # # add
-            text = text.replace("\xe2\x80\x93", "")  # replace special '-'
+            # text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
             # # add end
-            text = re.sub(r"[-,?!/\.\":]", ' ', text)  # replace (- or , or ! or / or . or " or :) by space
-            # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
-            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+
             # # add
-            # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)
+            # remove || content at start
+            text = re.sub(r'^\|[\w\-\|]*\|', '', text)
+            print('^\|[\w\-\|]*\| text: ', text)
+            # remove () content
+            n = 1  # run at least once
+            while n:
+                text, n = re.subn(r'\([^\(\)]*\)', '', text)
+            print('\([^\(\)]*\) text: ', text)
+            # remove [] content
+            n = 1  # run at least once
+            while n:
+                text, n = re.subn(r'\[[^\[\]]*\]', '', text)
+            print('\[[^\[\]]*\] text: ', text)
+            # # add end
+
+            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            print('[-,?!/\.\":] text: ', text)
+
+            # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
+            # # add
+            # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
+            # text = re.sub('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
+            print('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', text)
             # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
             # text = re.sub('\Teil\d+$', '', text)
             # text = re.sub('\Folge\d+$', '', text)
             # # add end
-            text = text.replace('PrimaTv', '').replace(' mag', '')
-            text = text.replace(' prima pagina', '')
-            # # text = text.replace(' 6', '').replace(' 7', '').replace(' 8', '').replace(' 9', '').replace(' 10', '')
-            # # text = text.replace(' 11', '').replace(' 12', '').replace(' 13', '').replace(' 14', '').replace(' 15', '')
-            # # text = text.replace(' 16', '').replace(' 17', '').replace(' 18', '').replace(' 19', '').replace(' 20', '')
+
             text = unicodify(text)
             text = text.capitalize()
+            print('Final text: ', text)
         else:
             text = text
         return text
@@ -438,7 +491,7 @@ class zPosterX(Renderer):
         if what[0] != self.CHANGED_CLEAR:
             servicetype = None
             try:
-                pstcanal = ''
+                # pstcanal = ''
                 service = None
                 if isinstance(self.source, ServiceEvent):  # source="ServiceEvent"
                     service = self.source.getCurrentService()

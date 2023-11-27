@@ -1,7 +1,7 @@
-	<!-- *** oZeta - XML Version 2.27 Infobar Default By zSetup v2.0.0 *** -->
-	<!-- Author mmark : Modules : PartDataChannel + PartInfoCrypt -->
-	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="PartDataChannel"/>
-		<panel name="PartInfoCrypt"/>
-	</screen>
+<!-- *** oZeta - XML Version 2.27 Infobar Default By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : PartDataChannel + PartInfoCrypt -->
+<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="PartDataChannel"/>
+    <panel name="PartInfoCrypt"/>
+</screen>
 

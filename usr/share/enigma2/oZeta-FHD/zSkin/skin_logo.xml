@@ -1,12 +1,12 @@
-	<!--
+<!--
 	######################### mmark_oZeta_Setup #############################
 	#      mmark             Version 2.0.0 released          13-07-2022     #
 	#########################################################################
 	-->
-	<!-- ***** Created by zSetup Plugin v2.0 ***** -->
-	<!-- *** oZeta - XML Version 2.27 Team Logo By zSetup v2.0.0 *** -->  
-	<!-- Author mmark : Modules : Logo ATV -->
-	<screen name="Logo" >
-		<ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10" />
-		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Pli-Logo.png" alphatest="blend" transparent="1" zPosition="20" />
-	</screen>
+<!-- ***** Created by zSetup Plugin v2.0 ***** -->
+<!-- *** oZeta - XML Version 2.27 Team Logo By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : Logo ATV -->
+<screen name="Logo">
+    <ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10"/>
+    <ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Pli-Logo.png" alphatest="blend" transparent="1" zPosition="20"/>
+</screen>
