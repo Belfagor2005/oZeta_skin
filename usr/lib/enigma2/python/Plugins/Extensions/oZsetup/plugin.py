@@ -1243,7 +1243,8 @@ class oZsetup(ConfigListScreen, Screen):
                 os.system(cmd1)
                 os.system(cmd2)
             else:
-                self.session.open(MessageBox, _('Image Box Not Tested!! Skin Not Installed'), MessageBox.TYPE_INFO, timeout=5)
+                self.session.open(MessageBox, _('Image Box Not Tested!!'), MessageBox.TYPE_INFO, timeout=5)
+                # return                                
             self.check_line()
         else:
             # self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/ozeta.tar!'), MessageBox.TYPE_INFO, timeout=5)
