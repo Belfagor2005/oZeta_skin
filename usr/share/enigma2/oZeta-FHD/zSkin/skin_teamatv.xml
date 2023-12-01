@@ -392,7 +392,7 @@
     <!-- Skin Selector ATV -->
     <screen name="SkinSelector" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000-nl"/>
-        <panel name="vButtonTemplate-1000"/>
+        <!-- <panel name="vButtonTemplate-1000"/> -->
         <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
         <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="SkinList" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
