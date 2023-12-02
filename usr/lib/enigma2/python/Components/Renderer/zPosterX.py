@@ -550,7 +550,8 @@ class zPosterX(Renderer):
                 pstrNm = self.path + pstcanal + ".jpg"
                 self.pstrNm = str(pstrNm)
                 if os.path.exists(self.pstrNm):
-                    self.timer.start(50, True)
+                    if os.path.getsize(self.pstrNm) > 0:
+                        self.timer.start(50, True)
                 else:
                     canal = self.canal[:]
                     pdb.put(canal)
@@ -565,14 +566,15 @@ class zPosterX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            pstcanal = convtext(self.canal[5])
-            pstrNm = self.path + pstcanal + ".jpg"
-            self.pstrNm = str(pstrNm)
-            if os.path.exists(self.pstrNm):
-                self.logPoster("[LOAD : showPoster] {}".format(self.pstrNm))
-                self.instance.setPixmap(loadJPG(self.pstrNm))
-                self.instance.setScale(1)
-                self.instance.show()
+            # pstcanal = convtext(self.canal[5])
+            # pstrNm = self.path + pstcanal + ".jpg"
+            # self.pstrNm = str(pstrNm)
+            # if os.path.exists(self.pstrNm):
+                # if os.path.getsize(self.pstrNm) > 0:
+            self.logPoster("[LOAD : showPoster] {}".format(self.pstrNm))
+            self.instance.setPixmap(loadJPG(self.pstrNm))
+            self.instance.setScale(1)
+            self.instance.show()
 
     def waitPoster(self):
         if self.instance:
