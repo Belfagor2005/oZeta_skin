@@ -3,7 +3,10 @@
 <screen name="EventView" title="Eventview" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="bLogo"/>
     <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-    <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
+
+    <widget position="220,130" render="zBackdropX" size="1270,665" alphatest="blend" scale="fill" source="Event" zPosition="-2" />
+    <ePixmap position="0,0" size="1500,1080" alphatest="blend" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-3"/>
+
     <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
     <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
     <!-- PICON Pli/ATV -->
@@ -44,12 +47,14 @@
     <widget source="session.Event_Now" render="Label" position="1000,417" size="480,40" font="Regular;34" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
         <convert type="EventName">Genre</convert>
     </widget>
-    <widget source="Event" render="zBackdropX" position="248,651" size="530,304" zPosition="2" alphatest="blend"/>
+    <!-- <widget source="Event" render="zBackdropX" position="248,651" size="530,304" zPosition="-1" alphatest="blend"/> -->
+    
+    <ePixmap pixmap="menu/stargrey.png" position="270,660" size="316,27" alphatest="blend" transparent="1" zPosition="6"/>
+    <widget source="Event" render="zStarX" position="270,660" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="8"/>
     <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
     <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
     <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
     <widget name="FullDescription" position="793,467" size="688,488" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5" scrollbarSliderForegroundColor="#404040" scrollbarSliderBorderColor="#606060"/>
-    <ePixmap pixmap="menu/stargrey.png" position="270,660" size="316,27" alphatest="blend" transparent="1" zPosition="20"/>
-    <widget source="Event" render="zStarX" position="270,660" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="22"/>
+
 </screen>

@@ -338,7 +338,7 @@ class zStarX(VariableValue, Renderer):
                                 if PY3:
                                     import six
                                     data = six.ensure_str(data)
-                                print('zstar pass ids Else: ', e)
+                                print('zstar pass ids Else: ')
                                 if data:
                                     data = json.load(urlopen(data))
                                     open(dwn_infos, "w").write(json.dumps(data))
@@ -347,13 +347,13 @@ class zStarX(VariableValue, Renderer):
                                     if PY3:
                                         import six
                                         data = six.ensure_str(data)
-                                    print('zstar pass ids Else: ', e)
+                                    print('zstar pass ids Else: ')
                                     if data:
                                         data = json.load(urlopen(data))
                                         open(dwn_infos, "w").write(json.dumps(data))
 
                             except Exception as e:
-                                print('pass Exception: ', e)
+                                print('pass Exception:', e)
                 # if os.path.exists(dwn_infos):
                 else:
                     try:
