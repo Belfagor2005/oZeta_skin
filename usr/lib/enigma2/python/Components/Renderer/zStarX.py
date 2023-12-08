@@ -296,7 +296,7 @@ class zStarX(VariableValue, Renderer):
             if self.event and self.event != 'None' or self.event is not None:  # and self.instance:
                 if PY3:
                     self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                else::
+                else:
                     self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
