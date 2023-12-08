@@ -1377,7 +1377,7 @@
         <panel name="LayerMenu1500"/>
         <!-- panel name="cRGYB" /-->
         <panel name="ButtonTemplate"/>
-        <ePixmap position="0,0" size="1330,1080" pixmap="oZeta-FHD/bigbak/setmain.png" blend="blend" zPosition="-2"/>
+        <ePixmap position="0,0" size="1330,1080" pixmap="oZeta-FHD/bigbak/setmain.png" alphatest="blend" zPosition="-2"/>
         <widget name="config" position="230,150" size="1250,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="5" foregroundColor="#a0a0a0" foregroundColorSelected="ltbluette" backgroundColor="#000000" backgroundColorSelected="barColor" scrollbarWidth="10" scrollbarSliderForegroundColor="#505050" scrollbarSliderBackgroundColor="#303030"/>
         <ePixmap position="1370,75" size="80,40" pixmap="oZeta-FHD/skin_default/buttons/key_info.png" alphatest="on" zPosition="5"/>
     </screen>
@@ -2157,7 +2157,7 @@
         <widget name="config" position="230,150" size="1250,720" scrollbarMode="showOnDemand" transparent="1" zPosition="5" scrollbarWidth="10" foregroundColor="#a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#000000" backgroundColorSelected="barColor"/>
         <widget name="label" position="220,800" size="930,40" font="Regular;30" halign="left" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
         <!-- Colors 1220 -->
-        <ePixmap position="220,910" size="1030,8" pixmap="oZeta-FHD/menu/sep.png" blend="blend" zPosition="5"/>
+        <ePixmap position="220,910" size="1030,8" pixmap="oZeta-FHD/menu/sep.png" alphatest="blend" zPosition="5"/>
         <ePixmap pixmap="oZeta-FHD/buttons/button_red.png" position="220,945" size="30,30" alphatest="on" zPosition="5"/>
         <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="220,1005" size="30,30" alphatest="on" zPosition="5"/>
         <ePixmap pixmap="oZeta-FHD/buttons/button_yellow.png" position="1220,945" size="30,30" alphatest="on" zPosition="5"/>
@@ -2738,9 +2738,9 @@
     </screen>
     <!-- [061] MSN Weather 061/01 -->
     <screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="Weather Plugin">
-        <ePixmap blend="blend" pixmap="oZeta-FHD/menu/panels/meteo.jpg" position="0,0" size="1920,1080" zPosition="-1"/>
-        <ePixmap blend="blend" pixmap="oZeta-FHD/menu/sep.png" position="0,120" size="1320,8" zPosition="5"/>
-        <ePixmap blend="blend" pixmap="oZeta-FHD/icons/msnlogo.png" position="40,30" size="194,75" zPosition="5" alphatest="blend"/>
+        <ePixmap alphatest="blend" pixmap="oZeta-FHD/menu/panels/meteo.jpg" position="0,0" size="1920,1080" zPosition="-1"/>
+        <ePixmap alphatest="blend" pixmap="oZeta-FHD/menu/sep.png" position="0,120" size="1320,8" zPosition="5"/>
+        <ePixmap alphatest="blend" pixmap="oZeta-FHD/icons/msnlogo.png" position="40,30" size="194,75" zPosition="5"/>
         <widget backgroundColor="#000000" font="Regular;28" foregroundColor="#606060" halign="right" position="510,30" render="Label" size="810,40" source="observationtime" transparent="1" zPosition="5"/>
         <widget backgroundColor="#000000" font="Regular;28" foregroundColor="#606060" halign="right" position="510,70" render="Label" size="810,40" source="observationpoint" transparent="1" zPosition="5"/>
         <widget backgroundColor="#000000" font="Regular;40" foregroundColor="yellow" halign="left" position="40,120" render="Label" size="1280,120" source="statustext" transparent="1" valign="center"/>
@@ -2753,7 +2753,7 @@
         <widget font="Regular;30" position="450,333" render="Label" size="600,40" source="feelsliketemp" transparent="1"/>
         <ePixmap pixmap="oZeta-FHD/weather_icons/wind.png" position="60,472" scale="strech" size="79,110" zPosition="5" alphatest="blend"/>
         <widget font="Regular;30" position="130,550" render="Label" size="500,40" source="wind_condition" transparent="1"/>
-        <ePixmap blend="blend" pixmap="oZeta-FHD/weather_icons/umidity.png" position="70,650" scale="strech" size="60,64" zPosition="5" alphatest="blend"/>
+        <ePixmap alphatest="blend" pixmap="oZeta-FHD/weather_icons/umidity.png" position="70,650" scale="strech" size="60,64" zPosition="5"/>
         <widget font="Regular;30" position="130,660" render="Label" size="700,40" source="humidity" transparent="1" valign="bottom"/>
         <eLabel backgroundColor="#ffffff" position="40,950" size="900,1" zPosition="5"/>
         <!-- Days -->
@@ -2781,7 +2781,7 @@
     </screen>
     <!-- [070] WeatherMSN 070/1 -->
     <screen name="WeatherMSN" position="0,0" size="1920,1080" backgroundColor="#ff000000" flags="wfNoBorder">
-        <ePixmap blend="blend" pixmap="oZeta-FHD/menu/panels/meteo.jpg" position="0,0" size="1920,1080" zPosition="-1"/>
+        <ePixmap alphatest="blend" pixmap="oZeta-FHD/menu/panels/meteo.jpg" position="0,0" size="1920,1080" zPosition="-1"/>
         <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WeatherMSN/logo.png" position="-30,10" size="550,125" alphatest="blend"/>
         <widget source="attribution" render="Label" position="400,105" size="840,40" font="Regular; 26" foregroundColor="#00f4f4f4" backgroundColor="#000000" halign="left" transparent="1"/>
         <widget source="pointtxt" render="Label" position="1590,20" size="300,40" font="Regular; 28" foregroundColor="#606060" backgroundColor="#000000" halign="right" transparent="1"/>
@@ -2926,9 +2926,6 @@
         <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1"/>
         <widget name="description" render="Label" position="1260,770" size="420,173" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
         <widget name="status" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
-<!--
-         <widget name="status" render="Label" position="1064,1025" size="529,42" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
- -->        
         <eLabel position="1260,760" size="420,3" backgroundColor="#303030" zPosition="10"/>
         <widget name="author" position="1260,394" size="420,362" font="Regular;30" halign="center" valign="top" foregroundColor="white" backgroundColor="#202020" transparent="1"/>
         <widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="230,705" size="1,1" transparent="1" zPosition="10" alphatest="on"/>
