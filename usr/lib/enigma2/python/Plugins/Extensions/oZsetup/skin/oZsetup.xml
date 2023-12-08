@@ -1,8 +1,8 @@
 <!-- Skin oZsetup 19/02/2024 -->
 <screen name="oZsetup" position="center,150" size="800,300" title="oZeta Skin Setup" backgroundColor="#10000000">
-	<ePixmap position="0,30" size="160,81" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1" />
+        <ePixmap position="0,30" size="160,81" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1" />
         <widget name="config" position="170,30" size="620,150" font="Regular;30" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
-	<eLabel position="10,230" size="780,3" backgroundColor="#303030" zPosition="4" />
+        <eLabel position="10,230" size="780,3" backgroundColor="#303030" zPosition="4" />
         <ePixmap position="10,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
         <widget name="key_red" font="Regular;28" position="50,250" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
         <ePixmap position="270,250" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
