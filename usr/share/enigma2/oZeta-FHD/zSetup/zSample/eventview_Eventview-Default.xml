@@ -1,7 +1,6 @@
 <!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->
 <!-- Author mmark : Modules : EventView -->
 <screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
-    <!-- <panel name="EventView"/> -->
         <panel name="bLogo"/>
         <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
         <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>

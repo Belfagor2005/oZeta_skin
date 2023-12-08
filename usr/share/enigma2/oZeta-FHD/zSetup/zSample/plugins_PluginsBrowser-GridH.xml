@@ -1,10 +1,7 @@
 <!-- *** oZeta - XML Version 2.27 Channel Selection Cover By zSetup v2.0.0 *** -->
 <!-- Author lululla : Modules : PluginBrowserGrid Horizontal -->
 <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-    <!-- <ePixmap position="4,971" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="3" /> -->
     <widget name="quickselect" position="12,928" size="1570,145" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-    <!-- <widget name="description" position="197,1015" size="1561,55" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1" halign="center" zPosition="2" /> -->
-    <!-- <panel name="Logo" /> -->
     <widget source="Title" render="Label" position="513,1092" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
     <widget source="pluginGrid" render="Listbox" position="12,923" size="1570,145" itemSpacing="15,15" selectionZoomSize="200,100" scrollbarMode="showAlways" scrollbarForegroundColor="blue" listOrientation="grid" moveBackgroundColor="black" zPosition="3" transparent="1">
         <convert type="TemplatedMultiContent">
