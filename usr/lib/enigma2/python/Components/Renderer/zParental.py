@@ -120,8 +120,8 @@ def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
-            text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
-            print('\xe2\x80\x93 text: ', text)
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            print('xe2 x80 x93 text: ', text)
             text = text.lower()
             text = text.replace('studio aperto mag', 'Studio Aperto').replace('primatv', '').replace('1^tv', '')
             text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
@@ -137,14 +137,11 @@ def convtext(text=''):
             # text = transEpis(text)
             # text = text.replace('+', ' ')
             print('transEpis text: ', text)
-
             text = text.replace(' .', '.').replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
-
             # text = REGEX.sub('', text)  # paused
             # # add
             # text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
             # # add end
-
             # # add
             # remove || content at start
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
@@ -160,7 +157,6 @@ def convtext(text=''):
                 text, n = re.subn(r'\[[^\[\]]*\]', '', text)
             print('\[[^\[\]]*\] text: ', text)
             # # add end
-
             text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -175,7 +171,6 @@ def convtext(text=''):
             # text = re.sub('\Teil\d+$', '', text)
             # text = re.sub('\Folge\d+$', '', text)
             # # add end
-
             text = unicodify(text)
             text = text.capitalize()
             print('Final text: ', text)
@@ -202,6 +197,11 @@ class zParental(Renderer):
                 if self.instance:
                     self.instance.hide()
             if what[0] != self.CHANGED_CLEAR:
+                # self.timer = eTimer()
+                # try:
+                    # self.timer_conn = self.timer.timeout.connect(self.showParental)
+                # except:
+                    # self.timer.callback.append(self.showParental)
                 self.delay()
         except:
             pass
@@ -220,9 +220,12 @@ class zParental(Renderer):
                     cert = re.sub("\+", "", age.group()).strip()
                 else:
                     try:
-                        self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                        if not PY3:
-                            self.evnt = self.evnt.encode('utf-8')
+                        if PY3:
+                            self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                        # if not PY3:
+                        else:
+                            self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+                            # self.evnt = self.evnt.encode('utf-8')
                         if self.evnt and self.evnt != 'None' or self.evnt is not None:
                             self.evntNm = convtext(self.evnt)
                             infos_file = "{}/{}".format(path_folder, self.evntNm)
@@ -249,12 +252,12 @@ class zParental(Renderer):
                                             "Passed": "UN", }.get(age)
                     except:
                         pass
-                if cert != '':
-                    self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
-                    self.instance.show()
-                else:
-                    if self.instance:
-                        self.instance.hide()
+            if cert != '':
+                self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
+                self.instance.show()
+            else:
+                if self.instance:
+                    self.instance.hide()
         except:
             if self.instance:
                 self.instance.hide()
@@ -265,4 +268,4 @@ class zParental(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showParental)
         except:
             self.timer.callback.append(self.showParental)
-        self.timer.start(50, True)
+        self.timer.start(30, True)

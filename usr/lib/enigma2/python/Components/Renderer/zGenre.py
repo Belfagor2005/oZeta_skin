@@ -127,8 +127,8 @@ def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
-            text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
-            print('\xe2\x80\x93 text: ', text)
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            print('xe2 x80 x93 text: ', text)
             text = text.lower()
             text = text.replace('studio aperto mag', 'Studio Aperto').replace('primatv', '').replace('1^tv', '')
             text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
@@ -144,14 +144,11 @@ def convtext(text=''):
             # text = transEpis(text)
             # text = text.replace('+', ' ')
             print('transEpis text: ', text)
-
             text = text.replace(' .', '.').replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
-
             # text = REGEX.sub('', text)  # paused
             # # add
             # text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
             # # add end
-
             # # add
             # remove || content at start
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
@@ -167,12 +164,10 @@ def convtext(text=''):
                 text, n = re.subn(r'\[[^\[\]]*\]', '', text)
             print('\[[^\[\]]*\] text: ', text)
             # # add end
-
             text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             print('[-,?!/\.\":] text: ', text)
-
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             # # add
             # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
@@ -182,7 +177,6 @@ def convtext(text=''):
             # text = re.sub('\Teil\d+$', '', text)
             # text = re.sub('\Folge\d+$', '', text)
             # # add end
-
             text = unicodify(text)
             text = text.capitalize()
             print('Final text: ', text)
@@ -218,9 +212,10 @@ class zGenre(Renderer):
             return
         if self.event and self.event != 'None' or self.event is not None:
             try:
-                self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                if not PY3:
-                    self.evnt = self.evnt.encode('utf-8')
+                if PY3:
+                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                else:
+                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                 self.evntNm = convtext(self.evnt)
                 infos_file = "{}/{}".format(path_folder, self.evntNm)
                 if os.path.exists(infos_file):

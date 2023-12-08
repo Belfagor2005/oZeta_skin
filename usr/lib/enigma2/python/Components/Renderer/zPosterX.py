@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # by digiteng...07.2021,
@@ -10,7 +11,6 @@
 # downloading in the background while zaping...
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
-#
 # for infobar,
 # <widget source="session.Event_Now" render="ZPoster" position="100,100" size="185,278" />
 # <widget source="session.Event_Next" render="ZPoster" position="100,100" size="100,150" />
@@ -24,7 +24,7 @@
 # for epg, event
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" />
 # <widget source="Event" render="ZPoster" position="100,100" size="185,278" nexts="2" />
-
+# or put tag -->  path="/media/hdd/poster"
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.Renderer.zPosterXDownloadThread import zPosterXDownloadThread
@@ -104,15 +104,13 @@ except:
     lng = 'en'
     pass
 
-#
+
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC POSTER GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC POSTER GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 
 # add lululla
-
-
 def SearchBouquetTerrestrial():
     import glob
     import codecs
@@ -223,7 +221,7 @@ def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
-            text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             print('xe2 x80 x93 text: ', text)
             text = text.lower()
             text = text.replace('studio aperto mag', 'Studio Aperto').replace('primatv', '').replace('1^tv', '')
@@ -377,8 +375,9 @@ class PosterAutoDB(zPosterXDownloadThread):
                     newcn = None
                     for evt in events:
                         canal = [None, None, None, None, None, None]
-                        canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
-                        if not PY3:
+                        if PY3:
+                            canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                        else:
                             canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         if evt[1] is None or evt[4] is None or evt[5] is None or evt[6] is None:
                             self.logAutoDB("[AutoDB] *** missing epg for {}".format(canal[0]))
@@ -389,9 +388,16 @@ class PosterAutoDB(zPosterXDownloadThread):
                             canal[4] = evt[6]
                             canal[5] = canal[2]
                             # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
-                            self.pstcanal = convtext(canal[5])
-                            dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
-                            if os.path.exists(dwn_poster):
+
+                            pstcanal = convtext(canal[5])
+                            pstrNm = path_folder + '/' + pstcanal + ".jpg"
+                            self.pstcanal = str(pstrNm)
+                            dwn_poster = self.pstcanal
+                            if os.path.join(path_folder, dwn_poster):
+
+                            # self.pstcanal = convtext(canal[5])
+                            # dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
+                            # if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_poster):
@@ -418,8 +424,8 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 # val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
-                        newcn = canal[0]
-                    self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                            newcn = canal[0]
+                            self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
@@ -458,7 +464,7 @@ class zPosterX(Renderer):
             return
         Renderer.__init__(self)
         self.nxts = 0
-        self.path = path_folder + '/'
+        self.path = path_folder  # + '/'
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.logdbg = None
@@ -467,7 +473,7 @@ class zPosterX(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
         except:
             self.timer.callback.append(self.showPoster)
-        self.timer.start(50, True)
+        self.timer.start(10, True)
 
     def applySkin(self, desktop, parent):
         attribs = []
@@ -491,7 +497,6 @@ class zPosterX(Renderer):
         if what[0] != self.CHANGED_CLEAR:
             servicetype = None
             try:
-                # self.pstcanal = ''
                 service = None
                 if isinstance(self.source, ServiceEvent):  # source="ServiceEvent"
                     service = self.source.getCurrentService()
@@ -508,25 +513,25 @@ class zPosterX(Renderer):
                     else:
                         self.canal[0] = None
                         self.canal[1] = self.source.event.getBeginTime()
-                        self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                        if not PY3:
+                        if PY3:
+                            self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                        else:
                             self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                         self.canal[3] = self.source.event.getExtendedDescription()
                         self.canal[4] = self.source.event.getShortDescription()
                         self.canal[5] = self.canal[2]
-                        # self.pstcanal = convtext(self.canal[5])
                     servicetype = "Event"
                 if service:
                     events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
-                    self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                    if not PY3:
+                    if PY3:
+                        self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                    else:
                         self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
                     self.canal[1] = events[self.nxts][1]
                     self.canal[2] = events[self.nxts][4]
                     self.canal[3] = events[self.nxts][5]
                     self.canal[4] = events[self.nxts][6]
                     self.canal[5] = self.canal[2]
-                    # self.pstcanal = convtext(self.canal[5])
                     if not autobouquet_file:
                         if self.canal[0] not in apdb:
                             apdb[self.canal[0]] = service.toString()
@@ -535,7 +540,7 @@ class zPosterX(Renderer):
                 if self.instance:
                     self.instance.hide()
                 return
-            if not servicetype:
+            if not servicetype or servicetype is None:
                 self.logPoster("Error service type undefined")
                 if self.instance:
                     self.instance.hide()
@@ -546,12 +551,11 @@ class zPosterX(Renderer):
                     return
                 self.oldCanal = curCanal
                 self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
-                self.pstcanal = convtext(self.canal[5])
-                pstrNm = self.path + self.pstcanal + ".jpg"
-                self.pstrNm = str(pstrNm)
-                if os.path.exists(self.pstrNm):
-                    if os.path.getsize(self.pstrNm) > 0:
-                        self.timer.start(50, True)
+                pstcanal = convtext(self.canal[5])
+                pstrNm = self.path + '/' + pstcanal + ".jpg"
+                self.pstcanal = str(pstrNm)
+                if os.path.exists(self.pstcanal):
+                    self.timer.start(10, True)
                 else:
                     canal = self.canal[:]
                     pdb.put(canal)
@@ -566,40 +570,41 @@ class zPosterX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            # self.pstcanal = convtext(self.canal[5])
-            # pstrNm = self.path + self.pstcanal + ".jpg"
-            # self.pstrNm = str(pstrNm)
-            # if os.path.exists(self.pstrNm):
+            if not os.path.exists(self.pstcanal):
+                pstcanal = convtext(self.canal[5])
+                pstrNm = self.path + '/' + pstcanal + ".jpg"
+                self.pstcanal = str(pstrNm)
+            if os.path.exists(self.pstcanal):
                 # if os.path.getsize(self.pstrNm) > 0:
-            self.logPoster("[LOAD : showPoster] {}".format(self.pstrNm))
-            self.instance.setPixmap(loadJPG(self.pstrNm))
-            self.instance.setScale(1)
-            self.instance.show()
+                self.logPoster("[LOAD : showPoster] {}".format(self.pstcanal))
+                self.instance.setPixmap(loadJPG(self.pstcanal))
+                self.instance.setScale(1)
+                self.instance.show()
 
     def waitPoster(self):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            # self.pstcanal = convtext(self.canal[5])
-            # self.pstrNm = self.path + self.pstcanal + ".jpg"
-            # self.pstrNm = str(self.pstrNm)
+            if not os.path.exists(self.pstcanal):
+                pstcanal = convtext(self.canal[5])
+                pstrNm = self.path + '/' + pstcanal + ".jpg"
+                self.pstcanal = str(pstrNm)
             loop = 180
             found = None
-            self.logPoster("[LOOP : waitPoster] {}".format(self.pstrNm))
+            self.logPoster("[LOOP : waitPoster] {}".format(self.pstcanal))
             while loop >= 0:
-                recount = os.path.join(self.path, self.pstcanal)
-                # if os.path.exists(self.pstrNm) and os.path.getsize(self.pstrNm) > 0:  # a bug on getsize.. 
-                if recount:
+                # if os.path.exists(self.pstrNm) and os.path.getsize(self.pstrNm) > 0:  # a bug on getsize..
+                if os.path.exists(self.pstcanal):
                     loop = 0
                     found = True
-                time.sleep(0.3)
+                time.sleep(0.5)
                 loop = loop - 1
             if found:
                 self.timer.start(10, True)
 
     def logPoster(self, logmsg):
         try:
-            w = open("/tmp/xxPoster.log", "a+")
+            w = open("/tmp/zPosterx.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
         except Exception as e:
