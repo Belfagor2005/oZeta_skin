@@ -47,7 +47,7 @@
         <widget name="videomode" position="190,13" size="450,80" font="Regular;40" valign="center" halign="left" borderColor="black" borderWidth="2" backgroundColor="#303030" transparent="1"/>
     </screen>
     <!-- PVR State -->
-    <screen name="PVRState" position="0,0" size="200,100" backgroundColor="#ff000000" flags="wfNoBorder">
+    <screen name="PVRState" position="0,0" size="300,100" backgroundColor="#ff000000" flags="wfNoBorder">
         <widget name="state" position="10,10" size="300,100" borderWidth="2" font="Regular;90" borderColor="black" backgroundColor="transparent" transparent="1"/>
     </screen>
     <!-- Volume Adjust -->
@@ -1551,6 +1551,9 @@
     <!-- Movie Player Infobar -->
     <screen name="MoviePlayer" title="InfoBar" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="PartPlayer"/>
+        
+        <!-- <panel name="PartInfoPoster"/> -->
+        
         <ePixmap pixmap="oZeta-FHD/menu/zlogo.png" position="40,885" size="180,130" alphatest="blend" scale="1" zPosition="1"/>
         <widget alphatest="blend" pixmap="icons/ico_hd_off.png" position="280,1030" render="Pixmap" size="50,30" source="session.CurrentService" zPosition="2">
             <convert type="ServiceInfo">IsSD</convert>

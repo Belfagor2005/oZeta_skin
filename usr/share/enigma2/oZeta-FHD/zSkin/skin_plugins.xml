@@ -3380,7 +3380,7 @@
     </screen>
     <!-- [080] ScreenNames 080/2 -->
     <screen name="ScreenNamesAutoScreen" position="0,0" zPosition="10" size="1920,50" title="ScreenNames Status" backgroundColor="#31ff0000" flags="wfNoBorder">
-        <widget name="message_label" font="Bold;24" position="0,0" zPosition="2" valign="center" halign="center" size="1920,50" backgroundColor="#31ff0000" transparent="1"/>
+        <widget name="message_label" font="Regular;24" position="0,0" zPosition="2" valign="center" halign="center" size="1920,50" backgroundColor="#31ff0000" transparent="1"/>
     </screen>
     <!-- [081] MerlinMusicPlayer 081/1 -->
     <screen name="MerlinMusicPlayerFileList" position="0,0" size="1920,1080" flags="wfNoBorder" title="MusicPlayer">
