@@ -1464,7 +1464,7 @@ class oZsetup(ConfigListScreen, Screen):
     def isChanged(self):
         is_changed = False
         for x in self.list:
-            is_changed |= x[1].isChanged()
+            is_changed != x[1].isChanged()
         return is_changed
 
     # def zExit(self):
