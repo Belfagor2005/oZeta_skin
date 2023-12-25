@@ -163,8 +163,13 @@ def convtext(text=''):
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
-            print('xe2 x80 x93 text: ', text)
             text = text.lower()
+            # if "dc's legends of tomorrow" in text:
+                # text = "dc's legends of tomorrow"
+            # if "casa a prima vista" in text:
+                # text = "casa a prima vista"                
+            # if "la ragazza e l'ufficiale" in text:
+                # text = "la ragazza e l'ufficiale" 
             text = text.replace('studio aperto mag', 'Studio Aperto').replace('primatv', '').replace('1^tv', '')
             text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
             if text.endswith("the"):
@@ -174,46 +179,60 @@ def convtext(text=''):
                 print('the from last to start text: ', text)
             text = text + 'FIN'
             text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
+            text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text)            
             text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
+            text = re.sub('[Ss][0-9] [Ee][0-9]+.*?FIN', '', text) 
+
+            # print(' - +.*?FIN:INIT ', text)
+            text = re.sub(' - +.*?FIN', '', text) 
+            # print(' - +.*?FIN:END ', text)
             text = re.sub('FIN', '', text)
             # text = transEpis(text)
             # text = text.replace('+', ' ')
-            print('transEpis text: ', text)
+            # print('transEpis text: ', text)
+
             text = text.replace(' .', '.').replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
+
             # text = REGEX.sub('', text)  # paused
             # # add
             # text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
             # # add end
+
             # # add
             # remove || content at start
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
-            print('^\|[\w\-\|]*\| text: ', text)
-            # remove () content
-            n = 1  # run at least once
-            while n:
-                text, n = re.subn(r'\([^\(\)]*\)', '', text)
-            print('\([^\(\)]*\) text: ', text)
-            # remove [] content
-            n = 1  # run at least once
-            while n:
-                text, n = re.subn(r'\[[^\[\]]*\]', '', text)
-            print('\[[^\[\]]*\] text: ', text)
+            # print('^\|[\w\-\|]*\| text: ', text)
+            # # remove () content
+            # n = 1  # run at least once
+            # while n:
+                # text, n = re.subn(r'\([^\(\)]*\)', '', text)
+            # print('\([^\(\)]*\) text: ', text)
+            # # remove [] content
+            # n = 1  # run at least once
+            # while n:
+                # text, n = re.subn(r'\[[^\[\]]*\]', '', text)
+            # print('\[[^\[\]]*\] text: ', text)
             # # add end
-            text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
-            text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
+
+            # text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+            # text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            print('[-,?!/\.\":] text: ', text)
+            # print('[-,?!/\.\":] text: ', text)
+
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
             # # add
             # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
             # text = re.sub('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
-            print('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', text)
+            # print('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', text)
             # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
             # text = re.sub('\Teil\d+$', '', text)
             # text = re.sub('\Folge\d+$', '', text)
             # # add end
 
-            text = unicodify(text)
+            cleanEvent = re.sub('\ \(\d+\)$', '', text) #remove episode-number " (xxx)" at the end
+            cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
+            text = re.sub('\!+$', '', cleanEvent)
+            # text = unicodify(text)
             text = text.capitalize()
             print('Final text: ', text)
         else:
