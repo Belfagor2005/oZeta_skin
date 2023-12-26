@@ -178,17 +178,14 @@ def convtext(text=''):
             text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
             text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text)            
             text = re.sub('[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            text = text.replace('(', '').replace(')', '')
-            print('[()] ', text)
+            # text = text.replace('(', '').replace(')', '')
+            print('[(0)] ', text)
             # print(' - +.*?FIN:INIT ', text)
-            text = re.sub(' - +.*?FIN', '', text) 
+            text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
             # print(' - +.*?FIN:END ', text)
             text = re.sub('FIN', '', text)
-            # text = transEpis(text)
-            # text = text.replace('+', ' ')
-            # print('transEpis text: ', text)
-            text = text.replace('(', '').replace(')', '')
-            print('[()] ', text)
+            print('[(1)] ', text)
+            
             text = text.replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
             # text = REGEX.sub('', text)  # paused
             # # add
@@ -226,6 +223,7 @@ def convtext(text=''):
             cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
             text = re.sub('\!+$', '', cleanEvent)
             # text = unicodify(text)
+            text = text.strip()
             text = text.capitalize()
             print('Final text: ', text)
         else:

@@ -55,11 +55,13 @@ if sys.version_info[0] >= 3:
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
+    from urllib.parse import quote
 else:
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
+    from urllib import quote
 
 
 def isMountReadonly(mnt):
@@ -203,21 +205,7 @@ def unicodify(s, encoding='utf-8', norm=None):
         s = normalize(norm, s)
     return s
 
-
-def transEpis(text):
-    text = text.lower() + '+FIN'
-    text = text.replace('  ', '+').replace(' ', '+').replace('&', '+').replace(':', '+').replace('_', '+').replace('u.s.', 'us').replace('l.a.', 'la').replace('.', '+').replace('"', '+').replace('(', '+').replace(')', '+').replace('[', '+').replace(']', '+').replace('!', '+').replace('++++', '+').replace('+++', '+').replace('++', '+')
-    text = text.replace('+720p+', '++').replace('+1080i+', '+').replace('+1080p+', '++').replace('+dtshd+', '++').replace('+dtsrd+', '++').replace('+dtsd+', '++').replace('+dts+', '++').replace('+dd5+', '++').replace('+5+1+', '++').replace('+3d+', '++').replace('+ac3d+', '++').replace('+ac3+', '++').replace('+avchd+', '++').replace('+avc+', '++').replace('+dubbed+', '++').replace('+subbed+', '++').replace('+stereo+', '++')
-    text = text.replace('+x264+', '++').replace('+mpeg2+', '++').replace('+avi+', '++').replace('+xvid+', '++').replace('+blu+', '++').replace('+ray+', '++').replace('+bluray+', '++').replace('+3dbd+', '++').replace('+bd+', '++').replace('+bdrip+', '++').replace('+dvdrip+', '++').replace('+rip+', '++').replace('+hdtv+', '++').replace('+hddvd+', '++')
-    text = text.replace('+german+', '++').replace('+ger+', '++').replace('+english+', '++').replace('+eng+', '++').replace('+spanish+', '++').replace('+spa+', '++').replace('+italian+', '++').replace('+ita+', '++').replace('+russian+', '++').replace('+rus+', '++').replace('+dl+', '++').replace('+dc+', '++').replace('+sbs+', '++').replace('+se+', '++').replace('+ws+', '++').replace('+cee+', '++')
-    text = text.replace('+remux+', '++').replace('+directors+', '++').replace('+cut+', '++').replace('+uncut+', '++').replace('+extended+', '++').replace('+repack+', '++').replace('+unrated+', '++').replace('+rated+', '++').replace('+retail+', '++').replace('+remastered+', '++').replace('+edition+', '++').replace('+version+', '++')
-    text = text.replace('\xc3\x9f', '%C3%9F').replace('\xc3\xa4', '%C3%A4').replace('\xc3\xb6', '%C3%B6').replace('\xc3\xbc', '%C3%BC')
-    text = re.sub('\\+tt[0-9]+\\+', '++', text)
-    text = re.sub('\\+\\+\\+\\+.*?FIN', '', text)
-    text = re.sub('\\+FIN', '', text)
-    return text
-
-
+            
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
@@ -238,17 +226,14 @@ def convtext(text=''):
             text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
             text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text)            
             text = re.sub('[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            text = text.replace('(', '').replace(')', '')
-            print('[()] ', text)
+            # text = text.replace('(', '').replace(')', '')
+            print('[(0)] ', text)
             # print(' - +.*?FIN:INIT ', text)
-            text = re.sub(' - +.*?FIN', '', text) 
+            text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
             # print(' - +.*?FIN:END ', text)
             text = re.sub('FIN', '', text)
-            # text = transEpis(text)
-            # text = text.replace('+', ' ')
-            # print('transEpis text: ', text)
-            text = text.replace('(', '').replace(')', '')
-            print('[()] ', text)
+            print('[(1)] ', text)
+            
             text = text.replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
             # text = REGEX.sub('', text)  # paused
             # # add
@@ -286,6 +271,7 @@ def convtext(text=''):
             cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
             text = re.sub('\!+$', '', cleanEvent)
             # text = unicodify(text)
+            text = text.strip()
             text = text.capitalize()
             print('Final text: ', text)
         else:
