@@ -219,16 +219,27 @@ def convtext(text=''):
             print('original text: ', text)
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
-            text = text.replace('studio aperto mag', 'Studio Aperto')
-            text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
+            text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '').replace('1^ tv', '')
             text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
+            if 'studio aperto' in text:
+                text = 'studio aperto'
             if text.endswith("the"):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
                 text = "the " + str(text)
                 print('the from last to start text: ', text)
             text = text + 'FIN'
-            text = re.sub("[^\w\s]", "", text)  # remove .
+            # text = re.sub("[^\w\s]", "", text)  # remove .
+            
+            print('[(01)] ', text)
+            # text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
+            # text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end            
+            
+            # text = re.sub('(?-s)(?<=-)', '', text)
+            text = re.sub(' [\-][ ][a-z0-9]+.*?FIN', '', text)
+            # text = re.sub(' -[ ][\d\w][0-9]+.*?FIN', '', text)
+            # (?-s)(?<=-).*
+            print('[(02)] ', text)
             text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
             text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
             text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text)            
@@ -240,6 +251,8 @@ def convtext(text=''):
             # print(' - +.*?FIN:END ', text)
             text = re.sub('FIN', '', text)
             print('[(1)] ', text)
+            text = REGEX.sub('', text)  # paused
+            print('[(2)] ', text)
             
             text = text.replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
             # text = REGEX.sub('', text)  # paused
@@ -261,8 +274,7 @@ def convtext(text=''):
                 # text, n = re.subn(r'\[[^\[\]]*\]', '', text)
             # print('\[[^\[\]]*\] text: ', text)
             # # add end
-            # text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
-            # text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end
+
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             # print('[-,?!/\.\":] text: ', text)
             # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
