@@ -227,7 +227,7 @@
         <pixmap name="menu_on" filename="oZeta-FHD/icons/menu_on.png"/>
         <pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
     </switchpixmap>
-    
+
     <!-- Include Files -->
     <!-- don't touch this order -->
     <include filename="zSkin/skin_templatepanels.xml"/>
@@ -236,13 +236,13 @@
     <include filename="zSkin/skin_logo.xml"/>
     <include filename="zSkin/skin_team.xml"/>
     <include filename="zSkin/skin_epgvertical.xml"/>
-     <!-- don't touch this order end -->
+    <!-- don't touch this order end -->
 
     <!-- infochannel should be loaded after zskin.xml -->
     <include filename="zSkin/zskin.xml"/>
-    <!-- infochannel should be loaded after zskin.xml -->    
+    <!-- infochannel should be loaded after zskin.xml -->
     <include filename="zSkin/skin_infochannel.xml"/>
-     <!-- don't change this: must be last -->                               
+    <!-- don't change this: must be last -->
     <!-- <include filename="zSkin/skin_nss.xml"/>     -->
     <include filename="zSkin/skin_templatepanelslulu.xml"/>
 </skin>

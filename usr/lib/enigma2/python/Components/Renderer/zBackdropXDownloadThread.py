@@ -3,6 +3,7 @@
 
 # edit lululla to 30.07.2022
 # recode from lululla 2023
+from __future__ import absolute_import                                      
 from PIL import Image
 import os
 import re
@@ -14,19 +15,19 @@ from Components.config import config
 
 global my_cur_skin
 
-PY3 = (sys.version_info[0] == 3)
-
-if PY3:
+PY3 = False
+if sys.version_info[0] >= 3:
+    PY3 = True
+    unicode = str
+    unichr = chr
+    long = int
     from urllib.parse import quote
     import html
     html_parser = html
-    unicode = str
 else:
     from urllib2 import quote
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
-    # str = unicode
-
 
 
 try:
@@ -147,16 +148,19 @@ class zBackdropXDownloadThread(threading.Thread):
                 year = ''
                 pass
             # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, tmdb_api, quote(title))
-            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(chkType, tmdb_api, quote(title))
+            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}".format(chkType, tmdb_api)  # &query={}".format(chkType, tmdb_api, quote(title))
             if year:
                 url_tmdb += "&year={}".format(year)
-            if lng:
-                url_tmdb += "&language={}".format(lng)
+            # if lng:
+                # url_tmdb += "&language={}".format(lng)
+            url_tmdb += "&query={}".format(quote(title))
+            print('url_tmdb= ', url_tmdb)
             backdrop = requests.get(url_tmdb).json()
             if backdrop and backdrop['results'] and backdrop['results'][0] and backdrop['results'][0]['backdrop_path']:
-                url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz.split(",")[0]), backdrop['results'][0]['backdrop_path'])
-                self.savebackdrop(dwn_backdrop, url_backdrop)
-                return True, "[SUCCESS backdrop: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_backdrop)
+                if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
+                    url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz.split(",")[0]), backdrop['results'][0]['backdrop_path'])
+                    self.savebackdrop(dwn_backdrop, url_backdrop)
+                    return True, "[SUCCESS backdrop: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_backdrop)
             else:
                 return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tmdb)
         except Exception as e:
@@ -488,7 +492,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 srch = chkType[6:]
             elif chkType.startswith("tv"):
                 srch = chkType[3:]
-            # url_google = quote(title)
             url_google = '"'+quote(title)+'"'
             if channel and title.find(channel) < 0:
                 url_google += "+{}".format(quote(channel))
@@ -541,7 +544,10 @@ class zBackdropXDownloadThread(threading.Thread):
             ratio = float(width) / float(height)
             new_height = int(isz.split(",")[1])
             new_width = int(ratio * new_height)
-            rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
+            try:
+                rimg = img.resize((new_width, new_height), Image.LANCZOS)
+            except:
+                rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
             img.close()
             rimg.save(dwn_backdrop)
             rimg.close()

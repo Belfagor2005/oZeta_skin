@@ -133,7 +133,7 @@ class zPosterXDownloadThread(threading.Thread):
             # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, tmdb_api, quote(title))
             # http://api.themoviedb.org/3/search/movie?api_key=' + str(self.check(self.token)) + '&primary_release_year=' + str(year) + '&query=' + str(searchtitle)
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}".format(chkType, tmdb_api)  # , quote(title))           #  &query={}".format(srch, tmdb_api, quote(title))
-            if year != '':
+            if year:
                 url_tmdb += "&primary_release_year={}".format(year)
             # if lng:
                 # url_tmdb += "&language={}".format(lng)
@@ -526,7 +526,12 @@ class zPosterXDownloadThread(threading.Thread):
             ratio = float(width) / float(height)
             new_height = int(isz.split(",")[1])
             new_width = int(ratio * new_height)
-            rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
+            # rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
+            try:
+                rimg = img.resize((new_width, new_height), Image.LANCZOS)
+            except:
+                rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
+            
             img.close()
             rimg.save(dwn_poster)
             rimg.close()

@@ -67,8 +67,8 @@
     </widget>
     <ePixmap pixmap="menu/panels/nocover.png" position="1648,391" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
     <ePixmap pixmap="menu/stargrey.png" position="1225,450" size="316,27" alphatest="blend" transparent="1" zPosition="20"/>
-    <widget source="ServiceEvent" render="zStarX" position="1225,450" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="22"/>
-    <widget source="ServiceEvent" render="zBackdropX" position="950,440" size="600,300" zPosition="2"/>
-    <widget source="ServiceEvent" render="zPosterX" nexts="1" usedImage="poster" delayPic="0" position="1639,387" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
+    <widget source="ServiceEvent" render="zStarX" position="1225,450" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" alphatest="blend" transparent="1" zPosition="10"/>
+    <widget source="ServiceEvent" render="zBackdropX" position="950,440" size="600,300" alphatest="blend" transparent="1" zPosition="0"/>
+    <widget source="ServiceEvent" render="zPosterX" nexts="1" usedImage="poster" delayPic="0" position="1639,387" size="185,272" zPosition="10" borderWidth="1" borderColor="white" backgroundColor="red"/>
     <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="1" font="Regular;20" position="1619,667" size="220,75" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
 </screen>

@@ -227,8 +227,9 @@ def convtext(text=''):
             print('[(01)] ', text)
             # text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
             # text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end            
-            
-            # text = re.sub('(?-s)(?<=-)', '', text)
+            text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
+            text = re.sub(' [\:][ ][a-z0-9]+.*?FIN', '', text)
+            text = re.sub(' [\(][ ][a-z0-9]+.*?FIN', '', text)
             text = re.sub(' [\-][ ][a-z0-9]+.*?FIN', '', text)
             # text = re.sub(' -[ ][\d\w][0-9]+.*?FIN', '', text)
             # (?-s)(?<=-).*

@@ -2,12 +2,12 @@
 <!-- Author lululla : Modules : EventView + zBackdropX -->
 <screen name="EventView" title="Eventview" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="bLogo" />
-
-        <ePixmap position="0,0" size="1500,1080" alphatest="blend" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-3" />
-        <widget source="Event" render="zBackdropX" position="220,130" size="1270,665" alphatest="blend" scale="fill" zPosition="-3" />        
+        
+        <ePixmap position="0,0" size="1500,1080" alphatest="blend" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2" />
+        <widget source="Event" render="zBackdropX" position="220,130" size="1270,665" alphatest="blend" transparent="1" scale="fill" zPosition="-2" />        
         
         <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4" />        
-        <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1" />
+        <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-2" />
         <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4" />
         <!-- PICON Pli/ATV -->
         <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
