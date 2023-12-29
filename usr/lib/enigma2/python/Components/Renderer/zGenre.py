@@ -140,36 +140,28 @@ def convtext(text=''):
                 print('the from last to start text: ', text)
             text = text + 'FIN'
             # text = re.sub("[^\w\s]", "", text)  # remove .
-            
-            print('[(01)] ', text)
-            # text = re.sub('\ \(\d+\/\d+\)$', '', text)  # remove episode-number " (xx/xx)" at the end
-            # text = re.sub('\ \(\d+\)$', '', text)  # remove episode-number " (xxx)" at the end            
             text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
             text = re.sub(' [\:][ ][a-z0-9]+.*?FIN', '', text)
             text = re.sub(' [\(][ ][a-z0-9]+.*?FIN', '', text)
             text = re.sub(' [\-][ ][a-z0-9]+.*?FIN', '', text)
-            # text = re.sub(' -[ ][\d\w][0-9]+.*?FIN', '', text)
-            # (?-s)(?<=-).*
             print('[(02)] ', text)
-            text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
-            text = re.sub('[Ss][0-9]+[Ee][0-9]+.*?FIN', '', text)
-            text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text)            
-            text = re.sub('[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            # text = text.replace('(', '').replace(')', '')
+
+            if re.search('[Ss][0-9]+[Ee][0-9]+.*?FIN', text):
+                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+            if re.search('[Ss][0-9] [Ee][0-9]+.*?FIN', text):
+                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+            if re.search(' - [Ss][0-9] [Ee][0-9]+.*?FIN', text):
+                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+            if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
+                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+
+            text = re.sub(r'\(.*[^A-Za-z]\)+.+?FIN', '', text).rstrip() # remove episode number from series, like "series name (234) and not (Un)defeated"
             print('[(0)] ', text)
-            # print(' - +.*?FIN:INIT ', text)
             text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
-            # print(' - +.*?FIN:END ', text)
             text = re.sub('FIN', '', text)
             print('[(1)] ', text)
             text = REGEX.sub('', text)  # paused
             print('[(2)] ', text)
-            
-            text = text.replace('  ', ' ').replace(' - ', ' ').replace(' - "', '')
-            # text = REGEX.sub('', text)  # paused
-            # # add
-            # text = text.replace("\xe2\x80\x93","").replace('\xc2\x86', '').replace('\xc2\x87', '') # replace special
-            # # add end
             # # add
             # remove || content at start
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
@@ -185,21 +177,10 @@ def convtext(text=''):
                 # text, n = re.subn(r'\[[^\[\]]*\]', '', text)
             # print('\[[^\[\]]*\] text: ', text)
             # # add end
-
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            # print('[-,?!/\.\":] text: ', text)
-            # text = re.sub(r'\s{1,}', ' ', text)  # replace multiple space by one space
-            # # add
-            # text = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
-            # text = re.sub('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', text)  # modifcare questo (remove space from regex)
-            # print('\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', text)
-            # # text = text.replace(' ^`^s', '').replace(' ^`^y','')
-            # text = re.sub('\Teil\d+$', '', text)
-            # text = re.sub('\Folge\d+$', '', text)
-            # # add end
-            cleanEvent = re.sub('\ \(\d+\)$', '', text) #remove episode-number " (xxx)" at the end
-            cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
-            text = re.sub('\!+$', '', cleanEvent)
+            # cleanEvent = re.sub('\ \(\d+\)$', '', text) #remove episode-number " (xxx)" at the end
+            # cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
+            # text = re.sub('\!+$', '', cleanEvent)
             # text = unicodify(text)
             text = text.strip()
             text = text.capitalize()
