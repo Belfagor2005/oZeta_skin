@@ -237,17 +237,17 @@ def convtext(text=''):
             print('[(02)] ', text)
 
             if re.search('[Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search('[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
 
-            text = re.sub(r'\(.*[^A-Za-z]\)+.+?FIN', '', text).rstrip() # remove episode number from series, like "series name (234) and not (Un)defeated"
+            text = re.sub(r'\(.*[^A-Za-z0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
             print('[(0)] ', text)
-            text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
+            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(1)] ', text)
             text = REGEX.sub('', text)  # paused
@@ -334,12 +334,15 @@ class BackdropDB(zBackdropXDownloadThread):
                     val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
 
+                elif not os.path.exists(dwn_backdrop):
+                    val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                    self.logDB(log)
                 # elif not os.path.exists(dwn_backdrop):
                     # val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     # self.logDB(log)
-                # elif not os.path.exists(dwn_backdrop):
-                    # val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
-                    # self.logDB(log)
+                elif not os.path.exists(dwn_backdrop):
+                    val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                    self.logDB(log)
                 pdb.task_done()
 
     def logDB(self, logmsg):
@@ -410,15 +413,18 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-
+                            elif not os.path.exists(dwn_backdrop):
+                                val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             # elif not os.path.exists(dwn_backdrop):
                                 # val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
-                            # elif not os.path.exists(dwn_backdrop):
-                                # val, log = self.search_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
+                            elif not os.path.exists(dwn_backdrop):
+                                val, log = self.search_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
 
                             newcn = canal[0]
                             self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))

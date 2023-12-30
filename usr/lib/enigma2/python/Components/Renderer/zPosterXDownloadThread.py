@@ -50,6 +50,7 @@ tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 # thetvdbkey = 'D19315B88B2DE21F'
 thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
+fanart_api = "6d231536dea4318a88cb2520ce89473b"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -204,6 +205,56 @@ class zPosterXDownloadThread(threading.Thread):
             if os.path.exists(dwn_poster):
                 os.remove(dwn_poster)
             return False, "[ERROR : tvdb] {} => {} ({})".format(title, url_tvdbg, str(e))
+
+    def search_fanart(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
+        try:
+            year = None
+            url_tmdb = ""
+            poster = None
+            id = "-"
+            chkType, fd = self.checkType(shortdesc, fulldesc)
+            try:
+                if re.findall('19\d{2}|20\d{2}', title):
+                    year = re.findall('19\d{2}|20\d{2}', fd)[1]
+                else:
+                    year = re.findall('19\d{2}|20\d{2}', fd)[0]
+            except:
+                year = ''
+                pass
+
+            try:
+                url_maze = "http://api.tvmaze.com/singlesearch/shows?q={}".format(quote(title))
+                mj = requests.get(url_maze).json()
+                id = (mj['externals']['thetvdb'])
+            except Exception as err:
+                print('Error:', err)
+
+            try:
+                m_type = 'tv'
+                url_fanart = "https://webservice.fanart.tv/v3/{}/{}?api_key={}".format(m_type, id, fanart_api)
+                fjs = requests.get(url_fanart, verify=False, timeout=5).json()
+
+                try:
+                    url = (fjs['tvposter'][0]['url'])
+                except:
+                   url = (fjs['movieposter'][0]['url'])
+
+                url_poster = requests.get(url).json()
+                print('url fanart poster:', url_poster)
+                # if poster and poster['results'] and poster['results'][0] and poster['results'][0]['poster_path']:
+                if url_poster and url_poster != 'null' or url_poster is not None or url_poster != '':
+                    # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), poster['results'][0]['poster_path'])
+                    self.savePoster(dwn_poster, url_poster)
+                    return True, "[SUCCESS poster: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_poster)
+                else:
+                    return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tmdb)
+            except Exception as e:
+                print(e)
+
+        except Exception as e:
+            if os.path.exists(dwn_poster):
+                os.remove(dwn_poster)
+            return False, "[ERROR : tmdb] {} [{}-{}] => {} ({})".format(title, chkType, year, url_tmdb, str(e))
 
     def search_imdb(self, dwn_poster, title, shortdesc, fulldesc, channel=None):
         try:
@@ -531,7 +582,7 @@ class zPosterXDownloadThread(threading.Thread):
                 rimg = img.resize((new_width, new_height), Image.LANCZOS)
             except:
                 rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
-            
+
             img.close()
             rimg.save(dwn_poster)
             rimg.close()

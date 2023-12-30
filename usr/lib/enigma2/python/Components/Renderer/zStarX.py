@@ -215,17 +215,17 @@ def convtext(text=''):
             print('[(02)] ', text)
 
             if re.search('[Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search('[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
 
-            text = re.sub(r'\(.*[^A-Za-z]\)+.+?FIN', '', text).rstrip() # remove episode number from series, like "series name (234) and not (Un)defeated"
+            text = re.sub(r'\(.*[^A-Za-z0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
             print('[(0)] ', text)
-            text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
+            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(1)] ', text)
             text = REGEX.sub('', text)  # paused

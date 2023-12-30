@@ -195,7 +195,9 @@ REGEX = re.compile(
         r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
+
 # REGEXx = re.compile(r'(?-s)(?<=\-).*', re.DOTALL)
+
 
 def unicodify(s, encoding='utf-8', norm=None):
     if not isinstance(s, unicode):
@@ -205,7 +207,7 @@ def unicodify(s, encoding='utf-8', norm=None):
         s = normalize(norm, s)
     return s
 
-            
+
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
@@ -230,17 +232,17 @@ def convtext(text=''):
             print('[(02)] ', text)
 
             if re.search('[Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search('[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
             if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN','', text, flags=re.S|re.I)
+                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
 
-            text = re.sub(r'\(.*[^A-Za-z]\)+.+?FIN', '', text).rstrip() # remove episode number from series, like "series name (234) and not (Un)defeated"
+            text = re.sub(r'\(.*[^A-Za-z0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
             print('[(0)] ', text)
-            text = re.sub(' - +.+?FIN', '', text) # all episodes and series ????
+            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(1)] ', text)
             text = REGEX.sub('', text)  # paused
@@ -324,12 +326,15 @@ class PosterDB(zPosterXDownloadThread):
                 elif not os.path.exists(dwn_poster):
                     val, log = self.search_tvdb(dwn_poster, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
+                elif not os.path.exists(dwn_poster):
+                    val, log = self.search_fanart(dwn_poster, self.pstcanal, canal[4], canal[3])
+                    self.logDB(log)
                 # elif not os.path.exists(dwn_poster):
                     # val, log = self.search_imdb(dwn_poster, self.pstcanal, canal[4], canal[3])
                     # self.logDB(log)
-                # elif not os.path.exists(dwn_poster):
-                    # val, log = self.search_google(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
-                    # self.logDB(log)
+                elif not os.path.exists(dwn_poster):
+                    val, log = self.search_google(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
+                    self.logDB(log)
                 pdb.task_done()
 
     def logDB(self, logmsg):
@@ -375,17 +380,11 @@ class PosterAutoDB(zPosterXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0],canal[1],canal[2],canal[5]))
-
                             pstcanal = convtext(canal[5])
                             pstrNm = path_folder + '/' + pstcanal + ".jpg"
                             self.pstcanal = str(pstrNm)
                             dwn_poster = self.pstcanal
                             if os.path.join(path_folder, dwn_poster):
-
-                            # self.pstcanal = convtext(canal[5])
-                            # dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
-                            # if os.path.exists(dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_poster):
@@ -404,14 +403,18 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 val, log = self.search_tvdb(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
+                            elif not os.path.exists(dwn_poster):
+                                val, log = self.search_fanart(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             # elif not os.path.exists(dwn_poster):
                                 # val, log = self.search_imdb(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
-                            # elif not os.path.exists(dwn_poster):
-                                # val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
+                            elif not os.path.exists(dwn_poster):
+                                val, log = self.search_google(dwn_poster, canal[2], canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             newcn = canal[0]
                             self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:

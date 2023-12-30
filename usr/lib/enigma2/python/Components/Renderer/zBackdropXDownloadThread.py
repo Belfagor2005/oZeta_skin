@@ -3,7 +3,7 @@
 
 # edit lululla to 30.07.2022
 # recode from lululla 2023
-from __future__ import absolute_import                                      
+from __future__ import absolute_import
 from PIL import Image
 import os
 import re
@@ -51,6 +51,7 @@ omdb_api = "cb1d9f55"
 # thetvdbkey = 'D19315B88B2DE21F'
 thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
 # thetvdbkey = "acbe31f8-f39a-4910-9b45-2c1d01c38478"
+fanart_api = "6d231536dea4318a88cb2520ce89473b"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -215,6 +216,53 @@ class zBackdropXDownloadThread(threading.Thread):
                 return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
+
+        except Exception as e:
+            if os.path.exists(dwn_backdrop):
+                os.remove(dwn_backdrop)
+            return False, "[ERROR : tvdb] {} => {} ({})".format(title, url_tvdbg, str(e))
+
+    def search_fanart(self, dwn_backdrop, title, shortdesc, fulldesc, channel=None):
+        try:
+            year = None
+            url_tmdb = ""
+            poster = None
+            id = "-"
+            chkType, fd = self.checkType(shortdesc, fulldesc)
+            try:
+                if re.findall('19\d{2}|20\d{2}', title):
+                    year = re.findall('19\d{2}|20\d{2}', fd)[1]
+                else:
+                    year = re.findall('19\d{2}|20\d{2}', fd)[0]
+            except:
+                year = ''
+                pass
+
+            try:
+                url_maze = "http://api.tvmaze.com/singlesearch/shows?q={}".format(quote(title))
+                mj = requests.get(url_maze).json()
+                id = (mj['externals']['thetvdb'])
+            except Exception as err:
+                print('Error:', err)
+
+            try:
+                m_type = 'tv'
+                url_fanart = "https://webservice.fanart.tv/v3/{}/{}?api_key={}".format(m_type, id, fanart_api)
+                fjs = requests.get(url_fanart, verify=False, timeout=5).json()
+                try:
+                    url = (fjs['showbackground'][0]['url'])
+                except:
+                    url = (fjs['moviebackground'][0]['url'])
+
+                url_backdrop = requests.get(url).json()
+                print('url fanart url_backdrop:', url_backdrop)
+                if url_backdrop and url_backdrop != 'null' or url_backdrop is not None or url_backdrop != '':
+                    self.savebackdrop(dwn_backdrop, url_backdrop)
+                    return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
+                else:
+                    return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
+            except Exception as e:
+                print(e)
 
         except Exception as e:
             if os.path.exists(dwn_backdrop):
