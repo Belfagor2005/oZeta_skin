@@ -60,7 +60,7 @@ visual_api = "5KAUFAYCDLUYVQPNXPN3K24V5"
 thetvdb_skin = "%senigma2/%s/thetvdbkey" % (mvi, cur_skin)
 thetvdbkey = 'D19315B88B2DE21F'
 welcome = 'WELCOME Z USER\nfrom\nLululla and Mmark'
-tarfile = '/tmp/ozeta.tar'
+tarfile = '/tmp/download.tar'
 #  -----------------
 
 XStreamity = False
@@ -123,6 +123,7 @@ config.ozeta.txtapi4 = ConfigText(default=thetvdbkey, visible_width=50, fixed_si
 config.ozeta.mmpicons = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.update = ConfigOnOff(default=False)
 config.ozeta.upfind = NoSave(ConfigSelection(['-> Ok']))
+config.ozeta.upconponent = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.options = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.zweather = ConfigOnOff(default=False)
 config.ozeta.weather = NoSave(ConfigSelection(['-> Ok']))
@@ -445,14 +446,13 @@ class oZsetup(ConfigListScreen, Screen):
         # sep = "-"
         try:
             # self.list.append(getConfigListEntry(_("GENERAL"), config.ozeta.fake, _("GENERAL SECTION") ))
-
             self.list.append(getConfigListEntry("Install or Update oZeta Skin:", config.ozeta.update, _("Install or Autoupdate oZeta Plugin & Skin on both")))
             if config.ozeta.update.value is True:
                 self.list.append(getConfigListEntry("Install/Update/Restore oZeta Skin", config.ozeta.upfind, _("Install/Update/Restore Stable Version oZeta Skin\nPress OK")))
             self.list.append(getConfigListEntry(("SKIN PARTS SETUP")))
             if str(cur_skin) == 'oZeta-FHD':
                 self.list.append(getConfigListEntry("Install Options Developer", config.ozeta.options, _("Install Test Options oZeta Skin\nPress OK")))
-                # self.list.append(getConfigListEntry("Update Stable Version on Server", config.ozeta.upfind, _("Check for updates on the oZeta skin server\nPress OK")))
+                self.list.append(getConfigListEntry("Update Conponent Skin", config.ozeta.upconponent, _("Check for updates Conponent Skin\nPress OK")))
                 # self._space()
                 # self.list.append(getConfigListEntry(("SKIN PARTS SETUP"),config.ozeta.fake, _("SKIN SETUP SECTION")))
                 # section = ("SKIN PARTS SETUP")
@@ -621,6 +621,8 @@ class oZsetup(ConfigListScreen, Screen):
             self.upOptions()
         if sel and sel == config.ozeta.upfind:
             self.zWaitReload()
+        if sel and sel == config.ozeta.upconponent:
+            self.zUpConponent()            
         if sel and sel == config.ozeta.XStreamity:
             self.zXStreamity()
         if sel and sel == config.ozeta.Logoboth:
@@ -1187,6 +1189,15 @@ class oZsetup(ConfigListScreen, Screen):
                 self.zSkin()
         return
 
+    def zUpConponent(self):
+        if os.path.exists('/usr/share/enigma2/oZeta-FHD'):
+            self.session.openWithCallback(self.zConponentReq, MessageBox, _("Skin exist!! Do you really want to Update Conponent?"), MessageBox.TYPE_YESNO)
+
+    def zConponentReq(self, answer=None):
+        if answer:
+            self.zConponent()
+        return
+
     def dowfil(self):
         if PY3:
             import urllib.request as urllib2
@@ -1210,6 +1221,26 @@ class oZsetup(ConfigListScreen, Screen):
             print('MYDEBUG - download failed - URL: %s , filename: %s' % (self.com, tarfile))
         return tarfile
 
+
+#  install conponent zskin
+    def zConponent(self):
+        if fileExists(tarfile):
+            os.remove(tarfile)
+        try:
+            self.com = 'http://patbuweb.com/ozeta/conponent.tar'
+            self.dest = self.dowfil()
+            Req = RequestAgent()
+            self.command = ["tar -xvf /tmp/conponent.tar -C /"]
+            cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+            if "https" in str(self.com):
+                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+            print('cmd: ', cmd)
+            self.session.open(Console, title=_('Installation oZeta Skin Conponent'), cmdlist=[cmd, 'sleep 5'])  # , finishedCallback=self.upd_zeta)
+
+        except Exception as e:
+            print('error download: ', e)
+            return
+
 #  install update zskin
     def zSkin(self):
         if fileExists(tarfile):
@@ -1218,13 +1249,6 @@ class oZsetup(ConfigListScreen, Screen):
             self.com = 'http://patbuweb.com/ozeta/ozeta.tar'
             self.dest = self.dowfil()
             Req = RequestAgent()
-            # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
-            # cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
-
-            # self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
-            # print('Download done !!!')
-            # self.session.open(MessageBox, _('Download file in /tmp successful!'), MessageBox.TYPE_INFO, timeout=5)
-
             self.command = ["tar -xvf /tmp/ozeta.tar -C /"]
             cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             if "https" in str(self.com):
