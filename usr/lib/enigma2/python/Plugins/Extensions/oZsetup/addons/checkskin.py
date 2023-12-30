@@ -9,7 +9,11 @@
 
 from __future__ import absolute_import
 from Components.config import config
-from Tools.Directories import SCOPE_SKIN, SCOPE_PLUGINS
+from Tools.Directories import SCOPE_PLUGINS
+try:
+    from Tools.Directories import SCOPE_SKIN as SCOPE_GUISKIN
+except ImportError:
+    from Tools.Directories import SCOPE_GUISKIN
 from Tools.Directories import fileExists, resolveFilename
 import os
 import re
@@ -83,8 +87,8 @@ def check_module_skin():
             myFile.close()
     checkComponent(user_skin, 'render', resolveFilename(SCOPE_PLUGINS, '../Components/Renderer/'))
     checkComponent(user_skin, 'Convert', resolveFilename(SCOPE_PLUGINS, '../Components/Converter/'))
-    checkComponent(user_skin, 'pixmap', resolveFilename(SCOPE_SKIN, ''))
-    checkComponent(user_skin, 'image', resolveFilename(SCOPE_SKIN, ''))
+    checkComponent(user_skin, 'pixmap', resolveFilename(SCOPE_GUISKIN, ''))
+    checkComponent(user_skin, 'image', resolveFilename(SCOPE_GUISKIN, ''))
     return
 
 

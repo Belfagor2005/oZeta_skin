@@ -29,7 +29,11 @@ from twisted.web.client import getPage, downloadPage
 from enigma import eEnv
 from os import path as os_path, mkdir as os_mkdir, remove as os_remove, listdir as os_listdir
 from Components.config import config
-from Tools.Directories import resolveFilename, SCOPE_GUISKIN
+from Tools.Directories import resolveFilename
+try:
+    from Tools.Directories import SCOPE_SKIN as SCOPE_GUISKIN
+except ImportError:
+    from Tools.Directories import SCOPE_GUISKIN
 # from urllib.parse import quote as urllib_quote
 try:
     from urllib.parse import quote as urllib_quote
