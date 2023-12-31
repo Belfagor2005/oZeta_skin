@@ -126,7 +126,7 @@ if SearchBouquetTerrestrial():
     autobouquet_file = SearchBouquetTerrestrial()
 else:
     autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
-print('autobouquet_file = ', autobouquet_file)
+# print('autobouquet_file = ', autobouquet_file)
 autobouquet_count = 70
 # Short script for Automatic poster generation on your preferred bouquet
 if not os.path.exists(autobouquet_file):
@@ -199,20 +199,6 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
-def transEpis(text):
-    text = text.lower() + '+FIN'
-    text = text.replace('  ', '+').replace(' ', '+').replace('&', '+').replace(':', '+').replace('_', '+').replace('u.s.', 'us').replace('l.a.', 'la').replace('.', '+').replace('"', '+').replace('(', '+').replace(')', '+').replace('[', '+').replace(']', '+').replace('!', '+').replace('++++', '+').replace('+++', '+').replace('++', '+')
-    text = text.replace('+720p+', '++').replace('+1080i+', '+').replace('+1080p+', '++').replace('+dtshd+', '++').replace('+dtsrd+', '++').replace('+dtsd+', '++').replace('+dts+', '++').replace('+dd5+', '++').replace('+5+1+', '++').replace('+3d+', '++').replace('+ac3d+', '++').replace('+ac3+', '++').replace('+avchd+', '++').replace('+avc+', '++').replace('+dubbed+', '++').replace('+subbed+', '++').replace('+stereo+', '++')
-    text = text.replace('+x264+', '++').replace('+mpeg2+', '++').replace('+avi+', '++').replace('+xvid+', '++').replace('+blu+', '++').replace('+ray+', '++').replace('+bluray+', '++').replace('+3dbd+', '++').replace('+bd+', '++').replace('+bdrip+', '++').replace('+dvdrip+', '++').replace('+rip+', '++').replace('+hdtv+', '++').replace('+hddvd+', '++')
-    text = text.replace('+german+', '++').replace('+ger+', '++').replace('+english+', '++').replace('+eng+', '++').replace('+spanish+', '++').replace('+spa+', '++').replace('+italian+', '++').replace('+ita+', '++').replace('+russian+', '++').replace('+rus+', '++').replace('+dl+', '++').replace('+dc+', '++').replace('+sbs+', '++').replace('+se+', '++').replace('+ws+', '++').replace('+cee+', '++')
-    text = text.replace('+remux+', '++').replace('+directors+', '++').replace('+cut+', '++').replace('+uncut+', '++').replace('+extended+', '++').replace('+repack+', '++').replace('+unrated+', '++').replace('+rated+', '++').replace('+retail+', '++').replace('+remastered+', '++').replace('+edition+', '++').replace('+version+', '++')
-    text = text.replace('\xc3\x9f', '%C3%9F').replace('\xc3\xa4', '%C3%A4').replace('\xc3\xb6', '%C3%B6').replace('\xc3\xbc', '%C3%BC')
-    text = re.sub('\\+tt[0-9]+\\+', '++', text)
-    text = re.sub('\\+\\+\\+\\+.*?FIN', '', text)
-    text = re.sub('\\+FIN', '', text)
-    return text
-
-
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
@@ -220,7 +206,7 @@ def convtext(text=''):
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '').replace('1^ tv', '')
-            text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
+            text = text.replace(' prima pagina', '').replace(': parte 2', '').replace(': parte 1', '')
             if 'studio aperto' in text:
                 text = 'studio aperto'
             if text.endswith("the"):
@@ -388,7 +374,6 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            # self.logAutoDB("[AutoDB] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
                             pstcanal = convtext(canal[5])
                             pstrNm = path_folder + '/' + pstcanal + ".jpg"
                             self.pstcanal = str(pstrNm)
@@ -404,7 +389,6 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                     # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
-
                             if not os.path.exists(dwn_backdrop):
                                 val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -425,7 +409,6 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 val, log = self.search_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-
                             newcn = canal[0]
                             self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
@@ -595,7 +578,6 @@ class zBackdropX(Renderer):
             self.logBackdrop("[LOOP : waitBackdrop] {}".format(self.backrNm))
             while loop >= 0:
                 if os.path.exists(self.backrNm):
-                    # if os.path.getsize(self.backrNm) > 0:
                     loop = 0
                     found = True
                 time.sleep(0.5)

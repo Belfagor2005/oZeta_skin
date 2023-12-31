@@ -11,7 +11,7 @@
 			author="mmark"
 			license="Open"
 			Support="openATV 7.x"
-			Release="2.0.0 30/10/2023"
+			Release="2.0.0 30/12/2023"
 			supporturl="http://e2skin.blogspot.com"
 		</abouth>
     </copyright>
@@ -219,8 +219,10 @@
         <color name="ListboxMarkedAndSelectedForeground" color="red"/>
         <color name="WindowTitleForeground" color="foreground"/>
         <color name="WindowTitleBackground" color="background"/>
-<!--         <color name="ScrollbarForeground" color="foreground"/>
-        <color name="ScrollbarBorder" color="foreground"/> -->
+        <!--
+        <color name="ScrollbarForeground" color="foreground"/>
+        <color name="ScrollbarBorder" color="foreground"/>
+        -->
     </windowstyle>
     <!-- end add lululla -->
     <switchpixmap>

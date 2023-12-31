@@ -248,48 +248,96 @@
         <widget name="list" position="230,140" size="1250,800" font="Regular;30" itemHeight="80" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" scrollbarSliderForegroundColor="#606060" scrollbarSliderBackgroundColor="#303030" backgroundColor="#000000" backgroundColorSelected="bluette" foregroundColorSelected="#ffffff"/>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
+    <!-- mod mmark 30-12-23 -->
+    <screen name="Processing" title="Processing" position="center,center" size="800,110" zPosition="99" flags="wfNoBorder" backgroundColor="#30000000">
+       	<eLabel position="10,10" size="780,80" backgroundColor="#30000000" zPosition="-1"/>
+	<widget name="description" position="20,20" size="760,40" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+	<widget name="progress" position="20,80" size="760,10" foregroundColor="white" backgroundColor="bluette" />
+    </screen>
+    <!-- mod mmark 30-12-23 -->
     <screen name="PluginBrowserList" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <panel name="vButtonTemplate-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-        <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
-        <widget source="pluginList" render="Listbox" position="230,140" size="1240,725" itemHeight="80" scrollbarMode="showOnDemand" backgroundColor="background90" transparent="1" listOrientation="vertical">
+        <widget name="description" position="230,140" size="1250,60" font="Regular; 28" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+        <eLabel position="230,205" size="1250,3" backgroundColor="#202020" zPosition="1"/>
+        <widget source="pluginList" render="Listbox" position="230,215" size="1250,725" itemHeight="80" scrollbarMode="showOnDemand" backgroundColor="background90" transparent="1" listOrientation="vertical">
             <convert type="TemplatedMultiContent">
                         {
                         "template": [
-                        MultiContentEntryText(pos = (160, 8), size = (840, 38), font=0, flags = RT_HALIGN_LEFT, text = 1),
-                        MultiContentEntryText(pos = (180, 39), size = (840, 26), font=1, flags = RT_HALIGN_LEFT, text = 2),
-                        MultiContentEntryPixmapAlphaBlend(pos=(15, 20), size=(100, 40), png=3, flags=BT_SCALE)
+                        MultiContentEntryText(pos = (180, 5), size = (840, 40), font=0, flags = RT_HALIGN_LEFT, text = 1),
+                        MultiContentEntryText(pos = (200, 45), size = (840, 35), font=1, flags = RT_HALIGN_LEFT,color=0xa9e8fd, text = 2),
+                        MultiContentEntryPixmapAlphaBlend(pos=(10, 10), size=(150, 60), png=3, flags=BT_SCALE)
                                 ],
-                        "fonts": [gFont("Regular", 27),gFont("Regular", 21)],
+                        "fonts": [gFont("Regular", 28),gFont("Regular", 26)],
                         "itemHeight" : 80
                         }
             </convert>
         </widget>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
+    <!-- mod mmark 30-12-23 -->
     <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500"/>
         <panel name="vButtonTemplate-1500"/>
+        <panel name="Logo"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-        <widget name="description" position="233,865" size="1236,89" font="Regular; 26" valign="top" backgroundColor="background90" foregroundColor="green" transparent="1"/>
-        <widget source="pluginGrid" render="Listbox" position="230,140" size="1240,725" itemSpacing="15,15" selectionZoom="15" scrollbarMode="showAlways" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+        <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+        <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
+        <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
+        <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
+        <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" 
+        	listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
             <convert type="TemplatedMultiContent">
                         {
                         "template": [
-                        MultiContentEntryText(pos = (0, 0), size = (150, 60), font=0, backcolor = 0x505050),
-                        MultiContentEntryText(pos = (40, 85), size = (150, 25), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+                        MultiContentEntryText(pos = (5, 0), size = (220, 60), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, backcolor = 0x505050),
+                        MultiContentEntryText(pos = (5, 85), size = (220, 30), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
                         MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
                         ],
-                        "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                        "fonts": [gFont("Regular", 24),gFont("Regular", 22)],
                         "itemWidth" : 230,
                         "itemHeight" : 120
                         }
             </convert>
         </widget>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
+    </screen>
+    
+    <!-- mod mmark 30-12-23 --> 
+    <screen name="PluginAction" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="LayerMenu1500"/>
+        <panel name="vButtonTemplate-1500"/>
+        <panel name="Logo"/>
+	<widget name="description" position="230,140" size="1250,60" font="Regular;28" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#303030" conditional="description"/>
+	<widget source="plugins" render="Listbox" position="230,220" size="1250,720" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" 
+		scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="#606060" backgroundColorSelected="barColor" foregroundColorSelected="Yellow" transparent="1">
+		<convert type="TemplatedMultiContent">
+			{
+			"template":
+				[
+				MultiContentEntryPixmapAlphaBlend(pos=(5, 5), size=(60, 50), png=6, flags=BT_SCALE),
+				MultiContentEntryText(pos=(75, 0), size=(650, 50), font=0, flags=RT_VALIGN_CENTER, text=2), # Category
+				MultiContentEntryText(pos=(75, 0), size=(650, 30), font=1, flags=RT_VALIGN_CENTER, text=11), # Name + Version
+				# MultiContentEntryText(pos=(70, 1), size=(430, 25), font=1, flags=RT_VALIGN_CENTER, text=3), Name
+				# MultiContentEntryText(pos=(480, 1), size=(160, 25), font=1, flags=RT_VALIGN_CENTER, text=5), Version
+				MultiContentEntryText(pos=(75, 29), size=(1070, 30), font=2, flags=RT_VALIGN_CENTER, text=4, color=0xa9e8fd), # Description
+				MultiContentEntryPixmapAlphaBlend(pos=(1180, 10), size=(40, 40), png=7, flags=BT_SCALE)
+				],
+			"fonts": [gFont("Regular", 28),gFont("Regular", 26),gFont("Regular", 24)],
+			"itemHeight": 60
+			}
+		</convert>
+	</widget>
+	<widget name="quickselect" position="230,220" size="1250,720" backgroundColor="#000000" foregroundColor="yellow" font="Regular;100" halign="center" valign="center" transparent="1" zPosition="5" />
+	<widget source="global.CurrentTime" render="Label" position="1110,985" size="380,30" font="Regular;27" foregroundColor="yellow" halign="center" backgroundColor="#000000" valign="center" transparent="1">
+		<convert type="MetrixHDSTBinfo">FLASHfree</convert>
+	</widget>
     </screen>
     <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500-nl"/>
@@ -1031,21 +1079,24 @@
         <panel name="bLogo"/>
         <widget name="config" position="230,150" size="810,750" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    <!-- mod by mmark 30/12/23 -->
     <!-- Softcam Setup -->
-    <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftCam" backgroundColor=" transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+    <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftCam" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1500"/>
+        <panel name="vButtonTemplate-1500"/>
         <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2"/>
-        <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
-        <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1"/>
-        <widget name="info" position="230,330" size="810,469" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2"/>
+        <widget name="config" position="410,150" size="1060,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
+        <eLabel position="230,280" size="1250,3" backgroundColor="#303030" zPosition="1"/>
+        <widget name="info" position="230,330" size="1250,469" font="Regular;28" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2"/>
         <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1"/>
-        <widget name="description" position="231,807" size="810,149" font="Regular; 28" transparent="1" foregroundColor="yellow"/>
+        <widget name="description" position="231,807" size="1250,149" font="Regular; 26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+        <ePixmap position="1400,985" size="80,40" pixmap="buttons/80/key_menu.png" zPosition="5" alphatest="blend"/>
         <!-- add lululla -->
         <!--
         <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
 		<widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center" />
-		<widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1" /> -->
+		<widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1" /> 
+	-->
     </screen>
     <!-- Softcam Panel add lululla -->
     <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="SoftCam" backgroundColor=" transparent" flags="wfNoBorder">

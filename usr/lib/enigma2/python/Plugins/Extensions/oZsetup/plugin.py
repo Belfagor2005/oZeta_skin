@@ -35,12 +35,11 @@ import time
 
 global my_cur_skin, zaddon
 PY3 = sys.version_info.major >= 3
-pythonFull = float(str(sys.version_info.major) + "." + str(sys.version_info.minor))
 thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
 weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
-weatherthe = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('TheWeather'))
+theweather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('TheWeather'))
 SkinSelectorD = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('SystemPlugins/SkinSelector'))
 SkinSelectorE = '/usr/lib/enigma2/python/Screens/SkinSelector.pyo'
 SkinSelectorF = '/usr/lib/enigma2/python/Screens/SkinSelector.pyc'
@@ -269,8 +268,8 @@ def fakeconfig(name):
             ['WEATHER:'],
             # ['Install or Update oZeta Skin:'],
             # ['Install/Update/Restore oZeta Skin'],
-            # ['Install Options Developer'],            
-            ['Update Conponent Skin'], 
+            # ['Install Options Developer'],
+            ['Update Conponent Skin'],
             ['--Load TMDB Apikey'],
             # ['--Set TMDB Apikey'],
             ['--Load OMDB Apikey'],
@@ -281,7 +280,7 @@ def fakeconfig(name):
             ['VisualWeather Plugin API:'],
             ['--Load VISUALWEATHER Apikey'],
             # ['--Set VISUALWEATHER Apikey'],
-            ['Install or Open mmPicons Plugin'],            
+            ['Install or Open mmPicons Plugin'],
             ]
     for nname in retr:
         if nname[0] in str(name):
@@ -642,7 +641,7 @@ class oZsetup(ConfigListScreen, Screen):
         if sel and sel == config.ozeta.upfind:
             self.zWaitReload()
         if sel and sel == config.ozeta.upconponent:
-            self.zUpConponent()            
+            self.zUpConponent()
         if sel and sel == config.ozeta.XStreamity:
             self.zXStreamity()
         if sel and sel == config.ozeta.Logoboth:
@@ -1010,7 +1009,7 @@ class oZsetup(ConfigListScreen, Screen):
                         print('fake:', fakeconfig(x))
                         print('xxxx:', x)
                         continue
-                    print('zzzz:', x)
+                    # print('zzzz:', x)
                     x[1].save()
                 # config.ozeta.txtapi.save()
                 # config.ozeta.txtapi2.save()
@@ -1256,7 +1255,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.com = 'http://patbuweb.com/ozeta/ozeta.tar'
             self.dest = self.dowfil()
             Req = RequestAgent()
-            self.command = ["tar -xvf /tmp/ozeta.tar -C /"]
+            self.command = ["tar -xvf /tmp/download.tar -C /"]
             cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             if "https" in str(self.com):
                 cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
@@ -1279,7 +1278,7 @@ class oZsetup(ConfigListScreen, Screen):
             # # if PY3:
                 # # self.com = b"http://patbuweb.com/ozeta/ozeta.tar"
             # self.dest = self.dowfil()
-            # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/ozeta.tar' > /dev/null
+            # # wget -U 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1' -c 'http://patbuweb.com/ozeta/ozeta.tar' -O '/tmp/download.tar' > /dev/null
             # cmd = ["wget -U '%s' -c '%s' -O '%s' > /dev/null'" % (RequestAgent(), str(self.com), self.dest)]
 
             # self.session.open(Console, _('Downloading...'), cmd, closeOnSuccess=True)
@@ -1300,7 +1299,7 @@ class oZsetup(ConfigListScreen, Screen):
         time.sleep(5)
         if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
             print('init update tarfile')
-            # cmd = "tar -xvf /tmp/ozeta.tar -C /"
+            # cmd = "tar -xvf /tmp/download.tar -C /"
             # self.session.open(Console, _('Extract: %s') % tarfile, [cmd], closeOnSuccess=True)
             # time.sleep(5)
             if 'openatv' in Uri.imagevers():
@@ -1331,8 +1330,8 @@ class oZsetup(ConfigListScreen, Screen):
                 # return
             self.check_line()
         else:
-            # self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/ozeta.tar!'), MessageBox.TYPE_INFO, timeout=5)
-            self.session.open(MessageBox, _('Download Error!!!\nUnknow or FILE NO EXIST /tmp/ozeta.tar!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
+            # self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/download.tar!'), MessageBox.TYPE_INFO, timeout=5)
+            self.session.open(MessageBox, _('Download Error!!!\nUnknow or FILE NO EXIST /tmp/download.tar!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
             return
 
     def goUp(self, answer=True):
@@ -1532,7 +1531,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.mbox = self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
 
     def KeyMenu3(self):
-        if os.path.isdir(weatherthe):
+        if os.path.isdir(theweather):
             # locdirsave = "/etc/enigma2/TheWeather_last.cfg"
             # location = 'n\A'
             # if os.path.exists(locdirsave):

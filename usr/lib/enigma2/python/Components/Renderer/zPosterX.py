@@ -62,6 +62,7 @@ else:
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
     # from urllib import quote
+             
 
 
 def isMountReadonly(mnt):
@@ -132,11 +133,10 @@ if SearchBouquetTerrestrial():
     autobouquet_file = SearchBouquetTerrestrial()
 else:
     autobouquet_file = '/etc/enigma2/userbouquet.favourites.tv'
-print('autobouquet_file = ', autobouquet_file)
+# print('autobouquet_file = ', autobouquet_file)
 autobouquet_count = 70
 # Short script for Automatic poster generation on your preferred bouquet
 if not os.path.exists(autobouquet_file):
-    # autobouquet_file = ''
     autobouquet_count = 0
 else:
     with open(autobouquet_file, 'r') as f:
@@ -196,9 +196,6 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
-# REGEXx = re.compile(r'(?-s)(?<=\-).*', re.DOTALL)
-
-
 def unicodify(s, encoding='utf-8', norm=None):
     if not isinstance(s, unicode):
         s = unicode(s, encoding)
@@ -215,7 +212,7 @@ def convtext(text=''):
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '').replace('1^ tv', '')
-            text = text.replace(' prima pagina', '').replace(' -20.30', '').replace(': parte 2', '').replace(': parte 1', '')
+            text = text.replace(' prima pagina', '').replace(': parte 2', '').replace(': parte 1', '')
             if 'studio aperto' in text:
                 text = 'studio aperto'
             if text.endswith("the"):
@@ -584,7 +581,6 @@ class zPosterX(Renderer):
             found = None
             self.logPoster("[LOOP : waitPoster] {}".format(self.pstcanal))
             while loop >= 0:
-                # if os.path.exists(self.pstrNm) and os.path.getsize(self.pstrNm) > 0:  # a bug on getsize..
                 if os.path.exists(self.pstcanal):
                     loop = 0
                     found = True
