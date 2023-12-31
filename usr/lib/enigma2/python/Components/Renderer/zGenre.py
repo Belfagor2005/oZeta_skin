@@ -119,6 +119,8 @@ def convtext(text=''):
             text = text.replace(' prima pagina', '').replace(': parte 2', '').replace(': parte 1', '')
             if 'studio aperto' in text:
                 text = 'studio aperto'
+            if 'josephine ange gardien' in text:
+                text = 'josephine ange gardien'
             if text.endswith("the"):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
