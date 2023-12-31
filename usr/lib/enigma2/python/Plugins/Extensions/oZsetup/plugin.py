@@ -1236,7 +1236,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.com = 'http://patbuweb.com/ozeta/conponent.tar'
             self.dest = self.dowfil()
             Req = RequestAgent()
-            self.command = ["tar -xvf /tmp/conponent.tar -C /"]
+            self.command = ["tar -xvf /tmp/download.tar -C /"]
             cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             if "https" in str(self.com):
                 cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
