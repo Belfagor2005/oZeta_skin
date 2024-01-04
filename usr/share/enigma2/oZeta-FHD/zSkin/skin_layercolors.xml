@@ -26,7 +26,7 @@
         <eLabel position="230,960" size="810,3" backgroundColor="#303030" zPosition="4"/>
     </screen>
     <screen name="LayerMenu1000-nl">
-        <widget source="Title" render="Label" position="400,7" size="640,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <widget source="Title" render="Label" position="230,7" size="640,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
         <eLabel position="230,120" size="810,3" backgroundColor="#303030" zPosition="4"/>
         <ePixmap position="0,0" size="1920,1080" pixmap="oZeta-FHD/menu/panels/main1.png" zPosition="-1"/>
         <eLabel position="230,960" size="810,3" backgroundColor="#303030" zPosition="4"/>
