@@ -21,9 +21,8 @@ import os
 import re
 import socket
 import sys
-import unicodedata
 import NavigationInstance
-
+import unicodedata
 global my_cur_skin, path_folder
 
 
@@ -135,6 +134,18 @@ REGEX = re.compile(
         r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
+def remove_accents(string):
+    if type(string) is not unicode:
+        string = unicode(string, encoding='utf-8')
+    string = re.sub(u"[àáâãäå]", 'a', string)
+    string = re.sub(u"[èéêë]", 'e', string)
+    string = re.sub(u"[ìíîï]", 'i', string)
+    string = re.sub(u"[òóôõö]", 'o', string)
+    string = re.sub(u"[ùúûü]", 'u', string)
+    string = re.sub(u"[ýÿ]", 'y', string)
+    return string
+
+
 def unicodify(s, encoding='utf-8', norm=None):
     if not isinstance(s, unicode):
         s = unicode(s, encoding)
@@ -151,7 +162,6 @@ def convtext(text=''):
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '').replace('1^ tv', '')
-            text = text.replace(' prima pagina', '').replace(': parte 2', '').replace(': parte 1', '')
             if 'studio aperto' in text:
                 text = 'studio aperto'
             if 'josephine ange gardien' in text:
@@ -178,6 +188,8 @@ def convtext(text=''):
             if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
                 text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
 
+            text = re.sub("([\(\[]).*?([\)\]])|(: odc.\d+)|(\d+: odc.\d+)|(\d+ odc.\d+)|(:)|( -(.*?).*)|(,)|!|\+.*?FIN", "", text)
+            text = re.sub('odc. [0-9]+.*?FIN', '', text)
             text = re.sub(r'\(.*[^A-Za-z0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
             print('[(0)] ', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
@@ -205,6 +217,7 @@ def convtext(text=''):
             # cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
             # text = re.sub('\!+$', '', cleanEvent)
             # text = unicodify(text)
+            text = remove_accents(text)
             text = text.strip()
             text = text.capitalize()
             print('Final text: ', text)

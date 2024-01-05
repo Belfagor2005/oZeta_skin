@@ -384,10 +384,28 @@ class oZsetup(ConfigListScreen, Screen):
         self.createSetup()
         if self.setInfo not in self['config'].onSelectionChanged:
             self['config'].onSelectionChanged.append(self.setInfo)
-
         self.current_skin = config.skin.primary_skin.value
+        self.onFirstExecBegin.append(self.check_dependencies)
+        self.onLayoutFinish.append(self.__layoutFinished)
+        # self.onLayoutFinish.append(self.layoutFinished)
 
-        self.onLayoutFinish.append(self.layoutFinished)
+    def __layoutFinished(self):
+        self.setTitle(self.setup_title)
+
+    def check_dependencies(self):
+        dependencies = True
+        try:
+            import requests
+        except Exception as e:
+            print("**** missing dependencies ***")
+            print(e)
+            dependencies = False
+        if dependencies is False:
+            os.chmod("/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh", 0o0755)
+            cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
+            self.session.openWithCallback(self.layoutFinished, Console, title="Checking Python Dependencies", cmdlist=[cmd1], closeOnSuccess=False)
+        else:
+            self.layoutFinished()
 
     def layoutFinished(self):
         if os.path.isdir(weatherz):
@@ -1229,6 +1247,7 @@ class oZsetup(ConfigListScreen, Screen):
 
 
 #  install conponent zskin
+
     def zConponent(self):
         if fileExists(tarfile):
             os.remove(tarfile)
@@ -1455,24 +1474,10 @@ class oZsetup(ConfigListScreen, Screen):
                 self.createSetup()
             else:
                 return
-                # try:
-                    # from Plugins.Extensions.TheWeather.plugin import getLocWeer, localcityscreen
-                    # self.session.openWithCallback(self.UpdateComponents2, localcityscreen)
-                # except:
-                    # print('passed!!')
         else:
             restartbox = self.session.openWithCallback(self.goWeatherInstall, MessageBox, _('Weather Plugin Plugin Not Installed!!\nDo you really want to install now?'), MessageBox.TYPE_YESNO)
             restartbox.setTitle(_('Install Weather Plugin and Reboot'))
         self.UpdatePicture()
-
-    def theweath(self):
-        if result:
-            try:
-                from .addons import WeatherSearch
-                entry = config.plugins.WeatherPlugin.Entry[0]
-                self.session.openWithCallback(self.UpdateComponents, WeatherSearch.MSNWeatherPluginEntryConfigScreen, entry)
-            except:
-                pass
 
     def goWeather(self, result=False):
         if result:
@@ -1532,27 +1537,11 @@ class oZsetup(ConfigListScreen, Screen):
 
     def KeyMenu3(self):
         if os.path.isdir(theweather):
-            # locdirsave = "/etc/enigma2/TheWeather_last.cfg"
-            # location = 'n\A'
-            # if os.path.exists(locdirsave):
-                # for line in open(locdirsave):
-                    # location = line.rstrip()
-                # # zLine = str(location)
-                # if location != 'n\A':
-                    # zLine = str(location)
-                # # zLine = str(city) + ' - ' + str(location)
-                # config.ozeta.city.setValue(zLine)
-                # config.ozeta.city.save()
-                # self['city'].setText(zLine)
-                # self.createSetup()
-            # else:
-                # self.goWeather(True)
-                # return
-                try:
-                    from Plugins.Extensions.TheWeather.plugin import localcityscreen
-                    self.session.openWithCallback(self.UpdateComponents3, localcityscreen)
-                except:
-                    print('passed!!')
+            try:
+                from Plugins.Extensions.TheWeather.plugin import localcityscreen
+                self.session.openWithCallback(self.UpdateComponents3, localcityscreen)
+            except:
+                print('passed!!')
         else:
             message = _('Plugin TheWeather not installed!!!')
             self.mbox = self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
@@ -1618,19 +1607,6 @@ class oZsetup(ConfigListScreen, Screen):
                 return
         except:
             pass
-
-    # def zSwitchMode(self, answer=None):
-        # if answer is None:
-            # self.session.openWithCallback(self.zSwitchMode, MessageBox, _("Restart E2 Now..\nDo you really want to restart GUI now?"))
-        # elif answer:
-            # self.session.open(TryQuitMainloop, 3)
-        # return
-
-    # def isChanged(self):
-        # is_changed = False
-        # for x in self.list:
-            # is_changed != x[1].isChanged()
-        # return is_changed
 
     def zExit(self):
         # if self["config"].isChanged():
