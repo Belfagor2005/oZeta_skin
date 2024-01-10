@@ -216,8 +216,8 @@ def convtext(text=''):
             print('original text: ', text)
             text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
-            text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '').replace('1^ tv', '')
-            text = text.replace('prima visione', '')
+            text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
+            text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             if 'studio aperto' in text:
                 text = 'studio aperto'
             if 'josephine ange gardien' in text:
@@ -230,6 +230,12 @@ def convtext(text=''):
                 text = 'criminal minds'
             if 'i delitti del barlume' in text:
                 text = 'i delitti del barlume'
+            if 'senza traccia' in text:
+                text = 'senza traccia'
+            if 'hudson e rex' in text:
+                text = 'hudson e rex'
+            if 'ben-hur' in text:
+                text = 'ben-hur'
             if text.endswith("the"):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
@@ -237,24 +243,19 @@ def convtext(text=''):
                 print('the from last to start text: ', text)
             text = text + 'FIN'
             # text = re.sub("[^\w\s]", "", text)  # remove .
-            text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
-            text = re.sub(' [\:][ ][a-z0-9]+.*?FIN', '', text)
-            text = re.sub(' [\(][ ][a-z0-9]+.*?FIN', '', text)
-            text = re.sub(' [\-][ ][a-z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\:][ ][a-zA-Z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\(][ ][a-zA-Z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\-][ ][a-zA-Z0-9]+.*?FIN', '', text)
             print('[(00)] ', text)
-
-            if re.search('[Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
-            if re.search('[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub('[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text, flags=re.S|re.I)
-            if re.search(' - [Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9] [Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
-            if re.search(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', text):
-                text = re.sub(' - [Ss][0-9]+[Ee][0-9]+.*?FIN', '', text, flags=re.S|re.I)
-            text = re.sub("([\(\[]).*?([\)\]])|(: odc.\d+)|(\d+: odc.\d+)|(\d+ odc.\d+)|(:)|( -(.*?).*)|(,)|!|\+.*?FIN", "", text)
+            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
+            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text)
+            text = text.partition("(")[0]  # .strip()
+            text = text.partition(":")[0]  # .strip()
+            text = text.partition(" -")[0]  # .strip()
             print('[(01)] ', text)
-            # text = re.sub(r'\(.*[^odc.0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
-            # text = re.sub(r'\(.*[^A-Za-z0-9]\)+.+?FIN', '', text).rstrip()  # remove episode number from series, like "series name (234) and not (Un)defeated"
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)
@@ -262,9 +263,6 @@ def convtext(text=''):
             print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            # cleanEvent = re.sub('\ \(\d+\)$', '', text) #remove episode-number " (xxx)" at the end
-            # cleanEvent = re.sub('\ \(\d+\/\d+\)$', '', cleanEvent) #remove episode-number " (xx/xx)" at the end
-            # text = re.sub('\!+$', '', cleanEvent)
             # text = unicodify(text)
             text = remove_accents(text)
             text = text.strip()
@@ -391,31 +389,31 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                                    # val, log = self.search_molotov_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
                                 # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                                    # val, log = self.search_programmetv_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
                             if not os.path.exists(dwn_backdrop):
-                                val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_tmdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_tvdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_fanart(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             # elif not os.path.exists(dwn_backdrop):
-                                # val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                                # val, log = self.search_imdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 # if val and log.find("SUCCESS"):
                                     # newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_google(dwn_backdrop, canal[2], canal[4], canal[3], canal[0])
+                                val, log = self.search_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
