@@ -196,7 +196,7 @@ def convtext(text=''):
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text)
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
@@ -204,7 +204,7 @@ def convtext(text=''):
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)
-            text = REGEX.sub('', text)  # paused
+            # text = REGEX.sub('', text)  # paused
             print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -404,7 +404,7 @@ class zInfoEvents(Renderer, VariableText):
             self.timer_conn = self.timer.timeout.connect(self.dwn)
         except:
             self.timer.callback.append(self.dwn)
-        self.timer.start(50, True)
+        self.timer.start(30, True)
 
     def dwn(self):
         start_new_thread(self.epgs, ())

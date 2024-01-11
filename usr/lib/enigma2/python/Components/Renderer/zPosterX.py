@@ -55,14 +55,11 @@ if sys.version_info[0] >= 3:
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
-    # from urllib.parse import quote
 else:
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
-    # from urllib import quote
-
 
 
 def isMountReadonly(mnt):
@@ -123,7 +120,7 @@ def SearchBouquetTerrestrial():
             file = f.read()
             x = file.strip().lower()
             if x.find('eeee') != -1:
-                if x.find('82000') == -1 and x.find('c0000') == -1:
+                # if x.find('82000') == -1 and x.find('c0000') == -1:
                     return file
                     break
 
@@ -257,7 +254,7 @@ def convtext(text=''):
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text)
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
@@ -265,7 +262,7 @@ def convtext(text=''):
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)
-            text = REGEX.sub('', text)  # paused
+            # text = REGEX.sub('', text)  # paused
             print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -333,9 +330,9 @@ class PosterDB(zPosterXDownloadThread):
                 elif not os.path.exists(dwn_poster):
                     val, log = self.search_fanart(dwn_poster, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
-                # elif not os.path.exists(dwn_poster):
-                    # val, log = self.search_imdb(dwn_poster, self.pstcanal, canal[4], canal[3])
-                    # self.logDB(log)
+                elif not os.path.exists(dwn_poster):
+                    val, log = self.search_imdb(dwn_poster, self.pstcanal, canal[4], canal[3])
+                    self.logDB(log)
                 elif not os.path.exists(dwn_poster):
                     val, log = self.search_google(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
                     self.logDB(log)
@@ -411,12 +408,11 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 val, log = self.search_fanart(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                            # elif not os.path.exists(dwn_poster):
-                                # val, log = self.search_imdb(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
                             elif not os.path.exists(dwn_poster):
-                                # dwn_poster, title, shortdesc, fulldesc, channel=None):
+                                val, log = self.search_imdb(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
+                            elif not os.path.exists(dwn_poster):
                                 val, log = self.search_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
@@ -546,7 +542,7 @@ class zPosterX(Renderer):
                 if curCanal == self.oldCanal:
                     return
                 self.oldCanal = curCanal
-                self.logPoster("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
+                self.logPoster("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstcanal = convtext(self.canal[5])
                 pstrNm = self.path + '/' + pstcanal + ".jpg"
                 self.pstcanal = str(pstrNm)
@@ -557,7 +553,7 @@ class zPosterX(Renderer):
                     pdb.put(canal)
                     start_new_thread(self.waitPoster, ())
             except Exception as e:
-                self.logPoster("Error (eFile) : " + str(e))
+                self.logPoster("Error (eFile): " + str(e))
                 if self.instance:
                     self.instance.hide()
                 return
@@ -590,7 +586,7 @@ class zPosterX(Renderer):
                 self.pstcanal = str(pstrNm)
             loop = 180
             found = None
-            self.logPoster("[LOOP : waitPoster] {}".format(self.pstcanal))
+            self.logPoster("[LOOP: waitPoster] {}".format(self.pstcanal))
             while loop >= 0:
                 if os.path.exists(self.pstcanal):
                     loop = 0
@@ -598,7 +594,7 @@ class zPosterX(Renderer):
                 time.sleep(0.5)
                 loop = loop - 1
             if found:
-                self.timer.start(10, True)
+                self.timer.start(20, True)
 
     def logPoster(self, logmsg):
         try:

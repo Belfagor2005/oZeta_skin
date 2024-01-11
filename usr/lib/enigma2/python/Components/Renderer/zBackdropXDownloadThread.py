@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# edit lululla to 30.07.2022
+# edit by lululla 07.2022
 # recode from lululla 2023
 from __future__ import absolute_import
 from PIL import Image
@@ -50,7 +50,6 @@ tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 # thetvdbkey = 'D19315B88B2DE21F'
 thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
-# thetvdbkey = "acbe31f8-f39a-4910-9b45-2c1d01c38478"
 fanart_api = "6d231536dea4318a88cb2520ce89473b"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -75,7 +74,7 @@ except:
 
 
 # isz = "original"
-isz = "w1280"
+isz = "w780"
 
 '''
 isz = "w780"
@@ -193,7 +192,6 @@ class zBackdropXDownloadThread(threading.Thread):
                     series_nb = i
                     break
                 i += 1
-
             backdrop = ""
             if series_nb >= 0 and series_id and series_id[series_nb]:
                 if series_name and series_name[series_nb]:
@@ -206,14 +204,14 @@ class zBackdropXDownloadThread(threading.Thread):
                         url_tvdb += "/{}".format(lng)
                     else:
                         url_tvdb += "/en"
-
                     url_read = requests.get(url_tvdb).text
                     backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
 
             if backdrop and backdrop[0]:
-                url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
-                self.savebackdrop(dwn_backdrop, url_backdrop)
-                return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
+                if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
+                    url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
+                    self.savebackdrop(dwn_backdrop, url_backdrop)
+                    return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
 
@@ -226,7 +224,7 @@ class zBackdropXDownloadThread(threading.Thread):
         try:
             year = None
             url_tmdb = ""
-            poster = None
+            backdrop = None
             id = "-"
             chkType, fd = self.checkType(shortdesc, fulldesc)
             try:
@@ -366,12 +364,10 @@ class zBackdropXDownloadThread(threading.Thread):
             url_ptv = "site:programme-tv.net+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
                 url_ptv += "+" + quote(channel)
-
             url_ptv = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_ptv)
             ff = requests.get(url_ptv, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
             if not PY3:
                 ff = ff.encode('utf-8')
-
             ptv_id = 0
             plst = re.findall('\],\["https://www.programme-tv.net(.*?)",\d+,\d+]', ff)
             for backdroplst in plst:
@@ -506,7 +502,6 @@ class zBackdropXDownloadThread(threading.Thread):
                 backdrop = plst
             else:
                 imsg = "Not found '{}' [{}%-{}%-{}]".format(pltc, molotov_table[0], molotov_table[1], len_plst)
-
             if backdrop:
                 url_backdrop = re.sub('/\d+x\d+/', "/" + re.sub(',', 'x', isz) + "/", backdrop)
                 self.savebackdrop(dwn_backdrop, url_backdrop)
@@ -580,7 +575,6 @@ class zBackdropXDownloadThread(threading.Thread):
             return False, "[ERROR : google] {} [{}-{}] => {} => {} ({})".format(title, chkType, year, url_google, url_backdrop, str(e))
 
     def savebackdrop(self, dwn_backdrop, url_backdrop):
-        print('url backdrop= ', url_backdrop)
         with open(dwn_backdrop, 'wb') as f:
             f.write(requests.get(url_backdrop, stream=True, allow_redirects=True, verify=False).content)
             f.close()

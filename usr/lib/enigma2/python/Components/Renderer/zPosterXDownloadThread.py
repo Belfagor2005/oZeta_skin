@@ -132,7 +132,6 @@ class zPosterXDownloadThread(threading.Thread):
                 year = ''
                 pass
             # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(srch, tmdb_api, quote(title))
-            # http://api.themoviedb.org/3/search/movie?api_key=' + str(self.check(self.token)) + '&primary_release_year=' + str(year) + '&query=' + str(searchtitle)
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}".format(chkType, tmdb_api)  # , quote(title))           #  &query={}".format(srch, tmdb_api, quote(title))
             if year:
                 url_tmdb += "&primary_release_year={}".format(year)
@@ -140,7 +139,6 @@ class zPosterXDownloadThread(threading.Thread):
                 # url_tmdb += "&language={}".format(lng)
             url_tmdb += "&query={}".format(quote(title))
             print('url_tmdb= ', url_tmdb)
-
             poster = requests.get(url_tmdb).json()
             if poster and poster['results'] and poster['results'][0] and poster['results'][0]['poster_path']:
                 if poster and poster != 'null' or poster is not None or poster != '':
@@ -233,17 +231,14 @@ class zPosterXDownloadThread(threading.Thread):
                 m_type = 'tv'
                 url_fanart = "https://webservice.fanart.tv/v3/{}/{}?api_key={}".format(m_type, id, fanart_api)
                 fjs = requests.get(url_fanart, verify=False, timeout=5).json()
-
                 try:
                     url = (fjs['tvposter'][0]['url'])
                 except:
-                   url = (fjs['movieposter'][0]['url'])
+                    url = (fjs['movieposter'][0]['url'])
 
                 url_poster = requests.get(url).json()
                 print('url fanart poster:', url_poster)
-                # if poster and poster['results'] and poster['results'][0] and poster['results'][0]['poster_path']:
                 if url_poster and url_poster != 'null' or url_poster is not None or url_poster != '':
-                    # url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), poster['results'][0]['poster_path'])
                     self.savePoster(dwn_poster, url_poster)
                     return True, "[SUCCESS poster: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_poster)
                 else:
@@ -294,7 +289,6 @@ class zPosterXDownloadThread(threading.Thread):
                 url_read = requests.get(url_mimdb).text
                 rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
                 url_imdb = rc.findall(url_read)
-
             len_imdb = len(url_imdb)
             idx_imdb = 0
             pfound = False
@@ -492,7 +486,6 @@ class zPosterXDownloadThread(threading.Thread):
                 poster = plst
             else:
                 imsg = "Not found '{}' [{}%-{}%-{}]".format(pltc, molotov_table[0], molotov_table[1], len_plst)
-
             if poster:
                 url_poster = re.sub('/\d+x\d+/', "/" + re.sub(',', 'x', isz) + "/", poster)
                 self.savePoster(dwn_poster, url_poster)
@@ -577,12 +570,10 @@ class zPosterXDownloadThread(threading.Thread):
             ratio = float(width) / float(height)
             new_height = int(isz.split(",")[1])
             new_width = int(ratio * new_height)
-            # rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
             try:
                 rimg = img.resize((new_width, new_height), Image.LANCZOS)
             except:
                 rimg = img.resize((new_width, new_height), Image.ANTIALIAS)
-
             img.close()
             rimg.save(dwn_poster)
             rimg.close()

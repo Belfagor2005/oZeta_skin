@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # by digiteng...07.2021,
@@ -17,6 +18,7 @@
 # <widget source="session.CurrentService" render="zBackdropX" position="100,100" size="680,1000" nexts="3" />
 # for ch,
 # <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="185,278" nexts="2" />                                                                                               
 # for epg, event
 # <widget source="Event" render="zBackdropX" position="100,100" size="680,1000" />
 # <widget source="Event" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
@@ -104,8 +106,6 @@ except:
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
 # IF NOT SET OR WRONG FILE THE AUTOMATIC BACKDROP GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
-#
-
 
 def SearchBouquetTerrestrial():
     import glob
@@ -114,10 +114,9 @@ def SearchBouquetTerrestrial():
     for file in sorted(glob.glob('/etc/enigma2/*.tv')):
         with codecs.open(file, "r", encoding="utf-8") as f:
             file = f.read()
-        # f = open(file, 'r').read()
             x = file.strip().lower()
             if x.find('eeee') != -1:
-                if x.find('82000') == -1 and x.find('c0000') == -1:
+                # if x.find('82000') == -1 and x.find('c0000') == -1:
                     return file
                     break
 
@@ -251,7 +250,7 @@ def convtext(text=''):
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*[a-zA-Z0-9_]+.*?FIN', '', text)
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
@@ -259,7 +258,7 @@ def convtext(text=''):
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)
-            text = REGEX.sub('', text)  # paused
+            # text = REGEX.sub('', text)  # paused
             print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
@@ -311,7 +310,6 @@ class BackdropDB(zBackdropXDownloadThread):
                 dwn_backdrop = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_backdrop):
                     os.utime(dwn_backdrop, (time.time(), time.time()))
-
                 # if lng == "fr":
                     # if not os.path.exists(dwn_backdrop):
                         # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
@@ -319,20 +317,18 @@ class BackdropDB(zBackdropXDownloadThread):
                     # if not os.path.exists(dwn_backdrop):
                         # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
                         # self.logDB(log)
-
                 if not os.path.exists(dwn_backdrop):
                     val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
                 elif not os.path.exists(dwn_backdrop):
                     val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
-
                 elif not os.path.exists(dwn_backdrop):
                     val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
-                # elif not os.path.exists(dwn_backdrop):
-                    # val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
-                    # self.logDB(log)
+                elif not os.path.exists(dwn_backdrop):
+                    val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                    self.logDB(log)
                 elif not os.path.exists(dwn_backdrop):
                     val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                     self.logDB(log)
@@ -408,10 +404,10 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 val, log = self.search_fanart(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
-                            # elif not os.path.exists(dwn_backdrop):
-                                # val, log = self.search_imdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
-                                # if val and log.find("SUCCESS"):
-                                    # newfd += 1
+                            elif not os.path.exists(dwn_backdrop):
+                                val, log = self.search_imdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                if val and log.find("SUCCESS"):
+                                    newfd += 1
                             elif not os.path.exists(dwn_backdrop):
                                 val, log = self.search_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -542,7 +538,7 @@ class zBackdropX(Renderer):
                 if curCanal == self.oldCanal:
                     return
                 self.oldCanal = curCanal
-                self.logBackdrop("Service : {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
+                self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstcanal = convtext(self.canal[5])
                 backrNm = self.path + '/' + pstcanal + ".jpg"
                 self.backrNm = str(backrNm)
@@ -553,7 +549,7 @@ class zBackdropX(Renderer):
                     pdb.put(canal)
                     start_new_thread(self.waitBackdrop, ())
             except Exception as e:
-                self.logBackdrop("Error (eFile) : " + str(e))
+                self.logBackdrop("Error (eFile): " + str(e))
                 if self.instance:
                     self.instance.hide()
                 return
@@ -585,7 +581,7 @@ class zBackdropX(Renderer):
                 self.backrNm = str(backrNm)
             loop = 180
             found = None
-            self.logBackdrop("[LOOP : waitBackdrop] {}".format(self.backrNm))
+            self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))
             while loop >= 0:
                 if os.path.exists(self.backrNm):
                     loop = 0
