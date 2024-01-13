@@ -18,7 +18,7 @@
 # <widget source="session.CurrentService" render="zBackdropX" position="100,100" size="680,1000" nexts="3" />
 # for ch,
 # <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
-# <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="185,278" nexts="2" />                                                                                               
+# <widget source="ServiceEvent" render="zBackdropX" position="100,100" size="185,278" nexts="2" />
 # for epg, event
 # <widget source="Event" render="zBackdropX" position="100,100" size="680,1000" />
 # <widget source="Event" render="zBackdropX" position="100,100" size="680,1000" nexts="2" />
@@ -76,20 +76,27 @@ def isMountReadonly(mnt):
     return "mount: '%s' doesn't exist" % mnt
 
 
+def isMountedInRW(path):
+    testfile = path + '/tmp-rw-test'
+    os.system('touch ' + testfile)
+    if os.path.exists(testfile):
+        os.system('rm -f ' + testfile)
+        return True
+    return False
+
+
 path_folder = "/tmp/backdrop"
 if os.path.exists("/media/hdd"):
-    if not isMountReadonly("/media/hdd"):
+    if isMountedInRW("/media/hdd"):
         path_folder = "/media/hdd/backdrop"
-elif os.path.exists("/media/usb"):
-    if not isMountReadonly("/media/usb"):
+if os.path.exists("/media/usb"):
+    if isMountedInRW("/media/usb"):
         path_folder = "/media/usb/backdrop"
-elif os.path.exists("/media/mmc"):
-    if not isMountReadonly("/media/mmc"):
+if os.path.exists("/media/mmc"):
+    if isMountedInRW("/media/mmc"):
         path_folder = "/media/mmc/backdrop"
-
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
-
 
 epgcache = eEPGCache.getInstance()
 apdb = dict()
@@ -101,6 +108,7 @@ try:
 except:
     lng = 'en'
     pass
+
 
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC BACKDROP GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
@@ -116,7 +124,7 @@ def SearchBouquetTerrestrial():
             file = f.read()
             x = file.strip().lower()
             if x.find('eeee') != -1:
-                # if x.find('82000') == -1 and x.find('c0000') == -1:
+                if x.find('82000') == -1 and x.find('c0000') == -1:
                     return file
                     break
 
@@ -251,10 +259,20 @@ def convtext(text=''):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
+            print('[(01)] ', text)
+
+            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+            text = re.sub(r'(\d+)+.*?FIN', '', text)
+            text = text.partition("(")[0] + 'FIN'  # .strip()
+            text = re.sub("\s\d+", "", text)
+            print('1 odc my test:', text)
+
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
-            print('[(01)] ', text)
+            # text = re.sub(r'(?:\d+\s\odc\.\d+\s)?(.+)+.*?FIN', '', text)
+            print('2 my test:', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)
@@ -413,7 +431,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
-                            self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                        self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
@@ -543,7 +561,7 @@ class zBackdropX(Renderer):
                 backrNm = self.path + '/' + pstcanal + ".jpg"
                 self.backrNm = str(backrNm)
                 if os.path.exists(self.backrNm):
-                    self.timer.start(20, True)
+                    self.timer.start(10, True)
                 else:
                     canal = self.canal[:]
                     pdb.put(canal)

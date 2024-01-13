@@ -67,17 +67,25 @@ def isMountReadonly(mnt):
     return "mount: '%s' doesn't exist" % mnt
 
 
+def isMountedInRW(path):
+    testfile = path + '/tmp-rw-test'
+    os.system('touch ' + testfile)
+    if os.path.exists(testfile):
+        os.system('rm -f ' + testfile)
+        return True
+    return False
+
+
 path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
-    if not isMountReadonly("/media/hdd"):
+    if isMountedInRW("/media/hdd"):
         path_folder = "/media/hdd/poster"
-elif os.path.exists("/media/usb"):
-    if not isMountReadonly("/media/usb"):
+if os.path.exists("/media/usb"):
+    if isMountedInRW("/media/usb"):
         path_folder = "/media/usb/poster"
-elif os.path.exists("/media/mmc"):
-    if not isMountReadonly("/media/mmc"):
+if os.path.exists("/media/mmc"):
+    if isMountedInRW("/media/mmc"):
         path_folder = "/media/mmc/poster"
-
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
 
@@ -197,10 +205,20 @@ def convtext(text=''):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
+            print('[(01)] ', text)
+
+            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+            text = re.sub(r'(\d+)+.*?FIN', '', text)
+            text = text.partition("(")[0] + 'FIN'  # .strip()
+            text = re.sub("\s\d+", "", text)
+            print('1 odc my test:', text)
+
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
-            print('[(01)] ', text)
+            # text = re.sub(r'(?:\d+\s\odc\.\d+\s)?(.+)+.*?FIN', '', text)
+            print('2 my test:', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             print('[(02)] ', text)

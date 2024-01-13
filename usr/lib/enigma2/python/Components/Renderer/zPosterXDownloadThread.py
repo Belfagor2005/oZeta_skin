@@ -176,7 +176,7 @@ class zPosterXDownloadThread(threading.Thread):
                     series_nb = i
                     break
                 i += 1
-            poster = ""
+            poster = None
             if series_nb >= 0 and series_id and series_id[series_nb]:
                 if series_name and series_name[series_nb]:
                     series_name = self.UNAC(series_name[series_nb])
