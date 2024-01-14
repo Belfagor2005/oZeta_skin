@@ -13,6 +13,7 @@ from .addons.Utils import RequestAgent
 from Components.AVSwitch import AVSwitch
 from Components.ActionMap import ActionMap
 from Components.ConfigList import ConfigListScreen
+from Components.config import configfile
 from Components.Label import Label
 from Components.Pixmap import Pixmap
 from Components.Sources.StaticText import StaticText
@@ -36,7 +37,8 @@ import time
 global my_cur_skin, zaddon
 PY3 = sys.version_info.major >= 3
 thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
-cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+# cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+cur_skin = 'oZeta-FHD'
 OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
 weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
 theweather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('TheWeather'))
@@ -87,7 +89,7 @@ except:
 
 Uri.imagevers()
 #  config section - ===========
-version = '2.7'
+version = '2.9'
 descplug = 'Customization tool for ozeta skin v.%s' % version
 plugindesc = 'Manage your oZeta Skin v.%s' % version
 iconpic = 'plugin.png'
@@ -120,11 +122,11 @@ config.ozeta.data4 = NoSave(ConfigOnOff(default=False))
 config.ozeta.api4 = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.txtapi4 = ConfigText(default=thetvdbkey, visible_width=50, fixed_size=False)
 config.ozeta.mmpicons = NoSave(ConfigSelection(['-> Ok']))
-config.ozeta.update = ConfigOnOff(default=False)
+config.ozeta.update = NoSave(ConfigOnOff(default=False))
 config.ozeta.upfind = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.upconponent = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.options = NoSave(ConfigSelection(['-> Ok']))
-config.ozeta.zweather = ConfigOnOff(default=False)
+config.ozeta.zweather = NoSave(ConfigOnOff(default=False))
 config.ozeta.weather = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.oaweather = NoSave(ConfigSelection(['-> Ok']))
 config.ozeta.theweather = NoSave(ConfigSelection(['-> Ok']))
@@ -158,40 +160,39 @@ if f:
         if 'menu_' in ozetaline:
             ozetamenu = ozetaline[5:].replace("-", " ")
             ozetamenupredefinedlist.append(ozetamenu)
-        elif 'bootlogo_' in ozetaline:
+        if 'bootlogo_' in ozetaline:
             ozetabootlogo = ozetaline[9:].replace("-", " ")
             ozetamvipredefinedlist.append(ozetabootlogo)
-        elif 'infobar_' in ozetaline:
+        if 'infobar_' in ozetaline:
             ozetainfobar = ozetaline[8:].replace("-", " ")
             ozetainfobarpredefinedlist.append(ozetainfobar)
-        elif 'second_' in ozetaline:
+        if 'second_' in ozetaline:
             ozetasecinfobar = ozetaline[7:].replace("-", " ")
             ozetainfobarsecpredefinedlist.append(ozetasecinfobar)
-        elif 'channel_' in ozetaline:
+        if 'channel_' in ozetaline:
             ozetachannelselection = ozetaline[8:].replace("-", " ")
             ozetachannelselectionpredefinedlist.append(ozetachannelselection)
-        elif 'volume_' in ozetaline:
+        if 'volume_' in ozetaline:
             ozetavolume = ozetaline[7:].replace("-", " ")
             ozetavolumepredefinedlist.append(ozetavolume)
-        elif 'radio_' in ozetaline:
+        if 'radio_' in ozetaline:
             ozetaradio = ozetaline[6:].replace("-", " ")
             ozetaradiopredefinedlist.append(ozetaradio)
-        elif 'mediaplayer_' in ozetaline:
+        if 'mediaplayer_' in ozetaline:
             ozetamediaplayer = ozetaline[12:].replace("-", " ")
             ozetamediaplayerpredefinedlist.append(ozetamediaplayer)
-        elif 'eventview_' in ozetaline:
+        if 'eventview_' in ozetaline:
             ozetaeventview = ozetaline[10:].replace("-", " ")
             ozetaeventviewpredefinedlist.append(ozetaeventview)
-        elif 'plugins_' in ozetaline:
+        if 'plugins_' in ozetaline:
             ozetaplugins = ozetaline[8:].replace("-", " ")
             ozetapluginspredefinedlist.append(ozetaplugins)
-        elif 'alogo_' in ozetaline:
+        if 'alogo_' in ozetaline:
             ozetalogo = ozetaline[6:].replace("-", " ")
             ozetaalogopredefinedlist.append(ozetalogo)
-        else:
-            if'blogo_' in ozetaline:
-                ozetalogob = ozetaline[6:].replace("-", " ")
-                ozetablogopredefinedlist.append(ozetalogob)
+        if'blogo_' in ozetaline:
+            ozetalogob = ozetaline[6:].replace("-", " ")
+            ozetablogopredefinedlist.append(ozetalogob)
     ozetamenupredefinedlist.sort()
     ozetamvipredefinedlist.sort()
     ozetaalogopredefinedlist.sort()
@@ -321,6 +322,7 @@ class oZsetup(ConfigListScreen, Screen):
         skin = os.path.join(thisdir, 'skin/oZsetup.xml')
         with open(skin, 'r') as f:
             self.skin = f.read()
+        self.setup_title = ('oZeta Skin Setup')
         self.onChangedEntry = []
         self.list = []
         ConfigListScreen.__init__(self, self.list, session=self.session, on_change=self.changedEntry)
@@ -328,16 +330,17 @@ class oZsetup(ConfigListScreen, Screen):
         self.skinFile = '%senigma2/%s/zSkin/skin_infochannel.xml' % (mvi, cur_skin)
         self.chooseFile = '%s/' % sample
         self.getImg = Uri.imagevers()
-        self.setup_title = ('oZeta Skin Setup')
         self['Preview'] = Pixmap()
         self['key_red'] = Label(_('Cancel'))
         self['key_green'] = Label(_('Save'))
-
         self['key_yellow'] = Label('')
         if str(cur_skin) == 'oZeta-FHD':
             self['key_yellow'] = Label(_('Preview'))
         # self['key_blue'] = Label(_('Restart'))
-        self["key_blue"] = StaticText(self.getSkinSelector() is not None and "Skin" or "")
+        # self["key_blue"] = StaticText(self.getSkinSelector() is not None and "Skin" or "")
+        # if os.path.exists('/usr/lib/enigma2/python/Plugins/PLi'):
+        self["key_blue"] = Label('')
+        self["key_blue"].hide()
         self["HelpWindow"] = Pixmap()
         self["HelpWindow"].hide()
         self["VKeyIcon"] = Pixmap()
@@ -371,6 +374,7 @@ class oZsetup(ConfigListScreen, Screen):
             'red': self.zExit,
             'green': self.zSave,
             'InfoPressed': self.zHelp,
+            'info': self.zHelp,
             'EPGPressed': self.zHelp,
             'yellow': self.ShowPictureFull,
             # 'blue': self.zSwitchMode,
@@ -387,7 +391,7 @@ class oZsetup(ConfigListScreen, Screen):
         self.current_skin = config.skin.primary_skin.value
         self.onFirstExecBegin.append(self.check_dependencies)
         self.onLayoutFinish.append(self.__layoutFinished)
-        # self.onLayoutFinish.append(self.layoutFinished)
+        self.onLayoutFinish.append(self.UpdatePicture)
 
     def __layoutFinished(self):
         self.setTitle(self.setup_title)
@@ -412,7 +416,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.UpdateComponents()
         self.createSetup()
         self.zXml()
-        self.UpdatePicture()
+        # self.UpdatePicture()
         self['image'].setText("%s" % Uri.imagevers())
         self['city'].setText("%s" % str(config.ozeta.city.value))
         self.setTitle(self.setup_title)
@@ -429,8 +433,11 @@ class oZsetup(ConfigListScreen, Screen):
             print(e)
 
     def keyOpenSkinselector(self):
-        if self.getSkinSelector() is not None:
-            self.session.openWithCallback(self.restoreCurrentSkin, self.getSkinSelector())
+        try:
+            if self.getSkinSelector() is not None:
+                self.session.openWithCallback(self.restoreCurrentSkin, self.getSkinSelector())
+        except Exception as e:
+            print(e)
 
     def restoreCurrentSkin(self, **kwargs):
         try:
@@ -461,16 +468,6 @@ class oZsetup(ConfigListScreen, Screen):
         user_log = '/tmp/debug_my_skin.log'
         if fileExists(user_log):
             self.session.open(zEditor, user_log)
-
-    # def selectskin(self):
-        # if fileExists('/usr/lib/enigma2/python/Plugins/SystemPlugins/SkinSelector/plugin.pyc') or fileExists('/usr/lib/enigma2/python/Plugins/SystemPlugins/SkinSelector/plugin.pyo'):
-            # try:
-                # from Plugins.SystemPlugins.SkinSelector.plugin import SkinSelector
-                # self.session.openWithCallback(self.close, SkinSelector)
-            # except:
-                # self.session.openWithCallback(self.close, MessageBox, _('Sorry, this feature is not available in your image'), MessageBox.TYPE_INFO, timeout=4)
-        # else:
-            # self.session.openWithCallback(self.close, MessageBox, _('Sorry, this feature is not available in your image'), MessageBox.TYPE_INFO, timeout=4)
 
     def _space(self):
         self.list.append(getConfigListEntry(" ", config.ozeta.fake, False))
@@ -611,13 +608,14 @@ class oZsetup(ConfigListScreen, Screen):
                         pass
                     self["VKeyIcon"].hide()
 
-    def selectionChanged(self):
-        self['status'].setText(self['config'].getCurrent()[0])
+    # def selectionChanged(self):
+        # self['status'].setText(self['config'].getCurrent()[0])
 
     def changedEntry(self):
         self.item = self["config"].getCurrent()
         for x in self.onChangedEntry:
             x()
+
         try:
             if isinstance(self["config"].getCurrent()[1], ConfigYesNo) or isinstance(self["config"].getCurrent()[1], ConfigSelection):
                 self.createSetup()
@@ -674,6 +672,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.KeyText()
         else:
             return
+        return
 
     def zXStreamity(self, answer=None):
         if XStreamity is True:
@@ -863,6 +862,7 @@ class oZsetup(ConfigListScreen, Screen):
                     self.PicLoad.PictureData.get().append(self.DecodePicture)
                 except:
                     self.PicLoad_conn = self.PicLoad.PictureData.connect(self.DecodePicture)
+            return
 
     def DecodePicture(self, PicInfo=None):
         ptr = self.PicLoad.getData()
@@ -1021,15 +1021,18 @@ class oZsetup(ConfigListScreen, Screen):
 
     def saveall(self):
         try:
-            if self["config"].isChanged():
-                for x in self["config"].list:
-                    if fakeconfig(x):
-                        print('fake:', fakeconfig(x))
-                        print('xxxx:', x)
-                        continue
-                    # print('zzzz:', x)
-                    x[1].save()
+            # if self["config"].isChanged():
+                # for x in self["config"].list:
+                    # if fakeconfig(x):
+                        # print('fake:', fakeconfig(x))
+                        # print('xxxx:', x)
+                        # continue
+                    # # print('zzzz:', x)
+                    # x[1].save()
                 # config.ozeta.txtapi.save()
+                # config.ozetanss.save()
+                # configfile.save()
+                # ######### recover try
                 # config.ozeta.txtapi2.save()
                 # config.ozeta.txtapi3.save()
                 # config.ozeta.txtapi4.save()
@@ -1211,6 +1214,7 @@ class oZsetup(ConfigListScreen, Screen):
         if answer:
             if config.ozeta.update:
                 self.zSkin()
+            self.upd_zeta()
         return
 
     def zUpConponent(self):
@@ -1258,10 +1262,10 @@ class oZsetup(ConfigListScreen, Screen):
             self.command = ["tar -xvf /tmp/download.tar -C /"]
             cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             if "https" in str(self.com):
-                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s;rm -rf /tmp/download.tar > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             print('cmd: ', cmd)
             self.session.open(Console, title=_('Installation oZeta Skin Conponent'), cmdlist=[cmd, 'sleep 5'])  # , finishedCallback=self.upd_zeta)
-
+            # os.system('rm -rf /tmp/download.tar')
         except Exception as e:
             print('error download: ', e)
             return
@@ -1277,7 +1281,7 @@ class oZsetup(ConfigListScreen, Screen):
             self.command = ["tar -xvf /tmp/download.tar -C /"]
             cmd = "wget -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             if "https" in str(self.com):
-                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
+                cmd = "wget --no-check-certificate -U '%s' -c '%s' -O '%s';%s;rm -rf /tmp/download.tar > /dev/null" % (Req, str(self.com), self.dest, self.command[0])
             print('cmd: ', cmd)
             self.session.open(Console, title=_('Installation oZeta Skin'), cmdlist=[cmd, 'sleep 5'])  # , finishedCallback=self.upd_zeta)
 
@@ -1286,7 +1290,7 @@ class oZsetup(ConfigListScreen, Screen):
             return
 
         print('update tarfile')
-        self.upd_zeta()
+        # self.upd_zeta()
 
 # #  install update zskin
     # def zSkin(self):
@@ -1312,50 +1316,74 @@ class oZsetup(ConfigListScreen, Screen):
     def start(self):
         pass
 
-# not tested
-    # def upd_zeta(self, fplug):
     def upd_zeta(self):
         time.sleep(5)
-        if fileExists(tarfile) and os.stat(tarfile).st_size > 5000:
-            print('init update tarfile')
-            # cmd = "tar -xvf /tmp/download.tar -C /"
-            # self.session.open(Console, _('Extract: %s') % tarfile, [cmd], closeOnSuccess=True)
-            # time.sleep(5)
-            if 'openatv' in Uri.imagevers():
-                if '6.4' in Uri.imagevers():
-                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv6.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    os.system(cmd1)
-                    os.system(cmd2)
-                elif '7.' in Uri.imagevers():
-                    print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
-                    cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamatv.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                    os.system(cmd1)
-                    os.system(cmd2)
+        print('init update zeta')
+        content1 = '/etc/issue'
+        with open(content1, 'r') as f:
+            content = f.read()
+            if 'openpli' in content:
+                print("In version =", content)
+        type = content.strip().lower()
+        print('type is  ', str(type))
 
-            elif 'OpenSPA' in Uri.imagevers():
-                cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teamspa.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
+        if 'openpli' or 'nonsolosat' in type or os.path.exists('/usr/lib/enigma2/python/Plugins/PLi'):
+            cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teampli.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            os.system(cmd1)
+            os.system(cmd2)
+            print(cmd1 + '\n' + cmd2)
+
+        if 'openatv' in type:
+            if '6.' in type:
+                cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+                cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teamatv6.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
                 os.system(cmd1)
                 os.system(cmd2)
-            elif 'OpenPLi' in Uri.imagevers():
-                cmd1 = 'cp -rf %senigma2/%s/zSkin/skin_team.xml %senigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                cmd2 = 'cp -rf %senigma2/%s/zSkin/skin_teampli.xml %senigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (mvi, cur_skin, mvi, cur_skin)
-                os.system(cmd1)
-                os.system(cmd2)
-            else:
-                self.session.open(MessageBox, _('Image Box Not Tested!!'), MessageBox.TYPE_INFO, timeout=5)
-                # return
-            self.check_line()
+                print(cmd1 + '\n' + cmd2)
+
+        if 'openspa' in type:
+            cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teamspa.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            os.system(cmd1)
+            os.system(cmd2)
+            print(cmd1 + '\n' + cmd2)
+
+        # if 'OpenPLi' in Uri.imagevers() or if os.path.exists('/usr/lib/enigma2/python/Plugins/Pli'):
+            # cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            # cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teampli.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            # os.system(cmd1)
+            # os.system(cmd2)
+            # print(cmd1 + '\n' + cmd2)
+        # elif 'openatv' in Uri.imagevers():
+            # if '6.4' in Uri.imagevers():
+                # cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+                # cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teamatv6.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+                # os.system(cmd1)
+                # os.system(cmd2)
+                # print(cmd1 + '\n' + cmd2)
+            # elif '7.' in Uri.imagevers():
+                # print("distro= Openatv image > 6.4\nNO CHANGE REQUIRED")
+                # # cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+                # # cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teamatv.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+                # # os.system(cmd1)
+                # # os.system(cmd2)
+                # # print(cmd1 + '\n' + cmd2)
+        # elif 'OpenSPA' in Uri.imagevers():
+            # cmd1 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_team.xml /usr/share/enigma2/%s/zSkin/skin_teamOrig.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            # cmd2 = 'cp -rf /usr/share/enigma2/%s/zSkin/skin_teamspa.xml /usr/share/enigma2/%s/zSkin/skin_team.xml > /dev/null 2>&1' % (cur_skin, cur_skin)
+            # os.system(cmd1)
+            # os.system(cmd2)
+            # print(cmd1 + '\n' + cmd2)
         else:
-            # self.session.open(MessageBox, _('Unknow!! or FILE NO EXIST /tmp/download.tar!'), MessageBox.TYPE_INFO, timeout=5)
-            self.session.open(MessageBox, _('Download Error!!!\nUnknow or FILE NO EXIST /tmp/download.tar!\nPlease Report Issue on forum'), MessageBox.TYPE_INFO, timeout=5)
-            return
+            self.session.open(MessageBox, _('Image Box Not Tested!!'), MessageBox.TYPE_INFO, timeout=5)
+        self.check_line()
 
     def goUp(self, answer=True):
         if answer:
             try:
+                if fileExists('/tmp/options.tar'):
+                    os.remove('/tmp/options.tar')
                 from Tools import Notifications
                 PY3 = sys.version_info.major >= 3
                 zfile = 'http://patbuweb.com/ozeta/options.tar'
@@ -1479,6 +1507,13 @@ class oZsetup(ConfigListScreen, Screen):
             restartbox.setTitle(_('Install Weather Plugin and Reboot'))
         self.UpdatePicture()
 
+    # def theweath(self):
+        # try:
+            # from .addons import WeatherSearch
+            # entry = config.plugins.WeatherPlugin.Entry[0]
+            # self.session.openWithCallback(self.UpdateComponents, WeatherSearch.MSNWeatherPluginEntryConfigScreen, entry)
+        # except:
+            # pass
     def goWeather(self, result=False):
         if result:
             try:
@@ -1609,10 +1644,7 @@ class oZsetup(ConfigListScreen, Screen):
             pass
 
     def zExit(self):
-        # if self["config"].isChanged():
-            # self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), MessageBox.TYPE_YESNO)
-        # else:
-            self.close()
+        self.close()
 
     # def zExit(self, answer=None):
         # if answer is None:
@@ -1635,20 +1667,6 @@ class oZsetup(ConfigListScreen, Screen):
                 # x[1].cancel()
 
             # self.close()
-        # return
-
-    # def cancelConfirm(self, result):
-        # if not result:
-            # return
-        # for x in self["config"].list:
-            # # SKIN PARTS SETUP
-            # # SERVER API KEY SETUP
-            # # WEATHER BOX SETUP
-            # # MISC SETUP
-            # if fakeconfig(x):
-                # continue
-            # x[1].cancel()
-        # self.close()
         # return
 
 
@@ -1692,15 +1710,14 @@ class ozHelp(Screen):
         self["helpdesc"].setText(helpdesc)
 
     def homecontext(self):
-        conthelp = "oZeta Skin"
+        conthelp = "Original oZeta Skin"
         conthelp += "Version : " + "%s\n" % version
         conthelp += "License: Open\n\n"
-        conthelp += "Skin Author: Mmark - Info: e2skin.blogspot.it\n\n"
-        conthelp += "*************************************\n\n"
+        conthelp += "Skin Author: Mmark - Info: e2skin.blogspot.it\n"
         conthelp += "Tested on:\n"
-        conthelp += " openATV 7.x - OpenPLi 8.x - OpenSPA\n"
-        conthelp += "\n"
-        conthelp += "zSetup Base Release: 2.0.0 - 30/06/2022\n\n"
+        conthelp += "openATV 7.x - OpenPLi 8.x - OpenSPA\n"
+        conthelp += "zSetup Base Release: 2.0.0 - 30/06/2022\n"
+        conthelp += "***Coded by @Lululla - @Corvoboys ***\n"
         conthelp += "*************************************\n\n"
         conthelp += "Please reports bug or info to blog:\n"
         conthelp += "http://e2skin.blogspot.com\n\n"
@@ -1714,7 +1731,7 @@ class ozHelp(Screen):
         self["helpdesc"].setText(helpdesc)
 
     def yellowcontext(self):
-        conthelp = "HELP ZSETUP PLUGIN \n\n"
+        conthelp = "HELP ZSETUP PLUGIN:\n\n"
         conthelp += (" (RED BUTTON):\n")
         conthelp += _("         Exit zSetup\n\n")
         conthelp += (" (GREEN BUTTON):\n")
@@ -1737,7 +1754,7 @@ class ozHelp(Screen):
         self["helpdesc"].setText(helpdesc)
 
     def greencontext(self):
-        conthelp = "SETTINGS APIKEY: COVER AND WEATHER\n\n"
+        conthelp = "SETTINGS APIKEY: COVER AND WEATHER:\n\n"
         conthelp += ("(OMDB ApiKey):\n")
         conthelp += _("    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n")
         conthelp += _("    /usr/share/enigma2/oZeta-FHD/omdbkey\n")

@@ -2920,7 +2920,7 @@
     <!-- [062] OpenZeta Setup 062/01 -->
     <screen name="oZsetup" position="0,0" size="1920,1080" title="ozeta Skin Setup" backgroundColor="#FF000000">
         <ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1"/>
-        <panel name="LayerMenu1700-nl"/>
+        <panel name="LayerMenu1700"/>
         <panel name="vButtonTemplate-1500"/>
         <widget name="config" position="230,140" size="1015,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="#202020" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" zPosition="2"/>
         <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1"/>
@@ -2935,6 +2935,9 @@
         <ePixmap position="1500,1030" pixmap="buttons/80/key_info.png" size="80,40" alphatest="blend" zPosition="2"/>
         <!-- <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend"/> -->
         <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2"/>
+        <widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="230,600" zPosition="1" size="64,43" transparent="1" alphatest="blend">
+            <convert type="ConditionalShowHide"/>
+        </widget>
     </screen>
     <!-- [062] OpenZeta Setup 062/02 -->
     <screen name="ozHelp" position="0,0" size="1920,1080" title="oZeta Skin Help" backgroundColor="#FF000000">

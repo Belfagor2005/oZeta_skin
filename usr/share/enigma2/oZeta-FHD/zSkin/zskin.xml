@@ -340,7 +340,7 @@
 	</widget>
     </screen>
     <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500-nl"/>
+        <panel name="LayerMenu1500"/>
         <panel name="bLogo"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="text" position="230,160" size="0,0" zPosition="1" transparent="1" font="Regular;32" valign="center" halign="center"/>

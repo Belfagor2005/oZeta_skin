@@ -245,6 +245,5 @@
     <!-- infochannel should be loaded after zskin.xml -->
     <include filename="zSkin/skin_infochannel.xml"/>
     <!-- don't change this: must be last -->
-    <!-- <include filename="zSkin/skin_nss.xml"/>     -->
     <include filename="zSkin/skin_templatepanelslulu.xml"/>
 </skin>

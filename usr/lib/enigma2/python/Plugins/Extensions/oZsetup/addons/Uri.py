@@ -110,13 +110,13 @@ def imagevers():
             type = content.strip()
             print('type 1    ', str(type))
             type = 'OpenPLi'
-            print('type 2    ', str(type))
+            # print('type 2    ', str(type))
             return type
         #  used confirmed
-        elif os.path.isdir('/usr/lib/enigma2/python/Plugins/PLi'):
-            type = 'OpenPLi'
-            print('type 3    ', str(type))
-            return type
+        # elif os.path.isdir('/usr/lib/enigma2/python/Plugins/PLi'):
+            # type = 'OpenPLi'
+            # print('type 3    ', str(type))
+            # return type
         elif fileExists('/etc/issue'):
             content1 = '/etc/issue'
             with open(content1, 'r') as f:
@@ -210,7 +210,6 @@ def zxOptions(answer=True):
                 popen(cmd02)
             except:
                 popen(cmd01)
-            system('rm -rf /tmp/options.tar')
             time.sleep(2)
             os.chmod("/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh", 0o0755)
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/postUpd.sh"
@@ -218,6 +217,7 @@ def zxOptions(answer=True):
             messageText = "Restart Gui Please"
             Notifications.AddPopup(messageText, MessageBox.TYPE_INFO, timeout=5)
             print('upd_zz Done!!!')
+            system('rm -rf /tmp/zsetup.tar')
             return
         except Exception as e:
             print('error download ', str(e))

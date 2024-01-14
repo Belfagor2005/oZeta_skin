@@ -820,7 +820,7 @@
         </widget>
     </screen>
     <!-- Help -->
-    <screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="HelpMenu" position="0,0" size="1920,1080" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
