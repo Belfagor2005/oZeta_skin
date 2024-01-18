@@ -207,8 +207,8 @@ class zBackdropXDownloadThread(threading.Thread):
                     url_read = requests.get(url_tvdb).text
                     backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
 
-            if backdrop and backdrop[0]:
-                if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
+            if backdrop and backdrop[0] or backdrop is not None:
+                # if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
                     url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
                     self.savebackdrop(dwn_backdrop, url_backdrop)
                     return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)

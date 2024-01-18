@@ -10,7 +10,7 @@
 # recode from lululla 2023
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
-# from Components.Sources.ServiceEvent import ServiceEvent
+from Components.Sources.ServiceEvent import ServiceEvent
 from enigma import ePixmap, loadPNG
 from Components.config import config
 import re
@@ -130,6 +130,15 @@ def unicodify(s, encoding='utf-8', norm=None):
     return s
 
 
+def str_encode(text, encoding="utf8"):
+	if not PY3:
+		if isinstance(text, unicode):
+			return text.encode(encoding)
+		else:
+			return text
+	else:
+		return text
+
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
@@ -160,37 +169,37 @@ def convtext(text=''):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
                 text = "the " + str(text)
-                print('the from last to start text: ', text)
+                # print('the from last to start text: ', text)
             text = text + 'FIN'
             # text = re.sub("[^\w\s]", "", text)  # remove .
             # text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
             # text = re.sub(' [\:][ ][a-zA-Z0-9]+.*?FIN', '', text)
             # text = re.sub(' [\(][ ][a-zA-Z0-9]+.*?FIN', '', text)
             # text = re.sub(' [\-][ ][a-zA-Z0-9]+.*?FIN', '', text)
-            print('[(00)] ', text)
+            # print('[(00)] ', text)
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            print('[(01)] ', text)
+            # print('[(01)] ', text)
 
             text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
             text = text.partition("(")[0] + 'FIN'  # .strip()
             text = re.sub("\s\d+", "", text)
-            print('1 odc my test:', text)
+            # print('1 odc my test:', text)
 
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
             # text = re.sub(r'(?:\d+\s\odc\.\d+\s)?(.+)+.*?FIN', '', text)
-            print('2 my test:', text)
+            # print('2 my test:', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
-            print('[(02)] ', text)
+            # print('[(02)] ', text)
             # text = REGEX.sub('', text)  # paused
-            print('[(03)] ', text)
+            # print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             # text = unicodify(text)
@@ -224,7 +233,7 @@ class zGenre(Renderer):
     def delay(self):
         global found
         self.pstrNm = ''
-        genreTxt = ''
+        genreTxt = None
         self.event = self.source.event
         if not self.event:
             return
@@ -241,7 +250,7 @@ class zGenre(Renderer):
                         genreTxt = json.load(f)['Genre']
                         genreTxt = genreTxt.split(",")[0]
                         print('genreTxt name: ', genreTxt)
-                if genreTxt != '':
+                if genreTxt != None:
                     try:
 
                         gData = self.event.getGenreData()
@@ -257,7 +266,33 @@ class zGenre(Renderer):
                                         8: ('Social', 'Magazines', 'Economics', 'Remarkable People'),
                                         9: ('Education', 'Nature/Animals/', 'Technology', 'Medicine', 'Expeditions', 'Social', 'Further Education', 'Languages'),
                                         10: ('Hobbies', 'Travel', 'Handicraft', 'Motoring', 'Fitness', 'Cooking', 'Shopping', 'Gardening'),
-                                        11: ('Original Language', 'Black & White', 'Unpublished', 'Live Broadcast')
+                                        11: ('Original Language', 'Black & White', 'Unpublished', 'Live Broadcast'),
+                                        12: ('Adventure'),
+                                        14: ('Fantasy'),
+                                        16: ('Animation'),
+                                        18: ('Drama'),
+                                        27: ('Horror', 'Thriller'),
+                                        28: ('Action'),
+                                        35: ('Comedy'),
+                                        36: ('History'),
+                                        37: ('Western'),
+                                        53: ('Thriller', 'Horror'),
+                                        80: ('Crime'),
+                                        99: ('Documentary'),
+                                        878: ('Science Fiction', 'Science', 'Fiction'),
+                                        9648: ('Mystery'),
+                                        10402: ('Music'),
+                                        10751: ('Family'),
+                                        10752: ('War'),
+                                        10759: ('Action & Adventure', 'Action', 'Adventure'),
+                                        10762: ('Kids'),
+                                        10763: ('News'),
+                                        10764: ('Reality'),
+                                        10765: ('Sci-Fi & Fantasy','Sci-Fi', 'Fantasy'),
+                                        10766: ('Soap'),
+                                        10767: ('Talk'),
+                                        10768: ('War & Politics '),
+                                        10770: ('TV Movie'),
                                         }.get(gData.getLevel1(), "")[gData.getLevel2()]
                     except:
                         pass

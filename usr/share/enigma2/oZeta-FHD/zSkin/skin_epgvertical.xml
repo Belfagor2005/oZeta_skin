@@ -75,32 +75,32 @@
         <widget source="global.CurrentTime" render="Label" position="1400,81" size="240,41" font="Regular;24" noWrap="1" halign="right" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="#1A0F0F0F" transparent="1">
             <convert type="ClockToText">Format:%e. %B</convert>
         </widget>
-        <ePixmap pixmap="buttons/key_red.png" position="53,953" size="45,60" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1"/>
-        <widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="53,953" size="45,60" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+        <ePixmap pixmap="oZeta-FHD/buttons/key_red.png" position="53,953" size="45,60" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1"/>
+        <widget source="key_red" render="Pixmap" pixmap="oZeta-FHD/buttons/key_red.png" position="53,953" size="45,60" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
             <convert type="ConditionalShowHide"/>
         </widget>
         <widget name="key_red" position="105,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_red,Button,Label" transparent="1"/>
         <widget source="key_red" render="Label" position="105,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_red,StaticText" transparent="1"/>
-        <ePixmap pixmap="buttons/key_green.png" position="327,953" size="45,60" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1"/>
-        <widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="327,953" size="45,60" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+        <ePixmap pixmap="oZeta-FHD/buttons/key_green.png" position="327,953" size="45,60" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1"/>
+        <widget source="key_green" render="Pixmap" pixmap="oZeta-FHD/buttons/key_green.png" position="327,953" size="45,60" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
             <convert type="ConditionalShowHide"/>
         </widget>
         <widget name="key_green" position="380,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_green,Button,Label" transparent="1"/>
         <widget source="key_green" render="Label" position="380,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_green,StaticText" transparent="1"/>
-        <ePixmap pixmap="buttons/key_yellow.png" position="602,953" size="45,60" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1"/>
-        <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="602,953" size="45,60" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+        <ePixmap pixmap="oZeta-FHD/buttons/key_yellow.png" position="602,953" size="45,60" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1"/>
+        <widget source="key_yellow" render="Pixmap" pixmap="oZeta-FHD/buttons/key_yellow.png" position="602,953" size="45,60" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
             <convert type="ConditionalShowHide"/>
         </widget>
         <widget name="key_yellow" position="654,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_yellow,Button,Label" transparent="1"/>
         <widget source="key_yellow" render="Label" position="654,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_yellow,StaticText" transparent="1"/>
-        <ePixmap pixmap="buttons/key_blue.png" position="876,953" size="45,60" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1"/>
-        <widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="876,953" size="45,60" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+        <ePixmap pixmap="oZeta-FHD/buttons/key_blue.png" position="876,953" size="45,60" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1"/>
+        <widget source="key_blue" render="Pixmap" pixmap="oZeta-FHD/buttons/key_blue.png" position="876,953" size="45,60" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
             <convert type="ConditionalShowHide"/>
         </widget>
         <widget name="key_blue" position="929,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_blue,Button,Label" transparent="1"/>
         <widget source="key_blue" render="Label" position="929,957" size="255,45" noWrap="1" zPosition="+1" valign="center" font="Regular;30" halign="left" backgroundColor="#1A0F0F0F" foregroundColor="#00FFFFFF" objectTypes="key_blue,StaticText" transparent="1"/>
-        <ePixmap position="1568,953" size="122,60" zPosition="10" pixmap="buttons/key_info.png" transparent="1" alphatest="on"/>
-        <ePixmap position="1710,953" size="122,60" zPosition="10" pixmap="buttons/key_menu.png" transparent="1" alphatest="on"/>
+        <ePixmap position="1568,953" size="122,60" zPosition="10" pixmap="oZeta-FHD/buttons/key_info.png" transparent="1" alphatest="on"/>
+        <ePixmap position="1710,953" size="122,60" zPosition="10" pixmap="oZeta-FHD/buttons/key_menu.png" transparent="1" alphatest="on"/>
     </screen>
     <screen name="EPGverticalPIG" position="0,0" size="1920,1080" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="EPGvertical"/>
@@ -189,7 +189,7 @@
         <widget name="timeline_text" position="90,423" size="1740,45" itemHeight="45" TimelineFont="Regular;29" borderColor="#336498" borderWidth="2" foregroundColor="secondFG" backgroundColor="#1A000000" TimelineAlignment="left" zPosition="1" transparent="1"/>
         <widget name="bouquetlist" position="90,423" size="1740,45" zPosition="2" itemHeight="45" font="Regular;29" borderColor="#336498" borderWidth="2" backgroundColor="background" foregroundColor="#eeeeee" backgroundColorSelected="bluette" foregroundColorSelected="#eeeeee" transparent="0"/>
         <widget name="list" position="90,474" size="1740,473" itemHeight="473" ServiceFontGraphical="Regular;30" EntryFontGraphical="Regular;29" ServiceForegroundColor="#eeeeee" ServiceForegroundColorNow="white" ServiceBackgroundColor="barColor" ServiceBackgroundColorNow="bluette" EntryForegroundColor="#eeeeee" EntryForegroundColorSelected="white" EntryBackgroundColor="background" EntryBackgroundColorSelected="bluette" EntryBackgroundColorNow="green" EntryBackgroundColorNowSelected="bluette" EntryForegroundColorNow="white" EntryForegroundColorNowSelected="white" ServiceBorderColor="#336498" ServiceBorderWidth="2" ServiceNamePadding="5" EntryBorderColor="#336498" EventBorderWidth="2" EventNamePadding="5" RecordForegroundColor="#eeeeee" RecordForegroundColorSelected="white" RecordBackgroundColor="#00d13333" RecordBackgroundColorSelected="#009e2626" ZapForegroundColor="#eeeeee" ZapBackgroundColor="#00669466" ZapForegroundColorSelected="white" ZapBackgroundColorSelected="#00436143" enableWrapAround="1" scrollbarMode="showNever" transparent="0"/>
-        <widget name="timeline_now" position="90,467" zPosition="2" size="24,483" pixmap="epg/SelectedCurrentEvent.png" alphatest="blend"/>
+        <widget name="timeline_now" position="90,467" zPosition="2" size="24,483" pixmap="oZeta-FHD/epg/SelectedCurrentEvent.png" alphatest="blend"/>
         <eLabel name="layer1" position="60,38" zPosition="-10" size="1800,975" backgroundColor="#1A0F0F0F"/>
         <widget source="global.CurrentTime" render="Label" position="1640,45" size="210,90" font="Regular;75" noWrap="1" halign="center" valign="bottom" foregroundColor="layer-a-clock-foreground" backgroundColor="#1A0F0F0F" transparent="1">
             <convert type="ClockToText">Default</convert>

@@ -798,7 +798,7 @@
         </widget>
     </screen>
     <screen name="MenuTemplate">
-        <panel name="LayerMenu1000"/>
+        <panel name="LayerMenu1000-nl"/>
         <panel name="vButtonTemplate-1000"/>
         <panel name="bLogo"/>
         <widget source="menu" render="Listbox" position="230,150" size="810,780" font="Regular;36" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
@@ -943,7 +943,7 @@
         <ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1400,910" size="80,40" zPosition="2"/>
     </screen>
     <!-- Help -->
-    <screen name="HelpMenu" position="0,0" size="1920,1080" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="HelpMenu" position="0,0" size="1280,720" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>

@@ -196,26 +196,27 @@
     <screen name="Rating">
         <!-- RATING -->
         <!-- <widget source="ServiceEvent" render="zInfoEvents" position="0,0" size="0,0" />		 -->
-        <widget source="session.Event_Now" render="zInfoEvents"/>
-        <ePixmap pixmap="menu/stargrey.png" position="310,79" size="316,27" alphatest="blend" zPosition="20" transparent="1"/>
+        <!-- <widget source="session.Event_Now" render="zInfoEvents"/> -->
+        <ePixmap pixmap="oZeta-FHD/menu/stargrey.png" position="310,79" size="316,27" alphatest="blend" zPosition="20" transparent="1"/>
         <widget source="session.Event_Now" render="zStarX" pixmap="oZeta-FHD/menu/staryellow.png" position="310,79" size="316,27" alphatest="blend" transparent="1" zPosition="22"/>
         <!-- NEXT RATING -->
-        <widget source="session.Event_Next" render="zInfoEvents"/>
-        <ePixmap pixmap="menu/stargrey.png" position="1275,79" size="316,27" alphatest="blend" zPosition="20" transparent="1"/>
+        <!-- <widget source="session.Event_Next" render="zInfoEvents"/> -->
+        <ePixmap pixmap="oZeta-FHD/menu/stargrey.png" position="1275,79" size="316,27" alphatest="blend" zPosition="20" transparent="1"/>
         <widget source="session.Event_Next" render="zStarX" pixmap="oZeta-FHD/menu/staryellow.png" position="1275,79" size="316,27" alphatest="blend" transparent="1" zPosition="22"/>
     </screen>
     <!-- ************************ -->
     <!-- **** PARENTAL PANEL  ***** -->
     <!-- ************************ -->
     <!-- ________________________ -->
+    <!--     
     <screen name="zParental">
-        <!-- zParental -->
-        <widget source="session.Event_Now" render="zInfoEvents"/>
+        <widget source="session.Event_Now" render="zParental"/>
         <widget render="zParental" source="session.Event_Now" position="315,872" alphatest="blend" size="50,50" zPosition="10" transparent="1"/>
-        <!-- NEXT PARENTAL -->
-        <widget source="session.Event_Next" render="zInfoEvents"/>
+        <widget source="session.Event_Next" render="zParental"/>
         <widget render="zParental" source="session.Event_Next" position="315,955" alphatest="blend" size="50,50" zPosition="10" transparent="1"/>
     </screen>
+    -->
+    
     <!-- ************************ -->
     <!-- *  GENRE PIC EVENTVIEW * -->
     <!-- ************************ -->
@@ -228,7 +229,7 @@
 		</widget>
 		  -->
         <!--
-		<ePixmap pixmap="oZeta-FHD/genre_pic/banner.png" position="1151,495" size="285,123" alphatest="blend" zPosition="20" />  
+		<ePixmap pixmap="genre_pic/banner.png" position="1151,495" size="285,123" alphatest="blend" zPosition="20" />  
 		 -->
         <!-- <widget source="ServiceEvent" render="zInfoEvents" position="0,0" size="0,0" />	 -->
         <widget source="session.Event_Now" render="zGenre" position="1151,495" size="285,123" zPosition="22" alphatest="blend"/>

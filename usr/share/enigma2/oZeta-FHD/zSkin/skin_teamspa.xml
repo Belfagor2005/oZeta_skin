@@ -33,51 +33,51 @@
     <!--Main Menu Icons -->
     <screen name="menu_mainmenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_vmc.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_vmc.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">vmc_init_startvmc</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_information_about.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_information_about.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Infopanel</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_openstore.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_openstore.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">OpenStore</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timer_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_scart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_scart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">scart_switch</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">info_screen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_pluginmanager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginmanager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">plugin_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/portal.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/portal.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Stalker Plugin</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_netflix.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_netflix.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Netflix Plugin</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">standby_restart_list</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -85,71 +85,71 @@
             <convert type="MenuEntryCompare">pvmc_mainmenu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_dmc_mainmenu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_dmc_mainmenu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">dmc_mainmenu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/emc.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/emc.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">emc</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/google.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/google.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">googlemaps</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/media.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/media.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">media_player</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/dvd.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/dvd.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">dvd_player</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/dvd.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/dvd.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">play_cd</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/sub.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/sub.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">subtitle_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/filecom.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/filecom.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">filecommand</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">multi_quick</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/plex.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/plex.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">dreamplex</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/music.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/music.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">merlin_music_player</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">moviebrowser</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_kodi.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_kodi.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">run_kodi</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_kodi.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_kodi.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">start_kodi</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/webradioFS.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/webradioFS.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">webradioFS</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/youtube.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/youtube.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">youtubetv</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/pplayer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/pplayer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">iptv_main</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -157,23 +157,23 @@
     <!-- InfoMenu OK -->
     <screen name="menu_timermenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autotimer_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">crontimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">powertimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remotetimer</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -181,19 +181,19 @@
     <!-- VideoMenu OK -->
     <screen name="menu_video_menu" position="0,0" size="1920,1080" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">videoenhancement_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_finetune</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_clipping</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -206,159 +206,159 @@
     </screen>
     <screen name="menu_information" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_information_supportchannel.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_information_supportchannel.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">supportchannel_YTChannel</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_information_about.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_information_about.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">about_screen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_information_device.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_information_device.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">device_screen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">service_info_screen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">streaming_clients_info_screen</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/weather.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/weather.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Weather_MSN</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_setup" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_audio.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_audio.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">audio_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_recording_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_recording_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">rec_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">system_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_epg_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_epg_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">epg_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_tuner.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_tuner.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">service_searching_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">cam_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_software_manager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_software_manager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_manager</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_vmc_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_vmc_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">vmc_init_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_extended_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_extended_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">extended_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/alexa.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/alexa.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">startsetup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_parental.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_parental.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">parental_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">factory_reset</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_flash_online.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_flash_online.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">flash_image</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_update.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_software_update.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_update</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_restore.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_software_restore.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_restore</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/oZsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/oZsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">oZsetup_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_backup_image.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_backup_image.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">backup_image_dbackup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_audio_menu" position="0,0" size="1920,1080" title="Audio menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_audio.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_audio.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">audio_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_AutomaticVolumeAdjustment.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_AutomaticVolumeAdjustment.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Volume_Adjust</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_subtitle_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_subtitle_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">subtitle_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_autolanguage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_autolanguage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autolanguage_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_AutomaticVolumeAdjustment.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_AutomaticVolumeAdjustment.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">AutomaticVolumeAdjustment</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_rec" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_timshift_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_timshift_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timshift_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_recording_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_recording_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">recording_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_hdmirecord_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_hdmirecord_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">hdmirecord_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_cam" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/softcam.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/softcam.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">softcam_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">ci_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_ci.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">ci_assign</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_parental.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_parental.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">parental_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -366,320 +366,320 @@
     <screen name="menu_system" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
         <panel name="Logo"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_osd_menu_user_interface.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_osd_menu_user_interface.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">user_interface</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_remote_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_remote_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remote_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">pip_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_channelselection_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_channelselection_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">channelselection_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">usage_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_specialfeatures_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_specialfeatures_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">specialfeatures_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_osd_menu_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_osd_menu_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">skin_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_display_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_display_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">display_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_osd_menu_buttonsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_osd_menu_buttonsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">buttonsetup_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">RCU Select</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_osd_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_osd_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">osd_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_display_LED_Giga.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_display_LED_Giga.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">LED_Giga</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_numzapext_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_numzapext_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">numzapext_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_VFD_INI.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_VFD_INI.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">vfd_ew</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_language_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_language_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">language_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_dvdplayer_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_dvdplayer_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">dvdplayer_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_av_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_av_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">av_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_autores_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_autores_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autores_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_pluginhider.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">pluginhider_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">vps</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/remotecontrol.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remotecontrolcode</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/led.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/led.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">ledManager</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">tempfancontrol</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">fansetup_config</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_time_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_time_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">permanent_clock</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/bluetooth.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/bluetooth.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">bluetooth_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/pplayer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/pplayer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">serviceapp_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">iptv_config</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_extended" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_hardisk_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_hardisk_selection.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">hardisk_selection</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_network_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_network_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">network_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_hdmicec.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_hdmicec.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">hdmicec</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_time_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_time_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">time_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_logs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_logs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">logs_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">fansetup_config</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_setup_reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_setup_reset.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">factory_reset</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/fan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">tempfancontrol</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_rfmod_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_rfmod_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">rfmod_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_remotecode.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_remotecode.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remotecode</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_display" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_display_display_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_display_display_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">display_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_display_lcd_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_display_lcd_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">lcd_skin_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_display_lcd_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_display_lcd_skin_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">lcd4linux</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_VFD_INI.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_system_VFD_INI.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">VFD_INI</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_osd_menu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_osd_menu_osdsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_osd_menu_osdsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">osdsetup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_input_device_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_input_device_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">input_device_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_extended_keyboard.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_extended_keyboard.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">keyboard</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_osd_menu_osd3dsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_osd_menu_osd3dsetup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">osd3dsetup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">animation_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_harddisk" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_harddisk_harddisk_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_harddisk_harddisk_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">harddisk_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_harddisk_harddisk_init.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_harddisk_harddisk_init.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">harddisk_init</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_harddisk_harddisk_check.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_harddisk_harddisk_check.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">harddisk_check</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_harddisk_harddisk_convert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_harddisk_harddisk_convert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">harddisk_convert</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_epg" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_refresh.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_refresh.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">epgrefresh</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epgloadsave_menu_loadepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epgloadsave_menu_loadepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">epgimporter</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_epg_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_epg_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">epg_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_epgloadsave_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_epgloadsave_menu.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">epgloadsave_menu</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epgmulti.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epgmulti.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epgmulti</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epgenhanced.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epgenhanced.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epgenhanced</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epginfobar.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epginfobar.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epginfobar</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epginfobargraphical.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epginfobargraphical.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epginfobargraphical</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epggraphical.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epggraphical.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epggraphical</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epg_setup_epgmulti.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epg_setup_epgmulti.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">setup_epgvertical</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_epgloadsave_menu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epgloadsave_menu_saveepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epgloadsave_menu_saveepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">saveepgcache</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epgloadsave_menu_loadepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epgloadsave_menu_loadepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">loadepgcache</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_epgloadsave_menu_deleteepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_epgloadsave_menu_deleteepgcache.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">deleteepgcache</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_network" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_device_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_device_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">device_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netmounts_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netmounts_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netmounts_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netafp_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netafp_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netafp_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_passwd_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_passwd_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">password_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netftp_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netftp_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netftp_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_Inadyn_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_Inadyn_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Inadyn_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_minidlna_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_minidlna_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">minidlna_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netnfs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netnfs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netnfs_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_webif.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_webif.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">openwebif</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netvpn_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netvpn_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netvpn_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -687,90 +687,90 @@
             <convert type="MenuEntryCompare">netsabnzbd_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_satip.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_satip.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netsatpi_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netsmba_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netsmba_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netsmba_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_nettelnet_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_nettelnet_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">nettelnet_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netushare_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netushare_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netushare_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_network_netnfs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_network_netnfs_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">netrts_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
     <screen name="menu_scan" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_tuner_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_tuner_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">tuner_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_auto_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_auto_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">auto_scan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_manual_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_manual_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">manual_scan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_satfinder.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_satfinder.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">satfinder</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_positioner_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_positioner_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">positioner_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_autobouquetsmakermaker.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_autobouquetsmakermaker.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autobouquetsmakermaker</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_blindscan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_blindscan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">blindscan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_satip.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_satip.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">sat_ip_client</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">satellite_equipment_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">streamconvert</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_fast_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_fast_scan.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">fastscan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_mainmenu_pluginmanager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginmanager.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">sundtek_control_enter</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/search.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/search.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_scan_streamconvert.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">ipbox_client_Start</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/iptvimport.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/iptvimport.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">startimport</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -778,43 +778,43 @@
     <screen name="menu_shutdown" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
         <ePixmap position="220,10" size="160,105" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="1"/>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/power_off.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/power_off.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">deep_standby</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/restart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/restart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">restart</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/reboot.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/reboot.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">restart_enigma</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/restart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/restart.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">Hardreset</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/power.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/power.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">standby</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/power_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/power_timer.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">sleep</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">powertimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">maintenance_mode</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_multiboot.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/menu_multiboot.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">multiboot</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="oZeta-FHD/iconsmenu/usage_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">restart_enigma_debug</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -825,7 +825,7 @@
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
         <eLabel position="230,205" size="1000,3" backgroundColor="#202020" zPosition="10"/>
-        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
+        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" />
         <widget name="rc" pixmaps="rc.png,rcold.png" position="1300,150" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
         <widget alphatest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
@@ -970,8 +970,8 @@
     </screen>
     <!-- VirtualKeyboard OpenSpa 069/01 -->
     <screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-        <ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="openspa/teclado-fs8.png" zPosition="-10" alphatest="off"/>
-        <widget name="imagenfondo2" position="0,531" size="865,193" pixmap="openspa/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
+        <ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="oZeta-FHD/openspa/teclado-fs8.png" zPosition="-10" alphatest="off"/>
+        <widget name="imagenfondo2" position="0,531" size="865,193" pixmap="oZeta-FHD/openspa/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
         <widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="#00d3d3d3" backgroundColor="black" noWrap="1"/>
         <widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
         <widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
@@ -1039,16 +1039,16 @@
         <widget name="key_teclado7" position="21,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
         <widget name="key_teclado8" position="300,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
         <widget name="key_teclado9" position="577,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
-        <widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="openspa/seleccion-fs8.png"/>
+        <widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="oZeta-FHD/openspa/seleccion-fs8.png"/>
         <widget name="key_record" position="850,480" size="97,27" transparent="1" text="Hist." font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="key_delete" position="933,469" size="97,27" transparent="1" text="Delete" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="key_clear" position="1018,469" size="97,27" transparent="1" text="Clear" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="cajalista" position="859,219" size="570,505" transparent="0" backgroundColor="#1c000000" zPosition="39" font="Regular;26"/>
-        <widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionPixmap="openspa/sep3.png" itemHeight="30" font="Regular;26"/>
-        <widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionPixmap="openspa/sep3.png" itemHeight="30"/>
+        <widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionpixmap="oZeta-FHD/openspa/sep3.png" itemHeight="30" font="Regular;26"/>
+        <widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionpixmap="oZeta-FHD/openspa/sep3.png" itemHeight="30"/>
         <widget name="text_info" position="10,60" size="1099,457" transparent="0" foregroundColor="white" backgroundColor="black" font="Regular; 33" zPosition="50"/>
         <eLabel name="ayu" position="0,531" size="1128,45" backgroundColor="#40000000" zPosition="-9"/>
-        <ePixmap pixmap="buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
         <widget name="in_menu" position="67,534" size="277,37" font="Regular; 16" valign="center" halign="left" transparent="1" foregroundColor="white" backgroundColor="black" zPosition="-8"/>
         <widget name="in_green" position="265,534" size="855,37" font="Regular; 16" valign="center" halign="right" transparent="1" foregroundColor="grey" text="Ayuda" backgroundColor="black" zPosition="-8" noWrap="1"/>
         <widget name="barrapix_arr" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>

@@ -24,8 +24,8 @@
         <ePixmap position="230,150" size="320,440" pixmap="oZeta-FHD/menu/panels/nocover.png" zPosition="1"/>
         <widget name="poster" position="240,160" size="300,420" alphatest="blend" scale="1" zPosition="2"/>
         <widget name="titellabel" position="580,140" size="1100,50" font="Regular;38" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
-        <widget name="starsbg" position="580,210" size="316,27" pixmap="menu/stargrey.png" alphatest="blend" zPosition="2"/>
-        <widget name="stars" position="580,210" size="316,27" pixmap="menu/staryellow.png" transparent="1" zPosition="3"/>
+        <widget name="starsbg" position="580,210" size="316,27" pixmap="oZeta-FHD/menu/stargrey.png" alphatest="blend" zPosition="2"/>
+        <widget name="stars" position="580,210" size="316,27" pixmap="oZeta-FHD/menu/staryellow.png" transparent="1" zPosition="3"/>
         <widget name="ratinglabel" position="930,205" size="600,50" font="Regular;30" halign="left" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
         <!-- widget name="voteslabel"  position="870,205" size="300,50" font="Regular;30" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" /-->
         <eLabel position="580,250" size="1100,3" backgroundColor="#303030" zPosition="10"/>
@@ -536,14 +536,14 @@
         <panel name="ButtonTemplate"/>
         <widget name="config" position="230,150" size="1250,600" backgroundColor="#000000" foregroundColor="#FFFFFF" backgroundColorSelected="BLUETTE" foregroundColorSelected="#FFFFFF" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" transparent="1"/>
         <widget name="HelpWindow" position="230,670" size="486,102" zPosition="1" transparent="1" alphatest="blend"/>
-        <!-- ePixmap position="890,175" size="256,256" zPosition="2" pixmap="icons/menu_network_minidlna_setup.png" transparent="1" alphatest="blend" /-->
+        <!-- ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oZeta-FHD/icons/menu_network_minidlna_setup.png" transparent="1" alphatest="blend" /-->
     </screen>
     <!-- [010] uShare 011/02 -->
     <screen name="uShareSelection" title="uShare Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
         <widget name="checkList" position="230,150" size="1250,800" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="bluette" foregroundColorSelected="#ffffff" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" transparent="1"/>
-        <!-- ePixmap position="890,175" size="256,256" zPosition="2" pixmap="icons/menu_network_netnfs_setup.png" transparent="1" alphatest="blend" /-->
+        <!-- ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oZeta-FHD/icons/menu_network_netnfs_setup.png" transparent="1" alphatest="blend" /-->
     </screen>
     <!-- [012] EPG Import Configuration 012/01 -->
     <screen name="EPGImportConfig" position="0,0" size="1920,1080" title="EPG Import" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -553,8 +553,8 @@
         <widget name="config" position="230,150" size="1250,600" scrollbarMode="showOnDemand" scrollbarWidth="10" itemHeight="40" font="Regular;30" transparent="1" zPosition="5" foregroundColor="#a0a0a0" foregroundColorSelected="#ffffff" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
         <widget name="statusbar" position="230,760" size="1250,40" font="Regular;30" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <widget name="status" position="230,820" size="1110,90" font="Regular;30" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,905" size="80,40" alphatest="on" zPosition="10"/>
-        <ePixmap pixmap="buttons/80/key_info.png" position="1300,905" size="80,40" alphatest="on" zPosition="10"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1400,905" size="80,40" alphatest="on" zPosition="10"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1300,905" size="80,40" alphatest="on" zPosition="10"/>
     </screen>
     <!-- 012] EPG Import Log 012/02 -->
     <screen name="EPGImportLog" position="0,0" size="1920,1080" title="EPG Log" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -598,7 +598,7 @@
         <panel name="LayerMenu1000-nl"/>
         <panel name="ButtonTemplate"/>
         <widget name="list" position="230,150" size="810,800" itemHeight="40" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#303030" scrollbarSliderBorderColor="#202020" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
-        <ePixmap position="890,175" size="256,256" zPosition="2" pixmap="icons/menu_epgloadsave_menu_loadepgcache.png" transparent="1" alphatest="blend"/>
+        <ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oZeta-FHD/icons/menu_epgloadsave_menu_loadepgcache.png" transparent="1" alphatest="blend"/>
     </screen>
     <!-- [013] Plugin ChangePassword 013/01 -->
     <screen name="ChangePasswdScreen" position="0,0" size="1920,1080" title="Set Password" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -904,9 +904,9 @@
         <widget name="SeekState" position="530,920" size="150,37" font="Regular;30" halign="right" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <widget name="Timeline" position="690,924" size="1195,30" backgroundColor="#505555" pointer="position_arrow.png:4,11" foregroundColor="black"/>
         <eLabel position="0,970" size="1920,3" backgroundColor="#303030" zPosition="1"/>
-        <ePixmap pixmap="buttons/key_0.png" position="40,900" size="53,38" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/key_0.png" position="40,900" size="53,38" alphatest="blend"/>
         <eLabel text="Mark" position="110,900" size="250,40" foregroundColor="yellow" backgroundColor="#000000" font="Regular;32" halign="left" transparent="1" zPosition="1"/>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1800,1020" size="80,40" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1800,1020" size="80,40" alphatest="blend"/>
         <ePixmap position="40,980" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" scale="1" zPosition="1"/>
     </screen>
     <!-- [016] Plugin TMDB 016/01 -->
@@ -1068,7 +1068,7 @@
         <widget source="VKeyIcon" render="Pixmap" position="230,650" size="80,40" conditional="VKeyIcon" pixmap="oZeta-FHD/skin_default/buttons/80/key_text.png" alphatest="blend" transparent="1" zPosition="1">
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="230,650" size="1,1" transparent="1" zPosition="10" alphatest="on"/>
+        <widget name="HelpWindow" pixmap="oZeta-FHD/buttons/vkey_icon.png" position="230,650" size="1,1" transparent="1" zPosition="10" alphatest="on"/>
     </screen>
     <!-- [024] AutoBouquetsMaker 024/02 -->
     <screen name="AutoBouquetsMaker_ProvidersSetup" position="center,center" size="1920,1080" title="AutoBouquetsMaker Provider Setup" backgroundColor="ff000000" flags="wfNoBorder">
@@ -1076,7 +1076,7 @@
         <widget source="VKeyIcon" render="Pixmap" position="230,650" size="80,40" conditional="VKeyIcon" pixmap="oZeta-FHD/skin_default/buttons/80/key_text.png" alphatest="blend" transparent="1" zPosition="1">
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="230,650" size="1,1" transparent="1" zPosition="10" alphatest="on"/>
+        <widget name="HelpWindow" pixmap="oZeta-FHD/buttons/vkey_icon.png" position="230,650" size="1,1" transparent="1" zPosition="10" alphatest="on"/>
     </screen>
     <!-- [024] AutoBouquetsMaker 024/03 -->
     <screen name="AutoBouquetsMaker_Menu" position="center,center" size="1920,1080" title="AutoBouquetsMaker Menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -1324,8 +1324,8 @@
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
         <widget name="filelist" position="230,150" scrollbarMode="showOnDemand" size="1250,750" font="Regular;30" itemHeight="50" zPosition="4" backgroundColor="#000000" transparent="1" scrollbarWidth="10" backgroundColorSelected="barColor"/>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,985" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
-        <ePixmap pixmap="buttons/80/key_info.png" position="1400,1030" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1400,985" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1400,1030" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
     </screen>
     <!-- [035] Dream Explorer 035/02 -->
     <screen name="CPmaniger" position="0,0" size="1920,1080" title="Copy/Movie" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -1425,7 +1425,7 @@
         <ePixmap position="530,1008" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2"/>
         <widget name="save" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
         <ePixmap position="730,1008" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
-        <ePixmap position="930,1008" pixmap="buttons/bluepanel.png" size="30,30" alphatest="blend" zPosition="2"/>
+        <ePixmap position="930,1008" pixmap="oZeta-FHD/buttons/bluepanel.png" size="30,30" alphatest="blend" zPosition="2"/>
         <widget name="deleteall" position="680,955" size="1170,975" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1"/>
         <ePixmap position="730,1008" size="80,40" pixmap="oZeta-FHD/buttons/key_menu.png" alphatest="on" zPosition="5"/>
     </screen>
@@ -2920,7 +2920,7 @@
     <!-- [062] OpenZeta Setup 062/01 -->
     <screen name="oZsetup" position="0,0" size="1920,1080" title="ozeta Skin Setup" backgroundColor="#FF000000">
         <ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/menu/Logo/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1"/>
-        <panel name="LayerMenu1700"/>
+        <panel name="LayerMenu1700-nl"/>
         <panel name="vButtonTemplate-1500"/>
         <widget name="config" position="230,140" size="1015,800" font="Regular;32" scrollbarMode="showOnDemand" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="#202020" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" zPosition="2"/>
         <widget name="Preview" position="1260,150" size="420,236" scale="1" zPosition="1"/>
@@ -2935,7 +2935,7 @@
         <ePixmap position="1500,1030" pixmap="buttons/80/key_info.png" size="80,40" alphatest="blend" zPosition="2"/>
         <!-- <widget name="HelpMenu" position="1066,974" size="486,102" zPosition="5" transparent="1" alphatest="blend"/> -->
         <widget name="VKeyIcon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/key_text.png" position="1322,1031" size="38,38" alphatest="blend" transparent="1" zPosition="2"/>
-        <widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="buttons/key_text.png" position="230,600" zPosition="1" size="64,43" transparent="1" alphatest="blend">
+        <widget source="VKeyIcon" render="Pixmap" conditional="VKeyIcon" pixmap="oZeta-FHD/buttons/key_text.png" position="230,600" zPosition="1" size="64,43" transparent="1" alphatest="blend">
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
@@ -3938,5 +3938,72 @@
     <!-- [083] FileCommander 083/11 -->
     <screen name="RarMenuScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="ArchiverMenuScreen"/>
+    </screen>
+    <!-- [084] TheWeather 084/01 -->
+    <screen name="localcityscreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Weather Plugin">
+        <panel name="LayerMenu1000"/>
+        <panel name="vButtonTemplate-1000"/>
+        <widget name="favor"   position="230,140" size="806,60" valign="center" halign="center" zPosition="1" font="Regular;30" foregroundColor="yellow" backgroundColor="#303030" transparent="0" />
+        <eLabel position="230,205" size="805,3" backgroundColor="#303030" zPosition="1"/>
+        <widget name="plaatsn" position="806,1135" size="375,70" valign="center" halign="left" zPosition="1" font="Regular;28" backgroundColor="#000000" transparent="1" />
+        <widget name="list" position="230,220" size="806,700" itemHeight="70" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
+    </screen>
+    <!-- [084] TheWeather 084/02 -->
+    <screen name="infoscreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Weather Plugin">
+        <panel name="LayerMenu1000"/>
+        <panel name="vButtonTemplate-1000"/>
+        <widget name="helpinfo" position="230,140"  size="806,600" halign="left" zPosition="1" font="Regular;30" backgroundColor="#000000" transparent="1" />
+        <widget name="version"  position="670,1040" size="400,42"  halign="left" zPosition="1" font="Regular;28" backgroundColor="#000000" foregroundColor="yellow" transparent="1" />
+    </screen>
+    <!-- [085] TheWeather 085/01 -->
+    <screen name="CrashLogScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="View or Remove Crashlog files">
+        <panel name="LayerMenu1000"/>
+        <panel name="vButtonTemplate-1000"/>
+        <ePixmap pixmap="buttons/button_red.png" position="230,980" size="30,30" zPosition="1" alphatest="blend"/>
+        <widget  source="Redkey" render="Label" position="270,980" size="300,30" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
+        <ePixmap pixmap="buttons/button_green.png" position="230,1035" size="30,30" zPosition="1" alphatest="blend"/>
+        <widget  source="Greenkey" render="Label"  position="270,1035" size="300,30" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
+        <ePixmap pixmap="buttons/button_yellow.png" position="1010,980" size="30,30" zPosition="1" alphatest="blend"/>
+        <widget  source="Yellowkey" render="Label"  position="690,980" size="300,30" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
+        <ePixmap pixmap="buttons/button_blue.png" position="1010,1035" size="30,30" zPosition="1" alphatest="blend"/>
+        <widget  source="Bluekey" render="Label" position="690,1035" size="300,30" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
+        <widget source="menu" render="Listbox" position="230,140" size="810,770" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97">
+            <convert type="TemplatedMultiContent">
+                {"template": [
+                        MultiContentEntryText(pos = (70, 2), size = (780, 30), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+                        MultiContentEntryText(pos = (80, 32), size = (770, 30), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+                        MultiContentEntryPixmapAlphaTest(pos = (5, 10), size = (50, 50), png = 2), # index 4 is the pixmap
+                    ],
+                    "fonts": [gFont("Regular", 28),gFont("Regular", 26)],
+                    "itemHeight": 70
+                }
+            </convert>
+        </widget>
+    </screen>
+    <!-- [086] NGSettings VHannibal Settings 086/01 -->
+    <screen name="NGsettingE2" position="0,0" size="1920,1080" title="VHannibal" backgroundColor="#FF000000" flags="wfNoBorder" >
+	<ePixmap position="0,0" size="1920,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/back.png" zPosition="-2" />
+	<ePixmap position="230,40" size="105,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/logo.png" zPosition="2" alphatest="blend" />	
+	<widget source="Title" render="Label" position="350,20" size="1100,100" font="Regular;76" halign="left" valign="center" foregroundColor="#808060" backgroundColor="#000000" transparent="1" zPosition="5" />	
+	<ePixmap position="220,130" size="1030,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/sep.png" blend="blend" zPosition="5" />
+	<widget source="global.CurrentTime" render="Label" position="885,35" size="360,80" font="Regular;32" halign="right" valign="center" foregroundColor="#606060" backgroundColor="#20000000" transparent="1" zPosition="2" >
+		<convert type="ClockToText">Format %A %d %B %H:%M:%S</convert>
+	</widget>				
+	<widget name="A" position="220,150" size="330,400" foregroundColor="#ffffff" foregroundColorSelected="#ffffff" backgroundColor="#303030" backgroundColorSelected="barColor" font="Regular;28"
+		scrollbarMode="showNever" enableWrapAround="1"  transparent="1" zPosition="5" />
+	<widget name="B"  position="570,150" size="680,630" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="5" font="Regular;28"
+			foregroundColor="#5dafff" foregroundColorSelected="#ffffff" backgroundColor="#303030" backgroundColorSelected="barColor" />
+	<widget position="220,800" size="300,40" name="Key_Green" font="Regular;30" halign="left" foregroundColor="#ffffff" backgroundColor="#101010" zPosition="1" transparent="1" />
+	<widget position="500,800" size="500,40" name="namesat"   font="Regular;30" foregroundColor="#bab329" backgroundColor="#101010" transparent="1" zPosition="3" />
+	<widget position="220,850" size="610,40" name="dataDow" font="Regular;28" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="3" />	
+        <ePixmap position="220,910" size="1030,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/sep.png" blend="blend" zPosition="5" />	
+	<ePixmap position="220,945" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/redpanel.png"  size="35,35" alphatest="blend" zPosition="2" />
+	<widget name="Green" position="65,961"  pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/greenpanel.png"  size="35,35" alphatest="blend" zPosition="2" />
+	<widget name="Key_Lcn"    position="115,943"  size="300,70" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
+	<widget name="Yellow" position="1220,945" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/yellowpanel.png" size="35,35" alphatest="blend" zPosition="2" />
+	<widget name="Key_Personal" position="900,940"  size="300,40" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
+	<widget name="Blue" position="1220,995" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/bluepanel.png"   size="35,35" alphatest="blend" zPosition="2" />
+	<widget name="autotimer"     position="900,978" size="300,70" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
+	<widget  name="Key_Red" position="275,930" size="300,70" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
     </screen>
 </skin>

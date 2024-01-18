@@ -22,9 +22,8 @@ print('patch fsk', pratePath)
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
+    from builtins import str
     unicode = str
-    unichr = chr
-    long = int
 else:
     pass
 

@@ -86,10 +86,10 @@
 					}
 			</convert>
         </widget>
-        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="icons/aoff.png" alphatest="on"/>
-        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ared.png" alphatest="on"/>
-        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ayellow.png" alphatest="on"/>
-        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="icons/agreen.png" alphatest="on"/>
+        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/aoff.png" alphatest="on"/>
+        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ared.png" alphatest="on"/>
+        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ayellow.png" alphatest="on"/>
+        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/agreen.png" alphatest="on"/>
         <widget name="feedstatusOFF" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusRED" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
@@ -129,7 +129,7 @@
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
         <eLabel position="230,205" size="1000,3" backgroundColor="#202020" zPosition="10"/>
-        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
+        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" />
         <widget name="rc" pixmaps="rc.png,rcold.png" position="1300,150" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
         <widget alphatest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>

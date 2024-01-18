@@ -399,10 +399,11 @@
         <eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1"/>
         <eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1"/>
         <widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>
-        <ePixmap pixmap="buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
-        <ePixmap pixmap="buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
+    
     </screen>
     <!-- *************************************** -->
     <!--   ATVPANELS * ATVPANELS * ATVPANELS *   -->
@@ -541,14 +542,14 @@
         <panel name="LayerMenu1700"/>
         <panel name="information_common2"/>
         <panel name="vButtonTemplate-1500"/>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
     </screen>
     <screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
         <panel name="vButtonTemplate-1500"/>
         <panel name="information_common"/>
-        <ePixmap pixmap="buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
-        <ePixmap pixmap="iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
     </screen>
     <screen name="information_common">
         <widget name="information" position="230,150" size="1450,780" colPosition="450" conditional="information" divideChar="|" font="Regular;28" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
@@ -560,7 +561,7 @@
     </screen>
     <!-- Animazioni -->
     <screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
+        <ePixmap position="0,830" size="1920,350" pixmap="oZeta-FHD/menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
         <widget source="label1" render="Label" position="20,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label2" render="Label" position="399,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label3" render="Label" position="782,900" size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1"/>
@@ -569,7 +570,7 @@
     </screen>
     <!-- Icone Menu -->
     <screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
+        <ePixmap position="0,830" size="1920,350" pixmap="oZeta-FHD/menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
         <widget source="label1" render="Label" position="25,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label1s" render="Label" position="25,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
         <widget name="pixmap1" position="25,900" size="250,130" zPosition="1" transparent="1" alphatest="on"/>
@@ -611,10 +612,10 @@
 					}
 			</convert>
         </widget>
-        <widget name="traffic_off" position="1402,135" size="90,90" zPosition="1" pixmap="icons/aoff.png" scale="1" alphatest="on"/>
-        <widget name="traffic_red" position="1402,135" size="90,90" zPosition="1" pixmap="icons/ared.png" scale="1" alphatest="on"/>
-        <widget name="traffic_yellow" position="1402,135" size="90,90" zPosition="1" pixmap="icons/ayellow.png" scale="1" alphatest="on"/>
-        <widget name="traffic_green" position="1402,135" size="90,90" zPosition="1" pixmap="icons/agreen.png" scale="1" alphatest="on"/>
+        <widget name="traffic_off" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/aoff.png" scale="1" alphatest="on"/>
+        <widget name="traffic_red" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/ared.png" scale="1" alphatest="on"/>
+        <widget name="traffic_yellow" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/ayellow.png" scale="1" alphatest="on"/>
+        <widget name="traffic_green" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/agreen.png" scale="1" alphatest="on"/>
         <widget name="feedstatus_off" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
         <widget name="feedstatus_red" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
         <widget name="feedstatus_yellow" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
@@ -639,10 +640,10 @@
 					}
 			</convert>
         </widget>
-        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="icons/aoff.png" alphatest="on"/>
-        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ared.png" alphatest="on"/>
-        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ayellow.png" alphatest="on"/>
-        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="icons/agreen.png" alphatest="on"/>
+        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/aoff.png" alphatest="on"/>
+        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ared.png" alphatest="on"/>
+        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ayellow.png" alphatest="on"/>
+        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/agreen.png" alphatest="on"/>
         <widget name="feedstatusOFF" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusRED" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>

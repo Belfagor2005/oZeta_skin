@@ -23,6 +23,18 @@
         <panel name="PartSecondInfoSimple"/>
         <panel name="PartInfoCrypt"/>
     </screen>
+    <!-- *** oZeta - XML Version 2.27 Channel Selection Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : TempChannelSelectionSmall + PartChannelSelectionNext -->
+    <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection Default" backgroundColor="#FF000000" flags="wfNoBorder">
+        <panel name="TempChannelSelectionSmall"/>
+        <panel name="PartChannelSelectionNext"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->
+    <!-- Author mmark : Modules : Volume Text Default -->
+    <screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
+        <ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" alphatest="blend" zPosition="2" transparent="1"/>
+        <widget source="global.CurrentTime" render="zVolumeText" position="120,0" size="120,110" font="LCD;90" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="4"/>
+    </screen>
     <!-- *** oZeta - XML Version 2.27 Radio Blue By zSetup v2.0.0 *** -->
     <!-- Author mmark : Modules : TempChannelSelectionRadio + PartChannelSelectionRadioInfo + PartRadioInfoBar -->
     <screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" zPosition="-10" flags="wfNoBorder" backgroundColor="transparent">
@@ -32,18 +44,6 @@
     <screen name="RadioInfoBar" position="1020,890" size="850,150" title="Radio" zPosition="1" flags="wfNoBorder">
         <panel name="PartRadioInfoBar"/>
     </screen>
-    <!-- *** oZeta - XML Version 2.27 Channel Selection Default By zSetup v2.0.0 *** -->
-    <!-- Author mmark : Modules : TempChannelSelectionSmall + PartChannelSelectionNext -->
-    <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection Default" backgroundColor="#FF000000" flags="wfNoBorder">
-        <panel name="PartChannelSelectionNext"/>
-        <panel name="TempChannelSelectionSmall"/>
-    </screen>
-    <!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->
-    <!-- Author mmark : Modules : Volume Text Default -->
-    <screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
-        <ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" alphatest="blend" zPosition="2" transparent="1"/>
-        <widget source="global.CurrentTime" render="zVolumeText" position="120,0" size="120,110" font="LCD;90" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="4"/>
-    </screen>
     <!-- *** oZETA 2.0 - XML Version 2.27 MediaPlayer Technics By oZetaSetup v2.0.0 ***  -->
     <!-- Author mmark Modules : TechnicsMediaPlayer -->
     <screen name="MediaPlayer" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
@@ -51,57 +51,68 @@
     </screen>
     <!-- *** oZeta - XML Version 2.27 EventView Default By zSetup v2.0.0 *** -->
     <!-- Author mmark : Modules : EventView -->
-    <screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
-        <!-- <panel name="EventView"/> -->
-        <panel name="bLogo"/>
-        <eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-        <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
-        <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
-        <eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-        <!-- PICON Pli/ATV -->
-        <widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
-        <widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
-            <convert type="ServiceName">Reference</convert>
+    <!-- mod mmark 30-12-23 -->
+    <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+                                     
+        <panel name="vButtonTemplate-1500"/>
+        <panel name="Logo"/>
+        <ePixmap position="230,10" size="110,110" pixmap="iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+        <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+        <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
+        <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
+        <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
+        <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" 
+        	listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+            <convert type="TemplatedMultiContent">
+                        {
+                        "template": [
+                        MultiContentEntryText(pos = (5, 0), size = (220, 60), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, backcolor = 0x505050),
+                        MultiContentEntryText(pos = (5, 85), size = (220, 30), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+                        MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
+                        ],
+                        "fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+                        "itemWidth" : 230,
+                        "itemHeight" : 120
+                        }
+            </convert>
         </widget>
-        <!-- Event Now -->
-        <widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
-            <convert type="EventName">Name</convert>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
+    </screen>
+    <!-- *** oZeta - XML Version 2.27 Channel Selection Cover By zSetup v2.0.0 *** -->
+    <!-- Author lululla : Modules : PluginBrowserGrid Default -->
+    <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="vButtonTemplate-1500"/>
+        <panel name="Logo"/>
+        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+        <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+        <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+        <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
+        <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
+        <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
+        <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+        <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+            <convert type="TemplatedMultiContent">
+                        {
+                        "template": [
+                        MultiContentEntryText(pos = (5, 0), size = (220, 60), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, backcolor = 0x505050),
+                        MultiContentEntryText(pos = (5, 85), size = (220, 30), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+                        MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
+                        ],
+                        "fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+                        "itemWidth" : 230,
+                        "itemHeight" : 120
+                        }
+            </convert>
         </widget>
-        <widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <widget name="duration" position="1030,200" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <widget source="session.Event_Now" render="Label" position="1180,200" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
-            <convert type="EventTime">Remaining</convert>
-            <convert type="RemainingToText">InMinutes</convert>
-        </widget>
-        <widget source="session.Event_Now" render="Progress" position="660,260" size="820,7" foregroundColor="bluette" backgroundColor="#303030" zPosition="5">
-            <convert type="EventTime">Progress</convert>
-        </widget>
-        <!-- Event Next-->
-        <eLabel text="Next Event :" position="660,290" size="250,50" font="Regular;32" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2"/>
-        <widget source="session.Event_Next" render="Label" position="900,290" size="250,50" font="Regular;32" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
-            <convert type="EventTime">StartTime</convert>
-            <convert type="ClockToText">Default</convert>
-        </widget>
-        <widget source="session.Event_Next" render="Label" position="1180,280" size="300,50" halign="right" font="Regular;36" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="2">
-            <convert type="EventTime">Duration</convert>
-            <convert type="ClockToText">InMinutes</convert>
-        </widget>
-        <widget source="session.Event_Next" render="Label" position="660,345" size="820,50" font="Regular;36" foregroundColor="yellow" backgroundColor="header" transparent="1" noWrap="1" zPosition="2">
-            <convert type="EventName">Name</convert>
-        </widget>
-        <eLabel position="660,400" size="820,3" backgroundColor="#202020" zPosition="1"/>
-        <widget source="session.Event_Now" render="Label" position="1000,417" size="480,40" font="Regular;34" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
-            <convert type="EventName">Genre</convert>
-        </widget>
-        <widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
-        <widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
-        <ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
-        <ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
-        <!-- end edit lululla -->
-        <eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
-        <widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
     </screen>
     <!-- *** oZeta - XML Version 2.27 Top Logo Team By zSetup v2.0.0 *** -->
     <!-- Author mmark : Modules : TopLogo Zeta Default -->
