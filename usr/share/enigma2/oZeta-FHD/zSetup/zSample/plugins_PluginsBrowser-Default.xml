@@ -1,0 +1,25 @@
+<!-- *** oZeta - XML Version 2.27 Channel Selection Cover By zSetup v2.0.0 *** -->
+<!-- Author lululla : Modules : PluginBrowserGrid Default -->
+<!-- mod mmark 30-12-23 -->
+    <screen name="PluginBrowserList" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1500"/>
+        <panel name="vButtonTemplate-1500"/>
+        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+        <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+        <widget name="description" position="230,140" size="1250,60" font="Regular; 28" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+        <eLabel position="230,205" size="1250,3" backgroundColor="#202020" zPosition="1"/>
+        <widget source="pluginList" render="Listbox" position="230,215" size="1250,725" itemHeight="80" scrollbarMode="showOnDemand" backgroundColor="background90" transparent="1" listOrientation="vertical">
+            <convert type="TemplatedMultiContent">
+                        {
+                        "template": [
+                        MultiContentEntryText(pos = (180, 5), size = (840, 40), font=0, flags = RT_HALIGN_LEFT, text = 1),
+                        MultiContentEntryText(pos = (200, 45), size = (840, 35), font=1, flags = RT_HALIGN_LEFT,color=0xa9e8fd, text = 2),
+                        MultiContentEntryPixmapAlphaBlend(pos=(10, 10), size=(150, 60), png=3, flags=BT_SCALE)
+                                ],
+                        "fonts": [gFont("Regular", 28),gFont("Regular", 26)],
+                        "itemHeight" : 80
+                        }
+            </convert>
+        </widget>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+    </screen>
