@@ -1,12 +1,12 @@
 <!-- Skin oZsetup 19/02/2024 -->
-<screen name="oZsetup" position="center,center" size="1000,800" title="oZeta Skin Setup" backgroundColor="#10000000">
+<screen name="oZsetup" position="center,center" size="1000,700" title="oZeta Skin Setup" backgroundColor="#10000000">
         <ePixmap position="0,30" size="160,81" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/skin/Zeta-Logo.png" alphatest="blend" transparent="1" zPosition="1" />
-        <widget name="config" position="170,30" size="799,636" font="Regular;30" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
-        <eLabel position="10,720" size="950,3" backgroundColor="#303030" zPosition="4" />
-        <ePixmap position="10,735" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
-        <widget name="key_red" font="Regular;28" position="50,735" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-        <ePixmap position="270,735" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
-        <widget name="key_yellow" font="Regular;28" position="310,735" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-        <ePixmap position="540,735" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
-        <widget name="key_blue" font="Regular;28" position="580,735" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+        <widget name="config" position="170,30" size="799,553" font="Regular;30" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
+        <eLabel position="10,630" size="950,3" backgroundColor="#303030" zPosition="4" />
+        <ePixmap position="10,650" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/red.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_red" font="Regular;28" position="50,650" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+        <ePixmap position="270,650" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_yellow" font="Regular;28" position="310,650" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="540,650" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/oZsetup/basefile/blue.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget name="key_blue" font="Regular;28" position="580,650" size="200,30" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
 </screen>
