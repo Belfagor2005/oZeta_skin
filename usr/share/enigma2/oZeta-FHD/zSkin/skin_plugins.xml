@@ -598,7 +598,7 @@
         <panel name="LayerMenu1000-nl"/>
         <panel name="ButtonTemplate"/>
         <widget name="list" position="230,150" size="810,800" itemHeight="40" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#303030" scrollbarSliderBorderColor="#202020" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
-        <ePixmap position="890,175" size="256,256" zPosition="2" pixmap="icons/menu_epgloadsave_menu_loadepgcache.png" transparent="1" alphatest="blend"/>
+        <ePixmap position="890,175" size="256,256" zPosition="2" pixmap="oZeta-FHD/icons/menu_epgloadsave_menu_loadepgcache.png" transparent="1" alphatest="blend"/>
     </screen>
     <!-- [013] Plugin ChangePassword 013/01 -->
     <screen name="ChangePasswdScreen" position="0,0" size="1920,1080" title="Set Password" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -3981,9 +3981,7 @@
             </convert>
         </widget>
     </screen>
-
     <!-- [086] NGSettings VHannibal Settings 086/01 -->
-    <!-- <screen name="MenuiSettingE2" position="0,0" size="1920,1080" title="VHannibal" backgroundColor="#FF000000" flags="wfNoBorder"> -->
     <screen name="MenuSetting" position="0,0" size="1920,1080" title="VHannibal" backgroundColor="#FF000000" flags="wfNoBorder">
         <ePixmap position="0,0" size="1300,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2" />
         <ePixmap position="1300,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1" />
@@ -4008,29 +4006,9 @@
         <widget name="autotimer" position="900,1000" size="300,70" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
         <widget name="Key_Red" position="275,930" size="300,70" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
     </screen>
+
     <screen name="MenuSelect" position="0,0" size="1920,1080" title="VHannibal" backgroundColor="#FF000000" flags="wfNoBorder">
-        <ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2" />
-        <ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1" />
-        <ePixmap position="230,40" size="105,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/NGsetting/Panel/logo.png" zPosition="2" alphatest="blend" />	
-        <widget source="Title" render="Label" position="350,20" size="1100,100" font="Regular;76" halign="left" valign="center" foregroundColor="#808060" backgroundColor="#000000" transparent="1" zPosition="5" />	
-        <ePixmap position="220,130" size="1250,8" pixmap="oZeta-FHD/menu/sep.png" blend="blend" zPosition="5" />
-        <widget source="global.CurrentTime" render="Label" position="885,35" size="360,80" font="Regular;32" halign="right" valign="center" foregroundColor="#606060" backgroundColor="#20000000" transparent="1" zPosition="2">
-            <convert type="ClockToText">Format %A %d %B %H:%M:%S</convert>
-        </widget>				
-        <widget name="A" position="220,150" size="450,620" foregroundColor="#ffffff" foregroundColorSelected="#ffffff" backgroundColor="#303030" backgroundColorSelected="barColor" font="Regular;28" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="5" />
-        <widget name="B" position="685,150" size="800,630" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="5" font="Regular;28" foregroundColor="#5dafff" foregroundColorSelected="#ffffff" backgroundColor="#303030" backgroundColorSelected="barColor" />
+        <panel name="MenuSetting"/>
         <widget position="220,150" size="450,620" name="text" font="Regular;28" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="3" />	
-        <widget position="220,800" size="300,40" name="Key_Green" font="Regular;30" halign="left" foregroundColor="#ffffff" backgroundColor="#101010" zPosition="1" transparent="1" />
-        <widget position="500,800" size="700,40" name="namesat" font="Regular;30" foregroundColor="#bab329" backgroundColor="#101010" transparent="1" zPosition="3" />
-        <widget position="220,850" size="910,50" name="dataDow" font="Regular;28" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="3" />	
-        <ePixmap position="220,910" size="1250,8" pixmap="oZeta-FHD/menu/sep.png" blend="blend" zPosition="5" />	
-        <ePixmap position="220,945" pixmap="oZeta-FHD/buttons/button_red.png" size="35,35" alphatest="blend" zPosition="2" />
-        <widget name="Green" position="220,1020" pixmap="oZeta-FHD/buttons/button_green.png" size="35,35" alphatest="blend" zPosition="2" />
-        <widget name="Key_Lcn" position="275,1000" size="300,70" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
-        <widget name="Yellow" position="1440,945" pixmap="oZeta-FHD/buttons/button_yellow.png" size="35,35" alphatest="blend" zPosition="2" />
-        <widget name="Key_Personal" position="1115,930" size="300,70" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
-        <widget name="Blue" position="1440,1020" pixmap="oZeta-FHD/buttons/button_blue.png" size="35,35" alphatest="blend" zPosition="2" />
-        <widget name="autotimer" position="1115,1000" size="300,70" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
-        <widget name="Key_Red" position="275,930" size="300,70" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" />
     </screen>
 </skin>

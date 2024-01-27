@@ -825,7 +825,7 @@
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
         <eLabel position="230,205" size="1000,3" backgroundColor="#202020" zPosition="10"/>
-        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" />
+        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
         <widget name="rc" pixmaps="rc.png,rcold.png" position="1300,150" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
         <widget alphatest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
@@ -1039,16 +1039,16 @@
         <widget name="key_teclado7" position="21,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
         <widget name="key_teclado8" position="300,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
         <widget name="key_teclado9" position="577,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
-        <widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="oZeta-FHD/openspa/seleccion-fs8.png"/>
+        <widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="openspa/seleccion-fs8.png"/>
         <widget name="key_record" position="850,480" size="97,27" transparent="1" text="Hist." font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="key_delete" position="933,469" size="97,27" transparent="1" text="Delete" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="key_clear" position="1018,469" size="97,27" transparent="1" text="Clear" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
         <widget name="cajalista" position="859,219" size="570,505" transparent="0" backgroundColor="#1c000000" zPosition="39" font="Regular;26"/>
-        <widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionpixmap="oZeta-FHD/openspa/sep3.png" itemHeight="30" font="Regular;26"/>
-        <widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionpixmap="oZeta-FHD/openspa/sep3.png" itemHeight="30"/>
+        <widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionPixmap="openspa/sep3.png" itemHeight="30" font="Regular;26"/>
+        <widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionPixmap="openspa/sep3.png" itemHeight="30"/>
         <widget name="text_info" position="10,60" size="1099,457" transparent="0" foregroundColor="white" backgroundColor="black" font="Regular; 33" zPosition="50"/>
         <eLabel name="ayu" position="0,531" size="1128,45" backgroundColor="#40000000" zPosition="-9"/>
-        <ePixmap pixmap="oZeta-FHD/buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
+        <ePixmap pixmap="buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
         <widget name="in_menu" position="67,534" size="277,37" font="Regular; 16" valign="center" halign="left" transparent="1" foregroundColor="white" backgroundColor="black" zPosition="-8"/>
         <widget name="in_green" position="265,534" size="855,37" font="Regular; 16" valign="center" halign="right" transparent="1" foregroundColor="grey" text="Ayuda" backgroundColor="black" zPosition="-8" noWrap="1"/>
         <widget name="barrapix_arr" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>

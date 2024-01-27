@@ -403,7 +403,6 @@
         <widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
         <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
-    
     </screen>
     <!-- *************************************** -->
     <!--   ATVPANELS * ATVPANELS * ATVPANELS *   -->
@@ -667,7 +666,7 @@
         <panel name="LocationBoxOld" conditional="textbook"/>
         <panel name="LocationBoxNew" conditional="fileheading"/>
     </screen>
-    <screen name="LocationBoxOld" position="0,0" size="1280,720" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="LocationBoxOld" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
         <panel name="ButtonTemplate"/>
         <widget name="text" position="230,150" size="500,50" font="Regular;40" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>

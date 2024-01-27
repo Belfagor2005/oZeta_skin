@@ -2233,7 +2233,7 @@
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>\n
 	</screen>
     <!-- AC3LipSync -->
-    <screen name="AC3LipSync" position="20,15" size="600,460" title="Audio Sync" zPosition="1" backgroundColor="#ff000000" flags="wfNoBorder">
+    <screen name="AC3LipSync" position="20,15" size="1920,1080" title="Audio Sync" zPosition="1" backgroundColor="#ff000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="ButtonTemplateB"/>
         <widget name="ServiceInfoLabel" position="230,150" size="200,40" font="Regular;30" backgroundColor="#232323" foregroundColor="#dddddd" transparent="1" zPosition="4"/>
@@ -2611,18 +2611,98 @@
     </screen>
 
     <!-- Messagebox -->
-    <screen name="MessageBox" position="center,center" size="1200,450" backgroundColor="#10000000">
-		<!-- widget source="Title" render="Label" position="72,8" foregroundColor="white" size="618,50" noWrap="1" valign="bottom" font="Regular;34" backgroundColor="#000000" transparent="1"/-->
-		<widget name="icon" position="20,20" size="53,53" pixmaps="icons/message/question-53.png,icons/message/info-53.png,icons/message/info-53.png,icons/message/attention-53.png,icons/message/info-53.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
-		<widget name="text" position="10,70" size="780,50" font="screen_text;28" valign="center" halign="center" backgroundColor="#000000" foregroundColor="white" />
-		<widget name="list" position="10,100" size="780,160" textPadding="10,0" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" />
-		<applet type="onLayoutFinish">
+    <screen name="MessageBox" backgroundColor="#10000000">
+        <!-- widget source="Title" render="Label" position="67,8" foregroundColor="#ffffff" size="623,50" noWrap="1" valign="bottom" font="Regular;32" backgroundColor="#000000" transparent="1"/-->
+        <widget name="text" position="130,30" size="800,40" font="Regular;32" halign="left" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+        <widget name="ErrorPixmap" pixmap="oZeta-FHD/icons/input_error.png" position="20,20" size="80,80" alphatest="blend"/>
+        <widget name="QuestionPixmap" pixmap="oZeta-FHD/icons/input_question.png" position="20,20" size="80,80" alphatest="blend"/>
+        <widget name="InfoPixmap" pixmap="oZeta-FHD/icons/input_info.png" position="20,20" size="80,80" alphatest="blend"/>
+        <widget name="warningPixmap" pixmap="oZeta-FHD/icons/input_warning.png" position="230,150" size="80,80" alphatest="blend"/>
+        <widget name="list" position="10,100" size="780,240" itemHeight="40" font="Regular;28" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#505050" scrollbarSliderBorderColor="#404040" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
+        <applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
 from __future__ import division
 from enigma import eSize, ePoint, getDesktop
 #orgwidth = self.instance.size().width()
 #orgheight = self.instance.size().height()
 #---
+offset_listposx = 10
+offset_listposy = 60
+offset_listwidth = 10
+offset_listheight = 40
+offset_textwidth = 20
+offset_textheight = 30
+min_width = 100
+min_height = 90
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+listwidth = 0
+listheight = 0
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) > listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+                                  
+                            
+                       
+if (min_height &gt;textheight):
+	textheight = min_height
+if (min_width &gt;textwidth):
+	textwidth = min_width
+if (listheight &gt;0):
+	offset = 21
+else:
+	offset = 13
+if (textwidth &gt;listwidth):
+	wsizex = textwidth + offset_listposx * 2 + 120
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+wsizey = textheight + listheight + offset
+if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+if (wsizex &gt;deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+# move list
+             
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
+		</applet>
+    </screen>
+
+<!--     <screen name="MessageBox" position="center,center" size="1200,450" backgroundColor="#10000000">
+		<widget name="icon" position="20,20" size="53,53" pixmaps="icons/message/question-53.png,icons/message/info-53.png,icons/message/info-53.png,icons/message/attention-53.png,icons/message/info-53.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="text" position="10,70" size="780,50" font="screen_text;28" valign="center" halign="center" backgroundColor="#000000" foregroundColor="white" />
+		<widget name="list" position="10,100" size="780,240" textPadding="10,0" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" />
+		<applet type="onLayoutFinish">
+# this should be factored out into some helper code,but currently demonstrates applets.
+from __future__ import division
+from enigma import eSize, ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#-
 offset_listposx = 10
 offset_listposy = 40
 offset_listwidth = 10
@@ -2631,7 +2711,7 @@ offset_textwidth = 170
 offset_textheight = 20
 min_width = 400
 min_height = 50
-#----
+#-
 deskwidth = getDesktop(0).size().width()
 deskheight = getDesktop(0).size().height()
 textsize = self["text"].getSize()
@@ -2687,5 +2767,5 @@ newwidth = wsize[0]
 newheight = wsize[1]
 self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
 		</applet>
-	</screen>
+	</screen> -->
 </skin>
