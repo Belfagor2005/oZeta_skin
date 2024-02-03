@@ -44,8 +44,8 @@ import sys
 import time
 import shutil
 import unicodedata
-import json
-from time import gmtime
+
+
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
@@ -53,24 +53,19 @@ if sys.version_info[0] >= 3:
     unichr = chr
     long = int
     import queue
-    from urllib.parse import quote
+    # from urllib.parse import quote
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
 else:
     import Queue
-    from urllib import quote
+    # from urllib import quote
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
 
-tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
-omdb_api = "cb1d9f55"
-thetvdbkey = 'D19315B88B2DE21F'
-# thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
+
 epgcache = eEPGCache.getInstance()
-my_cur_skin = False
-cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')                                             
 
 def isMountReadonly(mnt):
     mount_point = ''
@@ -285,40 +280,23 @@ def convtext(text=''):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
                 text = "the " + str(text)
-                # print('the from last to start text: ', text)
             text = text + 'FIN'
-            # text = re.sub("[^\w\s]", "", text)  # remove .
-            # text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
-            # text = re.sub(' [\:][ ][a-zA-Z0-9]+.*?FIN', '', text)
-            # text = re.sub(' [\(][ ][a-zA-Z0-9]+.*?FIN', '', text)
-            # text = re.sub(' [\-][ ][a-zA-Z0-9]+.*?FIN', '', text)
-            # print('[(00)] ', text)
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            # print('[(01)] ', text)
-
             text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
             text = text.partition("(")[0] + 'FIN'  # .strip()
-            text = re.sub("\s\d+", "", text)
-            # print('1 odc my test:', text)
-
+            # text = re.sub("\s\d+", "", text)
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
-            # text = re.sub(r'(?:\d+\s\odc\.\d+\s)?(.+)+.*?FIN', '', text)
-            # print('2 my test:', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
-            # print('[(02)] ', text)
-            # text = REGEX.sub('', text)  # paused
-            # print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            # text = unicodify(text)
             text = remove_accents(text)
             text = text.strip()
             text = text.capitalize()
@@ -640,67 +618,3 @@ class zPosterX(Renderer):
             w.close()
         except Exception as e:
             print('logPoster error', e)
-
-    def downloadInfos(self):
-        self.year = self.filterSearch()
-        try:
-            # if self.canal[5]:
-                # # if not os.path.exists(self.pstcanal):
-                # pstcanal = convtext(self.canal[5])
-                # pstrNm = self.path + '/' + str(pstcanal) + ".jpg"
-                # self.pstcanal = pstrNm
-                title = None
-                # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(self.pstcanal))
-                if self.year:
-                    url_tmdb += "&year={}".format(self.year)
-                if PY3:
-                    import six
-                    url_tmdb = six.ensure_str(url_tmdb)
-                try:
-                    title = json.load(urlopen(url_tmdb))["results"][0]["title"]
-                except:
-                    title = json.load(urlopen(url_tmdb))["results"][0]["original_name"]
-                print('Title1: ', title)
-                if title is not None:
-                    try:
-                        url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quote(title))
-                        data_omdb = json.load(urlopen(url_omdb))
-                        open(self.infos_file, "w").write(json.dumps(data_omdb))
-                        # OnclearMem()
-                    except Exceptions as e:
-                        print('error download infos', e)
-                        pass
-                return
-
-        except Exception as e:
-            print('downloadInfos error ', str(e))
-
-    def filterSearch(self):
-        try:
-            self.srch = "multi"
-            yr = None
-            sd = "%s\n%s\n%s" % (self.event.getEventName(), self.event.getShortDescription(), self.event.getExtendedDescription())
-            w = [
-                    "t/s",
-                    "Т/s",
-                    "SM",
-                    "SM",
-                    "d/s",
-                    "D/s",
-                    "stagione",
-                    "Sig.",
-                    "episodio",
-                    "serie TV",
-                    "serie"
-                    ]
-            for i in w:
-                if i in sd:
-                    self.srch = "tv"
-                    break
-                else:
-                    self.srch = "multi"
-            yr = [_y for _y in re.findall(r'\d{4}', sd) if '1930' <= _y <= '%s' % gmtime().tm_year]
-            return '%s' % yr[-1] if yr else None
-        except:
-            pass
