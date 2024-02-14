@@ -191,11 +191,11 @@ class zPosterXDownloadThread(threading.Thread):
                     url_read = requests.get(url_tvdb).text
                     poster = re.findall('<poster>(.*?)</poster>', url_read)
 
-            if poster and poster[0]:
-                if poster and poster != 'null' or poster is not None or poster != '':
-                    url_poster = "https://artworks.thetvdb.com/banners/{}".format(poster[0])
-                    self.savePoster(dwn_poster, url_poster)
-                    return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_poster)
+            # if poster and poster[0]:
+            if poster and poster[0] != 'null' or poster is not None or poster != '':
+                url_poster = "https://artworks.thetvdb.com/banners/{}".format(poster[0])
+                self.savePoster(dwn_poster, url_poster)
+                return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_poster)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
 
@@ -364,9 +364,9 @@ class zPosterXDownloadThread(threading.Thread):
                     if ptitle == get_title:
                         h_ori = float(url_poster_size[0][1])
                         h_tar = float(re.findall('(\d+)', isz)[1])
-                        ratio = h_ori/h_tar
+                        ratio = h_ori / h_tar
                         w_ori = float(url_poster_size[0][0])
-                        w_tar = w_ori/ratio
+                        w_tar = w_ori / ratio
                         w_tar = int(w_tar)
                         h_tar = int(h_tar)
                         url_poster = re.sub('/\d+x\d+/', "/" + str(w_tar) + "x" + str(h_tar) + "/", url_poster)
@@ -400,7 +400,7 @@ class zPosterXDownloadThread(threading.Thread):
             imsg = ''
             url_mgoo = "site:molotov.tv+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
-                url_mgoo += "+"+quote(channel)
+                url_mgoo += "+" + quote(channel)
             url_mgoo = "https://www.google.com/search?q={}&tbm=isch".format(url_mgoo)
             ff = requests.get(url_mgoo, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
             if not PY3:
@@ -519,15 +519,25 @@ class zPosterXDownloadThread(threading.Thread):
                 srch = chkType[6:]
             elif chkType.startswith("tv"):
                 srch = chkType[3:]
-            url_google = '"'+quote(title)+'"'
-            if channel and title.find(channel) < 0:
-                url_google += "+{}".format(quote(channel))
+            url_google = ''
+            # url_google = '"'+quote(title)+'"'
+            # if channel and title.find(channel) != None or < 0:
+                # url_google += "+{}".format(quote(channel))
             if srch:
                 url_google += "+{}".format(srch)
             if year:
                 url_google += "+{}".format(year)
-            # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
-            url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
+
+            # # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
+            # url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
+
+            url_name = '"' + quote(title) + '"'
+            if title.find(channel) is not None or channel < 0:
+                url_name += "+{}".format(quote(channel))
+
+            url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=sbd:0".format(url_name)
+            url_google += "+{}".format(poster)
+
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
 
             posterlst = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)

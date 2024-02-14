@@ -207,7 +207,7 @@ class zBackdropXDownloadThread(threading.Thread):
                     url_read = requests.get(url_tvdb).text
                     backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
 
-            if backdrop and backdrop[0] or backdrop is not None:
+            if backdrop and backdrop[0] or backdrop is not None or backdrop != '':
                 # if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
                     url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
                     self.savebackdrop(dwn_backdrop, url_backdrop)
@@ -416,7 +416,7 @@ class zBackdropXDownloadThread(threading.Thread):
             imsg = ''
             url_mgoo = "site:molotov.tv+" + quote(title)
             if channel and title.find(channel.split()[0]) < 0:
-                url_mgoo += "+"+quote(channel)
+                url_mgoo += "+" + quote(channel)
             url_mgoo = "https://www.google.com/search?q={}&tbm=isch".format(url_mgoo)
             ff = requests.get(url_mgoo, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
             if not PY3:
@@ -535,15 +535,22 @@ class zBackdropXDownloadThread(threading.Thread):
                 srch = chkType[6:]
             elif chkType.startswith("tv"):
                 srch = chkType[3:]
-            url_google = '"'+quote(title)+'"'
-            if channel and title.find(channel) < 0:
-                url_google += "+{}".format(quote(channel))
+            url_google = ''
+            # url_google = '"' + quote(title)+'"'
+            # if channel and title.find(channel) < 0:
+                # url_google += "+{}".format(quote(channel))
             if srch:
                 url_google += "+{}".format(srch)
             if year:
                 url_google += "+{}".format(year)
-            # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
-            url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
+            # # url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
+            # url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
+            url_name = '"' + quote(title) + '"'
+            if title.find(channel) is not None or channel < 0:
+                url_name += "+{}".format(quote(channel))
+
+            url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=sbd:0".format(url_name)
+            url_google += "+{}".format(backdrop)
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
 
             backdroplst = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)

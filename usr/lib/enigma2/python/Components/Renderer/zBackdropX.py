@@ -440,7 +440,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                 if diff_tm > 120 and os.path.getsize(path_folder + '/' + f) == 0:  # Detect empty files > 2 minutes
                     os.remove(path_folder + '/' + f)
                     emptyfd = emptyfd + 1
-                if diff_tm > 259200:  # Detect old files > 3 days old
+                if diff_tm > 432000:  # Detect old files > 5 days old
                     os.remove(path_folder + '/' + f)
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
