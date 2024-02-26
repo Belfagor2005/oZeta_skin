@@ -41,7 +41,7 @@ import socket
 import sys
 import time
 import shutil
-import unicodedata
+
 
 PY3 = False
 if sys.version_info[0] >= 3:
@@ -59,8 +59,6 @@ else:
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
 
-
-epgcache = eEPGCache.getInstance()
 
 def isMountReadonly(mnt):
     mount_point = ''
@@ -118,7 +116,7 @@ except:
 # IF NOT SET OR WRONG FILE THE AUTOMATIC BACKDROP GENERATION WILL WORK FOR
 # THE CHANNELS THAT YOU ARE VIEWING IN THE ENIGMA SESSION
 
-# add lululla
+
 def SearchBouquetTerrestrial():
     import glob
     import codecs
@@ -141,6 +139,7 @@ else:
 autobouquet_count = 70
 # Short script for Automatic poster generation on your preferred bouquet
 if not os.path.exists(autobouquet_file):
+    autobouquet_file = None
     autobouquet_count = 0
 else:
     with open(autobouquet_file, 'r') as f:
@@ -236,13 +235,13 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 
 def str_encode(text, encoding="utf8"):
-	if not PY3:
-		if isinstance(text, unicode):
-			return text.encode(encoding)
-		else:
-			return text
-	else:
-		return text
+    if not PY3:
+        if isinstance(text, unicode):
+            return text.encode(encoding)
+        else:
+            return text
+    else:
+        return text
 
 
 def convtext(text=''):
@@ -284,7 +283,6 @@ def convtext(text=''):
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
             text = text.partition("(")[0] + 'FIN'  # .strip()
-            # text = re.sub("\s\d+", "", text)
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
@@ -398,15 +396,15 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             dwn_backdrop = self.pstcanal
                             if os.path.exists(dwn_backdrop):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
-                            # if lng == "fr":
-                                # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_molotov_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
-                                    # if val and log.find("SUCCESS"):
-                                        # newfd += 1
-                                # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_programmetv_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
-                                    # if val and log.find("SUCCESS"):
-                                        # newfd += 1
+                            if lng == "fr":
+                                if not os.path.exists(dwn_backdrop):
+                                    val, log = self.search_molotov_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd += 1
+                                if not os.path.exists(dwn_backdrop):
+                                    val, log = self.search_programmetv_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                    if val and log.find("SUCCESS"):
+                                        newfd += 1
                             if not os.path.exists(dwn_backdrop):
                                 val, log = self.search_tmdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -428,7 +426,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
-                        self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                    self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
@@ -439,7 +437,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                 diff_tm = now_tm - os.path.getmtime(path_folder + '/' + f)
                 if diff_tm > 120 and os.path.getsize(path_folder + '/' + f) == 0:  # Detect empty files > 2 minutes
                     os.remove(path_folder + '/' + f)
-                    emptyfd = emptyfd + 1
+                    emptyfd += 1
                 if diff_tm > 432000:  # Detect old files > 5 days old
                     os.remove(path_folder + '/' + f)
                     oldfd = oldfd + 1
@@ -573,7 +571,6 @@ class zBackdropX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            # try:
             if not os.path.exists(self.backrNm):
                 pstcanal = convtext(self.canal[5])
                 backrNm = self.path + '/' + pstcanal + ".jpg"
@@ -583,8 +580,6 @@ class zBackdropX(Renderer):
                 self.instance.setPixmap(loadJPG(self.backrNm))
                 self.instance.setScale(1)
                 self.instance.show()
-            # except Exception as e:
-                # print(e)
 
     def waitBackdrop(self):
         if self.instance:
