@@ -74,7 +74,7 @@ except:
 
 
 # isz = "original"
-isz = "w780"
+isz = "w300"
 
 '''
 isz = "w780"
@@ -160,6 +160,8 @@ class zBackdropXDownloadThread(threading.Thread):
                 if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
                     url_backdrop = "https://image.tmdb.org/t/p/{}{}".format(str(isz.split(",")[0]), backdrop['results'][0]['backdrop_path'])
                     self.savebackdrop(dwn_backdrop, url_backdrop)
+                    if self.verifybackdrop(dwn_backdrop):
+                        self.resizebackdrop(dwn_backdrop)
                     return True, "[SUCCESS backdrop: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_backdrop)
             else:
                 return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tmdb)
@@ -211,17 +213,11 @@ class zBackdropXDownloadThread(threading.Thread):
                 # if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
                     url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
                     self.savebackdrop(dwn_backdrop, url_backdrop)
+                    if self.verifybackdrop(dwn_backdrop):
+                        self.resizebackdrop(dwn_backdrop)
                     return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
-
-            # if backdrop and backdrop[0] or backdrop is not None or backdrop != '':
-                # # if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
-                # url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
-                # self.savebackdrop(dwn_backdrop, url_backdrop)
-                # return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
-            # else:
-                # return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
 
         except Exception as e:
             if os.path.exists(dwn_backdrop):
@@ -264,6 +260,8 @@ class zBackdropXDownloadThread(threading.Thread):
                 print('url fanart url_backdrop:', url_backdrop)
                 if url_backdrop and url_backdrop != 'null' or url_backdrop is not None or url_backdrop != '':
                     self.savebackdrop(dwn_backdrop, url_backdrop)
+                    if self.verifybackdrop(dwn_backdrop):
+                        self.resizebackdrop(dwn_backdrop)
                     return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_maze, url_fanart, url_backdrop)
                 else:
                     return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_fanart)
@@ -352,6 +350,8 @@ class zBackdropXDownloadThread(threading.Thread):
 
             if url_backdrop and pfound:
                 self.savebackdrop(dwn_backdrop, url_backdrop)
+                if self.verifybackdrop(dwn_backdrop):
+                    self.resizebackdrop(dwn_backdrop)
                 return True, "[SUCCESS url_backdrop: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(title, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_backdrop)
             else:
                 return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(title, chkType, year, url_mimdb, len_imdb)
@@ -397,6 +397,7 @@ class zBackdropXDownloadThread(threading.Thread):
                         url_backdrop = re.sub('crop-from/top/', '', url_backdrop)
                         self.savebackdrop(dwn_backdrop, url_backdrop)
                         if self.verifybackdrop(dwn_backdrop) and url_backdrop_size:
+                            self.resizebackdrop(dwn_backdrop)
                             return True, "[SUCCESS url_backdrop: programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_backdrop, url_backdrop_size, ptv_id)
                         else:
                             if os.path.exists(dwn_backdrop):
@@ -514,6 +515,7 @@ class zBackdropXDownloadThread(threading.Thread):
                 url_backdrop = re.sub('/\d+x\d+/', "/" + re.sub(',', 'x', isz) + "/", backdrop)
                 self.savebackdrop(dwn_backdrop, url_backdrop)
                 if self.verifybackdrop(dwn_backdrop):
+                    self.resizebackdrop(dwn_backdrop)
                     return True, "[SUCCESS url_backdrop: molotov-google] {} ({}) [{}] => {} => {} => {}".format(title, channel, chkType, imsg, url_mgoo, url_backdrop)
                 else:
                     if os.path.exists(dwn_backdrop):

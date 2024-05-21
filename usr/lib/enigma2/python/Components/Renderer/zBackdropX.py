@@ -176,27 +176,27 @@ def OnclearMem():
 
 
 REGEX = re.compile(
-        r'([\(\[]).*?([\)\]])|'
-        r'(: odc.\d+)|'
-        r'(\d+: odc.\d+)|'
-        r'(\d+ odc.\d+)|(:)|'
-        r'( -(.*?).*)|(,)|'
-        r'!|'
-        r'/.*|'
-        r'\|\s[0-9]+\+|'
-        r'[0-9]+\+|'
-        r'\s\*\d{4}\Z|'
-        r'([\(\[\|].*?[\)\]\|])|'
-        r'(\"|\"\.|\"\,|\.)\s.+|'
-        r'\"|:|'
-        r'Премьера\.\s|'
-        r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
-        r'(х|Х|м|М|т|Т|д|Д)/с\s|'
-        r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
-        r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-        r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-        r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
-        r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+    r'([\(\[]).*?([\)\]])|'
+    r'(: odc.\d+)|'
+    r'(\d+: odc.\d+)|'
+    r'(\d+ odc.\d+)|(:)|'
+    r'( -(.*?).*)|(,)|'
+    r'!|'
+    r'/.*|'
+    r'\|\s[0-9]+\+|'
+    r'[0-9]+\+|'
+    r'\s\*\d{4}\Z|'
+    r'([\(\[\|].*?[\)\]\|])|'
+    r'(\"|\"\.|\"\,|\.)\s.+|'
+    r'\"|:|'
+    r'Премьера\.\s|'
+    r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
+    r'(х|Х|м|М|т|Т|д|Д)/с\s|'
+    r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
+    r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+    r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+    r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
+    r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
 def intCheck():
@@ -244,11 +244,31 @@ def str_encode(text, encoding="utf8"):
         return text
 
 
+def cutName(eventName=""):
+    if eventName:
+        eventName = eventName.replace('"', '').replace('Х/Ф', '').replace('М/Ф', '').replace('Х/ф', '').replace('.', '').replace(' | ', '')
+        eventName = eventName.replace('(18+)', '').replace('18+', '').replace('(16+)', '').replace('16+', '').replace('(12+)', '')
+        eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
+        eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
+        return eventName
+    return ""
+
+
+def getCleanTitle(eventitle=""):
+    save_name = re.sub('\ \(\d+\)$', '', eventitle)
+    save_name = re.sub('\ \(\d+\/\d+\)$', '', save_name)  # remove episode-number " (xx/xx)" at the end
+    # save_name = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', save_name)
+    save_name = save_name.replace(' ^`^s', '').replace(' ^`^y', '')
+    return save_name
+
+
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
-            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            text = cutName(text)
+            text = getCleanTitle(text)
+            # text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
@@ -323,13 +343,13 @@ class BackdropDB(zBackdropXDownloadThread):
                 dwn_backdrop = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_backdrop):
                     os.utime(dwn_backdrop, (time.time(), time.time()))
-                # if lng == "fr":
-                    # if not os.path.exists(dwn_backdrop):
-                        # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                        # self.logDB(log)
-                    # if not os.path.exists(dwn_backdrop):
-                        # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                        # self.logDB(log)
+                if lng == "fr":
+                    if not os.path.exists(dwn_backdrop):
+                        val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                        self.logDB(log)
+                    if not os.path.exists(dwn_backdrop):
+                        val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                        self.logDB(log)
                 if not os.path.exists(dwn_backdrop):
                     val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
@@ -370,6 +390,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
         while True:
             time.sleep(7200)  # 7200 - Start every 2 hours
             self.logAutoDB("[AutoDB] *** Running ***")
+            pstcanal = ''
             # AUTO ADD NEW FILES - 1440 (24 hours ahead)
             for service in apdb.values():
                 try:
@@ -438,7 +459,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                 if diff_tm > 120 and os.path.getsize(path_folder + '/' + f) == 0:  # Detect empty files > 2 minutes
                     os.remove(path_folder + '/' + f)
                     emptyfd += 1
-                if diff_tm > 432000:  # Detect old files > 5 days old
+                if diff_tm > 31536000:  # Detect old files > 365 days old
                     os.remove(path_folder + '/' + f)
                     oldfd = oldfd + 1
             self.logAutoDB("[AutoDB] {} old file(s) removed".format(oldfd))
@@ -469,6 +490,7 @@ class zBackdropX(Renderer):
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.logdbg = None
+        self.pstcanal = ''
         self.timer = eTimer()
         try:
             self.timer_conn = self.timer.timeout.connect(self.showBackdrop)
@@ -553,7 +575,7 @@ class zBackdropX(Renderer):
                 self.oldCanal = curCanal
                 self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + pstcanal + ".jpg"
+                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
                 self.backrNm = str(backrNm)
                 if os.path.exists(self.backrNm):
                     self.timer.start(10, True)
@@ -573,7 +595,7 @@ class zBackdropX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
                 pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + pstcanal + ".jpg"
+                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
                 self.backrNm = str(backrNm)
             if os.path.exists(self.backrNm):
                 self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
@@ -587,7 +609,7 @@ class zBackdropX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
                 pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + pstcanal + ".jpg"
+                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
                 self.backrNm = str(backrNm)
             loop = 180
             found = None

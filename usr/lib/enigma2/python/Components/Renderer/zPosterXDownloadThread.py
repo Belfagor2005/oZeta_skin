@@ -135,8 +135,8 @@ class zPosterXDownloadThread(threading.Thread):
             url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}".format(chkType, tmdb_api)  # , quote(title))           #  &query={}".format(srch, tmdb_api, quote(title))
             if year:
                 url_tmdb += "&primary_release_year={}".format(year)
-            # if lng:
-                # url_tmdb += "&language={}".format(lng)
+            if lng:
+                url_tmdb += "&language={}".format(lng)
             url_tmdb += "&query={}".format(quote(title))
             print('url_tmdb= ', url_tmdb)
             poster = requests.get(url_tmdb).json()
@@ -144,6 +144,8 @@ class zPosterXDownloadThread(threading.Thread):
                 if poster and poster != 'null' or poster is not None or poster != '':
                     url_poster = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), poster['results'][0]['poster_path'])
                     self.savePoster(dwn_poster, url_poster)
+                    if self.verifyPoster(dwn_poster):
+                        self.resizePoster(dwn_poster)
                     return True, "[SUCCESS poster: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_tmdb, url_poster)
             else:
                 return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tmdb)
@@ -192,13 +194,14 @@ class zPosterXDownloadThread(threading.Thread):
                     poster = re.findall('<poster>(.*?)</poster>', url_read)
 
             if poster and poster[0]:
-                if poster and poster != 'null' or poster is not None or poster != '':
+                if poster != 'null' or poster is not None or poster != '':
                     url_poster = "https://artworks.thetvdb.com/banners/{}".format(poster[0])
                     self.savePoster(dwn_poster, url_poster)
+                    if self.verifyPoster(dwn_poster):
+                        self.resizePoster(dwn_poster)
                     return True, "[SUCCESS : tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_poster)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
-
         except Exception as e:
             if os.path.exists(dwn_poster):
                 os.remove(dwn_poster)
@@ -208,6 +211,7 @@ class zPosterXDownloadThread(threading.Thread):
         try:
             year = None
             url_maze = ""
+            url_poster = None
             id = "-"
             chkType, fd = self.checkType(shortdesc, fulldesc)
             try:
@@ -239,6 +243,8 @@ class zPosterXDownloadThread(threading.Thread):
                 print('url fanart poster:', url_poster)
                 if url_poster and url_poster != 'null' or url_poster is not None or url_poster != '':
                     self.savePoster(dwn_poster, url_poster)
+                    if self.verifyPoster(dwn_poster):
+                        self.resizePoster(dwn_poster)
                     return True, "[SUCCESS poster: tmdb] {} [{}-{}] => {} => {}".format(title, chkType, year, url_maze, url_poster)
                 else:
                     return False, "[SKIP : tmdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_maze)
@@ -327,6 +333,8 @@ class zPosterXDownloadThread(threading.Thread):
 
             if url_poster and pfound:
                 self.savePoster(dwn_poster, url_poster)
+                if self.verifyPoster(dwn_poster):
+                    self.resizePoster(dwn_poster)
                 return True, "[SUCCESS url_poster: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(title, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_poster)
             else:
                 return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(title, chkType, year, url_mimdb, len_imdb)
@@ -372,6 +380,7 @@ class zPosterXDownloadThread(threading.Thread):
                         url_poster = re.sub('crop-from/top/', '', url_poster)
                         self.savePoster(dwn_poster, url_poster)
                         if self.verifyPoster(dwn_poster) and url_poster_size:
+                            self.resizePoster(dwn_poster)
                             return True, "[SUCCESS url_poster: programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_poster, url_poster_size, ptv_id)
                         else:
                             if os.path.exists(dwn_poster):
@@ -489,6 +498,7 @@ class zPosterXDownloadThread(threading.Thread):
                 url_poster = re.sub('/\d+x\d+/', "/" + re.sub(', ', 'x', isz) + "/", poster)
                 self.savePoster(dwn_poster, url_poster)
                 if self.verifyPoster(dwn_poster):
+                    self.resizePoster(dwn_poster)
                     return True, "[SUCCESS url_poster: molotov-google] {} ({}) [{}] => {} => {} => {}".format(title, channel, chkType, imsg, url_mgoo, url_poster)
                 else:
                     if os.path.exists(dwn_poster):
@@ -621,12 +631,12 @@ class zPosterXDownloadThread(threading.Thread):
         fds = fd[:60]
         for i in self.checkMovie:
             if i in fds.lower():
-                srch = "movie:" + i
+                srch = "movie"  # :" + i
                 break
 
         for i in self.checkTV:
             if i in fds.lower():
-                srch = "tv:" + i
+                srch = "tv"  # :" + i
                 break
 
         return srch, fd
