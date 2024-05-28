@@ -62,21 +62,6 @@ if sys.version_info >= (2, 7, 9):
         sslContext = None
 
 
-def getEncodedString(value):
-    returnValue = ""
-    try:
-        returnValue = value.encode("utf-8", 'ignore')
-    except UnicodeDecodeError:
-        try:
-            returnValue = value.encode("iso8859-1", 'ignore')
-        except UnicodeDecodeError:
-            try:
-                returnValue = value.decode("cp1252").encode("utf-8")
-            except UnicodeDecodeError:
-                returnValue = "n/a"
-    return returnValue
-
-
 def ensure_str(text, encoding='utf-8', errors='strict'):
     if type(text) is str:
         return text
@@ -381,6 +366,7 @@ def downloadFilest(url, target):
         print('URL Error: ', e.reason)
 
 
+
 def defaultMoviePath():
     result = config.usage.default_path.value
     if not isdir(result):
@@ -388,16 +374,21 @@ def defaultMoviePath():
         return Directories.defaultRecordingLocation(config.usage.default_path.value)
     return result
 
+
 if not isdir(config.movielist.last_videodir.value):
     try:
         config.movielist.last_videodir.value = defaultMoviePath()
         config.movielist.last_videodir.save()
     except:
         pass
+
+
 downloadm3u = config.movielist.last_videodir.value
 
 
 # this def returns the current playing service name and stream_url from give sref
+
+
 def getserviceinfo(sref):
     try:
         from ServiceReference import ServiceReference
@@ -505,13 +496,13 @@ def checkStr(text, encoding='utf8'):
     return text
 
 def str_encode(text, encoding="utf8"):
-    if not PY3:
-        if isinstance(text, unicode):
-            return text.encode(encoding)
-        else:
-            return text
-    else:
-        return text
+	if not PY3:
+		if isinstance(text, unicode):
+			return text.encode(encoding)
+		else:
+			return text
+	else:
+		return text
 
 def checkRedirect(url):
     # print("*** check redirect ***")
@@ -595,10 +586,10 @@ def b64decoder(s):
     s = str(s).strip()
     try:
         outp = base64.b64decode(s)
-        # print('outp1 ', outp)
+        print('outp1 ', outp)
         if PY3:
             outp = outp.decode('utf-8')
-            # print('outp2 ', outp)
+            print('outp2 ', outp)
         return outp
 
     except TypeError:
@@ -611,10 +602,10 @@ def b64decoder(s):
         elif padding == 3:
             s += b'='
         outp = base64.b64decode(s)
-        # print('outp1 ', outp)
+        print('outp1 ', outp)
         if PY3:
             outp = outp.decode('utf-8')
-            # print('outp2 ', outp)
+            print('outp2 ', outp)
         return outp
 
 
@@ -867,9 +858,8 @@ def AdultUrl(url):
     req = Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
     r = urlopen(req, None, 15)
-    link = r.read()
+    tlink = r.read()
     r.close()
-    tlink = link
     if str(type(tlink)).find('bytes') != -1:
         try:
             tlink = tlink.decode("utf-8")

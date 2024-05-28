@@ -50,8 +50,8 @@ def zCheckInternet(opt=1, server=None, port=None):  # opt=5 custom server and po
 
 def upd_done():
     from os import popen, system
-    cmd01 = "wget http://patbuweb.com/ozeta/zsetup.tar -O /tmp/zsetup.tar ; tar -xvf /tmp/zsetup.tar -C /"
-    cmd02 = "wget --no-check-certificate -U 'Enigma2 - zsetup Plugin' -c 'http://patbuweb.com/ozeta/zsetup.tar' -O '/tmp/zsetup.tar'; tar -xvf /tmp/zsetup.tar -C /"
+    cmd01 = "wget --no-cache --no-dns-cache http://patbuweb.com/ozeta/zsetup.tar -O /tmp/zsetup.tar --post-data='action=purge'; tar -xvf /tmp/zsetup.tar -C /"
+    cmd02 = "wget --no-check-certificate --no-cache --no-dns-cache -U 'Enigma2 - zsetup Plugin' -c 'http://patbuweb.com/ozeta/zsetup.tar' -O '/tmp/zsetup.tar' --post-data='action=purge'; tar -xvf /tmp/zsetup.tar -C /"
     cmd22 = 'find /usr/bin -name "wget"'
     res = popen(cmd22).read()
     if 'wget' not in res.lower():
@@ -149,8 +149,8 @@ def zPicons(answer):
     if answer is True:
         try:
             from os import popen, system
-            cmd01 = "wget http://patbuweb.com/mmpicons/mmpicons.tar -O /tmp/mmpicons.tar ; tar -xvf /tmp/mmpicons.tar -C /"
-            cmd02 = "wget --no-check-certificate -U 'Enigma2 - mmpicons Plugin' -c 'http://patbuweb.com/mmpicons/mmpicons.tar' -O '/tmp/mmpicons.tar'; tar -xvf /tmp/mmpicons.tar -C /"
+            cmd01 = "wget --no-cache --no-dns-cache http://patbuweb.com/mmpicons/mmpicons.tar -O /tmp/mmpicons.tar --post-data='action=purge'; tar -xvf /tmp/mmpicons.tar -C /"
+            cmd02 = "wget --no-check-certificate --no-cache --no-dns-cache -U 'Enigma2 - mmpicons Plugin' -c 'http://patbuweb.com/mmpicons/mmpicons.tar' -O '/tmp/mmpicons.tar' --post-data='action=purge'; tar -xvf /tmp/mmpicons.tar -C /"
             cmd22 = 'find /usr/bin -name "wget"'
             res = popen(cmd22).read()
             if 'wget' not in res.lower():
@@ -173,8 +173,8 @@ def zXStreamop(answer=True):
         try:
             from os import popen, system
             from Tools import Notifications
-            cmd01 = "wget http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar -O /tmp/Zeta_4_xtreamity_opt.tar ; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
-            cmd02 = "wget --no-check-certificate -U 'Enigma2 - xtreamity Plugin' -c 'http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar' -O '/tmp/Zeta_4_xtreamity_opt.tar'; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
+            cmd01 = "wget --no-cache --no-dns-cache http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar -O /tmp/Zeta_4_xtreamity_opt.tar --post-data='action=purge'; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
+            cmd02 = "wget --no-check-certificate --no-cache --no-dns-cache -U 'Enigma2 - xtreamity Plugin' -c 'http://patbuweb.com/ozeta/Zeta_4_xtreamity_opt.tar' -O '/tmp/Zeta_4_xtreamity_opt.tar' --post-data='action=purge'; tar -xvf /tmp/Zeta_4_xtreamity_opt.tar -C /"
             cmd22 = 'find /usr/bin -name "wget"'
             res = popen(cmd22).read()
             if 'wget' not in res.lower():
@@ -199,8 +199,8 @@ def zxOptions(answer=True):
             import os
             from Tools import Notifications
             from os import popen, system
-            cmd01 = "wget http://patbuweb.com/ozeta/options.tar -O /tmp/options.tar ; tar -xvf /tmp/options.tar -C /"
-            cmd02 = "wget --no-check-certificate -U 'Enigma2 - options Plugin' -c 'http://patbuweb.com/ozeta/options.tar' -O '/tmp/options.tar'; tar -xvf /tmp/options.tar -C /"
+            cmd01 = "wget --no-cache --no-dns-cache http://patbuweb.com/ozeta/options.tar -O /tmp/options.tar --post-data='action=purge'; tar -xvf /tmp/options.tar -C /"
+            cmd02 = "wget --no-check-certificate --no-cache --no-dns-cache -U 'Enigma2 - options Plugin' -c 'http://patbuweb.com/ozeta/options.tar' -O '/tmp/options.tar' --post-data='action=purge'; tar -xvf /tmp/options.tar -C /"
             cmd22 = 'find /usr/bin -name "wget"'
             res = popen(cmd22).read()
             if 'wget' not in res.lower():
