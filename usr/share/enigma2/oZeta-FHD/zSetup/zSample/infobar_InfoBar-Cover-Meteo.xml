@@ -1,0 +1,10 @@
+<!-- *** oZeta - XML Version 2.27 Infobar Meteo By zSetup v2.0.0 *** -->
+<!-- Author mmark : Modules : PartInfobarDataChannel + TempInfobar + PartInfoDataTime + PartInfoPoster + PartInfoMeteo + PartInfoCrypt -->
+<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="PartInfobarDataChannel"/>
+    <panel name="TempInfoBar"/>
+    <panel name="PartInfoDataTime"/>
+    <panel name="PartInfoPoster"/>
+    <panel name="PartInfoMeteo"/>
+    <panel name="PartInfoCrypt"/>
+</screen>

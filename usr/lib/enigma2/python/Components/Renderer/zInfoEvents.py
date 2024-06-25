@@ -46,9 +46,10 @@ tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
 # thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
+epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
-epgcache = eEPGCache.getInstance()
+
 
 def isMountReadonly(mnt):
     mount_point = ''
@@ -118,27 +119,27 @@ def OnclearMem():
 
 
 REGEX = re.compile(
-    r'([\(\[]).*?([\)\]])|'
-    r'(: odc.\d+)|'
-    r'(\d+: odc.\d+)|'
-    r'(\d+ odc.\d+)|(:)|'
-    r'( -(.*?).*)|(,)|'
-    r'!|'
-    r'/.*|'
-    r'\|\s[0-9]+\+|'
-    r'[0-9]+\+|'
-    r'\s\*\d{4}\Z|'
-    r'([\(\[\|].*?[\)\]\|])|'
-    r'(\"|\"\.|\"\,|\.)\s.+|'
-    r'\"|:|'
-    r'Премьера\.\s|'
-    r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
-    r'(х|Х|м|М|т|Т|д|Д)/с\s|'
-    r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
-    r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-    r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-    r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
-    r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+        r'([\(\[]).*?([\)\]])|'
+        r'(: odc.\d+)|'
+        r'(\d+: odc.\d+)|'
+        r'(\d+ odc.\d+)|(:)|'
+        r'( -(.*?).*)|(,)|'
+        r'!|'
+        r'/.*|'
+        r'\|\s[0-9]+\+|'
+        r'[0-9]+\+|'
+        r'\s\*\d{4}\Z|'
+        r'([\(\[\|].*?[\)\]\|])|'
+        r'(\"|\"\.|\"\,|\.)\s.+|'
+        r'\"|:|'
+        r'Премьера\.\s|'
+        r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
+        r'(х|Х|м|М|т|Т|д|Д)/с\s|'
+        r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
+        r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+        r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+        r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
+        r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 
 def intCheck():
@@ -177,40 +178,19 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 
 def str_encode(text, encoding="utf8"):
-    if not PY3:
-        if isinstance(text, unicode):
-            return text.encode(encoding)
-        else:
-            return text
-    else:
-        return text
-
-
-def cutName(eventName=""):
-    if eventName:
-        eventName = eventName.replace('"', '').replace('Х/Ф', '').replace('М/Ф', '').replace('Х/ф', '').replace('.', '').replace(' | ', '')
-        eventName = eventName.replace('(18+)', '').replace('18+', '').replace('(16+)', '').replace('16+', '').replace('(12+)', '')
-        eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
-        eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
-        return eventName
-    return ""
-
-
-def getCleanTitle(eventitle=""):
-    save_name = re.sub('\ \(\d+\)$', '', eventitle)
-    save_name = re.sub('\ \(\d+\/\d+\)$', '', save_name)  # remove episode-number " (xx/xx)" at the end
-    # save_name = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', save_name)
-    save_name = save_name.replace(' ^`^s', '').replace(' ^`^y', '')
-    return save_name
-
+	if not PY3:
+		if isinstance(text, unicode):
+			return text.encode(encoding)
+		else:
+			return text
+	else:
+		return text
 
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
-            text = cutName(text)
-            text = getCleanTitle(text)
-            # text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.lower()
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
@@ -236,22 +216,40 @@ def convtext(text=''):
                 text.rsplit(" ", 1)[0]
                 text = text.rsplit(" ", 1)[0]
                 text = "the " + str(text)
+                # print('the from last to start text: ', text)
             text = text + 'FIN'
+            # text = re.sub("[^\w\s]", "", text)  # remove .
+            # text = re.sub(' [\:][a-z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\:][ ][a-zA-Z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\(][ ][a-zA-Z0-9]+.*?FIN', '', text)
+            # text = re.sub(' [\-][ ][a-zA-Z0-9]+.*?FIN', '', text)
+            # print('[(00)] ', text)
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
             if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
+            # print('[(01)] ', text)
+
             text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
             text = text.partition("(")[0] + 'FIN'  # .strip()
+            text = re.sub("\s\d+", "", text)
+            # print('1 odc my test:', text)
+
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()
+            # text = re.sub(r'(?:\d+\s\odc\.\d+\s)?(.+)+.*?FIN', '', text)
+            # print('2 my test:', text)
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
+            # print('[(02)] ', text)
+            # text = REGEX.sub('', text)  # paused
+            # print('[(03)] ', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            # text = unicodify(text)
             text = remove_accents(text)
             text = text.strip()
             text = text.capitalize()

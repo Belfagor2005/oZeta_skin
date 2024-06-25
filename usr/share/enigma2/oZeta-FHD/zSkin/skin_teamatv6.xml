@@ -2,7 +2,7 @@
 <skin>
     <screen name="MenuTemplate">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <panel name="bLogo"/>
         <ePixmap position="220,10" size="160,105" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="1"/>
         <!-- <widget name="menuimage" position="230,10" size="110,110" scale="1" alphatest="blend" zPosition="2" /> -->
@@ -35,7 +35,7 @@
     <!-- Skin Selector ATV -->
     <screen name="SkinSelector" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
         <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="SkinList" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
@@ -46,7 +46,7 @@
     <!-- Software Update -->
     <screen name="SoftwareUpdate" position="0,0" size="1920,1080" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="package_count" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="package_text" position="340,140" size="1140,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,5" backgroundColor="#404040" zPosition="1"/>
@@ -69,7 +69,7 @@
     </screen>
     <screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="packagenr" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="packagetext" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -112,7 +112,7 @@
     <!-- Location Box -->
     <screen name="LocationBox" position="0,0" size="1920,1080" title="Select Location" backgroundColor="#ff000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="target" position="230,140" size="1250,40" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <widget name="text" position="230,180" size="1250,40" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <eLabel position="230,230" size="1250,3" backgroundColor="#303030" zPosition="1"/>

@@ -1,0 +1,5 @@
+<!-- *** oZETA 2.0 - XML Version 2.27 TimeMediaPlayer By oZetaSetup v2.0.0 ***  -->
+<!-- Author mmark Modules : TimeMediaPlayer -->
+<screen name="MediaPlayer" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="TimeMediaPlayer"/>
+</screen>

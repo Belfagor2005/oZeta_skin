@@ -62,8 +62,6 @@ else:
     from urllib2 import urlopen
 
 
-
-
 def isMountReadonly(mnt):
     mount_point = ''
     with open('/proc/mounts') as f:
@@ -307,7 +305,6 @@ def convtext(text=''):
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
             text = text.partition("(")[0] + 'FIN'  # .strip()
-
             text = text.partition("(")[0]  # .strip()
             text = text.partition(":")[0]  # .strip()
             text = text.partition(" -")[0]  # .strip()

@@ -351,7 +351,7 @@
     <!-- ***************************************************************************************************************** -->
     <screen name="MenuTemplate">
         <panel name="LayerMenu1000-nl"/>
-        <panel name="vButtonTemplate-m1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="menuimage" position="930,5" size="110,110" scale="1" alphatest="blend" zPosition="2"/>
         <widget source="menu" render="Listbox" position="230,150" size="810,780" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
             <convert type="TemplatedMultiContent">
@@ -402,18 +402,35 @@
     <!-- Skin Selector ATV -->
     <screen name="SkinSelector" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000-nl"/>
-        <!-- <panel name="vButtonTemplate-1000"/> -->
+        <!-- <panel name="vRGYB-1000"/> -->
         <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
         <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="SkinList" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
         <eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1"/>
         <eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1"/>
         <widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5"/>
-        <ePixmap pixmap="buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
-        <ePixmap pixmap="buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
     </screen>
+
+    <screen name="SkinSelection" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1000-nl" />
+        <!-- <panel name="vRGYB-1000"/> -->
+        <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1" />
+        <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1" />
+        <widget name="SkinList" position="230,230" size="810,694" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97" />
+        <eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1" />
+        <eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1" />
+        <widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5" />
+        <ePixmap pixmap="oZeta-FHD/buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend" />
+        <widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+        <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend" />
+        <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+		<widget name="Image" position="10,10" size="10,10" alphatest="blend" conditional="Image" transparent="1" zPosition="4" />
+    </screen>
+
     <!-- *************************************** -->
     <!--   ATVPANELS * ATVPANELS * ATVPANELS *   -->
     <!-- **************************************  -->
@@ -490,7 +507,7 @@
     <!-- StandardList -->
     <screen name="mySmallChannelSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="standardList1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <panel name="standardList1000"/>
     </screen>
     <!-- Panel Info -->
@@ -511,7 +528,7 @@
     <!-- Translate Info -->
     <screen name="TranslationInfo" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <eLabel text="openATV" position="230,150" size="810,50" font="Regular;34" halign="center" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="2"/>
         <widget source="TranslationInfo" render="Label" position="230,220" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
@@ -520,7 +537,7 @@
     <!-- Softcam Manager -->
     <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <eLabel text="OK  = Installare" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="2"/>
         <widget source="key_ok" render="Label" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
@@ -541,7 +558,7 @@
     <!-- add lululla -->
     <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="config" position="230,150" size="1230,280" itemHeight="60" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
         <widget name="actifcam" font="Regular;32" position="237,486" size="500,45" halign="center"/>
         <widget name="actifcam2" font="Regular;32" position="956,486" size="500,45" halign="center"/>
@@ -550,27 +567,27 @@
     <screen name="CommitLogInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
         <panel name="information_common2"/>
-        <panel name="vButtonTemplate-1500"/>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
+        <panel name="vRGYB-1500"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
     </screen>
     <screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <panel name="information_common"/>
-        <ePixmap pixmap="buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
-        <ePixmap pixmap="iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
     </screen>
     <screen name="information_common">
         <widget name="information" position="230,150" size="1450,780" colPosition="450" conditional="information" divideChar="|" font="Regular;28" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
         <widget name="description" position="230,1385" size="415,220" font="Regular;30" conditional="description" foregroundColor="#ffffff" halign="center" backgroundColor="#000000" valign="center" transparent="1"/>
     </screen>
     <screen name="information_common2">
-        <widget name="description" position="230,2140" size="1450,60" font="egular;30" conditional="description" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0"/>
+        <widget name="description" position="230,2140" size="1450,60" font="Regular;30" conditional="description" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0"/>
         <widget name="information" position="230,150" size="1450,800" colPosition="280" conditional="information" divideChar="|" font="Console;26" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
     </screen>
     <!-- Animazioni -->
     <screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
+        <ePixmap position="0,830" size="1920,350" pixmap="oZeta-FHD/menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
         <widget source="label1" render="Label" position="20,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label2" render="Label" position="399,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label3" render="Label" position="782,900" size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1"/>
@@ -579,7 +596,7 @@
     </screen>
     <!-- Icone Menu -->
     <screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
+        <ePixmap position="0,830" size="1920,350" pixmap="oZeta-FHD/menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
         <widget source="label1" render="Label" position="25,905" size="250,130" font="Regular;28" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
         <widget source="label1s" render="Label" position="25,905" size="250,130" font="Regular;32" halign="center" valign="center" zPosition="2" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
         <widget name="pixmap1" position="25,900" size="250,130" zPosition="1" transparent="1" alphatest="on"/>
@@ -602,7 +619,7 @@
     <!-- Software Update -->
     <screen name="SoftwareUpdate" position="0,0" size="1920,1080" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="package_count" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="package_text" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -621,10 +638,10 @@
 					}
 			</convert>
         </widget>
-        <widget name="traffic_off" position="1402,135" size="90,90" zPosition="1" pixmap="icons/aoff.png" scale="1" alphatest="on"/>
-        <widget name="traffic_red" position="1402,135" size="90,90" zPosition="1" pixmap="icons/ared.png" scale="1" alphatest="on"/>
-        <widget name="traffic_yellow" position="1402,135" size="90,90" zPosition="1" pixmap="icons/ayellow.png" scale="1" alphatest="on"/>
-        <widget name="traffic_green" position="1402,135" size="90,90" zPosition="1" pixmap="icons/agreen.png" scale="1" alphatest="on"/>
+        <widget name="traffic_off" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/aoff.png" scale="1" alphatest="on"/>
+        <widget name="traffic_red" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/ared.png" scale="1" alphatest="on"/>
+        <widget name="traffic_yellow" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/ayellow.png" scale="1" alphatest="on"/>
+        <widget name="traffic_green" position="1402,135" size="90,90" zPosition="1" pixmap="oZeta-FHD/icons/agreen.png" scale="1" alphatest="on"/>
         <widget name="feedstatus_off" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
         <widget name="feedstatus_red" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
         <widget name="feedstatus_yellow" position="1043,2123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="wite" backgroundColor="#000000" transparent="1"/>
@@ -632,7 +649,7 @@
     </screen>
     <screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="packagenr" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="packagetext" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -649,10 +666,10 @@
 					}
 			</convert>
         </widget>
-        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="icons/aoff.png" alphatest="on"/>
-        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ared.png" alphatest="on"/>
-        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ayellow.png" alphatest="on"/>
-        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="icons/agreen.png" alphatest="on"/>
+        <widget name="a_off" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/aoff.png" alphatest="on"/>
+        <widget name="a_red" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ared.png" alphatest="on"/>
+        <widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/ayellow.png" alphatest="on"/>
+        <widget name="a_green" position="1000,90" size="70,70" zPosition="1" pixmap="oZeta-FHD/icons/agreen.png" alphatest="on"/>
         <widget name="feedstatusOFF" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusRED" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
         <widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
@@ -676,9 +693,9 @@
         <panel name="LocationBoxOld" conditional="textbook"/>
         <panel name="LocationBoxNew" conditional="fileheading"/>
     </screen>
-    <screen name="LocationBoxOld" position="0,0" size="1280,720" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="LocationBoxOld" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,150" size="500,50" font="Regular;40" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
         <widget name="targetfreespace" position="1180,150" size="300,50" font="Regular;40" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
@@ -691,7 +708,7 @@
     </screen>
     <screen name="LocationBoxNew" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,140" size="500,50" font="Regular;36" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
         <widget name="targetfreespace" position="1180,140" size="300,50" font="Regular;36" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
         <eLabel position="230,200" size="1250,3" backgroundColor="#303030" zPosition="1"/>

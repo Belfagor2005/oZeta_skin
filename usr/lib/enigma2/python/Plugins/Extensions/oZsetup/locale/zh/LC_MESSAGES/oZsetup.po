@@ -1,877 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: oZsetup\n"
-"POT-Creation-Date: 2024-05-28 15:51+0200\n"
-"PO-Revision-Date: 2024-05-28 15:51+0200\n"
-"Last-Translator: 沙鸥 lexlong <804381256@qq.com>\n"
-"Language-Team: Lululla\n"
+"POT-Creation-Date: 2023-09-28 20:48+0200\n"
+"PO-Revision-Date: 2023-12-21 06:30+0100\n"
+"Last-Translator: 沙鸥 <lexlong2007@gmail.com>\n"
+"Language-Team: 沙鸥\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: plugin.py\n"
 
-#: plugin.py:382
-msgid "omdb"
-msgstr ""
+msgid "         Alternative Radio Mode= Yes\n"
+msgstr "替代无线电模式= 是\n"
 
-#: plugin.py:383
-msgid "tmdb"
-msgstr ""
-
-#: plugin.py:384
-msgid "thetvdb"
-msgstr ""
-
-#: plugin.py:385
-msgid "oaweather "
-msgstr ""
-
-#: plugin.py:386
-msgid "weather"
-msgstr ""
-
-#: plugin.py:387
-msgid "autoupdate"
-msgstr ""
-
-#: plugin.py:388
-msgid "update"
-msgstr ""
-
-#: plugin.py:389
-msgid "ok"
-msgstr ""
-
-#: plugin.py:390
-msgid "mmpicons"
-msgstr ""
-
-#: plugin.py:391
-msgid "xstreamity"
-msgstr ""
-
-#: plugin.py:392
-msgid "bootlogo"
-msgstr ""
-
-#: plugin.py:393
-#, fuzzy
-#| msgid "oZsetup"
-msgid "setup"
-msgstr "OZ设置"
-
-#: plugin.py:394
-msgid "options"
-msgstr ""
-
-#: plugin.py:395
-#, fuzzy
-#| msgid "Preview"
-msgid "preview"
-msgstr "预览"
-
-#: plugin.py:396
-msgid "tmdb api:"
-msgstr ""
-
-#: plugin.py:397
-msgid "omdb api:"
-msgstr ""
-
-#: plugin.py:398
-msgid "visualweather api:"
-msgstr ""
-
-#: plugin.py:424
-msgid "Cancel"
-msgstr "取消"
-
-#: plugin.py:425
-msgid "Save"
-msgstr "保存"
-
-#: plugin.py:428
-msgid "Preview"
-msgstr "预览"
-
-#: plugin.py:429
-msgid "Restart"
-msgstr "重新启动"
-
-#: plugin.py:495
-msgid ""
-"This operation restart Gui\n"
-"Do you really want to continue?"
-msgstr ""
-"此操作重启GUI\n"
-"您确定要继续吗？"
-
-#: plugin.py:519
-msgid ""
-"ATTENTION!!\n"
-"The Skin is already installed:\n"
-"to activate you must choose from:\n"
-"menu-setup-system-skin\n"
-"and select it!\n"
-"Now you can only update the installation."
-msgstr ""
-"注意！ ！\n"
-"皮肤已安装：\n"
-"要激活，您必须从以下选项中进行选择：\n"
-"menu-setup-system-skin\n"
-"并选择它！\n"
-"现在您只能更新安装。"
-
-#: plugin.py:573
-msgid ""
-"This operation checks if the skin has its components (is not sure)..\n"
-"Do you really want to continue?"
-msgstr ""
-"该操作将检查皮肤是否有组件（不确定）.\n"
-"你真的想继续吗？"
-
-#: plugin.py:600
-msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr "安装/更新/还原 oZeta 皮肤:"
-
-#: plugin.py:602
-msgid "OZETA SKIN PARTS SETUP"
-msgstr ""
-
-#: plugin.py:603
-msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr "同时安装或自动更新 oZeta 插件和皮肤"
-
-#: plugin.py:605
-#, fuzzy
-#| msgid "Installation oZeta Skin"
-msgid "Install/Update/Restore oZeta Skin"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:605
-msgid ""
-"Install/Update/Restore Stable Version oZeta Skin\n"
-"Press OK"
-msgstr ""
-"安装/更新/恢复稳定版 oZeta 皮肤\n"
-"按确定"
-
-#: plugin.py:606
-msgid "Install/Update Options Developer"
-msgstr ""
-
-#: plugin.py:606
-msgid ""
-"Install Test Options oZeta Skin\n"
-"Press OK"
-msgstr ""
-"安装测试选项 oZeta 皮肤\n"
-"按确定"
-
-#: plugin.py:607
-msgid "Install/Update Preview Png"
-msgstr ""
-
-#: plugin.py:607
-msgid ""
-"Install Preview Screen of oZeta Skin\n"
-"Press OK"
-msgstr ""
-"安装测试选项 oZeta 皮肤\n"
-"按确定"
-
-#: plugin.py:608
-msgid ""
-"Check for Upgradable Conponent Skin\n"
-"Press OK"
-msgstr ""
-"检查可升级组件皮肤\n"
-"按下OK"
-
-#: plugin.py:611
-msgid "Menu:"
-msgstr ""
-
-#: plugin.py:611
-msgid "Settings Menu Image Panel"
-msgstr "设置菜单 图像面板"
-
-#: plugin.py:613
-msgid "Infobar:"
-msgstr ""
-
-#: plugin.py:613
-msgid "Settings Infobar Panels"
-msgstr "设置第一信息栏面板"
-
-#: plugin.py:615
-msgid "Second Infobar:"
-msgstr ""
-
-#: plugin.py:615
-msgid "Settings SecInfobar Panels"
-msgstr "设置 第二信息栏面板"
-
-#: plugin.py:617
-msgid "Channel Selection:"
-msgstr ""
-
-#: plugin.py:617
-msgid "Settings Channel Panels"
-msgstr "设置 通道面板"
-
-#: plugin.py:619
-#, fuzzy
-#| msgid "Settings Volume Panels"
-msgid "Volume Panel:"
-msgstr "设置 音量面板"
-
-#: plugin.py:619
-msgid "Settings Volume Panels"
-msgstr "设置 音量面板"
-
-#: plugin.py:621
-#, fuzzy
-#| msgid "Settings Radio Panels"
-msgid "Radio Panel:"
-msgstr "设置 收音机面板"
-
-#: plugin.py:621
-msgid "Settings Radio Panels"
-msgstr "设置 收音机面板"
-
-#: plugin.py:623
-#, fuzzy
-#| msgid "Settings MediaPlayer Panels"
-msgid "MediaPlayer Panel:"
-msgstr "设置 媒体播放器面板"
-
-#: plugin.py:623
-msgid "Settings MediaPlayer Panels"
-msgstr "设置 媒体播放器面板"
-
-#: plugin.py:625
-#, fuzzy
-#| msgid "Settings Eventview Panels"
-msgid "Eventview Panel:"
-msgstr "设置 事件视图面板"
-
-#: plugin.py:625
-msgid "Settings Eventview Panels"
-msgstr "设置 事件视图面板"
-
-#: plugin.py:628
-#, fuzzy
-#| msgid "Settings PluginBrowser Panels"
-msgid "PluginBrowser Panel:"
-msgstr "设置 通道面板"
-
-#: plugin.py:628
-msgid "Settings PluginBrowser Panels"
-msgstr "设置 通道面板"
-
-#: plugin.py:630
-msgid "MessageBox Panel:"
-msgstr ""
-
-#: plugin.py:630
-msgid "Settings MessageBox Colors"
-msgstr "设置消息框颜色"
-
-#: plugin.py:632
-msgid "Meteo Panel:"
-msgstr ""
-
-#: plugin.py:632
-msgid "Settings Meteo Models"
-msgstr "设置气象类型"
-
-#: plugin.py:634
-#, fuzzy
-#| msgid "Settings Logo Image Top"
-msgid "Logo Image Top:"
-msgstr "设置顶部固件logo"
-
-#: plugin.py:634
-msgid "Settings Logo Image Top"
-msgstr "设置顶部固件logo"
-
-#: plugin.py:636
-#, fuzzy
-#| msgid "Settings Logo Image Bottom"
-msgid "Logo Image Bottom:"
-msgstr "设置底部固件logo"
-
-#: plugin.py:636
-msgid "Settings Logo Image Bottom"
-msgstr "设置底部固件logo"
-
-#: plugin.py:638
-msgid "Bootlogo Image:"
-msgstr ""
-
-#: plugin.py:638
-msgid ""
-"Settings Bootlogo Image\n"
-"Press Ok for change"
-msgstr ""
-"设置引导标识图像\n"
-"按 \"确定 \"进行更改"
-
-#: plugin.py:640
-msgid "SERVER API KEY SETUP"
-msgstr ""
-
-#: plugin.py:641
-msgid "API KEY SETUP:"
-msgstr ""
-
-#: plugin.py:641
-msgid "Settings oZeta Apikey Server"
-msgstr "设置 oZeta Apikey 服务器"
-
-#: plugin.py:643
-msgid "TMDB API:"
-msgstr ""
-
-#: plugin.py:643
-msgid "Settings TMDB ApiKey"
-msgstr "设置 TMDB API密钥"
-
-#: plugin.py:645
-msgid "--Load TMDB Apikey"
-msgstr ""
-
-#: plugin.py:645
-msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr "从 /tmp/apikey.txt 加载 TMDB Apikey"
-
-#: plugin.py:646
-#, fuzzy
-#| msgid "Settings TMDB ApiKey"
-msgid "--Set TMDB Apikey"
-msgstr "设置 TMDB API密钥"
-
-#: plugin.py:646
-msgid "Signup on TMDB and input free personal ApiKey"
-msgstr "在 TMDB 上注册并输入免费的个人 ApiKey"
-
-#: plugin.py:647
-msgid "OMDB API:"
-msgstr ""
-
-#: plugin.py:647
-msgid "Settings OMDB APIKEY"
-msgstr "设置 OMDB API密钥"
-
-#: plugin.py:649
-msgid "--Load OMDB Apikey"
-msgstr ""
-
-#: plugin.py:649
-msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr "从 /tmp/omdbkey.txt 加载 OMDB Apikey"
-
-#: plugin.py:650
-#, fuzzy
-#| msgid "Settings TMDB ApiKey"
-msgid "--Set OMDB Apikey"
-msgstr "设置 TMDB API密钥"
-
-#: plugin.py:650
-msgid "Signup on OMDB and input free personal ApiKey"
-msgstr "在 OMDB 上注册并输入免费的个人 ApiKey"
-
-#: plugin.py:651
-#, fuzzy
-#| msgid "Settings THETVDB APIKEY"
-msgid "THETVDB API:"
-msgstr "设置 THETVDB API密钥"
-
-#: plugin.py:651
-msgid "Settings THETVDB APIKEY"
-msgstr "设置 THETVDB API密钥"
-
-#: plugin.py:653
-msgid "--Load THETVDB Apikey"
-msgstr ""
-
-#: plugin.py:653
-msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr "从 /tmp/thetvdbkey.txt 加载 THETVDB Apikey"
-
-#: plugin.py:654
-#, fuzzy
-#| msgid "Settings TMDB ApiKey"
-msgid "--Set THETVDB Apikey"
-msgstr "设置 TMDB API密钥"
-
-#: plugin.py:654
-msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr "在 THETVDB 上注册并输入免费的个人 ApiKey"
-
-#: plugin.py:656
-msgid "WEATHER BOX SETUP"
-msgstr ""
-
-#: plugin.py:657
-msgid "WEATHER:"
-msgstr ""
-
-#: plugin.py:657
-msgid "Settings oZeta Weather"
-msgstr "设置 oZeta 天气"
-
-#: plugin.py:660
-#, fuzzy
-#| msgid ""
-#| "Install or Open OAWeather Plugin\n"
-#| "Press OK"
-msgid "Install or Open OAWeather Plugin"
-msgstr ""
-"安装或打开 OAWeather 插件\n"
-"按确定"
-
-#: plugin.py:660
-msgid ""
-"Install or Open OAWeather Plugin\n"
-"Press OK"
-msgstr ""
-"安装或打开 OAWeather 插件\n"
-"按确定"
-
-#: plugin.py:661
-#, fuzzy
-#| msgid ""
-#| "Install or Open Weather Plugin\n"
-#| "Press OK"
-msgid "Install or Open Weather Plugin"
-msgstr ""
-"安装或打开天气插件\n"
-"按确定"
-
-#: plugin.py:661
-msgid ""
-"Install or Open Weather Plugin\n"
-"Press OK"
-msgstr ""
-"安装或打开天气插件\n"
-"按确定"
-
-#: plugin.py:662
-#, fuzzy
-#| msgid ""
-#| "Install or Open TheWeather Plugin\n"
-#| "Press OK"
-msgid "Install or Open TheWeather Plugin"
-msgstr ""
-"安装或打开天气插件\n"
-"按确定"
-
-#: plugin.py:662
-msgid ""
-"Install or Open TheWeather Plugin\n"
-"Press OK"
-msgstr ""
-"安装或打开天气插件\n"
-"按确定"
-
-#: plugin.py:664
-#, fuzzy
-#| msgid "Settings oZeta Weather"
-msgid "--Setting Weather City"
-msgstr "设置 oZeta 天气"
-
-#: plugin.py:664
-msgid "Settings City Weather Plugin"
-msgstr "设置城市天气插件"
-
-#: plugin.py:668
-#, fuzzy
-#| msgid "Install WeatherPlugin"
-msgid "VisualWeather Plugin API:"
-msgstr "安装天气插件"
-
-#: plugin.py:668
-msgid "Settings VISUALWEATHER APIKEY"
-msgstr "设置 VISUALWEATHER API密钥"
-
-#: plugin.py:670
-msgid "--Load VISUALWEATHER Apikey"
-msgstr ""
-
-#: plugin.py:670
-msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 加载 VISUALWEATHER Apikey"
-
-#: plugin.py:671
-#, fuzzy
-#| msgid "Settings VISUALWEATHER APIKEY"
-msgid "--Set VISUALWEATHER Apikey"
-msgstr "设置 VISUALWEATHER API密钥"
-
-#: plugin.py:671
-msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr "在 www.visualcrossing.com 上注册并输入免费的个人 ApiKey"
-
-#: plugin.py:673
-msgid "MISC SETUP"
-msgstr ""
-
-#: plugin.py:674
-#, fuzzy
-#| msgid ""
-#| "Install or Open mmPicons Plugin\n"
-#| "Press OK"
-msgid "Install or Open mmPicons Plugin"
-msgstr ""
-"安装或打开 mmPicons 插件\n"
-"按确定"
-
-#: plugin.py:674
-msgid ""
-"Install or Open mmPicons Plugin\n"
-"Press OK"
-msgstr ""
-"安装或打开 mmPicons 插件\n"
-"按确定"
-
-#: plugin.py:676
-#, fuzzy
-#| msgid ""
-#| "Install Skin Zeta for XStreamity Plugin (only FHD)\n"
-#| "Press Ok"
-msgid "Install Skin Zeta for XStreamity Plugin (only FHD)"
-msgstr ""
-"安装Skin Zeta for XStreamity插件（仅限FHD ）\n"
-"按OK"
-
-#: plugin.py:676
-msgid ""
-"Install Skin Zeta for XStreamity Plugin (only FHD)\n"
-"Press Ok"
-msgstr ""
-"安装Skin Zeta for XStreamity插件（仅限FHD ）\n"
-"按OK"
-
-#: plugin.py:690
-msgid "SELECT YOUR CHOICE"
-msgstr "请选择"
-
-#: plugin.py:797
-msgid ""
-"Install Skin Zeta for XStreamity Plugin (only FHD)\n"
-"Do you really want to install now?"
-msgstr ""
-"安装Skin Zeta for XStreamity插件（仅限FHD ）\n"
-"您确定要立即安装吗？"
-
-#: plugin.py:800
-msgid ""
-"Install Skin Zeta for XStreamity Plugin (only FHD)...\n"
-"Please Wait"
-msgstr ""
-"安装Skin Zeta for XStreamity插件（仅限FHD ）...\n"
-"请稍候"
-
-#: plugin.py:801
-msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
-"安装可选的 XStreamity 皮肤\n"
-"按确定"
-
-#: plugin.py:807
-msgid "Missing XStreamity Plugins!"
-msgstr "缺少 XStreamity 插件！"
-
-#: plugin.py:817
-msgid "Do you really want to change Bootlogo image?"
-msgstr "您真的想更改 Bootlogo 图片吗？"
-
-#: plugin.py:826
-msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr "更改引导标识并备份为 default_bootlogo.mvi！"
-
-#: plugin.py:841
-msgid ""
-"Bootlogo changed!\n"
-"Restart Gui please"
-msgstr ""
-"更改了 Bootlogo！\n"
-"请重新启动 Gui"
-
-#: plugin.py:1096
-msgid "Successfully creating Skin!"
-msgstr "成功创建皮肤！"
-
-#: plugin.py:1151
-msgid "You have the latest version of the oZeta Skin"
-msgstr "您有最新版本的 "
-
-#: plugin.py:1196
-msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr "从 /tmp/apikey.txt 导入TMDB 的api密钥？"
-
-#: plugin.py:1198 plugin.py:1211 plugin.py:1220 plugin.py:1233 plugin.py:1242
-#: plugin.py:1255 plugin.py:1264 plugin.py:1277
-#, python-format
-msgid "Missing %s !"
-msgstr "缺少 %s ！"
-
-#: plugin.py:1209
-msgid "TMDB ApiKey Imported & Stored!"
-msgstr "导入并存储的 TMDB ApiKey！"
-
-#: plugin.py:1218
-msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr "从 /tmp/omdbkey.txt 导入OMDB的api密钥？"
-
-#: plugin.py:1231
-msgid "OMDB ApiKey Imported & Stored!"
-msgstr "导入并存储的 OMDB ApiKey！"
-
-#: plugin.py:1240
-msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 导入 Api 密钥 VISUALWEATHER？"
-
-#: plugin.py:1253
-msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr "VISUALWEATHER ApiKey 导入并存储！"
-
-#: plugin.py:1262
-msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr "从 /tmp/thetvdbkey.txt 导入THETVDB 的api密钥？"
-
-#: plugin.py:1275
-msgid "THETVDB ApiKey Imported & Stored!"
-msgstr "THETVDB ApiKey 已导入并存储！"
-
-#: plugin.py:1284
-msgid "Reset Settings to Defaults Parameters?"
-msgstr "将设置重置为默认参数？"
-
-#: plugin.py:1308
-msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr "皮肤存在 你真的想升级吗？"
-
-#: plugin.py:1310
-msgid ""
-"Do you really want to install the oZeta Skin ?\n"
-"Do it at your own risk.\n"
-"Do you want to continue?"
-msgstr ""
-"你真的想安装 oZeta 皮肤吗？\n"
-"风险自担。\n"
-"还想继续吗？"
-
-#: plugin.py:1323
-msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr "皮肤存在 你真的想升级吗？"
-
-#: plugin.py:1369
-msgid "Installation oZeta Skin Conponent"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1372
-msgid ""
-"Download Error!!!\n"
-"Please Report Issue on forum:\n"
-"zConponent error"
-msgstr ""
-"下载错误！ ！ ！\n"
-"请在论坛上报告问题：\n"
-"zConponent错误"
-
-#: plugin.py:1374
-msgid ""
-"OZSKIN CONPONENT DONE\n"
-"PLEASE RESTART GUI"
-msgstr ""
-"OZSKIN 更新\n"
-"请重新启动GUI"
-
-#: plugin.py:1389
-msgid "Installation oZeta Skin"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1392
-msgid ""
-"Download Error!!!\n"
-"Please Report Issue on forum:\n"
-"zSkin error"
-msgstr ""
-"下载错误！ ！ ！\n"
-"请在论坛上报告问题：\n"
-"zSkin错误"
-
-#: plugin.py:1411
-msgid "Installation oZeta Skin OpenPLi"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1424
-msgid "Installation oZeta Skin OpenATV"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1432
-msgid "Installation oZeta Skin OpenSPA"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1440
-msgid "Installation oZeta Skin Egami"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1442
-msgid "Image Box Not Tested!!"
-msgstr "这边没有这个盒子的固件"
-
-#: plugin.py:1449
-msgid ""
-"Install Test Options for oZeta skin\n"
-"Do you really want to install now?"
-msgstr ""
-"为 oZeta 皮肤安装测试选项\n"
-"你真的想现在安装吗？"
-
-#: plugin.py:1462 plugin.py:1485
-msgid "Installation oZeta Skin options"
-msgstr "安装 oZeta 皮肤"
-
-#: plugin.py:1466 plugin.py:1489
-msgid ""
-"Download Error!!!\n"
-"Please Report Issue on forum:\n"
-"goUp error"
-msgstr ""
-"下载错误！ ！ ！\n"
-"请在论坛上报告问题：\n"
-"goUp错误"
-
-#: plugin.py:1468 plugin.py:1491
-msgid ""
-"OZSKIN OPTIONS DONE\n"
-"PLEASE RESTART GUI"
-msgstr ""
-"OZSKIN 更新\n"
-"请重新启动GUI"
-
-#: plugin.py:1472
-msgid ""
-"Install Preview for oZeta skin Options\n"
-"Do you really want to install now?"
-msgstr ""
-"为 oZeta 皮肤安装测试选项\n"
-"你真的想现在安装吗？"
-
-#: plugin.py:1518
-msgid ""
-"OZSKIN UPDATE\n"
-"PLEASE RESTART GUI"
-msgstr ""
-"OZSKIN 更新\n"
-"请重新启动GUI"
-
-#: plugin.py:1532
-msgid ""
-"mmPicons Plugin Not Installed!!\n"
-"Do you really want to install now?"
-msgstr ""
-"mmPicons 插件未安装!\n"
-"你真的想现在安装吗？"
-
-#: plugin.py:1545
-msgid "Installation mmpicons Plugin"
-msgstr "安装或打开 mmPicons 插件"
-
-#: plugin.py:1549
-msgid ""
-"Download Error!!!\n"
-"Please Report Issue on forum:\n"
-"zMMpicons error"
-msgstr ""
-"下载错误！ ！ ！\n"
-"请在论坛上报告问题：\n"
-"zMMpicons错误"
-
-#: plugin.py:1551
-msgid ""
-"MMPICONS PLUGIN INSTALLED\n"
-"PLEASE RESTART GUI"
-msgstr ""
-"MMPICONS插件已安装，\n"
-"请重启GUI"
-
-#: plugin.py:1561
-msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr "已输入天气数据，是否要继续？"
-
-#: plugin.py:1581
-msgid ""
-"Weather Plugin Plugin Not Installed!!\n"
-"Do you really want to install now?"
-msgstr ""
-"天气插件未安装！！\n"
-"你真的想现在安装吗？"
-
-#: plugin.py:1582
-msgid "Install Weather Plugin and Reboot"
-msgstr "安装天气插件并重新启动"
-
-#: plugin.py:1598
-msgid "Install WeatherPlugin"
-msgstr "安装天气插件"
-
-#: plugin.py:1604
-msgid "Plugin WeatherPlugin not installed!!!"
-msgstr "未安装插件 WeatherPlugin！！！"
-
-#: plugin.py:1610
-msgid "Open OAWeather, do you want to continue?"
-msgstr "打开 OAWeather，要继续吗？"
-
-#: plugin.py:1614
-msgid ""
-"OAWeather Plugin Plugin Not Installed!!\n"
-"Do you really want to install now?"
-msgstr ""
-"OAWeather Plugin 插件未安装！！\n"
-"你真的想现在安装吗？"
-
-#: plugin.py:1615
-msgid "Install OAWeather Plugin and Reboot"
-msgstr "安装 OAWeather 插件并重新启动"
-
-#: plugin.py:1632
-msgid "Install OAWeatherPlugin"
-msgstr "安装 OAWeatherPlugin"
-
-#: plugin.py:1638
-msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr "未安装插件 OAWeatherPlugin！！！"
-
-#: plugin.py:1649
-msgid "Plugin TheWeather not installed!!!"
-msgstr "未安装插件 OAWeatherPlugin！！！"
-
-#: plugin.py:1736
-msgid "Back"
-msgstr "返回"
-
-#: plugin.py:1737
-msgid "ApiKey Info"
-msgstr "ApiKey 信息"
-
-#: plugin.py:1738
-msgid "Preview Info"
-msgstr "预览信息"
-
-#: plugin.py:1739
-msgid "Restart Info"
-msgstr "重启信息"
-
-#: plugin.py:1780
 msgid ""
 "         Exit zSetup\n"
 "\n"
@@ -879,39 +23,6 @@ msgstr ""
 "         退出设置\n"
 "\n"
 
-#: plugin.py:1782
-msgid ""
-"         Save and Copy changes in the Settings xml file\n"
-"\n"
-msgstr ""
-"         保存并复制设置 xml 文件中的更改\n"
-"\n"
-
-#: plugin.py:1784
-msgid ""
-"         View Pic of Panels preview, in the FullHD mode\n"
-"\n"
-msgstr ""
-"        查看全高清模式下的面板预览图片\n"
-"\n"
-
-#: plugin.py:1786
-msgid ""
-"         Restart E2 but not apply changes\n"
-"\n"
-msgstr ""
-"重新启动E2 ，但不应用更改\n"
-"\n"
-
-#: plugin.py:1788
-msgid ""
-"         Reset Settings\n"
-"\n"
-msgstr ""
-"        重置设置\n"
-"\n"
-
-#: plugin.py:1790
 msgid ""
 "         Install or Set Weather Plugin if installed\n"
 "\n"
@@ -919,59 +30,73 @@ msgstr ""
 "         安装或设置天气插件（如果已安装\n"
 "\n"
 
-#: plugin.py:1792
 msgid "         Menu/Setup/Graphic Interface/OSD Setup\n"
 msgstr "         菜单/设置/图形界面/OSD 设置\n"
 
-#: plugin.py:1793
-msgid "         Alternative Radio Mode= Yes\n"
-msgstr "替代无线电模式= 是\n"
-
-#: plugin.py:1803
-msgid "    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
-
-#: plugin.py:1804
-msgid "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
-
-#: plugin.py:1805
-msgid "    Or manually enter the key, created on the OMDB portal'\n"
-msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
-
-#: plugin.py:1806
-msgid "    use the virtual keyboard.\n"
-msgstr "    --使用虚拟键盘或从默认配置插件中导入\n"
-
-#: plugin.py:1807
 msgid ""
-"    Or import from /tmp the file omdbkey.txt\n"
+"         Reset Settings\n"
 "\n"
 msgstr ""
-"或从 /tmp 导入文件 omdbkey.txt\n"
+"        重置设置\n"
 "\n"
 
-#: plugin.py:1809
-msgid "    For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
+msgid "         Restart E2 but not apply changes\n"
+msgstr "         重新启动 E2，但不应用更改\n"
 
-#: plugin.py:1810
+msgid ""
+"         Restart E2 but not apply changes\n"
+"\n"
+msgstr "         重新启动 E2，但不应用更改\n"
+
+msgid ""
+"         Save and Copy changes in the Settings xml file\n"
+"\n"
+msgstr ""
+"         保存并复制设置 xml 文件中的更改\n"
+"\n"
+
+msgid "         Save and Copy changes in the xml file config\n"
+msgstr ""
+"         保存并复制设置 xml 文件中的更改\n"
+"\n"
+
+msgid ""
+"         View Pic of Panels preview, in the FullHD mode\n"
+"\n"
+msgstr ""
+"        查看全高清模式下的面板预览图片\n"
+"\n"
+
+msgid "    --Automatic Import from Plugin\n"
+msgstr "从远程遥控器导入URL\n"
+
+msgid "    --use the virtual keyboard or import from default config plugin"
+msgstr "  --使用虚拟键盘或从默认配置插件中导入"
+
 msgid "    /usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\n"
 
-#: plugin.py:1811
-msgid "    Or manually enter the key, created on the TMDB portal\n"
-msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
+msgid "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
 
-#: plugin.py:1812 plugin.py:1818
-msgid ""
-"    use the virtual keyboard.\n"
-"\n"
-msgstr ""
-"  --使用虚拟键盘或从默认配置插件中导入\n"
-"\n"
+msgid "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 
-#: plugin.py:1813
+msgid "    For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
+msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
+
+msgid "    For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
+msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
+
+msgid "    For use The TMDB Covers, copy the apikey file in the skin folder:\n"
+msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
+
+msgid "    For use The WeatherPlugin:\n"
+msgstr "用于 WeatherPlugin：\n"
+
+msgid "    For use VisualWeather\n"
+msgstr "用于 VisualWeather\n"
+
 msgid ""
 "    Or import from /tmp the file apikey.txt\n"
 "\n"
@@ -979,19 +104,13 @@ msgstr ""
 "或从 /tmp 导入 apikey.txt 文件\n"
 "\n"
 
-#: plugin.py:1815
-msgid "    For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "要使用 OMDB Covers，请复制皮肤文件夹中的 omdbkey 文件：\n"
+msgid ""
+"    Or import from /tmp the file omdbkey.txt\n"
+"\n"
+msgstr ""
+"或从 /tmp 导入文件 omdbkey.txt\n"
+"\n"
 
-#: plugin.py:1816
-msgid "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
-
-#: plugin.py:1817
-msgid "    Or manually enter the key, created on the THETMDB portal\n"
-msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
-
-#: plugin.py:1819
 msgid ""
 "    Or import from /tmp the file thetvdbkey.txt\n"
 "\n"
@@ -999,23 +118,240 @@ msgstr ""
 "或从 /tmp 导入文件 tvdbkey.txt\n"
 "\n"
 
-#: plugin.py:1821
-msgid "    For use The WeatherPlugin:\n"
-msgstr "用于 WeatherPlugin：\n"
+msgid "    Or manually enter the key, created on the OMDB portal'\n"
+msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
 
-#: plugin.py:1822
-msgid "    --Automatic Import from Plugin\n"
-msgstr "从远程遥控器导入URL\n"
+msgid "    Or manually enter the key, created on the THETMDB portal\n"
+msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
 
-#: plugin.py:1823
-msgid "    For use VisualWeather\n"
-msgstr "用于 VisualWeather\n"
+msgid "    Or manually enter the key, created on the TMDB portal\n"
+msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
 
-#: plugin.py:1824
-msgid "    --use the virtual keyboard or import from default config plugin"
-msgstr "  --使用虚拟键盘或从默认配置插件中导入"
+msgid "    use the virtual keyboard.\n"
+msgstr "    --使用虚拟键盘或从默认配置插件中导入\n"
 
-#: plugin.py:1832
+msgid ""
+"    use the virtual keyboard.\n"
+"\n"
+msgstr ""
+"  --使用虚拟键盘或从默认配置插件中导入\n"
+"\n"
+
+msgid "ApiKey Info"
+msgstr "ApiKey 信息"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
+msgstr "更改引导标识并备份为 default_bootlogo.mvi！"
+
+msgid ""
+"Bootlogo changed!\n"
+"Restart Gui please"
+msgstr ""
+"更改了 Bootlogo！\n"
+"请重新启动 Gui"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Click Exit for close this window"
+msgstr "单击 \"退出 \"关闭该窗口"
+
+msgid "Data entered for the Weather, do you want to continue the same?"
+msgstr "已输入天气数据，是否要继续？"
+
+msgid "Do you really want to change Bootlogo image?"
+msgstr "您真的想更改 Bootlogo 图片吗？"
+
+msgid ""
+"Do you really want to install the oZeta Skin ??\n"
+"Do it at your own risk.\n"
+"Do you want to continue?"
+msgstr ""
+"你真的想安装 oZeta 皮肤吗？\n"
+"风险自担。\n"
+"还想继续吗？"
+
+msgid "Error creating Skin!"
+msgstr "创建皮肤错误!"
+
+msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
+msgstr "从 /tmp/omdbkey.txt 导入OMDB的api密钥？"
+
+msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
+msgstr "从 /tmp/thetvdbkey.txt 导入THETVDB 的api密钥？"
+
+msgid "Import Api Key TMDB from /tmp/apikey.txt?"
+msgstr "从 /tmp/apikey.txt 导入TMDB 的api密钥？"
+
+msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
+msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 导入 Api 密钥 VISUALWEATHER？"
+
+msgid "Install OAWeather Plugin and Reboot"
+msgstr "安装 OAWeather 插件并重新启动"
+
+msgid "Install OAWeatherPlugin"
+msgstr "安装 OAWeatherPlugin"
+
+msgid ""
+"Install Optional XStreamity Skin\n"
+"Press Ok"
+msgstr ""
+"安装可选的 XStreamity 皮肤\n"
+"按确定"
+
+msgid ""
+"Install Optional XStreamity skin\n"
+"Do you really want to install now?"
+msgstr ""
+"安装可选的 XStreamity 皮肤\n"
+"你真的想现在安装吗？"
+
+msgid ""
+"Install Optional XStreamity skin...\n"
+"Please Wait"
+msgstr ""
+"安装可选的 XStreamity 皮肤...\n"
+"请稍候"
+
+msgid "Install Options"
+msgstr "安装选项"
+
+msgid ""
+"Install Test Options for oZeta skin\n"
+"Do you really want to install now?"
+msgstr ""
+"为 oZeta 皮肤安装测试选项\n"
+"你真的想现在安装吗？"
+
+msgid ""
+"Install Test Options oZeta Skin\n"
+"Press OK"
+msgstr ""
+"安装测试选项 oZeta 皮肤\n"
+"按确定"
+
+msgid ""
+"Install Test Options...\n"
+"Please Wait"
+msgstr ""
+"安装测试选项...\n"
+"请稍候"
+
+msgid "Install Weather Plugin and Reboot"
+msgstr "安装天气插件并重新启动"
+
+msgid "Install WeatherPlugin"
+msgstr "安装天气插件"
+
+msgid "Install mmPicons"
+msgstr "安装mmPicons"
+
+msgid "Install or Autoupdate oZeta Plugin & Skin on both"
+msgstr "同时安装或自动更新 oZeta 插件和皮肤"
+
+msgid ""
+"Install or Open OAWeather Plugin\n"
+"Press OK"
+msgstr ""
+"安装或打开 OAWeather 插件\n"
+"按确定"
+
+msgid ""
+"Install or Open Weather Plugin\n"
+"Press OK"
+msgstr ""
+"安装或打开天气插件\n"
+"按确定"
+
+msgid ""
+"Install or Open mmPicons Plugin\n"
+"Press OK"
+msgstr ""
+"安装或打开 mmPicons 插件\n"
+"按确定"
+
+msgid ""
+"Install/Update/Restore Stable Version oZeta Skin\n"
+"Press OK"
+msgstr ""
+"安装/更新/恢复稳定版 oZeta 皮肤\n"
+"按确定"
+
+msgid "Installation oZeta Skin"
+msgstr "安装 oZeta 皮肤"
+
+msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
+msgstr "从 /tmp/omdbkey.txt 加载 OMDB Apikey"
+
+msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
+msgstr "从 /tmp/thetvdbkey.txt 加载 THETVDB Apikey"
+
+msgid "Load TMDB Apikey from /tmp/apikey.txt"
+msgstr "从 /tmp/apikey.txt 加载 TMDB Apikey"
+
+msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
+msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 加载 VISUALWEATHER Apikey"
+
+msgid "Missing %s !"
+msgstr "缺少 %s ！"
+
+msgid "Missing XStreamity Plugins!"
+msgstr "缺少 XStreamity 插件！"
+
+msgid ""
+"OAWeather Plugin Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+"OAWeather Plugin 插件未安装！！\n"
+"你真的想现在安装吗？"
+
+msgid "OMDB ApiKey Imported & Stored!"
+msgstr "导入并存储的 OMDB ApiKey！"
+
+msgid ""
+"OZSKIN UPDATE\n"
+"PLEASE RESTART GUI"
+msgstr ""
+"OZSKIN 更新\n"
+"请重新启动GUI"
+
+msgid "Open OAWeather, do you want to continue?"
+msgstr "打开 OAWeather，要继续吗？"
+
+msgid "Plugin OAWeatherPlugin not installed!!!"
+msgstr "未安装插件 OAWeatherPlugin！！！"
+
+msgid "Plugin WeatherPlugin not installed!!!"
+msgstr "未安装插件 WeatherPlugin！！！"
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Preview Info"
+msgstr "预览信息"
+
+msgid "Really close without saving settings?"
+msgstr "是否关闭而不保存设置？"
+
+msgid "Reset Settings to Defaults Parameters?"
+msgstr "将设置重置为默认参数？"
+
+msgid "Restart"
+msgstr "重新启动"
+
+msgid ""
+"Restart E2 Now..\n"
+"Do you really want to restart GUI now?"
+msgstr ""
+"现在重启 E2...\n"
+"您现在真的想重启图形用户界面吗？"
+
+msgid "Restart Info"
+msgstr "重启信息"
+
 msgid ""
 "SAVE & RESTART\n"
 "\n"
@@ -1023,83 +359,129 @@ msgstr ""
 "保存和重启\n"
 "\n"
 
-#: plugin.py:1834
-msgid "         Save and Copy changes in the xml file config\n"
+msgid "SELECT YOUR CHOICE"
+msgstr "请选择"
+
+msgid "Save"
+msgstr "保存"
+
+msgid ""
+"Settings Bootlogo Image\n"
+"Press Ok for change"
 msgstr ""
-"         保存并复制设置 xml 文件中的更改\n"
-"\n"
+"设置引导标识图像\n"
+"按 \"确定 \"进行更改"
 
-#: plugin.py:1836
-msgid "         Restart E2 but not apply changes\n"
-msgstr "         重新启动 E2，但不应用更改\n"
+msgid "Settings Channel Panels"
+msgstr "设置 通道面板"
 
-#: plugin.py:1855
-msgid "Click Exit for close this window"
-msgstr "单击 \"退出 \"关闭该窗口"
+msgid "Settings City Weather Plugin"
+msgstr "设置城市天气插件"
 
-#: plugin.py:1897
+msgid "Settings Eventview Panels"
+msgstr "设置 事件视图面板"
+
+msgid "Settings Infobar Panels"
+msgstr "设置第一信息栏面板"
+
+msgid "Settings Logo Image Bottom"
+msgstr "设置底部固件logo"
+
+msgid "Settings Logo Image Top"
+msgstr "设置顶部固件logo"
+
+msgid "Settings MediaPlayer Panels"
+msgstr "设置 媒体播放器面板"
+
+msgid "Settings Menu Image Panel"
+msgstr "设置菜单 图像面板"
+
+msgid "Settings OMDB APIKEY"
+msgstr "设置 OMDB API密钥"
+
+msgid "Settings Radio Panels"
+msgstr "设置 收音机面板"
+
+msgid "Settings SecInfobar Panels"
+msgstr "设置 第二信息栏面板"
+
+msgid "Settings THETVDB APIKEY"
+msgstr "设置 THETVDB API密钥"
+
+msgid "Settings TMDB ApiKey"
+msgstr "设置 TMDB API密钥"
+
+msgid "Settings VISUALWEATHER APIKEY"
+msgstr "设置 VISUALWEATHER API密钥"
+
+msgid "Settings Volume Panels"
+msgstr "设置 音量面板"
+
+msgid "Settings oZeta Apikey Server"
+msgstr "设置 oZeta Apikey 服务器"
+
+msgid "Settings oZeta Weather"
+msgstr "设置 oZeta 天气"
+
+msgid "Signup on OMDB and input free personal ApiKey"
+msgstr "在 OMDB 上注册并输入免费的个人 ApiKey"
+
+msgid "Signup on THETVDB and input free personal ApiKey"
+msgstr "在 THETVDB 上注册并输入免费的个人 ApiKey"
+
+msgid "Signup on TMDB and input free personal ApiKey"
+msgstr "在 TMDB 上注册并输入免费的个人 ApiKey"
+
+msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
+msgstr "在 www.visualcrossing.com 上注册并输入免费的个人 ApiKey"
+
+msgid "Skin exist!! Do you really want to Upgrade?"
+msgstr "皮肤存在 你真的想升级吗？"
+
+msgid "Successfully creating Skin!"
+msgstr "成功创建皮肤！"
+
+msgid "THETVDB ApiKey Imported & Stored!"
+msgstr "THETVDB ApiKey 已导入并存储！"
+
+msgid "TMDB ApiKey Imported & Stored!"
+msgstr "导入并存储的 TMDB ApiKey！"
+
+msgid ""
+"This operation checks if the skin has its components (is not sure)..\n"
+"Do you really want to continue?"
+msgstr ""
+"该操作将检查皮肤是否有组件（不确定）.\n"
+"你真的想继续吗？"
+
+msgid "VISUALWEATHER ApiKey Imported & Stored!"
+msgstr "VISUALWEATHER ApiKey 导入并存储！"
+
+msgid ""
+"Weather Plugin Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+"天气插件未安装！！\n"
+"你真的想现在安装吗？"
+
+msgid ""
+"mmPicons Plugin Not Installed!!\n"
+"Do you really want to install now?"
+msgstr ""
+"mmPicons 插件未安装!\n"
+"你真的想现在安装吗？"
+
 msgid "oZsetup"
 msgstr "OZ设置"
 
-#~ msgid "metric system"
-#~ msgstr "公制"
+msgid "Customization tool for ozeta skin v.%s"
+msgstr "oZ皮肤定制工具 v.%s"
 
-#~ msgid "imperial system"
-#~ msgstr "英制"
+msgid "Manage your oZeta Skin v.%s"
+msgstr "管理您的oZeta皮肤v.%s"
 
-#~ msgid "WeatherPlugin: List of Entries"
-#~ msgstr "天气插件：条目列表"
+msgid "Install or Update oZeta Skin:"
+msgstr "安装或更新 oZeta 皮肤:"
 
-#~ msgid "City"
-#~ msgstr "城市"
-
-#~ msgid "System"
-#~ msgstr "系统"
-
-#~ msgid "Add"
-#~ msgstr "添加"
-
-#~ msgid "Edit"
-#~ msgstr "编辑"
-
-#~ msgid "Delete"
-#~ msgstr "删除"
-
-#~ msgid "Really delete this WeatherPlugin Entry?"
-#~ msgstr "真的要删除这个天气插件条目？"
-
-#~ msgid "WeatherPlugin: Edit Entry"
-#~ msgstr "天气插件：编辑条目"
-
-#~ msgid "OK"
-#~ msgstr "確定"
-
-#~ msgid "Search Code"
-#~ msgstr "搜索代码"
-
-#~ msgid "Location code"
-#~ msgstr "位置代码"
-
-#~ msgid "You need to enter a valid city name before you can search for the location code."
-#~ msgstr "您需要输入有效的城市名称才能搜索位置代码."
-
-#~ msgid "Please enter a valid city name."
-#~ msgstr "请输入有效的城市名称。"
-
-#~ msgid "Please enter a valid location code for the city."
-#~ msgstr "请输入该城市有效的位置代码。"
-
-#~ msgid "MSN location search result"
-#~ msgstr "MSN位置搜索结果"
-
-#~ msgid "File Commander - Addon Mediaplayer"
-#~ msgstr "文件管理器-附加媒体播放器"
-
-#~ msgid "play/show Files"
-#~ msgstr "播放/显示文件"
-
-#~ msgid "Exit"
-#~ msgstr "退出"
-
-#~ msgid "Z File Commander - Addon File-Viewer"
-#~ msgstr "Z文件管理器 -插件文件查看器"
+msgid "Install/Update/Restore oZeta Skin"
+msgstr "安装/更新/还原 oZeta 皮肤:"
