@@ -1,38 +1,45 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <skin>
     <setups>
-        <setup key="default" image="iconsmenu/setup.png"/>
-        <setup key="Recording" image="iconsmenu/menu_extended_recording_setup.png"/>
-        <setup key="Timeshift" image="iconsmenu/menu_extended_timshift_setup.png"/>
-        <setup key="Usage" image="iconsmenu/menu_system_usage_setup.png"/>
-        <setup key="Subtitle" image="iconsmenu/menu_extended_subtitle_setup.png"/>
+        <setup key="Audio" image="iconsmenu/audio.png"/>
+        <setup key="AutoCam" image="iconsmenu/menu_softcam_settings.png"/>
         <setup key="AutoLanguage" image="iconsmenu/menu_system_autolanguage_setup.png"/>
-        <setup key="UserInterface" image="iconsmenu/menu_osd_menu_user_interface.png"/>
-        <setup key="RemoteButton" image="iconsmenu/menu_system_remote_setup.png"/>
+        <setup key="BirthdayReminderSettings" image="iconsmenu/bday.png"/>
+        <setup key="CISettings" image="iconsmenu/menu_ci_settings.png"/>
+        <setup key="Cardserver" image="iconsmenu/menu_softcam_settings.png"/>
         <setup key="ChannelSelection" image="iconsmenu/menu_system_channelselection_setup.png"/>
+        <setup key="CiSelection" image="iconsmenu/menu_ci_selection.png"/>
         <setup key="Display" image="iconsmenu/menu_display_display_setup.png"/>
-        <setup key="Keyboard" image="iconsmenu/menu_extended_keyboard.png"/>
-        <setup key="EPGMulti" image="iconsmenu/menu_epg_setup_epgmulti.png"/>
+        <setup key="EPG" image="iconsmenu/menu_epg_epg_setup.png"/>
         <setup key="EPGEnhanced" image="iconsmenu/menu_epg_setup_epgenhanced.png"/>
+        <setup key="EPGGraphical" image="iconsmenu/menu_epg_setup_epggraphical.png"/>
         <setup key="EPGInfobar" image="iconsmenu/menu_epg_setup_epginfobar.png"/>
         <setup key="EPGInfobarGraphical" image="iconsmenu/menu_epg_setup_epginfobargraphical.png"/>
-        <setup key="EPGGraphical" image="iconsmenu/menu_epg_setup_epggraphical.png"/>
+        <setup key="EPGMulti" image="iconsmenu/menu_epg_setup_epgmulti.png"/>
         <setup key="EPGVertical" image="iconsmenu/menu_epg_setup_epgmulti.png"/>
-        <setup key="EPG" image="iconsmenu/menu_epg_epg_setup.png"/>
+        <setup key="EditBirthdaySetting" image="iconsmenu/bday.png"/>
+        <setup key="HDMICEC" image="iconsmenu/hdmicec.png"/>
         <setup key="HardDisk" image="iconsmenu/hdd.png"/>
-        <setup key="Time" image="iconsmenu/menu_extended_time_setup.png"/>
+        <setup key="Keyboard" image="iconsmenu/menu_extended_keyboard.png"/>
         <setup key="Logs" image="iconsmenu/menu_extended_logs_setup.png"/>
-        <setup key="dvdplayer" image="iconsmenu/menu_extended_dvdplayer_setup.png"/>
-        <setup key="SpecialFeatures" image="iconsmenu/menu_extended_specialfeatures_menu.png"/>
         <setup key="OSD3D" image="iconsmenu/menu_osd_menu_osd3dsetup.png"/>
         <setup key="OscamInfo" image="iconsmenu/softcam.png"/>
-        <setup key="HDMICEC" image="iconsmenu/hdmicec.png"/>
-        <setup key="Audio" image="iconsmenu/audio.png"/>
-        <setup key="SleepTimer" image="iconsmenu/power_timer.png"/>
-        <setup key="VolumeAdjust" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png"/>
-        <setup key="Tuner" image="iconsmenu/menu_tuner_basic_settings.png"/>
-        <setup key="CISettings" image="iconsmenu/menu_ci_settings.png"/>
+        <setup key="Playback" image="iconsmenu/menu_extended_playback_setup.png"/>
+        <setup key="PowerTimer" image="iconsmenu/menu_timermenu_powertimers.png"/>
         <setup key="RecordTimer" image="iconsmenu/timer.png"/>
+        <setup key="Recording" image="iconsmenu/menu_extended_recording_setup.png"/>
+        <setup key="RemoteButton" image="iconsmenu/menu_system_remote_setup.png"/>
+        <setup key="SleepTimer" image="iconsmenu/power_timer.png"/>
+        <setup key="SpecialFeatures" image="iconsmenu/menu_extended_specialfeatures_menu.png"/>
+        <setup key="Subtitle" image="iconsmenu/menu_extended_subtitle_setup.png"/>
+        <setup key="Time" image="iconsmenu/menu_extended_time_setup.png"/>
+        <setup key="Timeshift" image="iconsmenu/menu_extended_timshift_setup.png"/>
+        <setup key="Tuner" image="iconsmenu/menu_tuner_basic_settings.png"/>
+        <setup key="Usage" image="iconsmenu/menu_system_usage_setup.png"/>
+        <setup key="UserInterface" image="iconsmenu/menu_osd_menu_user_interface.png"/>
+        <setup key="VolumeAdjust" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png"/>
+        <setup key="default" image="iconsmenu/setup.png"/>
+        <setup key="dvdplayer" image="iconsmenu/menu_extended_dvdplayer_setup.png"/>
     </setups>
     <menus>
         <menu key="default" image="iconsmenu/default.png"/>
@@ -132,6 +139,7 @@
         <menu key="permanent_clock" image="iconsmenu/menu_extended_time_setup.png"/>
         <menu key="pip_setup" image="iconsmenu/setup.png"/>
         <menu key="play_cd" image="iconsmenu/dvd.png"/>
+        <menu key="playback_setup" image="iconsmenu/menu_extended_playback_setup.png"/>
         <menu key="plugin_selection" image="iconsmenu/menu_mainmenu_pluginmanager.png"/>
         <menu key="pluginhider_setup" image="iconsmenu/menu_mainmenu_pluginhider.png"/>
         <menu key="positioner_setup" image="iconsmenu/menu_scan_positioner_setup.png"/>
@@ -246,7 +254,6 @@
         <menu key="shutdown" image="iconsmenu/reset.png"/>
         <menu key="epg" image="iconsmenu/menu_epg_epg_setup.png"/>
         <menu key="system" image="iconsmenu/menu_setup_setup.png"/>
-        <!--<menu key="information" image="iconsmenu/menu_information.png" />-->
         <menu key="information" image="iconsmenu/info.png"/>
         <menu key="distribution_info_screen" image="iconsmenu/menu_information_about.png"/>
         <menu key="receiver_info_screen" image="iconsmenu/menu_receiver_info.png"/>
@@ -260,12 +267,37 @@
         <menu key="geolocation_info_screen" image="iconsmenu/menu_geolocation_info.png"/>
         <menu key="service_info_screen" image="iconsmenu/menu_service_info.png"/>
         <menu key="softcam_settings" image="iconsmenu/menu_softcam_settings.png"/>
+        <menu key="cardserver_settings" image="iconsmenu/menu_softcam_settings.png"/>
+        <menu key="autocam_settings" image="iconsmenu/menu_softcam_settings.png"/>
         <menu key="oscam_info" image="iconsmenu/menu_oscam_info.png"/>
         <menu key="cccam_info" image="iconsmenu/menu_cccam_info.png"/>
         <menu key="ci_settings" image="iconsmenu/menu_ci_settings.png"/>
         <menu key="ci_selection" image="iconsmenu/menu_ci_selection.png"/>
         <menu key="tuner_basic_settings" image="iconsmenu/menu_tuner_basic_settings.png"/>
     </menus>
+    <screen name="information_common">
+        <widget name="information" position="230,150" size="1450,780" colPosition="450" conditional="information" divideChar="|" font="Regular;28" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
+                                                                                                          
+        <widget name="description" position="230,1385" size="415,220" font="Regular;30" conditional="description" foregroundColor="#ffffff" halign="center" backgroundColor="#000000" valign="center" transparent="1"/>
+    </screen>
+    <screen name="CommitLogInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="LayerMenu1700"/>
+        <panel name="information_common2"/>
+        <panel name="vRGYB-1500"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
+    </screen>
+    <screen name="information_common2">
+        <widget name="description" position="230,2140" size="1450,60" font="Regular;30" conditional="description" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0"/>
+        <widget name="information" position="230,150" size="1450,800" colPosition="280" conditional="information" divideChar="|" font="Console;26" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
+    </screen>                                                                                   
+    <screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="LayerMenu1700"/>
+        <panel name="vRGYB-1500"/>
+        <panel name="information_common"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
+        <ePixmap pixmap="oZeta-FHD/iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
+    </screen>
+
     <!-- ***************************************************************************************************************** -->
     <!-- ************ MENUS ***************************** MENUS ************************************ MENUS *************** -->
     <!-- ***************************************************************************************************************** -->
@@ -341,7 +373,7 @@
     <!-- ***************************************************************************************************************** -->
     <screen name="MenuTemplate">
         <panel name="LayerMenu1000-nl"/>
-        <panel name="vButtonTemplate-m1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="menuimage" position="930,5" size="110,110" scale="1" alphatest="blend" zPosition="2"/>
         <widget source="menu" render="Listbox" position="230,150" size="810,780" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
             <convert type="TemplatedMultiContent">
@@ -392,7 +424,7 @@
     <!-- Skin Selector ATV -->
     <screen name="SkinSelector" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000-nl"/>
-        <!-- <panel name="vButtonTemplate-1000"/> -->
+        <!-- <panel name="vRGYB-1000"/> -->
         <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1"/>
         <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="SkinList" position="230,230" size="810,800" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
@@ -404,6 +436,23 @@
         <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
     </screen>
+
+    <screen name="SkinSelection" size="1920,1080" Title="Skin Selector" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1000-nl" />
+        <!-- <panel name="vRGYB-1000"/> -->
+        <widget source="introduction" render="Label" position="230,150" size="810,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1" />
+        <eLabel position="230,220" size="810,3" backgroundColor="#303030" zPosition="1" />
+        <widget name="SkinList" position="230,230" size="810,694" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" itemHeight="40" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffff00" backgroundColor="#000000" backgroundColorSelected="#124b97" />
+        <eLabel position="1190,40" size="680,400" backgroundColor="#60000000" zPosition="1" />
+        <eLabel position="1200,50" size="660,380" backgroundColor="#30000000" zPosition="1" />
+        <widget name="Preview" position="1210,60" size="640,360" scale="1" alphatest="on" zPosition="5" />
+        <ePixmap pixmap="oZeta-FHD/buttons/button_red.png" position="230,1008" size="30,30" zPosition="1" alphatest="blend" />
+        <widget source="key_red" render="Label" position="275,1006" size="250,34" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+        <ePixmap pixmap="oZeta-FHD/buttons/button_green.png" position="545,1008" size="30,30" zPosition="1" alphatest="blend" />
+        <widget source="key_green" render="Label" position="590,1006" size="250,34" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+		<widget name="Image" position="10,10" size="10,10" alphatest="blend" conditional="Image" transparent="1" zPosition="4" />
+    </screen>
+
     <!-- *************************************** -->
     <!--   ATVPANELS * ATVPANELS * ATVPANELS *   -->
     <!-- **************************************  -->
@@ -480,7 +529,7 @@
     <!-- StandardList -->
     <screen name="mySmallChannelSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="standardList1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <panel name="standardList1000"/>
     </screen>
     <!-- Panel Info -->
@@ -501,7 +550,7 @@
     <!-- Translate Info -->
     <screen name="TranslationInfo" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <eLabel text="openATV" position="230,150" size="810,50" font="Regular;34" halign="center" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="2"/>
         <widget source="TranslationInfo" render="Label" position="230,220" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
@@ -510,7 +559,7 @@
     <!-- Softcam Manager -->
     <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1300"/>
         <eLabel text="OK  = Installare" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="2"/>
         <widget source="key_ok" render="Label" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
@@ -528,36 +577,16 @@
 			</convert>
         </widget>
     </screen>
-    <!-- add lululla -->
-    <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
-        <widget name="config" position="230,150" size="1230,280" itemHeight="60" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
-        <widget name="actifcam" font="Regular;32" position="237,486" size="500,45" halign="center"/>
-        <widget name="actifcam2" font="Regular;32" position="956,486" size="500,45" halign="center"/>
-        <widget name="ecminfo" font="Regular;32" position="239,551" size="1225,391"/>
-    </screen>
-    <screen name="CommitLogInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1700"/>
-        <panel name="information_common2"/>
-        <panel name="vButtonTemplate-1500"/>
-        <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1560,1000" size="80,40" alphatest="blend"/>
-    </screen>
-    <screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1700"/>
-        <panel name="vButtonTemplate-1500"/>
-        <panel name="information_common"/>
-        <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
-        <ePixmap pixmap="oZeta-FHD/iconsmenu/menu_information.png" position="1460,140" size="200,200" scale="1" zPosition="2" alphatest="blend"/>
-    </screen>
-    <screen name="information_common">
-        <widget name="information" position="230,150" size="1450,780" colPosition="450" conditional="information" divideChar="|" font="Regular;28" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
-        <widget name="description" position="230,1385" size="415,220" font="Regular;30" conditional="description" foregroundColor="#ffffff" halign="center" backgroundColor="#000000" valign="center" transparent="1"/>
-    </screen>
-    <screen name="information_common2">
-        <widget name="description" position="230,2140" size="1450,60" font="Regular;30" conditional="description" foregroundColor="yellow" halign="center" backgroundColor="#202020" valign="center" transparent="0"/>
-        <widget name="information" position="230,150" size="1450,800" colPosition="280" conditional="information" divideChar="|" font="Console;26" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" backgroundColor="#000000" transparent="1"/>
-    </screen>
+	<!-- lululla -->
+	<screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="LayerMenu1300"/>
+		<panel name="vRGYB-1500"/>
+		<widget name="config" position="230,150" size="1230,280" itemHeight="60" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
+		<widget name="actifcam" font="Regular;32" position="237,486" size="500,45" halign="center"/>
+		<widget name="actifcam2" font="Regular;32" position="956,486" size="500,45" halign="center"/>
+		<widget name="ecminfo" font="Regular;32" position="239,551" size="1225,391"/>
+	</screen>
+
     <!-- Animazioni -->
     <screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,830" size="1920,350" pixmap="oZeta-FHD/menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
@@ -592,7 +621,7 @@
     <!-- Software Update -->
     <screen name="SoftwareUpdate" position="0,0" size="1920,1080" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="package_count" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="package_text" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -622,7 +651,7 @@
     </screen>
     <screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="packagenr" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="packagetext" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -668,7 +697,7 @@
     </screen>
     <screen name="LocationBoxOld" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,150" size="500,50" font="Regular;40" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
         <widget name="targetfreespace" position="1180,150" size="300,50" font="Regular;40" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
@@ -681,7 +710,7 @@
     </screen>
     <screen name="LocationBoxNew" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,140" size="500,50" font="Regular;36" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
         <widget name="targetfreespace" position="1180,140" size="300,50" font="Regular;36" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
         <eLabel position="230,200" size="1250,3" backgroundColor="#303030" zPosition="1"/>
@@ -774,4 +803,5 @@
         <widget alphatest="blend" name="indicatorL14" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorL15" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
     </screen>
+
 </skin>

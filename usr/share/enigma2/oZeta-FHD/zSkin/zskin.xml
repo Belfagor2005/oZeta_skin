@@ -19,41 +19,58 @@
     <!--        SKIN PANELS * SKIN PANELS        -->
     <!-- **************************************  -->
     <!-- Unhandled key -->
+
+    <!-- mmk 09/02/2024 -->	
+    <screen name="Setup" position="0,0" size="1920,1080" Title="Timer-Off" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="setup_common"/>
+        <ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1420,980" size="60,30" scale="1" zPosition="2"/>
+        <ePixmap pixmap="skin_default/buttons/80/key_help.png" alphatest="blend" position="1420,1030" size="60,30" scale="1" zPosition="2"/>
+        <widget name="setupimage" position="1370,0" size="110,110" alphatest="blend" conditional="setupimage" transparent="1" scale="1" zPosition="2"/>
+    </screen>
+
     <screen name="UnhandledKey" title="UnhandledKey" position="1760,50" size="99,118" backgroundColor="#FF000000" zPosition="100" flags="wfNoBorder">
         <widget name="UnhandledKeyPixmap" pixmap="skin_default/unhandled-key.png" position="0,0" size="150,150" alphatest="blend"/>
     </screen>
+    
     <!-- QuitMainloopScreen -->
     <screen name="QuitMainloopScreen" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <ePixmap pixmap="oZeta-FHD/menu/panels/vzeta.jpg" position="center,150" size="1200,675" scale="1" alphatest="blend"/>
         <widget name="text" position="center,850" size="1770,150" font="Regular;30" halign="center"/>
     </screen>
+    
     <!-- SubTitle -->
     <screen name="SubtitleDisplay" position="fill" backgroundColor="transparent" zPosition="-1" flags="wfNoBorder"/>
+    
     <!-- Mute -->
     <screen name="Mute" position="1740,70" size="100,100" zPosition="10" title="Mute" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,0" size="100,100" pixmap="skin_default/icons/mute.png" alphatest="on"/>
     </screen>
+    
     <!-- Message -->
     <screen name="TextBox" position="center,center" size="1600,680" title="...Message..." backgroundColor="#20000000">
         <widget name="text" position="10,10" size="1580,660" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1"/>
     </screen>
+
     <!-- Buffer Indicator -->
     <screen name="BufferIndicator" title="" position="c-300,45" size="600,48" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
         <widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center"/>
     </screen>
+
     <!-- VideoMode -->
     <screen name="VideoMode" title="VideoMode" position="60,60" size="600,100" backgroundColor="#40000000" flags="wfNoBorder">
         <ePixmap position="20,10" size="120,81" pixmap="oZeta-FHD/icons/scaler.png" alphatest="blend" zPosition="0"/>
         <widget name="videomode" position="190,13" size="450,80" font="Regular;40" valign="center" halign="left" borderColor="black" borderWidth="2" backgroundColor="#303030" transparent="1"/>
     </screen>
+    
     <!-- PVR State -->
     <screen name="PVRState" position="0,0" size="300,100" backgroundColor="#ff000000" flags="wfNoBorder">
         <widget name="state" position="10,10" size="300,100" borderWidth="2" font="Regular;90" borderColor="black" backgroundColor="transparent" transparent="1"/>
     </screen>
+    
     <!-- Volume Adjust -->
     <screen name="Volume_adjust" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <eLabel text="Volume Adjust" position="230,150" size="810,50" font="Regular;34" noWrap="1" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="ServiceList.desc" position="230,230" size="810,40" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
@@ -62,46 +79,55 @@
         <widget source="press_menu" render="Label" position="230,900" size="710,40" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
         <ePixmap pixmap="buttons/80/key_menu.png" position="960,900" size="80,40" alphatest="blend"/>
     </screen>
+    
     <!-- Video Enhancement Setup -->
     <screen name="VideoEnhancementSetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
         <panel name="bLogo"/>
         <widget name="description" position="230,150" size="1250,90" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,250" size="1250,3" backgroundColor="#202020" zPosition="1"/>
-        <widget name="config" position="230,260" size="1250,600" itemHeight="50" font="screen_text;30" scrollbarSliderBorderWidth="1" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="yellow" transparent="1"/>
+        <widget name="config" position="230,260" size="1250,600" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="yellow" transparent="1"/>
         <widget name="HelpWindow" position="1300,10" size="486,102" zPosition="1" transparent="1" alphatest="blend"/>
         <widget name="footnote" position="230,900" size="1010,50" font="Regular;24" halign="right" valign="center" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
     </screen>
+    
     <!-- Simple channelselection -->
     <screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
-        <widget name="list" position="230,145" size="1250,600" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="50" itemWidth="1090" serviceItemHeight="45" serviceNumberFont="Regular;30" serviceNameFont="Regular;30" serviceInfoFont="Regular;30" progressPercentWidth="70" foregroundColor="#ffffff" foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;30" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette" colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="#124b97" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#404040"/>
-        <widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="picmenu/sl1000.png"/>
+        <panel name="vRGYB-1000"/>
+        <widget name="list" position="230,145" size="1250,600" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" 
+        	itemHeight="50" itemWidth="1090" serviceItemHeight="45" serviceNumberFont="Regular;27" serviceNameFont="Regular;27" serviceInfoFont="Regular;27" 
+        	progressPercentWidth="70" foregroundColor="#ffffff" foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;27" 
+        	colorAdditionalInfo="#808080" colorServiceDescription="ltbluette" colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" 
+        	fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" 
+        	picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="#124b97" scrollbarSliderForegroundColor="#606060" 
+        	scrollbarSliderBorderColor="#404040"/>
+        <!-- <widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="picmenu/sl1000.png"/> -->
         <eLabel position="230,770" size="1250,5" backgroundColor="#303030" zPosition="1"/>
         <widget source="ServiceEvent" render="Label" position="230,780" size="1250,150" font="Regular;26" foregroundColor="yellow" backgroundColor="#000000" halign="block" valign="center" transparent="1" zPosition="2">
             <convert type="EventName">FullDescription</convert>
         </widget>
-        <ePixmap position="1380,990" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
-        <ePixmap position="1380,1030" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Channel Selection Slim -->
     <screen name="SlimChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="list" position="230,145" size="1250,600" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" itemHeight="50" itemWidth="1090" serviceItemHeight="45" serviceNumberFont="Regular;30" serviceNameFont="Regular;30" serviceInfoFont="Regular;30" progressPercentWidth="70" foregroundColor="#ffffff" foregroundColorSelected="ltbluette" backgroundColor="#000000" additionalInfoFont="Regular;30" colorAdditionalInfo="#808080" colorServiceDescription="ltbluette" colorServiceDescriptionSelected="white" foregroundColorServiceNotAvail="#505050" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" picServiceEventProgressbar="skin_default/progcl.png" backgroundColorSelected="#124b97" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#404040"/>
-        <widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="picmenu/sl1000.png"/>
+        <!-- <widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="picmenu/sl1000.png"/> -->
         <eLabel position="230,770" size="1250,5" backgroundColor="#303030" zPosition="1"/>
         <widget source="ServiceEvent" render="Label" position="230,780" size="1250,150" font="Regular;26" foregroundColor="white" backgroundColor="#000000" halign="block" valign="center" transparent="1" zPosition="2">
             <convert type="EventName">FullDescription</convert>
         </widget>
-        <ePixmap position="1400,980" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
-        <ePixmap position="1400,1030" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
+        <ePixmap position="750,980" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
+        <ePixmap position="750,1030" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- NumberZap -->
-    <screen name="xNumberZap" title="Channel" position="40,40" size="850,140" backgroundColor="#40000000" flags="wfNoBorder">
+    <screen name="NumberZap" title="Channel" position="40,40" size="850,140" backgroundColor="#40000000" flags="wfNoBorder">
         <panel name="NumberZapPicon"/>
     </screen>
+    
     <!-- NumberZap -->
     <screen name="NumberZapPicon" position="0,70" size="850,152" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
         <eLabel position="260,0" size="580,152" backgroundColor="trbluette"/>
@@ -111,12 +137,14 @@
         <widget name="number" position="10,10" size="260,132" halign="center" valign="center" font="Regular;66" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="10"/>
         <widget name="servicename" position="280,10" size="1000,132" valign="center" font="Regular;50" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="10"/>
     </screen>
+    
     <!-- ChapterZap -->
     <screen name="ChapterZap" position="40,40" size="360,100" title="Chapter" backgroundColor="#40000000" flags="wfNoBorder">
         <eLabel position="10,10" size="340,80" backgroundColor="#30000000" zPosition="-1"/>
         <widget name="chapter" position="30,30" size="160,50" font="Regular;36" foregroundColor="yellow" backgroundColor="#202020" transparent="1"/>
         <widget name="number" position="200,30" size="140,50" font="Regular;36" backgroundColor="#202020" transparent="1"/>
     </screen>
+    
     <!-- NumercalTextInputHelpDialog -->
     <screen name="NumericalTextInputHelpDialog" position="230,705" size="846,242" backgroundColor="000000" zPosition="10" flags="wfNoBorder">
         <ePixmap position="0,0" size="846,242" pixmap="oZeta-FHD/menu/keybak.png" zPosition="0"/>
@@ -133,10 +161,11 @@
         <widget name="help1" position="3,183" size="280,60" font="Regular;30" valign="center" halign="center" backgroundColor="header" transparent="1" zPosition="1"/>
         <widget name="help2" position="563,183" size="280,60" font="Regular;30" valign="center" halign="center" backgroundColor="header" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Timers OK -->
     <screen name="TimerEntry" position="0,0" size="1920,1080" Title="Timer Entry" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_timer.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="config" position="230,150" size="1250,650" itemHeight="50" font="Regular;30" backgroundColorSelected="barColor" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1"/>
         <widget name="HelpWindow" position="230,700" size="486,102" transparent="1" alphatest="blend" zPosition="2"/>
@@ -145,67 +174,75 @@
         <widget name="canceltext" position="280,1002" size="200,40" font="Regular;30" valign="center" halign="left" noWrap="1" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
         <widget name="oktext" position="575,1002" size="200,40" font="Regular;30" valign="center" halign="left" noWrap="1" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <!-- TimersEdit OK -->
     <screen name="TimerEditList" position="0,0" size="1920,1080" Title="Timer Overview" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_timer.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget name="timerlist" position="230,150" size="1250,640" backgroundColor="#000000" backgroundColorSelected="barColor" bottomHeight="40" detailFont="screen_text;30" foregroundColor="white" foregroundColorSelected="yellow" iconMargin="10" indent="15" itemHeight="80" showSeparator="1" statusFont="screen_text;30" statusOffset="0" timerNameFont="screen_text;32" topHeight="35" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+        <widget name="timerlist" position="230,150" size="1250,640" backgroundColor="#000000" backgroundColorSelected="barColor" bottomHeight="40" detailFont="Regular;30" foregroundColor="white" foregroundColorSelected="yellow" iconMargin="10" indent="15" itemHeight="80" showSeparator="1" statusFont="Regular;30" statusOffset="0" timerNameFont="Regular;32" topHeight="35" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
         <eLabel position="230,840" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="description" position="230,850" size="1250,100" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <ePixmap position="1415,985" size="65,30" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" scale="1"/>
         <ePixmap position="1415,1035" size="65,30" pixmap="oZeta-FHD/buttons/80/key_help.png" alphatest="blend" scale="1"/>
     </screen>
+    
     <!-- Timer Screens OK -->
     <screen name="SleepTimerEdit" position="0,0" size="1920,1080" flags="wfNoBorder" title="Sleep Timer" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="config" position="230,150" size="1250,650" itemHeight="50" font="Regular;30" backgroundColorSelected="barColor" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1"/>
         <eLabel position="230,840" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="description" position="230,850" size="1250,90" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
     </screen>
+    
     <!-- TimerLog OK -->
     <screen name="TimerLog" position="0,0" size="1920,1080" Title="Timer Log" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1700"/>
         <widget name="logentry" position="230,150" size="1450,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1450,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="loglist" position="230,220" size="1450,700" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
         <widget name="log" position="230,220" size="1450,700" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- TimerConflict OK -->
     <screen name="TimerSanityConflict" position="0,0" size="1920,1080" Title="Timer Error" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="timer1" position="230,150" size="1250,150" itemHeight="75" rowSplit="40" setEventNameFont="Regular;32" setServiceNameFont="Regular;30" setFont="Regular;27" satPosLeft="250" scrollbarMode="showNever" scrollbarWidth="10"/>
         <widget name="timer2" position="230,320" size="1250,150" itemHeight="75" rowSplit="40" setEventNameFont="Regular;32" setServiceNameFont="Regular;30" setFont="Regular;27" satPosLeft="250" scrollbarMode="showNever" scrollbarWidth="10"/>
         <widget name="list" position="230,490" size="1250,360" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- TimerSelection OK -->
     <screen name="TimerSelection" position="0,0" size="1920,1080" Title="Timer Selection" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <widget name="timerlist" position="230,150" size="1250,150" itemHeight="75" rowSplit="40" setEventNameFont="Regular;32" setServiceNameFont="Regular;30" setFont="Regular;27" satPosLeft="250" scrollbarMode="showNever" scrollbarWidth="10"/>
     </screen>
+    
     <!-- ServiceInfo OK -->
     <screen name="ServiceInfo" position="0,0" size="1920,1080" Title="Service Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1700"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <eLabel text="Serviceinfo" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="infolist" position="230,240" size="1250,680" itemHeight="40" font="Regular;28" selectionDisabled="1" scrollbarWidth="10" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- About OK -->
     <screen name="About" position="0,0" size="1920,1080" Title="ATV Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1700"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="AboutScrollLabel" position="230,150" size="1250,800" font="Regular;26" split="1" dividechar=":" colposition="0" scrollbarWidth="10" backgroundColor="#000000" transparent="1" zPosition="2" scrollbarSliderForegroundColor="#505050" scrollbarSliderBackgroundColor="#303030"/>
     </screen>
+    
     <!-- Memory Info OK -->
     <screen name="MemoryInfo" position="0,0" size="1920,1080" Title="ATV Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1700"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="lmemtext" position="230,160" size="450,810" font="Regular;27" zPosition="1" halign="left" foregroundColor="white" backgroundColor="header" transparent="1"/>
         <widget name="lmemvalue" position="230,160" size="450,810" font="Regular;27" zPosition="2" halign="right" foregroundColor="ltbluette" backgroundColor="header" transparent="1"/>
@@ -217,131 +254,81 @@
         <widget name="info" position="800,700" size="700,240" font="Regular;26" halign="center" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
         <widget name="params" rowsincolumn="26"/>
     </screen>
+    
     <!-- Commit Info OK -->
     <screen name="CommitInfo" position="0,0" size="1920,1080" Title="Sistem Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="AboutScrollLabel" position="230,150" size="1250,800" halign="left" font="Regular;26" scrollbarWidth="10" backgroundColor="#000000" transparent="1" zPosition="2"/>
         <widget source="screen_path" render="Label" position="420,1005" size="1250,50" font="Regular;24" valign="center" halign="left" backgroundColor="#000000" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Troubleshoot OK -->
     <screen name="Troubleshoot" position="0,0" size="1920,1080" Title="Sistem Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1700"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="AboutScrollLabel" position="230,150" size="1450,800" halign="left" font="Regular;26" scrollbarWidth="10" backgroundColor="#000000" transparent="1" zPosition="2" scrollbarSliderForegroundColor="#505050" scrollbarSliderBackgroundColor="#303030"/>
     </screen>
+    
     <!-- Translation Info OK -->
     <screen name="TranslationInfo" position="0,0" size="1920,1080" Title="Sistem Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_system_language_setup.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget source="TranslatorName" render="Label" position="230,150" size="1250,120" font="Regular;30" halign="center" foregroundColor="#ffff00" backgroundColor="header" transparent="1"/>
         <widget source="TranslationInfo" render="Label" position="230,290" size="1250,580" font="Regular;28" halign="center" foregroundColor="#ffffff" backgroundColor="header" transparent="1"/>
     </screen>
+    
     <!-- Plugins OK -->
     <screen name="PluginBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="list" position="230,140" size="1250,800" font="Regular;30" itemHeight="80" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" scrollbarSliderForegroundColor="#606060" scrollbarSliderBackgroundColor="#303030" backgroundColor="#000000" backgroundColorSelected="bluette" foregroundColorSelected="#ffffff"/>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
     </screen>
-    
-    <!-- mod mmark 30-12-23 -->
-    <screen name="Processing" title="Processing" position="center,center" size="800,110" zPosition="99" backgroundColor="#20000000" flags="wfNoBorder">
-       	<eLabel position="10,10" size="780,80" backgroundColor="#20000000" zPosition="-1"/>
-	<widget name="description" position="20,20" size="760,40" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
-	<widget name="progress" position="20,80" size="760,10" foregroundColor="white" backgroundColor="bluette" />
-    </screen>
-
     <!-- mod mmark 30-12-23 -->
     <screen name="PluginBrowserList" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
-        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget name="quickselect" position="230,140" size="1240,716" backgroundColor="background90" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-        <widget name="description" position="230,140" size="1250,60" font="Regular; 28" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
-        <eLabel position="230,205" size="1250,3" backgroundColor="#202020" zPosition="1"/>
-        <widget source="pluginList" render="Listbox" position="230,215" size="1250,725" itemHeight="80" scrollbarMode="showOnDemand" backgroundColor="background90" transparent="1" listOrientation="vertical">
-            <convert type="TemplatedMultiContent">
-                        {
-                        "template": [
-                        MultiContentEntryText(pos = (180, 5), size = (840, 40), font=0, flags = RT_HALIGN_LEFT, text = 1),
-                        MultiContentEntryText(pos = (200, 45), size = (840, 35), font=1, flags = RT_HALIGN_LEFT,color=0xa9e8fd, text = 2),
-                        MultiContentEntryPixmapAlphaBlend(pos=(10, 10), size=(150, 60), png=3, flags=BT_SCALE)
-                                ],
-                        "fonts": [gFont("Regular", 28),gFont("Regular", 26)],
-                        "itemHeight" : 80
-                        }
-            </convert>
-        </widget>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1025" size="80,40" alphatest="blend"/>
+        <panel name="PluginBrowserGridF"/>
     </screen>
-    
     <!-- mod mmark 30-12-23 -->
-    <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="vButtonTemplate-1500"/>
+    <screen name="Processing" title="Processing" position="0,0" size="0,0" zPosition="99" backgroundColor="#30000000" flags="wfNoBorder">
+        <eLabel position="10,10" size="1900,110" backgroundColor="#20000000" zPosition="-1"/>
+        <widget name="description" position="20,20" size="1880,60" font="Regular;36" halign="center" valign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" />
+        <widget name="progress" position="20,80" size="1880,10" foregroundColor="ltbluette" backgroundColor="bluette" />
+    </screen>
+
+    <!-- mod mmark 30-12-23 edit lululla 17022024 --> 
+    <screen name="PluginAction" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="LayerMenu1500" />
+        <panel name="vRGYB-1500"/>
         <panel name="Logo"/>
-        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
-        <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
-        <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
-        <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
-        <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-        <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" 
-        	listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+        <widget name="description" position="230,140" size="1250,80" font="Regular;28" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#303030" conditional="description" />
+        <eLabel position="230,225" size="1250,3" backgroundColor="#303030" zPosition="4" />
+        <widget source="plugins" render="Listbox" position="230,240" size="1250,660" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="#606060" backgroundColorSelected="barColor" foregroundColorSelected="Yellow" transparent="1">
             <convert type="TemplatedMultiContent">
-                        {
-                        "template": [
-                        MultiContentEntryText(pos = (5, 0), size = (220, 60), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, backcolor = 0x505050),
-                        MultiContentEntryText(pos = (5, 85), size = (220, 30), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
-                        MultiContentEntryPixmapAlphaBlend(pos=(40, 15), size=(150, 60), png=3, flags=BT_SCALE)
-                        ],
-                        "fonts": [gFont("Regular", 24),gFont("Regular", 22)],
-                        "itemWidth" : 230,
-                        "itemHeight" : 120
-                        }
+                {
+                "template":
+                    [
+                    MultiContentEntryPixmapAlphaBlend(pos=(5, 0), size=(60, 60), png=6, flags=BT_SCALE),
+                    MultiContentEntryText(pos=(80, 0), size=(1080, 50), font=0, flags=RT_VALIGN_CENTER, text=2), # Category
+                    MultiContentEntryText(pos=(80, 0), size=(1060, 30), font=1, flags=RT_VALIGN_CENTER, text=11), # Name + Version
+                    # MultiContentEntryText(pos=(70, 1), size=(430, 25), font=1, flags=RT_VALIGN_CENTER, text=3), Name
+                    # MultiContentEntryText(pos=(480, 1), size=(160, 25), font=1, flags=RT_VALIGN_CENTER, text=5), Version
+                    MultiContentEntryText(pos=(90, 29), size=(1100, 30), font=2, flags=RT_VALIGN_CENTER, text=4, color=0xa9e8fd), # Description
+                    MultiContentEntryPixmapAlphaBlend(pos=(1180, 10), size=(50, 40), png=7, flags=BT_SCALE)
+                    ],
+                "fonts": [gFont("Regular", 30),gFont("Regular", 26),gFont("Regular", 24)],
+                "itemHeight": 60
+                }
             </convert>
         </widget>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
-    </screen>
-    
-    <!-- mod mmark 30-12-23 --> 
-    <screen name="PluginAction" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
-        <panel name="Logo"/>
-	<widget name="description" position="230,140" size="1250,80" font="Regular;28" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#303030" conditional="description"/>
-        <eLabel position="230,225" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-	<widget source="plugins" render="Listbox" position="230,240" size="1250,660" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" 
-		scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="#606060" backgroundColorSelected="barColor" foregroundColorSelected="Yellow" transparent="1">
-		<convert type="TemplatedMultiContent">
-			{
-			"template":
-				[
-				MultiContentEntryPixmapAlphaBlend(pos=(5, 5), size=(60, 50), png=6, flags=BT_SCALE),
-				MultiContentEntryText(pos=(75, 0), size=(650, 50), font=0, flags=RT_VALIGN_CENTER, text=2), # Category
-				MultiContentEntryText(pos=(75, 0), size=(650, 30), font=1, flags=RT_VALIGN_CENTER, text=11), # Name + Version
-				# MultiContentEntryText(pos=(70, 1), size=(430, 25), font=1, flags=RT_VALIGN_CENTER, text=3), Name
-				# MultiContentEntryText(pos=(480, 1), size=(160, 25), font=1, flags=RT_VALIGN_CENTER, text=5), Version
-				MultiContentEntryText(pos=(75, 29), size=(1070, 30), font=2, flags=RT_VALIGN_CENTER, text=4, color=0xa9e8fd), # Description
-				MultiContentEntryPixmapAlphaBlend(pos=(1180, 10), size=(40, 40), png=7, flags=BT_SCALE)
-				],
-			"fonts": [gFont("Regular", 28),gFont("Regular", 26),gFont("Regular", 24)],
-			"itemHeight": 60
-			}
-		</convert>
-	</widget>
-	<widget name="quickselect" position="230,220" size="1250,720" backgroundColor="#000000" foregroundColor="yellow" font="Regular;100" halign="center" valign="center" transparent="1" zPosition="5" />
-	<widget source="global.CurrentTime" render="Label" position="1120,1035" size="380,30" font="Regular;27" foregroundColor="yellow" halign="center" backgroundColor="#000000" valign="center" transparent="1">
-		<convert type="MetrixHDSTBinfo">FLASHfree</convert>
-	</widget>
+        <widget name="quickselect" position="230,220" size="1250,720" backgroundColor="#000000" foregroundColor="yellow" font="Regular;100" halign="center" valign="center" transparent="1" zPosition="5" />
+        <widget source="global.CurrentTime" render="Label" position="700,1040" size="380,30" font="Regular;27" foregroundColor="yellow" halign="center" backgroundColor="#000000" valign="center" transparent="1">
+            <convert type="MetrixHDSTBinfo">FLASHfree</convert>
+        </widget>
     </screen>
 
     <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
@@ -351,18 +338,21 @@
         <widget name="text" position="230,160" size="0,0" zPosition="1" transparent="1" font="Regular;32" valign="center" halign="center"/>
         <widget name="list" position="230,150" size="1250,760" font="Regular;30" itemHeight="76" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="1" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Console -->
     <screen name="Console_Pig" position="0,0" size="1920,1080" Title="Command Execution" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="ButtonTemplate"/>
         <panel name="LayerMenu1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,140" size="1250,800" font="Regular;28" halign="left" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Console -->
     <screen name="Console" position="0,0" size="1920,1080" Title="Command Execution" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="ButtonTemplate"/>
         <panel name="LayerMenu1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="text" position="230,140" size="1250,800" font="Regular;28" halign="left" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Language selection -->
     <screen name="LanguageSelection" size="1920,1080" Title="Language Selection" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -381,10 +371,13 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- Network --> 
+    <!-- edit lululla 17022024 -->
     <screen name="NetworkAdapterSelection" size="1920,1080" Title="Network" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <!-- <panel name="vRGYB-1000"/> -->
+        <panel name="op-RGYB"/>
         <widget source="introduction" render="Label" position="230,150" size="810,50" transparent="0" zPosition="10" font="Regular;30" valign="center" halign="center" foregroundColor="yellow" backgroundColor="#202020"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,220" size="810,420" zPosition="10" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97">
@@ -401,20 +394,23 @@
 		</convert>
         </widget>
     </screen>
+    
     <!-- NETWORK MAC SETUP -->
     <screen name="NetworkMacSetup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="description" position="220,150" size="830,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="10"/>
         <eLabel position="220,210" size="830,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="220,220" size="830,200" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- NETWORK IPV6 SETUP -->
     <screen name="IPv6Setup" position="0,0" size="1920,1080" Title="IPv6 Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="220,150" size="830,200" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- E2IPLAYER SETUP -->
     <screen name="ConfigMenu" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
         <panel name="LayerMenu1000"/>
@@ -422,16 +418,18 @@
         <widget name="config" position="220,150" size="830,200" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
         <widget name="key_ok" position="420,400" size="0,0" zPosition="10" halign="center" valign="center" backgroundColor="OE_Background" transparent="1"/>
     </screen>
+    
     <!-- Network Mounts -->
     <screen name="NetworkMountsMenu" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menulist" position="220,150" size="830,200" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Network Config -->
     <screen name="AdapterSetupConfiguration" size="1920,1080" Title="Network Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000" zPosition="4"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,148" size="52,40" pixmap="skin_default/icons/lock_off.png" alphatest="blend" zPosition="5"/>
         <widget name="statuspic" position="230,148" size="52,40" backgroundColor="#000000" transparent="1" zPosition="10" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_off.png" alphatest="blend"/>
         <widget source="Statustext" render="Label" position="290,150" size="0,0" transparent="1" zPosition="10" font="Regular;30" valign="center" halign="left"/>
@@ -441,10 +439,11 @@
         <widget name="menulist" position="230,230" size="810,500" itemHeight="50" font="Regular;30" zPosition="10" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
         <widget source="description" render="Label" position="230,860" size="810,90" font="Regular;26" foregroundColor="yellow" backgroundColor="#202020" valign="center" halign="center" transparent="0"/>
     </screen>
+    
     <!-- Network Adapter -->
     <screen name="AdapterSetup" size="1920,1080" Title="Network Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget source="introduction2" render="Label" position="230,150" size="1250,50" font="Regular;30" valign="center" halign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0" zPosition="10"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="config" position="230,220" size="1250,450" itemHeight="50" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
@@ -463,55 +462,58 @@
         <widget source="DNS1" render="Label" position="1180,760" size="300,40" font="Regular;30" halign="right" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <widget source="DNS2" render="Label" position="1180,805" size="300,40" font="Regular;30" halign="right" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <widget name="HelpWindow" position="230,615" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
-        <ePixmap pixmap="oZeta-FHD/buttons/80/key_text.png" alphatest="blend" position="1400,1000" size="80,40" zPosition="2"/>
+        <ePixmap pixmap="oZeta-FHD/buttons/80/key_text.png" alphatest="blend" position="750,1000" size="80,40" zPosition="2"/>
     </screen>
+    
     <!-- Network NameServer Config -->
     <screen name="NameserverSetup" size="1920,1080" Title="Network Info" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="introduction" render="Label" position="230,150" size="810,50" font="Regular;30" valign="center" halign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0" zPosition="10"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="230,220" size="810,300" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
-    <!-- Network Testing -->
+    
+    <!-- Network Testing edit lululla 17022024 -->
     <screen name="NetworkAdapterTest" size="1920,1080" Title="Network Test" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
-        <widget name="Adaptertext" position="230,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <widget name="Adapter" position="630,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="AdapterInfo_Text" position="1100,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="AdapterInfo" position="1300,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="3"/>
-        <widget name="AdapterInfo_OK" position="1430,150" size="57,46" pixmap="skin_default/icons/lock_on.png" zPosition="2" alphatest="blend"/>
-        <widget name="Networktext" position="230,200" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <widget name="Network" position="630,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="NetworkInfo_Text" position="1100,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2"/>00
-		<widget name="NetworkInfo" position="1300,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="NetworkInfo_Check" position="1430,200" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" backgroundColor="#000000" alphatest="blend" zPosition="2"/>
-        <widget name="Dhcptext" position="230,250" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <widget name="Dhcp" position="630,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DhcpInfo_Text" position="1100,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DhcpInfo" position="1300,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DhcpInfo_Check" position="1430,250" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2"/>
-        <widget name="IPtext" position="230,300" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <widget name="IP" position="630,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="IPInfo_Text" position="1100,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="IPInfo" position="1300,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="IPInfo_Check" position="1430,300" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2"/>
-        <widget name="DNStext" position="230,350" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1"/>
-        <widget name="DNS" position="630,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DNSInfo_Text" position="1100,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DNSInfo" position="1300,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
-        <widget name="DNSInfo_Check" position="1430,350" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2"/>
-        <eLabel position="230,420" size="1250,3" backgroundColor="#202020" zPosition="1"/>
-        <widget name="InfoText" position="230,430" size="1250,470" font="Regular;26" halign="center" valign="center" foregroundColors="yellow" backgroundColor="#000000" transparent="1" zPosition="20"/>
-        <widget name="InfoTextBorder" position="230,430" size="1250,470" font="Regular;26" halign="center" valign="center" foregroundColors="yellow" backgroundColor="#000000" transparent="1" zPosition="25"/>
-        <widget name="EditSettingsButton" position="1450,1005" size="30,30" pixmaps="buttons/button_grey.png,buttons/button_blue.png" alphatest="blend"/>
-        <widget name="EditSettings_Text" position="1040,1000" size="400,38" font="Regular;34" halign="right" foregroundColors="#ffffff,#8c8c93,#1cff1c" backgroundColor="#000000" transparent="1"/>
+        <panel name="LayerMenu1500" />
+        <panel name="op-RGYB" />
+        <widget name="Adaptertext" position="230,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget name="Adapter" position="630,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="AdapterInfo_Text" position="1100,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="AdapterInfo" position="1300,150" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="3" />
+        <widget name="AdapterInfo_OK" position="1430,150" size="57,46" pixmap="skin_default/icons/lock_on.png" zPosition="2" alphatest="blend" />
+        <widget name="Networktext" position="230,200" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget name="Network" position="630,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="NetworkInfo_Text" position="1100,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2" />00
+        <widget name="NetworkInfo" position="1300,200" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="NetworkInfo_Check" position="1430,200" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" backgroundColor="#000000" alphatest="blend" zPosition="2" />
+        <widget name="Dhcptext" position="230,250" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget name="Dhcp" position="630,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DhcpInfo_Text" position="1100,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DhcpInfo" position="1300,250" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DhcpInfo_Check" position="1430,250" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2" />
+        <widget name="IPtext" position="230,300" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget name="IP" position="630,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="IPInfo_Text" position="1100,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="IPInfo" position="1300,300" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="IPInfo_Check" position="1430,300" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2" />
+        <widget name="DNStext" position="230,350" size="375,40" font="Regular;30" halign="left" foregroundColors="#ffffff,ltbluette" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget name="DNS" position="630,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,red,green" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DNSInfo_Text" position="1100,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff,grey,#ffff00" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DNSInfo" position="1300,350" size="300,40" font="Regular;30" halign="left" foregroundColors="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" />
+        <widget name="DNSInfo_Check" position="1430,350" size="57,46" pixmaps="skin_default/icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend" zPosition="2" />
+        <eLabel position="230,420" size="1250,3" backgroundColor="#202020" zPosition="1" />
+        <widget name="InfoText" position="230,430" size="1250,470" font="Regular;26" halign="center" valign="center" foregroundColors="yellow" backgroundColor="#000000" transparent="1" zPosition="20" />
+        <widget name="InfoTextBorder" position="230,430" size="1250,470" font="Regular;26" halign="center" valign="center" foregroundColors="yellow" backgroundColor="#000000" transparent="1" zPosition="25" />
+        <widget name="EditSettingsButton" position="1450,970" size="30,30" pixmaps="buttons/button_grey.png,buttons/button_blue.png" alphatest="blend" />
+        <widget name="EditSettings_Text" position="1040,970" size="400,38" font="Regular;34" halign="right" foregroundColors="#ffffff,#8c8c93,#1cff1c" backgroundColor="#000000" transparent="1" />
     </screen>
+    
     <!-- Network Browser -->
     <screen name="NetworkBrowser" size="1920,1080" title="Network Neighbourhood" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="infotext" render="Label" position="230,150" size="1250,50" font="Regular;30" valign="center" halign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0" zPosition="10"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,230" size="1250,700" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="10" backgroundColorSelected="barColor" scrollbarSliderForegroundColor="#505050" scrollbarSliderBackgroundColor="#303030">
@@ -530,6 +532,7 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- Network Scanner IP -->
     <screen name="ScanIP" position="center,200" size="900,230" Title="Scan IP" backgroundColor="FF000000">
         <ePixmap position="20,20" size="100,100" pixmap="oZeta-FHD/icons/ipscan.png" alphatest="blend"/>
@@ -542,6 +545,7 @@
         <ePixmap position="560,170" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
         <widget source="key_yellow" render="Label" position="600,167" size="250,40" font="Regular;30" halign="left" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- UserDialog -->
     <screen name="UserDialog" position="center,200" size="900,230" Title="Scan IP" backgroundColor="FF000000">
         <ePixmap position="20,20" size="126,100" pixmap="oZeta-FHD/icons/passkey.png" alphatest="blend"/>
@@ -553,6 +557,7 @@
         </widget>
         <widget name="HelpWindow" position="535,470" size="1,1" zPosition="1" transparent="1" alphatest="on"/>
     </screen>
+    
     <!-- Mount Manager -->
     <screen name="DevicesMountPanel" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -583,10 +588,11 @@
         <ePixmap pixmap="buttons/80/key_menu.png" position="1160,420" size="80,40" alphatest="blend"/>
         <widget name="key_menu" position="1080,1925" size="400,50" font="Regular;30" valign="center" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
     </screen>
+    
     <!--Device Manager -->
     <screen name="HddSetup" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080" transparent="0">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="menu" render="Listbox" position="220,150" size="1250,700" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="ltbluette" scrollbarWidth="10" backgroundColor="#000000" transparent="1">
             <convert type="TemplatedMultiContent">
 				{"template": [
@@ -601,14 +607,16 @@
         </widget>
         <widget name="setupimage" position="220,-20" size="120,100" alphatest="blend" conditional="setupimage" transparent="1" zPosition="2" scale="1"/>
     </screen>
+    
     <!--Device Manager Config -->
     <screen name="DeviceMountPanelConf" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="Linconn" position="220,150" size="1250,50" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020"/>
         <eLabel position="220,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="220,220" size="1250,700" font="Regular;30" scrollbarMode="showOnDemand" itemHeight="50" scrollbarSliderForegroundColor="ltbluette" scrollbarWidth="10" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <!--FSTab Editor -->
     <screen name="fstabViewerScreen" position="0,0" size="1920,1080" backgroundColor="transparent" title="fstab-Editor" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -626,6 +634,7 @@
         <widget name="entryinfo" font="Regular;36" position="340,420" size="300,40" halign="left" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <widget name="menulist" position="730,150" size="750,750" itemHeight="250" font="Regular;32" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="barColor" transparent="1"/>
     </screen>
+    
     <!--FSTab Editor -->
     <screen name="fstabEditorScreen" position="0,0" size="1920,1080" backgroundColor="transparent" title="fstab-Editor" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -646,9 +655,10 @@
         <widget name="HelpWindow" pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/MountManager/icons/vkey_icon.png" position="220,700" zPosition="10" size="0,0" transparent="1"/>
         <widget name="ButtonBlue" pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/MountManager/icons/blue.png" position="230,1350" zPosition="10" size="35,25" transparent="1" alphatest="on"/>
     </screen>
+    
     <screen name="AutoMountManager" size="1920,1080" Title="Mount Manager" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="config" render="Listbox" position="230,150" size="1250,720" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97">
             <convert type="TemplatedMultiContent">
 				{"template": [
@@ -663,9 +673,10 @@
         </widget>
         <widget source="introduction" render="Label" position="780,975" size="0,0" backgroundColor="darkgrey" shadowColor="black" shadowOffset="-2,-2" zPosition="1" transparent="1" font="Regular;30" halign="center"/>
     </screen>
+    
     <screen name="AutoMountEdit" size="1920,1080" Title="Mount Edit" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="introduction" render="Label" position="230,150" size="1250,50" font="Regular;30" halign="center" valign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="5"/>
         <widget name="config" position="230,220" size="1250,400" itemHeight="40" font="Regular;28" backgroundColor="#000000" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
@@ -674,9 +685,10 @@
             <convert type="ConditionalShowHide"/>
         </widget>
     </screen>
+    
     <screen name="AutoMountView" size="1920,1080" Title="AutoMount" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="introduction" render="Label" position="230,150" size="1250,50" font="Regular;30" valign="center" halign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0" zPosition="10"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="5"/>
         <eLabel position="230,230" size="1250,75" backgroundColor="#202020" zPosition="1"/>
@@ -700,23 +712,26 @@
 			</convert>
         </widget>
     </screen>
-    <!-- About/Info Screens -->
+    
+    <!-- About/Info Screens edit lululla 17022024 -->
     <screen name="AboutOE" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
-        <widget source="lab1" render="Label" position="230,140" size="810,40" font="Regular;36" backgroundColor="black" foregroundColor="yellow" transparent="1" zPosition="1"/>
-        <widget source="lab2" render="Label" position="230,190" size="810,40" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
-        <widget source="lab3" render="Label" position="230,240" size="810,40" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
-        <eLabel position="230,290" size="810,3" backgroundColor="#202020" zPosition="2"/>
-        <widget name="AboutScrollLabel" position="230,320" size="810,600" font="Regular;26" scrollbarSliderBorderWidth="1" scrollbarWidth="10" transparent="1" zPosition="1" foregroundColor="white" backgroundColor="black" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#808080" scrollbarMode="showOnDemand"/>
-        <ePixmap position="960,1000" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" scale="1"/>
+        <panel name="vRGYB-1000"/>
+        <widget source="lab1" render="Label" position="230,140" size="810,40" font="Regular;36" backgroundColor="black" foregroundColor="yellow" transparent="1" zPosition="1" />
+        <widget source="lab2" render="Label" position="230,190" size="810,40" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1" />
+        <widget source="lab3" render="Label" position="230,240" size="810,40" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1" />
+        <eLabel position="230,290" size="810,3" backgroundColor="#202020" zPosition="2" />
+        <widget name="AboutScrollLabel" position="230,320" size="810,600" font="Regular;26" scrollbarSliderBorderWidth="1" scrollbarWidth="10" transparent="1" zPosition="1" foregroundColor="white" backgroundColor="black" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#808080" scrollbarMode="showOnDemand" />
+        <ePixmap position="605,1000" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" scale="1" />
     </screen>
+    
     <!-- Software Changes & Changes -->
     <screen name="SoftwareUpdateChanges" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="text" position="230,140" size="810,800" font="Regular;22" backgroundColor="black" foregroundColor="808080" scrollbarMode="showOnDemand" transparent="1" zPosition="3" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#808080"/>
     </screen>
+    
     <!-- Download Box -->
     <screen name="RunSoftwareUpdate" position="center,center" size="1260,620" title="Software Update..." backgroundColor="#10000000">
         <ePixmap position="30,45" size="140,140" pixmap="oZeta-FHD/icons/download.png" alphatest="blend" scale="1" zPosition="2"/>
@@ -728,15 +743,16 @@
     <!-- MultiBoot Manager -->
     <screen name="MultiBootManager" position="0,0" size="1920,1080" title="MultiBoot Manager" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="description" position="230,140" size="810,180" font="Regular;26" foregroundColor="yellow" backgroundColor="#202020" halign="center" valign="center" transparent="0" zPosition="1"/>
         <eLabel position="230,330" size="810,5" backgroundColor="#404040" zPosition="1"/>
         <widget name="slotlist" position="230,355" size="810,480" font="Regular;40" itemHeight="40" foregroundColor="#ffffff" backgroundColor="barColor" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- openMultiboot Manager -->
     <screen name="OMBManagerList" position="0,0" size="1920,1080" title="OMBManagerList" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="label1" position="230,150" size="810,50" font="Regular;30" foregroundColor="#ffffff" halign="left" backgroundColor="barColor" valign="center" transparent="1"/>
         <widget name="label2" position="230,110" size="810,50" font="Regular;30" foregroundColor="#ffffff" halign="left" backgroundColor="barColor" valign="center" transparent="1"/>
         <eLabel position="230,210" size="810,5" backgroundColor="#404040" zPosition="1"/>
@@ -744,15 +760,17 @@
             <convert type="StringList"/>
         </widget>
     </screen>
+    
     <!-- Multiboot Selector -->
     <screen name="MultiBootSelector" position="0,0" size="1920,1080" title="MultiBoot maintenance" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget source="description" render="Label" position="230,150" size="1250,50" font="Regular;26" foregroundColor="yellow" backgroundColor="#202020" halign="center" valign="center" transparent="0"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="2"/>
         <widget name="config" position="230,220" size="1250,600" itemHeight="40" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
         <widget source="options" render="Label" position="230,830" size="1250,70" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
     </screen>
+    
     <!-- Virtual Keyboard -->
     <screen name="VirtualKeyBoard" position="center,200" size="1020,545" title="Virtual keyboard" backgroundColor="10000000" zPosition="50">
         <widget name="prompt" position="30,17" size="980,50" font="Regular;30" noWrap="1" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
@@ -765,14 +783,16 @@
         <widget name="language" position="700,510" size="250,25" font="Regular;20" transparent="1" zPosition="20"/>
         <widget name="mode" position="730,510" size="250,25" font="Regular;20" halign="right" foregroundColor="#ffff00" backgroundColor="#000000" transparent="1" valign="center"/>
     </screen>
+    
     <!-- Virtual Keyboard -->
     <screen name="vkeyboard_fhdskin" position="center,200" size="1020,550" title="Virtual keyboard" backgroundColor="10000000" zPosition="50">
         <panel name="VirtualKeyBoard"/>
     </screen>
+    
     <!-- WirelessLan -->
     <screen name="WlanStatus" position="0,0" size="1920,1080" title="Wireless Network State" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,150" size="182,80" pixmap="oZeta-FHD/icons/wifi.png" alphatest="blend"/>
         <widget name="statuspic" position="390,200" size="40,40" pixmaps="oZeta-FHD/icons/wifi-on.png,oZeta-FHDicons/wifi-off.png" transparent="1" alphatest="blend" zPosition="10"/>
         <widget source="LabelBSSID" render="Label" position="450,155" size="380,37" valign="center" font="Regular;30" transparent="1" foregroundColor="#ffffff" backgroundColor="#000000"/>
@@ -792,9 +812,10 @@
         <widget source="IF" render="Label" position="550,580" size="300,37" valign="center" font="Regular;30" transparent="1" foregroundColor="yellow" backgroundColor="#000000" zPosition="10"/>
         <widget source="Statustext" render="Label" position="230,570" size="0,0" valign="center" font="Regular;30" transparent="1" foregroundColor="#ffff00" backgroundColor="#000000"/>
     </screen>
+    
     <screen name="WlanScan" position="0,0" size="1920,1080" title="Wireless Network" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="info" render="Label" position="230,150" size="1250,50" font="Regular;30" halign="center" valign="center" foregroundColor="#ffff00" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,220" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,240" size="1250,600" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#202020" transparent="1" backgroundColorSelected="#124b97">
@@ -812,10 +833,11 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- Input Device Configuration -->
     <screen name="InputDeviceSelection" position="0,0" size="1920,1080" title="Input Devices" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="introduction" render="Label" position="230,150" size="810,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" zPosition="1" transparent="0"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,220" size="810,720" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#202020" transparent="1" backgroundColorSelected="#124b97">
@@ -830,28 +852,32 @@
 			</convert>
         </widget>
     </screen>
+    
     <screen name="InputDeviceSetup" position="0,0" size="1920,1080" title="Input Devices Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="introduction" render="Label" position="230,150" size="810,90" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,250" size="810,3" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="config" position="230,260" size="810,600" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#101010" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="HotkeySetup" position="0,0" size="1920,1080" title="HotKeys" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="description" position="230,150" size="1250,80" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,240" size="1250,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="list" position="230,250" size="460,680" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97" scrollbarSliderForegroundColor="#404040" scrollbarSliderBackgroundColor="#202020"/>
         <widget name="choosen" position="710,250" size="540,680" scrollbarMode="showOnDemand" scrollbarWidth="10" halign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="HotkeySetupSelect" position="0,0" size="1920,1080" title="HotKeys Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="description" position="230,150" size="1250,80" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="list" position="230,245" size="700,680" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <widget name="choosen" position="950,245" size="300,680" scrollbarMode="showOnDemand" scrollbarWidth="10" halign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Nim selection -->
     <screen name="NimSelection" position="0,0" size="1920,1080" title="NIM Selection" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -870,23 +896,26 @@
         </widget>
         <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" position="1400,1010" size="80,40" zPosition="2"/>
     </screen>
-    <!-- Nim setup -->
+    
+    <!-- Nim setup edit lululla 17022024 -->
     <screen name="NimSetup" position="0,0" size="1920,1080" title="NIM Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="config" position="230,140" size="1250,600" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <eLabel position="230,840" size="1250,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="description" position="230,850" size="1250,100" itemHeight="50" font="Regular;27" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
-        <ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1400,980" size="80,40" zPosition="2"/>
+        <ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="750,980" size="80,40" zPosition="2" />
     </screen>
+    
     <!-- Scan simple -->
     <screen name="ScanSimple" position="0,0" size="1920,1080" title="Scan TV" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="footer" position="230,150" size="1250,80" itemHeight="50" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <eLabel position="230,240" size="1250,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="config" position="230,250" size="1250,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Service Scan -->
     <screen name="ServiceScan" position="0,0" size="1920,1080" title="Service Scan" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1"/>
@@ -929,18 +958,20 @@
         <ePixmap position="320,1008" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2"/>
         <widget name="key_green" position="360,975" size="250,95" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Scan setup -->
     <screen name="ScanSetup" position="0,0" size="1920,1080" title="Scan Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="introduction" position="230,150" size="1250,80" itemHeight="50" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <eLabel position="230,240" size="1250,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="config" position="230,250" size="1250,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Positioner setup -->
     <screen name="PositionerSetup" position="0,0" size="1920,1080" title="Positioner Setup" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="list" position="230,150" size="650,400" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <eLabel position="900,150" size="3,800" backgroundColor="#303030" zPosition="1"/>
         <eLabel text="Frequency:" position="920,150" size="200,40" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
@@ -965,6 +996,7 @@
         <ePixmap pixmap="skin_default/buttons/80/key_info.png" alphatest="blend" position="1300,910" size="80,40" zPosition="2"/>
         <ePixmap pixmap="skin_default/buttons/80/key_menu.png" alphatest="blend" position="1400,910" size="80,40" zPosition="2"/>
     </screen>
+    
     <!-- Tuner Screen -->
     <screen name="TunerScreen" position="0,0" size="1920,1080" title="Tune..." backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -973,17 +1005,19 @@
         <eLabel position="230,240" size="810,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="config" position="230,250" size="810,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Positioner Setup Log -->
     <screen name="PositionerSetupLog" position="0,0" size="1920,1080" title="LOG..." backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplateB"/>
+        <panel name="vRGYB-1500"/>
         <widget name="list" position="230,150" size="1250,790" font="Console;26" backgroundColor="#000000" transparent="1"/>
     </screen>
-    <!-- Satfinder -->
+    
+    <!-- Satfinder edit lululla -->
     <screen name="Satfinder" position="0,0" size="1920,1080" title="SatFinder" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,0" size="1920,1080" pixmap="oZeta-FHD/menu/panels/wizard.jpg" alphatest="blend" scale="1" zPosition="-1"/>
+        <panel name="vRGYB-1000"/>
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <ePixmap position="0,0" size="1920,1080" pixmap="oZeta-FHD/menu/panels/wizard.jpg" alphatest="blend" scale="1" zPosition="-1"/>
         <widget name="config" position="230,150" size="810,200" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <eLabel position="230,380" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <eLabel text="SNR:" position="230,410" size="100,40" font="Regular;28" backgroundColor="#000000" transparent="1"/>
@@ -1015,6 +1049,7 @@
         <ePixmap position="229,539" size="812,22" pixmap="oZeta-FHD/skin_default/slidescan.png" alphatest="blend" scale="1" zPosition="2"/>
         <widget name="introduction" position="230,8400" size="800,50" zPosition="0"/>
     </screen>
+    
     <!-- FastScanScreen -->
     <screen name="FastScanScreen" position="0,0" size="1920,1080" title="Fast Scan" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1023,6 +1058,7 @@
         <eLabel position="230,240" size="810,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="config" position="230,250" size="810,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="barColor"/>
     </screen>
+    
     <!-- FastScanStatus -->
     <screen name="FastScanStatus" position="0,0" size="1920,1080" title="Fast Scan" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1032,72 +1068,80 @@
         <eLabel position="230,265" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="scan_progress" position="230,285" size="810,22" pixmap="skin_default/progress_big_810.png" borderWidth="1" borderColor="#808080"/>
     </screen>
+    
     <!-- CableScanScreen -->
     <screen name="CableScanScreen" title="Cable Scan" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="FastScanScreen"/>
     </screen>
+    
     <!-- CableScan Status -->
     <screen name="CableScanStatus" title="Cable Scan" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="FastScanStatus"/>
     </screen>
+    
     <!-- Rotor Nim Selection -->
     <screen name="RotorNimSelection" position="0,0" size="1000,400" title="Select Slot" backgroundColor="transparent">
         <widget name="nimlist" position="20,20" size="960,150" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <!-- AutoDiseqC -->
     <screen name="AutoDiseqc" position="0,0" size="1920,1080" title="Auto DisseqC" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,150" size="110,110" pixmap="oZeta-FHD/icons/mnsat.png" alphatest="blend" zPosition="1"/>
         <widget source="statusbar" render="Label" position="360,150" size="700,100" font="Regular;33" halign="left" valign="center" transparent="1" zPosition="10"/>
         <widget source="tunerstatusbar" render="Label" position="230,280" size="810,50" font="Regular;33" halign="left" valign="center" transparent="1" zPosition="10"/>
         <widget name="config" position="230,350" size="810,450" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- AutoBackup -->
     <screen name="Config" position="0,0" size="1920,1080" title="Auto DisseqC" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="1250,600" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <widget name="status" position="230,900" size="1100,50" font="Regular;32" halign="left" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="3"/>
         <widget name="statusbar" position="460,895" size="1020,50" font="Regular;32" halign="right" valign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2"/>
         <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" position="1400,1025" size="80,40" zPosition="2"/>
     </screen>
+    
     <!-- Softwaremanager -->
     <screen name="BackupSelection" position="0,0" size="1920,1080" title="Backup Files" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="summary_description" render="Label" position="230,150" size="810,70" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,230" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="checkList" position="230,240" size="810,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" zPosition="3" backgroundColorSelected="barColor"/>
     </screen>
+    
     <!-- Softwaremanager Setup -->
     <screen name="SoftwareManagerSetup" position="0,0" size="1920,1080" title="Software Manager" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="introduction" render="Label" position="230,150" size="1250,50" halign="center" valign="center" font="Regular;30" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="10"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="config" position="230,220" size="1250,600" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Backup Screen -->
     <screen name="BackupScreen" position="0,0" size="1920,1080" title="Backup Running..." backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="config" position="230,150" size="810,750" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
-    
 
     <!-- mod by mmark 30/12/23 -->
+    <!-- mod by lululla 17/02/24 -->
     <!-- Softcam Setup -->
     <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftCam" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1300"/>
         <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2"/>
         <widget name="config" position="410,150" size="1060,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <eLabel position="230,280" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="info" position="230,330" size="1250,469" font="Regular;28" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2"/>
         <widget name="footnote" position="186,1108" size="1000,100" font="Regular; 28" transparent="1"/>
         <widget name="description" position="231,807" size="1250,149" font="Regular; 26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
-        <ePixmap position="1400,985" size="80,40" pixmap="buttons/80/key_menu.png" zPosition="5" alphatest="blend"/>
+        <ePixmap position="800,985" size="80,40" pixmap="buttons/80/key_menu.png" zPosition="5" alphatest="blend" />
         <!-- add lululla -->
         <!--
         <widget name="actifcam" font="Regular;20" position="280,288" size="350,32" halign="center" />
@@ -1109,7 +1153,7 @@
     <!-- Softcam Panel add lululla -->
     <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="SoftCam" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,150" size="160,100" pixmap="icons/smartcard.png" alphatest="blend" zPosition="2"/>
         <widget name="config" position="410,150" size="630,120" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
         <eLabel position="230,280" size="810,3" backgroundColor="#303030" zPosition="1"/>
@@ -1121,6 +1165,7 @@
         <widget name="actifcam2" font="Regular;20" position="660,289" size="350,32" halign="center"/>
         <widget name="ecminfo" font="Regular;20" position="230,652" size="810,300" transparent="1"/>
     </screen>
+    
     <!-- PPanel -->
     <screen name="ToplevelPPanel" position="0,0" size="1920,1080" title="TopLevel Panel" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1129,6 +1174,7 @@
         <eLabel position="230,210" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="nodelist" position="230,225" size="810,720" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="barColor"/>
     </screen>
+    
     <screen name="PPanel" position="0,0" size="1920,1080" title="pPanel" backgroundColor="#ff000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
@@ -1136,17 +1182,21 @@
         <eLabel position="230,210" size="810,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="nodelist" position="230,220" size="810,640" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="Execute" position="0,0" size="1920,1080" title="pPanel Entry" backgroundColor="#ff000000" flags="wfNoBorder">
         <eLabel position="10,10" size="1900,1060" backgroundColor="#40000000" zPosition="-2"/>
         <eLabel position="20,20" size="1880,1040" backgroundColor="#20000000" zPosition="-1"/>
         <widget name="linelist" position="30,30" size="1860,1020" itemHeight="40" font="Regular;26" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="File" position="center,300" size="1200,100" title="PPanel File" backgroundColor="#20000000" zPosition="10">
         <widget name="progress" position="30,30" size="1140,10" pixmap="usr/share/enigma2/oZeta-FHDpicmenu/sl1000.png" transparent="1"/>
     </screen>
+    
     <screen name="Tarball" position="center,300" size="1200,100" title="PPanel Entry" backgroundColor="#20000000" zPosition="10">
         <widget name="progress" position="30,30" size="1140,10" pixmap="usr/share/enigma2/oZeta-FHDpicmenu/sl1000.png" transparent="1"/>
     </screen>
+    
     <!-- Common interface - selection -->
     <screen name="CiSelection" position="0,0" size="1920,1080" title="Common Interfaces" backgroundColor="#20000000" zPosition="10">
         <panel name="LayerMenu1500"/>
@@ -1156,6 +1206,7 @@
         <eLabel position="410,210" size="1070,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="entries" position="410,225" size="1070,650" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- CI Config Menu -->
     <screen name="CIconfigMenu" position="0,0" size="1920,1080" title="CI Assignment" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1166,6 +1217,7 @@
         <widget name="ServiceList" position="230,430" size="810,450" font="Regular;30" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
         <widget source="ServiceList_info" render="Label" position="230,430" size="810,450" font="Regular;33" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="2"/>
     </screen>
+    
     <!-- Common interface -->
     <screen name="MMIDialog" position="0,0" size="1920,1080" title="MMi Dialog" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1176,32 +1228,36 @@
         <widget name="entries" position="230,225" size="810,500" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColor="#303030" transparent="1" backgroundColorSelected="#124b97"/>
         <widget name="bottom" position="230,750" size="810,50" font="Regular;30" foregroundColor="#ffffff" backgroundColor="#303030" transparent="1"/>
     </screen>
+    
     <!-- Common interface Assignment -->
     <screen name="CIselectMainMenu" position="0,0" size="1920,1080" title="CI Assignment" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="CiList" position="230,150" size="810,600" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>'
 
 	<!-- Parental Control -->
     <screen name="ParentalControlSetup" position="0,0" size="1920,1080" title="pPanel Entry" backgroundColor=" transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="810,600" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="ParentalControlEditor" position="0,0" size="1920,1080" title="Parental control services Editor" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="servicelist" position="230,150" size="810,720" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="ParentalControlChangePin" position="0,0" size="1920,1080" title="Parental Control Pin" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <eLabel text="Change pin code" position="230,150" foregroundColor="yellow" size="810,50" font="Regular;36" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,210" size="810,5" backgroundColor="#303030"/>
         <widget name="config" position="230,220" size="810,500" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="bluette" foregroundColorSelected="#ffffff" transparent="1"/>
         <!-- ePixmap position="890,175" size="256,256" zPosition="2" pixmap="icons/look.png" transparent="1" alphatest="blend" /-->
     </screen>
+    
     <screen name="PinInput" position="center,300" size="760,210" title="Change Pin Code" backgroundColor="#20000000" zPosition="10">
         <ePixmap position="30,50" size="126,100" pixmap="icons/passkey.png" alphatest="blend" zPosition="2"/>
         <widget name="text" position="120,30" size="640,40" font="Regular;36" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
@@ -1209,18 +1265,21 @@
         <widget name="tries" position="120,115" size="640,150" font="Regular;40" halign="center" valign="center" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
         <widget name="service" position="120,145" size="640,50" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <screen name="PinInputPopup" position="center,300" size="1200,320" title="Change Pin Code" backgroundColor="#20000000" zPosition="10">
         <panel name="PinImput"/>
     </screen>
+    
     <!-- SelectImage OK -->
     <screen name="SelectImage" position="0,0" size="1920,1080" title="Select Image" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_multiboot.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="text" position="230,1250" size="810,50" font="Regular;30" foregroundColor="yellow" backgroundColor="#303030" transparent="0" zPosition="2"/>
         <widget name="description" position="230,1250" size="810,50" font="Regular;30" foregroundColor="yellow" backgroundColor="#303030" transparent="0" zPosition="3"/>
         <widget name="list" position="230,150" size="1250,760" font="Regular;30" itemHeight="40" valign="center" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="20" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Button Setup -->
     <screen name="ButtonSetup" position="center,center" size="1200,400" title="Setup" backgroundColor="#10000000">
         <widget name="list" position="0,0" size="0,0" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
@@ -1231,15 +1290,17 @@
         <widget name="description" position="280,160" size="910,120" font="Regular;34" foregroundColor="white" backgroundColor="#202020" halign="center" valign="center" transparent="1"/>
         <ePixmap pixmap="buttons/80/key_exit.png" position="1100,340" size="80,40" alphatest="blend"/>
     </screen>
+    
     <!-- Button Setup Select-->
     <screen name="ButtonSetupSelect" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1700"/>
         <widget name="list" position="230,140" size="750,800" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
         <widget name="description" position="1000,140" size="680,460" font="Regular;30" foregroundColor="yellow" backgroundColor="#202020" halign="center" valign="top" transparent="1"/>
         <eLabel position="1000,630" size="680,3" backgroundColor="#202020" zPosition="2"/>
         <widget name="choosen" position="1000,645" size="680,300" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
     </screen>
+    
     <!-- UserInterfacePositioner2 -->
     <screen name="UserInterfacePositioner2" position="0,0" size="1920,1080" backgroundColor="#20000000" flags="wfNoBorder" title="OSD Adjustment">
         <widget source="text" render="Label" position="center,180" size="1400,150" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
@@ -1268,23 +1329,26 @@
         <ePixmap pixmap="buttons/key_yellow.png" position="1100,830" size="40,40" alphatest="blend"/>
         <widget source="key_yellow" render="Label" position="1150,830" size="200,40" font="Regular;30" halign="left" valign="center" noWrap="1" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Flash Online -->
     <screen name="FlashOnline" position="0,0" size="1920,1080" title="Flash Online" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="description" position="230,150" size="0,0" font="Regular;30" foregroundColor="yellow" backgroundColor="#202020" halign="center" valign="center" transparent="0"/>
         <widget name="list" position="230,150" size="1250,760" itemHeight="50" font="Regular;28" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
     </screen>
+    
     <!-- Image Backup -->
     <screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="description" render="Label" position="230,150" size="1250,50" font="Regular;26" foregroundColor="yellow" backgroundColor="#202020" halign="center" valign="center" transparent="0"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="2"/>
         <widget name="config" position="230,220" size="1250,600" itemHeight="40" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" 
         	scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
         <widget source="options" render="Label" position="230,850" size="1250,70" font="Regular;26" halign="center" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
     </screen>
+    
     <!-- Devices Info -->
     <screen name="Devices" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
@@ -1302,6 +1366,7 @@
         <widget source="mounts" render="Label" position="350,720" size="1120,140" font="Regular;30" foregroundColor="white" backgroundColor="barColor" transparent="1" zPosition="1"/>
         <!-- widget name="allinonedevices" position="0,0" size="0,0" font="Regular;20" scrollbarWidth="10" scrollbarMode="showOnDemand" transparent="1" zPosition="1" /-->
     </screen>
+    
     <!-- Memory Info -->
     <screen name="SystemMemoryInfo" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
@@ -1310,6 +1375,7 @@
         <widget name="AboutScrollLabel" position="330,150" size="700,700" itemHeight="30" font="Regular;28" scrollbarWidth="10" scrollbarMode="showOnDemand" foregroundColor="#ffffff" backgroundColor="barColor" transparent="1" zPosition="1"/>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Network Info -->
     <screen name="SystemNetworkInfo" position="0,0" size="1920,1080" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
@@ -1322,6 +1388,7 @@
         <widget source="Statustext" render="Label" position="230,750" size="0,0" font="Regular;30" halign="left" valign="center" backgroundColor="black" transparent="1" zPosition="10"/>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Infopanel -->
     <screen name="Infopanel" position="0,0" size="1920,1080" title="InfoPanel" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1330,10 +1397,11 @@
         <widget name="label1" position="740,850" size="300,175" font="Regular;20" foregroundColor="#ffff00" halign="right" backgroundColor="barColor" valign="center" transparent="1"/>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- HddMount Screens -->
     <screen name="HddMount" position="0,0" size="1920,1080" title="Mount Manager" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="lab1" position="230,150" size="1250,50" font="Regular;30" halign="center" foregroundColor="#ffff00" backgroundColor="barColor" transparent="1" zPosition="2"/>
         <widget source="list" render="Listbox" position="230,150" size="1250,600" scrollbarSliderBorderWidth="1" foregroundColor="#ffffff" backgroundColor="#000000" scrollbarMode="showOnDemand" transparent="1" scrollbarWidth="10" scrollbarSliderforegroundColor="#ffffff" scrollbarSliderBorderColor="#606060" backgroundColorSelected="barColor" foregroundColorSelected="white">
             <convert type="TemplatedMultiContent">
@@ -1348,13 +1416,15 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- HddMount Devices -->
     <screen name="DevicePanelConf" position="0,0" size="1920,1080" title="UserManager" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="config" position="230,150" size="1250,700" scrollbarSliderBorderWidth="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="1" scrollbarWidth="10" scrollbarSliderforegroundColor="#ffffff" scrollbarSliderBorderColor="scrollbarSliderbordercolor" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
         <widget name="Linconn" position="760,850" size="700,20" font="Regular;20" halign="right" valign="center" backgroundColor="barColor" foregroundColor="yellow" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- ScriptRunner -->
     <screen name="ScriptRunner" position="0,0" size="1920,1080" title="Job Manager" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
@@ -1371,6 +1441,7 @@
         <widget name="list" position="230,350" size="810,550" itemHeight="50" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#505050" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Swap -->
     <screen name="Swap" position="0,0" size="1920,1080" title="Swap Manager" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
@@ -1397,33 +1468,38 @@
         <widget name="active" position="490,520" size="550,40" font="Regular;30" halign="center" valign="center" foregroundColor="white" backgroundColor="green" transparent="0" zPosition="2"/>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Info -->
     <screen name="ImageInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
         <panel name="information_common"/>
-        <panel name="vButtonTemplate-1700"/>
+        <panel name="vRGYB-1500"/>
     </screen>
+    
     <screen name="SystemInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
         <panel name="information_common2"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <ePixmap pixmap="buttons/80/key_menu.png" position="1620,980" size="60,30" scale="1" zPosition="2" alphatest="blend"/>
     </screen>
+    
     <!-- Volume Config -->
     <screen name="Volume_Config" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget source="infotext" render="Label" position="230,150" size="810,90" font="Regular;28" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,250" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="230,260" size="810,600" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#505050" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
     </screen>
+    
     <screen name="VideoFinetune" position="0,0" size="1920,1080" backgroundColor="barColor" flags="wfNoBorder">
         <widget source="Canvas" render="Canvas" position="0,0" size="1920,1080"/>
     </screen>
-    <!-- Icons PACK_AVAILABLE, PACK_INSTALLED, PACK_IN_USE -->
+    
+    <!-- Icons PACK_AVAILABLE, PACK_INSTALLED, PACK_IN_USE edit lululla 17022024 -->
     <screen name="LocaleSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="icons" position="0,0" size="30,27" pixmaps="icons/menu_download.png,icons/menu_off.png,icons/menu_on.png" alphatest="blend"/>
         <widget source="locales" render="Listbox" position="230,150" size="1250,750" zPosition="3" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" scrollbarMode="showOnDemand" transparent="1">
             <convert type="TemplatedMultiContent">
@@ -1442,8 +1518,9 @@
 				}
 			</convert>
         </widget>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1400,1000" size="80,40" alphatest="blend"/>
+        <ePixmap pixmap="buttons/80/key_menu.png" position="750,1000" size="80,40" alphatest="blend" />
     </screen>
+    
     <screen name="VideoEnhancementPreview" position="center,200" size="800,240" title="VideoEnhancementPreview" backgroundColor="#20000000">
         <widget name="config" position="10,20" size="780,80" zPosition="2" itemHeight="40" font="Regular;28" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
         <eLabel position="10,110" size="780,1" backgroundColor="#404040" zPosition="2"/>
@@ -1454,21 +1531,24 @@
         <ePixmap pixmap="buttons/key_green.png" position="280,200" size="30,30" scale="1" zPosition="2" alphatest="blend"/>
         <widget source="key_green" render="Label" position="320,200" size="200,30" zPosition="2" valign="center" font="Regular;28" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <!-- Change Volume -->
     <screen name="Change_volume" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="810,750" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#505050" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
     </screen>
+    
     <!-- QuickMenu -->
     <screen name="QuickMenu" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1700"/>
         <widget name="description" position="230,130" size="1450,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <eLabel position="230,200" size="1450,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="list" position="230,220" size="700,800" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
         <widget name="sublist" position="980,220" size="700,800" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
     </screen>
+    
     <!-- QuickMenu Devices -->
     <screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
@@ -1489,6 +1569,7 @@
         </widget>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Update System -->
     <screen name="UpdatePlugin" position="center,200" size="900,250" title="Software Update...">
         <ePixmap position="10,10" size="100,100" pixmap="icons/ipkg.png" alphatest="blend" scale="1" zPosition="-2"/>
@@ -1499,11 +1580,13 @@
         <eLabel position="10,200" size="880,8" backgroundColor="red" transparent="0" zPosition="0"/>
         <widget name="activityslider" position="10,200" size="880,8" borderWidth="1" borderColor="#cccccc" zPosition="2"/>
     </screen>
+    
     <screen name="Pic_Setup" position="0,0" size="1920,1080" title="Setting" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="config" position="230,225" size="810,720" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="Pic_Full_View" position="0,0" size="1920,1080" title="Pictures" backgroundColor="#FF000000" flags="wfNoBorder">
         <widget name="pic" position="fill" zPosition="1" alphatest="on"/>
         <eLabel position="22,22" size="45,37" zPosition="2" backgroundColor="black" transparent="1"/>
@@ -1511,12 +1594,14 @@
         <widget name="play_icon" position="25,25" size="24,24" zPosition="3" pixmap="skin_default/icons/ico_mp_play.png" alphatest="on"/>
         <widget source="file" render="Label" position="90,22" size="900,34" zPosition="3" font="Regular;30" halign="left" noWrap="1" foregroundColor="foreground" backgroundColor="black" transparent="1" borderWidth="2"/>
     </screen>
+    
     <!-- MovieContextMenu -->
     <screen name="MovieContextMenu" position="0,0" size="1920,1080" title="Movie Setup" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,150" size="810,720" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- MovieBrowserConfig -->
     <screen name="MovieBrowserConfiguration" position="0,0" size="1920,1080" title="Movie Setup" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -1525,17 +1610,20 @@
         <eLabel position="230,250" size="1250,3" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="config" position="230,260" size="1250,680" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Bouquet Selector -->
     <screen name="BouquetSelector" position="0,0" size="1920,1080" title="Select Bouquet" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,225" size="810,720" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="FileBrowser" position="0,0" size="1920,1080" title="DVD Browse" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="filelist" position="230,225" size="810,720" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerFullTr"/>
         <widget name="waitingtext" position="40,140" size="1840,50" font="Regular;30" halign="center" valign="center" zPosition="4"/>
@@ -1587,6 +1675,7 @@
         <ePixmap pixmap="oZeta-FHD/iconsmenu/media.png" position="40,30" size="100,100" alphatest="blend" scale="1" zPosition="1"/>
         <ePixmap position="50,970" size="400,80" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1" scale="1"/>
     </screen>
+    
     <!-- SeekBar Infobar -->
     <screen name="Seekbar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" zPosition="2">
         <panel name="PartPlayer"/>
@@ -1608,12 +1697,11 @@
         <eLabel text="7" position="1815,907" size="20,35" font="Regular;26" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="6"/>
         <eLabel text="(-5m)" position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Movie Player Infobar -->
     <screen name="MoviePlayer" title="InfoBar" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="PartPlayer"/>
-        
         <!-- <panel name="PartInfoPoster"/> -->
-        
         <ePixmap pixmap="oZeta-FHD/menu/zlogo.png" position="40,885" size="180,130" alphatest="blend" scale="1" zPosition="1"/>
         <widget alphatest="blend" pixmap="icons/ico_hd_off.png" position="280,1030" render="Pixmap" size="50,30" source="session.CurrentService" zPosition="2">
             <convert type="ServiceInfo">IsSD</convert>
@@ -1667,6 +1755,7 @@
         <eLabel text="(-5m)" position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1"/>
         <ePixmap pixmap="icons/mp_buttonsw.png" position="1590,953" size="422,50" scale="1" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- DVD Player Infobar -->
     <screen name="DVDPlayer" title="InfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="PartPlayer"/>
@@ -1692,6 +1781,7 @@
         <eLabel text="(-5m)" position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1"/>
         <ePixmap pixmap="icons/mp_buttonsw.png" position="1590,953" size="422,50" scale="1" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Audio and subtitle selection -->
     <screen name="AudioSelection" title="Audio" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -1739,40 +1829,40 @@
         </widget>
         <ePixmap position="1390,900" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
     </screen>
-    <!-- EventView -->
-
+    
     <!-- EventView ContextMenu Stuff -->
     <screen name="EventViewContextMenu" position="0,0" size="1920,1080" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,150" size="810,800" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showNever" itemHeight="40" enableWrapAround="1" transparent="1"/>
     </screen>
-    <!-- EPG Stuff -->
+    
+    <!-- EPG Stuff edit lululla -->
     <screen name="EPGSelection" title="EGP Selection" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
-        <eLabel position="0,0" size="1920,1080" backgroundColor="#20000000" zPosition="-1"/>
-        <eLabel position="0,110" size="1920,10" backgroundColor="#FF000000" zPosition="-1"/>
-        <eLabel position="0,960" size="1920,10" backgroundColor="#FF000000" zPosition="-1"/>
+        <eLabel position="0,0" size="1920,1080" backgroundColor="#20000000" zPosition="-1" />
+        <eLabel position="0,110" size="1920,10" backgroundColor="#FF000000" zPosition="-1" />
+        <eLabel position="0,960" size="1920,10" backgroundColor="#FF000000" zPosition="-1" />
         <widget source="Service" render="Picon" position="20,5" size="180,100" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
             <convert type="ServiceName">Reference</convert>
         </widget>
-        <widget source="Title" render="Label" position="230,0" size="1290,110" font="Mmenu;102" valign="center" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <ePixmap position="1820,10" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="20"/>
-        <ePixmap position="1820,60" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="20"/>
-        <eLabel position="20,130" size="390,500" backgroundColor="#30000000"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="30,140" size="370,480" alphatest="blend" scale="1" zPosition="1"/>
-        <widget source="Event" render="zPosterX" position="30,140" size="370,530" zPosition="2"/>
-        <widget name="list" position="440,130" size="1460,800" EventFontSingle="Regular;30" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" backgroundColor="#000000" scrollbarSliderBorderWidth="1" scrollbarWidth="10" transparent="1"/>
+        <widget source="Title" render="Label" position="230,0" size="1290,110" font="Mmenu;102" valign="center" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+        <eLabel position="20,130" size="390,500" backgroundColor="#30000000" />
+        <ePixmap pixmap="menu/panels/nocover.png" position="30,140" size="370,480" alphatest="blend" scale="1" zPosition="1" />
+        <widget source="Event" render="zPosterX" position="30,140" size="370,530" zPosition="2" />
+        <widget name="list" position="440,130" size="1460,800" EventFontSingle="Regular;30" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" backgroundColor="#000000" scrollbarSliderBorderWidth="1" scrollbarWidth="10" transparent="1" />
+        <ePixmap position="30,740" pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget source="key_red" render="Label" font="Regular;28" position="80,740" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="30,790" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget source="key_green" render="Label" font="Regular;30" position="80,790" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="30,840" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget source="key_yellow" render="Label" font="Regular;28" position="80,840" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="30,890" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+        <widget source="key_blue" render="Label" font="Regular;28" position="80,890" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1" />
+        <ePixmap position="1820,10" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="20" />
+        <ePixmap position="1820,60" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="20" />
         <widget source="Event" render="zRunningText" position="10,975" size="1900,90" font="Regular;27" foregroundColor="yellow" backgroundColor="black" transparent="1" valign="top" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=4000,wrap=1,always=0,repeat=3,oneshot=1">
             <convert type="EventName">FullDescription</convert>
         </widget>
-        <ePixmap position="30,740" pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2"/>
-        <widget source="key_red" render="Label" font="Regular;28" position="80,740" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1"/>
-        <ePixmap position="30,790" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2"/>
-        <widget source="key_green" render="Label" font="Regular;30" position="80,790" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1"/>
-        <ePixmap position="30,840" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
-        <widget source="key_yellow" render="Label" font="Regular;28" position="80,840" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1"/>
-        <ePixmap position="30,890" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2"/>
-        <widget source="key_blue" render="Label" font="Regular;28" position="80,890" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1"/>
     </screen>
     <!-- EPG Search -->
     <screen name="EPGSearch" title="EPG Search" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -1801,10 +1891,11 @@
         <ePixmap position="30,890" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2"/>
         <widget source="key_blue" render="Label" font="Regular;28" position="80,890" size="300,40" halign="left" valign="top" foregroundColor="ltbluette" backgroundColor="black" zPosition="2" transparent="1"/>
     </screen>
-    <!-- QuickEPG -->
+    
+    <!-- QuickEPG edit lululla 17022024 -->
     <screen name="QuickEPG" title="InfoBar QuickEPG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500-nl"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget position="220,10" render="Picon" size="160,100" source="Service" alphatest="blend" transparent="1" zPosition="1">
             <convert type="ServiceName">Reference</convert>
         </widget>
@@ -1815,26 +1906,29 @@
         <widget source="Event" render="Label" position="620,260" size="860,500" font="Regular;30" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="1">
             <convert type="EventName">FullDescription</convert>
         </widget>
-        <ePixmap position="1400,980" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
-        <ePixmap position="1400,1030" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
+        <ePixmap position="750,980" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2" />
+        <ePixmap position="750,1030" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2" />
     </screen>
+    
     <!-- Select Bouquet -->
     <screen name="SelectBouquet" position="0,0" size="1920,1080" title="Choose bouquet" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <widget name="menu" position="230,150" size="1250,700" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFF00" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- EPG Search Setup -->
     <screen name="EPGSearchSetup" position="0,0" size="1920,1080" title="EPG Search" backgroundColor="#20000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="help" render="Label" position="230,150" size="1250,100" font="Regular;30" halign="center" valign="center" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,260" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="230,173" size="1250,720" itemHeight="40" font="Regular;28" backgroundColor="#000000" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- EPG Selection Multi -->
     <screen name="EPGSelectionMulti" title="EPG Selection" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1700"/>
         <eLabel position="230,140" size="1450,50" backgroundColor="#303030"/>
         <widget name="date" position="240,145" size="1440,40" font="Regular;34" valign="center" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <eLabel position="230,200" size="1450,3" backgroundColor="#303030" zPosition="1"/>
@@ -1854,6 +1948,7 @@
         <ePixmap position="1600,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
         <ePixmap position="1510,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
     </screen>
+    
     <!-- Extensions menu -->
     <screen name="ExtensionsList" title="Extensions" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1861,23 +1956,26 @@
         <widget name="text" position="230,1150" size="810,481" backgroundColor="#000000" transparent="1" zPosition="1" font="Regular;30"/>
         <widget name="list" position="230,150" size="810,700" font="Regular;36" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- RecordPathSettings -->
     <screen name="RecordPathsSettings" title="Record Path" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="config" position="230,150" size="1250,700" font="Regular;32" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- ChannelContextMenu -->
     <screen name="ChannelContextMenu" title="Settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000-nl"/>
         <panel name="bLogo"/>
         <widget name="menu" position="230,150" size="810,720" font="Regular;36" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Packet Manager -->
     <screen name="PacketManager" title="IPKG Upgrade" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
-        <widget source="list" render="Listbox" position="230,170" size="1250,720" zPosition="3" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="#ffffff" backgroundColorSelected="bluette">
+        <panel name="vRGYB-1500"/>
+        <widget source="list" render="Listbox" position="230,170" size="1250,800" zPosition="3" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="#ffffff" backgroundColorSelected="bluette">
             <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (10,2), size = (1240,40), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -1891,6 +1989,7 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- Update Plugins -->
     <screen name="UpdatePluginMenu" title="Software Manager" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
@@ -1918,10 +2017,11 @@
         </widget>
         <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" position="960,1010" size="80,40" zPosition="2"/>
     </screen>
+    
     <!-- Plugins Manager -->
     <screen name="PluginManager" title="Plugin Manager" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="status" render="Label" position="230,140" size="1250,60" font="Regular;33" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,220" size="1250,720" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#ffffff" backgroundColor="#101010" foregroundColorSelected="yellow" backgroundColorSelected="barColor">
@@ -1945,10 +2045,11 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- Plugins Manager Info -->
     <screen name="PluginManagerInfo" title="Plugin Manager Info" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="status" render="Label" position="230,150" size="1250,50" font="Regular;33" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,220" size="1250,720" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColor="#101010" backgroundColorSelected="#124b97">
@@ -1964,7 +2065,8 @@
 			</convert>
         </widget>
     </screen>
-    <!-- Plugins Manager Help -->
+    
+    <!-- Plugins Manager Help edit lululla 17022024 -->
     <screen name="PluginManagerHelp" title="Plugin Manager Help" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
         <widget source="status" render="Label" position="230,150" size="1250,50" font="Regular;33" halign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
@@ -1981,8 +2083,9 @@
 				}
 			</convert>
         </widget>
-        <widget source="status" render="Label" position="780,960" size="1110,37" backgroundColor="background" transparent="1" font="Regular;33" halign="center"/>
+        <widget source="status" render="Label" position="300,985" size="1110,37" backgroundColor="background" transparent="1" font="Regular;33" halign="center" />
     </screen>
+    
     <!-- Plugins Details -->
     <screen name="PluginDetails" title="Plugin Details" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -1992,32 +2095,36 @@
         <widget name="screenshot" position="1280,150" size="600,600" alphatest="on" halign="left"/>
         <widget name="divpic" position="0,0" size="0,0"/>
     </screen>
+    
     <!-- Inputbox -->
     <screen name="InputBox" title="Input" position="center,180" size="1500,190" backgroundColor="#10000000">
         <widget name="text" position="20,20" size="1460,80" font="Regular;30" halign="center" valign="center" foregroundColor="#FFFF00" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="20,110" size="1460,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="input" position="20,125" size="1460,50" font="Regular;38" halign="left" valign="center" foregroundColor="#FFFFFF" backgroundColor="#303030" transparent="0" zPosition="1"/>
     </screen>
+    
     <!-- Restore -->
     <screen name="RestoreMenu" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Restore Backup" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="filelist" position="230,150" size="810,750" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Streaming Clients Info -->
     <screen name="StreamingClientsInfo" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Stream Setup" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/info.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
         <widget name="info" position="230,150" size="810,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="menu" position="230,220" size="810,600" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- JobView -->
     <!--
     <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="job_name" render="Label" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <widget source="job_task" render="Label" position="230,210" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <eLabel position="230,270" size="1250,3" backgroundColor="#202020" zPosition="1"/>
@@ -2031,7 +2138,7 @@
     -->
     <screen name="JobView" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Job View" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="job_name" render="Label" position="230,150" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
         <widget source="job_task" render="Label" position="230,210" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
         <eLabel position="230,270" size="1250,3" backgroundColor="#202020" zPosition="1"/>
@@ -2042,6 +2149,7 @@
         <widget source="job_status" render="Label" position="230,360" size="1250,50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
         <widget name="config" position="230,430" size="1250,36" itemHeight="50" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="4"/>
     </screen>
+    
     <!-- Standby -->
     <screen name="Standby" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Standby" flags="wfNoBorder">
         <ePixmap pixmap="oZeta-FHD/menu/panels/wizard.jpg" position="0,0" size="1920,1080" scale="1" zPosition="-1"/>
@@ -2058,6 +2166,7 @@
             <convert type="ClientsStreaming">INFO_RESOLVE_SHORT</convert>
         </widget>
     </screen>
+    
     <!-- SortbyChoiceBox -->
     <screen name="SortbyChoiceBox" title="" position="0,0" size="1920,1080" backgroundColor="#20000000">
         <panel name="ChoiceBox"/>
@@ -2070,6 +2179,7 @@
         <ePixmap pixmap="oZeta-FHD/skin_default/icons/za.png" position="430,386" zPosition="2" size="52,30" transparent="1" alphatest="blend"/>
         <ePixmap pixmap="oZeta-FHD/skin_default/icons/fza.png" position="430,426" zPosition="2" size="52,30" transparent="1" alphatest="blend"/>
     </screen>
+    
     <!-- MovieoffChoiceBox -->
     <screen name="MovieoffChoiceBox" title="Sorting" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="ChoiceBox"/>
@@ -2082,51 +2192,61 @@
         <ePixmap pixmap="oZeta-FHD/icons/loop.png" position="230,390" zPosition="2" size="52,30" transparent="1" alphatest="blend"/>
         <ePixmap pixmap="oZeta-FHD/icons/rep.png" position="230,430" zPosition="2" size="52,30" transparent="1" alphatest="blend"/>
     </screen>
+    
     <!-- Timeshift state -->
     <screen name="TimeshiftState" position="150,67" zPosition="0" size="1620,150" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="PartPlayer"/>
         <widget name="state" position="42,105" size="225,45" zPosition="3" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black" halign="left"/>
     </screen>
+    
     <!-- Timeshift Live -->
     <screen name="TimeshiftLive" position="105,105" zPosition="2" size="450,45" backgroundColor="transparent" flags="wfNoBorder">
         <eLabel position="0,0" size="450,45" text="Timeshift Live" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black"/>
     </screen>
+    
     <!-- Minute input -->
     <screen name="MinuteInput" position="center,center" size="360,82" flags="wfNoBorder">
         <ePixmap alphatest="off" pixmap="oZeta-FHD/infobar/bl80.png" position="0,0" size="360,82" zPosition="-1"/>
         <eLabel text="Seek" position="30,22" size="150,37" backgroundColor="#000000" foregroundColor="secondFG" transparent="1" font="Regular;34"/>
         <widget name="minutes" transparent="1" position="180,22" size="150,37" halign="right" font="Regular;34" zPosition="1"/>
     </screen>
+    
     <!-- OPKG Menu -->
     <screen name="OPKGMenu" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Update Source" flags="wfNoBorder">
         <panel name="IPKGMenu"/>
     </screen>
+    
     <!-- OPKG Source -->
     <screen name="OPKGSource" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Update URL" flags="wfNoBorder">
         <panel name="IPKGSource"/>
     </screen>
+    
     <!-- Ipkg installer -->
     <screen name="Opkg" title="Installing Software" position="center,300" size="1400,300" backgroundColor="#10000000">
         <panel name="Ipkg"/>
     </screen>
+    
     <screen name="OpkgInstaller" position="0,0" size="1920,1080" backgroundColor="#FF000000" title="Install Extensions" flags="wfNoBorder">
         <panel name="IpkgInstaller"/>
     </screen>
+    
     <!-- IPKG Installer -->
     <screen name="IpkgInstaller" position="0,0" size="1920,1080" title="Ipkg Installer" backgroundColor="#20000000">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget source="introduction" render="Label" position="230,150" size="1250,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="5"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="list" position="230,230" size="1250,600" font="Regular;40" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="barColor"/>
         <eLabel text="Install extensions" position="230,850" size="1360,100" font="Regular;36" valign="center" halign="left" backgroundColor="#000000" transparent="1" zPosition="1"/>
     </screen>
-    <!-- IPKG Source -->
+    
+    <!-- IPKG Source edit lululla 17022024 -->
     <screen name="IPKGMenu" title="Select IPKG source" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="filelist" position="230,150" size="810,450" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- IPKG upgrade source -->
     <screen name="IPKGSource" title="IPKG source" position="center,250" size="1860,140" backgroundColor="#20000000">
         <widget name="text" position="10,10" size="1840,50" font="Regular;30" backgroundColor="#202020" zPosition="3" transparent="0" valign="center"/>
@@ -2136,6 +2256,7 @@
         <ePixmap pixmap="buttons/button_green.png" position="390,90" size="30,30" zPosition="1" alphatest="blend"/>
         <widget source="key_green" render="Label" position="430,87" size="300,34" font="Regular;30" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- Ipkg installer -->
     <screen name="Ipkg" title="Installing Software" position="center,180" size="1400,300" backgroundColor="#10000000">
         <widget name="status" position="30,30" size="1340,50" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="10"/>
@@ -2146,12 +2267,14 @@
         <eLabel position="30,212" size="1340,6" backgroundColor="#202020" zPosition="1"/>
         <widget name="activityslider" position="30,217" size="1340,10" foregroundColor="#606060" backgroundColor="red" zPosition="2"/>
     </screen>
+    
     <!-- Restore screen -->
     <screen name="RestoreScreen" title="Restore is running" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="810,720" itemHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- TimeDate Input 19/02/2020 -->
     <screen name="TimeDateInput" position="center,center" size="1000,220" title="Time/Date Input">
         <widget name="config" position="10,10" size="980,120" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" zPosition="5" transparent="1" foregroundColor="#a0a0a0" foregroundColorSelected="ltbluette" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
@@ -2161,23 +2284,26 @@
         <widget name="canceltext" position="60,175" size="200,40" font="Regular;30" halign="left" valign="center" backgroundColor="#000000" transparent="1" zPosition="5"/>
         <widget name="oktext" position="340,175" size="300,40" font="Regular;30" halign="left" valign="center" backgroundColor="#000000" transparent="1" zPosition="5"/>
     </screen>
+    
     <!-- Select Sats Entry -->
     <screen name="SelectSatsEntryScreen" title="Satellites" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="hint" position="230,150" size="1250,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0"/>
         <!-- widget name="hint" position="780,975" size="1110,34" font="Regular;30" halign="center"/-->
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="list" position="230,220" size="1250,600" itemHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- NIM Selection 10/02/2020 -->
     <screen name="SatNimSelection" position="center,165" size="900,300" title="select Slot">
         <widget name="nimlist" position="20,20" size="860,160"/>
     </screen>
+    
     <!-- Software Manager -->
     <screen name="SoftwareManagerInfo" title="SoftwareManager information" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="introduction" render="Label" position="230,150" size="810,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget source="list" render="Listbox" position="230,220" size="810,600" scrollbarMode="showOnDemand" scrollbarWidth="10" selectionDisabled="0" backgroundColorSelected="#124b97">
@@ -2191,6 +2317,7 @@
 			</convert>
         </widget>
     </screen>
+    
     <!-- User Manager -->
     <screen name="UserManager" position="center,center" size="1000,310" title="UserManager" backgroundColor="#20000000">
         <widget source="config" render="Listbox" position="20,20" size="960,120" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" foregroundColor="#a0a0a0" foregroundColorSelected="ltbluette" backgroundColor="#000000" backgroundColorSelected="barColor">
@@ -2212,6 +2339,7 @@
         <ePixmap pixmap="oZeta-FHD/buttons/key_yellow.png" position="400,260" size="30,30" alphatest="on" zPosition="5"/>
         <widget source="key_yellow" render="Label" position="450,255" size="300,40" zPosition="5" font="Regular;30" halign="left" valign="center" backgroundColor="#000000" transparent="1"/>
     </screen>
+    
     <!-- HistoryZap -->
     <screen name="HistoryZapSelector" position="0,0" size="1920,1080" title="History Zap" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000-nl"/>
@@ -2231,11 +2359,12 @@
 			</convert>
         </widget>
         <ePixmap position="960,70" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>\n
-	</screen>
+    </screen>
+    
     <!-- AC3LipSync -->
     <screen name="AC3LipSync" position="20,15" size="1920,1080" title="Audio Sync" zPosition="1" backgroundColor="#ff000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplateB"/>
+        <panel name="vRGYB-1000"/>
         <widget name="ServiceInfoLabel" position="230,150" size="200,40" font="Regular;30" backgroundColor="#232323" foregroundColor="#dddddd" transparent="1" zPosition="4"/>
         <widget name="ServiceInfo" position="450,150" size="300,40" font="Regular;30" backgroundColor="#232323" foregroundColor="#ffffff" transparent="1" zPosition="4"/>
         <widget name="ChannelImg" position="230,215" size="11,11" pixmaps="~/img/OptionButtonOff.png,~/img/OptionButtonOn.png" zPosition="2" transparent="1" alphatest="on"/>
@@ -2246,48 +2375,55 @@
         <widget name="AudioSliderBar" position="230,270" size="21,370" pixmap="~/img/AudioSyncBarVert.png" zPosition="3" transparent="1" orientation="orBottomToTop"/>
         <widget name="AudioSlider" position="230,330" size="810,40" font="Regular;20" halign="center" valign="center" backgroundColor="#101010" foregroundColor="yellow" transparent="0" zPosition="4"/>
     </screen>
+    
     <!-- AC3LipSync -->
     <screen name="AC3LipSyncSetup" position="0,0" size="1920,1080" title="AC3 Lip Sync" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="810,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" foregroundColor="#ffffff" foregroundColorSelected="#ffffff" backgroundColor="#000000" backgroundColorSelected="#124b97"/>
         <widget name="PluginInfo" position="220,1488" size="800,25" font="Regular;22" transparent="1"/>
     </screen>
+    
     <!-- RDS InfoDisplay -->
     <screen name="RdsInfoDisplay" position="22,90" size="1920,300" backgroundColor="transparent" zPosition="-2" flags="wfNoBorder">
         <widget position="0,0" size="1875,135" backgroundColor="transparent" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="4" font="Regular;36" borderColor="black" valign="center" halign="center" name="RadioText"/>
         <widget position="0,150" size="1875,135" backgroundColor="transparent" transparent="1" zPosition="1" foregroundColor="secondFG" borderWidth="4" font="Regular;36" borderColor="black" valign="center" halign="center" name="RtpText"/>
         <widget position="0,0" size="0,0" name="RassLogo"/>
     </screen>
+    
     <!-- PiP -->
     <screen name="PictureInPictureZapping" flags="wfNoBorder" backgroundColor="transparent" position="870,45" size="180,39" title="PiPZap" zPosition="2">
         <eLabel text="PiP-Zap" position="0,0" size="180,39" backgroundColor="transparent" transparent="1" font="Regular;33" borderColor="black" borderWidth="3" valign="center" halign="center"/>
     </screen>
+    
     <!-- Picture in picture setup 15/02/2020 -->
     <screen name="PiPSetup" position="1250,90" size="620,170" backgroundColor="transparent" flags="wfNoBorder" title="PiPSetup">
         <widget name="text" position="10,10" size="600,150" font="Regular;23"/>
     </screen>
+    
     <!-- QuickSubtitlesConfigMenu ??? -->
     <screen name="QuickSubtitlesConfigMenu" title="Subtitle settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="videofps" position="230,150" size="810,50" font="Regular;30" valign="center" halign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- QuickSubtitlesClearRests -->
     <screen name="QuickSubtitlesClearRests" title="Subtitle settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,220" size="806,600" itemHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
 
     <!-- OSD3D Setup -->
     <screen name="OSD3DSetupScreen" title="Select Location" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,220" size="806,600" temHeight="40" font="Regular;30" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="10" backgroundColorSelected="#124b97"/>
     </screen>
+    
     <!-- Subservices Quickzap ??? -->
     <screen name="SubservicesQuickzap" position="center,center" size="900,300" title="Subservices" backgroundColor="#20202020" flags="wfNoBorder">
         <eLabel text="Subservices" position="0,0" size="900,40" font="Regular;30" backgroundColor="#202020"/>
@@ -2299,10 +2435,11 @@
             <convert type="ServiceName">Name</convert>
         </widget>
     </screen>
+    
     <!-- TaskListScreen -->
     <screen name="TaskListScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Task list">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget source="tasklist" render="Listbox" position="230,150" size="810,700" itemHeight="100" font="Regular;28" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#404040" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" zPosition="10">
             <convert type="TemplatedMultiContent">
 				{"template": [
@@ -2311,12 +2448,13 @@
 						MultiContentEntryProgress(pos = (160, 70), size = (400, 10), percent = -3), # progress
 						MultiContentEntryText(pos = (575, 69), size = (120, 30), font=1, flags = RT_HALIGN_CENTER, text = 4), # percentage
 					],
-				"fonts": [gFont("screen_text", 22),gFont("screen_text", 26)],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 26)],
 				"itemHeight": 100
 				}
 			</convert>
         </widget>
     </screen>
+    
     <!-- ChoiceBox Panel -->
     <screen name="ChoiceBox" position="0,0" size="1920,1080" Title="Choice Box" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
@@ -2326,33 +2464,38 @@
         <eLabel position="230,220" size="1250,3" backgroundColor="#303030" zPosition="1"/>
         <widget name="list" position="230,240" size="1250,640" font="Regular;30" itemHeight="50" valign="center" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="20" backgroundColorSelected="barColor"/>
     </screen>
+    
     <!-- StandardList -->
     <screen name="mySmallChannelSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
     </screen>
+    
     <!-- AutoRes -->
     <screen name="AutoResSetupMenu" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="config" position="230,150" size="810,800" itemHeight="50" font="Regular;28" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="#bluette" foregroundColorSelected="#ffffff" transparent="1"/>
     </screen>
-    <!-- HddMount Selection -->
+    
+    <!-- HddMount Selection edit lululla 14022024 -->
     <screen name="HarddiskSelection" position="0,0" size="1920,1080" title="Select HDD" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="hddlist" position="230,150" size="1250,700" itemHeight="50" font="Regular;30" foregroundColor="white" backgroundColor="barColor" transparent="1" zPosition="1" backgroundColorSelected="barColor" foregroundColorSelected="white" scrollbarWidth="10"/>
     </screen>
+    
     <!-- HddMount Setup -->
     <screen name="HarddiskSetup" position="0,0" size="1920,1080" title="Harddisk" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1500"/>
         <widget name="initializetext" position="230,160" size="900,40" font="Regular;30" halign="left" valign="center" noWrap="1" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
         <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="model" position="230,230" size="1250,40" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
         <widget name="capacity" position="230,280" size="1250,40" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
         <widget name="bus" position="230,330" size="1250,40" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
     </screen>
+    
     <!-- ************************************* -->
     <!-- WIZARDs -->
     <!-- ************************************* -->
@@ -2360,6 +2503,7 @@
     <screen name="StartWizard" position="0,0" size="1920,1080" title="Start Wizard" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="DefaultWizard"/>
     </screen>
+    
     <!-- Remote Wizard -->
     <screen name="RemoteControlTemplate">
         <panel position="right" size="250,*">
@@ -2371,6 +2515,7 @@
             <widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend"/>
         </panel>
     </screen>
+    
     <!-- Language wizard -->
     <screen name="LanguageWizard" position="0,0" size="1920,1080" title="Language" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="RemoteControlTemplate"/>
@@ -2399,6 +2544,7 @@
         </widget>
         <eLabel position="0,920" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
     </screen>
+    
     <!-- Video wizard -->
     <screen name="VideoWizard" position="0,0" size="1920,1080" title="Video" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="RemoteControlTemplate"/>
@@ -2427,6 +2573,7 @@
         <eLabel position="0,920" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
         <ePixmap position="50,950" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1"/>
     </screen>
+    
     <!-- Default wizard -->
     <screen name="DefaultWizard" position="0,0" size="1920,1080" title="Video" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="RemoteControlTemplate"/>
@@ -2458,6 +2605,7 @@
         <eLabel position="0,920" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
         <ePixmap position="50,950" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1"/>
     </screen>
+    
     <!-- ImageWizard -->
     <screen name="ImageWizard" position="0,0" size="1920,1080" title="Video" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="RemoteControlTemplate"/>
@@ -2484,11 +2632,13 @@
         <ePixmap position="50,950" size="500,90" pixmap="oZeta-FHD/menu/Logo/bLogo-Zeta.png" alphatest="blend" zPosition="1"/>
         <widget name="wizard" pixmap="skin_default/wizard.png" position="0,0" size="0,0" scale="1" zPosition="-1"/>
     </screen>
+    
     <!-- Network Wizard -->
     <screen name="NetworkWizard" position="0,0" size="1920,1080" title="Network Wizard" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="DefaultWizard"/>
         <eLabel text="Network Wizard" position="40,30" size="1000,60" font="Regular;50" foregroundColor="yellow" backgroundColor="#000000" transparent="0" zPosition="10"/>
     </screen>
+    
     <!-- IPKWizard -->
     <screen name="InstallWizardIpkgUpdater" position="fill" flags="wfNoBorder">
         <panel name="RemoteControlTemplate"/>
@@ -2506,19 +2656,22 @@
         <eLabel position="0,450" size="1920,3" backgroundColor="#303030" zPosition="-1"/>
         <widget source="statusbar" render="Label" position="50,180" zPosition="10" halign="center" valign="center" font="Regular;34" transparent="1"/>
     </screen>
+    
     <!-- ************************************* -->
     <!-- SETUPs Screens -->
     <!-- ************************************* -->
+    
     <screen name="setup_common">
         <panel name="LayerMenu1500-nl"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1000"/>
         <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/usage_setup.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget name="description" position="230,135" size="1250,105" font="Regular;28" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#202020" transparent="0" zPosition="1"/>
+        <widget name="description" position="230,135" size="1250,105" font="Regular;30" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,250" size="1250,3" backgroundColor="#202020" zPosition="1"/>
         <widget name="config" position="230,260" size="1250,650" itemHeight="50" font="Regular;32" foregroundColor="#ffffff" backgroundColor="#000000" scrollbarSliderBorderWidth="1" scrollbarWidth="10" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="ltbluette" scrollbarSliderBorderColor="#b0b0b0" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
         <widget name="HelpWindow" position="230,700" size="486,102" zPosition="1" transparent="1" alphatest="blend"/>
         <widget name="footnote" position="230,800" size="0,0" font="Regular;28" halign="right" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0"/>
     </screen>
+    
     <!-- Setup Info -->
     <screen name="SetupInfo" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="setup_common"/>
@@ -2598,174 +2751,91 @@
     <screen name="setup_autolanguagesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="setup_common"/>
     </screen>
-    <!-- ************************************* -->
-    <!-- MESSAGEBOX -->
-    <!-- ************************************* -->
-    <!-- MessageBoxSimple -->
-    <screen name="MessageBoxSimple" position="center,center" size="960,15" title="Message" zPosition="10">
-        <panel name="MessageBox"/>
-    </screen>
 
-    <screen name="MessageBoxExt" position="240,160" size="800,400" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="#FF000000">
-	<panel name="MessageBox" />
-    </screen>
+<!-- ************************************* -->
+<!-- MESSAGEBOX -->
+<!-- ************************************* -->
+<screen name="MessageBox-template" position="center,center" size="1200,700" title="Setup" flags="wfNoBorder" backgroundColor="#ff000000">
+    	<panel name="cMessageBox"/>
+ 	<widget name="icon" position="20,10" size="80,80" alphatest="blend" conditional="icon" scale="1" transparent="1" zPosition="5"
+		pixmaps="oZeta-FHD/icons/input_question.png,oZeta-FHD/icons/input_info.png,oZeta-FHD/icons/input_info.png,oZeta-FHD/icons/input_error.png,oZeta-FHD/icons/input_info.png" />
+	<widget source="Title" render="Label" position="120,0" size="1070,100" font="Regular;50" halign="left" valign="center" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="5"/>
+	<widget name="text" position="10,115" size="1180,280" font="Regular;30" halign="center" valign="center" backgroundColor="header" foregroundColor="white" transparent="1" zPosition="5"/>
+	<widget name="list" position="10,430" size="1180,150" textPadding="15,5" itemHeight="50" font="Regular;30" scrollbarBorderWidth="1" scrollbarWidth="6" scrollbarForegroundColor="ltbluette" 
+		scrollbarBorderColor="ltbluette" scrollbarRadius="3" scrollbarMode="showOnDemand" backgroundColorSelected="bluette" itemCornerRadius="6" foregroundColorSelected="white" backgroundColor="header" 
+		foregroundColor="white" transparent="1" zPosition="5" />
+</screen>
 
-    <!-- Messagebox -->
-    <screen name="MessageBox" backgroundColor="#10000000">
-        <!-- widget source="Title" render="Label" position="67,8" foregroundColor="#ffffff" size="623,50" noWrap="1" valign="bottom" font="Regular;32" backgroundColor="#000000" transparent="1"/-->
-        <widget name="text" position="130,30" size="800,40" font="Regular;32" halign="left" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
-        <widget name="ErrorPixmap" pixmap="oZeta-FHD/icons/input_error.png" position="20,20" size="80,80" alphatest="blend"/>
-        <widget name="QuestionPixmap" pixmap="oZeta-FHD/icons/input_question.png" position="20,20" size="80,80" alphatest="blend"/>
-        <widget name="InfoPixmap" pixmap="oZeta-FHD/icons/input_info.png" position="20,20" size="80,80" alphatest="blend"/>
-        <widget name="warningPixmap" pixmap="oZeta-FHD/icons/input_warning.png" position="230,150" size="80,80" alphatest="blend"/>
-        <widget name="list" position="10,100" size="780,240" itemHeight="40" font="Regular;28" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#505050" scrollbarSliderBorderColor="#404040" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
-        <applet type="onLayoutFinish">
-# this should be factored out into some helper code,but currently demonstrates applets.
-from __future__ import division
-from enigma import eSize, ePoint, getDesktop
-#orgwidth = self.instance.size().width()
-#orgheight = self.instance.size().height()
-#---
-offset_listposx = 10
-offset_listposy = 60
-offset_listwidth = 10
-offset_listheight = 40
-offset_textwidth = 20
-offset_textheight = 30
-min_width = 100
-min_height = 90
-#----
-deskwidth = getDesktop(0).size().width()
-deskheight = getDesktop(0).size().height()
-textsize = self["text"].getSize()
-textwidth = textsize[0] + offset_textwidth
-textheight = textsize[1] + offset_textheight
-listwidth = 0
-listheight = 0
-if self.list:
-	try:
-		for i in self.list:
-			if len(i[0]) > listwidth:
-				listwidth = len(i[0])
-		listwidth = listwidth * offset_listwidth
-		listheight = len(self.list) * offset_listheight
-	except:
-		pass
-                                  
-                            
-                       
-if (min_height &gt;textheight):
-	textheight = min_height
-if (min_width &gt;textwidth):
-	textwidth = min_width
-if (listheight &gt;0):
-	offset = 21
+<!-- ************************************* -->
+<!-- MESSAGEBOX -->
+<!-- ************************************* -->
+<!-- MessageBox FHD -->
+<screen name="MessageBox" position="360,240" size="1200,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="header">
+	<panel name="MessageBox-template" />
+</screen>
+
+<!-- ************************************* -->
+<!-- MESSAGEBOX -->
+<!-- ************************************* -->
+<!-- MessageBoxSimple FHD -->
+<screen name="MessageBoxSimple" position="360,240" size="1200,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="header">
+<panel name="MessageBox-template" />
+</screen>
+
+<!-- ************************************* -->
+<!-- MESSAGEBOX -->
+<!-- ************************************* -->
+<screen name="MessageBoxExt" position="360,240" size="1200,600" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="header">
+<panel name="MessageBox-template" />
+</screen>
+
+<!-- ************************************* -->
+<!-- MESSAGEBOX -->
+<!-- ************************************* -->
+<!-- ExtraMessageBox -->
+<screen name="ExtraMessageBox" title="Extra Message" position="center,255" size="900,200">
+<widget name="text" position="15,120" size="1170,75" font="Regular;32" valign="center" halign="center" backgroundColor="header" foregroundColor="white" />
+<widget name="message" position="10,10" size="880,40" font="Regular;30" />
+<widget name="menu" position="10,60" size="880,360" scrollbarRadius="5" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+<applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["message"].getSize()
+
+# y size still must be fixed in font stuff...
+if self["message"].getText() != "":
+textsize = (textsize[0] + 80, textsize[1] + 60)
 else:
-	offset = 13
-if (textwidth &gt;listwidth):
-	wsizex = textwidth + offset_listposx * 2 + 120
-else:
-	textwidth = listwidth - offset_listposx
-	wsizex = listwidth + offset_listposx
-wsizey = textheight + listheight + offset
-if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
-	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
-	wsizey = textheight + listheight + offset
-if (wsizex &gt;deskwidth):
-	textwidth = deskwidth - offset_listposx * 2
-	listwidth = wsizex = deskwidth
-wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+textsize = (textsize[0] + 80, textsize[1] + 4)
+
+count = len(self.list)
+if count &gt; 7:
+count = 7
+offset = 48 * count
+wsizex = textsize[0] + 80
+wsizey = textsize[1] + offset + 20
+
+if (640 &gt; wsizex):
+wsizex = 640
+wsize = (wsizex, wsizey)
+
 # resize
 self.instance.resize(eSize(*wsize))
-# resize label
-textsize = (textwidth,textheight)
-self["text"].instance.resize(eSize(*textsize))
-# move list
-             
-listsize = (wsizex - offset_listposx * 2,listheight)
-self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
-self["list"].instance.resize(eSize(*listsize))
-# center window
-newwidth = wsize[0]
-newheight = wsize[1]
-self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
-		</applet>
-    </screen>
 
-<!--     <screen name="MessageBox" position="center,center" size="1200,450" backgroundColor="#10000000">
-		<widget name="icon" position="20,20" size="53,53" pixmaps="icons/message/question-53.png,icons/message/info-53.png,icons/message/info-53.png,icons/message/attention-53.png,icons/message/info-53.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
-		<widget name="text" position="10,70" size="780,50" font="screen_text;28" valign="center" halign="center" backgroundColor="#000000" foregroundColor="white" />
-		<widget name="list" position="10,100" size="780,240" textPadding="10,0" itemHeight="40" font="Regular;30" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="white" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" />
-		<applet type="onLayoutFinish">
-# this should be factored out into some helper code,but currently demonstrates applets.
-from __future__ import division
-from enigma import eSize, ePoint, getDesktop
-#orgwidth = self.instance.size().width()
-#orgheight = self.instance.size().height()
-#-
-offset_listposx = 10
-offset_listposy = 40
-offset_listwidth = 10
-offset_listheight = 30
-offset_textwidth = 170
-offset_textheight = 20
-min_width = 400
-min_height = 50
-#-
-deskwidth = getDesktop(0).size().width()
-deskheight = getDesktop(0).size().height()
-textsize = self["text"].getSize()
-textwidth = textsize[0] + offset_textwidth
-textheight = textsize[1] + offset_textheight
-listwidth = 0
-listheight = 0
-if self.list:
-	try:
-		for i in self.list:
-			if len(i[0]) > listwidth:
-				listwidth = len(i[0])
-		listwidth = listwidth * offset_listwidth
-		listheight = len(self.list) * offset_listheight + 80
-	except:
-		pass
-maxheight = int(deskheight * 0.75)
-if listheight &gt;maxheight:
-	listheight = maxheight
-if (min_height &gt;textheight):
-	textheight = min_height
-if (min_width &gt;textwidth):
-	textwidth = min_width
-if (listheight &gt;0):
-	offset = 30
-else:
-	offset = 13
-if (textwidth &gt;listwidth):
-	wsizex = textwidth + offset_listposx * 2
-else:
-	textwidth = listwidth - offset_listposx
-	wsizex = listwidth + offset_listposx
-wsizey = textheight + listheight + offset
-if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
-	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
-	wsizey = textheight + listheight + offset
-if (wsizex &gt;deskwidth):
-	textwidth = deskwidth - offset_listposx * 2
-	listwidth = wsizex = deskwidth
-wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
-# resize
-self.instance.resize(eSize(*wsize))
 # resize label
-textsize = (textwidth,textheight)
-self["text"].instance.resize(eSize(*textsize))
+self["message"].instance.resize(eSize(*textsize))
+
 # move list
-if self.list:
-	listsize = (wsizex - offset_listposx * 2,listheight)
-	self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
-	self["list"].instance.resize(eSize(*listsize))
+listsize = (wsizex - 20, 48 * count)
+self["menu"].instance.move(ePoint(10, textsize[1] + 10))
+self["menu"].instance.resize(eSize(*listsize))
+
 # center window
 newwidth = wsize[0]
-newheight = wsize[1]
-self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
-		</applet>
-	</screen> -->
+self.instance.move(ePoint((1920-wsizex), (1280-wsizex)//2, (720-wsizey)//(count &gt; 7 and 2 or 3)))
+</applet>
+</screen>
 </skin>

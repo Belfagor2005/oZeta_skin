@@ -208,7 +208,7 @@
     <!-- **** PARENTAL PANEL  ***** -->
     <!-- ************************ -->
     <!-- ________________________ -->
-    <!--     
+    <!--
     <screen name="zParental">
         <widget source="session.Event_Now" render="zParental"/>
         <widget render="zParental" source="session.Event_Now" position="315,872" alphatest="blend" size="50,50" zPosition="10" transparent="1"/>
@@ -251,7 +251,7 @@
     <!-- ________________________ -->
     <screen name="zGenreCh">
         <!-- genre -->
-        <widget source="ServiceEvent" render="zInfoEvents"/>
+        <!-- <widget source="ServiceEvent" render="zInfoEvents"/> -->
         <ePixmap pixmap="oZeta-FHD/genre_pic/banner.png" position="1546,320" size="285,93" scale="20" zPosition="1"/>
         <widget source="ServiceEvent" render="zGenre" position="1546,320" size="285,93" zPosition="22" alphatest="blend"/>
     </screen>

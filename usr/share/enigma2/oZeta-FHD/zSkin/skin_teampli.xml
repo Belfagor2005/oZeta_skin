@@ -799,7 +799,7 @@
     </screen>
     <screen name="MenuTemplate">
         <panel name="LayerMenu1000-nl"/>
-        <panel name="vButtonTemplate-1000"/>
+        <panel name="vRGYB-1000"/>
         <panel name="bLogo"/>
         <widget source="menu" render="Listbox" position="230,150" size="810,780" font="Regular;36" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
             <convert type="TemplatedMultiContent">
@@ -857,7 +857,7 @@
     <!-- Skin Selector PLI -->
     <screen name="SkinSelector" position="fill" flags="wfNoBorder">
         <panel name="LayerMenu1700"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <eLabel position="1180,140" size="500,290" backgroundColor="#30000000" transparent="0" zPosition="1"/>
         <eLabel position="1140,140" size="5,800" backgroundColor="#303030" transparent="0" zPosition="1"/>
         <widget name="preview" position="1190,150" size="480,270" alphatest="on" scale="1" zPosition="5"/>
@@ -877,7 +877,7 @@
     <!-- Software Update -->
     <screen name="SoftwareUpdate" position="0,0" size="1920,1080" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="package_count" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="package_text" position="340,140" size="1140,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1250,5" backgroundColor="#404040" zPosition="1"/>
@@ -900,7 +900,7 @@
     <!-- Software Update -->
     <screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1500"/>
-        <panel name="vButtonTemplate-1500"/>
+        <panel name="vRGYB-1500"/>
         <widget name="packagenr" position="230,140" size="100,60" font="Regular;34" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <widget name="packagetext" position="340,140" size="1060,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#202020" transparent="0" zPosition="1"/>
         <eLabel position="230,210" size="1170,5" backgroundColor="#404040" zPosition="1"/>
@@ -931,7 +931,7 @@
     <!-- Location Box -->
     <screen name="LocationBox" position="0,0" size="1920,1080" title="Select Location" backgroundColor="#ff000000" flags="wfNoBorder">
         <panel name="LayerMenu1500"/>
-        <panel name="ButtonTemplate"/>
+        <panel name="vRGYB-1000"/>
         <widget name="target" position="230,140" size="1250,40" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <widget name="text" position="230,180" size="1250,40" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#303030" transparent="0"/>
         <eLabel position="230,230" size="1250,3" backgroundColor="#303030" zPosition="1"/>
@@ -948,7 +948,7 @@
         <panel name="bLogo"/>
         <widget name="long_key" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
         <eLabel position="230,205" size="1000,3" backgroundColor="#202020" zPosition="10"/>
-        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" />
+        <widget name="list" position="230,250" size="1000,700" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1"/>
         <widget name="rc" pixmaps="rc.png,rcold.png" position="1300,150" zPosition="10" size="154,500" alphatest="blend" transparent="0"/>
         <widget alphatest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
@@ -983,55 +983,4 @@
         <widget alphatest="blend" name="indicatorL14" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
         <widget alphatest="blend" name="indicatorL15" pixmap="skin_default/yellow_circle23x23.png" position="950,140" offset="11,11" size="23,23" zPosition="11"/>
     </screen>
-	<screen name="EventView" position="0,0" size="1920,1080" title="EventView" backgroundColor="transparent" flags="wfNoBorder">
-        	<panel name="vButtonTemplate-1500"/>
-		<eLabel position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-		<ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/menu/panels/main2.png" zPosition="-2"/>
-		<ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
-		<eLabel position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4"/>
-		<!-- PICON Pli/ATV -->
-		<widget name="channel" position="440,0" size="1000,120" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#10000000" transparent="1" zPosition="5"/>
-		<widget source="Service" render="Picon" position="230,5" size="180,110" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="10">
-		    <convert type="ServiceName">Reference</convert>
-		</widget>
-		<!-- Event Now -->
-		<widget source="session.Event_Now" render="Label" position="660,135" size="650,50" font="Regular;44" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="5">
-		    <convert type="EventName">Name</convert>
-		</widget>
-		<widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
-		<widget name="duration" position="1030,200" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5"/>
-		<widget source="session.Event_Now" render="Label" position="1180,200" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
-		    <convert type="EventTime">Remaining</convert>
-		    <convert type="RemainingToText">InMinutes</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Progress" position="660,260" size="820,7" foregroundColor="bluette" backgroundColor="#303030" zPosition="5">
-		    <convert type="EventTime">Progress</convert>
-		</widget>
-		<!-- Event Next-->
-		<eLabel text="Next Event :" position="660,290" size="250,50" font="Regular;32" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="2"/>
-		<widget source="session.Event_Next" render="Label" position="900,290" size="250,50" font="Regular;32" halign="left" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="2">
-		    <convert type="EventTime">StartTime</convert>
-		    <convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="session.Event_Next" render="Label" position="1180,280" size="300,50" halign="right" font="Regular;36" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="2">
-		    <convert type="EventTime">Duration</convert>
-		    <convert type="ClockToText">InMinutes</convert>
-		</widget>
-		<widget source="session.Event_Next" render="Label" position="660,345" size="820,50" font="Regular;36" foregroundColor="yellow" backgroundColor="header" transparent="1" noWrap="1" zPosition="2">
-		    <convert type="EventName">Name</convert>
-		</widget>
-		<eLabel position="660,400" size="820,3" backgroundColor="#202020" zPosition="1"/>
-		<widget source="session.Event_Now" render="Label" position="1000,417" size="480,40" font="Regular;34" halign="right" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
-		    <convert type="EventName">Genre</convert>
-		</widget>
-		<widget name="FullDescription" position="240,645" size="1240,330" font="Regular;30" halign="block" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="5"/>
-		<ePixmap position="660,420" pixmap="oZeta-FHD/buttons/80/key_green.png" size="80,40" alphatest="blend" zPosition="2"/>
-		<widget source="key_green" render="Label" font="Regular;32" position="760,420" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
-		<ePixmap position="660,480" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2"/>
-		<ePixmap position="660,540" size="80,40" pixmap="oZeta-FHD/buttons/80/key_info.png" alphatest="blend" zPosition="2"/>
-		<!-- end edit lululla -->
-		<eLabel position="240,140" size="370,500" backgroundColor="#303030" zPosition="1"/>
-		<ePixmap pixmap="menu/panels/nocover.png" position="250,150" size="350,480" scale="1" zPosition="2"/>
-		<widget source="Event" render="zPosterX" position="250,150" size="350,480" zPosition="3"/>
-	</screen>
 </skin>

@@ -11,7 +11,7 @@
 			author="mmark"
 			license="Open"
 			Support="openATV 7.x"
-			Release="2.0.0 30/12/2023"
+			Release="2.0.1 18/02/2024"
 			supporturl="http://e2skin.blogspot.com"
 		</abouth>
     </copyright>
@@ -75,6 +75,7 @@
         <color name="green" value="#0056c856"/>
         <color name="greentransparent" value="#08004c00"/>
         <color name="grey" value="#00b6b6b6"/>
+        <color name="msggrey" value="#00202020"/>
         <color name="header" value="#20000000"/>
         <color name="infobarBG" value="#41080808"/>
         <color name="listbox" value="#000f56a4"/>
@@ -110,17 +111,19 @@
         <color name="yellowtransparent" value="#084b4b00"/>
     </colors>
     <parameters>
+        <parameter name="AboutHddSplit" value="1" />
         <parameter name="AllowUserDatesAndTimes" value="5,5"/>
         <parameter name="AutotimerEnabledIcon" value="5,2,38,36"/>
         <parameter name="AutotimerRecordIcon" value="46,5,20,20"/>
         <parameter name="ChoicelistIcon" value="5,2,80,40"/>
         <parameter name="ChoicelistName" value="80,3,1000,40"/>
-        <parameter name="ChoicelistDash" value="5,2,700,2"/>
+        <parameter name="ChoicelistDash" value="5,2,1000,50"/>
         <parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
         <parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
-        <parameter name="ChoicelistNameSingle" value="10,0,690,38"/>
+        <parameter name="ChoicelistNameSingle" value="10,0,1200,38"/>
+        <parameter name="ChoicelistVerticalAlignment" value="*center" />
         <parameter name="ConfigListSlider" value="10,3"/>
-        <parameter name="ConfigListSeperator" value="360"/>
+        <parameter name="ConfigListSeperator" value="1000" />
         <parameter name="DreamexplorerName" value="70,2,1200,50"/>
         <parameter name="DreamexplorerIcon" value="10,5,40,40"/>
         <parameter name="EpgListIcon" value="2,12,25,25,2"/>
@@ -129,8 +132,13 @@
         <parameter name="EpgListSingle" value="80,220"/>
         <parameter name="ExpandableListIcon" value="5,2,55,38"/>
         <parameter name="ExpandableListDescr" value="55,2,1000,45"/>
+		<parameter name="FcFileListIcon" value="10,4,30,30"/>
+		<parameter name="FcFileListMultiIcon" value="45,4,30,30"/>
+		<parameter name="FcFileListMultiLock" value="2,0,30,30"/>
+		<parameter name="FcFileListMultiName" value="90,2,1000,32"/>
+		<parameter name="FcFileListName" value="68,2,1000,34"/>
         <parameter name="FileListName" value="60,5,1700,40"/>
-        <parameter name="FileListIcon" value="7,5,52,50"/>
+        <parameter name="FileListIcon" value="7,5,40,40"/>
         <parameter name="FileListMultiName" value="125,4,1700,50"/>
         <parameter name="FileListMultiIcon" value="60, 5, 40, 40"/>
         <parameter name="FileListMultiLock" value="7,5,40,40"/>
@@ -140,6 +148,21 @@
         <parameter name="HelpMenuListHlp" value="5,5,1200,30"/>
         <parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
         <parameter name="ImsSelectionListLock" value="5,2,36,36"/>
+        <parameter name="PartnerBoxEntryListName" value="8,2,225,38" />
+        <parameter name="PartnerBoxEntryListIP" value="180,2,225,38" />
+        <parameter name="PartnerBoxEntryListPort" value="405,2,150,38" />
+        <parameter name="PartnerBoxEntryListType" value="615,2,150,38" />
+        <parameter name="PartnerBoxTimerServicename" value="0,0,45" />
+        <parameter name="PartnerBoxTimerName" value="0,42,30" />
+        <parameter name="PartnerBoxE1TimerTime" value="0,78,255,30" />
+        <parameter name="PartnerBoxE1TimerState" value="255,78,255,30" />
+        <parameter name="PartnerBoxE2TimerTime" value="0,78,225,30" />
+        <parameter name="PartnerBoxE2TimerState" value="225,78,225,30" />
+        <parameter name="PartnerBoxE2TimerIcon" value="735,8,60,60" />
+        <parameter name="PartnerBoxBouquetListName" value="0,0,45" />
+        <parameter name="PartnerBoxChannelListName" value="0,0,45" />
+        <parameter name="PartnerBoxChannelListTitle" value="0,42,30" />
+        <parameter name="PartnerBoxChannelListTime" value="0,78,225,30" />
         <parameter name="PiconManagerList" value="10,0,1120,40"/>
         <parameter name="PiconManagerListFont" value="Regular;28"/>
         <parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
@@ -153,17 +176,21 @@
         <parameter name="PluginBrowserDownloadIcon" value="10,0,90,76"/>
         <parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40"/>
         <parameter name="ProgrammlistenUpdaterListFont" value="Regular;26"/>
-        <parameter name="SelectionListDescr" value="50,2,900,40"/>
+        <parameter name="SelectionListDescr" value="50,2,1000,40"/>
         <parameter name="SelectionListLock" value="5,5,40,40"/>
         <parameter name="SelectionListLockOff" value="5,5,40,40"/>
         <parameter name="ServiceInfo" value="0,0,1200,40"/>
         <parameter name="ServiceInfoLeft" value="0,0,680,40"/>
-        <parameter name="ServiceInfoRight" value="700,0,550,40"/>
+        <parameter name="ServiceInfoRight" value="700,0,1000,40"/>
         <parameter name="ServiceInfoFont" value="Regular;26"/>
         <parameter name="VirtualKeyBoard" value="69,68"/>
         <parameter name="VirtualKeyBoardAlignment" value="0,0"/>
         <parameter name="VirtualKeyBoardPadding" value="4,4"/>
         <parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
+        <parameter name="WeatherPluginSearchlocation" value="10,0,550,70" />
+        <parameter name="WeatherPluginSearchresult" value="470,0,500,70" />
+        <parameter name="WeatherPluginCity" value="10,0,700,50" />
+        <parameter name="WeatherPluginDegreetype" value="465,0,100,50" />
     </parameters>
     <switchpixmap>
         <pixmap name="menu_on" filename="skin_default/icons/menu_on.png"/>
@@ -219,10 +246,8 @@
         <color name="ListboxMarkedAndSelectedForeground" color="red"/>
         <color name="WindowTitleForeground" color="foreground"/>
         <color name="WindowTitleBackground" color="background"/>
-        <!--
-        <color name="ScrollbarForeground" color="foreground"/>
-        <color name="ScrollbarBorder" color="foreground"/>
-        -->
+        <color name="ScrollbarForeground" color="#808080"/>
+        <color name="ScrollbarBorder" color="#202020"/> 
     </windowstyle>
     <!-- end add lululla -->
     <switchpixmap>
@@ -230,20 +255,21 @@
         <pixmap name="menu_off" filename="oZeta-FHD/icons/menu_off.png"/>
     </switchpixmap>
 
-    <!-- Include Files -->
-    <!-- don't touch this order -->
-    <include filename="zSkin/skin_templatepanels.xml"/>
-    <include filename="zSkin/skin_layercolors.xml"/>
-    <include filename="zSkin/skin_plugins.xml"/>
-    <include filename="zSkin/skin_logo.xml"/>
-    <include filename="zSkin/skin_team.xml"/>
-    <include filename="zSkin/skin_epgvertical.xml"/>
-    <!-- don't touch this order end -->
 
-    <!-- infochannel should be loaded after zskin.xml -->
-    <include filename="zSkin/zskin.xml"/>
-    <!-- infochannel should be loaded after zskin.xml -->
-    <include filename="zSkin/skin_infochannel.xml"/>
-    <!-- don't change this: must be last -->
-    <include filename="zSkin/skin_templatepanelslulu.xml"/>
+<!-- Include Files -->
+<!-- don't touch this order -->
+<include filename="zSkin/skin_templatepanels.xml"/>
+<include filename="zSkin/skin_layercolors.xml"/>
+<include filename="zSkin/skin_plugins.xml"/>
+<include filename="zSkin/skin_logo.xml"/>
+<include filename="zSkin/skin_epgvertical.xml"/>
+<!-- don't touch this order end -->
+
+<!-- infochannel should be loaded zskin.xml -->
+<include filename="zSkin/zskin.xml"/>
+<include filename="zSkin/skin_team.xml"/>
+<!-- infochannel should be loaded after zskin.xml -->
+<include filename="zSkin/skin_infochannel.xml"/>
+<!-- don't change this: must be last -->
+<include filename="zSkin/skin_templatepanelslulu.xml"/>
 </skin>
