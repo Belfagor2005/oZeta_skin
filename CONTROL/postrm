@@ -3,9 +3,8 @@
 # <!-- Remove skin oZeta-FHD by mmark          -->
 # <!-- Don't Remove this Disclaimer            -->
 # <!-- **************************************  -->
-echo
 echo "*****************************************"
-echo "*         Uninstall oZeta skin          *"
+echo "*         Uninstall oZeta setup          *"
 echo "*****************************************"
 rm -rf /usr/lib/enigma2/python/Components/Converter/zCryptoInfo.*
 rm -rf /usr/lib/enigma2/python/Components/Converter/eCryptoInfo.*
@@ -13,11 +12,11 @@ rm -rf /usr/lib/enigma2/python/Components/Converter/zEventList.*
 rm -rf /usr/lib/enigma2/python/Components/Converter/zExtra.*
 rm -rf /usr/lib/enigma2/python/Components/Converter/zMenuDescription.*
 rm -rf /usr/lib/enigma2/python/Components/Converter/zMenuEntryCompare.*
-#
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zChannelNumber.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zEventListDisplay.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zInfoEvents.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zNxtEvnt.*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/zParental.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zPosterX.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zPosterXDownloadThread.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zRunningText.*
@@ -25,16 +24,16 @@ rm -rf /usr/lib/enigma2/python/Components/Renderer/zSingleEpgList.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zStarX.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zVolumeText.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zVolz.*
-#
-rm -rf /usr/lib/enigma2/python/Components/Renderer/zEmptyEpg.*
-rm -rf /usr/lib/enigma2/python/Components/Renderer/zGenre.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zBackdropX.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zBackdropXDownloadThread.*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/zEmptyEpg.*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/zGenre.*
 rm -rf /usr/lib/enigma2/python/Components/Renderer/zParental.*
-#
 rm -rf /usr/lib/enigma2/python/Plugins/Extensions/oZsetup
 rm -rf /usr/share/enigma2/oZeta-FHD
 echo "*****************************************"
 echo "*          ....done                     *"
 echo "*****************************************"
 exit 0
+
+

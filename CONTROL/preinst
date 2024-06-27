@@ -3,15 +3,12 @@
 # <!-- Install skin oZeta-FHD by mmark         -->
 # <!-- Don't Remove this Disclaimer            -->
 # <!-- **************************************  -->
-echo
 echo "*****************************************"
-echo "*           install oZeta skin          *"
+echo "*           install oZeta setup          *"
 echo "*****************************************"
 if [ ! -d /usr/share/enigma2/oZeta-FHD ]; then
 	echo 'skin ozeta not present'
-else
-	echo 'SKIN OZETA PRESENT  '
-	rm -rf /usr/share/enigma2/oZeta-FHD
+	exit 0
 fi
 if [ ! -d /usr/lib/enigma2/python/Plugins/Extensions/oZsetup ]; then
 	echo 'oZsetup not present'
