@@ -1539,16 +1539,49 @@
         <widget name="config" position="230,150" size="810,750" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#505050" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1"/>
     </screen>
     
-    <!-- QuickMenu -->
+    <!-- QuickMenu edit lululla -->
     <screen name="QuickMenu" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="QuickMenuOld" conditional="list" />
+		<panel name="QuickMenuNew" conditional="mainlist" />
+    </screen>
+
+    <screen name="QuickMenuOld" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1700"/>
         <panel name="vRGYB-1700"/>
         <widget name="description" position="230,130" size="1450,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
         <eLabel position="230,200" size="1450,3" backgroundColor="#202020" zPosition="1"/>
-        <widget name="list" position="230,220" size="700,800" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
-        <widget name="sublist" position="980,220" size="700,800" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
+        <widget name="list" position="230,220" size="700,720" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
+        <widget name="sublist" position="980,220" size="700,720" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
     </screen>
     
+    <screen name="QuickMenuNew" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="LayerMenu1700"/>
+        <panel name="vRGYB-1700"/>
+        <widget name="description" position="230,130" size="1450,60" font="Regular;28" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1"/>
+        <eLabel position="230,200" size="1450,3" backgroundColor="#202020" zPosition="1"/>
+		<widget source="mainlist" render="Listbox" position="230,220" size="700,720" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white">
+			<templates>
+				<template name="Default" fonts="Regular;26,Regular;22" itemWidth="500" itemHeight="60">
+					<mode name="default">
+						<text index="0" position="60,2" size="e-60,28" font="0" />
+						<text index="1" position="60,25" size="e-60,26" font="1" />
+						<pixmap index="2" position="10,5" size="40,40" alpha="blend" scale="centerScaled"/>
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<widget source="sublist" render="Listbox" position="980,220" size="700,720" itemHeight="80" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" scrollbarMode="showNever" transparent="1" backgroundColor="barColor" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white">
+			<templates>
+				<template name="Default" fonts="Regular;26,Regular;22" itemWidth="500" itemHeight="60">
+					<mode name="default">
+						<text index="0" position="10,2" size="e-10,28" font="0" />
+						<text index="1" position="10,25" size="e-10,26" font="1" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+    </screen>
+
     <!-- QuickMenu Devices -->
     <screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="LayerMenu1000"/>
