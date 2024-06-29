@@ -1,10 +1,9 @@
 <!-- *** oZeta - XML Version 2.27 By zSetup v2.0.0 *** -->
-<!-- Author mmark : Modules : TempInfobar + PartInfobarDataChannel + PartInfoPoster + PartInfoMeteo + PartInfoDataTime + PartInfoCrypt -->
+<!-- Author mmark : Modules : TempInfobar + PartInfobarDataChannel + PartInfoPoster + PartInfoDataTime + PartInfoCrypt -->
 <screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="TempInfoBar"/>
     <panel name="PartInfobarDataChannel"/>
     <panel name="PartInfoPoster"/>
-    <panel name="PartInfoMeteo"/>
     <panel name="PartInfoDataTime"/>
     <panel name="PartInfoCrypt"/>
 </screen>

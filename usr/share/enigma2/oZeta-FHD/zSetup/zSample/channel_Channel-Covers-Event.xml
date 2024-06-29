@@ -1,6 +1,9 @@
-<!-- *** oZeta - XML Version 2.27 Channel Selection Cover Events By zSetup v2.0.0 *** -->
+<!-- *** oZeta - XML Version 2.27 By zSetup v2.0.0 *** -->
 <!-- Author mmark : Modules : TempChannelSelectionLong + PartChannelSelectionPosterEvent -->
 <screen name="ChannelSelection" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="TempChannelSelectionLong"/>
     <panel name="PartChannelSelectionPosterEvent"/>
+</screen>
+<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="#FF000000" flags="wfNoBorder">
+    <panel name="ChannelSelection"/>
 </screen>

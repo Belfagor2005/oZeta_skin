@@ -2788,13 +2788,13 @@
 <!-- ************************************* -->
 <!-- MESSAGEBOX -->
 <!-- ************************************* -->
-<screen name="MessageBox-template" position="center,center" size="1200,700" title="Setup" flags="wfNoBorder" backgroundColor="#ff000000">
+<screen name="MessageBox-template" position="center,center" size="1200,800" title="Setup" flags="wfNoBorder" backgroundColor="#ff000000">
     	<panel name="cMessageBox"/>
  	<widget name="icon" position="20,10" size="80,80" alphatest="blend" conditional="icon" scale="1" transparent="1" zPosition="5"
 		pixmaps="oZeta-FHD/icons/input_question.png,oZeta-FHD/icons/input_info.png,oZeta-FHD/icons/input_info.png,oZeta-FHD/icons/input_error.png,oZeta-FHD/icons/input_info.png" />
 	<widget source="Title" render="Label" position="120,0" size="1070,100" font="Regular;50" halign="left" valign="center" noWrap="1" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="5"/>
 	<widget name="text" position="10,115" size="1180,280" font="Regular;30" halign="center" valign="center" backgroundColor="header" foregroundColor="white" transparent="1" zPosition="5"/>
-	<widget name="list" position="10,430" size="1180,150" textPadding="15,5" itemHeight="50" font="Regular;30" scrollbarBorderWidth="1" scrollbarWidth="6" scrollbarForegroundColor="ltbluette" 
+	<widget name="list" position="10,430" size="1180,200" textPadding="15,5" itemHeight="50" font="Regular;30" scrollbarBorderWidth="1" scrollbarWidth="6" scrollbarForegroundColor="ltbluette" 
 		scrollbarBorderColor="ltbluette" scrollbarRadius="3" scrollbarMode="showOnDemand" backgroundColorSelected="bluette" itemCornerRadius="6" foregroundColorSelected="white" backgroundColor="header" 
 		foregroundColor="white" transparent="1" zPosition="5" />
 </screen>

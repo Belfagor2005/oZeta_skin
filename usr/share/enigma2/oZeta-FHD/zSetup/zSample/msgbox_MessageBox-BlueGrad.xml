@@ -1,0 +1,6 @@
+<!-- *** oZeta - XML Version 2.27 By zSetup v2.0.0 *** -->
+<!-- Author mmark Modules : BlueGradient MessageBox -->
+<screen name="cMessageBox">
+    <panel name="MSGB-Color-ltb"/>
+</screen>
+
