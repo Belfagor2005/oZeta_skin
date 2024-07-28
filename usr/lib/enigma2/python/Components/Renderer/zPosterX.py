@@ -32,17 +32,22 @@ from Components.Sources.CurrentService import CurrentService
 from Components.Sources.Event import Event
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.ServiceEvent import ServiceEvent
+
 from Components.config import config
 from ServiceReference import ServiceReference
-from enigma import ePixmap, loadJPG, eEPGCache
-from enigma import eTimer
+from enigma import (
+    ePixmap,
+    loadJPG,
+    eEPGCache,
+    eTimer,
+)
 import NavigationInstance
 import os
 import re
+import shutil
 import socket
 import sys
 import time
-import shutil
 
 
 PY3 = False
@@ -52,14 +57,29 @@ if sys.version_info[0] >= 3:
     unichr = chr
     long = int
     import queue
+    import html
+    html_parser = html
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
+    from urllib.parse import quote_plus, quote
 else:
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
+    from urllib import quote_plus, quote
+    from HTMLParser import HTMLParser
+    html_parser = HTMLParser()
+
+
+try:
+    from urllib import unquote
+except ImportError:
+    from urllib.parse import unquote
+
+
+epgcache = eEPGCache.getInstance()
 
 
 def isMountReadonly(mnt):
@@ -91,12 +111,13 @@ path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if isMountedInRW("/media/hdd"):
         path_folder = "/media/hdd/poster"
-if os.path.exists("/media/usb"):
+elif os.path.exists("/media/usb"):
     if isMountedInRW("/media/usb"):
         path_folder = "/media/usb/poster"
-if os.path.exists("/media/mmc"):
+elif os.path.exists("/media/mmc"):
     if isMountedInRW("/media/mmc"):
         path_folder = "/media/mmc/poster"
+
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
 
@@ -177,6 +198,14 @@ def OnclearMem():
         pass
 
 
+def quoteEventName(eventName):
+    try:
+        text = eventName.decode('utf8').replace(u'\x86', u'').replace(u'\x87', u'').encode('utf8')
+    except:
+        text = eventName
+    return quote_plus(text, safe="+")
+
+
 REGEX = re.compile(
     r'([\(\[]).*?([\)\]])|'
     r'(: odc.\d+)|'
@@ -240,10 +269,7 @@ def str_encode(text, encoding="utf8"):
     if not PY3:
         if isinstance(text, unicode):
             return text.encode(encoding)
-        else:
-            return text
-    else:
-        return text
+    return text
 
 
 def cutName(eventName=""):
@@ -257,23 +283,44 @@ def cutName(eventName=""):
 
 
 def getCleanTitle(eventitle=""):
-    save_name = re.sub('\ \(\d+\)$', '', eventitle)
-    save_name = re.sub('\ \(\d+\/\d+\)$', '', save_name)  # remove episode-number " (xx/xx)" at the end
-    # save_name = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', save_name)
-    save_name = save_name.replace(' ^`^s', '').replace(' ^`^y', '')
+    # save_name = re.sub('\\(\d+\)$', '', eventitle)
+    # save_name = re.sub('\\(\d+\/\d+\)$', '', save_name)  # remove episode-number " (xx/xx)" at the end
+    # # save_name = re.sub('\ |\?|\.|\,|\!|\/|\;|\:|\@|\&|\'|\-|\"|\%|\(|\)|\[|\]\#|\+', '', save_name)
+    save_name = eventitle.replace(' ^`^s', '').replace(' ^`^y', '')
     return save_name
+
+
+def dataenc(data):
+    if PY3:
+        data = data.decode("utf-8")
+    else:
+        data = data.encode("utf-8")
+    return data
 
 
 def convtext(text=''):
     try:
         if text != '' or text is not None or text != 'None':
             print('original text: ', text)
+            text = text.lower()
+            text = remove_accents(text)
+            print('remove_accents text: ', text)
+            # #
             text = cutName(text)
             text = getCleanTitle(text)
-            # text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
-            text = text.lower()
+            # #
+            if text.endswith("the"):
+                text = "the " + text[:-4]
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
+            text = text.replace('live:', '').replace(' - prima tv', '')
+            if 'giochi olimpici parigi' in text:
+                text = 'olimpiadi di parigi'
+            if "anni '60" in text:
+                text = "anni 60"
+            if 'tg regione' in text:
+                text = 'tg3'
             if 'studio aperto' in text:
                 text = 'studio aperto'
             if 'josephine ange gardien' in text:
@@ -292,10 +339,10 @@ def convtext(text=''):
                 text = 'hudson e rex'
             if 'ben-hur' in text:
                 text = 'ben-hur'
-            if text.endswith("the"):
-                text.rsplit(" ", 1)[0]
-                text = text.rsplit(" ", 1)[0]
-                text = "the " + str(text)
+            if 'la7' in text:
+                text = 'la7'
+            if 'skytg24' in text:
+                text = 'skytg24'
             text = text + 'FIN'
             if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
                 text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
@@ -304,21 +351,73 @@ def convtext(text=''):
             text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
             text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
             text = re.sub(r'(\d+)+.*?FIN', '', text)
-            text = text.partition("(")[0] + 'FIN'  # .strip()
-            text = text.partition("(")[0]  # .strip()
-            text = text.partition(":")[0]  # .strip()
-            text = text.partition(" -")[0]  # .strip()
+            text = text.partition("(")[0] + 'FIN'
+            text = re.sub("\\s\d+", "", text)
+            text = text.partition("(")[0]
+            text = text.partition(":")[0]
+            text = text.partition(" -")[0]
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
             text = re.sub(r'^\|[\w\-\|]*\|', '', text)
             text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            text = remove_accents(text)
-            text = text.strip()
-            text = text.capitalize()
-            print('Final text: ', text)
+            '''
+            # remove xx: at start
+            text = re.sub(r'^\w{2}:', '', text)
+            # remove xx|xx at start
+            text = re.sub(r'^\w{2}\|\w{2}\s', '', text)
+            # remove xx - at start
+            text = re.sub(r'^.{2}\+? ?- ?', '', text)
+            # remove all leading content between and including ||
+            text = re.sub(r'^\|\|.*?\|\|', '', text)
+            text = re.sub(r'^\|.*?\|', '', text)
+            # remove everything left between pipes.
+            text = re.sub(r'\|.*?\|', '', text)
+            # remove all content between and including () multiple times
+            text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)
+            # remove all content between and including [] multiple times
+            text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)
+            # List of bad strings to remove
+            bad_strings = [
+
+                "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
+                "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
+                "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
+                "uk|", "us|", "yu|",
+                "1080p", "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
+                "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
+                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "(", ")", "-", "[]", "/",
+                "4k", "720p", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
+                "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
+            ]
+
+            # Remove numbers from 1900 to 2030
+            bad_strings.extend(map(str, range(1900, 2030)))
+            # Construct a regex pattern to match any of the bad strings
+            bad_strings_pattern = re.compile('|'.join(map(re.escape, bad_strings)))
+            # Remove bad strings using regex pattern
+            text = bad_strings_pattern.sub('', text)
+            # List of bad suffixes to remove
+            bad_suffix = [
+                " al", " ar", " ba", " da", " de", " en", " es", " eu", " ex-yu", " fi", " fr", " gr", " hr", " mk",
+                " nl", " no", " pl", " pt", " ro", " rs", " ru", " si", " swe", " sw", " tr", " uk", " yu"
+            ]
+            # Construct a regex pattern to match any of the bad suffixes at the end of the string
+            bad_suffix_pattern = re.compile(r'(' + '|'.join(map(re.escape, bad_suffix)) + r')$')
+            # Remove bad suffixes using regex pattern
+            text = bad_suffix_pattern.sub('', text)
+            # Replace ".", "_", "'" with " "
+            text = re.sub(r'[._\']', ' ', text)
+            # Replace "-" with space and strip trailing spaces
+            text = text.strip(' -')
+            '''
+            text = text.replace('XXXXXX', '60')
+            text = text.strip(' -')
+            text = quote(text, safe="")
+            print('text safe: ', text)
+            # print('Final text: ', text)
         else:
             text = text
-        return text
+        return unquote(text).capitalize()
     except Exception as e:
         print('convtext error: ', e)
         pass
@@ -345,13 +444,13 @@ class PosterDB(zPosterXDownloadThread):
                 dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
-                if lng == "fr":
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
-                    if not os.path.exists(dwn_poster):
-                        val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
-                        self.logDB(log)
+                # if lng == "fr":
+                    # if not os.path.exists(dwn_poster):
+                        # val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
+                    # if not os.path.exists(dwn_poster):
+                        # val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
+                        # self.logDB(log)
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
@@ -400,6 +499,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                     newfd = 0
                     newcn = None
                     for evt in events:
+                        self.logAutoDB("[AutoDB] evt {} events ({})".format(evt, events))
                         canal = [None, None, None, None, None, None]
                         if PY3:
                             canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
@@ -419,15 +519,15 @@ class PosterAutoDB(zPosterXDownloadThread):
                             dwn_poster = self.pstcanal
                             if os.path.join(path_folder, dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
-                            if lng == "fr":
-                                if not os.path.exists(dwn_poster):
-                                    val, log = self.search_molotov_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
-                                    if val and log.find("SUCCESS"):
-                                        newfd += 1
-                                if not os.path.exists(dwn_poster):
-                                    val, log = self.search_programmetv_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
-                                    if val and log.find("SUCCESS"):
-                                        newfd += 1
+                            # if lng == "fr":
+                                # if not os.path.exists(dwn_poster):
+                                    # val, log = self.search_molotov_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
+                                    # if val and log.find("SUCCESS"):
+                                        # newfd += 1
+                                # if not os.path.exists(dwn_poster):
+                                    # val, log = self.search_programmetv_google(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
+                                    # if val and log.find("SUCCESS"):
+                                        # newfd += 1
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -449,7 +549,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
-                    self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
+                        self.logAutoDB("[AutoDB] {} new file(s) added ({})".format(newfd, newcn))
                 except Exception as e:
                     self.logAutoDB("[AutoDB] *** service error ({})".format(e))
             # AUTO REMOVE OLD FILES
@@ -469,10 +569,12 @@ class PosterAutoDB(zPosterXDownloadThread):
             self.logAutoDB("[AutoDB] *** Stopping ***")
 
     def logAutoDB(self, logmsg):
+
         try:
             w = open("/tmp/PosterAutoDB.log", "a+")
             w.write("%s\n" % logmsg)
             w.close()
+
         except Exception as e:
             print('error logAutoDB 2 ', e)
 
@@ -519,6 +621,7 @@ class zPosterX(Renderer):
         if what[0] == self.CHANGED_CLEAR:
             if self.instance:
                 self.instance.hide()
+            return
         if what[0] != self.CHANGED_CLEAR:
             servicetype = None
             try:
