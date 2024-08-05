@@ -671,16 +671,16 @@ class zBackdropXDownloadThread(threading.Thread):
             fd = ''
         global srch
         srch = "multi"
-        fds = fd[:60]
-        for i in self.checkMovie:
-            if i in fds.lower():
-                srch = "movie:" + i
-                break
+        # fds = fd[:60]
+        # for i in self.checkMovie:
+            # if i in fds.lower():
+                # srch = "movie"  # :" + i
+                # break
 
-        for i in self.checkTV:
-            if i in fds.lower():
-                srch = "tv:" + i
-                break
+        # for i in self.checkTV:
+            # if i in fds.lower():
+                # srch = "tv"  # :" + i
+                # break
 
         return srch, fd
 

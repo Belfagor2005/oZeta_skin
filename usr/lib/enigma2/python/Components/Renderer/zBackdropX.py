@@ -312,6 +312,8 @@ def convtext(text=''):
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             text = text.replace('live:', '').replace(' - prima tv', '')
+            # for oldem
+            text = re.sub(r'\d+\s*ح', '', text)
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
             if "anni '60" in text:
@@ -488,7 +490,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
         while True:
             time.sleep(7200)  # 7200 - Start every 2 hours
             self.logAutoDB("[AutoDB] *** Running ***")
-            pstcanal = ''
+            self.pstcanal = ''
             # AUTO ADD NEW FILES - 1440 (24 hours ahead)
             for service in apdb.values():
                 try:
@@ -510,39 +512,39 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            pstcanal = convtext(canal[5])
-                            pstrNm = path_folder + '/' + pstcanal + ".jpg"
+                            self.pstcanal = convtext(canal[5])
+                            pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
                             self.pstcanal = str(pstrNm)
                             dwn_backdrop = self.pstcanal
                             if os.path.exists(dwn_backdrop):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_molotov_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                    # val, log = self.search_molotov_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
                                 # if not os.path.exists(dwn_backdrop):
-                                    # val, log = self.search_programmetv_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                    # val, log = self.search_programmetv_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
                             if not os.path.exists(dwn_backdrop):
-                                val, log = self.search_tmdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_tvdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_fanart(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_imdb(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             elif not os.path.exists(dwn_backdrop):
-                                val, log = self.search_google(dwn_backdrop, pstcanal, canal[4], canal[3], canal[0])
+                                val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
                                     newfd += 1
                             newcn = canal[0]
@@ -674,9 +676,9 @@ class zBackdropX(Renderer):
                     return
                 self.oldCanal = curCanal
                 self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
-                pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
-                self.backrNm = str(backrNm)
+                self.pstcanal = convtext(self.canal[5])
+                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                self.backrNm = str(self.backrNm)
                 if os.path.exists(self.backrNm):
                     self.timer.start(10, True)
                 else:
@@ -694,9 +696,9 @@ class zBackdropX(Renderer):
             self.instance.hide()
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
-                pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
-                self.backrNm = str(backrNm)
+                self.pstcanal = convtext(self.canal[5])
+                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                self.backrNm = str(self.backrNm)
             if os.path.exists(self.backrNm):
                 self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
                 self.instance.setPixmap(loadJPG(self.backrNm))
@@ -708,9 +710,9 @@ class zBackdropX(Renderer):
             self.instance.hide()
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
-                pstcanal = convtext(self.canal[5])
-                backrNm = self.path + '/' + str(pstcanal) + ".jpg"
-                self.backrNm = str(backrNm)
+                self.pstcanal = convtext(self.canal[5])
+                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                self.backrNm = str(self.backrNm)
             loop = 180
             found = None
             self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))

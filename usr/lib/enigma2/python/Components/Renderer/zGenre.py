@@ -215,6 +215,8 @@ def convtext(text=''):
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             text = text.replace('live:', '').replace(' - prima tv', '')
+            # for oldem
+            text = re.sub(r'\d+\s*ح', '', text)
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
             if "anni '60" in text:
