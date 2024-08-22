@@ -374,7 +374,6 @@ class oZsetup(ConfigListScreen, Screen):
             'OkCancelActions',
             'HelpActions',
             'InfoActions',
-            'ColorActions',
             'VirtualKeyboardActions',
             'HotkeyActions',
         ], {
