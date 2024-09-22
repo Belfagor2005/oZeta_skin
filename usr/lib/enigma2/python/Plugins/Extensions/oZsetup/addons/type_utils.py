@@ -5,48 +5,35 @@ from Components.config import config
 from Components.Label import Label
 from Components.ActionMap import ActionMap
 from Components.MenuList import MenuList
-# from Components.AVSwitch import AVSwitch
-# from Components.Pixmap import Pixmap
-# from Components.Sources.StaticText import StaticText
-
+from os import remove
 # Screens
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.HelpMenu import HelpableScreen
-# from Screens.InfoBar import MoviePlayer as Movie_Audio_Player
 
 # Tools
 from Tools.Directories import fileExists  # , fileReadLines
 from errno import ENOENT
-# from enigma import eGetEnigmaDebugLvl
-# from Tools.TextBoundary import getTextBoundarySize
 from sys import _getframe as getframe
 DEFAULT_MODULE_NAME = __name__.split(".")[-1]
-# forceDebug = eGetEnigmaDebugLvl() > 4
 
 # Various
-# from .InputBox import InputBoxWide
-# from enigma import eTimer, getDesktop, gFont, eSize, ePicLoad
 import skin
 
 ##################################
 
-pname = _("File Commander - Addon Mediaplayer")
+pname = _("File Commander - Addon")
 pdesc = _("play/show Files")
-pversion = "1.0-r0"
+pversion = "1.0-r1"
 
 
 from enigma import eLabel
-
-# Calls onto the static function in eLabel. This avoids causing an invalidate
-# on the parent container which is detrimental to UI performance,
-# particularly in a complex screen like the graph EPG
 
 
 def getTextBoundarySize(instance, font, targetSize, text):
 	return eLabel.calculateTextSize(font, text, targetSize)
 
-# ### play with movieplayer ###
+
 def fileReadLines(filename, default=None, source=DEFAULT_MODULE_NAME, debug=False):
 	lines = None
 	try:
@@ -58,44 +45,7 @@ def fileReadLines(filename, default=None, source=DEFAULT_MODULE_NAME, debug=Fals
 			print("[%s] Error %d: Unable to read lines from file '%s'!  (%s)" % (source, err.errno, filename, err.strerror))
 		lines = default
 		msg = "Default"
-	# if debug or forceDebug:
-		# length = len(lines) if lines else 0
-		# print("[%s] Line %d: %s %d lines from file '%s'." % (source, getframe(1).f_lineno, msg, length, filename))
 	return lines
-
-# class MoviePlayer(Movie_Audio_Player):
-    # def __init__(self, session, service):
-        # self.WithoutStopClose = False
-        # Movie_Audio_Player.__init__(self, session, service)
-
-    # def leavePlayer(self):
-        # self.is_closing = True
-        # self.close()
-
-    # def leavePlayerConfirmed(self, answer):
-        # """
-        # overwrite InfoBar method.
-        # """
-
-    # def doEofInternal(self, playing):
-        # if not self.execing:
-            # return
-        # if not playing:
-            # return
-        # self.leavePlayer()
-
-    # def showMovies(self):
-        # self.WithoutStopClose = True
-        # self.close()
-
-    # def movieSelected(self, service):
-        # self.leavePlayer()
-
-    # def __onClose(self):
-        # if not(self.WithoutStopClose):
-            # self.session.nav.playService(self.lastservice)
-
-# ### File viewer/line editor ###
 
 
 class zEditor(Screen):
@@ -144,15 +94,9 @@ class zEditor(Screen):
         self.setTitle(_("Z File Commander - Addon File-Viewer"))
 
     def exitEditor(self):
-        # if self.isChanged:
-            # warningtext = "\n" + (_("has been CHANGED! Do you want to save it?"))
-            # warningtext = warningtext + "\n\n" + (_("WARNING!"))
-            # warningtext = warningtext + "\n" + (_("The authors are NOT RESPONSIBLE"))
-            # warningtext = warningtext + "\n" + (_("for DATA LOSS OR DAMAGE !!!"))
-            # msg = self.session.openWithCallback(self.SaveFile, MessageBox, _(self.file_name + warningtext), MessageBox.TYPE_YESNO)
-            # msg.setTitle(_("oZeta File Commander"))
-        # else:
-            self.close()
+        if fileExists(self.file_name):
+            remove(self.file_name)
+        self.close()
 
     def GetFileData(self, fx):
         lines = fileReadLines(fx)
@@ -206,5 +150,3 @@ class zEditor(Screen):
             self.close()
         else:
             self.close()
-
-

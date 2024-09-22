@@ -1,22 +1,21 @@
 <!-- *** oZeta - XML Version 2.27 Channel Selection Cover By zSetup v2.0.0 *** -->
 <!-- Author lululla : Modules : PluginBrowserGrid Default -->
-    <!-- mod mmark 30-12-23 -->
-    <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="vRGYB-1500"/>
-        <panel name="Logo"/>
-        <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
-        <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
-        <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
-        <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
-        <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
-        <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
-        <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
-        <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
-        <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" 
-        	listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
-            <convert type="TemplatedMultiContent">
+<!-- mod mmark 30-12-23 -->
+<screen name="PluginBrowserGrid" position="0,0" size="1920,1080" Title="ATV Plugins" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="vButtonTemplate-1500"/>
+    <panel name="Logo"/>
+    <ePixmap position="230,10" size="110,110" pixmap="oZeta-FHD/iconsmenu/menu_mainmenu_pluginhider.png" alphatest="blend" transparent="1" scale="1" zPosition="1"/>
+    <widget source="Title" render="Label" position="400,7" size="1067,110" font="Mmenu;102" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+    <eLabel position="190,130" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+    <widget name="description" position="190,140" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+    <eLabel position="190,205" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+    <ePixmap position="50,0" size="125,1080" pixmap="oZeta-FHD/menu/Lc.png" zPosition="-1"/>
+    <eLabel position="175,0" size="1610,1080" backgroundColor="#20000000" zPosition="-1"/>
+    <ePixmap position="1765,0" size="125,1080" pixmap="oZeta-FHD/menu/pC.png" zPosition="-1"/>
+    <eLabel position="190,960" size="1560,3" backgroundColor="#303030" zPosition="4"/>
+    <widget name="quickselect" position="190,220" size="1560,725" backgroundColor="#000000" font="Regular;150" halign="center" transparent="1" valign="center" zPosition="5"/>
+    <widget source="pluginGrid" render="Listbox" position="190,220" size="1560,725" itemSpacing="25,25" selectionZoom="15" scrollbarMode="showAlways" transparent="1" listOrientation="grid" moveBackgroundColor="#00000000" backgroundPixmap="window/plugingridbg.png" selectionPixmap="window/plugingridfg.png">
+        <convert type="TemplatedMultiContent">
                         {
                         "template": [
                         MultiContentEntryText(pos = (5, 0), size = (220, 60), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, backcolor = 0x505050),
@@ -28,6 +27,6 @@
                         "itemHeight" : 120
                         }
             </convert>
-        </widget>
-        <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
-    </screen>
+    </widget>
+    <ePixmap pixmap="buttons/80/key_menu.png" position="1670,1025" size="80,40" alphatest="blend"/>
+</screen>

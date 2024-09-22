@@ -34,4 +34,6 @@
     <widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="buttons/button_green.png" position="1613,990" size="30,30" zPosition="1" alphatest="blend">
         <convert type="ConditionalShowHide"/>
     </widget>
+    <widget name="description" position="92,1097" size="1560,60" font="Regular; 26" halign="center" valign="center" backgroundColor="#303030" foregroundColor="yellow" transparent="0"/>
+
 </screen>

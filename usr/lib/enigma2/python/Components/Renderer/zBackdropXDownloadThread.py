@@ -13,7 +13,7 @@ import requests
 import socket
 import sys
 import threading
-
+import unicodedata
 global my_cur_skin, srch
 
 PY3 = False
@@ -21,14 +21,11 @@ if sys.version_info[0] >= 3:
     PY3 = True
     unicode = str
     unichr = chr
-    long = int
-    # from urllib.parse import quote
     import html
     html_parser = html
 else:
-    # from urllib2 import quote
     from HTMLParser import HTMLParser
-    html_parser = HTMLParser()
+    html = HTMLParser()
 
 
 try:
@@ -169,10 +166,10 @@ class zBackdropXDownloadThread(threading.Thread):
             chkType, fd = self.checkType(shortdesc, fulldesc)
             title = title
             try:
-                if re.findall('19\d{2}|20\d{2}', title):
-                    year = re.findall('19\d{2}|20\d{2}', fd)[1]
+                if re.findall(r'19\d{2}|20\d{2}', title):
+                    year = re.findall(r'19\d{2}|20\d{2}', fd)[1]
                 else:
-                    year = re.findall('19\d{2}|20\d{2}', fd)[0]
+                    year = re.findall(r'19\d{2}|20\d{2}', fd)[0]
             except:
                 year = ''
                 pass
@@ -203,16 +200,16 @@ class zBackdropXDownloadThread(threading.Thread):
             series_nb = -1
             chkType, fd = self.checkType(shortdesc, fulldesc)
             ptitle = self.UNAC(title)
-            year = re.findall('19\d{2}|20\d{2}', fd)
+            year = re.findall(r'19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = ''
             url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(quoteEventName(title))
             url_read = requests.get(url_tvdbg).text
-            series_id = re.findall('<seriesid>(.*?)</seriesid>', url_read)
-            series_name = re.findall('<SeriesName>(.*?)</SeriesName>', url_read)
-            series_year = re.findall('<FirstAired>(19\d{2}|20\d{2})-\d{2}-\d{2}</FirstAired>', url_read)
+            series_id = re.findall(r'<seriesid>(.*?)</seriesid>', url_read)
+            series_name = re.findall(r'<SeriesName>(.*?)</SeriesName>', url_read)
+            series_year = re.findall(r'<FirstAired>(19\d{2}|20\d{2})-\d{2}-\d{2}</FirstAired>', url_read)
             i = 0
             for iseries_year in series_year:
                 if year == '':
@@ -235,7 +232,7 @@ class zBackdropXDownloadThread(threading.Thread):
                     else:
                         url_tvdb += "/en"
                     url_read = requests.get(url_tvdb).text
-                    backdrop = re.findall('<backdrop>(.*?)</backdrop>', url_read)
+                    backdrop = re.findall(r'<backdrop>(.*?)</backdrop>', url_read)
 
             if backdrop and backdrop[0]:
                 # if backdrop and backdrop != 'null' or backdrop is not None or backdrop != '':
@@ -261,10 +258,10 @@ class zBackdropXDownloadThread(threading.Thread):
             id = "-"
             chkType, fd = self.checkType(shortdesc, fulldesc)
             try:
-                if re.findall('19\d{2}|20\d{2}', title):
-                    year = re.findall('19\d{2}|20\d{2}', fd)[1]
+                if re.findall(r'19\d{2}|20\d{2}', title):
+                    year = re.findall(r'19\d{2}|20\d{2}', fd)[1]
                 else:
-                    year = re.findall('19\d{2}|20\d{2}', fd)[0]
+                    year = re.findall(r'19\d{2}|20\d{2}', fd)[0]
             except:
                 year = ''
                 pass
@@ -307,7 +304,7 @@ class zBackdropXDownloadThread(threading.Thread):
             url_backdrop = None
             chkType, fd = self.checkType(shortdesc, fulldesc)
             ptitle = self.UNAC(title)
-            aka = re.findall('\((.*?)\)', fd)
+            aka = re.findall(r'\((.*?)\)', fd)
             if len(aka) > 1 and not aka[1].isdigit():
                 aka = aka[1]
             elif len(aka) > 0 and not aka[0].isdigit():
@@ -318,7 +315,7 @@ class zBackdropXDownloadThread(threading.Thread):
                 paka = self.UNAC(aka)
             else:
                 paka = ''
-            year = re.findall('19\d{2}|20\d{2}', fd)
+            year = re.findall(r'19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
@@ -332,13 +329,13 @@ class zBackdropXDownloadThread(threading.Thread):
             else:
                 url_mimdb = "https://m.imdb.com/find?q={}".format(quoteEventName(title))
             url_read = requests.get(url_mimdb).text
-            rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
+            rc = re.compile(r'<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
             url_imdb = rc.findall(url_read)
 
             if len(url_imdb) == 0 and aka:
                 url_mimdb = "https://m.imdb.com/find?q={}".format(quoteEventName(title))
                 url_read = requests.get(url_mimdb).text
-                rc = re.compile('<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
+                rc = re.compile(r'<img src="(.*?)".*?<span class="h3">\n(.*?)\n</span>.*?\((\d+)\)(\s\(.*?\))?(.*?)</a>', re.DOTALL)
                 url_imdb = rc.findall(url_read)
             len_imdb = len(url_imdb)
             idx_imdb = 0
@@ -347,13 +344,13 @@ class zBackdropXDownloadThread(threading.Thread):
             for imdb in url_imdb:
                 imdb = list(imdb)
                 imdb[1] = self.UNAC(imdb[1])
-                tmp = re.findall('aka <i>"(.*?)"</i>', imdb[4])
+                tmp = re.findall(r'aka <i>"(.*?)"</i>', imdb[4])
                 if tmp:
                     imdb[4] = tmp[0]
                 else:
                     imdb[4] = ''
                 imdb[4] = self.UNAC(imdb[4])
-                imdb_backdrop = re.search("(.*?)._V1_.*?.jpg", imdb[0])
+                imdb_backdrop = re.search(r"(.*?)._V1_.*?.jpg", imdb[0])
                 if imdb_backdrop:
                     if imdb[3] == '':
                         if year and year != '':
@@ -406,7 +403,7 @@ class zBackdropXDownloadThread(threading.Thread):
             if not PY3:
                 ff = ff.encode('utf-8')
             ptv_id = 0
-            plst = re.findall('\],\["https://www.programme-tv.net(.*?)",\d+,\d+]', ff)
+            plst = re.findall(r'\],\["https://www.programme-tv.net(.*?)",\d+,\d+]', ff)
             for backdroplst in plst:
                 ptv_id += 1
                 url_backdrop = "https://www.programme-tv.net{}".format(backdroplst)
@@ -416,14 +413,14 @@ class zBackdropXDownloadThread(threading.Thread):
                     get_title = self.UNAC(url_backdrop_size[0][2].replace('-', ''))
                     if ptitle == get_title:
                         h_ori = float(url_backdrop_size[0][1])
-                        h_tar = float(re.findall('(\d+)', isz)[1])
+                        h_tar = float(re.findall(r'(\d+)', isz)[1])
                         ratio = h_ori / h_tar
                         w_ori = float(url_backdrop_size[0][0])
                         w_tar = w_ori / ratio
                         w_tar = int(w_tar)
                         h_tar = int(h_tar)
-                        url_backdrop = re.sub('/\d+x\d+/', "/" + str(w_tar) + "x" + str(h_tar) + "/", url_backdrop)
-                        url_backdrop = re.sub('crop-from/top/', '', url_backdrop)
+                        url_backdrop = re.sub(r'/\d+x\d+/', "/" + str(w_tar) + "x" + str(h_tar) + "/", url_backdrop)
+                        url_backdrop = re.sub(r'crop-from/top/', '', url_backdrop)
                         self.savebackdrop(dwn_backdrop, url_backdrop)
                         if self.verifybackdrop(dwn_backdrop) and url_backdrop_size:
                             self.resizebackdrop(dwn_backdrop)
@@ -507,7 +504,7 @@ class zBackdropXDownloadThread(threading.Thread):
                         if pl[1].startswith("Regarder"):
                             pltc = self.UNAC(pl[1])
                             partialtitle = self.PMATCH(ptitle, pltc)
-                            get_channel = re.findall('regarder[ ]+(.*?)[ ]+en', pltc)
+                            get_channel = re.findall(r'regarder[ ]+(.*?)[ ]+en', pltc)
                             if get_channel:
                                 get_channel = self.UNAC(get_channel[0]).replace(' ', '')
                             else:
@@ -539,7 +536,7 @@ class zBackdropXDownloadThread(threading.Thread):
             else:
                 imsg = "Not found '{}' [{}%-{}%-{}]".format(pltc, molotov_table[0], molotov_table[1], len_plst)
             if backdrop:
-                url_backdrop = re.sub('/\d+x\d+/', "/" + re.sub(',', 'x', isz) + "/", backdrop)
+                url_backdrop = re.sub(r'/\d+x\d+/', "/" + re.sub(r',', 'x', isz) + "/", backdrop)
                 self.savebackdrop(dwn_backdrop, url_backdrop)
                 if self.verifybackdrop(dwn_backdrop):
                     self.resizebackdrop(dwn_backdrop)
@@ -563,7 +560,7 @@ class zBackdropXDownloadThread(threading.Thread):
             url_backdrop = ''
             year = None
             srch = None
-            year = re.findall('19\d{2}|20\d{2}', fd)
+            year = re.findall(r'19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
@@ -584,12 +581,12 @@ class zBackdropXDownloadThread(threading.Thread):
             # url_google += "+{}".format(poster)
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
 
-            backdroplst = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)
+            backdroplst = re.findall(r'\],\["https://(.*?)",\d+,\d+]', ff)
             if len(backdroplst) == 0:
                 url_google = quoteEventName(title)
                 url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_google)
                 ff = requests.get(url_google, stream=True, headers=headers).text
-                backdroplst = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)
+                backdroplst = re.findall(r'\],\["https://(.*?)",\d+,\d+]', ff)
 
             for pl in backdroplst:
                 url_backdrop = "https://{}".format(pl)
@@ -674,37 +671,40 @@ class zBackdropXDownloadThread(threading.Thread):
         # fds = fd[:60]
         # for i in self.checkMovie:
             # if i in fds.lower():
-                # srch = "movie"  # :" + i
+                # srch = "movie:" + i
                 # break
 
         # for i in self.checkTV:
             # if i in fds.lower():
-                # srch = "tv"  # :" + i
+                # srch = "tv:" + i
                 # break
 
         return srch, fd
 
     def UNAC(self, string):
-        if not PY3:
-            if type(string) is not unicode:
-                string = unicode(string, encoding='utf-8')
-        string = re.sub(u"u0026", "&", string)
-        string = re.sub(u"u003d", "=", string)
-        string = html_parser.unescape(string)
+        # Decodifica HTML entities come &amp; in &
+        string = html.unescape(string)
+
+        # Normalizzazione Unicode: decomposizione per separare caratteri base da accenti
+        string = unicodedata.normalize('NFD', string)
+
+        # Rimpiazza specifiche sequenze
+        string = re.sub(r"u0026", "&", string)
+        string = re.sub(r"u003d", "=", string)
+        # Rimozione segni diacritici lasciando solo i caratteri base
+        string = re.sub(r'[\u0300-\u036f]', '', string)
+        # Rimozione di specifici caratteri di punteggiatura
         string = re.sub(r"[,!?\.\"]", ' ', string)
         string = re.sub(r"[-/:']", '', string)
-        string = re.sub(u"[ÀÁÂÃÄàáâãäåª]", 'a', string)
-        string = re.sub(u"[ÈÉÊËèéêë]", 'e', string)
-        string = re.sub(u"[ÍÌÎÏìíîï]", 'i', string)
-        string = re.sub(u"[ÒÓÔÕÖòóôõöº]", 'o', string)
-        string = re.sub(u"[ÙÚÛÜùúûü]", 'u', string)
-        string = re.sub(u"[Ññ]", 'n', string)
-        string = re.sub(u"[Çç]", 'c', string)
-        string = re.sub(u"[Ÿýÿ]", 'y', string)
+        # Rimozione di tutto ciò che non è alfanumerico o spazio
         string = re.sub(r"[^a-zA-Z0-9 ]", "", string)
+        # Conversione in minuscolo
         string = string.lower()
-        string = re.sub(r'\s{1,}', ' ', string)
+        # Sostituzione di spazi multipli con uno solo
+        string = re.sub(r'\s+', ' ', string)
+        # Eliminazione degli spazi all'inizio e alla fine della stringa
         string = string.strip()
+
         return string
 
     def PMATCH(self, textA, textB):

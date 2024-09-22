@@ -19,7 +19,7 @@
 # If you want to use or modify the code or parts of it,
 # you have to keep MY license and inform me about the modifications by mail.
 #
-
+# mod from lululla 20240628
 # for localized messages
 from . import _
 
@@ -36,12 +36,15 @@ from Components.config import ConfigSubsection, ConfigText, ConfigSelection, \
 from xml.etree.cElementTree import fromstring as cet_fromstring
 from twisted.web.client import getPage
 import sys
+import six
+
+
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
-    unicode = str
-    unichr = chr
-    long = int
+    # unicode = str
+    # unichr = chr
+    # long = int
     from urllib.parse import quote as urllib_quote
 else:
     from urllib2 import quote as urllib_quote
@@ -49,7 +52,7 @@ else:
 
 def initWeatherPluginEntryConfig():
     s = ConfigSubsection()
-    s.city = ConfigText(default = "Roma", visible_width = 100, fixed_size = False)
+    s.city = ConfigText(default = "Heidelberg", visible_width = 100, fixed_size = False)
     s.degreetype = ConfigSelection(choices = [("C", _("metric system")), ("F", _("imperial system"))], default = "C")
     s.weatherlocationcode = ConfigText(default = "", visible_width = 100, fixed_size = False)
     config.plugins.WeatherPlugin.Entry.append(s)
@@ -85,7 +88,7 @@ class MSNWeatherPluginEntriesListConfigScreen(Screen):
         self["city"] = StaticText(_("City"))
         self["degreetype"] = StaticText(_("System"))
         self["key_red"] = StaticText(_("Back"))
-        self["key_green"] = StaticText(_("Add"))        
+        self["key_green"] = StaticText(_("Add"))
         self["key_yellow"] = StaticText(_("Edit"))
         self["key_blue"] = StaticText(_("Delete"))
         self["entrylist"] = WeatherPluginEntryList([])
@@ -94,7 +97,7 @@ class MSNWeatherPluginEntriesListConfigScreen(Screen):
              "ok"   :   self.keyOK,
              "back" :   self.keyClose,
              "red"  :   self.keyClose,
-             "green":   self.keyGreen,           
+             "green":   self.keyGreen,
              "yellow":  self.keyYellow,
              "blue":    self.keyDelete,
              }, -1)
@@ -167,6 +170,7 @@ class WeatherPluginEntryList(MenuList):
         self.l.setList(list)
         self.moveToIndex(0)
 
+
 class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
     skin = """
         <screen name="MSNWeatherPluginEntryConfigScreen" position="center,center" size="550,400">
@@ -212,7 +216,7 @@ class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
         ]
 
         ConfigListScreen.__init__(self, cfglist, session)
-        
+
     def searchLocation(self):
         if self.current.city.value != "":
             language = config.osd.language.value.replace("_","-")
@@ -220,11 +224,9 @@ class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
                 language = "en-US"
             elif language == "no-NO": # hack
                 language = "nn-NO"
-            url = "http://weather.service.msn.com/find.aspx?src=vista&outputview=search&weasearchstr=%s&culture=%s" % (urllib_quote(self.current.city.value), language)
-            if PY3:
-                getPage(url.encode('utf-8')).addCallback(self.xmlCallback).addErrback(self.error)
-            else:
-                getPage(url).addCallback(self.xmlCallback).addErrback(self.error)
+            url = "http://weather.service.msn.com/find.aspx?src=outlook&outputview=search&weasearchstr=%s&culture=%s" % (urllib_quote(self.current.city.value), language)
+            url = six.ensure_binary(url)
+            getPage(url).addCallback(self.xmlCallback).addErrback(self.error)
         else:
             self.session.open(MessageBox, _("You need to enter a valid city name before you can search for the location code."), MessageBox.TYPE_ERROR)
 
@@ -251,7 +253,7 @@ class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
     def keyDelete(self):
         if self.newmode == 1:
             self.keyCancel()
-        else:       
+        else:
             self.session.openWithCallback(self.deleteConfirm, MessageBox, _("Really delete this WeatherPlugin Entry?"))
 
     def deleteConfirm(self, result):
@@ -264,21 +266,26 @@ class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
         config.plugins.WeatherPlugin.save()
         configfile.save()
         self.close()
-        
-        
+
+
     def xmlCallback(self, xmlstring):
         if xmlstring:
+            if PY3:
+                data = xmlstring.decode("utf-8")
+            else:
+                data = xmlstring.encode("utf-8")
+            # print('xmlCallback string type:', type(data))
             errormessage = ""
-            root = cet_fromstring(xmlstring)
+            root = cet_fromstring(data)
             for childs in root:
                 if childs.tag == "weather" and "errormessage" in childs.attrib:
-                    errormessage = childs.attrib.get("errormessage").encode("utf-8", 'ignore')
+                    errormessage = childs.attrib.get("errormessage")
                     break
             if len(errormessage) !=0:
-                self.session.open(MessageBox, errormessage, MessageBox.TYPE_ERROR)                  
+                self.session.open(MessageBox, errormessage, MessageBox.TYPE_ERROR)
             else:
-                self.session.openWithCallback(self.searchCallback, MSNWeatherPluginSearch, xmlstring)
-            
+                self.session.openWithCallback(self.searchCallback, MSNWeatherPluginSearch, data)
+
     def error(self, error = None):
         if error is not None:
             print(error)
@@ -287,9 +294,8 @@ class MSNWeatherPluginEntryConfigScreen(ConfigListScreen, Screen):
         if result:
             self.current.weatherlocationcode.value = result[0]
             self.current.city.value = result[1]
-    
-        
-        
+
+
 class MSNWeatherPluginSearch(Screen):
     skin = """
         <screen name="MSNWeatherPluginSearch" position="center,center" size="550,400">
@@ -300,13 +306,13 @@ class MSNWeatherPluginSearch(Screen):
             <ePixmap position="140,10" zPosition="4" size="140,40" pixmap="skin_default/buttons/green.png" transparent="1" alphatest="on" />
             <ePixmap position="280,10" zPosition="4" size="140,40" pixmap="skin_default/buttons/yellow.png" transparent="1" alphatest="on" />
             <ePixmap position="420,10" zPosition="4" size="140,40" pixmap="skin_default/buttons/blue.png" transparent="1" alphatest="on" />
-        </screen>""" 
+        </screen>"""
 
     def __init__(self, session, xmlstring):
         Screen.__init__(self, session)
         self.title = _("MSN location search result")
         self["key_red"] = StaticText(_("Back"))
-        self["key_green"] = StaticText(_("OK"))     
+        self["key_green"] = StaticText(_("OK"))
         self["entrylist"] = MSNWeatherPluginSearchResultList([])
         self["actions"] = ActionMap(["WizardActions","MenuActions","ShortcutActions"],
             {
@@ -328,7 +334,7 @@ class MSNWeatherPluginSearch(Screen):
         try:sel = self["entrylist"].l.getCurrentSelection()[0]
         except: sel = None
         self.close(sel)
-        
+
 
 class MSNWeatherPluginSearchResultList(MenuList):
     def __init__(self, list, enableWrapAround = True):
@@ -354,8 +360,8 @@ class MSNWeatherPluginSearchResultList(MenuList):
                 if PY3:
                     searchlocation = childs.attrib.get("weatherlocationname")
                     searchresult = childs.attrib.get("weatherfullname")
-                    weatherlocationcode = childs.attrib.get("weatherlocationcode")                
-                else:            
+                    weatherlocationcode = childs.attrib.get("weatherlocationcode")
+                else:
                     searchlocation = childs.attrib.get("weatherlocationname").encode("utf-8", 'ignore')
                     searchresult = childs.attrib.get("weatherfullname").encode("utf-8", 'ignore')
                     weatherlocationcode = childs.attrib.get("weatherlocationcode").encode("utf-8", 'ignore')
@@ -368,4 +374,3 @@ class MSNWeatherPluginSearchResultList(MenuList):
         self.list = list
         self.l.setList(list)
         self.moveToIndex(0)
-

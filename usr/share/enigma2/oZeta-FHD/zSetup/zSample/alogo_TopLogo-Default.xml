@@ -1,4 +1,4 @@
-<!-- *** oZeta - XML Version 2.27 By zSetup v2.0.0 *** -->
+<!-- *** oZeta - XML Version 2.27 Top Logo Team By zSetup v2.0.0 *** -->
 <!-- Author mmark : Modules : TopLogo Zeta Default -->
 <screen name="Logo">
     <ePixmap position="230,10" size="160,110" pixmap="oZeta-FHD/menu/back10.png" scale="1" zPosition="10"/>

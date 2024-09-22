@@ -19,7 +19,7 @@
 # If you want to use or modify the code or parts of it,
 # you have to keep MY license and inform me about the modifications by mail.
 #
-
+# mod from lululla 20240628
 # for localized messages
 from . import _
 from xml.etree.cElementTree import fromstring as cet_fromstring
@@ -34,8 +34,9 @@ try:
     from Tools.Directories import SCOPE_GUISKIN as SCOPE_SKIN
 except ImportError:
     from Tools.Directories import SCOPE_SKIN
-
 import sys
+import six
+
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
@@ -142,11 +143,9 @@ class MSNWeather:
         self.callback = callback
         self.callbackShowIcon = callbackShowIcon
         self.callbackAllIconsDownloaded = callbackAllIconsDownloaded
-        url = "http://weather.service.msn.com/data.aspx?src=vista&weadegreetype=%s&culture=%s&wealocations=%s" % (degreetype, language, urllib_quote(locationcode))
-        if PY3:
-            getPage(url.encode('utf-8')).addCallback(self.xmlCallback).addErrback(self.error)
-        else:
-            getPage(url).addCallback(self.xmlCallback).addErrback(self.error)
+        url = "http://weather.service.msn.com/data.aspx?src=outlook&weadegreetype=%s&culture=%s&wealocations=%s" % (degreetype, language, urllib_quote(locationcode))
+        url = six.ensure_binary(url)
+        getPage(url).addCallback(self.xmlCallback).addErrback(self.error)
 
     def getDefaultWeatherData(self, callback=None, callbackAllIconsDownloaded=None):
         self.initialize()
@@ -184,6 +183,10 @@ class MSNWeather:
 
     def xmlCallback(self, xmlstring):
         IconDownloadList = []
+        if PY3:
+            xmlstring = xmlstring.decode("utf-8")
+        else:
+            xmlstring = xmlstring.encode("utf-8")
         root = cet_fromstring(xmlstring)
         index = 0
         self.degreetype = "C"

@@ -1,4 +1,4 @@
-<!-- *** oZeta - XML Version 2.27 By zSetup v2.0.0 *** -->
+<!-- *** oZeta - XML Version 2.27 Volume Default By zSetup v2.0.0 *** -->
 <!-- Author mmark : Modules : Volume Text Default -->
 <screen name="Volume" position="1600,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
     <ePixmap pixmap="menu/volpic.png" position="0,0" size="250,120" alphatest="blend" zPosition="2" transparent="1"/>

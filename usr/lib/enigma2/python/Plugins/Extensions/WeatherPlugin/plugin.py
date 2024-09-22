@@ -6,8 +6,6 @@
 # Support: www.dreambox-tools.info
 # E-Mail: dr.best@dreambox-tools.info
 #
-# Modified By mFaraj & RAED For OE1.6 & OE2.0
-#
 # This plugin is open source but it is NOT free software.
 #
 # This plugin may only be distributed to and executed on hardware which
@@ -21,8 +19,9 @@
 # If you want to use or modify the code or parts of it,
 # you have to keep MY license and inform me about the modifications by mail.
 #
-
+# mod from lululla 20240628
 # for localized messages
+from __future__ import absolute_import
 from . import _
 
 from Plugins.Plugin import PluginDescriptor
@@ -33,8 +32,8 @@ from Components.Pixmap import Pixmap
 from enigma import ePicLoad, eRect, eSize, gPixmapPtr
 from Components.AVSwitch import AVSwitch
 from Components.config import ConfigSubsection, ConfigSubList, ConfigInteger, config
-from Plugins.Extensions.WeatherPlugin.setup import initConfig, MSNWeatherPluginEntriesListConfigScreen
-from Plugins.Extensions.WeatherPlugin.MSNWeather import MSNWeather
+from .setup import initConfig, MSNWeatherPluginEntriesListConfigScreen
+from .MSNWeather import MSNWeather
 import time
 
 try:
@@ -68,7 +67,7 @@ class MSNWeatherPlugin(Screen):
             <widget render="Label" source="observationpoint" position="204,65" zPosition="1" size="450,40" font="Regular;14" transparent="1" halign="right" />
             <widget name="currenticon" position="10,95" zPosition="1" size="55,45" alphatest="blend"/>
             <widget render="Label" source="currentTemp" position="90,95" zPosition="1" size="100,23" font="Regular;22" transparent="1"/>
-            <widget render="Label" source="feelsliketemp" position="90,120" zPosition="1" size="140,20" font="Regular;14" transparent="1"/>
+            <widget render="Label" source="feelsliketemp" position="90,120" zPosition="1" size="155,40" font="Regular;14" transparent="1"/>
             <widget render="Label" source="condition" position="270,95" zPosition="1" size="300,20" font="Regular;18" transparent="1"/>
             <widget render="Label" source="wind_condition" position="270,115" zPosition="1" size="300,20" font="Regular;18" transparent="1"/>
             <widget render="Label" source="humidity" position="270,135" zPosition="1" size="300,20" font="Regular;18" valign="bottom" transparent="1"/>
@@ -113,7 +112,6 @@ class MSNWeatherPlugin(Screen):
         self["observationtime"] = StaticText()
         self["observationpoint"] = StaticText()
         self["feelsliketemp"] = StaticText()
-
         i = 1
         while i <= 5:
             self["weekday%s" % i] = StaticText()
@@ -165,7 +163,7 @@ class MSNWeatherPlugin(Screen):
             self.setItem()
 
     def setItem(self):
-        self.weatherPluginEntry = config.plugins.WeatherPlugin.Entry[self.weatherPluginEntryIndex-1]
+        self.weatherPluginEntry = config.plugins.WeatherPlugin.Entry[self.weatherPluginEntryIndex - 1]
         self.clearFields()
         self.startRun()
 
@@ -202,7 +200,7 @@ class MSNWeatherPlugin(Screen):
         else:
             self["caption"].text = self.weatherData.city
             self.webSite = self.weatherData.url
-            for weatherData in self.weatherData.weatherItems.items():
+            for weatherData in list(self.weatherData.weatherItems.items()):
                 item = weatherData[1]
                 if weatherData[0] == "-1":  # current
                     self["currentTemp"].text = "%s°%s" % (item.temperature, self.weatherData.degreetype)

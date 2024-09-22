@@ -107,27 +107,27 @@ def quoteEventName(eventName):
 
 
 REGEX = re.compile(
-    r'([\(\[]).*?([\)\]])|'
-    r'(: odc.\d+)|'
-    r'(\d+: odc.\d+)|'
-    r'(\d+ odc.\d+)|(:)|'
-    r'( -(.*?).*)|(,)|'
-    r'!|'
-    r'/.*|'
-    r'\|\s[0-9]+\+|'
-    r'[0-9]+\+|'
-    r'\s\*\d{4}\Z|'
-    r'([\(\[\|].*?[\)\]\|])|'
-    r'(\"|\"\.|\"\,|\.)\s.+|'
-    r'\"|:|'
-    r'Премьера\.\s|'
-    r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
-    r'(х|Х|м|М|т|Т|д|Д)/с\s|'
-    r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
-    r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-    r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-    r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
-    r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+    r'[\(\[].*?[\)\]]|'                    # Parentesi tonde o quadre
+    r':?\s?odc\.\d+|'                      # odc. con o senza numero prima
+    r'\d+\s?:?\s?odc\.\d+|'                # numero con odc.
+    r'[:!]|'                               # due punti o punto esclamativo
+    r'\s-\s.*|'                            # trattino con testo successivo
+    r',|'                                  # virgola
+    r'/.*|'                                # tutto dopo uno slash
+    r'\|\s?\d+\+|'                         # | seguito da numero e +
+    r'\d+\+|'                              # numero seguito da +
+    r'\s\*\d{4}\Z|'                        # * seguito da un anno a 4 cifre
+    r'[\(\[\|].*?[\)\]\|]|'                # Parentesi tonde, quadre o pipe
+    r'(?:\"[\.|\,]?\s.*|\"|'               # Testo tra virgolette
+    r'\.\s.+)|'                            # Punto seguito da testo
+    r'Премьера\.\s|'                       # Specifico per il russo
+    r'[хмтдХМТД]/[фс]\s|'                  # Pattern per il russo con /ф o /с
+    r'\s[сС](?:езон|ерия|-н|-я)\s.*|'      # Stagione o episodio in russo
+    r'\s\d{1,3}\s[чсЧС]\.?\s.*|'           # numero di parte/episodio in russo
+    r'\.\s\d{1,3}\s[чсЧС]\.?\s.*|'         # numero di parte/episodio in russo con punto
+    r'\s[чсЧС]\.?\s\d{1,3}.*|'             # Parte/Episodio in russo
+    r'\d{1,3}-(?:я|й)\s?с-н.*',            # Finale con numero e suffisso russo
+    re.DOTALL)
 
 
 def intCheck():
@@ -145,14 +145,16 @@ def intCheck():
 
 
 def remove_accents(string):
-    if type(string) is not unicode:
-        string = unicode(string, encoding='utf-8')
-    string = re.sub(u"[àáâãäå]", 'a', string)
-    string = re.sub(u"[èéêë]", 'e', string)
-    string = re.sub(u"[ìíîï]", 'i', string)
-    string = re.sub(u"[òóôõö]", 'o', string)
-    string = re.sub(u"[ùúûü]", 'u', string)
-    string = re.sub(u"[ýÿ]", 'y', string)
+    import unicodedata
+    if PY3 is False:
+        if type(string) is not unicode:
+            string = unicode(string, encoding='utf-8')
+    # Normalizza la stringa usando Unicode NFD (Normalization Form D)
+                                               
+    string = unicodedata.normalize('NFD', string)
+    # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
+                                               
+    string = re.sub(r'[\u0300-\u036f]', '', string)
     return string
 
 
@@ -178,6 +180,10 @@ def cutName(eventName=""):
         eventName = eventName.replace('(18+)', '').replace('18+', '').replace('(16+)', '').replace('16+', '').replace('(12+)', '')
         eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
         eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
+        eventName = eventName.replace('episode', '')
+        eventName = eventName.replace('مسلسل', '')
+        eventName = eventName.replace('فيلم وثائقى', '')
+        eventName = eventName.replace('حفل', '')
         return eventName
     return ""
 
@@ -215,10 +221,10 @@ def convtext(text=''):
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             text = text.replace('live:', '').replace(' - prima tv', '')
-            # for oldem
-            text = re.sub(r'\d+\s*ح', '', text)
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
+            if 'bruno barbieri' in text:
+                text = text.replace('bruno barbieri', 'brunobarbierix')
             if "anni '60" in text:
                 text = "anni 60"
             if 'tg regione' in text:
@@ -245,24 +251,6 @@ def convtext(text=''):
                 text = 'la7'
             if 'skytg24' in text:
                 text = 'skytg24'
-            text = text + 'FIN'
-            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
-            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
-            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
-            text = re.sub(r'(\d+)+.*?FIN', '', text)
-            text = text.partition("(")[0] + 'FIN'
-            text = re.sub("\\s\d+", "", text)
-            text = text.partition("(")[0]
-            text = text.partition(":")[0]
-            text = text.partition(" -")[0]
-            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
-            text = re.sub('FIN', '', text)
-            text = re.sub(r'^\|[\w\-\|]*\|', '', text)
-            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            '''
             # remove xx: at start
             text = re.sub(r'^\w{2}:', '', text)
             # remove xx|xx at start
@@ -278,6 +266,12 @@ def convtext(text=''):
             text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)
             # remove all content between and including [] multiple times
             text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)
+            # remove episode number in arabic series
+            text = re.sub(r' +ح', '', text)
+            # remove season number in arabic series
+            text = re.sub(r' +ج', '', text)
+            # remove season number in arabic series
+            text = re.sub(r' +م', '', text)
             # List of bad strings to remove
             bad_strings = [
 
@@ -309,11 +303,31 @@ def convtext(text=''):
             text = bad_suffix_pattern.sub('', text)
             # Replace ".", "_", "'" with " "
             text = re.sub(r'[._\']', ' ', text)
-            # Replace "-" with space and strip trailing spaces
-            text = text.strip(' -')
+            # recoded lulu
+            text = text + 'FIN'
             '''
-            text = text.replace('XXXXXX', '60')
+            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
+            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
+            '''
+            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+            text = re.sub(r'(\d+)+.*?FIN', '', text)
+            text = text.partition("(")[0] + 'FIN'
+            text = re.sub(r"\\s\d+", "", text)
+            text = text.partition("(")[0]
+            # text = text.partition(":")[0]  # not work on csi: new york (only-->  csi)
+            text = text.partition(" -")[0]
+            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
+            text = re.sub('FIN', '', text)
+            text = re.sub(r'^\|[\w\-\|]*\|', '', text)
+            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            # recoded  end
             text = text.strip(' -')
+            # forced
+            text = text.replace('XXXXXX', '60')
+            text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
             text = quote(text, safe="")
             print('text safe: ', text)
             # print('Final text: ', text)
