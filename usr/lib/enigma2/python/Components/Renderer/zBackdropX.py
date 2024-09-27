@@ -101,6 +101,8 @@ def isMountedInRW(path):
         return True
     return False
 
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+noposter = "/usr/share/enigma2/%s/icons/no_poster.jpg" % cur_skin
 
 path_folder = "/tmp/backdrop"
 if os.path.exists("/media/hdd"):
@@ -298,11 +300,22 @@ def dataenc(data):
 
 def convtext(text=''):
     try:
-        if text != '' or text is not None or text != 'None':
+        if text is None:
+            print('return None original text: ', type(text))
+            return  # Esci dalla funzione se text è None
+        if text == '':
+            print('text is an empty string')
+        else:
+            print('original text: ', text)
+            text = text.lower()
+            print('lowercased text: ', text)
+
+            # if text != '' or text != None or text != 'None':
             print('original text: ', text)
             text = text.lower()
             text = remove_accents(text)
             print('remove_accents text: ', text)
+
             # #
             text = cutName(text)
             text = getCleanTitle(text)
@@ -316,7 +329,7 @@ def convtext(text=''):
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
             if 'bruno barbieri' in text:
-                text = text.replace('bruno barbieri', 'brunobarbierix') 
+                text = text.replace('bruno barbieri', 'brunobarbierix')
             if "anni '60" in text:
                 text = "anni 60"
             if 'tg regione' in text:
@@ -394,7 +407,6 @@ def convtext(text=''):
             text = bad_suffix_pattern.sub('', text)
             # Replace ".", "_", "'" with " "
             text = re.sub(r'[._\']', ' ', text)
-
             # recoded lulu
             text = text + 'FIN'
             '''
@@ -422,9 +434,6 @@ def convtext(text=''):
             text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
             text = quote(text, safe="")
             print('text safe: ', text)
-            # print('Final text: ', text)
-        else:
-            text = text
         return unquote(text).capitalize()
     except Exception as e:
         print('convtext error: ', e)
@@ -448,7 +457,7 @@ class BackdropDB(zBackdropXDownloadThread):
             canal = pdb.get()
             self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
             self.pstcanal = convtext(canal[5])
-            if self.pstcanal and self.pstcanal != 'None' or self.pstcanal is not None:
+            if self.pstcanal != 'None' or self.pstcanal is not None:
                 dwn_backdrop = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_backdrop):
                     os.utime(dwn_backdrop, (time.time(), time.time()))
@@ -522,10 +531,11 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[4] = evt[6]
                             canal[5] = canal[2]
                             self.pstcanal = convtext(canal[5])
-                            pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
-                            self.pstcanal = str(pstrNm)
+                            # if self.pstcanal is not None:
+                            self.pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
+                            self.pstcanal = str(self.pstrNm)
                             dwn_backdrop = self.pstcanal
-                            if os.path.exists(dwn_backdrop):
+                            if os.path.join(path_folder, dwn_backdrop):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_backdrop):
@@ -686,8 +696,9 @@ class zBackdropX(Renderer):
                 self.oldCanal = curCanal
                 self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 self.pstcanal = convtext(self.canal[5])
-                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.backrNm = str(self.backrNm)
+                if self.pstcanal is not None:
+                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.backrNm = str(self.backrNm)
                 if os.path.exists(self.backrNm):
                     self.timer.start(10, True)
                 else:
@@ -706,8 +717,9 @@ class zBackdropX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
                 self.pstcanal = convtext(self.canal[5])
-                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.backrNm = str(self.backrNm)
+                if self.pstcanal is not None:
+                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.backrNm = str(self.backrNm)
             if os.path.exists(self.backrNm):
                 self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
                 self.instance.setPixmap(loadJPG(self.backrNm))
@@ -720,8 +732,9 @@ class zBackdropX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.backrNm):
                 self.pstcanal = convtext(self.canal[5])
-                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.backrNm = str(self.backrNm)
+                if self.pstcanal is not None:
+                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.backrNm = str(self.backrNm)
             loop = 180
             found = None
             self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))

@@ -105,6 +105,9 @@ def isMountedInRW(path):
     return False
 
 
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+noposter = "/usr/share/enigma2/%s/menu/nocover.jpg" % cur_skin
+
 path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if isMountedInRW("/media/hdd"):
@@ -303,11 +306,18 @@ def dataenc(data):
 
 def convtext(text=''):
     try:
-        if text != '' or text is not None or text != 'None':
+        if text is None:
+            print('return None original text: ', type(text))
+            return  # Esci dalla funzione se text è None
+        if text == '':
+            print('text is an empty string')
+        else:
             print('original text: ', text)
             text = text.lower()
+            print('lowercased text: ', text)
             text = remove_accents(text)
             print('remove_accents text: ', text)
+
             # #
             text = cutName(text)
             text = getCleanTitle(text)
@@ -371,7 +381,6 @@ def convtext(text=''):
             text = re.sub(r' +م', '', text)
             # List of bad strings to remove
             bad_strings = [
-
                 "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
                 "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
                 "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
@@ -427,9 +436,6 @@ def convtext(text=''):
             text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
             text = quote(text, safe="")
             print('text safe: ', text)
-            # print('Final text: ', text)
-        else:
-            text = text
         return unquote(text).capitalize()
     except Exception as e:
         print('convtext error: ', e)
@@ -527,6 +533,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                             canal[4] = evt[6]
                             canal[5] = canal[2]
                             self.pstcanal = convtext(canal[5])
+                            # if self.pstcanal is not None:
                             self.pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
                             self.pstcanal = str(self.pstrNm)
                             dwn_poster = self.pstcanal
@@ -691,8 +698,9 @@ class zPosterX(Renderer):
                 self.oldCanal = curCanal
                 self.logPoster("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 self.pstcanal = convtext(self.canal[5])
-                self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.pstcanal = str(self.pstrNm)
+                if self.pstcanal is not None:
+                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstrNm)
                 if os.path.exists(self.pstcanal):
                     self.timer.start(10, True)
                 else:
@@ -711,9 +719,16 @@ class zPosterX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
-                self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.pstcanal = str(self.pstrNm)
-            if os.path.exists(self.pstcanal):
+                if self.pstcanal is not None:
+                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstrNm)
+                else:
+                    print('showPoster----')
+                    self.pstcanal = noposter
+            else:
+                print('showPoster----')
+                # self.pstcanal = noposter
+                # if os.path.exists(self.pstcanal):
                 self.logPoster("[LOAD : showPoster] {}".format(self.pstcanal))
                 self.instance.setPixmap(loadJPG(self.pstcanal))
                 self.instance.setScale(1)
@@ -725,8 +740,11 @@ class zPosterX(Renderer):
         if self.canal[5]:
             if not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
-                self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                self.pstcanal = str(self.pstrNm)
+                if self.pstcanal is not None:
+                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstrNm)
+                # else:
+                    # self.pstcanal = noposter
             loop = 180
             found = None
             self.logPoster("[LOOP: waitPoster] {}".format(self.pstcanal))
@@ -738,6 +756,7 @@ class zPosterX(Renderer):
                 loop = loop - 1
             if found:
                 self.timer.start(20, True)
+
 
     def logPoster(self, logmsg):
         try:
