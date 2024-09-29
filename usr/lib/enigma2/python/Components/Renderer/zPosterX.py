@@ -60,24 +60,28 @@ if sys.version_info[0] >= 3:
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
-    from urllib.parse import quote_plus, quote
+    from urllib.parse import quote_plus
 else:
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
-    from urllib import quote_plus, quote
+    from urllib import quote_plus
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
 
 
 try:
-    from urllib import unquote
+    from urllib import unquote, quote
 except ImportError:
-    from urllib.parse import unquote
+    from urllib.parse import unquote, quote
 
 
 epgcache = eEPGCache.getInstance()
+if PY3:
+    pdb = queue.LifoQueue()
+else:
+    pdb = Queue.LifoQueue()
 
 
 def isMountReadonly(mnt):
@@ -250,10 +254,8 @@ def remove_accents(string):
         if type(string) is not unicode:
             string = unicode(string, encoding='utf-8')
     # Normalizza la stringa usando Unicode NFD (Normalization Form D)
-                                               
     string = unicodedata.normalize('NFD', string)
     # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
-                                               
     string = re.sub(r'[\u0300-\u036f]', '', string)
     return string
 
@@ -442,16 +444,11 @@ def convtext(text=''):
         pass
 
 
-if PY3:
-    pdb = queue.LifoQueue()
-else:
-    pdb = Queue.LifoQueue()
-
-
 class PosterDB(zPosterXDownloadThread):
     def __init__(self):
         zPosterXDownloadThread.__init__(self)
         self.logdbg = None
+        self.pstcanal = None
 
     def run(self):
         self.logDB("[QUEUE] : Initialized")
@@ -459,7 +456,7 @@ class PosterDB(zPosterXDownloadThread):
             canal = pdb.get()
             self.logDB("[QUEUE] : {} : {}-{} ({})".format(canal[0], canal[1], canal[2], canal[5]))
             self.pstcanal = convtext(canal[5])
-            if self.pstcanal and self.pstcanal != 'None' or self.pstcanal is not None:
+            if self.pstcanal != 'None' or self.pstcanal is not None:
                 dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
@@ -488,12 +485,13 @@ class PosterDB(zPosterXDownloadThread):
                 pdb.task_done()
 
     def logDB(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/PosterDB.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/PosterDB.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('logDB exceptions', str(e))
+            print('logDB error:', str(e))
+            traceback.print_exc()
 
 
 threadDB = PosterDB()
@@ -510,7 +508,7 @@ class PosterAutoDB(zPosterXDownloadThread):
         while True:
             time.sleep(7200)  # 7200 - Start every 2 hours
             self.logAutoDB("[AutoDB] *** Running ***")
-            self.pstcanal = ''
+            self.pstcanal = None
             # AUTO ADD NEW FILES - 1440 (24 hours ahead)
             for service in apdb.values():
                 try:
@@ -589,12 +587,13 @@ class PosterAutoDB(zPosterXDownloadThread):
             self.logAutoDB("[AutoDB] *** Stopping ***")
 
     def logAutoDB(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/PosterAutoDB.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/PosterAutoDB.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('error logAutoDB 2 ', e)
+            print('logAutoDB error', str(e))
+            traceback.print_exc()
 
 
 threadAutoDB = PosterAutoDB()
@@ -612,7 +611,7 @@ class zPosterX(Renderer):
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.logdbg = None
-        self.pstcanal = ''
+        self.pstcanal = None
         self.timer = eTimer()
         try:
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
@@ -717,7 +716,7 @@ class zPosterX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if not os.path.exists(self.pstcanal):
+            if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
                     self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
@@ -725,10 +724,8 @@ class zPosterX(Renderer):
                 else:
                     print('showPoster----')
                     self.pstcanal = noposter
-            else:
+            if os.path.exists(self.pstcanal):
                 print('showPoster----')
-                # self.pstcanal = noposter
-                # if os.path.exists(self.pstcanal):
                 self.logPoster("[LOAD : showPoster] {}".format(self.pstcanal))
                 self.instance.setPixmap(loadJPG(self.pstcanal))
                 self.instance.setScale(1)
@@ -738,18 +735,16 @@ class zPosterX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if not os.path.exists(self.pstcanal):
+            if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
                     self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
                     self.pstcanal = str(self.pstrNm)
-                # else:
-                    # self.pstcanal = noposter
             loop = 180
             found = None
             self.logPoster("[LOOP: waitPoster] {}".format(self.pstcanal))
             while loop >= 0:
-                if os.path.exists(self.pstcanal):
+                if self.pstcanal is not None and os.path.exists(self.pstcanal):
                     loop = 0
                     found = True
                 time.sleep(0.5)
@@ -757,11 +752,11 @@ class zPosterX(Renderer):
             if found:
                 self.timer.start(20, True)
 
-
     def logPoster(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/zPosterx.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/logPosterXx.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('logPoster error', e)
+            print('logPoster error:', str(e))
+            traceback.print_exc()

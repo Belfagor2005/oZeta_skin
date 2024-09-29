@@ -57,24 +57,28 @@ if sys.version_info[0] >= 3:
     from _thread import start_new_thread
     from urllib.error import HTTPError, URLError
     from urllib.request import urlopen
-    from urllib.parse import quote_plus, quote
+    from urllib.parse import quote_plus
 else:
     import Queue
     from thread import start_new_thread
     from urllib2 import HTTPError, URLError
     from urllib2 import urlopen
-    from urllib import quote_plus, quote
+    from urllib import quote_plus
     from HTMLParser import HTMLParser
     html_parser = HTMLParser()
 
 
 try:
-    from urllib import unquote
+    from urllib import unquote, quote
 except ImportError:
-    from urllib.parse import unquote
+    from urllib.parse import unquote, quote
 
 
 epgcache = eEPGCache.getInstance()
+if PY3:
+    pdb = queue.LifoQueue()
+else:
+    pdb = Queue.LifoQueue()
 
 
 def isMountReadonly(mnt):
@@ -100,6 +104,7 @@ def isMountedInRW(path):
         os.system('rm -f ' + testfile)
         return True
     return False
+
 
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 noposter = "/usr/share/enigma2/%s/icons/no_poster.jpg" % cur_skin
@@ -309,10 +314,6 @@ def convtext(text=''):
             print('original text: ', text)
             text = text.lower()
             print('lowercased text: ', text)
-
-            # if text != '' or text != None or text != 'None':
-            print('original text: ', text)
-            text = text.lower()
             text = remove_accents(text)
             print('remove_accents text: ', text)
 
@@ -440,16 +441,11 @@ def convtext(text=''):
         pass
 
 
-if PY3:
-    pdb = queue.LifoQueue()
-else:
-    pdb = Queue.LifoQueue()
-
-
 class BackdropDB(zBackdropXDownloadThread):
     def __init__(self):
         zBackdropXDownloadThread.__init__(self)
         self.logdbg = None
+        self.pstcanal = None
 
     def run(self):
         self.logDB("[QUEUE] : Initialized")
@@ -486,12 +482,13 @@ class BackdropDB(zBackdropXDownloadThread):
                 pdb.task_done()
 
     def logDB(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/BackdropDB.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/BackdropDB.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('logDB exceptions', str(e))
+            print('logDB error:', str(e))
+            traceback.print_exc()
 
 
 threadDB = BackdropDB()
@@ -508,7 +505,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
         while True:
             time.sleep(7200)  # 7200 - Start every 2 hours
             self.logAutoDB("[AutoDB] *** Running ***")
-            self.pstcanal = ''
+            self.pstcanal = None
             # AUTO ADD NEW FILES - 1440 (24 hours ahead)
             for service in apdb.values():
                 try:
@@ -587,12 +584,13 @@ class BackdropAutoDB(zBackdropXDownloadThread):
             self.logAutoDB("[AutoDB] *** Stopping ***")
 
     def logAutoDB(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/BackdropAutoDB.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/BackdropAutoDb.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('error logAutoDB 2 ', e)
+            print('logBackdrop error', str(e))
+            traceback.print_exc()
 
 
 threadAutoDB = BackdropAutoDB()
@@ -610,7 +608,7 @@ class zBackdropX(Renderer):
         self.canal = [None, None, None, None, None, None]
         self.oldCanal = None
         self.logdbg = None
-        self.pstcanal = ''
+        self.pstcanal = None
         self.timer = eTimer()
         try:
             self.timer_conn = self.timer.timeout.connect(self.showBackdrop)
@@ -715,7 +713,7 @@ class zBackdropX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if not os.path.exists(self.backrNm):
+            if self.backrNm is not None and not os.path.exists(self.backrNm):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
                     self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
@@ -730,7 +728,7 @@ class zBackdropX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if not os.path.exists(self.backrNm):
+            if self.backrNm is not None and not os.path.exists(self.backrNm):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
                     self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
@@ -739,7 +737,7 @@ class zBackdropX(Renderer):
             found = None
             self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))
             while loop >= 0:
-                if os.path.exists(self.backrNm):
+                if self.backrNm is not None and os.path.exists(self.backrNm):
                     loop = 0
                     found = True
                 time.sleep(0.5)
@@ -748,9 +746,10 @@ class zBackdropX(Renderer):
                 self.timer.start(20, True)
 
     def logBackdrop(self, logmsg):
+        import traceback
         try:
-            w = open("/tmp/zBackdropX.log", "a+")
-            w.write("%s\n" % logmsg)
-            w.close()
+            with open("/tmp/logBackdrop.log", "a") as w:
+                w.write("%s\n" % logmsg)
         except Exception as e:
-            print('logBackdrop error', e)
+            print('logBackdrop error', str(e))
+            traceback.print_exc()
