@@ -119,6 +119,8 @@ if os.path.exists("/media/usb"):
 if os.path.exists("/media/mmc"):
     if isMountedInRW("/media/mmc"):
         path_folder = "/media/mmc/backdrop"
+# else:
+    # path_folder = "/tmp/backdrop"
 if not os.path.exists(path_folder):
     os.makedirs(path_folder)
 
@@ -306,139 +308,102 @@ def dataenc(data):
 def convtext(text=''):
     try:
         if text is None:
-            print('return None original text: ', type(text))
+            print('return None original text:', type(text))
             return  # Esci dalla funzione se text è None
         if text == '':
             print('text is an empty string')
         else:
-            print('original text: ', text)
+            # print('original text:', text)
+            # Converti tutto in minuscolo
             text = text.lower()
-            print('lowercased text: ', text)
+            # print('lowercased text:', text)
+            # Rimuovi accenti
             text = remove_accents(text)
-            print('remove_accents text: ', text)
-
-            # #
+            # print('remove_accents text:', text)
+            # Applica le funzioni di taglio e pulizia del titolo
             text = cutName(text)
             text = getCleanTitle(text)
-            # #
+            # Regola il titolo se finisce con "the"
             if text.endswith("the"):
                 text = "the " + text[:-4]
-            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            # Sostituisci caratteri speciali con stringhe vuote
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             text = text.replace('live:', '').replace(' - prima tv', '')
-            if 'giochi olimpici parigi' in text:
-                text = 'olimpiadi di parigi'
-            if 'bruno barbieri' in text:
-                text = text.replace('bruno barbieri', 'brunobarbierix')
-            if "anni '60" in text:
-                text = "anni 60"
-            if 'tg regione' in text:
-                text = 'tg3'
-            if 'studio aperto' in text:
-                text = 'studio aperto'
-            if 'josephine ange gardien' in text:
-                text = 'josephine ange gardien'
-            if 'elementary' in text:
-                text = 'elementary'
-            if 'squadra speciale cobra 11' in text:
-                text = 'squadra speciale cobra 11'
-            if 'criminal minds' in text:
-                text = 'criminal minds'
-            if 'i delitti del barlume' in text:
-                text = 'i delitti del barlume'
-            if 'senza traccia' in text:
-                text = 'senza traccia'
-            if 'hudson e rex' in text:
-                text = 'hudson e rex'
-            if 'ben-hur' in text:
-                text = 'ben-hur'
-            if 'la7' in text:
-                text = 'la7'
-            if 'skytg24' in text:
-                text = 'skytg24'
-            # remove xx: at start
-            text = re.sub(r'^\w{2}:', '', text)
-            # remove xx|xx at start
-            text = re.sub(r'^\w{2}\|\w{2}\s', '', text)
-            # remove xx - at start
-            text = re.sub(r'^.{2}\+? ?- ?', '', text)
-            # remove all leading content between and including ||
-            text = re.sub(r'^\|\|.*?\|\|', '', text)
-            text = re.sub(r'^\|.*?\|', '', text)
-            # remove everything left between pipes.
-            text = re.sub(r'\|.*?\|', '', text)
-            # remove all content between and including () multiple times
-            text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)
-            # remove all content between and including [] multiple times
-            text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)
-            # remove episode number in arabic series
-            text = re.sub(r' +ح', '', text)
-            # remove season number in arabic series
-            text = re.sub(r' +ج', '', text)
-            # remove season number in arabic series
-            text = re.sub(r' +م', '', text)
-            # List of bad strings to remove
+
+            # Gestione casi specifici
+            replacements = {
+                'giochi olimpici parigi': 'olimpiadi di parigi',
+                'bruno barbieri': 'brunobarbierix',
+                "anni '60": 'anni 60',
+                'tg regione': 'tg3',
+                'studio aperto': 'studio aperto',
+                'josephine ange gardien': 'josephine ange gardien',
+                'elementary': 'elementary',
+                'squadra speciale cobra 11': 'squadra speciale cobra 11',
+                'criminal minds': 'criminal minds',
+                'i delitti del barlume': 'i delitti del barlume',
+                'senza traccia': 'senza traccia',
+                'hudson e rex': 'hudson e rex',
+                'ben-hur': 'ben-hur',
+                'la7': 'la7',
+                'skytg24': 'skytg24'
+            }
+            for key, value in replacements.items():
+                if key in text:
+                    text = text.replace(key, value)
+            # Rimozione pattern specifici
+            text = re.sub(r'^\w{2}:', '', text)  # Rimuove "xx:" all'inizio
+
+            text = re.sub(r'^\w{2}\|\w{2}\s', '', text)  # Rimuove "xx|xx" all'inizio
+
+            text = re.sub(r'^.{2}\+? ?- ?', '', text)  # Rimuove "xx -" all'inizio
+
+            text = re.sub(r'^\|\|.*?\|\|', '', text)  # Rimuove contenuti tra "||"
+            text = re.sub(r'^\|.*?\|', '', text)  # Rimuove contenuti tra "|"
+
+            text = re.sub(r'\|.*?\|', '', text)  # Rimuove qualsiasi altro contenuto tra "|"
+
+            text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)  # Rimuove contenuti tra "()"
+
+            text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)  # Rimuove contenuti tra "[]"
+            text = re.sub(r' +ح| +ج| +م', '', text)  # Rimuove numeri di episodi/serie in arabo
+            # Rimozione di stringhe non valide
             bad_strings = [
                 "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
                 "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
                 "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
                 "uk|", "us|", "yu|",
-                "1080p", "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
-                "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
-                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "(", ")", "-", "[]", "/",
-                "4k", "720p", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
-                "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
+                "1080p", "4k", "720p", "hdrip", "hindi", "imdb", "vod", "x264"
             ]
-
-            # Remove numbers from 1900 to 2030
-            bad_strings.extend(map(str, range(1900, 2030)))
-            # Construct a regex pattern to match any of the bad strings
+            bad_strings.extend(map(str, range(1900, 2030)))  # Anni da 1900 a 2030
             bad_strings_pattern = re.compile('|'.join(map(re.escape, bad_strings)))
-            # Remove bad strings using regex pattern
             text = bad_strings_pattern.sub('', text)
-            # List of bad suffixes to remove
+            # Rimozione suffissi non validi
             bad_suffix = [
                 " al", " ar", " ba", " da", " de", " en", " es", " eu", " ex-yu", " fi", " fr", " gr", " hr", " mk",
                 " nl", " no", " pl", " pt", " ro", " rs", " ru", " si", " swe", " sw", " tr", " uk", " yu"
             ]
-            # Construct a regex pattern to match any of the bad suffixes at the end of the string
             bad_suffix_pattern = re.compile(r'(' + '|'.join(map(re.escape, bad_suffix)) + r')$')
-            # Remove bad suffixes using regex pattern
             text = bad_suffix_pattern.sub('', text)
-            # Replace ".", "_", "'" with " "
+            # Rimuovi "." "_" "'" e sostituiscili con spazi
             text = re.sub(r'[._\']', ' ', text)
-            # recoded lulu
-            text = text + 'FIN'
-            '''
-            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
-            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            '''
-            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
-            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
-            text = re.sub(r'(\d+)+.*?FIN', '', text)
-            text = text.partition("(")[0] + 'FIN'
-            text = re.sub(r"\\s\d+", "", text)
-            text = text.partition("(")[0]
-            # text = text.partition(":")[0]  # not work on csi: new york (only-->  csi)
-            text = text.partition(" -")[0]
-            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
-            text = re.sub('FIN', '', text)
-            text = re.sub(r'^\|[\w\-\|]*\|', '', text)
-            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            # recoded  end
+            # Rimuove tutto dopo i ":" (incluso ":")
+            text = re.sub(r':.*$', '', text)
+            # Pulizia finale
+            text = text.partition("(")[0]  # Rimuove contenuti dopo "("
+            text = text.partition(" -")[0]  # Rimuove contenuti dopo "-"
             text = text.strip(' -')
-            # forced
+            # Modifiche forzate
             text = text.replace('XXXXXX', '60')
             text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
             text = quote(text, safe="")
-            print('text safe: ', text)
+            print('text safe:', text)
         return unquote(text).capitalize()
     except Exception as e:
-        print('convtext error: ', e)
-        pass
+        print('convtext error:', e)
+        return None
 
 
 class BackdropDB(zBackdropXDownloadThread):
@@ -457,6 +422,7 @@ class BackdropDB(zBackdropXDownloadThread):
                 dwn_backdrop = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_backdrop):
                     os.utime(dwn_backdrop, (time.time(), time.time()))
+                '''
                 # if lng == "fr":
                     # if not os.path.exists(dwn_backdrop):
                         # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
@@ -464,6 +430,7 @@ class BackdropDB(zBackdropXDownloadThread):
                     # if not os.path.exists(dwn_backdrop):
                         # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
                         # self.logDB(log)
+                '''
                 if not os.path.exists(dwn_backdrop):
                     val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
@@ -528,12 +495,12 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[4] = evt[6]
                             canal[5] = canal[2]
                             self.pstcanal = convtext(canal[5])
-                            # if self.pstcanal is not None:
                             self.pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
                             self.pstcanal = str(self.pstrNm)
                             dwn_backdrop = self.pstcanal
                             if os.path.join(path_folder, dwn_backdrop):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
+                            '''
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_backdrop):
                                     # val, log = self.search_molotov_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
@@ -543,6 +510,7 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                                     # val, log = self.search_programmetv_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
+                            '''
                             if not os.path.exists(dwn_backdrop):
                                 val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -614,7 +582,7 @@ class zBackdropX(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showBackdrop)
         except:
             self.timer.callback.append(self.showBackdrop)
-        self.timer.start(10, True)
+        # self.timer.start(10, True)
 
     def applySkin(self, desktop, parent):
         attribs = []
