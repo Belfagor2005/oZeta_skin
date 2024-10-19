@@ -92,7 +92,6 @@ def isMountedInRW(path):
 
 
 path_folder = "/tmp/poster"
-path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if isMountedInRW("/media/hdd"):
         path_folder = "/media/hdd/poster"
@@ -109,22 +108,24 @@ if not os.path.exists(path_folder):
 
 try:
     if my_cur_skin is False:
-        myz_skin = "/usr/share/enigma2/%s/apikey" % cur_skin
-        omdb_skin = "/usr/share/enigma2/%s/omdbkey" % cur_skin
-        thetvdb_skin = "/usr/share/enigma2/%s/thetvdbkey" % (cur_skin)
-        if os.path.exists(myz_skin):
-            with open(myz_skin, "r") as f:
-                tmdb_api = f.read()
-            my_cur_skin = True
-        if os.path.exists(omdb_skin):
-            with open(omdb_skin, "r") as f:
-                omdb_api = f.read()
-            my_cur_skin = True
-        if os.path.exists(thetvdb_skin):
-            with open(thetvdb_skin, "r") as f:
-                thetvdbkey = f.read()
-            my_cur_skin = True
-except:
+        skin_paths = {
+            "tmdb_api": "/usr/share/enigma2/{}/apikey".format(cur_skin),
+            "omdb_api": "/usr/share/enigma2/{}/omdbkey".format(cur_skin),
+            "thetvdbkey": "/usr/share/enigma2/{}/thetvdbkey".format(cur_skin)
+        }
+        for key, path in skin_paths.items():
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    value = f.read().strip()
+                    if key == "tmdb_api":
+                        tmdb_api = value
+                    elif key == "omdb_api":
+                        omdb_api = value
+                    elif key == "thetvdbkey":
+                        thetvdbkey = value
+                my_cur_skin = True
+except Exception as e:
+    print("Errore nel caricamento delle API:", str(e))
     my_cur_skin = False
 
 
@@ -185,15 +186,11 @@ def intCheck():
 
 
 def remove_accents(string):
-    import unicodedata
+    from unicodedata import normalize
     if PY3 is False:
         if type(string) is not unicode:
             string = unicode(string, encoding='utf-8')
-    # Normalizza la stringa usando Unicode NFD (Normalization Form D)
-                                               
-    string = unicodedata.normalize('NFD', string)
-    # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
-                                               
+    string = normalize('NFD', string)
     string = re.sub(r'[\u0300-\u036f]', '', string)
     return string
 
@@ -405,66 +402,37 @@ class zInfoEvents(Renderer, VariableText):
     def showInfos(self):
         self.event = self.source.event
         if self.event and self.event != 'None' or self.event is not None:
-            # self.delay2()
             self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
             if not PY3:
                 self.evnt = self.evnt.encode('utf-8')
             self.evntNm = convtext(self.evnt)
             self.infos_file = "{}/{}".format(path_folder, self.evntNm)
+            self.text = ''
             if not os.path.exists(self.infos_file):
                 self.downloadInfos()
             if os.path.exists(self.infos_file):
                 try:
-                    with open(self.infos_file) as f:
+                    with open(self.infos_file, 'r') as f:
                         data = json.load(f)
-                        Title = ''
-                        imdbRating = ''
-                        Country = ''
-                        Year = ''
-                        Rated = ''
-                        Genre = ''
-                        Awards = ''
-                        Director = ''
-                        Writer = ''
-                        Actors = ''
-                        if 'Title' in data:
-                            Title = data["Title"]
-                        if 'imdbrating' in data:
-                            imdbRating = data["imdbRating"]
-                        if 'country' in data:
-                            Country = data["Country"]
-                        if 'year' in data:
-                            Year = data["Year"]
-                        if 'rated' in data:
-                            Rated = data["Rated"]
-                        if 'genre' in data:
-                            Genre = data["Genre"]
-                        if 'awards' in data:
-                            Awards = data["Awards"]
-                        if 'director' in data:
-                            Director = data["Director"]
-                        if 'writer' in data:
-                            Writer = data["Writer"]
-                        if 'actors' in data:
-                            Actors = data["Actors"]
+                        Title = data.get("Title", "")
+                        imdbRating = data.get("imdbRating", "")
+                        Country = data.get("Country", "")
+                        Year = data.get("Year", "")
+                        Rated = data.get("Rated", "")
+                        Genre = data.get("Genre", "")
+                        Awards = data.get("Awards", "")
+                        Director = data.get("Director", "")
+                        Writer = data.get("Writer", "")
+                        Actors = data.get("Actors", "")
 
                         if Title and Title != "N/A":
-                            with open("/tmp/rating", "w") as f:
-                                f.write("%s\n%s" % (imdbRating, Rated))
-                            self.text = "Title: %s" % str(Title)
-                            self.text += "\nYear: %s" % str(Year)
-                            self.text += "\nCountry: %s" % str(Country)
-                            self.text += "\nGenre: %s" % str(Genre)
-                            self.text += "\nDirector: %s" % str(Director)
-                            self.text += "\nAwards: %s" % str(Awards)
-                            self.text += "\nWriter: %s" % str(Writer)
-                            self.text += "\nCast: %s" % str(Actors)
-                            self.text += "\nRated: %s" % str(Rated)
-                            self.text += "\nImdb: %s" % str(imdbRating)
-                            # print("text= ", self.text)
-                            if not PY3:
-                                self.text = self.text.encode('utf-8')
-                            self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year), str(Country), str(Genre), str(Director), str(Actors))
+                            with open("/tmp/rating", "w") as f_rating:
+                                f_rating.write("%s\n%s" % (imdbRating, Rated))
+                            self.text = "Title: %s\nYear: %s\nCountry: %s\nGenre: %s\nDirector: %s\nAwards: %s\nWriter: %s\nCast: %s\nRated: %s\nImdb: %s" % (
+                                str(Title), str(Year), str(Country), str(Genre), str(Director),
+                                str(Awards), str(Writer), str(Actors), str(Rated), str(imdbRating)
+                            )
+                            print("iInfoEvents self.text= ", self.text)
                             self.instance.show()
                         else:
                             if os.path.exists("/tmp/rating"):
@@ -474,61 +442,53 @@ class zInfoEvents(Renderer, VariableText):
                 except Exception as e:
                     print(e)
             else:
-                return ''
+                return self.text
 
     def downloadInfos(self):
         self.year = self.filterSearch()
         try:
+            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quoteEventName(self.evntNm))
+            if self.year:
+                url_tmdb += "&year={}".format(self.year)
+            print('downloadInfos url_tmdb=', url_tmdb)
             try:
-                # url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&include_adult=true&query={}".format(self.srch, tmdb_api, quote(self.evntNm))
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quoteEventName(self.evntNm))
-                if self.year is not None:
-                    url_tmdb += "&year={}".format(self.year)
-                if PY3:
-                    import six
-                    url_tmdb = six.ensure_str(url_tmdb)
+                response_tmdb = urlopen(url_tmdb)
+                data_tmdb = json.load(response_tmdb)
                 try:
-                    title = json.load(urlopen(url_tmdb))["results"][0]["title"]
-                except:
-                    title = json.load(urlopen(url_tmdb))["results"][0]["original_name"]
-                print('Title1: ', title)
-            # except:
-                # pass
-            # try:
-                url_omdb = "http://www.omdbapi.com/?tmdb_api={}&t={}".format(omdb_api, quoteEventName(title))
-                data_omdb = json.load(urlopen(url_omdb))
-                open(self.infos_file, "w").write(json.dumps(data_omdb))
-                OnclearMem()
-            except:
-                pass
+                    title = data_tmdb["results"][0]["title"]
+                except KeyError:
+                    title = data_tmdb["results"][0]["original_name"]
+                print('downloadInfos Title: ', title)
+                url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quoteEventName(title))
+                print('downloadInfos url_omdb=', url_omdb)
+                response_omdb = urlopen(url_omdb)
+                data_omdb = json.load(response_omdb)
+                with open(self.infos_file, "w") as f:
+                    f.write(json.dumps(data_omdb))
+            except Exception as e:
+                print("Errore durante il download delle informazioni: ", str(e))
+
         except Exception as e:
-            print('error ', str(e))
+            print("Errore generale: ", str(e))
 
     def filterSearch(self):
         try:
             self.srch = "multi"
             sd = "%s\n%s\n%s" % (self.event.getEventName(), self.event.getShortDescription(), self.event.getExtendedDescription())
-            w = ["t/s",
-                 "Т/s",
-                 "SM",
-                 "SM",
-                 "d/s",
-                 "D/s",
-                 "stagione",
-                 "Sig.",
-                 "episodio",
-                 "serie TV",
-                 "serie"]
-            for i in w:
-                if i in sd:
+            keywords = [
+                "t/s", "Т/s", "SM", "d/s", "D/s", "stagione",
+                "Sig.", "episodio", "serie TV", "serie"
+            ]
+            for keyword in keywords:
+                if keyword in sd:
                     self.srch = "tv"
                     break
-                else:
-                    self.srch = "multi"
-            yr = [_y for _y in re.findall(r'\d{4}', sd) if '1930' <= _y <= '%s' % gmtime().tm_year]
-            return '%s' % yr[-1] if yr else None
-        except:
-            pass
+            years = re.findall(r'\d{4}', sd)
+            valid_years = [_y for _y in years if '1930' <= _y <= str(gmtime().tm_year)]
+            return valid_years[-1] if valid_years else None
+        except Exception as e:
+            print("Errore in filterSearch:", str(e))
+            return False
 
     def epgs(self):
         try:

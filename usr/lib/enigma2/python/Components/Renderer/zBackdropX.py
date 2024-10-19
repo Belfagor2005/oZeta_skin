@@ -248,12 +248,12 @@ def intCheck():
 
 
 def remove_accents(string):
-    import unicodedata
+    from unicodedata import normalize
     if PY3 is False:
         if type(string) is not unicode:
             string = unicode(string, encoding='utf-8')
     # Normalizza la stringa usando Unicode NFD (Normalization Form D)
-    string = unicodedata.normalize('NFD', string)
+    string = normalize('NFD', string)
     # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
     string = re.sub(r'[\u0300-\u036f]', '', string)
     return string

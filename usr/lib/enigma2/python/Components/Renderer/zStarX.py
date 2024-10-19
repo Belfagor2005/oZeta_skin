@@ -111,22 +111,24 @@ if not os.path.exists(path_folder):
 
 try:
     if my_cur_skin is False:
-        myz_skin = "/usr/share/enigma2/%s/apikey" % cur_skin
-        omdb_skin = "/usr/share/enigma2/%s/omdbkey" % cur_skin
-        thetvdb_skin = "/usr/share/enigma2/%s/thetvdbkey" % (cur_skin)
-        if os.path.exists(myz_skin):
-            with open(myz_skin, "r") as f:
-                tmdb_api = f.read()
-            my_cur_skin = True
-        if os.path.exists(omdb_skin):
-            with open(omdb_skin, "r") as f:
-                omdb_api = f.read()
-            my_cur_skin = True
-        if os.path.exists(thetvdb_skin):
-            with open(thetvdb_skin, "r") as f:
-                thetvdbkey = f.read()
-            my_cur_skin = True
-except:
+        skin_paths = {
+            "tmdb_api": "/usr/share/enigma2/{}/apikey".format(cur_skin),
+            "omdb_api": "/usr/share/enigma2/{}/omdbkey".format(cur_skin),
+            "thetvdbkey": "/usr/share/enigma2/{}/thetvdbkey".format(cur_skin)
+        }
+        for key, path in skin_paths.items():
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    value = f.read().strip()
+                    if key == "tmdb_api":
+                        tmdb_api = value
+                    elif key == "omdb_api":
+                        omdb_api = value
+                    elif key == "thetvdbkey":
+                        thetvdbkey = value
+                my_cur_skin = True
+except Exception as e:
+    print("Errore nel caricamento delle API:", str(e))
     my_cur_skin = False
 
 
