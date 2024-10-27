@@ -10,6 +10,7 @@
 # recode from lululla 2023
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
+
 from Components.Sources.ServiceEvent import ServiceEvent
 from Components.config import config
 from enigma import (
@@ -20,7 +21,9 @@ import re
 import json
 import os
 import sys
+from six import text_type
 import socket
+
 
 PY3 = False
 if sys.version_info[0] >= 3:
@@ -29,18 +32,18 @@ if sys.version_info[0] >= 3:
     unichr = chr
     long = int
     from urllib.request import urlopen
-    from urllib.parse import quote, quote_plus
+    from urllib.parse import quote_plus
     from urllib.error import HTTPError, URLError
 else:
     from urllib2 import urlopen
-    from urllib import quote, quote_plus
+    from urllib import quote_plus
     from urllib2 import HTTPError, URLError
 
 
 try:
-    from urllib import unquote
+    from urllib import unquote, quote
 except ImportError:
-    from urllib.parse import unquote
+    from urllib.parse import unquote, quote
 
 
 curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -145,22 +148,20 @@ def intCheck():
 
 
 def remove_accents(string):
-    from unicodedata import normalize
-    if PY3 is False:
-        if type(string) is not unicode:
-            string = unicode(string, encoding='utf-8')
-    # Normalizza la stringa usando Unicode NFD (Normalization Form D)
-                                               
-    string = normalize('NFD', string)
-    # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
-                                               
-    string = re.sub(r'[\u0300-\u036f]', '', string)
+    if not isinstance(string, text_type):
+        string = text_type(string, 'utf-8')
+    string = re.sub(u"[àáâãäå]", 'a', string)
+    string = re.sub(u"[èéêë]", 'e', string)
+    string = re.sub(u"[ìíîï]", 'i', string)
+    string = re.sub(u"[òóôõö]", 'o', string)
+    string = re.sub(u"[ùúûü]", 'u', string)
+    string = re.sub(u"[ýÿ]", 'y', string)
     return string
 
 
 def unicodify(s, encoding='utf-8', norm=None):
-    if not isinstance(s, unicode):
-        s = unicode(s, encoding)
+    if not isinstance(s, text_type):
+        s = text_type(s, encoding)
     if norm:
         from unicodedata import normalize
         s = normalize(norm, s)
@@ -169,7 +170,7 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def str_encode(text, encoding="utf8"):
     if not PY3:
-        if isinstance(text, unicode):
+        if isinstance(text, text_type):
             return text.encode(encoding)
     return text
 
@@ -228,6 +229,7 @@ def convtext(text=''):
             text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
             text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
             text = text.replace('live:', '').replace(' - prima tv', '')
+
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
             if 'bruno barbieri' in text:
@@ -345,6 +347,7 @@ def convtext(text=''):
 class zGenre(Renderer):
 
     def __init__(self):
+
         Renderer.__init__(self)
 
     GUI_WIDGET = ePixmap

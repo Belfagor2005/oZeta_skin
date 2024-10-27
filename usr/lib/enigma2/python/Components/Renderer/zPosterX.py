@@ -32,9 +32,9 @@ from Components.Sources.CurrentService import CurrentService
 from Components.Sources.Event import Event
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.ServiceEvent import ServiceEvent
-
 from Components.config import config
 from ServiceReference import ServiceReference
+from six import text_type
 from enigma import (
     ePixmap,
     loadJPG,
@@ -235,6 +235,15 @@ REGEX = re.compile(
     re.DOTALL)
 
 
+def getCleanContentSearchTitle(event_title=""):
+    # to search for a title in the content-table by intern cleaned clean_search_title column
+    cleanEventname = re.sub(' I$', ' 1', event_title)
+    cleanEventname = re.sub(' II$', ' 2', cleanEventname)
+    cleanEventname = re.sub(' III$', ' 3', cleanEventname)
+    cleanEventname = cleanEventname.lower().replace(",", "").replace("ß", "ss").replace(" & ", " and ").replace("!", "").replace("-", "").replace(" und ", " and ").replace(".", "").replace("'", "").replace("?", "").replace(" ", "")
+    return cleanEventname
+
+
 def intCheck():
     try:
         response = urlopen("http://google.com", None, 5)
@@ -250,20 +259,20 @@ def intCheck():
 
 
 def remove_accents(string):
-    from unicodedata import normalize
-    if PY3 is False:
-        if type(string) is not unicode:
-            string = unicode(string, encoding='utf-8')
-    # Normalizza la stringa usando Unicode NFD (Normalization Form D)
-    string = normalize('NFD', string)
-    # Rimuove i segni diacritici (accents) lasciando solo i caratteri base
-    string = re.sub(r'[\u0300-\u036f]', '', string)
+    if not isinstance(string, text_type):
+        string = text_type(string, 'utf-8')
+    string = re.sub(u"[àáâãäå]", 'a', string)
+    string = re.sub(u"[èéêë]", 'e', string)
+    string = re.sub(u"[ìíîï]", 'i', string)
+    string = re.sub(u"[òóôõö]", 'o', string)
+    string = re.sub(u"[ùúûü]", 'u', string)
+    string = re.sub(u"[ýÿ]", 'y', string)
     return string
 
 
 def unicodify(s, encoding='utf-8', norm=None):
-    if not isinstance(s, unicode):
-        s = unicode(s, encoding)
+    if not isinstance(s, text_type):
+        s = text_type(s, encoding)
     if norm:
         from unicodedata import normalize
         s = normalize(norm, s)
@@ -272,7 +281,7 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def str_encode(text, encoding="utf8"):
     if not PY3:
-        if isinstance(text, unicode):
+        if isinstance(text, text_type):
             return text.encode(encoding)
     return text
 
@@ -284,7 +293,9 @@ def cutName(eventName=""):
         eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
         eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
         eventName = eventName.replace('episode', '')
+        eventName = eventName.replace('المسلسل العربي', '')
         eventName = eventName.replace('مسلسل', '')
+        eventName = eventName.replace('برنامج', '')
         eventName = eventName.replace('فيلم وثائقى', '')
         eventName = eventName.replace('حفل', '')
         return eventName
@@ -460,6 +471,7 @@ class PosterDB(zPosterXDownloadThread):
                 dwn_poster = path_folder + '/' + self.pstcanal + ".jpg"
                 if os.path.exists(dwn_poster):
                     os.utime(dwn_poster, (time.time(), time.time()))
+                '''
                 # if lng == "fr":
                     # if not os.path.exists(dwn_poster):
                         # val, log = self.search_molotov_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
@@ -467,6 +479,7 @@ class PosterDB(zPosterXDownloadThread):
                     # if not os.path.exists(dwn_poster):
                         # val, log = self.search_programmetv_google(dwn_poster, canal[5], canal[4], canal[3], canal[0])
                         # self.logDB(log)
+                '''
                 if not os.path.exists(dwn_poster):
                     val, log = self.search_tmdb(dwn_poster, self.pstcanal, canal[4], canal[3])
                     self.logDB(log)
@@ -531,12 +544,12 @@ class PosterAutoDB(zPosterXDownloadThread):
                             canal[4] = evt[6]
                             canal[5] = canal[2]
                             self.pstcanal = convtext(canal[5])
-                            # if self.pstcanal is not None:
-                            self.pstrNm = path_folder + '/' + self.pstcanal + ".jpg"
-                            self.pstcanal = str(self.pstrNm)
+                            self.pstcanal = path_folder + '/' + self.pstcanal + ".jpg"
+                            self.pstcanal = str(self.pstcanal)
                             dwn_poster = self.pstcanal
                             if os.path.join(path_folder, dwn_poster):
                                 os.utime(dwn_poster, (time.time(), time.time()))
+                            '''
                             # if lng == "fr":
                                 # if not os.path.exists(dwn_poster):
                                     # val, log = self.search_molotov_google(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
@@ -546,6 +559,7 @@ class PosterAutoDB(zPosterXDownloadThread):
                                     # val, log = self.search_programmetv_google(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
                                     # if val and log.find("SUCCESS"):
                                         # newfd += 1
+                            '''
                             if not os.path.exists(dwn_poster):
                                 val, log = self.search_tmdb(dwn_poster, self.pstcanal, canal[4], canal[3], canal[0])
                                 if val and log.find("SUCCESS"):
@@ -617,7 +631,7 @@ class zPosterX(Renderer):
             self.timer_conn = self.timer.timeout.connect(self.showPoster)
         except:
             self.timer.callback.append(self.showPoster)
-        self.timer.start(10, True)
+        # self.timer.start(10, True)
 
     def applySkin(self, desktop, parent):
         attribs = []
@@ -698,8 +712,8 @@ class zPosterX(Renderer):
                 self.logPoster("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
-                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.pstcanal = str(self.pstrNm)
+                    self.pstcanal = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstcanal)
                 if os.path.exists(self.pstcanal):
                     self.timer.start(10, True)
                 else:
@@ -719,11 +733,8 @@ class zPosterX(Renderer):
             if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
-                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.pstcanal = str(self.pstrNm)
-                else:
-                    print('showPoster----')
-                    self.pstcanal = noposter
+                    self.pstcanal = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstcanal)
             if os.path.exists(self.pstcanal):
                 print('showPoster----')
                 self.logPoster("[LOAD : showPoster] {}".format(self.pstcanal))
@@ -738,8 +749,8 @@ class zPosterX(Renderer):
             if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
-                    self.pstrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.pstcanal = str(self.pstrNm)
+                    self.pstcanal = self.path + '/' + str(self.pstcanal) + ".jpg"
+                    self.pstcanal = str(self.pstcanal)
             loop = 180
             found = None
             self.logPoster("[LOOP: waitPoster] {}".format(self.pstcanal))

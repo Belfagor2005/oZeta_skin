@@ -12,6 +12,7 @@ from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from Components.VariableText import VariableText
 from Components.config import config
+from six import text_type
 from enigma import (
     eLabel,
     eEPGCache,
@@ -31,10 +32,6 @@ global my_cur_skin, path_folder
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
-    unicode = str
-    unichr = chr
-    long = int
-    from urllib.parse import quote
     from urllib.parse import quote_plus
     from urllib.request import urlopen
     from _thread import start_new_thread
@@ -42,7 +39,6 @@ if sys.version_info[0] >= 3:
     import html
     html_parser = html
 else:
-    from urllib import quote
     from urllib import quote_plus
     from urllib2 import urlopen
     from thread import start_new_thread
@@ -52,9 +48,9 @@ else:
 
 
 try:
-    from urllib import unquote
+    from urllib import unquote, quote
 except ImportError:
-    from urllib.parse import unquote
+    from urllib.parse import unquote, quote
 
 
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
@@ -186,18 +182,20 @@ def intCheck():
 
 
 def remove_accents(string):
-    from unicodedata import normalize
-    if PY3 is False:
-        if type(string) is not unicode:
-            string = unicode(string, encoding='utf-8')
-    string = normalize('NFD', string)
-    string = re.sub(r'[\u0300-\u036f]', '', string)
+    if not isinstance(string, text_type):
+        string = text_type(string, 'utf-8')
+    string = re.sub(u"[àáâãäå]", 'a', string)
+    string = re.sub(u"[èéêë]", 'e', string)
+    string = re.sub(u"[ìíîï]", 'i', string)
+    string = re.sub(u"[òóôõö]", 'o', string)
+    string = re.sub(u"[ùúûü]", 'u', string)
+    string = re.sub(u"[ýÿ]", 'y', string)
     return string
 
 
 def unicodify(s, encoding='utf-8', norm=None):
-    if not isinstance(s, unicode):
-        s = unicode(s, encoding)
+    if not isinstance(s, text_type):
+        s = text_type(s, encoding)
     if norm:
         from unicodedata import normalize
         s = normalize(norm, s)
@@ -206,7 +204,7 @@ def unicodify(s, encoding='utf-8', norm=None):
 
 def str_encode(text, encoding="utf8"):
     if not PY3:
-        if isinstance(text, unicode):
+        if isinstance(text, text_type):
             return text.encode(encoding)
     return text
 
