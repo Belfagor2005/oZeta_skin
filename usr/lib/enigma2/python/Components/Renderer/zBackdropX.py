@@ -47,11 +47,11 @@ import socket
 import sys
 import time
 
+from re import search, sub, I, S, escape
 
 PY3 = False
 if sys.version_info[0] >= 3:
     PY3 = True
-    unicode = str
     import queue
     import html
     html_parser = html
@@ -233,15 +233,6 @@ REGEX = re.compile(
     re.DOTALL)
 
 
-def getCleanContentSearchTitle(event_title=""):
-    # to search for a title in the content-table by intern cleaned clean_search_title column
-    cleanEventname = re.sub(' I$', ' 1', event_title)
-    cleanEventname = re.sub(' II$', ' 2', cleanEventname)
-    cleanEventname = re.sub(' III$', ' 3', cleanEventname)
-    cleanEventname = cleanEventname.lower().replace(",", "").replace("ß", "ss").replace(" & ", " and ").replace("!", "").replace("-", "").replace(" und ", " and ").replace(".", "").replace("'", "").replace("?", "").replace(" ", "")
-    return cleanEventname
-
-
 def intCheck():
     try:
         response = urlopen("http://google.com", None, 5)
@@ -252,8 +243,7 @@ def intCheck():
         return False
     except socket.timeout:
         return False
-    else:
-        return True
+    return True
 
 
 def remove_accents(string):
@@ -286,7 +276,7 @@ def str_encode(text, encoding="utf8"):
 
 def cutName(eventName=""):
     if eventName:
-        eventName = eventName.replace('"', '').replace('Х/Ф', '').replace('М/Ф', '').replace('Х/ф', '').replace('.', '').replace(' | ', '')
+        eventName = eventName.replace('"', '').replace('.', '').replace(' | ', '')  # .replace('Х/Ф', '').replace('М/Ф', '').replace('Х/ф', '')
         eventName = eventName.replace('(18+)', '').replace('18+', '').replace('(16+)', '').replace('16+', '').replace('(12+)', '')
         eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
         eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
@@ -316,7 +306,97 @@ def dataenc(data):
     return data
 
 
+def sanitize_filename(filename):
+    # Replace spaces with underscores and remove invalid characters (like ':')
+    sanitized = re.sub(r'[^\w\s-]', '', filename)  # Remove invalid characters
+    # sanitized = sanitized.replace(' ', '_')      # Replace spaces with underscores
+    # sanitized = sanitized.replace('-', '_')      # Replace dashes with underscores
+    return sanitized.strip()
+
+
 def convtext(text=''):
+    text = text.lower()
+    print('text lower init=', text)
+    text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+    text = text.replace('1^ visione rai', '').replace('1^ visione', ''.replace(' - prima tv', '')).replace(' - primatv', '')
+    text = text.replace('prima visione', '').replace('1^tv', '').replace('1^ tv', '')
+    text = text.replace('((', '(').replace('))', ')')
+    # Inglese
+    text = text.replace('first screening', '').replace('premiere:', '').replace('live:', '').replace('new:', '')
+    # Francese
+    text = text.replace('première diffusion', '').replace('nouveau:', '').replace('en direct:', '')
+    # Spagnolo
+    text = text.replace('estreno:', '').replace('nueva emisión:', '').replace('en vivo:', '')
+
+    if 'bruno barbieri' in text:
+        text = text.replace('bruno barbieri', 'brunobarbierix')
+    if "anni '60" in text:
+        text = "anni 60"
+    if 'tg regione' in text:
+        text = 'tg3'
+    if 'studio aperto' in text:
+        text = 'studio aperto'
+    if 'josephine ange gardien' in text:
+        text = 'josephine ange gardien'
+    if 'elementary' in text:
+        text = 'elementary'
+    if 'squadra speciale cobra 11' in text:
+        text = 'squadra speciale cobra 11'
+    if 'criminal minds' in text:
+        text = 'criminal minds'
+    if 'i delitti del barlume' in text:
+        text = 'i delitti del barlume'
+    if 'senza traccia' in text:
+        text = 'senza traccia'
+    if 'hudson e rex' in text:
+        text = 'hudson e rex'
+    if 'ben-hur' in text:
+        text = 'ben-hur'
+    if 'la7 ' in text:
+        text = 'la7'
+    if 'skytg24' in text:
+        text = 'skytg24'
+
+    cutlist = ['x264', '720p', '1080p', '1080i', 'PAL', 'GERMAN', 'ENGLiSH', 'WS', 'DVDRiP', 'UNRATED', 'RETAIL', 'Web-DL', 'DL', 'LD', 'MiC', 'MD', 'DVDR', 'BDRiP', 'BLURAY', 'DTS', 'UNCUT', 'ANiME',
+               'AC3MD', 'AC3', 'AC3D', 'TS', 'DVDSCR', 'COMPLETE', 'INTERNAL', 'DTSD', 'XViD', 'DIVX', 'DUBBED', 'LINE.DUBBED', 'DD51', 'DVDR9', 'DVDR5', 'h264', 'AVC',
+               'WEBHDTVRiP', 'WEBHDRiP', 'WEBRiP', 'WEBHDTV', 'WebHD', 'HDTVRiP', 'HDRiP', 'HDTV', 'ITUNESHD', 'REPACK', 'SYNC']
+    text = text.replace('.wmv', '').replace('.flv', '').replace('.ts', '').replace('.m2ts', '').replace('.mkv', '').replace('.avi', '').replace('.mpeg', '').replace('.mpg', '').replace('.iso', '').replace('.mp4', '')
+
+    for word in cutlist:
+        text = sub(r'(\_|\-|\.|\+)' + escape(word.lower()) + r'(\_|\-|\.|\+)', '+', text, flags=I)
+    text = text.replace('.', ' ').replace('-', ' ').replace('_', ' ').replace('+', '').replace(" Director's Cut", "").replace(" director's cut", "").replace("[Uncut]", "").replace("Uncut", "")
+
+    text_split = text.split()
+    if text_split and text_split[0].lower() in ("new:", "live:"):
+        text_split.pop(0)  # remove annoying prefixes
+    text = " ".join(text_split)
+
+    if search(r'[Ss][0-9]+[Ee][0-9]+', text):
+        text = sub(r'[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+', '', text, flags=S | I)
+    text = sub(r'\(.*\)', '', text).rstrip()  # remove episode number from series, like "series name (234)"
+
+    text = remove_accents(text)
+    print('remove_accents text: ', text)
+
+    text = text + 'FIN'
+    text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+    text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+    text = re.sub(r'(\d+)+.*?FIN', '', text)
+    text = text.partition("(")[0] + 'FIN'
+    text = re.sub(r"\\s\d+", "", text)
+    text = re.sub('FIN', '', text)
+    text = sanitize_filename(text)
+
+    # forced
+    text = text.replace('XXXXXX', '60')
+    text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
+
+    text = quote(text, safe="")
+    print('text final: ', text)
+    return unquote(text).capitalize()
+
+
+def convtextPAUSED(text=''):
     try:
         if text is None:
             print('return None original text: ', type(text))
@@ -327,6 +407,9 @@ def convtext(text=''):
             print('original text: ', text)
             text = text.lower()
             print('lowercased text: ', text)
+
+            text = text.partition("-")[0]
+
             text = remove_accents(text)
             print('remove_accents text: ', text)
             # #
@@ -335,11 +418,18 @@ def convtext(text=''):
             # #
             if text.endswith("the"):
                 text = "the " + text[:-4]
-            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
-            text = text.replace('1^ visione rai', '').replace('1^ visione', '').replace('primatv', '').replace('1^tv', '')
-            text = text.replace('prima visione', '').replace('1^ tv', '').replace('((', '(').replace('))', ')')
-            text = text.replace('live:', '').replace(' - prima tv', '')
 
+            # text = re.sub(r'^\w{4}:', '', text)
+
+            text_split = text.split()
+            if text_split and text_split[0].lower() in ("new:", "live:"):
+                text_split.pop(0)  # remove annoying prefixes
+            text = " ".join(text_split)
+
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            text = text.replace('1^ visione rai', '').replace('1^ visione', ''.replace(' - prima tv', '')).replace('primatv', '')
+            text = text.replace('prima visione', '').replace('1^tv', '').replace('1^ tv', '')
+            text = text.replace('live:', '').replace('new:', '').replace('((', '(').replace('))', ')')
 
             if 'giochi olimpici parigi' in text:
                 text = 'olimpiadi di parigi'
@@ -367,9 +457,8 @@ def convtext(text=''):
                 text = 'hudson e rex'
             if 'ben-hur' in text:
                 text = 'ben-hur'
-            if 'la7' in text:
+            if 'la7 ' in text:
                 text = 'la7'
-
             if 'skytg24' in text:
                 text = 'skytg24'
             # remove xx: at start
@@ -401,7 +490,7 @@ def convtext(text=''):
                 "uk|", "us|", "yu|",
                 "1080p", "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
                 "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
-                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "(", ")", "-", "[]", "/",
+                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "[]",  # "/", "(", ")", "-",
                 "4k", "720p", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
                 "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
             ]
@@ -441,8 +530,9 @@ def convtext(text=''):
             text = text.partition(" -")[0]
             text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
             text = re.sub('FIN', '', text)
-            text = re.sub(r'^\|[\w\-\|]*\|', '', text)
-            text = re.sub(r"[-,?!/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            text = re.sub(r"[\<\>\:\"\/\\\|\?\*!]", "_", str(text))
+            # text = re.sub(r'^\|[\w\-\|]*\|', '', text)
+            text = re.sub(r"[-,?!+/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
             # recoded  end
             text = text.strip(' -')
             # forced
@@ -470,33 +560,38 @@ class BackdropDB(zBackdropXDownloadThread):
             self.pstcanal = convtext(canal[5])
             if self.pstcanal != 'None' or self.pstcanal is not None:
                 dwn_backdrop = path_folder + '/' + self.pstcanal + ".jpg"
-                if os.path.exists(dwn_backdrop):
-                    os.utime(dwn_backdrop, (time.time(), time.time()))
-                '''
-                # if lng == "fr":
-                    # if not os.path.exists(dwn_backdrop):
-                        # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                        # self.logDB(log)
-                    # if not os.path.exists(dwn_backdrop):
-                        # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
-                        # self.logDB(log)
-                '''
-                if not os.path.exists(dwn_backdrop):
-                    val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_backdrop):
-                    val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_backdrop):
-                    val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_backdrop):
-                    val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
-                    self.logDB(log)
-                elif not os.path.exists(dwn_backdrop):
-                    val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
-                    self.logDB(log)
-                pdb.task_done()
+            else:
+                # Gestisci il caso in cui self.pstcanal è None o non valido
+                # dwn_poster = path_folder + '/default.jpg'  # Esempio di fallback
+                print('none type xxxxxxxxxx- posterx')
+                return
+            if os.path.exists(dwn_backdrop):
+                os.utime(dwn_backdrop, (time.time(), time.time()))
+            '''
+            # if lng == "fr":
+                # if not os.path.exists(dwn_backdrop):
+                    # val, log = self.search_molotov_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                    # self.logDB(log)
+                # if not os.path.exists(dwn_backdrop):
+                    # val, log = self.search_programmetv_google(dwn_backdrop, canal[5], canal[4], canal[3], canal[0])
+                    # self.logDB(log)
+            '''
+            if not os.path.exists(dwn_backdrop):
+                val, log = self.search_tmdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                self.logDB(log)
+            elif not os.path.exists(dwn_backdrop):
+                val, log = self.search_tvdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                self.logDB(log)
+            elif not os.path.exists(dwn_backdrop):
+                val, log = self.search_fanart(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                self.logDB(log)
+            elif not os.path.exists(dwn_backdrop):
+                val, log = self.search_imdb(dwn_backdrop, self.pstcanal, canal[4], canal[3])
+                self.logDB(log)
+            elif not os.path.exists(dwn_backdrop):
+                val, log = self.search_google(dwn_backdrop, self.pstcanal, canal[4], canal[3], canal[0])
+                self.logDB(log)
+            pdb.task_done()
 
     def logDB(self, logmsg):
         import traceback
@@ -544,11 +639,15 @@ class BackdropAutoDB(zBackdropXDownloadThread):
                             canal[3] = evt[5]
                             canal[4] = evt[6]
                             canal[5] = canal[2]
-                            self.pstcanal = convtext(canal[5])
-                            self.pstcanal = path_folder + '/' + self.pstcanal + ".jpg"
-                            self.pstcanal = str(self.pstcanal)
-                            dwn_backdrop = self.pstcanal
-                            if os.path.join(path_folder, dwn_backdrop):
+                            if canal[5] and canal[5] != 'None' or canal[5] is not None:
+                                self.pstcanal = convtext(canal[5])
+                            else:
+                                # Gestisci il caso in cui self.pstcanal è None o non valido
+                                # dwn_backdrop = path_folder + '/default.jpg'  # Esempio di fallback
+                                print('none type xxxxxxxxxx- posterx')
+                                return
+                            dwn_backdrop = os.path.join(path_folder, self.pstcanal + ".jpg")
+                            if os.path.exists(dwn_backdrop):
                                 os.utime(dwn_backdrop, (time.time(), time.time()))
                             '''
                             # if lng == "fr":
@@ -714,8 +813,8 @@ class zBackdropX(Renderer):
                 self.pstcanal = convtext(self.canal[5])
                 if self.pstcanal is not None:
                     self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.backrNm = str(self.backrNm)
-                if os.path.exists(self.backrNm):
+                    self.pstcanal = str(self.backrNm)
+                if os.path.exists(self.pstcanal):
                     self.timer.start(10, True)
                 else:
                     canal = self.canal[:]
@@ -731,14 +830,14 @@ class zBackdropX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if self.backrNm is not None and not os.path.exists(self.backrNm):
+            if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
-                if self.pstcanal is not None:
-                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.backrNm = str(self.backrNm)
-            if os.path.exists(self.backrNm):
-                self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
-                self.instance.setPixmap(loadJPG(self.backrNm))
+                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                self.pstcanal = str(self.backrNm)
+            if self.pstcanal is not None and os.path.exists(self.pstcanal):
+                print('showBackdrop----')
+                self.logBackdrop("[LOAD : showBackdrop] {}".format(self.pstcanal))
+                self.instance.setPixmap(loadJPG(self.pstcanal))
                 self.instance.setScale(1)
                 self.instance.show()
 
@@ -746,16 +845,15 @@ class zBackdropX(Renderer):
         if self.instance:
             self.instance.hide()
         if self.canal[5]:
-            if self.backrNm is not None and not os.path.exists(self.backrNm):
+            if self.pstcanal is not None and not os.path.exists(self.pstcanal):
                 self.pstcanal = convtext(self.canal[5])
-                if self.pstcanal is not None:
-                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.backrNm = str(self.backrNm)
+                self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
+                self.pstcanal = str(self.backrNm)
             loop = 180
             found = None
-            self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))
+            self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.pstcanal))
             while loop >= 0:
-                if self.backrNm is not None and os.path.exists(self.backrNm):
+                if self.pstcanal is not None and os.path.exists(self.pstcanal):
                     loop = 0
                     found = True
                 time.sleep(0.5)
