@@ -360,151 +360,6 @@ def convtext(text=''):
     return unquote(text).capitalize()
 
 
-def convtextPAUSED(text=''):
-    try:
-        if text is None:
-            print('return None original text: ', type(text))
-            return  # Esci dalla funzione se text è None
-        if text == '':
-            print('text is an empty string')
-        else:
-            print('original text: ', text)
-            text = text.lower()
-            print('lowercased text: ', text)
-            text = text.partition("-")[0]
-            text = remove_accents(text)
-            print('remove_accents text: ', text)
-            # #
-            text = cutName(text)
-            text = getCleanTitle(text)
-            # #
-            if text.endswith("the"):
-                text = "the " + text[:-4]
-            # text = re.sub(r'^\w{4}:', '', text)
-            text_split = text.split()
-            if text_split and text_split[0].lower() in ("new:", "live:"):
-                text_split.pop(0)  # remove annoying prefixes
-            text = " ".join(text_split)
-
-            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
-            text = text.replace('1^ visione rai', '').replace('1^ visione', ''.replace(' - prima tv', '')).replace('primatv', '')
-            text = text.replace('prima visione', '').replace('1^tv', '').replace('1^ tv', '')
-            text = text.replace('live:', '').replace('new:', '').replace('((', '(').replace('))', ')')
-            if 'giochi olimpici parigi' in text:
-                text = 'olimpiadi di parigi'
-            if 'bruno barbieri' in text:
-                text = text.replace('bruno barbieri', 'brunobarbierix')
-            if "anni '60" in text:
-                text = "anni 60"
-            if 'tg regione' in text:
-                text = 'tg3'
-            if 'studio aperto' in text:
-                text = 'studio aperto'
-            if 'josephine ange gardien' in text:
-                text = 'josephine ange gardien'
-            if 'elementary' in text:
-                text = 'elementary'
-            if 'squadra speciale cobra 11' in text:
-                text = 'squadra speciale cobra 11'
-            if 'criminal minds' in text:
-                text = 'criminal minds'
-            if 'i delitti del barlume' in text:
-                text = 'i delitti del barlume'
-            if 'senza traccia' in text:
-                text = 'senza traccia'
-            if 'hudson e rex' in text:
-                text = 'hudson e rex'
-            if 'ben-hur' in text:
-                text = 'ben-hur'
-            if 'la7 ' in text:
-                text = 'la7'
-            if 'skytg24' in text:
-                text = 'skytg24'
-            # remove xx: at start
-            text = re.sub(r'^\w{2}:', '', text)
-            # remove xx|xx at start
-            text = re.sub(r'^\w{2}\|\w{2}\s', '', text)
-            # remove xx - at start
-            text = re.sub(r'^.{2}\+? ?- ?', '', text)
-            # remove all leading content between and including ||
-            text = re.sub(r'^\|\|.*?\|\|', '', text)
-            text = re.sub(r'^\|.*?\|', '', text)
-            # remove everything left between pipes.
-            text = re.sub(r'\|.*?\|', '', text)
-            # remove all content between and including () multiple times
-            text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)
-            # remove all content between and including [] multiple times
-            text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)
-            # remove episode number in arabic series
-            text = re.sub(r' +ح', '', text)
-            # remove season number in arabic series
-            text = re.sub(r' +ج', '', text)
-            # remove season number in arabic series
-            text = re.sub(r' +م', '', text)
-            # List of bad strings to remove
-            bad_strings = [
-                "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
-                "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
-                "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
-                "uk|", "us|", "yu|",
-                "1080p", "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
-                "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
-                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "[]",  # "/", "(", ")", "-",
-                "4k", "720p", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
-                "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
-            ]
-
-            # Remove numbers from 1900 to 2030
-            bad_strings.extend(map(str, range(1900, 2030)))
-            # Construct a regex pattern to match any of the bad strings
-            bad_strings_pattern = re.compile('|'.join(map(re.escape, bad_strings)))
-            # Remove bad strings using regex pattern
-            text = bad_strings_pattern.sub('', text)
-            # List of bad suffixes to remove
-            bad_suffix = [
-                " al", " ar", " ba", " da", " de", " en", " es", " eu", " ex-yu", " fi", " fr", " gr", " hr", " mk",
-                " nl", " no", " pl", " pt", " ro", " rs", " ru", " si", " swe", " sw", " tr", " uk", " yu"
-            ]
-            # Construct a regex pattern to match any of the bad suffixes at the end of the string
-            bad_suffix_pattern = re.compile(r'(' + '|'.join(map(re.escape, bad_suffix)) + r')$')
-            # Remove bad suffixes using regex pattern
-            text = bad_suffix_pattern.sub('', text)
-            # Replace ".", "_", "'" with " "
-            text = re.sub(r'[._\']', ' ', text)
-            # recoded lulu
-            text = text + 'FIN'
-            '''
-            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
-            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
-                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
-            '''
-            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
-            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
-            text = re.sub(r'(\d+)+.*?FIN', '', text)
-            text = text.partition("(")[0] + 'FIN'
-            text = re.sub(r"\\s\d+", "", text)
-            text = text.partition("(")[0]
-            # text = text.partition(":")[0]  # not work on csi: new york (only-->  csi)
-            text = text.partition(" -")[0]
-            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
-            text = re.sub('FIN', '', text)
-            text = re.sub(r"[\<\>\:\"\/\\\|\?\*!]", "_", str(text))
-            # text = re.sub(r'^\|[\w\-\|]*\|', '', text)
-            text = re.sub(r"[-,?!+/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
-            # recoded  end
-            text = text.strip(' -')
-            # forced
-            text = text.replace('XXXXXX', '60')
-            text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
-            text = quote(text, safe="")
-            print('text safe: ', text)
-        return unquote(text).capitalize()
-    except Exception as e:
-        print('convtext error: ', e)
-        pass
-
-
 class zStarX(VariableValue, Renderer):
 
     def __init__(self):
@@ -540,94 +395,89 @@ class zStarX(VariableValue, Renderer):
             ids = None
             data = ''
             self.event = self.source.event
-            if self.event and self.event != 'None' or self.event is not None:  # and self.instance:
+            if self.event and self.event != 'None':
                 if PY3:
-                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
+                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
                 else:
                     self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
+
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
+
                 if not os.path.exists(dwn_infos):
                     OnclearMem()
-                    '''
                     try:
                         url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
                         if PY3:
                             url = url.encode()
                         url = checkRedirect(url)
                         print('url1:', url)
-                        ids = url['results'][0]['id']
-                        print('url1 ids:', ids)
-                    except:
-                    '''
-                    try:
-                        url = 'http://api.themoviedb.org/3/search/multi?api_key={}&query={}'.format(str(tmdb_api), quoteEventName(self.evntNm))
-                        if PY3:
-                            url = url.encode()
-                        url = checkRedirect(url)
-                        print('url2:', url)
-                        if url is not None:
+                        if url and 'results' in url and len(url['results']) > 0:
                             ids = url['results'][0]['id']
                             print('url2 ids:', ids)
 
-                            if ids and ids is not None or ids != '':
+                            if ids:
                                 try:
-                                    data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
+                                    data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(
+                                        str(ids), str(tmdb_api), str(lng)
+                                    )
                                     if PY3:
                                         import six
                                         data = six.ensure_str(data)
                                     print('zstar pass ids Else: ')
+
                                     if data:
                                         data = json.load(urlopen(data))
-                                        open(dwn_infos, "w").write(json.dumps(data))
+                                        with open(dwn_infos, "w") as f:
+                                            f.write(json.dumps(data))
                                     else:
-                                        data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(str(ids), str(tmdb_api), str(lng))  # &language=" + str(language)
+                                        data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(
+                                            str(ids), str(tmdb_api), str(lng)
+                                        )
                                         if PY3:
-                                            import six
                                             data = six.ensure_str(data)
-                                        print('zstar pass ids Else: ')
+                                        print('zstar pass ids Else (TV):')
+
                                         if data:
                                             data = json.load(urlopen(data))
-                                            open(dwn_infos, "w").write(json.dumps(data))
-
+                                            with open(dwn_infos, "w") as f:
+                                                f.write(json.dumps(data))
                                 except Exception as e:
-                                    print('pass Exception:', e)
+                                    print('Errore durante il recupero dei dati:', e)
+                        else:
+                            print('Nessun risultato trovato nella risposta dell\'API.')
                     except Exception as e:
-                        print('Exception no ids in zstar ', e)
-                # if os.path.exists(dwn_infos):
+                        print('Errore nella richiesta iniziale dell\'API:', e)
+
                 else:
                     try:
                         if not PY3:
-                            myFile = open(("%s/%s" % (path_folder, self.evntNm)), 'r')
-                            myObject = myFile.read()
-                            u = myObject.decode('utf-8-sig')
-                            data = u.encode('utf-8')
-                            # data.encoding
-                            # data.close()
-                            data = json.loads(myObject, 'utf-8')
+                            with open(dwn_infos, 'r') as myFile:
+                                myObject = myFile.read()
+                                u = myObject.decode('utf-8-sig')
+                                data = u.encode('utf-8')
+                                data = json.loads(myObject, 'utf-8')
                         else:
                             with open(dwn_infos) as f:
                                 data = json.load(f)
-                        ImdbRating = ''
-                        if "vote_average" in data:
-                            ImdbRating = data['vote_average']
-                        elif "imdbRating" in data:
-                            ImdbRating = data['imdbRating']
-                        else:
-                            ImdbRating = '0'
+
+                        ImdbRating = data.get('vote_average', data.get('imdbRating', '0'))
                         print('zstar ImdbRating: ', ImdbRating)
+
                         if ImdbRating and ImdbRating != '0':
-                            rtng = int(10 * (float(ImdbRating)))
+                            rtng = int(10 * float(ImdbRating))
                         else:
                             rtng = 0
+
                         range = 100
                         value = rtng
                         (self.range, self.value) = ((0, range), value)
                         self.instance.show()
                     except Exception as e:
-                        print('ImdbRating Exception: ', e)
+                        print('Errore durante la lettura del file o calcolo del rating:', e)
         except Exception as e:
-            print('zstar passImdbRating: ', e)
+            print('Errore generale nella funzione infos:', e)
+
 
     def postWidgetCreate(self, instance):
         instance.setRange(self.__start, self.__end)
