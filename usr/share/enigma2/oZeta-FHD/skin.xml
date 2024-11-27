@@ -115,12 +115,12 @@
         <parameter name="AllowUserDatesAndTimes" value="5,5"/>
         <parameter name="AutotimerEnabledIcon" value="5,2,38,36"/>
         <parameter name="AutotimerRecordIcon" value="46,5,20,20"/>
-        <parameter name="ChoicelistIcon" value="5,2,80,40"/>
-        <parameter name="ChoicelistName" value="80,3,1000,40"/>
+        <parameter name="ChoicelistIcon" value="5,0,40,45"/>
+        <parameter name="ChoicelistIconExpanded" value="10,0,40,45"/>
+        <parameter name="ChoicelistIconVerticalline" value="10,0,40,45"/>
+        <parameter name="ChoicelistName" value="60,0,1000,45"/>
         <parameter name="ChoicelistDash" value="5,2,1000,50"/>
-        <parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
-        <parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
-        <parameter name="ChoicelistNameSingle" value="10,0,1200,38"/>
+        <parameter name="ChoicelistNameSingle" value="10,0,1200,45"/>
         <parameter name="ChoicelistVerticalAlignment" value="*center" />
         <parameter name="ConfigListSlider" value="10,3"/>
         <parameter name="ConfigListSeperator" value="1000" />
