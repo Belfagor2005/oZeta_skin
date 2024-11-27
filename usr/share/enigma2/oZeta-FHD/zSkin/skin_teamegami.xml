@@ -695,7 +695,7 @@
         <widget source="session.CurrentService" render="Label" position="980,766" size="600,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="yellow" backgroundColor="background90" zPosition="6">
             <convert type="EGLayoutInfo">MemTotal</convert>
         </widget>
-        <ePixmap position="900,810" zPosition="2" size="50,50" pixmap="icons/cpu.png" alphatest="blend"/>
+        <ePixmap position="900,810" zPosition="2" size="50,50" pixmap="icons/Cpu.png" alphatest="blend"/>
         <widget source="session.Event_Now" render="Progress" position="980,810" size="600,8" backgroundColor="background90" transparent="1" borderWidth="1" borderColor="mainskincolor" foregroundColor="#00e7c777" zPosition="6">
             <convert type="CpuUsage">$0</convert>
         </widget>
@@ -777,30 +777,30 @@
         <ePixmap name="" position="1220,700" size="50,50" transparent="1" zPosition="5" alphatest="blend" pixmap="icons/dev_mmc.png"/>
         <ePixmap name="" position="1220,760" size="50,50" transparent="1" zPosition="5" alphatest="blend" pixmap="icons/Swap.png"/>
         <ePixmap name="" position="1220,820" size="50,50" transparent="1" zPosition="5" alphatest="blend" pixmap="icons/Harddisk.png"/>
-        <ePixmap name="" position="1220,880" size="50,50" transparent="1" zPosition="5" alphatest="blend" pixmap="icons/swap.png"/>
-        <ePixmap name="" position="1290,732" size="400,16" pixmap="iconsmain/progress_bg.png" alphatest="on"/>
-        <ePixmap name="" position="1290,792" size="400,16" pixmap="iconsmain/progress_bg.png" alphatest="on"/>
-        <ePixmap name="" position="1290,852" size="400,16" pixmap="iconsmain/progress_bg.png" alphatest="on"/>
-        <ePixmap name="" position="1290,912" size="400,16" pixmap="iconsmain/progress_bg.png" alphatest="on"/>
+        <ePixmap name="" position="1220,880" size="50,50" transparent="1" zPosition="5" alphatest="blend" pixmap="icons/Swap.png"/>
+        <ePixmap name="" position="1290,732" size="400,16" pixmap="skin_default/progress_bg.png" alphatest="on"/>
+        <ePixmap name="" position="1290,792" size="400,16" pixmap="skin_default/progress_bg.png" alphatest="on"/>
+        <ePixmap name="" position="1290,852" size="400,16" pixmap="skin_default/progress_bg.png" alphatest="on"/>
+        <ePixmap name="" position="1290,912" size="400,16" pixmap="skin_default/progress_bg.png" alphatest="on"/>
         <widget name="Ecmtext" position="250,540" size="900,400" font="Regular; 30" transparent="1" foregroundColor="green" backgroundColor="background" halign="left" zPosition="6"/>
         <widget name="actifcam" position="250,490" size="450,50" font="Regular; 30" transparent="1" backgroundColor="background" halign="left" zPosition="5"/>
         <widget name="actifcam2" position="700,490" size="450,50" font="Regular; 30" transparent="1" foregroundColor="yellow" backgroundColor="background" halign="left" zPosition="5"/>
         <widget name="config" font="Regular; 30" position="250,230" size="900,250" alphatest="off" itemHeight="50" enableWrapAround="1" transparent="1" zPosition="9"/>
         <widget name="ecminfo" position="250,540" size="900,400" font="Regular; 30" transparent="1" foregroundColor="cyan" backgroundColor="background" halign="left" zPosition="5"/>
-        <ePixmap name="" position="1290,672" size="400,16" pixmap="iconsmain/progress_bg.png" alphatest="on"/>
-        <widget source="session.Event_Now" render="Progress" pixmap="iconsmain/progress_small.png" position="1292,914" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
+        <ePixmap name="" position="1290,672" size="400,16" pixmap="skin_default/progress_bg.png" alphatest="on"/>
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/progress_small.png" position="1292,914" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
             <convert type="ReceiverInfo">SwapTotal</convert>
         </widget>
-        <widget source="session.Event_Now" render="Progress" pixmap="iconsmain/progress_small.png" position="1292,854" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/progress_small.png" position="1292,854" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
             <convert type="ReceiverInfo">HddInfo</convert>
         </widget>
-        <widget source="session.Event_Now" render="Progress" pixmap="iconsmain/progress_small.png" position="1292,794" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/progress_small.png" position="1292,794" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
             <convert type="ReceiverInfo">UsbInfo</convert>
         </widget>
-        <widget source="session.Event_Now" render="Progress" pixmap="iconsmain/progress_small.png" position="1292,674" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/progress_small.png" position="1292,674" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
             <convert type="ReceiverInfo">MemTotal</convert>
         </widget>
-        <widget source="session.Event_Now" render="Progress" pixmap="iconsmain/progress_small.png" position="1292,734" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/progress_small.png" position="1292,734" size="396,12" alphatest="blend" zPosition="3" transparent="0" borderWidth="1" borderColor="mainskincolor">
             <convert type="ReceiverInfo">FlashInfo</convert>
         </widget>
         <widget source="session.CurrentService" render="Label" zPosition="6" position="1290,640" size="400,32" halign="left" valign="center" font="Regular; 26" transparent="1" backgroundColor="background90" foregroundColor="foreground">
@@ -879,21 +879,21 @@
 		<!--
 			<widget name="status" position="300,100" size="0,0" font="Regular;30" halign="center" valign="center" transparent="1" />
 			<widget name="image_stb" position="1315,570" alphatest="blend" size="500,148" transparent="1" zPosition="1" />
-			<ePixmap position="1275,775" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/ram.png" alphatest="blend" />
+			<ePixmap position="1275,775" zPosition="2" size="50,50" pixmap="icons/ram.png" alphatest="blend" />
 			<widget source="session.Event_Now" render="Progress" position="1335,790" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 				<convert type="EGLayoutInfo">MemTotal</convert>
 			</widget>
 			<widget source="session.CurrentService" render="Label" position="1335,800" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 				<convert type="EGLayoutInfo">MemTotal</convert>
 			</widget>
-			<ePixmap position="1275,830" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/cpu.png" alphatest="blend" />
+			<ePixmap position="1275,830" zPosition="2" size="50,50" pixmap="icons/Cpu.png" alphatest="blend" />
 			<widget source="session.Event_Now" render="Progress" position="1335,840" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 				<convert type="CpuUsage">$0</convert>
 			</widget>
 			<widget source="session.CurrentService" render="Label" position="1335,845" size="500,46" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 				<convert type="CpuUsage">CPU:$0 (Core #1: $1, Core #2: $2)</convert>
 			</widget>
-			<ePixmap position="1275,887" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/flash.png" alphatest="blend" />
+			<ePixmap position="1275,887" zPosition="2" size="50,50" pixmap="icons/flash.png" alphatest="blend" />
 			<widget source="session.Event_Now" render="Progress" position="1335,900" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 				<convert type="EGLayoutInfo">FleshInfo</convert>
 			</widget>
@@ -975,21 +975,21 @@
 		<widget name="lb_provider"    position="770,430" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="white"  backgroundColor="background" transparent="1"/>
 		<widget name="lb_aspectratio" position="770,530" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="yellow" backgroundColor="background" transparent="1"/>
 		<widget name="lb_videosize"   position="770,480" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="white"  backgroundColor="background" transparent="1"/>
-		<ePixmap position="230,775" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/ram.png" alphatest="blend" />
+		<ePixmap position="230,775" zPosition="2" size="50,50" pixmap="icons/ram.png" alphatest="blend" />
 		<widget source="session.Event_Now" render="Progress" position="290,790" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="EGLayoutInfo">MemTotal</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="290,800" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 			<convert type="EGLayoutInfo">MemTotal</convert>
 		</widget>
-		<ePixmap position="230,830" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/cpu.png" alphatest="blend" />
+		<ePixmap position="230,830" zPosition="2" size="50,50" pixmap="icons/Cpu.png" alphatest="blend" />
 		<widget source="session.Event_Now" render="Progress" position="290,840" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="CpuUsage">$0</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="290,845" size="500,46" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 			<convert type="CpuUsage">CPU:$0 (Core #1: $1, Core #2: $2)</convert>
 		</widget>
-		<ePixmap position="230,887" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/flash.png" alphatest="blend" />
+		<ePixmap position="230,887" zPosition="2" size="50,50" pixmap="icons/flash.png" alphatest="blend" />
 		<widget source="session.Event_Now" render="Progress" position="290,900" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="EGLayoutInfo">FleshInfo</convert>
 		</widget>

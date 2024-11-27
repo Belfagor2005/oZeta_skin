@@ -39,8 +39,8 @@
     </screen>
     
     <!-- SubTitle -->
-    <screen name="SubtitleDisplay" position="fill" backgroundColor="transparent" zPosition="-1" flags="wfNoBorder"/>
-    
+    <screen name="SubtitleDisplay" position="fill" backgroundColor="transparent" zPosition="-1" flags="wfNoBorder">
+    </screen>
     <!-- Mute -->
     <screen name="Mute" position="1740,70" size="100,100" zPosition="10" title="Mute" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,0" size="100,100" pixmap="skin_default/icons/mute.png" alphatest="on"/>
@@ -1813,6 +1813,36 @@
         <eLabel text="7" position="1815,907" size="20,35" font="Regular;26" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="6"/>
         <eLabel text="(-5m)" position="1835,907" size="80,35" font="Regular;26" foregroundColor="#5483fe" backgroundColor="#10000000" transparent="1" zPosition="1"/>
         <ePixmap pixmap="icons/mp_buttonsw.png" position="1590,953" size="422,50" scale="1" alphatest="blend" zPosition="2"/>
+    </screen>
+    <!-- subtitle SubsSearchSettings -->
+    <screen name="SubsSearchSettings" title="Subtitles search settings" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+        <panel name="LayerMenu1500" />
+        <panel name="vRGYB-1000" />
+        <widget source="header_name" render="Label" position="232,538" size="295,45" font="Regular; 30" halign="left" zPosition="1" backgroundColor="#202020" transparent="1" foregroundColor="#b0b0b0" valign="center" />
+        <widget source="header_lang" render="Label" position="528,539" size="800,45" font="Regular; 30" halign="left" zPosition="1" backgroundColor="#202020" transparent="1" foregroundColor="#b0b0b0" valign="center" />
+        <widget source="header_state" render="Label" position="1356,538" size="120,45" font="Regular; 30" halign="left" zPosition="1" backgroundColor="#202020" transparent="1" foregroundColor="#b0b0b0" valign="center" />
+        <widget name="config" position="241,145" size="1239,348" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="3" selectionPixmap="oZeta-FHD/menu/sl1000.png" />
+        <eLabel position="230,585" size="1250,3" backgroundColor="#202020" zPosition="1" />
+        <widget source="providers" render="Listbox" scrollbarMode="showOnDemand" scrollbarWidth="10" position="230,595" size="1250,300" zPosition="3" transparent="1" selectionPixmap="oZeta-FHD/menu/sl1000.png">
+            <convert type="TemplatedMultiContent">
+                    {"templates":
+                        {"default": (50, [
+                MultiContentEntryText(pos = (5,0),   size = (300,45),  font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 0), # name,
+                MultiContentEntryText(pos = (310,0),  size = (1400,45),  font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 1), # lang,
+                MultiContentEntryText(pos = (1720,0), size = (120,45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color=0xFF000003) # enabled,
+                          ], True, "showOnDemand"),
+                        "notselected": (50, [
+                MultiContentEntryText(pos = (5,0),   size = (300,45),  font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 0), # name,
+                MultiContentEntryText(pos = (310,0),  size = (1400,45),  font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 1), # lang,
+                MultiContentEntryText(pos = (1720,0), size = (120,45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,  text = 2, color=0xFF000003) # enabled,
+                          ], False, "showOnDemand")
+                          },
+                        "fonts": [gFont("Regular", 28)],
+                        "itemHeight": 45
+                    }
+            </convert>
+        </widget>
+        <ePixmap position="1390,905" size="80,40" pixmap="oZeta-FHD/buttons/80/key_menu.png" alphatest="blend" zPosition="2" />
     </screen>
     
     <!-- Audio and subtitle selection -->

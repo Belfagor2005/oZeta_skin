@@ -246,8 +246,8 @@
         <color name="ListboxMarkedAndSelectedForeground" color="red"/>
         <color name="WindowTitleForeground" color="foreground"/>
         <color name="WindowTitleBackground" color="background"/>
-        <color name="ScrollbarForeground" color="#808080"/>
-        <color name="ScrollbarBorder" color="#202020"/> 
+        <!-- <color name="ScrollbarForeground" color="#8c8c8c"/> -->
+        <!-- <color name="ScrollbarBorder" color="#202020"/>  -->
     </windowstyle>
     <!-- end add lululla -->
     <switchpixmap>

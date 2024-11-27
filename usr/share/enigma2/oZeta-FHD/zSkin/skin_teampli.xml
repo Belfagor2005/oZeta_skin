@@ -135,23 +135,23 @@
     <!-- InfoMenu OK -->
     <screen name="menu_timermenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autotimer_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">crontimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">powertimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remotetimer</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -159,19 +159,19 @@
     <!-- VideoMenu OK -->
     <screen name="menu_video_menu" position="0,0" size="1920,1080" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">videoenhancement_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_finetune</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_clipping</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -267,11 +267,11 @@
             <convert type="MenuEntryCompare">flash_image</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_update.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_update.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_update</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_restore.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_restore.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_restore</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -740,7 +740,7 @@
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -814,35 +814,35 @@
     <!-- TEMPLATE Infobar Crypt -->
     <screen name="PartInfoCryptPli">
         <eLabel text="Free To Air" position="1660,964" size="260,45" font="Regular;28" backgroundColor="#20000000" foregroundColor="#808080" transparent="0" zPosition="3"/>
-        <widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1660,964" size="260,45" text="BetaCrypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">BetaCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Via Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Via Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">ViaCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Irdeto" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Irdeto" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">IrdCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Seca Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Seca Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">SecaCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NagraVision" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">NagraCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="CryptoWork" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="CryptoWork" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">CrwCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NDS-VideoGuard" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="NDS-VideoGuard" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">NdsCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Conax Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+        <widget source="session.CurrentService" render="FixedLabel" position="1645,964" size="260,45" text="Conax Crypt" font="Regular;28" halign="right" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="2">
             <convert type="CryptoInfo">ConaxCrypt</convert>
             <convert type="ConditionalShowHide"/>
         </widget>

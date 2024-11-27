@@ -157,23 +157,23 @@
     <!-- InfoMenu OK -->
     <screen name="menu_timermenu" position="0,0" size="1920,1080" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_autotimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">autotimer_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_crontimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">crontimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">timer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_powertimers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">powertimer_edit</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_timermenu_timers.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">remotetimer</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -181,19 +181,19 @@
     <!-- VideoMenu OK -->
     <screen name="menu_video_menu" position="0,0" size="1920,1080" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
         <panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_videoenhancement_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">videoenhancement_setup</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_system_videofinetune_setup.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_finetune</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/service_info.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">video_clipping</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -289,11 +289,11 @@
             <convert type="MenuEntryCompare">flash_image</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_update.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_update.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_update</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_restore.png.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/menu_software_restore.png" position="940,10" size="110,110" scale="1" zPosition="10" alphatest="blend">
             <convert type="MenuEntryCompare">software_restore</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
@@ -762,7 +762,7 @@
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>
-        <widget source="menu" render="Pixmap" pixmap="icons/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
+        <widget source="menu" render="Pixmap" pixmap="iconsmenu/scan-c.png" position="405,290" size="64,64" alphatest="blend" zPosition="1">
             <convert type="MenuEntryCompare">cablescan</convert>
             <convert type="ConditionalShowHide"/>
         </widget>

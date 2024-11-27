@@ -139,7 +139,7 @@
     <screen name="PartInfoPoster">
         <!-- POSTER -->
         <eLabel position="0,665" size="290,415" backgroundColor="#40000000"/>
-        <widget source="session.Event_Now" render="zPosterX" position="10,675" size="270,395" zPosition="90"/>
+        <widget source="session.Event_Now" render="zPosterX" position="10,675" size="270,395" zPosition="15"/>
     </screen>
     <!-- DataChannel Text -->
     <screen name="PartInfobarDataChannel" position="0,50" zPosition="1" size="250,120" title="Volume" backgroundColor="#FF000000" flags="wfNoBorder">
@@ -150,7 +150,7 @@
         <eLabel position="15,820" size="260,4" backgroundColor="#404040" zPosition="1" />
         <!-- SMALL CHANNEL -->
         <eLabel text="Ch:" position="20,840" size="60,40" font="Regular;32" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1" />
-        <widget source="session.CurrentService" render="zChannelNumber" position="85,830" size="250,50" font="Regular;44" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" />
+        <widget source="session.CurrentService" render="zChannelNumber" position="85,830" size="250,50" font="Regular;44" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="1" />
         <!-- SATELLITE -->
         <eLabel text="Pos:" position="20,890" size="60,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1" />
         <widget source="session.CurrentService" render="Label" position="85,890" size="150,33" font="Regular;28" halign="left" foregroundColor="green" backgroundColor="#101010" text="DVB-S" transparent="1" zPosition="1">
@@ -158,12 +158,12 @@
         </widget>
         <!-- TUNER -->
         <eLabel text="Tun:" position="20,935" size="60,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1" />
-        <widget source="session.FrontendInfo" render="Label" position="85,935" size="100,33" font="Regular;28" halign="left" backgroundColor="#000000" transparent="1" zPosition="1">
+        <widget source="session.FrontendInfo" render="Label" position="85,935" size="100,33" font="Regular;28" halign="left" backgroundColor="#101010" transparent="1" zPosition="1">
             <convert type="FrontendInfo">STRING</convert>
         </widget>
         <!-- SOGNAL -->
         <eLabel text="Snr:" position="20,980" size="60,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1" />
-        <widget source="session.FrontendStatus" render="Label" position="85,980" size="100,33" font="Regular;28" halign="left" foregroundColor="green" backgroundColor="#000000" transparent="1" zPosition="1">
+        <widget source="session.FrontendStatus" render="Label" position="85,980" size="100,33" font="Regular;28" halign="left" foregroundColor="green" backgroundColor="#101010" transparent="1" zPosition="1">
             <convert type="FrontendInfo">SNR</convert>
         </widget>
         <!-- SIGNAL PROGRESS (orientation="orBottomToTop" - "orLeftToRight" -->
@@ -397,7 +397,7 @@
         </widget>
         <!-- TUNER -->
         <eLabel text="Tun:" position="1590,870" size="120,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="3" />
-        <widget source="session.FrontendInfo" render="Label" position="1655,874" size="200,33" font="Regular;24" halign="left" backgroundColor="#000000" transparent="1" zPosition="3">
+        <widget source="session.FrontendInfo" render="Label" position="1655,874" size="200,33" font="Regular;24" halign="left" backgroundColor="#000000" transparent="1" zPosition="1">
             <convert type="FrontendInfo">STRING</convert>
         </widget>
         <!-- SATELLITE -->
@@ -406,12 +406,12 @@
         </widget>
         <!-- SOGNAL -->
         <eLabel text="Snr:" position="1590,905" size="60,40" font="Regular;28" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1" zPosition="1" />
-        <widget source="session.FrontendStatus" render="Label" position="1655,909" size="100,33" font="Regular;26" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="3">
+        <widget source="session.FrontendStatus" render="Label" position="1655,909" size="100,33" font="Regular;26" halign="left" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1">
             <convert type="FrontendInfo">SNR</convert>
         </widget>
         <!-- SIGNAL PROGRESS (orientation="orBottomToTop" - "orLeftToRight" -->
         <eLabel position="1590,938" size="240,6" backgroundColor="#202020" zPosition="1" />
-        <widget source="session.FrontendStatus" render="Progress" pixmap="skin_default/icons/bbox.png" orientation="orLeftToRight" position="1590,939" size="240,4" backgroundColor="#303030" zPosition="3">
+        <widget source="session.FrontendStatus" render="Progress" pixmap="skin_default/icons/bbox.png" orientation="orLeftToRight" position="1590,939" size="240,4" backgroundColor="#303030" zPosition="1">
             <convert type="FrontendInfo">SNR</convert>
         </widget>
         <!-- TUNER TYPE -->

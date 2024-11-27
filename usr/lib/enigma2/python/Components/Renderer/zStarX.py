@@ -14,7 +14,7 @@
 # <ePixmap pixmap="menu/stargrey.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
 # <widget source="session.Event_Next" render="zStarX" pixmap="oZeta-FHD/menu/staryellow.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 
-from __future__ import absolute_import
+from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.Sources.Event import Event
 from Components.Sources.EventInfo import EventInfo
@@ -64,8 +64,6 @@ tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 thetvdbkey = 'D19315B88B2DE21F'
 # thetvdbkey = "a99d487bb3426e5f3a60dea6d3d3c7ef"
-my_cur_skin = False
-cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 
 def isMountReadonly(mnt):
@@ -93,6 +91,8 @@ def isMountedInRW(path):
     return False
 
 
+my_cur_skin = False
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 path_folder = "/tmp/poster"
 if os.path.exists("/media/hdd"):
     if isMountedInRW("/media/hdd"):
@@ -245,7 +245,6 @@ def cutName(eventName=""):
         eventName = eventName.replace('(18+)', '').replace('18+', '').replace('(16+)', '').replace('16+', '').replace('(12+)', '')
         eventName = eventName.replace('12+', '').replace('(7+)', '').replace('7+', '').replace('(6+)', '').replace('6+', '')
         eventName = eventName.replace('(0+)', '').replace('0+', '').replace('+', '')
-        eventName = eventName.replace('episode', '')
         eventName = eventName.replace('المسلسل العربي', '')
         eventName = eventName.replace('مسلسل', '')
         eventName = eventName.replace('برنامج', '')
@@ -280,20 +279,114 @@ def sanitize_filename(filename):
 
 
 def convtext(text=''):
+    try:
+        if text is None:
+            print('return None original text: ' + str(type(text)))
+            return
+        if text == '':
+            print('text is an empty string')
+        else:
+            print('original text:' + text)
+            text = text.lower()
+            print('lowercased text:' + text)
+            text = text.lstrip()
+
+            # text = cutName(text)
+            # text = getCleanTitle(text)
+
+            if text.endswith("the"):
+                text = "the " + text[:-4]
+
+            # Modifiche personalizzate
+            if 'giochi olimpici parigi' in text:
+                text = 'olimpiadi di parigi'
+            if 'bruno barbieri' in text:
+                text = text.replace('bruno barbieri', 'brunobarbierix')
+            if "anni '60" in text:
+                text = "anni 60"
+            if 'tg regione' in text:
+                text = 'tg3'
+            if 'studio aperto' in text:
+                text = 'studio aperto'
+            if 'josephine ange gardien' in text:
+                text = 'josephine ange gardien'
+            if 'elementary' in text:
+                text = 'elementary'
+            if 'squadra speciale cobra 11' in text:
+                text = 'squadra speciale cobra 11'
+            if 'criminal minds' in text:
+                text = 'criminal minds'
+            if 'i delitti del barlume' in text:
+                text = 'i delitti del barlume'
+            if 'senza traccia' in text:
+                text = 'senza traccia'
+            if 'hudson e rex' in text:
+                text = 'hudson e rex'
+            if 'ben-hur' in text:
+                text = 'ben-hur'
+            if 'alessandro borghese - 4 ristoranti' in text:
+                text = 'alessandroborgheseristoranti'
+            if 'alessandro borghese: 4 ristoranti' in text:
+                text = 'alessandroborgheseristoranti'
+
+            cutlist = ['x264', '720p', '1080p', '1080i', 'pal', 'german', 'english', 'ws', 'dvdrip', 'unrated',
+                       'retail', 'web-dl', 'dl', 'ld', 'mic', 'md', 'dvdr', 'bdrip', 'bluray', 'dts', 'uncut', 'anime',
+                       'ac3md', 'ac3', 'ac3d', 'ts', 'dvdscr', 'complete', 'internal', 'dtsd', 'xvid', 'divx', 'dubbed',
+                       'line.dubbed', 'dd51', 'dvdr9', 'dvdr5', 'h264', 'avc', 'webhdtvrip', 'webhdrip', 'webrip',
+                       'webhdtv', 'webhd', 'hdtvrip', 'hdrip', 'hdtv', 'ituneshd', 'repack', 'sync', '1^tv', '1^ tv',
+                       '1^ visione rai', '1^ visione', ' - prima tv', ' - primatv', 'prima visione',
+                       'film -', 'de filippi', 'first screening',
+                       'live:', 'new:', 'film:', 'première diffusion', 'nouveau:', 'en direct:',
+                       'premiere:', 'estreno:', 'nueva emisión:', 'en vivo:'
+                       ]
+            for word in cutlist:
+                text = text.replace(word, '')
+            text = ' '.join(text.split())
+            print(text)
+
+            text = cutName(text)
+            text = getCleanTitle(text)
+
+            text = text.partition("-")[0]  # Mantieni solo il testo prima del primo "-"
+
+            # Pulizia finale
+            text = text.replace('.', ' ').replace('-', ' ').replace('_', ' ').replace('+', '')
+
+            # Rimozione pattern specifici
+            if search(r'[Ss][0-9]+[Ee][0-9]+', text):
+                text = sub(r'[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+', '', text, flags=S | I)
+            text = sub(r'\(.*\)', '', text).rstrip()
+            text = text.partition("(")[0]
+            text = sub(r"\\s\d+", "", text)
+            text = text.partition(":")[0]
+            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+            text = re.sub(r'(\d+)+.*?FIN', '', text)
+            text = re.sub('FIN', '', text)
+
+            # Rimuovi accenti e normalizza
+            text = remove_accents(text)
+            print('remove_accents text: ' + text)
+
+            # Forzature finali
+            text = text.replace('XXXXXX', '60')
+            text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
+            text = text.replace('alessandroborgheseristoranti', 'alessandro borghese - 4 ristoranti')
+            text = text.replace('il ritorno di colombo', 'colombo')
+
+            # text = sanitize_filename(text)
+            # print('sanitize_filename text: ' + text)
+            return text.capitalize()
+    except Exception as e:
+        print('convtext error: ' + str(e))
+        pass
+
+
+def convtextPAUSED(text=''):
     text = text.lower()
     print('text lower init=', text)
-
+    text = text.lstrip()
     text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
-    text = text.replace('1^ visione rai', '').replace('1^ visione', ''.replace(' - prima tv', '')).replace(' - primatv', '')
-    text = text.replace('prima visione', '').replace('1^tv', '').replace('1^ tv', '')
-    text = text.replace('((', '(').replace('))', ')')
-    # Inglese
-    text = text.replace('first screening', '').replace('premiere:', '').replace('live:', '').replace('new:', '')
-    # Francese
-    text = text.replace('première diffusion', '').replace('nouveau:', '').replace('en direct:', '')
-    # Spagnolo
-    text = text.replace('estreno:', '').replace('nueva emisión:', '').replace('en vivo:', '')
-
     if 'bruno barbieri' in text:
         text = text.replace('bruno barbieri', 'brunobarbierix')
     if "anni '60" in text:
@@ -322,9 +415,15 @@ def convtext(text=''):
         text = 'la7'
     if 'skytg24' in text:
         text = 'skytg24'
-    cutlist = ['x264', '720p', '1080p', '1080i', 'PAL', 'GERMAN', 'ENGLiSH', 'WS', 'DVDRiP', 'UNRATED', 'RETAIL', 'Web-DL', 'DL', 'LD', 'MiC', 'MD', 'DVDR', 'BDRiP', 'BLURAY', 'DTS', 'UNCUT', 'ANiME',
-               'AC3MD', 'AC3', 'AC3D', 'TS', 'DVDSCR', 'COMPLETE', 'INTERNAL', 'DTSD', 'XViD', 'DIVX', 'DUBBED', 'LINE.DUBBED', 'DD51', 'DVDR9', 'DVDR5', 'h264', 'AVC',
-               'WEBHDTVRiP', 'WEBHDRiP', 'WEBRiP', 'WEBHDTV', 'WebHD', 'HDTVRiP', 'HDRiP', 'HDTV', 'ITUNESHD', 'REPACK', 'SYNC']
+    cutlist = ['x264', '720p', '1080p', '1080i', 'pal', 'german', 'english', 'ws', 'dvdrip', 'unrated',
+               'retail', 'web-dl', 'dl', 'ld', 'mic', 'md', 'dvdr', 'bdrip', 'bluray', 'dts', 'uncut', 'anime',
+               'ac3md', 'ac3', 'ac3d', 'ts', 'dvdscr', 'complete', 'internal', 'dtsd', 'xvid', 'divx', 'dubbed',
+               'line.dubbed', 'dd51', 'dvdr9', 'dvdr5', 'h264', 'avc', 'webhdtvrip', 'webhdrip', 'webrip',
+               'webhdtv', 'webhd', 'hdtvrip', 'hdrip', 'hdtv', 'ituneshd', 'repack', 'sync', '1^tv', '1^ tv',
+               '1^ visione rai', '1^ visione', ' - prima tv', ' - primatv', 'prima visione',
+               'film -', 'de filippi', 'first screening', 'premiere:', 'live:', 'new:',
+               'première diffusion', 'nouveau:', 'en direct:',
+               'estreno:', 'nueva emisión:', 'en vivo:']
     text = text.replace('.wmv', '').replace('.flv', '').replace('.ts', '').replace('.m2ts', '').replace('.mkv', '').replace('.avi', '').replace('.mpeg', '').replace('.mpg', '').replace('.iso', '').replace('.mp4', '')
 
     for word in cutlist:
@@ -340,24 +439,208 @@ def convtext(text=''):
         text = sub(r'[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+', '', text, flags=S | I)
     text = sub(r'\(.*\)', '', text).rstrip()  # remove episode number from series, like "series name (234)"
 
+    # # List of bad strings to remove
+    # bad_strings = [
+        # "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
+        # "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
+        # "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
+        # "uk|", "us|", "yu|",
+        # "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
+        # "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
+        # "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "[]",  # "/", "(", ")", "-",
+        # "4k", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
+        # "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
+    # ]
+
+    # # Remove numbers from 1900 to 2030
+    # bad_strings.extend(map(str, range(1900, 2030)))
+    # # Construct a regex pattern to match any of the bad strings
+    # bad_strings_pattern = re.compile('|'.join(map(re.escape, bad_strings)))
+    # # Remove bad strings using regex pattern
+    # text = bad_strings_pattern.sub('', text)
+    # # List of bad suffixes to remove
+    # bad_suffix = [
+        # " al", " ar", " ba", " da", " de", " en", " es", " eu", " ex-yu", " fi", " fr", " gr", " hr", " mk",
+        # " nl", " no", " pl", " pt", " ro", " rs", " ru", " si", " swe", " sw", " tr", " uk", " yu"
+    # ]
+    # # Construct a regex pattern to match any of the bad suffixes at the end of the string
+    # bad_suffix_pattern = re.compile(r'(' + '|'.join(map(re.escape, bad_suffix)) + r')$')
+    # # Remove bad suffixes using regex pattern
+    # text = bad_suffix_pattern.sub('', text)
+    # # Replace ".", "_", "'" with " "
+    # text = re.sub(r'[._\']', ' ', text)
+
+    text = text.partition("-")[0]
+
     text = remove_accents(text)
-    print('remove_accents text: ', text)
+    print('remove_accents text:', text)
+
     text = text + 'FIN'
     text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
     text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
     text = re.sub(r'(\d+)+.*?FIN', '', text)
-    text = text.partition("(")[0] + 'FIN'
+    text = text.partition("(")[0]
     text = re.sub(r"\\s\d+", "", text)
     text = re.sub('FIN', '', text)
 
     text = sanitize_filename(text)
+    print('sanitize_filename text:', text)
 
     # forced
     text = text.replace('XXXXXX', '60')
     text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
+
     text = quote(text, safe="")
-    print('text final: ', text)
+    print('text final:', text)
     return unquote(text).capitalize()
+
+def convtextxx(text=''):
+    try:
+        if text is None:
+            print('return None original text: ', type(text))
+            return  # Esci dalla funzione se text è None
+        if text == '':
+            print('text is an empty string')
+        else:
+            print('original text: ', text)
+            text = text.lower()
+            print('lowercased text: ', text)
+            text = text.lstrip()
+            # #
+            text = cutName(text)
+            text = getCleanTitle(text)
+            # #
+            if text.endswith("the"):
+                text = "the " + text[:-4]
+
+            # text = re.sub(r'^\w{4}:', '', text)
+
+            text_split = text.split()
+            if text_split and text_split[0].lower() in ("new:", "live:"):
+                text_split.pop(0)  # remove annoying prefixes
+            text = " ".join(text_split)
+
+            text = text.replace("\xe2\x80\x93", "").replace('\xc2\x86', '').replace('\xc2\x87', '')  # replace special
+            text = text.replace('1^ visione rai', '').replace('1^ visione', ''.replace(' - prima tv', '')).replace('primatv', '')
+            text = text.replace('prima visione', '').replace('1^tv', '').replace('1^ tv', '')
+            text = text.replace('live:', '').replace('new:', '').replace('((', '(').replace('))', ')')
+            if 'giochi olimpici parigi' in text:
+                text = 'olimpiadi di parigi'
+            if 'bruno barbieri' in text:
+                text = text.replace('bruno barbieri', 'brunobarbierix')
+            if "anni '60" in text:
+                text = "anni 60"
+            if 'tg regione' in text:
+                text = 'tg3'
+            if 'studio aperto' in text:
+                text = 'studio aperto'
+            if 'josephine ange gardien' in text:
+                text = 'josephine ange gardien'
+            if 'elementary' in text:
+                text = 'elementary'
+            if 'squadra speciale cobra 11' in text:
+                text = 'squadra speciale cobra 11'
+            if 'criminal minds' in text:
+                text = 'criminal minds'
+            if 'i delitti del barlume' in text:
+                text = 'i delitti del barlume'
+            if 'senza traccia' in text:
+                text = 'senza traccia'
+            if 'hudson e rex' in text:
+                text = 'hudson e rex'
+            if 'ben-hur' in text:
+                text = 'ben-hur'
+            if 'la7 ' in text:
+                text = 'la7'
+            if 'skytg24' in text:
+                text = 'skytg24'
+            # remove xx: at start
+            text = re.sub(r'^\w{2}:', '', text)
+            # remove xx|xx at start
+            text = re.sub(r'^\w{2}\|\w{2}\s', '', text)
+            # remove xx - at start
+            text = re.sub(r'^.{2}\+? ?- ?', '', text)
+            # remove all leading content between and including ||
+            text = re.sub(r'^\|\|.*?\|\|', '', text)
+            text = re.sub(r'^\|.*?\|', '', text)
+            # remove everything left between pipes.
+            text = re.sub(r'\|.*?\|', '', text)
+            # remove all content between and including () multiple times
+            text = re.sub(r'\(\(.*?\)\)|\(.*?\)', '', text)
+            # remove all content between and including [] multiple times
+            text = re.sub(r'\[\[.*?\]\]|\[.*?\]', '', text)
+            # remove episode number in arabic series
+            text = re.sub(r' +ح', '', text)
+            # remove season number in arabic series
+            text = re.sub(r' +ج', '', text)
+            # remove season number in arabic series
+            text = re.sub(r' +م', '', text)
+            # List of bad strings to remove
+            bad_strings = [
+                "ae|", "al|", "ar|", "at|", "ba|", "be|", "bg|", "br|", "cg|", "ch|", "cz|", "da|", "de|", "dk|",
+                "ee|", "en|", "es|", "eu|", "ex-yu|", "fi|", "fr|", "gr|", "hr|", "hu|", "in|", "ir|", "it|", "lt|",
+                "mk|", "mx|", "nl|", "no|", "pl|", "pt|", "ro|", "rs|", "ru|", "se|", "si|", "sk|", "sp|", "tr|",
+                "uk|", "us|", "yu|",
+                "1080p", "1080p-dual-lat-cine-calidad.com", "1080p-dual-lat-cine-calidad.com-1",
+                "1080p-dual-lat-cinecalidad.mx", "1080p-lat-cine-calidad.com", "1080p-lat-cine-calidad.com-1",
+                "1080p-lat-cinecalidad.mx", "1080p.dual.lat.cine-calidad.com", "3d", "'", "#", "[]",  # "/", "(", ")", "-",
+                "4k", "720p", "aac", "blueray", "ex-yu:", "fhd", "hd", "hdrip", "hindi", "imdb", "multi:", "multi-audio",
+                "multi-sub", "multi-subs", "multisub", "ozlem", "sd", "top250", "u-", "uhd", "vod", "x264"
+            ]
+
+            # Remove numbers from 1900 to 2030
+            bad_strings.extend(map(str, range(1900, 2030)))
+            # Construct a regex pattern to match any of the bad strings
+            bad_strings_pattern = re.compile('|'.join(map(re.escape, bad_strings)))
+            # Remove bad strings using regex pattern
+            text = bad_strings_pattern.sub('', text)
+            # List of bad suffixes to remove
+            bad_suffix = [
+                " al", " ar", " ba", " da", " de", " en", " es", " eu", " ex-yu", " fi", " fr", " gr", " hr", " mk",
+                " nl", " no", " pl", " pt", " ro", " rs", " ru", " si", " swe", " sw", " tr", " uk", " yu"
+            ]
+            # Construct a regex pattern to match any of the bad suffixes at the end of the string
+            bad_suffix_pattern = re.compile(r'(' + '|'.join(map(re.escape, bad_suffix)) + r')$')
+            # Remove bad suffixes using regex pattern
+            text = bad_suffix_pattern.sub('', text)
+            # Replace ".", "_", "'" with " "
+            text = re.sub(r'[._\']', ' ', text)
+            # recoded lulu
+            text = text + 'FIN'
+            '''
+            if re.search(r'[Ss][0-9][Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9][Ee][0-9]+.*?FIN', '', text)
+            if re.search(r'[Ss][0-9] [Ee][0-9]+.*?FIN', text):
+                text = re.sub(r'[Ss][0-9] [Ee][0-9]+.*?FIN', '', text)
+            '''
+            text = re.sub(r'(odc.\s\d+)+.*?FIN', '', text)
+            text = re.sub(r'(odc.\d+)+.*?FIN', '', text)
+            text = re.sub(r'(\d+)+.*?FIN', '', text)
+            text = text.partition("(")[0] + 'FIN'
+            text = re.sub(r"\\s\d+", "", text)
+            text = text.partition("(")[0]
+            # text = text.partition(":")[0]  # not work on csi: new york (only-->  csi)
+            text = text.partition(" -")[0]
+            text = re.sub(' - +.+?FIN', '', text)  # all episodes and series ????
+            text = re.sub('FIN', '', text)
+            text = re.sub(r"[\<\>\:\"\/\\\|\?\*!]", "_", str(text))
+            # text = re.sub(r'^\|[\w\-\|]*\|', '', text)
+            text = re.sub(r"[-,?!+/\.\":]", '', text)  # replace (- or , or ! or / or . or " or :) by space
+            # recoded  end
+            text = text.strip(' -')
+
+            text = remove_accents(text)
+            print('remove_accents text: ', text)
+
+            # forced
+            text = text.replace('XXXXXX', '60')
+            text = text.replace('brunobarbierix', 'bruno barbieri - 4 hotel')
+            text = quote(text, safe="")
+            print('text safe: ', text)
+        return unquote(text).capitalize()
+    except Exception as e:
+        print('convtext error: ', e)
+        pass
 
 
 class zStarX(VariableValue, Renderer):
@@ -377,7 +660,6 @@ class zStarX(VariableValue, Renderer):
 
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
-            # print('zstar event A what[0] == self.CHANGED_CLEAR')
             (self.range, self.value) = ((0, 1), 0)
             return
         if what[0] != self.CHANGED_CLEAR:
@@ -388,95 +670,68 @@ class zStarX(VariableValue, Renderer):
 
     def infos(self):
         try:
-            rtng = 0
-            range = 0
+            rating = 0
+            max_range = 100
             value = 0
             ImdbRating = "0"
             ids = None
-            data = ''
+            data = ""
             self.event = self.source.event
-            if self.event and self.event != 'None':
-                if PY3:
-                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
-                else:
-                    self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
-
+            if self.event and self.event != "None":
+                self.evnt = self.event.getEventName().replace("\xc2\x86", "").replace("\xc2\x87", "")
                 self.evntNm = convtext(self.evnt)
                 dwn_infos = "{}/{}".format(path_folder, self.evntNm)
-
                 if not os.path.exists(dwn_infos):
                     OnclearMem()
                     try:
-                        url = 'http://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(str(tmdb_api), self.evntNm)
-                        if PY3:
-                            url = url.encode()
+                        url = "http://api.themoviedb.org/3/search/multi?api_key={}&query={}".format(
+                            str(tmdb_api), quoteEventName(self.evntNm)
+                        )
                         url = checkRedirect(url)
-                        print('url1:', url)
-                        if url and 'results' in url and len(url['results']) > 0:
-                            ids = url['results'][0]['id']
-                            print('url2 ids:', ids)
-
+                        print("url2:", url)
+                        if url and "results" in url and url["results"]:
+                            ids = url["results"][0]["id"]
+                            print("url2 ids:", ids)
                             if ids:
                                 try:
-                                    data = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}'.format(
+                                    data_url = "https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=credits&language={}".format(
                                         str(ids), str(tmdb_api), str(lng)
                                     )
-                                    if PY3:
-                                        import six
-                                        data = six.ensure_str(data)
-                                    print('zstar pass ids Else: ')
-
-                                    if data:
-                                        data = json.load(urlopen(data))
-                                        with open(dwn_infos, "w") as f:
-                                            f.write(json.dumps(data))
-                                    else:
-                                        data = 'https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}'.format(
-                                            str(ids), str(tmdb_api), str(lng)
-                                        )
-                                        if PY3:
-                                            data = six.ensure_str(data)
-                                        print('zstar pass ids Else (TV):')
-
-                                        if data:
-                                            data = json.load(urlopen(data))
-                                            with open(dwn_infos, "w") as f:
-                                                f.write(json.dumps(data))
+                                    print("Fetching movie data...")
+                                    data = json.load(urlopen(data_url))
+                                    open(dwn_infos, "w").write(json.dumps(data))
                                 except Exception as e:
-                                    print('Errore durante il recupero dei dati:', e)
-                        else:
-                            print('Nessun risultato trovato nella risposta dell\'API.')
+                                    print("Movie fetch exception, trying TV show:", e)
+                                    data_url = "https://api.themoviedb.org/3/tv/{}?api_key={}&append_to_response=credits&language={}".format(
+                                        str(ids), str(tmdb_api), str(lng)
+                                    )
+                                    data = json.load(urlopen(data_url))
+                                    open(dwn_infos, "w").write(json.dumps(data))
                     except Exception as e:
-                        print('Errore nella richiesta iniziale dell\'API:', e)
-
+                        print("Exception while searching for IDs:", e)
                 else:
                     try:
-                        if not PY3:
-                            with open(dwn_infos, 'r') as myFile:
-                                myObject = myFile.read()
-                                u = myObject.decode('utf-8-sig')
-                                data = u.encode('utf-8')
-                                data = json.loads(myObject, 'utf-8')
+                        with open(dwn_infos, "r") as f:
+                            data = json.load(f)
+
+                        if "vote_average" in data:
+                            ImdbRating = data["vote_average"]
+                        elif "imdbRating" in data:
+                            ImdbRating = data["imdbRating"]
                         else:
-                            with open(dwn_infos) as f:
-                                data = json.load(f)
-
-                        ImdbRating = data.get('vote_average', data.get('imdbRating', '0'))
-                        print('zstar ImdbRating: ', ImdbRating)
-
-                        if ImdbRating and ImdbRating != '0':
-                            rtng = int(10 * float(ImdbRating))
-                        else:
-                            rtng = 0
-
-                        range = 100
-                        value = rtng
-                        (self.range, self.value) = ((0, range), value)
+                            ImdbRating = "0"
+                        print("IMDB Rating:", ImdbRating)
+                        if ImdbRating and ImdbRating != "0":
+                            rating = int(10 * float(ImdbRating))
+                        value = rating
+                        self.range, self.value = (0, max_range), value
                         self.instance.show()
                     except Exception as e:
-                        print('Errore durante la lettura del file o calcolo del rating:', e)
+                        print("Error processing saved data:", e)
+            else:
+                print("No event available.")
         except Exception as e:
-            print('Errore generale nella funzione infos:', e)
+            print("General error in infos method:", e)
 
 
     def postWidgetCreate(self, instance):

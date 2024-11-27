@@ -33,25 +33,26 @@ from enigma import ePicLoad, loadPic, eTimer
 import os
 import sys
 import time
-import re
 
 global my_cur_skin, zaddon
 PY3 = sys.version_info.major >= 3
 thisdir = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('oZsetup'))
 my__skin = config.skin.primary_skin.value.replace('/skin.xml', '')
-cur_skin = 'oZeta-FHD'
-if str(my__skin) == 'oZeta-FHD':
-    my__skin = 'oZeta-FHD'
-OAWeather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('OAWeather'))
-weatherz = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('WeatherPlugin'))
-theweather = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('TheWeather'))
-SkinSelectorD = resolveFilename(SCOPE_PLUGINS, "Extensions/{}".format('SystemPlugins/SkinSelector'))
+cur_skin = 'oZeta-FHD' if my__skin == 'oZeta-FHD' else ''
+if my__skin == 'oZeta-FHD':
+    print("La skin attuale è già oZeta-FHD.")
+else:
+    print("La skin attuale non è oZeta-FHD.")
+
+extensions_dir = "Extensions/"
+OAWeather = resolveFilename(SCOPE_PLUGINS, "{}OAWeather".format(extensions_dir))
+weatherz = resolveFilename(SCOPE_PLUGINS, "{}WeatherPlugin".format(extensions_dir))
+theweather = resolveFilename(SCOPE_PLUGINS, "{}TheWeather".format(extensions_dir))
+SkinSelectorD = resolveFilename(SCOPE_PLUGINS, "SystemPlugins/SkinSelector")
 SkinSelectorE = '/usr/lib/enigma2/python/Screens/SkinSelector.pyo'
 SkinSelectorF = '/usr/lib/enigma2/python/Screens/SkinSelector.pyc'
-zaddon = False
-zaddons = os.path.join(thisdir, 'addons')
-if os.path.exists(zaddons):
-    zaddon = True
+zaddon = os.path.exists(os.path.join(thisdir, 'addons'))
+
 my_cur_skin = False
 _firstStartZ = True
 mvi = '/usr/share/'
@@ -63,7 +64,7 @@ visual_skin = "/etc/enigma2/VisualWeather/apikey.txt"
 visual_api = "5KAUFAYCDLUYVQPNXPN3K24V5"
 thetvdb_skin = "%senigma2/%s/thetvdbkey" % (mvi, cur_skin)
 thetvdbkey = 'D19315B88B2DE21F'
-welcome = 'WELCOME Z USER\nfrom\nLululla and Mmark'
+welcome = 'WELCOME TO Z-USER\nfrom\nLululla and Mmark'
 tarfile = '/tmp/download.tar'
 #  -----------------
 
@@ -73,22 +74,26 @@ if os.path.exists('/usr/lib/enigma2/python/Plugins/Extensions/XStreamity'):
 
 try:
     if my_cur_skin is False:
-        if fileExists(tmdb_skin):
-            with open(tmdb_skin, "r") as f:
-                tmdb_api = f.read()
-        if fileExists(omdb_skin):
-            with open(omdb_skin, "r") as f:
-                omdb_api = f.read()
-        if fileExists(visual_skin):
-            with open(visual_skin, "r") as f:
-                visual_api = f.read()
-        if fileExists(thetvdb_skin):
-            with open(thetvdb_skin, "r") as f:
-                thetvdbkey = f.read()
-        my_cur_skin = True
-except:
+        skin_paths = {
+            "tmdb_api": "/usr/share/enigma2/{}/apikey".format(cur_skin),
+            "omdb_api": "/usr/share/enigma2/{}/omdbkey".format(cur_skin),
+            "thetvdbkey": "/usr/share/enigma2/{}/thetvdbkey".format(cur_skin)
+        }
+        for key, path in skin_paths.items():
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    value = f.read().strip()
+                    if key == "tmdb_api":
+                        tmdb_api = value
+                    elif key == "omdb_api":
+                        omdb_api = value
+                    elif key == "thetvdbkey":
+                        thetvdbkey = value
+                my_cur_skin = True
+except Exception as e:
+    print("Errore nel caricamento delle API:", str(e))
     my_cur_skin = False
-    pass
+
 
 Uri.imagevers()
 #  config section - ===========
@@ -343,7 +348,7 @@ class oZsetup(ConfigListScreen, Screen):
         self['key_red'] = Label(_('Cancel'))
         self['key_green'] = Label(_('Save'))
         self['key_yellow'] = Label('')
-        if str(my__skin) == 'oZeta-FHD':
+        if my__skin == 'oZeta-FHD':
             self['key_yellow'] = Label(_('Preview'))
             self['key_blue'] = Label(_('Restart'))
         # self["key_blue"] = StaticText(self.getSkinSelector() is not None and "Skin" or "")
@@ -432,10 +437,21 @@ class oZsetup(ConfigListScreen, Screen):
             cmd1 = ". /usr/lib/enigma2/python/Plugins/Extensions/oZsetup/dependencies.sh"
             self.session.openWithCallback(self.layoutFinished, Console, title="Checking Python Dependencies", cmdlist=[cmd1], closeOnSuccess=False)
         else:
-            if str(my__skin) != 'oZeta-FHD' and os.path.exists('/usr/share/enigma2/oZeta-FHD'):
-                text = _("ATTENTION!!\nThe Skin is already installed:\nto activate you must choose from:\nmenu-setup-system-skin\nand select it!\nNow you can only update the installation.")
-                self.msg = self.session.openWithCallback(self.passs, MessageBox, text, MessageBox.TYPE_INFO, timeout=5)
+            print('my__skin:', my__skin)
+            skin_path = '/usr/share/enigma2/oZeta-FHD'
+            if my__skin != 'oZeta-FHD' and os.path.exists(skin_path):
+                text = _(
+                    "ATTENZIONE!!\nLa skin è già installata:\n"
+                    "per attivarla, devi scegliere:\n"
+                    "Menu > Setup > Sistema > Skin\n"
+                    "e selezionarla!\n"
+                    "Ora puoi solo aggiornare l'installazione."
+                )
+                self.msg = self.session.openWithCallback(
+                    self.passs, MessageBox, text, MessageBox.TYPE_INFO, timeout=5
+                )
             self.layoutFinished()
+
 
     def layoutFinished(self):
         if os.path.isdir(weatherz):
@@ -482,7 +498,8 @@ class oZsetup(ConfigListScreen, Screen):
             if answer is None:
                 self.session.openWithCallback(self.answercheck, MessageBox, _("This operation checks if the skin has its components (is not sure)..\nDo you really want to continue?"))
             else:
-                if zaddon is True:
+                zaddons = os.path.join(thisdir, 'addons')
+                if os.path.exists(zaddons):
                     from .addons import checkskin
                     self.check_module = eTimer()
                     check = checkskin.check_module_skin()
@@ -1245,8 +1262,7 @@ class oZsetup(ConfigListScreen, Screen):
             return
         self.session.open(MessageBox, _('OZSKIN CONPONENT DONE\nPLEASE RESTART GUI'), MessageBox.TYPE_INFO, timeout=5)
 
-
-#  install update zskin
+    #  install update zskin
     def zSkin(self):
         if fileExists(tarfile):
             os.remove(tarfile)
@@ -1254,9 +1270,9 @@ class oZsetup(ConfigListScreen, Screen):
             self.com = 'http://patbuweb.com/ozeta/ozeta.tar'
             self.dest = self.dowfil()
             Req = RequestAgent()
-            cmd = "wget --no-cache --no-dns-cache -U '%s' -c '%s' -O '%s' --post-data='action=purge' > /dev/null" % (Req, str(self.com), self.dest)
+            cmd = "wget --no-cache --no-dns-cache -U '%s' -c '%s' -O '%s' > /dev/null" % (Req, str(self.com), self.dest)
             if "https" in str(self.com):
-                cmd = "wget --no-cache --no-dns-cache --no-check-certificate -U '%s' -c '%s' -O '%s' --post-data='action=purge' > /dev/null" % (Req, str(self.com), self.dest)
+                cmd = "wget --no-cache --no-dns-cache --no-check-certificate -U '%s' -c '%s' -O '%s' > /dev/null" % (Req, str(self.com), self.dest)
             print('cmd: ', cmd)
             self.session.open(Console, title=_('Installation oZeta Skin'), cmdlist=[cmd, 'sleep 5'])  # , finishedCallback=self.upd_zeta)
         except Exception as e:
@@ -1399,12 +1415,12 @@ class oZsetup(ConfigListScreen, Screen):
                 self.goWeather(True)
         elif os.path.isdir(theweather):
             locdirsave = "/etc/enigma2/TheWeather_last.cfg"
-            location = 'n\A'
+            location = 'n/A'
             if os.path.exists(locdirsave):
                 for line in open(locdirsave):
                     location = line.rstrip()
                 # zLine = str(location)
-                if location != 'n\A':
+                if location != 'n/A':
                     zLine = str(location)
                 # zLine = str(city) + ' - ' + str(location)
                 config.ozeta.city.setValue(zLine)
@@ -1527,11 +1543,11 @@ class oZsetup(ConfigListScreen, Screen):
         try:
             locdirsave = "/etc/enigma2/TheWeather_last.cfg"
             if os.path.exists(locdirsave):
-                location = 'n\A'
+                location = 'n/A'
                 for line in open(locdirsave):
                     location = line.rstrip()
                     locdirsave.close()
-                if location != 'n\A' or location != '':
+                if location != 'n/A' or location != '':
                     zLine = location
                 zLine = str(location)
                 config.ozeta.city.setValue(zLine)
@@ -1703,13 +1719,13 @@ class AutoStartTimerZ:
 
     def __init__(self, session):
         self.session = session
-        global _firstStartZ
         print("*** running AutoStartTimerZ ***")
         if _firstStartZ:
             self.runUpdate()
 
     def runUpdate(self):
         print("*** running update ***")
+        global _firstStartZ
         try:
             # if config.ozeta.update.value is True:  # oZsetup
                 # from .addons import Uri
