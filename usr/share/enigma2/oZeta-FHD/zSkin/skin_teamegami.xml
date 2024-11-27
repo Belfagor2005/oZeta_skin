@@ -1,33 +1,55 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <skin>
+    <!-- **************************************	 -->
+    <!-- Skin oZeta-FHD by mmark v2.0.0		 -->
+    <!-- released for use on Open image		 -->
+    <!-- Currently Tested on EGAMI v10.X	 -->
+    <!-- Don't Remove this Disclaimer		 -->
+    <!-- **************************************	 -->
+    <copyright>
+        <abouth name="oZeta-FHD">
+			author="mmark"
+			license="Open"
+			Support="Egami 10.X"
+			Release="2.0.0 30/03/2024"
+			supporturl="http://e2skin.blogspot.com"
+		</abouth>
+    </copyright>
     <setups>
         <setup key="Audio" image="iconsmenu/audio.png"/>
         <setup key="AutoCam" image="iconsmenu/menu_softcam_settings.png"/>
         <setup key="AutoLanguage" image="iconsmenu/menu_system_autolanguage_setup.png"/>
         <setup key="BirthdayReminderSettings" image="iconsmenu/bday.png"/>
-        <setup key="CISettings" image="iconsmenu/menu_ci_settings.png"/>
+																		
         <setup key="Cardserver" image="iconsmenu/menu_softcam_settings.png"/>
         <setup key="ChannelSelection" image="iconsmenu/menu_system_channelselection_setup.png"/>
         <setup key="CiSelection" image="iconsmenu/menu_ci_selection.png"/>
+        <setup key="CISettings" image="iconsmenu/menu_ci_settings.png"/>
+        <setup key="default" image="iconsmenu/setup.png"/>
         <setup key="Display" image="iconsmenu/menu_display_display_setup.png"/>
+        <setup key="dvdplayer" image="iconsmenu/menu_extended_dvdplayer_setup.png"/>
+        <setup key="EditBirthdaySetting" image="iconsmenu/bday.png"/>
         <setup key="EPG" image="iconsmenu/menu_epg_epg_setup.png"/>
         <setup key="EPGEnhanced" image="iconsmenu/menu_epg_setup_epgenhanced.png"/>
-        <setup key="EPGGraphical" image="iconsmenu/menu_epg_setup_epggraphical.png"/>
+																					 
         <setup key="EPGInfobar" image="iconsmenu/menu_epg_setup_epginfobar.png"/>
         <setup key="EPGInfobarGraphical" image="iconsmenu/menu_epg_setup_epginfobargraphical.png"/>
+        <setup key="EPGGraphical" image="iconsmenu/menu_epg_setup_epggraphical.png"/>
         <setup key="EPGMulti" image="iconsmenu/menu_epg_setup_epgmulti.png"/>
         <setup key="EPGVertical" image="iconsmenu/menu_epg_setup_epgmulti.png"/>
-        <setup key="EditBirthdaySetting" image="iconsmenu/bday.png"/>
-        <setup key="HDMICEC" image="iconsmenu/hdmicec.png"/>
         <setup key="HardDisk" image="iconsmenu/hdd.png"/>
+        <setup key="HDMICEC" image="iconsmenu/hdmicec.png"/>
+														 
         <setup key="Keyboard" image="iconsmenu/menu_extended_keyboard.png"/>
         <setup key="Logs" image="iconsmenu/menu_extended_logs_setup.png"/>
-        <setup key="OSD3D" image="iconsmenu/menu_osd_menu_osd3dsetup.png"/>
         <setup key="OscamInfo" image="iconsmenu/softcam.png"/>
+        <setup key="OSD3D" image="iconsmenu/menu_osd_menu_osd3dsetup.png"/>
+															  
         <setup key="Playback" image="iconsmenu/menu_extended_playback_setup.png"/>
         <setup key="PowerTimer" image="iconsmenu/menu_timermenu_powertimers.png"/>
-        <setup key="RecordTimer" image="iconsmenu/timer.png"/>
         <setup key="Recording" image="iconsmenu/menu_extended_recording_setup.png"/>
+        <setup key="RecordTimer" image="iconsmenu/timer.png"/>
+																					
         <setup key="RemoteButton" image="iconsmenu/menu_system_remote_setup.png"/>
         <setup key="SleepTimer" image="iconsmenu/power_timer.png"/>
         <setup key="SpecialFeatures" image="iconsmenu/menu_extended_specialfeatures_menu.png"/>
@@ -38,8 +60,7 @@
         <setup key="Usage" image="iconsmenu/menu_system_usage_setup.png"/>
         <setup key="UserInterface" image="iconsmenu/menu_osd_menu_user_interface.png"/>
         <setup key="VolumeAdjust" image="iconsmenu/menu_system_AutomaticVolumeAdjustment.png"/>
-        <setup key="default" image="iconsmenu/setup.png"/>
-        <setup key="dvdplayer" image="iconsmenu/menu_extended_dvdplayer_setup.png"/>
+														  
     </setups>
     <menus>
         <menu key="default" image="iconsmenu/default.png"/>
@@ -300,7 +321,6 @@
     <!-- ***************************************************************************************************************** -->
     <!-- ************ MENUS ***************************** MENUS ************************************ MENUS *************** -->
     <!-- ***************************************************************************************************************** -->
-
     <!-- MainMenu OK -->
     <screen name="Menu" position="0,0" size="1920,1080" Title="StandBy Menu" backgroundColor="transparent" flags="wfNoBorder">
         <panel name="MenuTemplate" zPosition="2"/>
@@ -375,7 +395,7 @@
     <screen name="MenuTemplate">
         <panel name="LayerMenu1000"/>
         <panel name="vRBYG-1000"/>
-        <widget name="menuimage" position="940,10" size="100,100" scale="1" alphatest="blend" zPosition="2"/>
+        <widget name="menuimage" position="940,10" size="0,0" scale="1" alphatest="blend" zPosition="2"/>
         <widget source="menu" render="Listbox" position="230,150" size="810,780" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
             <convert type="TemplatedMultiContent">
 				{"templates":
@@ -414,68 +434,7 @@
             <convert type="zMenuDescription"/>
         </widget>
     </screen>
-    
-    <!-- StandardList -->
-    <screen name="mySmallChannelSelection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="standardList1000"/>
-        <panel name="vRGYB-1000"/>
-    </screen>
-    
-    
-    <!-- OS Info -->
-    <screen name="OPEN_SOURCE_INFO" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1000"/>
-        <eLabel text="https://github.com/openatv" position="230,150" size="810,40" font="Regular;26" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1"/>
-        <eLabel text="https://github.com/oe-alliance" position="230,200" size="810,40" font="Regular;26" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1"/>
-    </screen>
-    
-    <!-- Translate Info -->
-    <screen name="TranslationInfo" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1000"/>
-        <panel name="vRGYB-1000"/>
-        <eLabel text="openATV" position="230,150" size="810,50" font="Regular;34" halign="center" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0" zPosition="1"/>
-        <eLabel position="230,210" size="810,3" backgroundColor="#202020" zPosition="2"/>
-        <widget source="TranslationInfo" render="Label" position="230,220" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
-        <widget source="TranslatorName" render="Label" position="230,270" size="810,50" font="Regular;28" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
-    </screen>
-    
-    <!-- Softcam Manager -->
-    <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
-        <panel name="vRGYB-1500"/>
-        <eLabel text="OK  = Installare" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="2"/>
-        <widget source="key_ok" render="Label" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="1"/>
-        <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
-        <widget source="list" render="Listbox" position="230,220" size="1250,700" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1">
-            <convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
-						MultiContentEntryText(pos = (65, 2), size = (1170, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (65, 37), size = (1170, 33), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0x8A8787, color_sel=0xffff00), # index 2 is the description
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 61), size = (0, 0), png = 5), # index 4 is the div pixmap
-					],
-				"fonts": [gFont("Regular",28),gFont("Regular",24)],
-				"itemHeight": 70
-				}
-			</convert>
-        </widget>
-    </screen>
-    
-    
-    
-    
-    
-    <!-- Animazioni -->
-    <screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
-        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
-        <widget source="label1" render="Label" position="20,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
-        <widget source="label2" render="Label" position="399,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
-        <widget source="label3" render="Label" position="782,900" size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1"/>
-        <widget source="label4" render="Label" position="1171,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
-        <widget source="label5" render="Label" position="1552,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
-    </screen>
-    
-    
+
     <!-- Icone Menu -->
     <screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
@@ -499,67 +458,9 @@
         <widget name="pixmap6" position="1615,900" size="250,130" zPosition="1" transparent="1" alphatest="on"/>
     </screen>
     
-    
-    
-    
-    <!-- NumberZap -->
-    <screen name="NumberZap" position="0,70" size="850,200" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
-        <panel name="NumberZapPicon"/>
-    </screen>
-    
-    
-    <!-- NumberZap Picon -->
-    <screen name="NumberZapPicon" position="0,70" size="800,152" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
-        <eLabel position="260,0" size="540,150" backgroundColor="trbluette"/>
-        <widget position="10,10" render="Picon" size="240,132" source="Service" transparent="1" alphatest="blend" zPosition="20">
-            <convert type="ServiceName">Reference</convert>
-        </widget>
-        <widget name="number" position="280,10" size="260,70" halign="left" font="Regular;64" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="10"/>
-        <widget name="servicename" position="280,85" size="830,50" halign="left" font="Regular;46" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="10"/>
-    </screen>
-    
-    
-    <!-- E2 LocationBox -->
-    <screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LocationBoxOld" conditional="textbook"/>
-        <panel name="LocationBoxNew" conditional="fileheading"/>
-    </screen>
-    
-    
-    <screen name="LocationBoxOld" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
-        <panel name="vRGYB-1500"/>
-        <widget name="text" position="230,150" size="500,50" font="Regular;40" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
-        <widget name="targetfreespace" position="1180,150" size="300,50" font="Regular;40" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
-        <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
-        <widget name="target" position="230,220" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1"/>
-        <widget name="textbook" position="230,270" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
-        <eLabel position="230,330" size="1000,2" backgroundColor="#303030"/>
-        <widget name="filelist" position="230,340" size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1"/>
-        <eLabel position="230,750" size="1250,2" backgroundColor="#303030"/>
-        <widget name="booklist" position="230,760" size="1250,210" itemHeight="30" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#303030" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1" zPosition="3"/>
-    </screen>
-    
-    
-    <screen name="LocationBoxNew" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
-        <panel name="vRGYB-1500"/>
-        <widget name="text" position="230,140" size="500,50" font="Regular;36" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
-        <widget name="targetfreespace" position="1180,140" size="300,50" font="Regular;36" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
-        <eLabel position="230,200" size="1250,3" backgroundColor="#303030" zPosition="1"/>
-        <widget name="filelist" position="230,220" size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1"/>
-        <eLabel position="230,630" size="1250,3" backgroundColor="#303030" zPosition="1"/>
-        <widget name="fileheading" position="230,640" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
-        <widget name="bookmarkheading" position="230,680" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1"/>
-        <eLabel position="230,720" size="1250,2" backgroundColor="#303030"/>
-        <widget name="bookmarklist" position="230,740" size="1250,200" itemHeight="40" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1" selection="0" zPosition="3"/>
-        <widget name="quickselect" position="230,1000" size="1000,525" backgroundColor="#000000" foregroundColor="#ffffff" font="Regular;100" halign="center" transparent="1" valign="center" zPosition="+1"/>
-    </screen>
-    
-    
     <!-- HelpMenuNew -->
     <screen name="HelpMenu" position="0,0" size="1920,1080" title="Menu" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1500"/>
+        <!-- <panel name="LayerMenu1500"/> -->
         <panel name="bLogo"/>
         <widget name="buttonlist" position="230,150" size="1000,50" font="Regular;32" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="3"/>
         <widget name="description" position="230,150" size="1000,50" font="Regular;50" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="0" zPosition="2"/>
@@ -641,14 +542,14 @@
 
     <!-- added Egami -->
     <screen name="EGGreenPanel" position="fill" title="EGAMI Green Panel" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500"/>
+        <!-- <panel name="LayerMenu1500"/> -->
         <panel name="vRGYB-1500"/>
         <widget name="list" position="250,224" size="1000,720" font="Regular; 30" zPosition="3" transparent="1" selectionZoom="4" itemHeight="80"/>
         <ePixmap name="" position="1248,400" size="256,256" zPosition="1" pixmap="iconsmenu/setup.png" transparent="1" alphatest="on"/>
     </screen>
     
      <screen name="EGAMIBootImageChoose" position="fill" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1700"/>
+        <!-- <panel name="LayerMenu1700"/> -->
         <panel name="vRGYB-1500"/>
         <eLabel backgroundGradient="grdd,grdl,vertical" cornerRadius="6" position="1050,230" size="6,700" zPosition="88"/>
         <widget name="config" position="250,500" size="700,298" itemHeight="50" enableWrapAround="1" transparent="1" font="Regular; 30"/>
@@ -666,27 +567,9 @@
         <widget name="label8" position="1416,340" size="270,40" font="Regular;30" backgroundColor="background" transparent="1" zPosition="1"/>
         <widget name="label9" position="1112,630" size="570,50" font="Regular;44" backgroundColor="background" transparent="1" zPosition="1"/>
     </screen>
-    
-    <screen name="EGAMIChooseOnLineImage" position="fill" title="EGAMIBoot - Download OnLine Images" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1300"/>
-        <panel name="vRGYB-1500"/>
-        <widget source="list" render="Listbox" position="250,224" size="1000,720" itemHeight="80" enableWrapAround="1" transparent="1" font="Regular; 50">
-            <convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryText(pos = (150, 2), size = (690, 35), font=0, color=0x3589ff, flags = RT_HALIGN_LEFT, text = 0),
-					MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (140, 70), png = 1),
-					MultiContentEntryText(pos = (150, 37), size = (690, 32), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_LEFT, text = 3),
-					],
-					"fonts": [gFont("Regular", 30),gFont("Regular", 28)],
-					"itemHeight": 80
-				}
-			</convert>
-        </widget>
-    </screen>
-    
 
     <screen name="ImageInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
-        <panel name="LayerMenu1700"/>
+        <!-- <panel name="LayerMenu1700"/> -->
         <panel name="vRGYB-1500"/>
         <ePixmap position="900,750" zPosition="2" size="50,50" pixmap="icons/ram.png" alphatest="blend"/>
         <widget source="session.Event_Now" render="Progress" position="980,750" size="600,8" backgroundColor="background90" transparent="1" borderWidth="1" borderColor="mainskincolor" foregroundColor="#00e7c777" zPosition="6">
@@ -711,18 +594,8 @@
         <widget name="image_stb" position="302,762" size="500,148" alphatest="blend" transparent="1" zPosition="1"/>
     </screen>
     
-    
-    <screen name="MultiBootStartupOPT" position="fill" title="MultiBoot STARTUP Selector" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1500"/>
-        <panel name="vRGYB-1500"/>
-        <ePixmap name="" position="248,143" size="416,70" zPosition="88" pixmap="egami/team_logo.png" alphatest="blend"/>
-        <widget source="config" render="Label" position="250,230" size="1000,50" halign="left" transparent="1" font="Regular; 30" backgroundColor="background"/>
-        <widget source="options" render="Label" position="250,280" size="1000,50" halign="left" transparent="1" font="Regular;28" backgroundColor="background" foregroundColor="grey"/>
-        <widget name="description" position="250,330" size="1000,50" transparent="1" font="Regular;24" foregroundColor="yellow" halign="left" backgroundColor="background" valign="center"/>
-    </screen>
-    
     <screen name="AboutOECommit" title="Image Information" position="fill" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1700"/>
+        <!-- <panel name="LayerMenu1700"/> -->
         <panel name="vRGYB-1500"/>
         <widget name="HintText" position="70,165" size="0,0" font="Regular;42" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1"/>
         <widget name="image_stb" position="309,767" alphatest="blend" size="500,148" transparent="1" zPosition="1"/>
@@ -747,16 +620,8 @@
         </widget>
     </screen>
      
-    <screen name="UpdateEGAMI" position="center,center" size="900,300" title="Software update">
-        <widget name="activityslider" position="30,162" size="840,14" backgroundColor="#00e7c777" zPosition="1"/>
-        <widget source="package" render="Label" position="20,25" size="860,90" font="Regular;30" halign="center" valign="center" backgroundColor="background" transparent="1"/>
-        <eLabel position="20,150" size="860,40" backgroundColor="#00e7c777" transparent="1" zPosition="1"/>
-        <widget name="slider" position="25,155" size="850,30" borderColor="#00ff00ff" borderWidth="1" zPosition="1"/>
-        <widget source="status" render="Label" position="20,200" size="860,100" font="Regular;30" halign="center" valign="center" backgroundColor="background" transparent="1"/>
-    </screen>
-    
     <screen name="EGAMIFaq_ListChannel_ListScreen" position="fill" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
-        <panel name="LayerMenu1700"/>
+        <!-- <panel name="LayerMenu1700"/> -->
         <panel name="vRGYB-1500"/>
         <widget name="ContentTitle" position="250,230" size="1000,50" font="Regular; 30" halign="left" valign="center" backgroundColor="background" transparent="1" foregroundColor="yellow"/>
         <widget name="liste" position="250,290" size="1000,400" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" transparent="1"/>
@@ -822,7 +687,6 @@
     
     <screen name="DreamCC" position="0,0" size="1920,1080" title="PB Camd Manager" flags="wfNoBorder" backgroundColor="transparent">
         <widget source="Title" render="Label" position="257,160" size="1102,50" font="Regular; 36" backgroundColor="background" transparent="1" foregroundColor="chselfg" valign="center" zPosition="22" halign="left"/>
-        <panel name="LayerMenu1700-nl"/>
         <eLabel position="1218,960" size="250,45" zPosition="11" font="Regular; 30" halign="left" valign="center" backgroundColor="background" transparent="1" foregroundColor="white" text="Install"/>
         <eLabel position="250,230" size="608,35" transparent="1" halign="center" text="CAM" zPosition="2" font="Regular; 27" backgroundColor="background" foregroundColor="yellow"/>
         <eLabel position="306,960" size="250,45" zPosition="11" font="Regular; 30" halign="left" valign="center" backgroundColor="background" transparent="1" foregroundColor="white" text="Stop"/>
@@ -839,6 +703,81 @@
         <widget name="menu" position="250,280" size="608,528" scrollbarMode="showOnDemand" font="Regular; 28" itemHeight="48" transparent="1"/>
     </screen>
     
+    <!-- ***************************************************************************************************************** -->
+    <!-- ************ PANELS UPDATED ********************************************** PANELS UPDATED *********************** -->
+    <!-- ***************************************************************************************************************** -->
+
+	<!-- mmk Animazioni -->
+	<screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
+	        <ePixmap position="0,830" size="1920,350" pixmap="menu/ormenu.png" transparent="1" alphatest="blend" zPosition="1"/>
+	        <widget source="label1" render="Label" position="20,900"   size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
+	        <widget source="label2" render="Label" position="399,900"  size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
+	        <widget source="label3" render="Label" position="782,900"  size="350,130" font="Regular;36" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFF00" backgroundColor="#1A0F0F0F" transparent="1"/>
+	        <widget source="label4" render="Label" position="1171,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
+	        <widget source="label5" render="Label" position="1552,900" size="350,130" font="Regular;30" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1"/>
+	</screen>
+
+	<!-- mmk Animazioni -->
+	<screen name="MultiBootStartupOPT" position="fill" title="MultiBoot STARTUP Selector" backgroundColor="transparent" flags="wfNoBorder">
+        	<panel name="LayerMenu1500"/>
+	        <panel name="vRGYB-1500"/>
+	        <widget name="description"              position="230,150" size="1050,50" transparent="0" font="Regular;28" foregroundColor="yellow" halign="left" backgroundColor="#202020" valign="center"/>
+    	        <eLabel 				position="230,205" size="1050,3"  backgroundColor="#404040" zPosition="2"/>
+	        <widget source="config"  render="Label" position="230,215" size="1050,150" halign="left" transparent="1" font="Regular;30" backgroundColor="background" />
+	        <widget source="options" render="Label" position="230,280" size="1050,150" halign="left" transparent="1" font="Regular;30" backgroundColor="background" foregroundColor="grey"/>
+	</screen>
+
+        <!-- mmk Softcam Manager -->
+         <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
+    	    <panel name="LayerMenu1500"/>
+    	    <panel name="vRGYB-1500"/>
+    	    <eLabel text="OK  = Installare" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="2"/>
+    	    <widget source="key_ok" render="Label" position="230,150" size="1250,50" font="Regular;32" foregroundColor="yellow" halign="center" backgroundColor="#303030" valign="center" transparent="0" zPosition="1"/>
+    	    <eLabel position="230,210" size="1250,3" backgroundColor="#202020" zPosition="1"/>
+    	    <widget source="list" render="Listbox" position="230,220" size="1250,700" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" backgroundColor="barColor" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1">
+    	        <convert type="TemplatedMultiContent">
+			{"template": [
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+					MultiContentEntryText(pos = (65, 2), size = (1170, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (65, 37), size = (1170, 33), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0x8A8787, color_sel=0xffff00), # index 2 is the description
+					MultiContentEntryPixmapAlphaBlend(pos = (0, 61), size = (0, 0), png = 5), # index 4 is the div pixmap
+				],
+			"fonts": [gFont("Regular",28),gFont("Regular",24)],
+			"itemHeight": 70
+			}
+		</convert>
+    	    </widget>
+    	</screen>
+
+        <!-- mmk Online Image -->
+        <screen name="EGAMIChooseOnLineImage" position="fill" title="EGAMIBoot - Download OnLine Images" backgroundColor="transparent" flags="wfNoBorder"> 
+      	    	<panel name="LayerMenu1300"/>
+		<panel name="vRGYB-1300"/>
+		<widget source="list" render="Listbox" position="250,224" size="1050,720" itemHeight="80" enableWrapAround="1" transparent="1" font="Regular; 50">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (150, 2), size = (690, 35), font=0, color=0x3589ff, flags = RT_HALIGN_LEFT, text = 0),
+				MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (140, 70), png = 1),
+				MultiContentEntryText(pos = (150, 37), size = (690, 32), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_LEFT, text = 3),
+				],
+				"fonts": [gFont("Regular", 30),gFont("Regular", 28)],
+				"itemHeight": 80
+				}
+			</convert>
+		</widget>
+        </screen>
+
+        <!-- mmk Translate Info -->
+    	<screen name="TranslationInfo" position="center,100" size="1900,150" title="About" flags="wfNoBorder" backgroundColor="20000000">
+	    	<widget source="TranslationInfo" render="Label" position="20,20" size="1860,50" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
+	    	<widget source="TranslatorName"  render="Label" position="20,90" size="1860,50" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="1"/>
+        </screen>
+
+    	<!-- mmk OS Info -->
+        <screen name="OPEN_SOURCE_INFO" position="center,50" size="1900,150" title="About" flags="wfNoBorder" backgroundColor="20000000">
+        	<eLabel text="https://github.com/openatv"     position="20,30" size="1860,50" font="Regular;32" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1"/>
+        	<eLabel text="https://github.com/oe-alliance" position="20,90" size="1860,50" font="Regular;32" backgroundColor="black" foregroundColor="white" halign="center" transparent="1" zPosition="1"/>
+        </screen>
 	<!-- lululla -->
 	<screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="LayerMenu1500"/>
@@ -849,6 +788,67 @@
 		<widget name="ecminfo" font="Regular;32" position="239,551" size="1225,391"/>
 	</screen>
 
+	<!-- mmk 03/03/2024 -->	
+        <screen name="UpdateEGAMI" position="center,center" size="900,300" title="Software update">
+	        <widget name="activityslider" position="30,162" size="840,14" backgroundColor="#00e7c777" zPosition="1"/>
+	        <widget source="package" render="Label" position="20,25" size="860,90" font="Regular;30" halign="center" valign="center" backgroundColor="background" transparent="1"/>
+	        <eLabel position="20,150" size="860,40" backgroundColor="#00e7c777" transparent="1" zPosition="1"/>
+	        <widget name="slider" position="25,155" size="850,30" borderColor="#00ff00ff" borderWidth="1" zPosition="1"/>
+	        <widget source="status" render="Label" position="20,200" size="860,100" font="Regular;30" halign="center" valign="center" backgroundColor="background" transparent="1"/>
+        </screen>
+
+	<!-- mmk 03/03/2024 -->	
+        <screen name="NumberZap" position="0,70" size="850,200" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
+	        <panel name="NumberZapPicon"/>
+        </screen>
+    
+	<!-- mmk 03/03/2024 -->	
+        <screen name="NumberZapPicon" position="0,70" size="800,152" title="QuickZap" flags="wfNoBorder" backgroundColor="#10000000">
+	        <eLabel position="260,0" size="540,150" backgroundColor="trbluette"/>
+	        <widget position="10,10" render="Picon" size="240,132" source="Service" transparent="1" alphatest="blend" zPosition="20">
+	            <convert type="ServiceName">Reference</convert>
+	        </widget>
+	        <widget name="number" position="280,10" size="260,70" halign="left" font="Regular;64" backgroundColor="#000000" foregroundColor="yellow" transparent="1" zPosition="10"/>
+	        <widget name="servicename" position="280,85" size="830,50" halign="left" font="Regular;46" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="10"/>
+        </screen>
+
+	<!-- mmk 03/03/2024 -->	
+        <!-- E2 LocationBox -->
+        <screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+	        <panel name="LocationBoxOld" conditional="textbook"/>
+	        <panel name="LocationBoxNew" conditional="fileheading"/>
+        </screen>
+    
+	<!-- mmk 03/03/2024 -->	
+        <screen name="LocationBoxOld" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+	        <panel name="LayerMenu1500"/>
+	        <panel name="vRGYB-1500"/>
+	        <widget name="text" position="230,150" size="500,50" font="Regular;40" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
+	        <widget name="targetfreespace" position="1180,150" size="300,50" font="Regular;40" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
+	        <eLabel position="230,210" size="1250,3" backgroundColor="#303030" zPosition="1"/>
+	        <widget name="target" position="230,220" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1"/>
+	        <widget name="textbook" position="230,270" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
+	        <eLabel position="230,330" size="1250,2" backgroundColor="#303030"/>
+	        <widget name="filelist" position="230,340" size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1"/>
+	        <eLabel position="230,750" size="1250,2" backgroundColor="#303030"/>
+	        <widget name="booklist" position="230,760" size="1250,210" itemHeight="30" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#303030" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1" zPosition="3"/>
+        </screen>
+    
+	<!-- mmk 03/03/2024 -->	
+        <screen name="LocationBoxNew" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
+	        <panel name="LayerMenu1500"/>
+	        <panel name="vRGYB-1500"/>
+	        <widget name="text" position="230,140" size="500,50" font="Regular;36" halign="left" backgroundColor="#000000" foregroundColor="white" transparent="1"/>
+	        <widget name="targetfreespace" position="1180,140" size="300,50" font="Regular;36" halign="right" backgroundColor="#000000" foregroundColor="yellow" transparent="1"/>
+	        <eLabel position="230,200" size="1250,3" backgroundColor="#303030" zPosition="1"/>
+	        <widget name="filelist" position="230,220" size="1250,400" itemHeight="50" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="#ffffff" transparent="1" selectionDisabled="1"/>
+	        <eLabel position="230,630" size="1250,3" backgroundColor="#303030" zPosition="1"/>
+	        <widget name="fileheading" position="230,640" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+	        <widget name="bookmarkheading" position="230,680" size="1250,50" font="Regular;30" backgroundColor="#000000" foregroundColor="ltbluette" transparent="1"/>
+	        <eLabel position="230,720" size="1250,2" backgroundColor="#303030"/>
+	        <widget name="bookmarklist" position="230,740" size="1250,200" itemHeight="40" font="Regular;30" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1" selection="0" zPosition="3"/>
+	        <widget name="quickselect" position="230,1000" size="1000,525" backgroundColor="#000000" foregroundColor="#ffffff" font="Regular;100" halign="center" transparent="1" valign="center" zPosition="+1"/>
+        </screen>
 	<!-- mmk 09/02/2024 -->	
 	<screen name="EgamiMainPanel" position="fill" title="EGAMI Panel - Main Menu" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="LayerMenu1000"/>
@@ -965,7 +965,7 @@
 		<widget source="session.CurrentService" render="Label" position="230,360" size="830,50" font="Regular;36" halign="left" foregroundColor="yellow" backgroundColor="background" transparent="1" zPosition="1" valign="top">
 		    <convert type="EGExtraInfo">E-C-N</convert>
 		</widget>
-		<widget name="ecminfo" position="230,420" size="830,460" font="Regular; 28" zPosition="2" foregroundColor="#b0b0b0" backgroundColor="background" transparent="1" valign="top" halign="left"/>
+		<widget name="ecminfo" position="230,410" size="830,460" font="Regular; 28" zPosition="2" foregroundColor="#b0b0b0" backgroundColor="background" transparent="1" valign="top" halign="left"/>
 		<ePixmap position="1430,375" size="80,40" pixmap="icons/ico_crypt_off.png" alphatest="blend" zPosition="4"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_crypt_on.png" position="1430,375" zPosition="5" size="80,40" alphatest="blend">
 			    <convert type="ServiceInfo">IsCrypted</convert>
@@ -975,25 +975,25 @@
 		<widget name="lb_provider"    position="770,430" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="white"  backgroundColor="background" transparent="1"/>
 		<widget name="lb_aspectratio" position="770,530" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="yellow" backgroundColor="background" transparent="1"/>
 		<widget name="lb_videosize"   position="770,480" size="710,40" font="Regular; 30" halign="right" zPosition="2" foregroundColor="white"  backgroundColor="background" transparent="1"/>
-		<ePixmap position="230,775" zPosition="2" size="50,50" pixmap="icons/ram.png" alphatest="blend" />
-		<widget source="session.Event_Now" render="Progress" position="290,790" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
+		<ePixmap position="230,785" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/ram.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="290,800" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="EGLayoutInfo">MemTotal</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="290,800" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
+		<widget source="session.CurrentService" render="Label" position="290,810" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 			<convert type="EGLayoutInfo">MemTotal</convert>
 		</widget>
-		<ePixmap position="230,830" zPosition="2" size="50,50" pixmap="icons/Cpu.png" alphatest="blend" />
-		<widget source="session.Event_Now" render="Progress" position="290,840" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
+		<ePixmap position="230,840" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/cpu.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="290,850" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="CpuUsage">$0</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="290,845" size="500,46" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
+		<widget source="session.CurrentService" render="Label" position="290,855" size="500,46" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 			<convert type="CpuUsage">CPU:$0 (Core #1: $1, Core #2: $2)</convert>
 		</widget>
-		<ePixmap position="230,887" zPosition="2" size="50,50" pixmap="icons/flash.png" alphatest="blend" />
-		<widget source="session.Event_Now" render="Progress" position="290,900" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
+		<ePixmap position="230,897" zPosition="2" size="50,50" pixmap="oDreamy-FHD/icons/flash.png" alphatest="blend" />
+		<widget source="session.Event_Now" render="Progress" position="290,910" size="500,8" foregroundColor="ltbluette" backgroundColor="header" transparent="1" borderColor="#808080" borderWidth="1" zPosition="6">
 			<convert type="EGLayoutInfo">FleshInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="290,910" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
+		<widget source="session.CurrentService" render="Label" position="290,920" size="500,26" halign="left" valign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="header" zPosition="6">
 			<convert type="EGLayoutInfo">Flesh</convert>
 		</widget>
 	</screen>
@@ -1022,17 +1022,19 @@
         	<widget name="a_red"    position="1000,90" size="70,70" zPosition="1" pixmap="icons/ared.png"    alphatest="on"/>
         	<widget name="a_yellow" position="1000,90" size="70,70" zPosition="1" pixmap="icons/ayellow.png" alphatest="on"/>
         	<widget name="a_green"  position="1000,90" size="70,70" zPosition="1" pixmap="icons/agreen.png"  alphatest="on"/>
-        	<widget name="feedstatusOFF" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
-        	<widget name="feedstatusRED" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
-        	<widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
-        	<widget name="feedstatusGREEN" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1"/>
+        	<widget name="feedstatusOFF" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="white" backgroundColor="lheader" transparent="1"/>
+        	<widget name="feedstatusRED" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="white" backgroundColor="lheader" transparent="1"/>
+        	<widget name="feedstatusYELLOW" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="white" backgroundColor="lheader" transparent="1"/>
+        	<widget name="feedstatusGREEN" position="1043,1123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="white" backgroundColor="lheader" transparent="1"/>
         </screen>
 	
 	<!-- mmk 10/02/2024 -->	
-	<screen name="EGConnectionAnimation" position="1600,0" size="300,280" title="EGAMI" backgroundColor="#20000000" flags="wfNoBorder" zPosition="99">
-		<widget name="connect" position="center,20" size="150,150" transparent="1" scale="1" zPosition="30" 
+	<screen name="EGConnectionAnimation" position="center,center" size="600,340" title="EGAMI" backgroundColor="#FF000000" flags="wfNoBorder" zPosition="99">
+        	<eLabel position="0,0" size="600,340" backgroundColor="#40000000" zPosition="1" cornerRadius="10" />
+        	<eLabel position="20,20" size="560,300" backgroundColor="#20000000" zPosition="1" cornerRadius="10" />
+		<widget name="connect" position="center,30" size="150,150" transparent="1" scale="1" zPosition="30" 
 			pixmaps="icons/ared.png,icons/agreen.png,icons/ayellow.png,icons/ared.png,icons/agreen.png,icons/ayellow.png,icons/agreen.png,icons/agreen.png,icons/agreen.png" alphatest="blend"/>
-		<widget name="lab1" position="10,190" halign="center" size="280,80" foregroundColor="yellow" backgroundColor="background" font="Regular; 30" valign="center" transparent="1" zPosition="3" />
+		<widget name="lab1" position="30,200" halign="center" size="540,80" foregroundColor="yellow" backgroundColor="background" font="Regular; 32" valign="center" transparent="1" zPosition="3" />
 	</screen>
 
 	<!-- mmk 10/02/2024 -->	
@@ -1200,15 +1202,11 @@
 	</screen>
     
 	<!-- mmk 10/02/2024 -->	
+	<!-- mmk 10/02/2024 -->	
         <screen name="EGAMISwap" position="fill" title="EGAMI Swap" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="LayerMenu1000"/>
 	        <panel name="vRGYB-1000"/>
-		<widget name="label1" position="230,140" size="810,50" zPosition="1" halign="left" font="Regular;32" backgroundColor="#202020" transparent="0"/>
-		<eLabel position="230,200" size="810,3" backgroundColor="#303030" zPosition="2"/>
-		<widget name="label2" position="230,210" size="810,40" zPosition="1" halign="left" font="Regular;30" foregroundColor="yellow"  backgroundColor="green" transparent="1"/>
-		<widget name="label3" position="230,260" size="810,40" zPosition="1" halign="left" font="Regular;30" foregroundColor="yellow"  backgroundColor="bluette" transparent="1"/>
-		<widget name="lab1" position="230,260" size="810,600" font="Regular;32" halign="left" valign="top" itemHeight="50" transparent="1" zPosition="2" backgroundColorSelected="barColor" 
-			scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#808080" scrollbarSliderForegroundColor="ltbluette" scrollbarWidth="5" />
+		<widget name="lab1" position="230,140" size="810,600" font="Regular;32" halign="left" valign="top" itemHeight="50" backgroundColor="#000000" foregroundColor="white" transparent="1" zPosition="2" />
         </screen>
     
 	<!-- mmk 10/02/2024 -->	
@@ -1221,23 +1219,23 @@
     
 	<!-- mmk 10/02/2024 -->	
 	<screen name="EGEnigma2ConfigInfo" position="fill" title="EGAMI Enigma2 Config" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="LayerMenu1300"/>
+		<panel name="LayerMenu1700"/>
 		<panel name="bLogo"/>
-		<widget name="menu" position="250,140" size="1050,700" itemHeight="50" transparent="1" font="Regular; 30"/>
+		<widget name="menu" position="230,140" size="1450,700" itemHeight="50" transparent="1" font="Regular; 28"/>
 	</screen>
     
 	<!-- mmk 10/02/2024 -->	
 	<screen name="EGProcessInfo" position="fill" title="EGAMI Process Informations" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="LayerMenu1300"/>
+		<panel name="LayerMenu1700"/>
 	        <panel name="vRGYB-1300"/>
-		<widget name="menu" position="250,140" size="1050,700" itemHeight="50" transparent="1" font="Regular; 30"/>
+		<widget name="menu" position="230,140" size="1450,700" itemHeight="50" transparent="1" font="Regular; 28"/>
 	</screen>
     
 	<!-- mmk 10/02/2024 -->	
 	<screen name="EGKernelInfo" position="fill" title="EGAMI Kernel Informations" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="LayerMenu1300"/>
+		<panel name="LayerMenu1700"/>
 		<panel name="bLogo"/>
-		<widget name="menu" position="250,140" size="1050,700" itemHeight="50" transparent="1" font="Regular; 30"/>
+		<widget name="menu" position="230,140" size="1450,700" itemHeight="50" transparent="1" font="Regular; 28"/>
 	</screen>
     
 	<!-- mmk 10/02/2024 -->	
@@ -1429,6 +1427,291 @@
 	    <widget name="updateon" position="1080,30" size="600,100" font="Regular;26" halign="right" valign="center" foregroundColor="#FFFF00" backgroundColor="#10000000" transparent="1" zPosition="2"/>
 	    <widget name="text_info" position="230,150" size="1450,770" font="Regular;30" backgroundColor="#20000000" transparent="1"/>
         </screen>
-        
+	<!-- mmk 19/02/2024 -->	
+	<screen name="introvod" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder" >
+  	    <widget name="splash" position="center,center" size="1000,280" pixmap="oDreamy-FHD/icons/VOD.png" alphatest="blend" transparent="1" zPosition="2" />
+	</screen>
+
+	<!-- mmk 19/02/2024 -->	
+	<screen name="VodWatched" position="0,0" size="1920,1080" title="VoD list watched" flags="wfNoBorder" zPosition="2" >
+	    <!-- widget name="vod_backdrop" position="0,0" size="1920,1080" zPosition="-2" /-->
+  	    <!-- ePixmap position="0,0" size="1920,1080" pixmap="menu/panels/backvod.png" zPosition="-1" alphatest="blend" /-->
+  	    <ePixmap position="0,0" size="1920,1080" pixmap="menu/panels/bakvod2.jpg" zPosition="-1" alphatest="blend" />
+	    <ePixmap position="30,15" size="83,65" pixmap="oDreamy-FHD/icons/list.png" alphatest="blend" zPosition="2" />
+ 	    <eLabel position="35,125"   size="400,595" backgroundColor="yellow"  cornerRadius="15" zPosition="-1"/>
+	    <widget name="vod_cover" position="40,130" cornerRadius="15" size="390,585" transparent="1" zPosition="2" />
+	    <ePixmap position="30,15" size="83,65" pixmap="oDreamy-FHD/icons/list.png" alphatest="blend" zPosition="2" />
+	    <widget source="Title" render="Label" position="130,5" size="900,95" font="Regular;55" halign="left" valign="center" foregroundColor="ltbluette" backgroundColor="header" transparent="1" zPosition="1" />
+            <widget source="global.CurrentTime" render="Label" position="1600,5" size="300,95" font="Regular;30" halign="right" valign="center" foregroundColor="#808080" backgroundColor="#101010" transparent="1" zPosition="5">
+                <convert type="ClockToText">Format %A %d %B</convert>
+            </widget>
+ 	    <eLabel position="35,735"   size="400,5"   backgroundColor="#505050" zPosition="1"/>
+            <ePixmap pixmap="buttons/button_red.png"   position="35,770" size="30,30" zPosition="1" alphatest="blend"/>
+            <ePixmap pixmap="buttons/button_green.png" position="35,820" size="30,30" zPosition="1" alphatest="blend"/>
+            <widget  name="key_red"   position="75,770" size="250,30" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+            <widget  name="key_green" position="75,820" size="250,30" font="Regular;28" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+	    <widget name="list" position="520,130" size="850,675" font="Regular;30" itemHeight="45" scrollbarRadius="5" scrollbarMode="showOnDemand" backgroundColorSelected="bluette" itemCornerRadius="5" 
+	    	scrollbarForegroundColor="ltbluette" scrollbarBorderWidth="1" scrollbarBorderColor="ltbluette" scrollbarWidth="8" backgroundColor="#000000" transparent="1" />
+	    <widget name="countrytxt" position="1420,130" size="200,32" font="Regular;28" halign="left" foregroundColor="#49bbff" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="country"    position="1420,165" size="460,32" font="Regular;28" halign="left" foregroundColor="white"   backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="yearstxt"   position="1420,215" size="100,32" font="Regular;28" halign="left" foregroundColor="#49bbff" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="years"      position="1520,215" size="200,32" font="Regular;28" halign="left" foregroundColor="white"   backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="genretxt"   position="1420,265" size="460,32" font="Regular;28" halign="left" foregroundColor="#49bbff" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="genre"      position="1420,300" size="460,32" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="casttxt"    position="1420,350" size="460,32" font="Regular;30" halign="left" foregroundColor="#49bbff" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget name="cast"       position="1420,385" size="460,420" font="Regular;25" halign="left" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="2" />
+ 	    <eLabel position="520,895"   size="1380,5" backgroundColor="#505050"  zPosition="-1"/>
+	    <widget name="descriptiontxt" position="520,850" size="300,40" font="Regular;35" halign="left" foregroundColor="#49bbff" backgroundColor="#10000000" transparent="1" zPosition="2" />
+	    <widget source="description"  position="520,905" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" foregroundColor="white" 
+	    	    backgroundColor="#10000000" size="1370,160" font="Regular;28" valign="center" halign="center" transparent="1" zPosition="2" />
+	</screen>
+
+	<!-- mmk 19/02/2024 -->	
+	<screen name="VodDownloaded" position="0,0" size="1920,1080" title="VoD list watched" flags="wfNoBorder" zPosition="2" >
+	    <panel name="VodWatched"/>
+	</screen>
+
+	<!-- mmk 19/02/2024 -->	
+	<screen name="SearchVod" position="fill" title="Video On Demand" flags="wfNoBorder" zPosition="2" >
+	    <panel name="VodWatched"/>
+            <ePixmap pixmap="buttons/button_red.png"    position="35,770" size="30,30" zPosition="1" alphatest="blend"/>
+            <ePixmap pixmap="buttons/button_green.png"  position="405,770" size="30,30" zPosition="1" alphatest="blend"/>
+            <ePixmap pixmap="buttons/button_blue.png"   position="35,820" size="30,30" zPosition="1" alphatest="blend"/>
+            <ePixmap pixmap="buttons/button_yellow.png" position="405,820" size="30,30" zPosition="1" alphatest="blend"/>
+            <widget  name="key_red"    position="75,770" size="250,30"  font="Regular;26" halign="left"  valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+            <widget  name="key_green"  position="145,770" size="250,30" font="Regular;26" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+            <widget  name="key_blue"   position="75,820" size="250,30"  font="Regular;26" halign="left"  valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+            <widget  name="key_yellow" position="145,820" size="250,30" font="Regular;26" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+ 	    <eLabel position="35,880"   size="400,5"   backgroundColor="#505050" zPosition="1"/>
+            <ePixmap pixmap="buttons/key_epg.png" position="35,910" size="53,38" zPosition="1" alphatest="blend"/>
+            <widget  name="EpgDownloader"   position="100,912" size="250,30" font="Regular;26" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1"/>
+            <ePixmap pixmap="buttons/key_tv.png"  position="35,960" size="53,38" zPosition="1" alphatest="blend"/>
+  	    <widget name="ButtonTv" position="100,962" size="200,30" font="Regular;26" halign="left" valign="center" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+   	    <widget source="progresstext" render="Label" position="1060,850" size="800,40" zPosition="2" font="Regular;28" valign="center" halign="right" foregroundColor="#ecbb41" backgroundColor="header" transparent="1"/>
+	</screen>
+
+	<!-- mmk 19/02/2024 -->
+	<screen name="SearchPlayer" title="TimeShift" position="0,0" size="1920,1080"  backgroundColor="transparent" flags="wfNoBorder">
+	    <widget name="PTSSeekBack"    position="25,43"   size="0,0" pixmap="oDreamy-FHD/icons/slider_back.png" alphatest="blend" zPosition="4" />
+	    <widget name="PTSSeekPointer" position="10,40"   size="0,0" pixmap="oDreamy-FHD/icons/position_pointer2.png" alphatest="blend" zPosition="4" />
+	    <widget name="eventname"      position="75,60"   size="0,0" font="Regular;18" halign="center" foregroundColor="bluette" backgroundColor="header" transparent="1" zPosition="2" />
+	    <widget name="speed"          position="800,70"  size="0,0" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="header" transparent="1" zPosition="1" />
+	    <widget name="statusicon"     position="331,779" size="0,0" pixmaps="oDreamy-FHD/icons/play.png,oDreamy-FHD/icons/pause.png,oDreamy-FHD/icons/stop.png,oDreamy-FHD/icons/forward.png,oDreamy-FHD/icons/backward.png,oDreamy-FHD/icons/slow.png" zPosition="5" alphatest="blend" />
+	    <eLabel position="0,0"   size="1920,310" backgroundColor="#50000000" zPosition="-2" />
+	    <widget source="session.CurrentService" render="Label" position="535,30" size="1350,326" font="Regular;28" foregroundColor="white" backgroundColor="header" zPosition="2" transparent="1" halign="left">
+	    	<convert type="EGDescr">DESCRIPTION</convert>
+	    </widget>
+	    <eLabel position="0,850" size="1920,230" backgroundColor="#50000000" zPosition="-2"/>
+	    <eLabel position="0,930" size="1560,70"  backgroundColor="#30000000" zPosition="-2"/>
+	    <eLabel position="1560,850" size="5,230" backgroundColor="#FF000000" zPosition="-2"/>
+	    <ePixmap pixmap="oDreamy-FHD/icons/no_coverlives.png" position="70,70" size="185,60" zPosition="1" alphatest="blend" transparent="1" />
+	    <eLabel position="1615,385" size="290,447" backgroundColor="yellow" cornerRadius="15" zPosition="-1"/>
+	    <ePixmap pixmap="oDreamy-FHD/icons/no_coverlives.png" position="1690,490" size="185,60" zPosition="1" alphatest="blend" transparent="1" />
+	    <widget name="cover" position="1620,390" size="280,437" cornerRadius="15" transparent="1" zPosition="2" />
+	    <widget source="session.CurrentService" position="30,30" size="457,267" cornerRadius="15" render="EGPosterVod" zPosition="3" alphatest="blend" transparent="1" />
+	    <widget source="session.CurrentService" render="DRRunningText" options="movetype=running,startpoint=0,direction=left,steptime=0,repeat=0,always=0,oneshot=0,startdelay=0,wrap" 
+	    	position="30,855" size="1400,68" font="Regular;54" noWrap="1" foregroundColor="ltbluette" borderColor="black" borderWidth="2" backgroundColor="header" transparent="1" zPosition="3">
+	        <convert type="ServiceName">Name</convert>
+	    </widget>
+	    <widget source="session.CurrentService" render="Label" position="30,935" size="160,55" font="Regular;38" halign="left" valign="center" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="3">
+	        <convert type="ServicePosition">Position</convert>
+	    </widget>
+	    <widget source="session.CurrentService" render="Progress" position="200,960" size="1150,10"  foregroundColor="ltbluette" backgroundColor="barColor" zPosition="2">
+	        <convert type="ServicePosition">Position</convert>
+	    </widget>
+	    <widget source="session.CurrentService" render="Label" position="1310,935" size="290,55" font="Regular;37" halign="center" valign="center" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="3">
+	        <convert type="ServicePosition">Remaining</convert>
+	    </widget>
+	    <ePixmap alphatest="blend" pixmap="oDreamy-FHD/icons/audio_off.png" transparent="1" position="120,1021" size="80,38" />
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/audio_on.png" position="120,1021" size="80,38" transparent="1" render="Pixmap" source="session.CurrentService" zPosition="2">
+	    	<convert type="ServiceInfo">AudioTracksAvailable</convert>
+	    <convert type="ConditionalShowHide" />
+	    </widget>
+	    <ePixmap alphatest="blend" pixmap="oDreamy-FHD/icons/sub_off.png" transparent="1" position="30,1019" size="80,40" />
+	    <widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy-FHD/icons/sub_on.png" transparent="1" position="30,1019" size="80,40" alphatest="blend" zPosition="2">
+	    	<convert type="ServiceInfo">SubtitlesAvailable</convert>
+	    	<convert type="ConditionalShowHide" />
+	    </widget>
+	    <ePixmap alphatest="blend" pixmap="oDreamy-FHD/icons/dolby_off.png" transparent="1" position="210,1020" size="80,40" />
+	    <widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy-FHD/icons/dolby_on.png" alphatest="blend" transparent="1" position="210,1020" size="80,40" zPosition="2">
+	  	  <convert type="ServiceInfo">IsMultichannel</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/480.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">0,480</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/sd_on.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">481,576</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/sd_on.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">577,719</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/hd_on.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">720,1279</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/fhd_on.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">1280,1920</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget alphatest="blend" pixmap="oDreamy-FHD/icons/uhd_on.png" position="300,1020" render="Pixmap" size="78,39" source="session.CurrentService" zPosition="2">
+	  	  <convert type="ServiceInfo">VideoWidth</convert>
+	  	  <convert type="ValueRange">1921,3840</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+	    <ePixmap pixmap="oDreamy-FHD/icons/vpnoff.png" position="385,1021" size="60,32" alphatest="blend" transparent="1" />
+	    <widget source="session.CurrentService" render="Pixmap" pixmap="oDreamy-FHD/icons/vpnon.png" position="385,1021" size="60,32" zPosition="2" alphatest="blend">
+	  	  <convert type="EGVpn">vpn</convert>
+	  	  <convert type="ConditionalShowHide" />
+	    </widget>
+            <widget render="VideoSize" source="session.CurrentService" position="475,1023" size="150,28" backgroundColor="#000000" font="Regular;24" foregroundColor="ltbluette" halign="left" transparent="1" zPosition="1"/>
+	    <widget name="state" position="1580,840" size="340,100" font="Regular;80" halign="left" valign="center" foregroundColor="black" borderColor="white" borderWidth="3" backgroundColor="header" transparent="1" zPosition="2" />
+	    <eLabel position="1580,940" size="330,5" backgroundColor="#202020" zPosition="2"/>
+	    <eLabel text="1"  position="1580,950"  size="30,35" font="Regular;28" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text="4 " position="1580,990"  size="30,35" font="Regular;28" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text="7"  position="1580,1030" size="30,35" font="Regular;28" foregroundColor="white" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text=" [ -10s ]" position="1600,950"  size="120,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text=" [ -1m ]"  position="1600,990"  size="120,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text=" [ -5m ]"  position="1600,1030" size="120,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text="3 " position="1770,950" size="30,35" font="Regular;28" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text="6" position="1770,990"  size="30,35" font="Regular;28" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text="9" position="1770,1030" size="30,35" font="Regular;28" foregroundColor="red" backgroundColor="#10000000" transparent="1" zPosition="1" />
+   	    <eLabel text=" [ +10s ]" position="1790,950"  size="130,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text=" [ +1m ]"  position="1790,990"  size="130,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	    <eLabel text=" [ +5m ]"  position="1790,1030" size="130,35" font="Regular;28" foregroundColor="ltbluette" backgroundColor="#10000000" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardConfig" position="0,0" size="1920,1080" backgroundColor="#ff111111" flags="wfNoBorder">
+	    <panel name="LayerMenu1700-nl"/>
+	    <panel name="vRGYB-1000"/>
+	    <panel name="k-MI-1700"/>
+	    <widget name="logo_wireguard" position="230,30" size="420,75" alphatest="blend" transparent="1" zPosition="1"/>
+	    <widget name="description" position="230,140" size="1330,100" halign="center" valign="center" backgroundColor="#202020" transparent="0" foregroundColor="yellow" font="Regular;28" />
+	    <ePixmap position="1580,140" size="100,100" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Wireguard/skin/fhd/icons/wireguard_logo.png" alphatest="blend" transparent="1" zPosition="1" scale="1" />
+ 	    <eLabel position="230,250" size="1450,5"   backgroundColor="#404040" zPosition="1"/>
+	    <widget name="config" position="230,260" size="1450,675" font="Regular;28" itemHeight="45" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/FlashOnline/skin/fhd/menu/freccia.png" 
+	     	textOffset="65,2" scrollbarMode="showOnDemand" backgroundColorSelected="barColor" foregroundColorSelected="#49bbff" backgroundColor="#20000000" foregroundColor="#ffffff" transparent="1"/>
+            <eLabel text="Plugin Version" position="1425,40" size="250,40" font="Regular;30" backgroundColor="black" foregroundColor="#606060" halign="right" transparent="1" zPosition="1"/>
+	    <widget name="Version" position="1425,75" size="250,40" backgroundColor="#000000" foregroundColor="yellow" font="Regular;30" halign="right" zPosition="2" transparent="1"/>
+	    <widget name="HelpWindow" position="230,700" size="1,1" transparent="1" />
+	</screen>
+       
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardScreenDns" position="0,0" size="1920,1080" backgroundColor="#ff111111" flags="wfNoBorder">
+	    <panel name="LayerMenu1500-nl"/>
+	    <panel name="vRGYB-1000"/>
+	    <widget name="logo_wireguard" position="230,30" size="420,75" alphatest="blend" transparent="1" zPosition="1"/>
+            <eLabel text="Plugin Version" position="1225,40" size="250,40" font="Regular;30" backgroundColor="black" foregroundColor="#606060" halign="right" transparent="1" zPosition="1"/>
+	    <widget name="Version" position="1225,75" size="250,40" backgroundColor="#000000" foregroundColor="yellow" font="Regular;30" halign="right" zPosition="2" transparent="1"/>
+ 	    <widget name="list" position="230,140" size="1250,675" font="Regular;32" itemHeight="45" foregroundColor="#ffffff" backgroundColor="#000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#178a9e" 
+ 	    	scrollbarMode="showOnDemand" scrollbarForegroundColor="#178a9e" scrollbarSliderBorderWidth="1" scrollbarWidth="10" zPosition="1" transparent="1"/>
+	    <widget name="CheckKey" position="230,140" size="1250,720" backgroundColor="#000000" foregroundColor="#178a9e" font="Regular;40" halign="center" zPosition="2" transparent="1"/>
+	</screen>
+
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardScreen" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+	    <panel name="LayerMenu1700-nl"/>
+	    <panel name="vRGYB-1000"/>
+	    <widget name="logo_wireguard" position="230,30" size="420,75" alphatest="blend" transparent="1" zPosition="1"/>
+ 	    <widget name="updateon"  position="1390,40" size="600,100" font="Regular;35" halign="center" valign="center" foregroundColor="red" backgroundColor="#000000" transparent="1" zPosition="2"/>
+            <eLabel text="Plugin Version" position="1350,75" size="250,40" font="Regular;30" backgroundColor="black" foregroundColor="#606060" halign="right" transparent="1" zPosition="1"/>
+	    <widget name="Version" position="1580,75" size="100,40" backgroundColor="#000000" foregroundColor="yellow" font="Regular;30" halign="right" zPosition="2" transparent="1"/>
+	    <widget name="logo"    position="1410,260" size="270,70" alphatest="blend" transparent="1" zPosition="2" scale="1" />
+ 	    <eLabel position="230,135" size="1450,100" backgroundColor="#202020" />
+  	    <widget name="CheckKey"  position="240,135"  size="1240,100" backgroundColor="#000000" foregroundColor="yellow"    font="Regular;28" halign="left"   valign="center" transparent="1" zPosition="2" />
+	    <widget name="vpnLoad"   position="240,135"  size="1240,100" backgroundColor="#000000" foregroundColor="ltbluette" font="Regular;32" halign="left"   valign="center" transparent="1" zPosition="2" />
+	    <widget name="TotServer" position="240,135"  size="1140,100" backgroundColor="#000000" foregroundColor="yellow"    font="Regular;36" halign="left"   valign="center" transparent="1" zPosition="2" />
+  	    <widget name="vpnInfo"   position="1370,145" size="300,40"   backgroundColor="#202020" foregroundColor="white"     font="Regular;30" halign="right"  valign="center" transparent="1" zPosition="2" />
+	    <widget name="provLabel" position="1370,185" size="300,40"   backgroundColor="#202020" foregroundColor="white"     font="Regular;30" halign="right"  valign="center" transparent="1" zPosition="2" />
+ 	    <eLabel position="230,242" size="1450,3" backgroundColor="#303030" zPosition="1"/>
+  	    <widget name="list" position="230,255" size="1170,630" font="Regular;28" itemHeight="45" foregroundColor="#ffffff" backgroundColor="#000000" foregroundColorSelected="#ffffff" 
+  	    	backgroundColorSelected="barColor" scrollbarMode="showOnDemand" scrollbarForegroundColor="ltbluette" scrollbarSliderBorderWidth="1" scrollbarWidth="10" zPosition="1" transparent="1"/>
+	    <widget name="flags"     position="230,910"  size="60,30"  alphatest="blend" transparent="1" zPosition="1" scale="1" />
+	    <widget name="vpnStatus" position="300,910"  size="250,40" font="Regular;29" halign="left"  foregroundColor="green"     backgroundColor="#000000" transparent="1" zPosition="2" />
+	    <widget name="ip"        position="560,910"  size="330,40" font="Regular;29" halign="left"  foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="2" />
+	    <widget name="ping_text" position="900,910"  size="250,40" font="Regular;29" halign="left"  foregroundColor="yellow"    backgroundColor="#000000" transparent="1" zPosition="2" />
+            <ePixmap pixmap="oZeta-FHD/buttons/80/key_menu.png" position="1600,980" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
+	    <widget name="menu" position="1390,979" size="0,0" backgroundColor="#000000" foregroundColor="white" font="Regular;28" halign="right" valign="center" zPosition="1" transparent="1"/>
+	    <widget name="pluginupdate" position="1390,979" size="200,35" backgroundColor="#000000" foregroundColor="white" font="Regular;28" halign="right" valign="center" zPosition="1" transparent="1"/>
+            <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1600,1030" size="80,35" alphatest="blend" scale="1" zPosition="10"/>
+	    <widget name="keyDns" position="1390,1029" size="0,0" backgroundColor="#000000" foregroundColor="white" font="Regular;30" halign="center" valign="center" zPosition="1" transparent="1"/>
+	    <widget name="CheckDns" position="1390,1029" size="200,35" backgroundColor="#000000" foregroundColor="white" font="Regular;28" halign="right" valign="center" zPosition="1" transparent="1"/>
+	    <widget name="logogreen" position="1364,800" size="0,0" alphatest="blend" transparent="1" zPosition="2"/>
+	</screen>
+
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardSpeedtest" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+	    <panel name="LayerMenu1500-nl"/>
+	    <panel name="vRGYB-1000"/>
+ 	    <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Wireguard/skin/fhd/buttons/lan.png" position="230,20" size="90,90" zPosition="2" scale="1" alphatest="blend" transparent="1">
+ 		<convert type="WireRouteInfo">Lan</convert>
+ 		<convert type="ConditionalShowHide" />
+ 	    </widget>
+ 	    <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Wireguard/skin/fhd/buttons/wifi.png" position="230,20" size="90,90" zPosition="2" scale="1" alphatest="blend" transparent="1" >
+ 		<convert type="WireRouteInfo">Wifi</convert>
+ 		<convert type="ConditionalShowHide" />
+ 	    </widget>
+	    <widget source="session.CurrentService" render="Label" position="720,30" size="730,50" halign="right" font="Regular;32" foregroundColor="#ffffff" backgroundColor="#000000" zPosition="3" transparent="1" >
+		<convert type="WireRouteInfo">Vpn</convert>
+ 		<convert type="ConditionalShowHide" />
+	    </widget>
+	    <widget name="ip"   position="340,50" size="850,200" font="Regular;36" foregroundColor="#ffffff" backgroundColor="#20000000" transparent="1" halign="left" zPosition="10" />
+ 	    <eLabel position="230,140" size="1250,90" backgroundColor="#202020" />
+	    <widget name="data" position="230,145" size="1250,80" font="Regular;32" foregroundColor="yellow" backgroundColor="#000000" transparent="1" halign="center" valign="center" zPosition="4" />
+ 	    <eLabel position="230,235" size="1250,3"  backgroundColor="#202020" />
+            <ePixmap pixmap="oZeta-FHD/egami/ookdown.png" position="360,260" size="181,150" alphatest="blend" />
+	    <widget name="download" position="300,420" size="300,60" font="Regular;40" foregroundColor="#51fff7" backgroundColor="#000000" transparent="1" halign="center" zPosition="4" />
+  	    <widget source="session.CurrentService" render="Label" position="300,485" size="300,60" font="Regular;40" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" halign="center"  zPosition="4">
+    	 	<convert type="WireNetSpeedInfo">RC</convert>
+  	    </widget>
+            <ePixmap pixmap="oZeta-FHD/egami/ookup.png" position="1180,260" size="181,150" alphatest="blend" />
+  	    <widget name="upload" position="1120,420" size="300,60" font="Regular;40" foregroundColor="#dc87ff" backgroundColor="#000000" transparent="1" halign="center" zPosition="4" />
+	    <widget source="session.CurrentService" render="Label" position="1120,485" size="300,60" font="Regular;40" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" halign="center"  zPosition="4">
+    		<convert type="WireNetSpeedInfo">TM</convert>
+  	    </widget>
+            <ePixmap pixmap="oZeta-FHD/egami/ookping.png" position="790,290" size="110,70" alphatest="blend" scale="1" />
+	    <widget name="ping" position="790,370" size="110,40" font="Regular;28" foregroundColor="yellow" backgroundColor="#000000" transparent="1" halign="center" zPosition="4" />
+ 	    <eLabel position="230,480" size="1250,60" backgroundColor="#202020" />
+ 	    <ePixmap pixmap="oZeta-FHD/egami/ookla.png" position="400,590" size="910,300" alphatest="blend" />
+	    <widget name="host" position="230,910" size="1250,40" font="Regular;32" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" halign="center" zPosition="4" />
+            <ePixmap pixmap="oZeta-FHD/buttons/80/key_info.png" position="1400,980" size="80,40" alphatest="blend" scale="1" zPosition="10"/>
+	    <widget name="keyList" position="1200,980" size="000,00" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" />
+	    <widget name="favServ" position="1190,978" size="200,40" zPosition="1" font="Regular;30" halign="right" valign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" />
+	</screen>
+
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardSpeedtestListServers" title="SpeedTest Selection Servers" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+	    <panel name="LayerMenu1500"/>
+	    <panel name="vRGYB-1000"/>
+	    <widget name="title"        position="230,130" size="1250,50" font="Regular; 30" halign="left" valign="center" backgroundColor="#202020" transparent="0"/>
+	    <widget name="wait"         position="230,140" size="1250,50" zPosition="1" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" />
+	    <widget name="introduction" position="230,140" size="1250,50" font="Regular;30" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" />
+ 	    <eLabel position="230,195"  size="1250,5" backgroundColor="#202020" />
+	    <widget name="list"         position="230,205" size="1250,600" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="1" transparent="1" 
+	    	backgroundColorSelected="barColor" foregroundColor="#FFFFFF" backgroundColor="#000000" />
+	</screen>
+	
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardSpeedtestshowresult" position="center,center" size="1040,570" backgroundColor="#FF000000" flags="wfNoBorder">
+ 	    <eLabel position="0,0" size="1040,570"   backgroundColor="#40000000" cornerRadius="25" />
+ 	    <eLabel position="20,20" size="1000,530" backgroundColor="#40000000" cornerRadius="25"  />
+	    <widget name="image" position="20,20" size="1000,533" zPosition="1" alphatest="blend" />
+	    <ePixmap position="950,520" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Wireguard/skin/fhd/buttons/redpanel.png" size="30,30" alphatest="blend" zPosition="2" />
+	    <widget name="key_red" position="950,600" size="210,30" zPosition="1" font="Regular;26" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" />
+	</screen>
+
+	<!-- mmk 25/02/2024 -->
+	<screen name="WireguardSpeedtestListServersFav" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+	    <panel name="WireguardSpeedtest"/>
+	</screen>
 </skin>
 
