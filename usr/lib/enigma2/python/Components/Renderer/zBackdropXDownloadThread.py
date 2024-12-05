@@ -19,6 +19,9 @@ import json
 from random import choice
 from requests import get, exceptions
 from twisted.internet.reactor import callInThread
+from .Converlibr import quoteEventName
+
+
 try:
     from http.client import HTTPConnection
     HTTPConnection.debuglevel = 0
@@ -26,7 +29,6 @@ except ImportError:
     from httplib import HTTPConnection
     HTTPConnection.debuglevel = 0
 from requests.adapters import HTTPAdapter, Retry
-
 
 global my_cur_skin, srch
 
@@ -43,11 +45,9 @@ else:
 try:
     from urllib.error import URLError, HTTPError
     from urllib.request import urlopen
-    from urllib.parse import quote_plus
 except:
     from urllib2 import URLError, HTTPError
     from urllib2 import urlopen
-    from urllib import quote_plus
 
 
 try:
@@ -83,19 +83,10 @@ my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 
-def clean_recursive(regexStr="", replaceStr="", eventTitle=""):
-    while True:
-        clean_name = re.sub(regexStr, replaceStr, eventTitle)
-        if clean_name == eventTitle:
-            break
-        eventTitle = clean_name
-    return clean_name
-
-
 try:
     if my_cur_skin is False:
         skin_paths = {
-            "tmdb_api": "/usr/share/enigma2/{}/apikey".format(cur_skin),
+            "tmdb_api": "/usr/share/enigma2/{}/tmdbkey".format(cur_skin),
             "omdb_api": "/usr/share/enigma2/{}/omdbkey".format(cur_skin),
             "thetvdbkey": "/usr/share/enigma2/{}/thetvdbkey".format(cur_skin)
         }
@@ -151,40 +142,15 @@ def intCheck():
         return False
     except socket.timeout:
         return False
-    else:
-        return True
-
-
-def quoteEventName(eventName):
-    try:
-        text = eventName.decode('utf8').replace(u'\x86', u'').replace(u'\x87', u'').encode('utf8')
-    except:
-        text = eventName
-    return quote_plus(text, safe="+")
-
-
-def dataenc(data):
-    if PY3:
-        data = data.decode("utf-8")
-    else:
-        data = data.encode("utf-8")
-    return data
-
-
-def sanitize_filename(filename):
-    # Replace spaces with underscores and remove invalid characters (like ':')
-    sanitized = re.sub(r'[^\w\s-]', '', filename)  # Remove invalid characters
-    # sanitized = sanitized.replace(' ', '_')      # Replace spaces with underscores
-    # sanitized = sanitized.replace('-', '_')      # Replace dashes with underscores
-    return sanitized.strip()
+    return True
 
 
 class zBackdropXDownloadThread(threading.Thread):
     def __init__(self):
+        threading.Thread.__init__(self)
         adsl = intCheck()
         if not adsl:
             return
-        threading.Thread.__init__(self)
         self.checkMovie = ["film", "movie", "фильм", "кино", "ταινία",
                            "película", "cinéma", "cine", "cinema",
                            "filma"]
@@ -214,7 +180,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             url = f"https://api.themoviedb.org/3/search/multi?api_key={tmdb_api}&language={lng}&query={self.title_safe}"
             print('backdrop search_tmdb url title safe', url)
             data = None
@@ -268,8 +234,9 @@ class zBackdropXDownloadThread(threading.Thread):
                         if backdrop:
                             callInThread(self.savebackdrop, backdrop, self.dwn_backdrop)
                             # self.savebackdrop(self.dwn_backdrop, backdrop)
-                            if self.verifybackdrop(self.dwn_backdrop):
-                                self.resizebackdrop(self.dwn_backdrop)
+                            if os.path.exists(self.dwn_backdrop):
+                                if self.verifybackdrop(self.dwn_backdrop):
+                                    self.resizebackdrop(self.dwn_backdrop)
                             return True, "[SUCCESS poster: tmdb] title {} [poster{}-backdrop{}] => year{} => rating{} => showtitle{}".format(title, poster, backdrop, year, rating, show_title)
                     return False, "[SKIP : tmdb] Not found"
             except Exception as e:
@@ -287,21 +254,22 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             year = re.findall(r'19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
             else:
                 year = ''
-
             url_tvdbg = "https://thetvdb.com/api/GetSeries.php?seriesname={}".format(self.title_safe)
             url_read = requests.get(url_tvdbg).text
             series_id = re.findall(r'<seriesid>(.*?)</seriesid>', url_read)
             series_name = re.findall(r'<SeriesName>(.*?)</SeriesName>', url_read)
             series_year = re.findall(r'<FirstAired>(19\d{2}|20\d{2})-\d{2}-\d{2}</FirstAired>', url_read)
-            series_banners = re.findall(r'<banner>(.*?)</banner>', url_read)
-            if series_banners:
-                series_banners = 'https://thetvdb.com' + series_banners
+            '''
+            # series_banners = re.findall(r'<banner>(.*?)</banner>', url_read)
+            # if series_banners:
+                # series_banners = 'https://thetvdb.com' + series_banners
+            '''
             i = 0
             for iseries_year in series_year:
                 if year == '':
@@ -326,14 +294,15 @@ class zBackdropXDownloadThread(threading.Thread):
                     url_read = requests.get(url_tvdb).text
                     backdrop = re.findall(r'<backdrop>(.*?)</backdrop>', url_read)
                     url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
-                    if backdrop is not None and backdrop[0]:
+                    if backdrop and backdrop[0]:
                         callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                         # self.savebackdrop(dwn_backdrop, url_backdrop)
                         if os.path.exists(dwn_backdrop):
                             if self.verifybackdrop(dwn_backdrop):
                                 self.resizebackdrop(dwn_backdrop)
                         return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
-                    return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(title, chkType, year, url_tvdbg)
+            else:
+                return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(self.title_safe, chkType, year, url_tvdbg)
 
         except Exception as e:
             if os.path.exists(dwn_backdrop):
@@ -353,7 +322,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             chkType, fd = self.checkType(shortdesc, fulldesc)
             try:
                 if re.findall(r'19\d{2}|20\d{2}', self.title_safe):
@@ -389,7 +358,6 @@ class zBackdropXDownloadThread(threading.Thread):
                         if self.verifybackdrop(dwn_backdrop):
                             self.resizebackdrop(dwn_backdrop)
                         return True, "[SUCCESS backdrop: fanart] {} [{}-{}] => {} => {} => {}".format(self.title_safe, chkType, year, url_maze, url_fanart, url_backdrop)
-                     
                     return False, "[SKIP : fanart] {} [{}-{}] => {} (Not found)".format(self.title_safe, chkType, year, url_maze)
             except Exception as e:
                 print(e)
@@ -408,7 +376,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             aka = re.findall(r'\((.*?)\)', fd)
             if len(aka) > 1 and not aka[1].isdigit():
                 aka = aka[1]
@@ -485,6 +453,7 @@ class zBackdropXDownloadThread(threading.Thread):
                     # self.savebackdrop(dwn_backdrop, url_backdrop)
                     if self.verifybackdrop(dwn_backdrop):
                         self.resizebackdrop(dwn_backdrop)
+
                     return True, "[SUCCESS url_backdrop: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(self.title_safe, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_backdrop)
                 return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(self.title_safe, chkType, year, url_mimdb, len_imdb)
         except Exception as e:
@@ -505,7 +474,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             url_ptv = "site:programme-tv.net+" + self.title_safe
             if channel and self.title_safe.find(channel.split()[0]) < 0:
                 url_ptv += "+" + quoteEventName(channel)
@@ -539,6 +508,7 @@ class zBackdropXDownloadThread(threading.Thread):
                                 self.resizebackdrop(dwn_backdrop)
                             return True, "[SUCCESS url_backdrop: programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_backdrop, url_backdrop_size, ptv_id)
                 return False, "[SKIP : programmetv-google] {} [{}] => Not found [{}] => {}".format(self.title_safe, chkType, ptv_id, url_ptv)
+
         except Exception as e:
             if os.path.exists(dwn_backdrop):
                 os.remove(dwn_backdrop)
@@ -554,7 +524,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             if channel:
                 pchannel = self.UNAC(channel).replace(' ', '')
             else:
@@ -648,7 +618,7 @@ class zBackdropXDownloadThread(threading.Thread):
                 backdrop = plst
             else:
                 imsg = "Not found '{}' [{}%-{}%-{}]".format(pltc, molotov_table[0], molotov_table[1], len_plst)
-            if backdrop is not None:
+            if backdrop:
                 url_backdrop = re.sub(r'/\d+x\d+/', "/" + re.sub(r',', 'x', isz) + "/", backdrop)
                 callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                 # self.savebackdrop(dwn_backdrop, url_backdrop)
@@ -676,7 +646,7 @@ class zBackdropXDownloadThread(threading.Thread):
             # title_safe = quoteEventName(title_safe)
             self.title_safe = title_safe.replace('+', ' ')
             # Sanitize the filename before saving
-            self.title_safe = sanitize_filename(self.title_safe)
+            # self.title_safe = sanitize_filename(self.title_safe)
             year = re.findall(r'19\d{2}|20\d{2}', fd)
             if len(year) > 0:
                 year = year[0]
@@ -693,10 +663,9 @@ class zBackdropXDownloadThread(threading.Thread):
                 url_google += "+{}".format(srch)
             if year:
                 url_google += "+{}".format(year)
-            # url_google = "https://www.google.com/search?q={}&tbm=isch".format(url_google)
             url_google = "https://www.google.com/search?q={}&tbm=isch&tbs=sbd:0".format(url_google)
-            # url_google += "+{}".format(poster)
             ff = requests.get(url_google, stream=True, headers=headers, cookies={'CONSENT': 'YES+'}).text
+
             backdroplst = re.findall(r'\],\["https://(.*?)",\d+,\d+]', ff)
             if len(backdroplst) == 0:
                 url_google = self.title_safe
@@ -801,9 +770,6 @@ class zBackdropXDownloadThread(threading.Thread):
         string = re.sub(r"u003d", "=", string)
         string = re.sub(r'[\u0300-\u036f]', '', string)
         string = re.sub(r"[,!?\.\"]", ' ', string)
-        # string = re.sub(r"[-/:']", '', string)
-        # string = re.sub(r"[^a-zA-Z0-9 ]", "", string)
-        # string = string.lower()
         string = re.sub(r'\s+', ' ', string)
         string = string.strip()
         return string
