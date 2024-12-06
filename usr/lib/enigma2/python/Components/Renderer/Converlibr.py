@@ -145,7 +145,6 @@ def convtext(text=''):
             if search(r'[Ss][0-9]+[Ee][0-9]+', text):
                 text = sub(r'[Ss][0-9]+[Ee][0-9]+.*[a-zA-Z0-9_]+', '', text, flags=S | I)
             text = sub(r'\(.*\)', '', text).rstrip()  # remove episode number from series, like "series"
-            
 
             # Mappatura sostituzioni con azione specifica
             sostituzioni = [
@@ -264,7 +263,7 @@ def convtext(text=''):
             text = sub(r'\|.*?\|', '', text)  # Rimuove qualsiasi altro contenuto tra "|"
             text = sub(r'\(\(.*?\)\)|\(.*?\)', '', text)  # Rimuove contenuti tra "()"
             text = sub(r'\[\[.*?\]\]|\[.*?\]', '', text)  # Rimuove contenuti tra "[]"
-            
+
             text = sub(r'[^\w\s]+$', '', text)
 
             text = sub(r' +ح| +ج| +م', '', text)  # Rimuove numeri di episodi/serie in arabo

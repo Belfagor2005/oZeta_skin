@@ -52,8 +52,8 @@ class zNxtEvnt(Renderer, VariableText):
                 events = self.epgcache.lookupEvent(['IBDCT', (ref.toString(), 0, -1, 1200)])
                 if events and self.snglEvnt == "":
                     for i in range(int(self.nxEvnt)):
-                        evnts = events[i+1][4]
-                        bt = localtime(events[i+1][1])
+                        evnts = events[i + 1][4]
+                        bt = localtime(events[i + 1][1])
                         self.text = "%02d:%02d - %s\n" % (bt[3], bt[4], evnts)
 
                 if events and self.snglEvnt != "":
