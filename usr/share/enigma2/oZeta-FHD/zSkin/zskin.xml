@@ -415,7 +415,7 @@
     <screen name="ConfigMenu" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
         <panel name="LayerMenu1000"/>
         <panel name="bLogo"/>
-        <widget name="config" position="220,150" size="830,200" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
+        <widget name="config" position="220,150" size="830,800" itemHeight="50" font="Regular;30" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" backgroundColorSelected="#124b97"/>
         <widget name="key_ok" position="420,400" size="0,0" zPosition="10" halign="center" valign="center" backgroundColor="OE_Background" transparent="1"/>
     </screen>
     

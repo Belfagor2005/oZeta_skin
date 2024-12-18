@@ -113,9 +113,12 @@ class zInfoEvents(Renderer, VariableText):
     def __init__(self):
         Renderer.__init__(self)
         VariableText.__init__(self)
-        adsl = intCheck()
-        if not adsl:
+        self.adsl = intCheck()
+        if not self.adsl:
+            print("Connessione assente, modalità offline.")
             return
+        else:
+            print("Connessione rilevata.")
         self.text = ""
 
     GUI_WIDGET = eLabel
@@ -132,6 +135,8 @@ class zInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event and self.event != 'None' or self.event is not None:
             self.evnt = self.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+            if not self.event:
+                return
             if not PY3:
                 self.evnt = self.evnt.encode('utf-8')
             self.evntNm = convtext(self.evnt)

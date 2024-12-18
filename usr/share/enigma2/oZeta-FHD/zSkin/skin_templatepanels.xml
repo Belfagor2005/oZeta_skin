@@ -820,28 +820,28 @@
         <ePixmap pixmap="menu/panels/nocover.png" position="952,788" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
         <ePixmap pixmap="menu/panels/nocover.png" position="1205,788" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
         <ePixmap pixmap="menu/panels/nocover.png" position="1460,788" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="1715,788" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
+        <ePixmap pixmap="menu/panels/nocover.png" position="1720,788" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
         <widget source="ServiceEvent" render="zPosterX" nexts="1" usedImage="poster" delayPic="0" position="950,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
         <widget source="ServiceEvent" render="zPosterX" nexts="2" usedImage="poster" delayPic="0" position="1205,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
         <widget source="ServiceEvent" render="zPosterX" nexts="3" usedImage="poster" delayPic="0" position="1460,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
-        <widget source="ServiceEvent" render="zPosterX" nexts="4" usedImage="poster" delayPic="0" position="1715,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
+        <widget source="ServiceEvent" render="zPosterX" nexts="4" usedImage="poster" delayPic="0" position="1720,782" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
     </screen>
     <!-- CHANNEL POSTERS -->
     <screen name="PartChannelSelectionPosterEvent">
         <!-- Poster X -->
-        <ePixmap pixmap="menu/panels/nocover.png" position="952,718" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="1205,718" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="1460,718" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
-        <ePixmap pixmap="menu/panels/nocover.png" position="1715,718" size="181,268" alphatest="blend" scale="1" zPosition="2"/>
-        <widget source="ServiceEvent" render="zPosterX" nexts="1" usedImage="poster" delayPic="0" position="950,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
-        <widget source="ServiceEvent" render="zPosterX" nexts="2" usedImage="poster" delayPic="0" position="1205,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
-        <widget source="ServiceEvent" render="zPosterX" nexts="3" usedImage="poster" delayPic="0" position="1460,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
-        <widget source="ServiceEvent" render="zPosterX" nexts="4" usedImage="poster" delayPic="0" position="1720,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red"/>
+        <ePixmap pixmap="menu/panels/nocover.png" position="952,718" size="181,268" alphatest="blend" scale="1" zPosition="2" />
+        <ePixmap pixmap="menu/panels/nocover.png" position="1205,718" size="181,268" alphatest="blend" scale="1" zPosition="2" />
+        <ePixmap pixmap="menu/panels/nocover.png" position="1460,718" size="181,268" alphatest="blend" scale="1" zPosition="2" />
+        <ePixmap pixmap="menu/panels/nocover.png" position="1720,718" size="181,268" alphatest="blend" scale="1" zPosition="2" />
+        <widget source="ServiceEvent" render="zPosterX" nexts="1" usedImage="poster" delayPic="0" position="950,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
+        <widget source="ServiceEvent" render="zPosterX" nexts="2" usedImage="poster" delayPic="0" position="1205,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
+        <widget source="ServiceEvent" render="zPosterX" nexts="3" usedImage="poster" delayPic="0" position="1460,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
+        <widget source="ServiceEvent" render="zPosterX" nexts="4" usedImage="poster" delayPic="0" position="1720,716" size="185,272" zPosition="101" borderWidth="1" borderColor="white" backgroundColor="red" />
         <!-- lululla -->
-        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="1" font="Regular;20" position="940,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
-        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="2" font="Regular;20" position="1195,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
-        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="3" font="Regular;20" position="1450,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
-        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="4" font="Regular;20" position="1705,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1"/>
+        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="1" font="Regular;20" position="940,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="2" font="Regular;20" position="1195,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="3" font="Regular;20" position="1450,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+        <widget source="ServiceEvent" render="zNxtEvnt" nxtEvents="" snglEvent="4" font="Regular;20" position="1710,1000" size="205,73" halign="center" zPosition="5" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
     </screen>
 
     <!-- ************************ -->

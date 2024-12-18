@@ -148,9 +148,12 @@ def intCheck():
 class zBackdropXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        adsl = intCheck()
-        if not adsl:
+        self.adsl = intCheck()
+        if not self.adsl:
+            print("Connessione assente, modalità offline.")
             return
+        else:
+            print("Connessione rilevata.")
         self.checkMovie = ["film", "movie", "фильм", "кино", "ταινία",
                            "película", "cinéma", "cine", "cinema",
                            "filma"]
@@ -233,10 +236,10 @@ class zBackdropXDownloadThread(threading.Thread):
                         # print('title, poster, backdrop, year, rating, show_title=', title, poster, backdrop, year, rating, show_title)
                         if backdrop:
                             callInThread(self.savebackdrop, backdrop, self.dwn_backdrop)
-                            # self.savebackdrop(self.dwn_backdrop, backdrop)
-                            if os.path.exists(self.dwn_backdrop):
-                                if self.verifybackdrop(self.dwn_backdrop):
-                                    self.resizebackdrop(self.dwn_backdrop)
+                            # # self.savebackdrop(self.dwn_backdrop, backdrop)
+                            # if os.path.exists(self.dwn_backdrop):
+                                # if self.verifybackdrop(self.dwn_backdrop):
+                                    # self.resizebackdrop(self.dwn_backdrop)
                             return True, "[SUCCESS poster: tmdb] title {} [poster{}-backdrop{}] => year{} => rating{} => showtitle{}".format(title, poster, backdrop, year, rating, show_title)
                     return False, "[SKIP : tmdb] Not found"
             except Exception as e:
@@ -298,9 +301,9 @@ class zBackdropXDownloadThread(threading.Thread):
                         callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                         # self.savebackdrop(dwn_backdrop, url_backdrop)
                         if os.path.exists(dwn_backdrop):
-                            if self.verifybackdrop(dwn_backdrop):
-                                self.resizebackdrop(dwn_backdrop)
-                        return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
+                            # if self.verifybackdrop(dwn_backdrop):
+                                # self.resizebackdrop(dwn_backdrop)
+                            return True, "[SUCCESS backdrop: tvdb] {} [{}-{}] => {} => {} => {}".format(title, chkType, year, url_tvdbg, url_tvdb, url_backdrop)
             else:
                 return False, "[SKIP : tvdb] {} [{}-{}] => {} (Not found)".format(self.title_safe, chkType, year, url_tvdbg)
 
@@ -355,10 +358,10 @@ class zBackdropXDownloadThread(threading.Thread):
                     callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                     # self.savebackdrop(dwn_backdrop, url_backdrop)
                     if os.path.exists(dwn_backdrop):
-                        if self.verifybackdrop(dwn_backdrop):
-                            self.resizebackdrop(dwn_backdrop)
+                        # if self.verifybackdrop(dwn_backdrop):
+                            # self.resizebackdrop(dwn_backdrop)
                         return True, "[SUCCESS backdrop: fanart] {} [{}-{}] => {} => {} => {}".format(self.title_safe, chkType, year, url_maze, url_fanart, url_backdrop)
-                    return False, "[SKIP : fanart] {} [{}-{}] => {} (Not found)".format(self.title_safe, chkType, year, url_maze)
+                return False, "[SKIP : fanart] {} [{}-{}] => {} (Not found)".format(self.title_safe, chkType, year, url_maze)
             except Exception as e:
                 print(e)
 
@@ -455,7 +458,7 @@ class zBackdropXDownloadThread(threading.Thread):
                         self.resizebackdrop(dwn_backdrop)
 
                     return True, "[SUCCESS url_backdrop: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(self.title_safe, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_backdrop)
-                return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(self.title_safe, chkType, year, url_mimdb, len_imdb)
+            return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(self.title_safe, chkType, year, url_mimdb, len_imdb)
         except Exception as e:
             if os.path.exists(dwn_backdrop):
                 os.remove(dwn_backdrop)
@@ -504,8 +507,8 @@ class zBackdropXDownloadThread(threading.Thread):
                         callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                         # self.savebackdrop(dwn_backdrop, url_backdrop)
                         if os.path.exists(dwn_backdrop):
-                            if self.verifybackdrop(dwn_backdrop):
-                                self.resizebackdrop(dwn_backdrop)
+                            # if self.verifybackdrop(dwn_backdrop):
+                                # self.resizebackdrop(dwn_backdrop)
                             return True, "[SUCCESS url_backdrop: programmetv-google] {} [{}] => Found title : '{}' => {} => {} (initial size: {}) [{}]".format(title, chkType, get_title, url_ptv, url_backdrop, url_backdrop_size, ptv_id)
                 return False, "[SKIP : programmetv-google] {} [{}] => Not found [{}] => {}".format(self.title_safe, chkType, ptv_id, url_ptv)
 
@@ -623,8 +626,8 @@ class zBackdropXDownloadThread(threading.Thread):
                 callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                 # self.savebackdrop(dwn_backdrop, url_backdrop)
                 if os.path.exists(dwn_backdrop):
-                    if self.verifybackdrop(dwn_backdrop):
-                        self.resizebackdrop(dwn_backdrop)
+                    # if self.verifybackdrop(dwn_backdrop):
+                        # self.resizebackdrop(dwn_backdrop)
                     return True, "[SUCCESS url_backdrop: molotov-google] {} ({}) [{}] => {} => {} => {}".format(self.title_safe, channel, chkType, imsg, url_mgoo, url_backdrop)
                 return False, "[SKIP : molotov-google] {} ({}) [{}] => {} => {} => {} (jpeg error)".format(self.title_safe, channel, chkType, imsg, url_mgoo, url_backdrop)
             return False, "[SKIP : molotov-google] {} ({}) [{}] => {} => {}".format(self.title_safe, channel, chkType, imsg, url_mgoo)
@@ -679,8 +682,8 @@ class zBackdropXDownloadThread(threading.Thread):
                 callInThread(self.savebackdrop, url_backdrop, dwn_backdrop)
                 if os.path.exists(dwn_backdrop):
                     # self.savebackdrop(dwn_backdrop, url_backdrop)
-                    if self.verifybackdrop(dwn_backdrop):
-                        self.resizebackdrop(dwn_backdrop)
+                    # if self.verifybackdrop(dwn_backdrop):
+                        # self.resizebackdrop(dwn_backdrop)
                     backdrop = pl
                     break
 

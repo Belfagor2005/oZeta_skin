@@ -19,8 +19,8 @@ import json
 from random import choice
 from requests import get, exceptions
 from twisted.internet.reactor import callInThread
-
 from .Converlibr import quoteEventName
+
 
 try:
     from http.client import HTTPConnection
@@ -159,9 +159,12 @@ def intCheck():
 class zPosterXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        adsl = intCheck()
-        if not adsl:
+        self.adsl = intCheck()
+        if not self.adsl:
+            print("Connessione assente, modalità offline.")
             return
+        else:
+            print("Connessione rilevata.")
         self.checkMovie = ["film", "movie", "фильм", "кино", "ταινία",
                            "película", "cinéma", "cine", "cinema",
                            "filma"]
@@ -247,9 +250,9 @@ class zPosterXDownloadThread(threading.Thread):
                         if poster:
                             callInThread(self.savePoster, poster, self.dwn_poster)
                             print('callinThread=Poster')
-                            # self.savePoster(self.dwn_poster, poster)
-                            if self.verifyPoster(self.dwn_poster):
-                                self.resizePoster(self.dwn_poster)
+                            # # self.savePoster(self.dwn_poster, poster)
+                            # if self.verifyPoster(self.dwn_poster):
+                                # self.resizePoster(self.dwn_poster)
                             # if backdrop:
                                 # self.pstrNm = path_folder + '/' + self.title_safe + ".jpg"
                                 # self.dwn_poster = str(self.pstrNm)
@@ -322,9 +325,9 @@ class zPosterXDownloadThread(threading.Thread):
                     # url_backdrop = "https://artworks.thetvdb.com/banners/{}".format(backdrop[0])
                     if poster is not None and poster[0]:
                         callInThread(self.savePoster, url_poster, self.dwn_poster)
-                        # self.savePoster(dwn_poster, url_poster)
-                        if self.verifyPoster(dwn_poster):
-                            self.resizePoster(dwn_poster)
+                        # # self.savePoster(dwn_poster, url_poster)
+                        # if self.verifyPoster(dwn_poster):
+                            # self.resizePoster(dwn_poster)
 
                         # if backdrop and backdrop[0]:
                             # self.pstrNm = path_folder + '/' + self.title_safe + ".jpg"
@@ -395,9 +398,9 @@ class zPosterXDownloadThread(threading.Thread):
                 # print('url fanart poster:', url_poster)
                 if url_poster and url_poster != 'null' or url_poster is not None or url_poster != '':
                     callInThread(self.savePoster, url_poster, self.dwn_poster)
-                    # self.savePoster(dwn_poster, url_poster)
-                    if self.verifyPoster(self.dwn_poster):
-                        self.resizePoster(self.dwn_poster)
+                    # # self.savePoster(dwn_poster, url_poster)
+                    # if self.verifyPoster(self.dwn_poster):
+                        # self.resizePoster(self.dwn_poster)
 
                     # url_backdrop = requests.get(url2).json()
                     # # print('url fanart url_poster:', url_poster)
@@ -504,9 +507,9 @@ class zPosterXDownloadThread(threading.Thread):
             if url_poster and pfound:
                 callInThread(self.savePoster, url_poster, dwn_poster)
                 if os.path.exists(dwn_poster):
-                    # self.savePoster(dwn_poster, url_poster)
-                    if self.verifyPoster(dwn_poster):
-                        self.resizePoster(dwn_poster)
+                    # # self.savePoster(dwn_poster, url_poster)
+                    # if self.verifyPoster(dwn_poster):
+                        # self.resizePoster(dwn_poster)
 
                     # # backdrop
                     # self.pstrNm = path_folder + '/' + self.title_safe + ".jpg"
@@ -517,7 +520,7 @@ class zPosterXDownloadThread(threading.Thread):
                         # if self.verifyPoster(self.pstrNm):
                             # self.sizeb = True
                             # self.resizePoster(self.pstrNm)
-                return True, "[SUCCESS url_poster: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(self.title_safe, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_poster)
+                    return True, "[SUCCESS url_poster: imdb] {} [{}-{}] => {} [{}/{}] => {} => {}".format(self.title_safe, chkType, year, imsg, idx_imdb, len_imdb, url_mimdb, url_poster)
             return False, "[SKIP : imdb] {} [{}-{}] => {} (No Entry found [{}])".format(self.title_safe, chkType, year, url_mimdb, len_imdb)
 
         except Exception as e:
@@ -569,8 +572,8 @@ class zPosterXDownloadThread(threading.Thread):
                         callInThread(self.savePoster, url_poster, self.dwn_poster)
                         # self.savePoster(dwn_poster, url_poster)
                         if os.path.exists(dwn_poster):
-                            if self.verifyPoster(dwn_poster):
-                                self.resizePoster(dwn_poster)
+                            # if self.verifyPoster(dwn_poster):
+                                # self.resizePoster(dwn_poster)
                             # # backdrop
                             # self.pstrNm = path_folder + '/' + self.title_safe + ".jpg"
                             # dwn_poster = str(self.pstrNm)
@@ -699,8 +702,8 @@ class zPosterXDownloadThread(threading.Thread):
                 callInThread(self.savePoster, poster, dwn_poster)
                 # self.savePoster(dwn_poster, url_poster)
                 if os.path.exists(dwn_poster):
-                    if self.verifyPoster(dwn_poster):
-                        self.resizePoster(dwn_poster)
+                    # if self.verifyPoster(dwn_poster):
+                        # self.resizePoster(dwn_poster)
                     # # backdrop
                     # self.pstrNm = path_folder + '/' + self.title_safe + ".jpg"
                     # dwn_poster = str(self.pstrNm)
@@ -766,8 +769,8 @@ class zPosterXDownloadThread(threading.Thread):
                 callInThread(self.savePoster, url_poster, dwn_poster)
                 # self.savePoster(dwn_poster, url_poster)
                 if os.path.exists(dwn_poster):
-                    if self.verifyPoster(dwn_poster):
-                        self.resizePoster(dwn_poster)
+                    # if self.verifyPoster(dwn_poster):
+                        # self.resizePoster(dwn_poster)
                     poster = pl
                     break
                 # # backdrop

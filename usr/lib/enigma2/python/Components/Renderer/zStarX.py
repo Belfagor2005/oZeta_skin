@@ -123,9 +123,12 @@ class zStarX(VariableValue, Renderer):
     def __init__(self):
         Renderer.__init__(self)
         VariableValue.__init__(self)
-        adsl = intCheck()
-        if not adsl:
+        self.adsl = intCheck()
+        if not self.adsl:
+            print("Connessione assente, modalità offline.")
             return
+        else:
+            print("Connessione rilevata.")
         self.__start = 0
         self.__end = 100
         self.text = ""

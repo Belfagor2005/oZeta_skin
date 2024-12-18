@@ -411,12 +411,16 @@ threadAutoDB.start()
 class zBackdropX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
-        adsl = intCheck()
-        if not adsl:
+        self.adsl = intCheck()
+        if not self.adsl:
+            print("Connessione assente, modalità offline.")
             return
+        else:
+            print("Connessione rilevata.")
         self.nxts = 0
         self.path = path_folder  # + '/'
         self.canal = [None, None, None, None, None, None]
+        self.pstrNm = None
         self.oldCanal = None
         self.logdbg = None
         self.pstcanal = None
@@ -443,111 +447,124 @@ class zBackdropX(Renderer):
         if not self.instance:
             return
         if what[0] == self.CHANGED_CLEAR:
+            self.instance.hide()
+            return
+
+        servicetype = None
+        try:
+            service = None
+            source_type = type(self.source)
+            if source_type is ServiceEvent:  # source="ServiceEvent"
+                service = self.source.getCurrentService()
+                servicetype = "ServiceEvent"
+            elif source_type is CurrentService:  # source="session.CurrentService"
+                service = self.source.getCurrentServiceRef()
+                servicetype = "CurrentService"
+            elif source_type is EventInfo:  # source="session.Event_Now" or source="session.Event_Next"
+                service = NavigationInstance.instance.getCurrentlyPlayingServiceReference()
+                servicetype = "EventInfo"
+            elif source_type is Event:  # source="Event"
+                if self.nxts:
+                    service = NavigationInstance.instance.getCurrentlyPlayingServiceReference()
+                else:
+                    self.canal[0] = None
+                    self.canal[1] = self.source.event.getBeginTime()
+                    event_name = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                    if not PY3:
+                        event_name = event_name.encode('utf-8')
+                    self.canal[2] = event_name
+                    self.canal[3] = self.source.event.getExtendedDescription()
+                    self.canal[4] = self.source.event.getShortDescription()
+                    self.canal[5] = event_name
+                servicetype = "Event"
+            if service is not None:
+                service_str = service.toString()
+                events = epgcache.lookupEvent(['IBDCTESX', (service_str, 0, -1, -1)])
+                service_name = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+                if not PY3:
+                    service_name = service_name.encode('utf-8')
+                self.canal[0] = service_name
+                self.canal[1] = events[self.nxts][1]
+                self.canal[2] = events[self.nxts][4]
+                self.canal[3] = events[self.nxts][5]
+                self.canal[4] = events[self.nxts][6]
+                self.canal[5] = self.canal[2]
+
+                if not autobouquet_file and service_name not in apdb:
+                    apdb[service_name] = service_str
+
+        except Exception as e:
+            print("Error (service):", str(e))
             if self.instance:
                 self.instance.hide()
             return
-        if what[0] != self.CHANGED_CLEAR:
-            servicetype = None
-            try:
-                service = None
-                if isinstance(self.source, ServiceEvent):  # source="ServiceEvent"
-                    service = self.source.getCurrentService()
-                    servicetype = "ServiceEvent"
-                elif isinstance(self.source, CurrentService):  # source="session.CurrentService"
-                    service = self.source.getCurrentServiceRef()
-                    servicetype = "CurrentService"
-                elif isinstance(self.source, EventInfo):  # source="session.Event_Now" or source="session.Event_Next"
-                    service = NavigationInstance.instance.getCurrentlyPlayingServiceReference()
-                    servicetype = "EventInfo"
-                elif isinstance(self.source, Event):  # source="Event"
-                    if self.nxts:
-                        service = NavigationInstance.instance.getCurrentlyPlayingServiceReference()
-                    else:
-                        self.canal[0] = None
-                        self.canal[1] = self.source.event.getBeginTime()
-                        if PY3:
-                            self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '')
-                        else:
-                            self.canal[2] = self.source.event.getEventName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
-                        self.canal[3] = self.source.event.getExtendedDescription()
-                        self.canal[4] = self.source.event.getShortDescription()
-                        self.canal[5] = self.canal[2]
-                    servicetype = "Event"
-                if service is not None:
-                    events = epgcache.lookupEvent(['IBDCTESX', (service.toString(), 0, -1, -1)])
-                    if PY3:
-                        self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')  # .encode('utf-8')
-                    else:
-                        self.canal[0] = ServiceReference(service).getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '').encode('utf-8')
-                    self.canal[1] = events[self.nxts][1]
-                    self.canal[2] = events[self.nxts][4]
-                    self.canal[3] = events[self.nxts][5]
-                    self.canal[4] = events[self.nxts][6]
-                    self.canal[5] = self.canal[2]
-                    if not autobouquet_file:
-                        if self.canal[0] not in apdb:
-                            apdb[self.canal[0]] = service.toString()
-            except Exception as e:
-                print(e)
-                # self.logBackdrop("Error (service) : " + str(e))
-                if self.instance:
-                    self.instance.hide()
+        if not servicetype:
+            print("Error: service type undefined")
+            if self.instance:
+                self.instance.hide()
+            return
+
+        try:
+            curCanal = "{}-{}".format(self.canal[1], self.canal[2])
+            if curCanal == self.oldCanal:
                 return
-            if not servicetype or servicetype is None:
-                # self.logBackdrop("Error service type undefined")
-                if self.instance:
-                    self.instance.hide()
-                return
-            try:
-                curCanal = "{}-{}".format(self.canal[1], self.canal[2])
-                if curCanal == self.oldCanal:
-                    return
-                self.oldCanal = curCanal
-                self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
-                self.pstcanal = convtext(self.canal[5])
-                if self.pstcanal is not None:
-                    self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-                    self.pstcanal = str(self.backrNm)
-                if os.path.exists(self.backrNm):
-                    self.timer.start(10, True)
-                else:
-                    canal = self.canal[:]
-                    pdb.put(canal)
-                    start_new_thread(self.waitBackdrop, ())
-            except Exception as e:
-                print(e)
-                # self.logBackdrop("Error (eFile): " + str(e))
-                if self.instance:
-                    self.instance.hide()
-                return
+
+            self.oldCanal = curCanal
+            self.logBackdrop("Service: {} [{}] : {} : {}".format(servicetype, self.nxts, self.canal[0], self.oldCanal))
+
+            self.pstcanal = convtext(self.canal[5])
+            if self.pstcanal is not None:
+                self.pstrNm = os.path.join(self.path, str(self.pstcanal) + ".jpg")
+                self.pstcanal = self.pstrNm
+
+            if os.path.exists(self.pstcanal):
+                self.timer.start(10, True)
+            else:
+                canal = self.canal[:]
+                pdb.put(canal)
+                start_new_thread(self.waitBackdrop, ())
+
+        except Exception as e:
+            print("Error (eFile):", str(e))
+            if self.instance:
+                self.instance.hide()
+            return
+
+    def generatePosterPath(self):
+        """Genera il percorso completo per il poster."""
+        if self.canal and len(self.canal) > 5 and self.canal[5]:
+            pstcanal = convtext(self.canal[5])
+            return os.path.join(self.path, str(pstcanal) + ".jpg")
+        return None
 
     def showBackdrop(self):
         if self.instance:
             self.instance.hide()
-        if self.canal[5]:
-            self.pstcanal = convtext(self.canal[5])
-            self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-            if os.path.exists(self.backrNm):
-                print('showBackdrop----')
-                self.logBackdrop("[LOAD : showBackdrop] {}".format(self.backrNm))
-                self.instance.setPixmap(loadJPG(self.backrNm))
-                self.instance.setScale(1)
-                self.instance.show()
+        self.pstrNm = self.generatePosterPath()
+        if self.pstrNm and os.path.exists(self.pstrNm):
+            print('showBackdrop----')
+            self.logBackdrop("[LOAD : showBackdrop] " + self.pstrNm)
+            self.instance.setPixmap(loadJPG(self.pstrNm))
+            self.instance.setScale(1)
+            self.instance.show()
 
     def waitBackdrop(self):
         if self.instance:
             self.instance.hide()
-        if self.canal[5]:
-            self.pstcanal = convtext(self.canal[5])
-            self.backrNm = self.path + '/' + str(self.pstcanal) + ".jpg"
-            loop = 180
-            found = None
-            self.logBackdrop("[LOOP: waitBackdrop] {}".format(self.backrNm))
-            while loop >= 0:
-                loop = 0
+        self.pstrNm = self.generatePosterPath()
+        if not self.pstrNm:
+            self.logPoster("[ERROR: waitPoster] Poster path is None")
+            return
+        loop = 180  # Numero massimo di tentativi
+        found = False
+        self.logBackdrop("[LOOP: waitBackdrop] " + self.pstrNm)
+
+        while loop > 0:
+            if os.path.exists(self.pstrNm):
                 found = True
-                time.sleep(0.5)
-                loop = loop - 1
+                break
+            time.sleep(0.5)
+            loop -= 1
             if found:
                 self.timer.start(10, True)
 
