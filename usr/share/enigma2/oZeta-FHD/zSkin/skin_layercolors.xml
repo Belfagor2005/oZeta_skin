@@ -250,6 +250,25 @@
         <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="645,1035" size="350,32" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2"/>
     </screen>
 
+
+    <screen name="vpB-1500">
+      <!-- Blue -->
+      <widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="buttons/button_blue.png" position="1450,1035" size="30,30" zPosition="1" alphatest="blend">
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap objectTypes="key_blue,Button,Label" pixmap="buttons/button_blue.png" position="1450,1035" size="30,30" zPosition="1" alphatest="blend" />
+      <widget objectTypes="key_blue,Label,Button" name="key_blue" position="1085,1035" size="350,32" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+      <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1085,1035" size="350,32" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+      <!-- Blue -->
+      <widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="buttons/button_blue.png" position="1450,1035" size="30,30" zPosition="1" alphatest="blend">
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap objectTypes="key_blue,Button,Label" pixmap="buttons/button_blue.png" position="1450,1035" size="30,30" zPosition="1" alphatest="blend" />
+      <widget objectTypes="key_blue,Label,Button" name="key_blue" position="1085,1035" size="350,32" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="1" />
+      <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1085,1035" size="350,32" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2" />
+    </screen>
+
+
     <!-- ******************************************************* -->
     <!-- ************* Buttons Template vRGYB-1300 ************* -->
     <!-- ******************************************************* -->
@@ -371,6 +390,7 @@
         <panel name="vpB-1300"/>
     </screen>
 
+    
     <!-- [RGYB] Buttons Template vRGYB-1500 -->
     <screen name="vRGYB-1500">
         <panel name="vRG-1000"/>
