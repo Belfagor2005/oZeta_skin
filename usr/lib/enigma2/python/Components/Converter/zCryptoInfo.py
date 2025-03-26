@@ -1369,14 +1369,16 @@ class zCryptoInfo(Poll, Converter):
                                 info["source"] = "net"
                                 it_tmp = item[1].strip().split(" ")
                                 info["ecm time"] = "%s msec" % it_tmp[0]
+                                info["reader"] = it_tmp[-1].strip('R0[').strip(']')
                                 y = it_tmp[-1].find("[")
                                 if y != -1:
                                     info["server"] = it_tmp[-1][:y]
-                                    info["protocol"] = it_tmp[-1][y + 1:-1]
+                                    info["protocol"] = it_tmp[-1][y + 1: -1]
                                 y = it_tmp[-1].find("(")
                                 if y != -1:
                                     info["server"] = it_tmp[-1].split("(")[-1].split(":")[0]
                                     info["port"] = it_tmp[-1].split("(")[-1].split(":")[-1].rstrip(")")
+                                    info["reader"] = it_tmp[-2]
                                 elif y == -1:
                                     item[0] = "source"
                                     item[1] = "sci"

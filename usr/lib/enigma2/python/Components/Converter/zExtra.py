@@ -22,6 +22,8 @@ from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
 import os
+import socket
+import subprocess
 
 
 class zExtra(Poll, Converter):
@@ -133,29 +135,30 @@ class zExtra(Poll, Converter):
             return "%s" % (cputemp)
         if self.type == self.HDDTEMP:
             return self.hddtemp
+
         if self.type == self.IPLOCAL:
             try:
-                c = '127.0.0.1'
-                file = os.popen('ifconfig')
-                cmd = file.readlines()
-                for line in cmd:
-                    if 'inet addr:' in line:
-                        c = line.split('inet addr:')[1].split(' ')[0]
-                        if c != '127.0.0.1':
-                            return "Lan Ip %s" % c
-            except:
-                return ''
+                result = subprocess.check_output("ip -4 route show default", shell=True, text=True)
+                gw = result.split()
+                if len(gw) < 3:
+                    raise ValueError("Impossibile determinare il gateway predefinito")
+                with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+                    s.connect((gw[2], 0))
+                    ipaddr = s.getsockname()[0]
+                return "%s" % ipaddr
+            except Exception as e:
+                return "Errore: {}".format(e)
+
         if self.type == self.IPWAN:
-            publicIp = ''
+            publicIp = ""
             try:
-                file = os.popen('wget -qO - ifconfig.me')
-                public = file.read()
-                publicIp = "Local Ip %s" % (str(public))
-                # return "%s" % publicIp
+                file = os.popen("curl -s ifconfig.me")
+                public = file.read().strip()
+                publicIp = "Public IP: %s" % public
             except:
                 if os.path.exists("/tmp/currentip"):
                     os.remove("/tmp/currentip")
-            return str(publicIp)
+            return publicIp
 
         if self.type == self.CPUSPEED:
             try:
