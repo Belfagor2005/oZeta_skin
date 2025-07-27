@@ -618,7 +618,7 @@ CountConnOk = 0
 def zCheckInternet(opt=1, server=None, port=None):
     global CountConnOk
     sock = False
-    checklist = [("8.8.44.4", 53), ("8.8.88.8", 53), ("www.lululla.altervista.org/", 80), ("www.linuxsat-support.com", 443), ("www.google.com", 443)]
+    checklist = [("8.8.4.4", 53), ("8.8.8.8", 53), ("www.lululla.altervista.org/", 80), ("www.linuxsat-support.com", 443), ("www.google.com", 443)]
     if opt < 5:
         srv = checklist[opt]
     else:
@@ -942,29 +942,28 @@ def ConverDateBack(data):
 
 
 def isPythonFolder():
-    path = ('/usr/lib/')
+    path = "/usr/lib/"
     for name in listdir(path):
-        fullname = path + name
-        if not isfile(fullname) and 'python' in fullname:
+        fullname = join(path, name)
+        if not isfile(fullname) and "python" in name:
             print(fullname)
-            import sys
             print("sys.version_info =", sys.version_info)
-            pythonvr = fullname
-            print('pythonvr is ', pythonvr)
-            x = ('%s/site-packages/streamlink' % pythonvr)
+            x = join(fullname, "site-packages", "streamlink")
             print(x)
-            # /usr/lib/python3.9/site-packages/streamlink
-    return x
+            if exists(x):
+                return x
+    return False
 
 
-def isStreamlinkAvailable():
-    pythonvr = isPythonFolder()
-    return pythonvr
+def is_streamlink_available():
+    streamlink_folder = isPythonFolder()
+    return streamlink_folder
 
 
-def isExtEplayer3Available():
+def is_exteplayer3_Available():
     from enigma import eEnv
-    return isfile(eEnv.resolve('$bindir/exteplayer3'))
+    path = eEnv.resolve("$bindir/exteplayer3")
+    return isfile(path)
 
 
 '''
@@ -1009,7 +1008,6 @@ std_headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'en-us,en;q=0.5',
 }
-
 
 ListAgent = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
@@ -1558,13 +1556,13 @@ def cachedel(folder):
 
 def cleanName(name):
     non_allowed_characters = "/.\\:*?<>|\""
+    name = unicodedata.normalize("NFKD", name).encode("ASCII", "ignore").decode("ASCII")
     name = name.replace('\xc2\x86', '').replace('\xc2\x87', '')
     name = name.replace(' ', '-').replace("'", '').replace('&', 'e')
     name = name.replace('(', '').replace(')', '')
     name = name.strip()
     name = ''.join(['_' if c in non_allowed_characters or ord(c) < 32 else c for c in name])
     return name
-
 
 def cleantitle(title):
     import re
