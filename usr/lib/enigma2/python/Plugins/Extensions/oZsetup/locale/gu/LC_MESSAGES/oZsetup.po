@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--પ્લગઇનમાંથી આપોઆપ આયાત\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--વર્ચ્યુઅલ કીબોર્ડનો ઉપયોગ કરો અથવા ડિફોલ્ટ રૂપરેખા પ્લગઇનમાંથી આયાત કરો"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "ઉમેરો"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "વૈકલ્પિક રેડિયો મોડ = હા\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey માહિતી"
 
 msgid "Back"
-msgstr ""
+msgstr "પાછળ"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo બદલાઈ ગયો અને default_bootlogo.mvi પર બેકઅપ!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "રદ કરો"
 
 msgid "City"
-msgstr ""
+msgstr "શહેર"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "આ વિન્ડોને બંધ કરવા માટે બહાર નીકળો પર ક્લિક કરો"
 
 msgid "Console"
-msgstr ""
+msgstr "કન્સોલ"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "હવામાન માટે દાખલ કરેલ ડેટા, શું તમે તે જ ચાલુ રાખવા માંગો છો?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "ડેલ લાઇન"
 
 msgid "Delete"
-msgstr ""
+msgstr "કાઢી નાખો"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "શું તમે ખરેખર બુટલોગો ઈમેજ બદલવા માંગો છો?"
 
 msgid "Edit"
-msgstr ""
+msgstr "સંપાદિત કરો"
 
 msgid "Exit"
-msgstr ""
+msgstr "બહાર નીકળો"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "ફાઇલ કમાન્ડર - એડન"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB કવર્સનો ઉપયોગ કરવા માટે, ત્વચા ફોલ્ડરમાં omdbkey ફાઇલની નકલ કરો:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB કવર્સનો ઉપયોગ કરવા માટે, ત્વચા ફોલ્ડરમાં apikey ફાઇલની નકલ કરો:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB કવર્સનો ઉપયોગ કરવા માટે, ત્વચા ફોલ્ડરમાં apikey ફાઇલની નકલ કરો:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugin નો ઉપયોગ કરવા માટે:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "વિઝ્યુઅલ વેધરનો ઉપયોગ કરવા માટે\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "છુપાવો/બતાવો"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "ઇમેજ બોક્સનું પરીક્ષણ કરાયું નથી!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "/tmp/omdbkey.txt પરથી Api કી OMDB આયાત કરીએ?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt પરથી Api કી THETVDB આયાત કરીએ?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "/tmp/apikey.txt માંથી Api કી TMDB આયાત કરીએ?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt પરથી Api કી વિઝ્યુઅલવેધર આયાત કરીએ?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "ઇન્સ લાઇન"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather પ્લગઇન ઇન્સ્ટોલ કરો અને રીબૂટ કરો"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin ઇન્સ્ટોલ કરો"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "XStreamity Plugin માટે Skin Zeta ઇન્સ્ટોલ કરો"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "વેધર પ્લગઇન ઇન્સ્ટોલ કરો અને રીબૂટ કરો"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin ઇન્સ્ટોલ કરો"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "બંને પર oZeta Plugin અને Skin ઇન્સ્ટોલ કરો અથવા ઑટોઅપડેટ કરો"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "ઇન્સ્ટોલેશન mmpicons પ્લગઇન"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "ઓઝેટા ત્વચાની સ્થાપના"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "ઓઝેટા ત્વચા ઘટકનું સ્થાપન"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "સ્થાપન oZeta ત્વચા વિકલ્પો"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "/tmp/omdbkey.txt પરથી OMDB Apikey લોડ કરો"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt પરથી THETVDB Apikey લોડ કરો"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "/tmp/apikey.txt પરથી TMDB Apikey લોડ કરો"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt પરથી વિઝ્યુઅલવેધર એપીકી લોડ કરો"
 
 msgid "Location code"
-msgstr ""
+msgstr "સ્થાન કોડ"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN સ્થાન શોધ પરિણામ"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "મેનુ/સેટઅપ/ગ્રાફિક ઈન્ટરફેસ/OSD સેટઅપ\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s ખૂટે છે!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "XStreamity પ્લગઇન્સ ખૂટે છે!"
 
 msgid "OK"
-msgstr ""
+msgstr "ઓકે"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey આયાત અને સંગ્રહિત!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "ઓઝેટા સ્કિન: ઇન્સ્ટોલ કરેલ પરંતુ સક્રિય નથી"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather ખોલો, શું તમે ચાલુ રાખવા માંગો છો?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "અથવા મેન્યુઅલી કી દાખલ કરો, જે OMDB પોર્ટલ પર બનાવેલ છે'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "અથવા THETMDB પોર્ટલ પર બનાવેલ કી મેન્યુઅલી દાખલ કરો\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "અથવા મેન્યુઅલી કી દાખલ કરો, TMDB પોર્ટલ પર બનાવેલ\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "કૃપા કરીને એક માન્ય શહેરનું નામ દાખલ કરો."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "કૃપા કરીને શહેર માટે માન્ય સ્થાન કોડ દાખલ કરો."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "પ્લગઇન OAWeatherPlugin ઇન્સ્ટોલ કરેલ નથી!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "પ્લગઇન TheWeather ઇન્સ્ટોલ કરેલું નથી!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "પ્લગઇન વેધરપ્લગઇન ઇન્સ્ટોલ કરેલ નથી!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "પૂર્વાવલોકન"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "પૂર્વાવલોકન માહિતી"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "ખરેખર આ WeatherPlugin એન્ટ્રી કાઢી નાખીએ?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "સેટિંગ્સને ડિફોલ્ટ પેરામીટર્સ પર રીસેટ કરીએ?"
 
 msgid "Restart"
-msgstr ""
+msgstr "પુનઃપ્રારંભ કરો"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2 પુનઃપ્રારંભ કરો પરંતુ ફેરફારો લાગુ કરશો નહીં\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "માહિતી પુનઃપ્રારંભ કરો"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "તમારી પસંદગી પસંદ કરો"
 
 msgid "Save"
-msgstr ""
+msgstr "સાચવો"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "xml ફાઇલ રૂપરેખામાં ફેરફારો સાચવો અને કૉપિ કરો\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "શોધ કોડ"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "સેટિંગ્સ ચેનલ પેનલ્સ"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "સેટિંગ્સ સિટી વેધર પ્લગઇન"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "સેટિંગ્સ ઇવેન્ટવ્યુ પેનલ્સ"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "સેટિંગ્સ ઇન્ફોબાર પેનલ્સ"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "સેટિંગ્સ લોગો છબી નીચે"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "સેટિંગ્સ લોગો છબી ટોચ"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "સેટિંગ્સ મીડિયાપ્લેયર પેનલ્સ"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "સેટિંગ્સ મેનૂ છબી પેનલ"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "સેટિંગ્સ OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "સેટિંગ્સ પ્લગઇન બ્રાઉઝર પેનલ્સ"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "સેટિંગ્સ રેડિયો પેનલ્સ"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "સેટિંગ્સ SecInfobar પેનલ્સ"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "સેટિંગ્સ THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "સેટિંગ્સ TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "વિઝ્યુઅલવેધર એપીકી સેટિંગ્સ"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "સેટિંગ્સ વોલ્યુમ પેનલ્સ"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "સેટિંગ્સ oZeta Apikey સર્વર"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "સેટિંગ્સ oZeta હવામાન"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDB પર સાઇન અપ કરો અને મફત વ્યક્તિગત ApiKey ઇનપુટ કરો"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDB પર સાઇન અપ કરો અને મફત વ્યક્તિગત ApiKey ઇનપુટ કરો"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "TMDB પર સાઇન અપ કરો અને મફત વ્યક્તિગત ApiKey ઇનપુટ કરો"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com પર સાઇન અપ કરો અને મફત વ્યક્તિગત ApiKey ઇનપુટ કરો"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "ત્વચા અસ્તિત્વમાં છે !! શું તમે ખરેખર કોમ્પોનન્ટ અપડેટ કરવા માંગો છો?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "ત્વચા અસ્તિત્વમાં છે !! શું તમે ખરેખર અપગ્રેડ કરવા માંગો છો?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "સફળતાપૂર્વક ત્વચા બનાવવી!"
 
 msgid "System"
-msgstr ""
+msgstr "સિસ્ટમ"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey આયાત અને સંગ્રહિત!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey આયાત અને સંગ્રહિત!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "વિઝ્યુઅલવેધર ApiKey આયાત અને સંગ્રહિત!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "વેધરપ્લગઇન: એન્ટ્રી સંપાદિત કરો"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "વેધરપ્લગઇન: એન્ટ્રીઓની યાદી"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "તમે સ્થાન કોડ શોધી શકો તે પહેલાં તમારે એક માન્ય શહેરનું નામ દાખલ કરવાની જરૂર છે."
 
 msgid "imperial system"
-msgstr ""
+msgstr "શાહી સિસ્ટમ"
 
 msgid "metric system"
-msgstr ""
+msgstr "મેટ્રિક સિસ્ટમ"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "ફાઇલો ચલાવો/શો"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "વર્ચ્યુઅલ કીબોર્ડનો ઉપયોગ કરો.\n"

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 19:00+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Yiddish\n"
+"Language: yi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "לייג"
+
+msgid "Back"
+msgstr "צוריק"
+
+msgid "Cancel"
+msgstr "באָטל מאַכן"
+
+msgid "City"
+msgstr "שטאָט"
+
+msgid "Delete"
+msgstr "ויסמעקן"
+
+msgid "Edit"
+msgstr "רעדאַגירן"
+
+msgid "Feels like %s"
+msgstr "פילז ווי %s"
+
+msgid "Getting weather information..."
+msgstr "באַקומען וועטער אינפֿאָרמאַציע ..."
+
+msgid "Humidity: %s %%"
+msgstr "הומידיטי: %s %%"
+
+msgid "Location code"
+msgstr "אָרט קאָד"
+
+msgid "MSN location search result"
+msgstr "MSN אָרט זוכן רעזולטאַט"
+
+msgid "OK"
+msgstr "גוט"
+
+msgid "Observation point: %s"
+msgstr "אָבסערוואַציע פונט: %s"
+
+msgid "Observation time: %s"
+msgstr "אָבסערוואַציע צייט: %s"
+
+msgid "Please enter a valid city name."
+msgstr "ביטע אַרייַן אַ גילטיק שטאָט נאָמען."
+
+msgid "Please enter a valid location code for the city."
+msgstr "ביטע אַרייַן אַ גילטיק אָרט קאָד פֿאַר די שטאָט."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "טאַקע ויסמעקן דעם WeatherPlugin פּאָזיציע?"
+
+msgid "Search Code"
+msgstr "זוכן קאָד"
+
+msgid "Show Weather Forecast"
+msgstr "ווייַזן וועטער פאָרעקאַסט"
+
+msgid "System"
+msgstr "סיסטעם"
+
+msgid "Weather Plugin"
+msgstr "וועטער פּלוגין"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: רעדאַגירן פּאָזיציע"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: רשימה פון איינסן"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "איר דאַרפֿן צו אַרייַן אַ גילטיק שטאָט נאָמען איידער איר קענען זוכן פֿאַר די אָרט קאָד."
+
+msgid "imperial system"
+msgstr "קייסעריש סיסטעם"
+
+msgid "metric system"
+msgstr "מעטריק סיסטעם"

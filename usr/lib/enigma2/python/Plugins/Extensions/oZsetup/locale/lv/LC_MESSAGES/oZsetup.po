@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "-- Automātiska importēšana no spraudņa\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "- izmantojiet virtuālo tastatūru vai importējiet no noklusējuma konfigurācijas spraudņa"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Pievienot"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Alternatīvais radio režīms= Jā\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey informācija"
 
 msgid "Back"
-msgstr ""
+msgstr "Atpakaļ"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo mainīts un dublēts uz default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 msgid "City"
-msgstr ""
+msgstr "Pilsēta"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Noklikšķiniet uz Iziet, lai aizvērtu šo logu"
 
 msgid "Console"
-msgstr ""
+msgstr "Konsole"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Laikapstākļiem ievadītie dati, vai vēlaties turpināt to pašu?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Dzēst"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Vai tiešām vēlaties mainīt Bootlogo attēlu?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Rediģēt"
 
 msgid "Exit"
-msgstr ""
+msgstr "Iziet"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Failu komandieris — papildinājums"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Lai izmantotu OMDB vākus, kopējiet omdbkey failu ādas mapē:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Lai izmantotu THETMDB vākus, kopējiet apikey failu ādas mapē:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Lai izmantotu TMDB vākus, kopējiet apikey failu ādas mapē:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Lai izmantotu Weather Plugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Izmantošanai VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Paslēpt/Rādīt"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Attēlu lodziņš nav pārbaudīts!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Vai importēt Api atslēgas OMDB no /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Vai importēt Api atslēgu THETVDB no /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Vai importēt Api atslēgas TMDB no /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Vai importēt Api atslēgu VISUALWEATHER no /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Instalējiet OAWeather spraudni un restartējiet"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Instalējiet OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Instalējiet Skin Zeta XStreamity spraudnim"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Instalējiet laikapstākļu spraudni un restartējiet"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Instalējiet Weather Plugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Instalējiet vai automātiski atjauniniet oZeta Plugin & Skin abos"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "mmpicons spraudņa instalēšana"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Uzstādīšana oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "oZeta Skin Component uzstādīšana"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Uzstādīšanas oZeta Skin opcijas"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Ielādējiet OMDB Apikey no /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Ielādējiet THETVDB Apikey no /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Ielādējiet TMDB Apikey no /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Ielādēt VISUALWEATHER Apikey no /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Vietas kods"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN atrašanās vietas meklēšanas rezultāts"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Izvēlne/Iestatīšana/Grafiskais interfeiss/OSD iestatīšana\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Trūkst %s!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Trūkst XStreamity spraudņu!"
 
 msgid "OK"
-msgstr ""
+msgstr "Labi"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey importēts un saglabāts!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA ĀDA: UZSTĀDĪTA, BET NAV AKTĪVA"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Atvērt OAWeather, vai vēlaties turpināt?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Vai arī manuāli ievadiet OMDB portālā izveidoto atslēgu'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota portālā THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota TMDB portālā\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Lūdzu, ievadiet derīgu pilsētas nosaukumu."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Lūdzu, ievadiet derīgu pilsētas atrašanās vietas kodu."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Spraudnis OAWeatherPlugin nav instalēts!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Spraudnis TheWeather nav instalēts!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Spraudnis WeatherPlugin nav instalēts!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Priekšskatījums"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Priekšskatījuma informācija"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Vai tiešām dzēst šo WeatherPlugin ierakstu?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Vai atiestatīt iestatījumus uz noklusējuma parametriem?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Restartēt"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Restartējiet E2, bet nepiemērojiet izmaiņas\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Restartējiet informāciju"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "IZVĒLIES SAVU IZVĒLI"
 
 msgid "Save"
-msgstr ""
+msgstr "Saglabāt"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Saglabājiet un kopējiet izmaiņas xml faila konfigurācijā\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Meklēšanas kods"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Iestatījumi Kanālu paneļi"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Iestatījumi City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Iestatījumi Pasākumu skata paneļi"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Iestatījumi Informācijas joslas paneļi"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Iestatījumi Logotipa attēls apakšā"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Iestatījumi Logotips Attēls Augšpusē"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Iestatījumi MediaPlayer paneļi"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Iestatījumu izvēlne Attēlu panelis"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Iestatījumi OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Iestatījumi PluginBrowser paneļi"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Iestatījumi Radio paneļi"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Iestatījumi SecInfobar paneļi"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Iestatījumi THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Iestatījumi TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Iestatījumi VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Iestatījumu skaļuma paneļi"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Iestatījumi oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Iestatījumi oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Reģistrējieties OMDB un ievadiet bezmaksas personīgo ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Reģistrējieties vietnē THETVDB un ievadiet bezmaksas personīgo ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Reģistrējieties TMDB un ievadiet bezmaksas personīgo ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Reģistrējieties vietnē www.visualcrossing.com un ievadiet bezmaksas personīgo ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Āda pastāv!! Vai tiešām vēlaties atjaunināt Conponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Āda pastāv!! Vai tiešām vēlaties jaunināt?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Veiksmīgi izveidota āda!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistēma"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey importēts un saglabāts!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey importēts un saglabāts!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey importēts un uzglabāts!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "Laika spraudnis: rediģēt ierakstu"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "Laika spraudnis: ierakstu saraksts"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Lai varētu meklēt atrašanās vietas kodu, jums jāievada derīgs pilsētas nosaukums."
 
 msgid "imperial system"
-msgstr ""
+msgstr "impēriskā sistēma"
 
 msgid "metric system"
-msgstr ""
+msgstr "metriskā sistēma"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "atskaņot/rādīt failus"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "izmantojiet virtuālo tastatūru.\n"

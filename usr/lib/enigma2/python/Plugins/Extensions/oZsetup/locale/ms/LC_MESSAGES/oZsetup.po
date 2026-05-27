@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Import Automatik daripada Pemalam\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--gunakan papan kekunci maya atau import daripada pemalam konfigurasi lalai"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Tambah"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Mod Radio Alternatif= Ya\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Maklumat ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "belakang"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo ditukar dan sandarkan kepada default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 msgid "City"
-msgstr ""
+msgstr "Bandar"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Klik Keluar untuk menutup tetingkap ini"
 
 msgid "Console"
-msgstr ""
+msgstr "Konsol"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Data yang dimasukkan untuk Cuaca, adakah anda mahu meneruskan perkara yang sama?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Talian Del"
 
 msgid "Delete"
-msgstr ""
+msgstr "Padam"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Adakah anda benar-benar mahu menukar imej Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Sunting"
 
 msgid "Exit"
-msgstr ""
+msgstr "Keluar"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Komander Fail - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Untuk menggunakan The OMDB Covers, salin fail omdbkey dalam folder kulit:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Untuk penggunaan THETMDB Covers, salin fail apikey dalam folder kulit:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Untuk menggunakan The TMDB Covers, salin fail apikey dalam folder kulit:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Untuk menggunakan WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Untuk kegunaan VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Sembunyi/Tunjukkan"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Kotak Imej Tidak Diuji!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Import Api Key OMDB daripada /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Import Api Key THETVDB daripada /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Import Api Key TMDB daripada /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Import Api Key VISUALWEATHER daripada /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Talian Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Pasang Pemalam OAWeather dan But semula"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Pasang OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Pasang Skin Zeta untuk Pemalam XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Pasang Pemalam Cuaca dan But semula"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Pasang WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Pasang atau Autokemas kini Pemalam & Kulit oZeta pada kedua-duanya"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Pemasangan mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Pemasangan oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Pemasangan Komponen Kulit oZeta"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Pemasangan oZeta Skin pilihan"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Muatkan OMDB Apikey daripada /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Muatkan THETVDB Apikey daripada /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Muatkan Apikey TMDB daripada /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Muatkan VISUALWEATHER Apikey daripada /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Kod lokasi"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Hasil carian lokasi MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menu/Persediaan/Antara Muka Grafik/Persediaan OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Hilang %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Tiada Pemalam XStreamity!"
 
 msgid "OK"
 msgstr ""
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey Diimport & Disimpan!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: DIPASANG TAPI TIDAK AKTIF"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Buka OAWeather, adakah anda mahu meneruskan?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Sila masukkan nama bandar yang sah."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Sila masukkan kod lokasi yang sah untuk bandar."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Pemalam OAWeatherPlugin tidak dipasang!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather tidak dipasang!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin tidak dipasang!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Pratonton"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Maklumat Pratonton"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Betul-betul padamkan Entri WeatherPlugin ini?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Tetapkan Semula Tetapan kepada Parameter Lalai?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Mulakan semula"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Mulakan semula E2 tetapi tidak menggunakan perubahan\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Mulakan semula Maklumat"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "PILIH PILIHAN ANDA"
 
 msgid "Save"
-msgstr ""
+msgstr "Jimat"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Simpan dan Salin perubahan dalam konfigurasi fail xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Kod Carian"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Tetapan Panel Saluran"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Tetapan Pemalam Cuaca Bandar"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Tetapan Panel Paparan Acara"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Tetapan Panel Bar Maklumat"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Tetapan Logo Imej Bawah"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Tetapan Logo Imej Atas"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Tetapan Panel MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Panel Imej Menu Tetapan"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Tetapan OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Tetapan PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Tetapan Panel Radio"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Tetapan Panel SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Tetapan THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Tetapan TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Tetapan VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Tetapan Panel Kelantangan"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Tetapan oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Tetapan Cuaca oZeta"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Daftar di OMDB dan masukkan ApiKey peribadi percuma"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Daftar di THETVDB dan masukkan ApiKey peribadi percuma"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Daftar di TMDB dan masukkan ApiKey peribadi percuma"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Daftar di www.visualcrossing.com dan masukkan ApiKey peribadi percuma"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Kulit wujud!! Adakah anda benar-benar mahu Kemas Kini Konponen?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Kulit wujud!! Adakah anda benar-benar mahu Meningkatkan?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Berjaya mencipta Kulit!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey Diimport & Disimpan!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey Diimport & Disimpan!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey Diimport & Disimpan!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Edit Entri"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Senarai Entri"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Anda perlu memasukkan nama bandar yang sah sebelum anda boleh mencari kod lokasi."
 
 msgid "imperial system"
-msgstr ""
+msgstr "sistem empayar"
 
 msgid "metric system"
-msgstr ""
+msgstr "sistem metrik"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "main/tunjukkan Fail"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "gunakan papan kekunci maya.\n"

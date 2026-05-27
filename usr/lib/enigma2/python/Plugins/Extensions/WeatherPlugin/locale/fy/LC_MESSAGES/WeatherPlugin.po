@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:42+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Western Frisian\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr ""
+
+msgid "Back"
+msgstr "Rêch"
+
+msgid "Cancel"
+msgstr "Ofbrekke"
+
+msgid "City"
+msgstr "Stêd"
+
+msgid "Delete"
+msgstr "Wiskje"
+
+msgid "Edit"
+msgstr "Bewurkje"
+
+msgid "Feels like %s"
+msgstr "Fielt as %s"
+
+msgid "Getting weather information..."
+msgstr "Wetterynformaasje krije..."
+
+msgid "Humidity: %s %%"
+msgstr "Feuchte: %s %%"
+
+msgid "Location code"
+msgstr "Lokaasje koade"
+
+msgid "MSN location search result"
+msgstr "MSN lokaasje sykresultaat"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Observaasjepunt: %s"
+
+msgid "Observation time: %s"
+msgstr "Observaasjetiid: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Fier in jildige stêdnamme yn."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Fier in jildige lokaasjekoade yn foar de stêd."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Wiskje dizze WeatherPlugin-yngong echt?"
+
+msgid "Search Code"
+msgstr "Sykje Code"
+
+msgid "Show Weather Forecast"
+msgstr "Show Wettervorhersage"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "Weather Plugin"
+msgstr "Wetter Plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Yngong bewurkje"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: List fan ynstjoerings"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Jo moatte in jildige stêdnamme ynfiere foardat jo sykje kinne nei de lokaasjekoade."
+
+msgid "imperial system"
+msgstr "keizerlike systeem"
+
+msgid "metric system"
+msgstr "metrysk systeem"

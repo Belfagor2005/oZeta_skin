@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:55+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Swahili <(nothing)>\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Ongeza"
+
+msgid "Back"
+msgstr "Nyuma"
+
+msgid "Cancel"
+msgstr "Ghairi"
+
+msgid "City"
+msgstr "Jiji"
+
+msgid "Delete"
+msgstr "Futa"
+
+msgid "Edit"
+msgstr "Hariri"
+
+msgid "Feels like %s"
+msgstr "Anahisi kama %s"
+
+msgid "Getting weather information..."
+msgstr "Inapata taarifa za hali ya hewa..."
+
+msgid "Humidity: %s %%"
+msgstr "Unyevu: %s %%"
+
+msgid "Location code"
+msgstr "Msimbo wa eneo"
+
+msgid "MSN location search result"
+msgstr "Matokeo ya utafutaji wa eneo la MSN"
+
+msgid "OK"
+msgstr "Sawa"
+
+msgid "Observation point: %s"
+msgstr "Sehemu ya uchunguzi: %s"
+
+msgid "Observation time: %s"
+msgstr "Muda wa kutazama: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Tafadhali weka jina halali la jiji."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Tafadhali weka msimbo halali wa eneo wa jiji."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Je, ungependa kufuta Ingizo hili la WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Tafuta Msimbo"
+
+msgid "Show Weather Forecast"
+msgstr "Onyesha Utabiri wa Hali ya Hewa"
+
+msgid "System"
+msgstr "Mfumo"
+
+msgid "Weather Plugin"
+msgstr "Programu-jalizi ya hali ya hewa"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Badilisha Ingizo"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Orodha ya Maingizo"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Unahitaji kuingiza jina halali la jiji kabla ya kutafuta msimbo wa eneo."
+
+msgid "imperial system"
+msgstr "mfumo wa kifalme"
+
+msgid "metric system"
+msgstr "mfumo wa metric"

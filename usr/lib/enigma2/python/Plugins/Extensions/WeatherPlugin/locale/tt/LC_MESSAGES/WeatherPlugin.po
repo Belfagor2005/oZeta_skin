@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:58+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Tatar\n"
+"Language: tt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Кушу"
+
+msgid "Back"
+msgstr "Кире"
+
+msgid "Cancel"
+msgstr "Баш тарту"
+
+msgid "City"
+msgstr "Шәһәр"
+
+msgid "Delete"
+msgstr "Бетерү"
+
+msgid "Edit"
+msgstr "Редакцияләү"
+
+msgid "Feels like %s"
+msgstr "% S кебек тоела"
+
+msgid "Getting weather information..."
+msgstr "Weatherава торышы турында мәгълүмат алу ..."
+
+msgid "Humidity: %s %%"
+msgstr "Дым:% s %%"
+
+msgid "Location code"
+msgstr "Урын коды"
+
+msgid "MSN location search result"
+msgstr "MSN урынын эзләү нәтиҗәләре"
+
+msgid "OK"
+msgstr "Ярар"
+
+msgid "Observation point: %s"
+msgstr "Күзәтү ноктасы:% s"
+
+msgid "Observation time: %s"
+msgstr "Күзәтү вакыты:% s"
+
+msgid "Please enter a valid city name."
+msgstr "Зинһар, дөрес шәһәр исемен кертегез."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Зинһар, шәһәр өчен дөрес урнашу кодын кертегез."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Бу WeatherPlugin язмасын чыннан да бетерәсезме?"
+
+msgid "Search Code"
+msgstr "Эзләү коды"
+
+msgid "Show Weather Forecast"
+msgstr "Weatherава торышын фаразлау"
+
+msgid "System"
+msgstr "Система"
+
+msgid "Weather Plugin"
+msgstr "Weatherава торышы"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Керүне үзгәртү"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Керүләр исемлеге"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Урын кодын эзләгәнче сезгә дөрес шәһәр исемен кертергә кирәк."
+
+msgid "imperial system"
+msgstr "империя системасы"
+
+msgid "metric system"
+msgstr "метрика системасы"

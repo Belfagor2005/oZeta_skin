@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Importacion automatica dempuèi lo plugin\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--utilizatz lo clavièr virtual o importatz dempuèi un ensamblador de configuracion per defaut"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Apondre"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Mòde Ràdio Alternatiu= Òc\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Informacion ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Arrièr"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo cambiat e sauvagarda a default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anullar"
 
 msgid "City"
-msgstr ""
+msgstr "Vila"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Clicatz sus Sortir per tampar aquesta fenèstra"
 
 msgid "Console"
-msgstr ""
+msgstr "Consòla"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Donadas introduchas pel Meteo, volètz contunhar çò meteis ?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Del Linha"
 
 msgid "Delete"
-msgstr ""
+msgstr "Escafar"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Volètz vertadièrament cambiar l'imatge de Bootlogo ?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Modificar"
 
 msgid "Exit"
-msgstr ""
+msgstr "Sortida"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Comandant de fichièrs - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Per l'utilizacion Las cobèrtas OMDB, copiatz lo fichièr omdbkey dins lo dorsièr skin:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Per l'utilizacion Las cobèrtas THETMDB, copiatz lo fichièr apikey dins lo dorsièr skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Per l'utilizacion Las cobèrtas TMDB, copiatz lo fichièr apikey dins lo dorsièr skin:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Per l'usatge Lo WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Per utilizar VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Amagar/Afichar"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Bóstia d'imatge pas testada!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Importar l'OMDB de clau Api dempuèi /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Importar la clau Api THETVDB dempuèi /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Importar la clau Api TMDB dempuèi /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Importar la clau Api VISUALWEATHER dempuèi /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Linha Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Installatz l'ensamblador OAWeather e reaviatz"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Installatz OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Installatz Skin Zeta per l'ensamblador XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Installatz lo plugin Weather e reaviatz"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Installatz l'ensamblador Weather"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Installar o metre a jorn automaticament oZeta Plugin & Skin sus los dos"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Instalacion mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Instalacion oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Installacion oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Opcions d'installacion oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Cargar l'Apikey OMDB dempuèi /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Cargar THETVDB Apikey dempuèi /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Cargar l'Apikey TMDB dempuèi /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Cargar VISUALWEATHER Apikey dempuèi /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Còdi d'emplaçament"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Resultat de recèrca d'emplaçament MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menú/Configuracion/Interfàcia grafica/Configuracion OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Manca %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Los ensambladors XStreamity mancan!"
 
 msgid "OK"
-msgstr ""
+msgstr "ÒC BEN"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey Importat & Stored!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "PÈL OZETA: INSTALLAT MAS PAS ACTIVA"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Dobritz OAWeather, volètz contunhar ?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "O picatz manualament la clau, creada sul portal OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "O picatz manualament la clau, creada sul portal THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "O picatz manualament la clau, creada sul portal TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Picatz un nom de vila valid."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Picatz un còdi d'emplaçament valid per la vila."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Ensamblador OAWeatherPlugin pas installat!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Ensamblador TheWeather pas installat!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Ensamblador WeatherPlugin pas installat!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Apercebut"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Informacion d'apercebut"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Suprimir vertadièrament aquesta entrada WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Reïnicializar los paramètres als paramètres per defaut?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Reaviar"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Reaviatz E2 mas aplicatz pas las modificacions\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Informacions de reaviada"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "SELECCIONATZ VÒSTRA CAUSSION"
 
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Enregistrar e copiar las modificacions dins lo fichièr xml config\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Còde de recèrca"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Paramètres Panèls de canal"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Paramètres Enfichador de temps de la vila"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Paramètres Panèls de vista d'eveniments"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Panèls de barras d'informacions de paramètres"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Paramètres Imatge de lògo en bas"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Paramètres Logotip Imatge en naut"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Paramètres Panèls de MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Menú de paramètres Panèl d'imatge"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Paramètres OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Paramètres Panèls del navigador de plugin"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Paramètres Panèls de ràdio"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Paramètres Panèls de barra d'info sec"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Paramètres THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Paramètres TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Paramètres APIKEY VISUALWEATHER"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Paramètres Panèls de volum"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Paramètres oServidor Apikey Zeta"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Paramètres oZeta Meteo"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Inscrivètz-vos sus OMDB e picatz ApiKey personala gratuita"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Inscrivètz-vos sus THETVDB e picatz una ApiKey personala gratuita"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Inscrivètz-vos sus TMDB e picatz gratuitament l'ApiKey personala"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Inscrivètz-vos sus www.visualcrossing.com e inscrivètz un ApiKey personal gratuit"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "La pèl existís!! Volètz vertadièrament metre a jorn lo compausant?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "La pèl existís!! Volètz vertadièrament metre a jorn?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Creant amb succès Skin!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistèma"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey Importada & Stored!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey Importat & Stored!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey Importat & Stored!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Modificar l'entrada"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Lista de las dintradas"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Vos cal picar un nom de vila valid abans de poder recercar lo còde d'emplaçament."
 
 msgid "imperial system"
-msgstr ""
+msgstr "sistèma imperial"
 
 msgid "metric system"
-msgstr ""
+msgstr "sistèma metric"
 
 msgid "oZsetup"
-msgstr ""
+msgstr "oZconfiguracion"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "jogar/afichar los fichièrs"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "utilizar lo clavièr virtual.\n"

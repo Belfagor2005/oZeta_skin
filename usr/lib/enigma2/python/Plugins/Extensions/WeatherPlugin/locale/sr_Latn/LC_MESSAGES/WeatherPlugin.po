@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:55+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Language sr-Latn\n"
+"Language: sr-Latn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Додај"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Cancel"
+msgstr "Откажи"
+
+msgid "City"
+msgstr "Цити"
+
+msgid "Delete"
+msgstr "Избриши"
+
+msgid "Edit"
+msgstr "Уреди"
+
+msgid "Feels like %s"
+msgstr "Осећа се као %с"
+
+msgid "Getting weather information..."
+msgstr "Добијање информација о времену..."
+
+msgid "Humidity: %s %%"
+msgstr "Влажност: %с %%"
+
+msgid "Location code"
+msgstr "Шифра локације"
+
+msgid "MSN location search result"
+msgstr "МСН резултат претраге локације"
+
+msgid "OK"
+msgstr "ОК"
+
+msgid "Observation point: %s"
+msgstr "Тачка посматрања: %с"
+
+msgid "Observation time: %s"
+msgstr "Време посматрања: %с"
+
+msgid "Please enter a valid city name."
+msgstr "Унесите важећи назив града."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Унесите важећи код локације за град."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Да ли стварно избришете овај ВеатхерПлугин унос?"
+
+msgid "Search Code"
+msgstr "Сеарцх Цоде"
+
+msgid "Show Weather Forecast"
+msgstr "Прикажи временску прогнозу"
+
+msgid "System"
+msgstr "Систем"
+
+msgid "Weather Plugin"
+msgstr "Временски додатак"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "ВеатхерПлугин: Уреди унос"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "ВеатхерПлугин: Листа уноса"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Морате да унесете важећи назив града да бисте могли да тражите код локације."
+
+msgid "imperial system"
+msgstr "империјални систем"
+
+msgid "metric system"
+msgstr "метрички систем"

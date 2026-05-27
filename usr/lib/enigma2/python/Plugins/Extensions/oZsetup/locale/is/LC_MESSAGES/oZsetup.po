@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Sjálfvirkur innflutningur úr viðbót\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--notaðu sýndarlyklaborðið eða fluttu inn úr sjálfgefna stillingarforriti"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Bæta við"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Alternative Radio Mode= Já\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey upplýsingar"
 
 msgid "Back"
-msgstr ""
+msgstr "Til baka"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo breytt og afrit í default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Hætta við"
 
 msgid "City"
-msgstr ""
+msgstr "Borg"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Smelltu á Hætta til að loka þessum glugga"
 
 msgid "Console"
-msgstr ""
+msgstr "Stjórnborð"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Gögn færð inn fyrir veðrið, viltu halda því sama áfram?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Eyða"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Viltu virkilega breyta Bootlogo myndinni?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Breyta"
 
 msgid "Exit"
-msgstr ""
+msgstr "Hætta"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Skráarforingi - viðbót"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Til að nota The OMDB Covers, afritaðu omdbkey skrána í skinnmöppuna:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Til að nota THETMDB Covers, afritaðu apikey skrána í skinnmöppuna:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Til að nota The TMDB Covers, afritaðu apikey skrána í skinnmöppuna:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Til notkunar The Weather Plugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Til notkunar VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Fela/Sýna"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Myndabox ekki prófað!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Flytja inn Api Key OMDB frá /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Flytja inn Api Key THETVDB frá /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Flytja inn Api Key TMDB frá /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Flytja inn Api Key VISUALWEATHER frá /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Settu upp OAWeather Plugin og endurræstu"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Settu upp OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Settu upp Skin Zeta fyrir XStreamity viðbótina"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Settu upp Weather Plugin og endurræstu"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Settu upp WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Settu upp eða uppfærðu oZeta Plugin & Skin sjálfkrafa á báðum"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Uppsetning mmpicons viðbót"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Uppsetning oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Uppsetning oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Uppsetning oZeta Skin valkostir"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Hladdu OMDB Apikey frá /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Hladdu THETVDB Apikey frá /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Hladdu TMDB Apikey frá /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Hlaða VISUALWEATHER Apikey frá /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Staðsetningarkóði"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN staðsetningarleitarniðurstaða"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Valmynd/uppsetning/grafískt viðmót/OSD uppsetning\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Vantar %s!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Vantar XStreamity viðbætur!"
 
 msgid "OK"
-msgstr ""
+msgstr "Allt í lagi"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey fluttur inn og geymdur!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA HÚÐ: UPPSETT EN EKKI VIRK"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Opnaðu OAWeather, viltu halda áfram?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á OMDB gáttinni'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á THETMDB gáttinni\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á TMDB gáttinni\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Vinsamlegast sláðu inn gilt borgarnafn."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Vinsamlegast sláðu inn gildan staðsetningarkóða fyrir borgina."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Viðbót OAWeatherPlugin ekki uppsett!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Viðbótin TheWeather ekki uppsett!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin ekki uppsett!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Forskoðun"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Forskoðunarupplýsingar"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Viltu virkilega eyða þessari WeatherPlugin færslu?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Endurstilla stillingar í sjálfgefnar færibreytur?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Endurræstu"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Endurræstu E2 en notaðu ekki breytingar\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Endurræstu upplýsingar"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "VELDU ÞITT VAL"
 
 msgid "Save"
-msgstr ""
+msgstr "Vista"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Vista og afritaðu breytingar í xml skráarstillingunni\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Leitarkóði"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Stillingar Channel Panels"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Stillingar City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Stillingar Atburðasýn spjöld"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Stillingar upplýsingastiku spjöld"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Stillingar Merki Mynd Botn"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Stillingar Merki Mynd Efst"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Stillingar MediaPlayer spjöld"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Stillingarvalmynd Myndaborð"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Stillingar OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Stillingar PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Stillingar útvarpspjöld"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Stillingar SecInfobar Panels"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Stillingar THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Stillingar TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Stillingar VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Stillingar hljóðstyrkspjöld"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Stillingar oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Stillingar oZeta Veður"
 
 msgid "Signup on OMDB and input free personal ApiKey"
 msgstr ""
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Skráðu þig á THETVDB og settu inn ókeypis persónulegan ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Skráðu þig á TMDB og settu inn ókeypis persónulegan ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Skráðu þig á www.visualcrossing.com og settu inn ókeypis persónulegan ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Húð er til!! Viltu virkilega uppfæra Conponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Húð er til!! Viltu virkilega uppfæra?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Tókst að búa til Skin!"
 
 msgid "System"
-msgstr ""
+msgstr "Kerfi"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey fluttur inn og geymdur!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey flutt inn og geymd!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey flutt inn og geymd!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Breyta færslu"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Listi yfir færslur"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Þú þarft að slá inn gilt borgarnafn áður en þú getur leitað að staðsetningarkóðanum."
 
 msgid "imperial system"
-msgstr ""
+msgstr "keisarakerfi"
 
 msgid "metric system"
-msgstr ""
+msgstr "metrakerfi"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "spila/sýna skrár"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "notaðu sýndarlyklaborðið.\n"

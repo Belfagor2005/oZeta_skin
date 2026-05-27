@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:57+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Turkmen\n"
+"Language: tk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Goş"
+
+msgid "Back"
+msgstr "Yzyna"
+
+msgid "Cancel"
+msgstr "Elatyr"
+
+msgid "City"
+msgstr "Şäher"
+
+msgid "Delete"
+msgstr "Öçür"
+
+msgid "Edit"
+msgstr "Redaktirläň"
+
+msgid "Feels like %s"
+msgstr "% S ýaly duýulýar"
+
+msgid "Getting weather information..."
+msgstr "Howa barada maglumat almak ..."
+
+msgid "Humidity: %s %%"
+msgstr "Çyglylyk:% s %%"
+
+msgid "Location code"
+msgstr "Locationerleşiş kody"
+
+msgid "MSN location search result"
+msgstr "MSN ýerleşiş gözleg netijesi"
+
+msgid "OK"
+msgstr "Bolýar"
+
+msgid "Observation point: %s"
+msgstr "Gözegçilik nokady:% s"
+
+msgid "Observation time: %s"
+msgstr "Gözegçilik wagty:% s"
+
+msgid "Please enter a valid city name."
+msgstr "Dogry şäher adyny giriziň."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Şäher üçin dogry ýer koduny giriziň."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Bu WeatherPlugin ýazgysyny hakykatdanam pozuň?"
+
+msgid "Search Code"
+msgstr "Gözleg kody"
+
+msgid "Show Weather Forecast"
+msgstr "Howanyň çaklamasyny görkez"
+
+msgid "System"
+msgstr "Ulgam"
+
+msgid "Weather Plugin"
+msgstr "Howa plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Girişi redaktirläň"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Girişleriň sanawy"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Locationerleşiş koduny gözlemezden ozal dogry şäher adyny girizmeli."
+
+msgid "imperial system"
+msgstr "imperiýa ulgamy"
+
+msgid "metric system"
+msgstr "ölçeg ulgamy"

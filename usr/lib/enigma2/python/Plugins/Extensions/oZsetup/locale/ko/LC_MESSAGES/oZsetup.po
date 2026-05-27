@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--플러그인에서 자동 가져오기\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--가상 키보드를 사용하거나 기본 구성 플러그인에서 가져오기"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "추가하다"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "대체 라디오 모드= 예\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "API키 정보"
 
 msgid "Back"
-msgstr ""
+msgstr "뒤쪽에"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo가 변경되고 default_bootlogo.mvi로 백업됩니다!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 msgid "City"
-msgstr ""
+msgstr "도시"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "이 창을 닫으려면 종료를 클릭하세요."
 
 msgid "Console"
-msgstr ""
+msgstr "콘솔"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "날씨에 입력된 데이터를 계속 사용하시겠습니까?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "델 라인"
 
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "정말로 Bootlogo 이미지를 변경하시겠습니까?"
 
 msgid "Edit"
-msgstr ""
+msgstr "편집하다"
 
 msgid "Exit"
-msgstr ""
+msgstr "출구"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "파일 커맨더 - 애드온"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB 표지를 사용하려면 스킨 폴더에 omdbkey 파일을 복사하십시오.\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB Covers를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB 표지를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugin 사용:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather 사용\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "숨기기/보이기"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "이미지 상자는 테스트되지 않았습니다!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "/tmp/omdbkey.txt에서 API 키 OMDB를 가져오시겠습니까?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt에서 API 키 THETVDB를 가져오시겠습니까?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "/tmp/apikey.txt에서 API 키 TMDB를 가져오시겠습니까?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt에서 API 키 VISUALWEATHER를 가져오시겠습니까?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "인라인"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather 플러그인 설치 및 재부팅"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeather 플러그인 설치"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "XStreamity 플러그인용 Skin Zeta 설치"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "날씨 플러그인 설치 및 재부팅"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin 설치"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "둘 다에 oZeta 플러그인 및 스킨 설치 또는 자동 업데이트"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "mmpicons 플러그인 설치"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "설치 oZeta 스킨"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "설치 oZeta 스킨 구성 요소"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "설치 oZeta 스킨 옵션"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "/tmp/omdbkey.txt에서 OMDB Apikey 로드"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt에서 THETVDB Apikey를 로드하세요."
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "/tmp/apikey.txt에서 TMDB Apikey 로드"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt에서 VISUALWEATHER Apikey를 로드합니다."
 
 msgid "Location code"
-msgstr ""
+msgstr "위치 코드"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN 위치 검색 결과"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "메뉴/설정/그래픽 인터페이스/OSD 설정\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s이(가) 없습니다!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "XStreamity 플러그인이 없습니다!"
 
 msgid "OK"
-msgstr ""
+msgstr "좋아요"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey 가져오기 및 저장됨!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA 스킨: 설치되었지만 활성화되지 않음"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather를 여세요. 계속하시겠습니까?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "또는 OMDB 포털에서 생성된 키를 수동으로 입력하세요'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "또는 THETMDB 포털에서 생성된 키를 수동으로 입력하십시오.\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "또는 TMDB 포털에서 생성된 키를 수동으로 입력하십시오.\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "올바른 도시 이름을 입력하세요."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "도시의 유효한 위치 코드를 입력하세요."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "플러그인 OAWeatherPlugin이 설치되지 않았습니다!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "플러그인 TheWeather가 설치되지 않았습니다!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "플러그인 WeatherPlugin이 설치되지 않았습니다!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "시사"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "미리보기 정보"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "이 WeatherPlugin 항목을 삭제하시겠습니까?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "설정을 기본 매개변수로 재설정하시겠습니까?"
 
 msgid "Restart"
-msgstr ""
+msgstr "다시 시작"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2를 다시 시작하지만 변경 사항을 적용하지 않음\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "재시작 정보"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "원하는 것을 선택하세요"
 
 msgid "Save"
-msgstr ""
+msgstr "구하다"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "xml 파일 구성의 변경 사항 저장 및 복사\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "검색 코드"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "설정 채널 패널"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "설정 도시 날씨 플러그인"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "설정 이벤트뷰 패널"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "설정 정보 표시줄 패널"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "설정 로고 이미지 하단"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "설정 로고 이미지 상단"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "설정 MediaPlayer 패널"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "설정 메뉴 이미지 패널"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "설정 OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "설정 플러그인브라우저 패널"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "설정 라디오 패널"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "설정 SecInfobar 패널"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "설정 THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "설정 TMDB APIKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "설정 VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "설정 볼륨 패널"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "설정 oZeta APIkey 서버"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "설정 oZeta 날씨"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDB에 가입하고 무료 개인 ApiKey를 입력하세요"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDB에 가입하고 무료 개인 ApiKey를 입력하세요"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "TMDB에 가입하고 무료 개인 ApiKey를 입력하세요"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com에 가입하고 무료 개인 ApiKey를 입력하세요."
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "스킨이 존재합니다!! 정말로 구성 요소를 업데이트하시겠습니까?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "스킨이 존재합니다!! 정말로 업그레이드하시겠습니까?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "스킨 생성 성공!"
 
 msgid "System"
-msgstr ""
+msgstr "체계"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey 가져오기 및 저장됨!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey 가져오기 및 저장됨!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey 가져오기 및 저장됨!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: 항목 편집"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: 항목 목록"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "위치 코드를 검색하려면 유효한 도시 이름을 입력해야 합니다."
 
 msgid "imperial system"
-msgstr ""
+msgstr "제국 체제"
 
 msgid "metric system"
-msgstr ""
+msgstr "미터법"
 
 msgid "oZsetup"
-msgstr ""
+msgstr "oZ설정"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "파일 재생/표시"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "가상 키보드를 사용하십시오.\n"

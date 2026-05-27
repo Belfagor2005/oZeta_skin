@@ -34,7 +34,7 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 
 msgid "Add"
-msgstr ""
+msgstr "Aggiungere"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\n"
@@ -53,34 +53,34 @@ msgid "Cancel"
 msgstr "Annulla"
 
 msgid "City"
-msgstr ""
+msgstr "Città"
 
 msgid "Click Exit for close this window"
 msgstr "Esci per chiudere questa finestra"
 
 msgid "Console"
-msgstr ""
+msgstr "Consolle"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "Dati inseriti per il Meteo, vuoi continuare lo stesso?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Della Linea"
 
 msgid "Delete"
-msgstr ""
+msgstr "Eliminare"
 
 msgid "Do you really want to change Bootlogo image?"
 msgstr "Vuoi davvero cambiare l'immagine Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Modificare"
 
 msgid "Exit"
-msgstr ""
+msgstr "Uscita"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "File Commander - Componente aggiuntivo"
 
 #, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
@@ -103,10 +103,10 @@ msgid "For use VisualWeather\n"
 msgstr "    Per utilizzare VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Nascondi/Mostra"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Casella immagine non testata!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
 msgstr "Importare Api Key OMDB da /tmp/omdbkey.txt?"
@@ -122,7 +122,7 @@ msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
 msgstr "Carica VISUALWEATHER Apikey da /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Linea Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
 msgstr "Installa OAWeather Plugin e Riavvia"
@@ -171,10 +171,10 @@ msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
 msgstr "Carica VISUALWEATHER Apikey da /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Codice di posizione"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Risultato della ricerca della posizione MSN"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
@@ -193,7 +193,7 @@ msgid "OMDB ApiKey Imported & Stored!"
 msgstr "OMDB ApiKey Importata e Memorizzata!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "SKIN OZETA: INSTALLATA MA NON ATTIVA"
 
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Apri OAWeather, vuoi continuare?"
@@ -211,10 +211,10 @@ msgid "Or manually enter the key, created on the TMDB portal\n"
 msgstr "    Oppure inserire manualmente la chiave, creata sul portale TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Inserisci un nome di città valido."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Inserisci un codice di località valido per la città."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
 msgstr "Plugin OAWeather non installato!!!"
@@ -233,7 +233,7 @@ msgid "Preview Info"
 msgstr "Info Anteprima"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Eliminare davvero questa voce WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
 msgstr "Ripristinare le impostazioni sui parametri predefiniti?"
@@ -259,7 +259,7 @@ msgid "Save and Copy changes in the xml file config\n"
 msgstr "         Salva e copia le modifiche nel file xml config\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Cerca codice"
 
 msgid "Settings Channel Panels"
 msgstr "Impostazioni del pannello Lista Canali"
@@ -338,7 +338,7 @@ msgid "Successfully creating Skin!"
 msgstr "Creazione riuscita della Skin!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 msgid "THETVDB ApiKey Imported & Stored!"
 msgstr "THETVDB ApiKey Importata e Memorizzata!"
@@ -350,25 +350,25 @@ msgid "VISUALWEATHER ApiKey Imported & Stored!"
 msgstr "VISUALWEATHER ApiKey Importata e Memorizzata!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Modifica voce"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: elenco delle voci"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "È necessario inserire un nome di città valido prima di poter cercare il codice di posizione."
 
 msgid "imperial system"
-msgstr ""
+msgstr "sistema imperiale"
 
 msgid "metric system"
-msgstr ""
+msgstr "sistema metrico"
 
 msgid "oZsetup"
 msgstr "oZsetup"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "riprodurre/mostrare file"
 
 #, fuzzy
 msgid "use the virtual keyboard.\n"

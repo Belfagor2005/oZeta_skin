@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:50+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Burmese\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "ထည့်ပါ။"
+
+msgid "Back"
+msgstr "ကျော"
+
+msgid "Cancel"
+msgstr "မလုပ်တော့"
+
+msgid "City"
+msgstr "မြို"
+
+msgid "Delete"
+msgstr "ဖျက်ပါ။"
+
+msgid "Edit"
+msgstr "တည်းဖြတ်ပါ။"
+
+msgid "Feels like %s"
+msgstr "%s ကဲ့သို့ခံစားရသည်။"
+
+msgid "Getting weather information..."
+msgstr "မိုးလေဝသအချက်အလက်ရယူခြင်း..."
+
+msgid "Humidity: %s %%"
+msgstr "စိုထိုင်းဆ- %s %%"
+
+msgid "Location code"
+msgstr "တည်နေရာကုဒ်"
+
+msgid "MSN location search result"
+msgstr "MSN တည်နေရာရှာဖွေမှုရလဒ်"
+
+msgid "OK"
+msgstr "အိုကေ"
+
+msgid "Observation point: %s"
+msgstr "ရှုထောင့်- %s"
+
+msgid "Observation time: %s"
+msgstr "စောင့်ကြည့်ချိန်- %s"
+
+msgid "Please enter a valid city name."
+msgstr "ကျေးဇူးပြု၍ တရားဝင်မြို့အမည်ကို ထည့်ပါ။"
+
+msgid "Please enter a valid location code for the city."
+msgstr "ကျေးဇူးပြု၍ မြို့အတွက် မှန်ကန်သော တည်နေရာကုဒ်ကို ထည့်ပါ။"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ဤ WeatherPlugin ထည့်သွင်းမှုကို အမှန်တကယ် ဖျက်လိုပါသလား။"
+
+msgid "Search Code"
+msgstr "ကုဒ်ကိုရှာပါ။"
+
+msgid "Show Weather Forecast"
+msgstr "မိုးလေဝသခန့်မှန်းချက်ကိုပြသပါ။"
+
+msgid "System"
+msgstr "စနစ်"
+
+msgid "Weather Plugin"
+msgstr ""
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin- ထည့်သွင်းမှုကို တည်းဖြတ်ပါ။"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin- ထည့်သွင်းမှုများစာရင်း"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "တည်နေရာကုဒ်ကို မရှာဖွေမီ မှန်ကန်သောမြို့အမည်ကို ထည့်သွင်းရန် လိုအပ်သည်။"
+
+msgid "imperial system"
+msgstr "နယ်ချဲ့စနစ်"
+
+msgid "metric system"
+msgstr "မက်ထရစ်စနစ်"

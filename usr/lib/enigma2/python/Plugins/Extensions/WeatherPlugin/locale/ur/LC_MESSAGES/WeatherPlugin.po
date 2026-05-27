@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 19:00+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Urdu <jessbody@gmail.com>\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "شامل کریں۔"
+
+msgid "Back"
+msgstr "پیچھے"
+
+msgid "Cancel"
+msgstr "منسوخ کریں۔"
+
+msgid "City"
+msgstr "شہر"
+
+msgid "Delete"
+msgstr "حذف کریں۔"
+
+msgid "Edit"
+msgstr "ترمیم کریں۔"
+
+msgid "Feels like %s"
+msgstr "%s کی طرح محسوس ہوتا ہے۔"
+
+msgid "Getting weather information..."
+msgstr "موسم کی معلومات حاصل کی جا رہی ہے..."
+
+msgid "Humidity: %s %%"
+msgstr "نمی: %s %%"
+
+msgid "Location code"
+msgstr "مقام کا کوڈ"
+
+msgid "MSN location search result"
+msgstr "MSN مقام کی تلاش کا نتیجہ"
+
+msgid "OK"
+msgstr "ٹھیک ہے"
+
+msgid "Observation point: %s"
+msgstr "مشاہداتی نقطہ: %s"
+
+msgid "Observation time: %s"
+msgstr "مشاہدے کا وقت: %s"
+
+msgid "Please enter a valid city name."
+msgstr "براہ کرم شہر کا ایک درست نام درج کریں۔"
+
+msgid "Please enter a valid location code for the city."
+msgstr "براہ کرم شہر کے لیے ایک درست مقام کا کوڈ درج کریں۔"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "واقعی اس WeatherPlugin اندراج کو حذف کریں؟"
+
+msgid "Search Code"
+msgstr "تلاش کوڈ"
+
+msgid "Show Weather Forecast"
+msgstr "موسم کی پیشن گوئی دکھائیں۔"
+
+msgid "System"
+msgstr "سسٹم"
+
+msgid "Weather Plugin"
+msgstr "ویدر پلگ ان"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "ویدر پلگ ان: اندراج میں ترمیم کریں۔"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "ویدر پلگ ان: اندراجات کی فہرست"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "اس سے پہلے کہ آپ مقام کا کوڈ تلاش کر سکیں آپ کو شہر کا ایک درست نام درج کرنا ہوگا۔"
+
+msgid "imperial system"
+msgstr "سامراجی نظام"
+
+msgid "metric system"
+msgstr "میٹرک نظام"

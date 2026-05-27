@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:39+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Azerbaijani\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Əlavə et"
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Cancel"
+msgstr "Ləğv et"
+
+msgid "City"
+msgstr "Şəhər"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Edit"
+msgstr "Redaktə et"
+
+msgid "Feels like %s"
+msgstr "%s kimi hiss olunur"
+
+msgid "Getting weather information..."
+msgstr "Hava haqqında məlumat əldə etmək..."
+
+msgid "Humidity: %s %%"
+msgstr "Rütubət: %s %%"
+
+msgid "Location code"
+msgstr "Yer kodu"
+
+msgid "MSN location search result"
+msgstr "MSN məkan axtarışı nəticəsi"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Müşahidə nöqtəsi: %s"
+
+msgid "Observation time: %s"
+msgstr "Müşahidə vaxtı: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Lütfən, düzgün şəhər adı daxil edin."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Lütfən, şəhər üçün etibarlı yer kodu daxil edin."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Bu WeatherPlugin Girişi həqiqətən silinsin?"
+
+msgid "Search Code"
+msgstr "Axtarış Kodu"
+
+msgid "Show Weather Forecast"
+msgstr "Hava Proqnozunu göstərin"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Weather Plugin"
+msgstr "Hava Plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Girişi redaktə edin"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Girişlərin siyahısı"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Məkan kodunu axtarmadan əvvəl etibarlı şəhər adını daxil etməlisiniz."
+
+msgid "imperial system"
+msgstr "imperiya sistemi"
+
+msgid "metric system"
+msgstr "metrik sistem"

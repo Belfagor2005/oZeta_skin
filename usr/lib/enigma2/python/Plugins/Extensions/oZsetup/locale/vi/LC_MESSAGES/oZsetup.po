@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Nhập tự động từ Plugin\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--sử dụng bàn phím ảo hoặc nhập từ plugin cấu hình mặc định"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Thêm vào"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Chế độ vô tuyến thay thế= Có\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Thông tin về APIKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Mặt sau"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo đã thay đổi và sao lưu thành default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Hủy bỏ"
 
 msgid "City"
-msgstr ""
+msgstr "Thành phố"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Bấm Thoát để đóng cửa sổ này"
 
 msgid "Console"
-msgstr ""
+msgstr "Bảng điều khiển"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Dữ liệu đã nhập cho Thời tiết, bạn có muốn tiếp tục như vậy không?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Xóa bỏ"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Bạn có thực sự muốn thay đổi hình ảnh Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Biên tập"
 
 msgid "Exit"
-msgstr ""
+msgstr "Ra"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Chỉ huy tập tin - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Để sử dụng Vỏ OMDB, hãy sao chép tệp omdbkey trong thư mục giao diện:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Để sử dụng TheTMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Để sử dụng TMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Để sử dụng WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Để sử dụng VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Ẩn/Hiển thị"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Hộp hình ảnh chưa được kiểm tra!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Nhập khóa Api OMDB từ /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Nhập khóa Api THETVDB từ /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Nhập Api Key TMDB từ /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Nhập khóa Api VISUALWEATHER từ /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Dòng Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Cài đặt Plugin OAWeather và khởi động lại"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Cài đặt OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Cài đặt Skin Zeta cho Plugin XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Cài đặt Plugin thời tiết và khởi động lại"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Cài đặt plugin thời tiết"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Cài đặt hoặc Autoupdate oZeta Plugin & Skin trên cả hai"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Cài đặt plugin mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Cài đặt oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Cài đặt thành phần da oZeta"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Cài đặt oZeta Tùy chọn Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Tải Apikey OMDB từ /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Tải Apikey THETVDB từ /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Tải TMDB Apikey từ /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Tải VISUALWEATHER Apikey từ /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Mã vị trí"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Kết quả tìm kiếm vị trí MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menu/Cài đặt/Giao diện đồ họa/Cài đặt OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Thiếu %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Thiếu plugin XStreamity!"
 
 msgid "OK"
-msgstr ""
+msgstr "ĐƯỢC RỒI"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey được nhập và lưu trữ!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: ĐÃ CÀI ĐẶT NHƯNG KHÔNG HOẠT ĐỘNG"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Mở OAWeather, bạn có muốn tiếp tục không?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Hoặc nhập thủ công khóa được tạo trên cổng OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Hoặc nhập thủ công key được tạo trên cổng THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Hoặc nhập thủ công khóa được tạo trên cổng TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Vui lòng nhập tên thành phố hợp lệ."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Vui lòng nhập mã vị trí hợp lệ cho thành phố."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeathPlugin chưa được cài đặt!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather chưa được cài đặt!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin chưa được cài đặt!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Xem trước"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Xem trước thông tin"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Thực sự xóa mục nhập WeatherPlugin này?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Đặt lại cài đặt về thông số mặc định?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Khởi động lại"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Khởi động lại E2 nhưng không áp dụng các thay đổi\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Thông tin khởi động lại"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "CHỌN LỰA CHỌN CỦA BẠN"
 
 msgid "Save"
-msgstr ""
+msgstr "Cứu"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Lưu và Sao chép các thay đổi trong cấu hình tệp xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Mã tìm kiếm"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Bảng điều khiển kênh cài đặt"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Cài đặt Plugin thời tiết thành phố"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Bảng xem sự kiện cài đặt"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Bảng thông tin cài đặt"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Cài đặt Hình ảnh Logo Dưới cùng"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Cài đặt Hình ảnh Logo Trên cùng"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Cài đặt Bảng MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Menu cài đặt Bảng hình ảnh"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Cài đặt OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Cài đặt PluginBảng trình duyệt"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Cài đặt Bảng điều khiển Radio"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Bảng điều khiển SecInfobar cài đặt"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Cài đặt THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Cài đặt TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Cài đặt VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Bảng điều khiển âm lượng cài đặt"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Cài đặt oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Cài đặt oZeta Thời tiết"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Đăng ký trên OMDB và nhập ApiKey cá nhân miễn phí"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Đăng ký trên THETVDB và nhập ApiKey cá nhân miễn phí"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Đăng ký trên TMDB và nhập ApiKey cá nhân miễn phí"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Đăng ký trên www.visualcrossing.com và nhập ApiKey cá nhân miễn phí"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Da tồn tại!! Bạn có thực sự muốn cập nhật Conpon không?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Da tồn tại!! Bạn có thực sự muốn nâng cấp?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Tạo Skin thành công!"
 
 msgid "System"
-msgstr ""
+msgstr "Hệ thống"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey được nhập và lưu trữ!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey được nhập và lưu trữ!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey được nhập và lưu trữ!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Chỉnh sửa mục nhập"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Danh sách các mục"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Bạn cần nhập tên thành phố hợp lệ trước khi có thể tìm kiếm mã vị trí."
 
 msgid "imperial system"
-msgstr ""
+msgstr "hệ thống đế quốc"
 
 msgid "metric system"
-msgstr ""
+msgstr "hệ mét"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "phát/hiển thị tập tin"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "sử dụng bàn phím ảo.\n"

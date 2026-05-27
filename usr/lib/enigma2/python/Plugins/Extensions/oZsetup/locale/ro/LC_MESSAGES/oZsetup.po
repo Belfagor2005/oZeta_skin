@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Import automat din plugin\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--utilizați tastatura virtuală sau importați din pluginul de configurare implicit"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Adăuga"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Mod radio alternativ= Da\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Informații ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Spate"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo schimbat și backup la default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anula"
 
 msgid "City"
-msgstr ""
+msgstr "Oraş"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Faceți clic pe Ieșire pentru a închide această fereastră"
 
 msgid "Console"
-msgstr ""
+msgstr "Consolă"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Datele introduse pentru Meteo, doriți să continuați la fel?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Şterge"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Chiar vrei să schimbi imaginea Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edita"
 
 msgid "Exit"
-msgstr ""
+msgstr "Ieșire"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Pentru a utiliza Coperțile OMDB, copiați fișierul omdbkey în folderul skin:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Pentru a utiliza Coperțile THETMDB, copiați fișierul apikey în folderul skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Pentru a utiliza Coperțile TMDB, copiați fișierul apikey în folderul skin:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Pentru a utiliza WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Pentru utilizarea VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Ascunde/Afișează"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Caseta de imagine nu a fost testată!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Importați cheia API OMDB din /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Importați cheia API THETVDB din /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Importați cheia Api TMDB din /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Importați cheia API VISUALWEATHER din /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Linia Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Instalați pluginul OAWeather și reporniți"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Instalați OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Instalați Skin Zeta pentru Pluginul XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Instalați pluginul Meteo și reporniți"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Instalați WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Instalați sau actualizați automat oZeta Plugin & Skin pe ambele"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Instalare mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Instalare oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Instalare oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Opțiuni de instalare oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Încărcați OMDB Apikey de pe /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Încărcați THETVDB Apikey de pe /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Încărcați TMDB Apikey din /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Încărcați VISUALWEATHER Apikey din /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Codul locației"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Rezultatul căutării locației MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Meniu/Configurare/Interfață grafică/Configurare OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Lipsește %s!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Lipsesc pluginuri XStreamity!"
 
 msgid "OK"
-msgstr ""
+msgstr "Bine"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey importată și stocată!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: INSTALAT DAR NU ACTIV"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Deschide OAWeather, vrei să continui?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Sau introduceți manual cheia, creată pe portalul OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Sau introduceți manual cheia, creată pe portalul THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Sau introduceți manual cheia, creată pe portalul TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Vă rugăm să introduceți un nume de oraș valid."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Vă rugăm să introduceți un cod de locație valid pentru oraș."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Pluginul OAWeatherPlugin nu este instalat!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Pluginul TheWeather nu este instalat!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin nu este instalat!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Previzualizare"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Previzualizare informații"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Ștergeți cu adevărat această intrare WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Resetați setările la parametrii impliciti?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Repornire"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Reporniți E2, dar nu aplicați modificări\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Reporniți informații"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "SELECTAȚI ALEGEREA DVS"
 
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Salvați și copiați modificările în fișierul xml de configurare\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Cod de căutare"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Setări Panouri de canale"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Setări Oraș Meteo Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Setări Panouri Eventview"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Setări Panouri din bara de informații"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Setări Logo Imagine de jos"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Setări Logo Imagine Top"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Setări Panourile MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Meniul Setări Panou imagine"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Setări OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Setări PluginBrowser Panouri"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Setări Radio Panouri"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Setări SecInfobar Panouri"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Setări THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Setări TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Setări VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Setări Panouri de volum"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Setări oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Setări oZeta Vremea"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Înregistrați-vă pe OMDB și introduceți ApiKey personală gratuită"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Înregistrați-vă pe THETVDB și introduceți ApiKey personală gratuită"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Înregistrați-vă pe TMDB și introduceți ApiKey personală gratuită"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Înscrieți-vă pe www.visualcrossing.com și introduceți ApiKey personal gratuit"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Pielea exista!! Chiar doriți să actualizați Conponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Pielea exista!! Chiar vrei să faci upgrade?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Crearea cu succes a pielii!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey importată și stocată!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey importat și stocat!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey importată și stocată!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Editați intrarea"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Lista de intrări"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Trebuie să introduceți un nume valid de oraș înainte de a putea căuta codul de locație."
 
 msgid "imperial system"
-msgstr ""
+msgstr "sistem imperial"
 
 msgid "metric system"
-msgstr ""
+msgstr "sistem metric"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "redați/afișați fișiere"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "utilizați tastatura virtuală.\n"

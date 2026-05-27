@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:58+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "Eklemek"
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Cancel"
+msgstr "İptal etmek"
+
+msgid "City"
+msgstr "Şehir"
+
+msgid "Delete"
+msgstr "Silmek"
+
+msgid "Edit"
+msgstr "Düzenlemek"
+
+msgid "Feels like %s"
+msgstr "%s gibi hissettiriyor"
+
+msgid "Getting weather information..."
+msgstr "Hava durumu bilgileri alınıyor..."
+
+msgid "Humidity: %s %%"
+msgstr "Nem: %s %%"
+
+msgid "Location code"
+msgstr "Konum kodu"
+
+msgid "MSN location search result"
+msgstr "MSN konum arama sonucu"
+
+msgid "OK"
+msgstr "TAMAM"
+
+msgid "Observation point: %s"
+msgstr "Gözlem noktası: %s"
+
+msgid "Observation time: %s"
+msgstr "Gözlem süresi: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Lütfen geçerli bir şehir adı girin."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Lütfen şehir için geçerli bir konum kodu girin."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Bu WeatherPlugin Girişi gerçekten silinsin mi?"
+
+msgid "Search Code"
+msgstr "Arama Kodu"
+
+msgid "Show Weather Forecast"
+msgstr "Hava Durumu Tahminini Göster"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Weather Plugin"
+msgstr "Hava Durumu Eklentisi"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "Hava Durumu Eklentisi: Girişi Düzenle"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Giriş Listesi"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Konum kodunu arayabilmeniz için önce geçerli bir şehir adı girmeniz gerekir."
+
+msgid "imperial system"
+msgstr "imparatorluk sistemi"
+
+msgid "metric system"
+msgstr "metrik sistem"

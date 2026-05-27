@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:42+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Scottish Gaelic <fios@foramnagaidhlig.net>\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Cuir ris"
+
+msgid "Back"
+msgstr "Air ais"
+
+msgid "Cancel"
+msgstr "Sguir dheth"
+
+msgid "City"
+msgstr "Cathair-bhaile"
+
+msgid "Delete"
+msgstr "Sguab às"
+
+msgid "Edit"
+msgstr "Deasaich"
+
+msgid "Feels like %s"
+msgstr "A’ faireachdainn mar %s"
+
+msgid "Getting weather information..."
+msgstr "Luchdaich a-nuas aimsir fiosrachaidh. ."
+
+msgid "Humidity: %s %%"
+msgstr "Taiseachd: %s %%"
+
+msgid "Location code"
+msgstr "Còd àite"
+
+msgid "MSN location search result"
+msgstr "Toradh rannsachaidh àite MSN"
+
+msgid "OK"
+msgstr "ceart gu leòr"
+
+msgid "Observation point: %s"
+msgstr "Puing-amhairc: %s"
+
+msgid "Observation time: %s"
+msgstr "Ùine seallaidh: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Feuch an cuir thu a-steach ainm baile-mòr dligheach."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Feuch an cuir thu a-steach còd àite dligheach airson a’ bhaile."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Dìreach sguab às an inntrigeadh WeatherPlugin seo?"
+
+msgid "Search Code"
+msgstr "Còd-rannsachaidh"
+
+msgid "Show Weather Forecast"
+msgstr "Seall Aimsir Aimsir"
+
+msgid "System"
+msgstr "Siostam"
+
+msgid "Weather Plugin"
+msgstr "Plugin aimsir"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Deasaich Inntrigeadh"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Liosta inntrigidhean"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Feumaidh tu ainm baile-mòr dligheach a chuir a-steach mus urrainn dhut còd an àite a lorg."
+
+msgid "imperial system"
+msgstr "siostam ìmpireil"
+
+msgid "metric system"
+msgstr "siostam meatrach"

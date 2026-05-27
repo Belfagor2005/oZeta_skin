@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:46+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Central Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "បន្ថែម"
+
+msgid "Back"
+msgstr "ត្រឡប់មកវិញ"
+
+msgid "Cancel"
+msgstr "បោះបង់"
+
+msgid "City"
+msgstr "ទីក្រុង"
+
+msgid "Delete"
+msgstr "លុប"
+
+msgid "Edit"
+msgstr "កែសម្រួល"
+
+msgid "Feels like %s"
+msgstr "មានអារម្មណ៍ដូចជា %s"
+
+msgid "Getting weather information..."
+msgstr "ទទួលបានព័ត៌មានអាកាសធាតុ..."
+
+msgid "Humidity: %s %%"
+msgstr "សំណើម៖ %s %%"
+
+msgid "Location code"
+msgstr "លេខកូដទីតាំង"
+
+msgid "MSN location search result"
+msgstr "លទ្ធផលស្វែងរកទីតាំង MSN"
+
+msgid "OK"
+msgstr "យល់ព្រម"
+
+msgid "Observation point: %s"
+msgstr "ចំណុចសង្កេត៖ %s"
+
+msgid "Observation time: %s"
+msgstr "ពេលវេលាសង្កេត៖ %s"
+
+msgid "Please enter a valid city name."
+msgstr "សូមបញ្ចូលឈ្មោះទីក្រុងត្រឹមត្រូវ។"
+
+msgid "Please enter a valid location code for the city."
+msgstr "សូមបញ្ចូលលេខកូដទីតាំងត្រឹមត្រូវសម្រាប់ទីក្រុង។"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ពិតជាលុបធាតុ WeatherPlugin នេះមែនទេ?"
+
+msgid "Search Code"
+msgstr "ស្វែងរកលេខកូដ"
+
+msgid "Show Weather Forecast"
+msgstr "បង្ហាញការព្យាករណ៍អាកាសធាតុ"
+
+msgid "System"
+msgstr "ប្រព័ន្ធ"
+
+msgid "Weather Plugin"
+msgstr "កម្មវិធីជំនួយអាកាសធាតុ"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin៖ កែសម្រួលធាតុ"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin៖ បញ្ជីនៃធាតុ"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "អ្នកត្រូវបញ្ចូលឈ្មោះទីក្រុងដែលមានសុពលភាព មុនពេលអ្នកអាចស្វែងរកលេខកូដទីតាំង។"
+
+msgid "imperial system"
+msgstr "ប្រព័ន្ធអធិរាជ"
+
+msgid "metric system"
+msgstr "ប្រព័ន្ធម៉ែត្រ"

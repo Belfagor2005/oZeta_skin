@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:44+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Bæta við"
+
+msgid "Back"
+msgstr "Til baka"
+
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgid "City"
+msgstr "Borg"
+
+msgid "Delete"
+msgstr "Eyða"
+
+msgid "Edit"
+msgstr "Breyta"
+
+msgid "Feels like %s"
+msgstr "Líður eins og %s"
+
+msgid "Getting weather information..."
+msgstr "Fær upplýsingar um veður..."
+
+msgid "Humidity: %s %%"
+msgstr "Raki: %s %%"
+
+msgid "Location code"
+msgstr "Staðsetningarkóði"
+
+msgid "MSN location search result"
+msgstr "MSN staðsetningarleitarniðurstaða"
+
+msgid "OK"
+msgstr "Allt í lagi"
+
+msgid "Observation point: %s"
+msgstr "Athugunarstaður: %s"
+
+msgid "Observation time: %s"
+msgstr "Athugunartími: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Vinsamlegast sláðu inn gilt borgarnafn."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Vinsamlegast sláðu inn gildan staðsetningarkóða fyrir borgina."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Viltu virkilega eyða þessari WeatherPlugin færslu?"
+
+msgid "Search Code"
+msgstr "Leitarkóði"
+
+msgid "Show Weather Forecast"
+msgstr "Sýna veðurspá"
+
+msgid "System"
+msgstr "Kerfi"
+
+msgid "Weather Plugin"
+msgstr "Veðurviðbót"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Breyta færslu"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Listi yfir færslur"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Þú þarft að slá inn gilt borgarnafn áður en þú getur leitað að staðsetningarkóðanum."
+
+msgid "imperial system"
+msgstr "keisarakerfi"
+
+msgid "metric system"
+msgstr "metrakerfi"

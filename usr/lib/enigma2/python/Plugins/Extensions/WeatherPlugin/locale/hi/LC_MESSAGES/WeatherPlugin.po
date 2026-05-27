@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:43+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "जोड़ना"
+
+msgid "Back"
+msgstr "पीछे"
+
+msgid "Cancel"
+msgstr "रद्द करना"
+
+msgid "City"
+msgstr "शहर"
+
+msgid "Delete"
+msgstr "मिटाना"
+
+msgid "Edit"
+msgstr "संपादन करना"
+
+msgid "Feels like %s"
+msgstr "%s जैसा महसूस होता है"
+
+msgid "Getting weather information..."
+msgstr "मौसम की जानकारी मिल रही है..."
+
+msgid "Humidity: %s %%"
+msgstr "आर्द्रता: %s %%"
+
+msgid "Location code"
+msgstr "स्थान कोड"
+
+msgid "MSN location search result"
+msgstr "एमएसएन स्थान खोज परिणाम"
+
+msgid "OK"
+msgstr "ठीक है"
+
+msgid "Observation point: %s"
+msgstr "अवलोकन बिंदु: %s"
+
+msgid "Observation time: %s"
+msgstr "अवलोकन समय: %s"
+
+msgid "Please enter a valid city name."
+msgstr "कृपया एक वैध शहर का नाम दर्ज करें."
+
+msgid "Please enter a valid location code for the city."
+msgstr "कृपया शहर के लिए एक वैध स्थान कोड दर्ज करें।"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "वास्तव में इस वेदरप्लगिन प्रविष्टि को हटा दें?"
+
+msgid "Search Code"
+msgstr "कोड खोजें"
+
+msgid "Show Weather Forecast"
+msgstr "मौसम पूर्वानुमान दिखाएँ"
+
+msgid "System"
+msgstr "प्रणाली"
+
+msgid "Weather Plugin"
+msgstr "मौसम प्लगइन"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "वेदरप्लगिन: प्रविष्टि संपादित करें"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "वेदरप्लगिन: प्रविष्टियों की सूची"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "स्थान कोड खोजने से पहले आपको एक वैध शहर का नाम दर्ज करना होगा।"
+
+msgid "imperial system"
+msgstr "शाही व्यवस्था"
+
+msgid "metric system"
+msgstr "मीट्रिक प्रणाली"

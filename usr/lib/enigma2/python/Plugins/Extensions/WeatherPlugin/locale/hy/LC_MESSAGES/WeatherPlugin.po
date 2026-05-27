@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:44+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Armenian\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Ավելացնել"
+
+msgid "Back"
+msgstr "Ետ"
+
+msgid "Cancel"
+msgstr "Չեղարկել"
+
+msgid "City"
+msgstr "Քաղաք"
+
+msgid "Delete"
+msgstr "Ջնջել"
+
+msgid "Edit"
+msgstr "Խմբագրել"
+
+msgid "Feels like %s"
+msgstr "Զգում է %s"
+
+msgid "Getting weather information..."
+msgstr "Եղանակի մասին տեղեկությունների ստացում..."
+
+msgid "Humidity: %s %%"
+msgstr "Խոնավություն՝ %s %%"
+
+msgid "Location code"
+msgstr "Տեղադրության կոդը"
+
+msgid "MSN location search result"
+msgstr "MSN-ի տեղադրության որոնման արդյունք"
+
+msgid "OK"
+msgstr "Լավ"
+
+msgid "Observation point: %s"
+msgstr "Դիտակետ՝ %s"
+
+msgid "Observation time: %s"
+msgstr "Դիտարկման ժամանակը՝ %s"
+
+msgid "Please enter a valid city name."
+msgstr "Խնդրում ենք մուտքագրել վավեր քաղաքի անունը:"
+
+msgid "Please enter a valid location code for the city."
+msgstr "Խնդրում ենք մուտքագրել քաղաքի վավեր գտնվելու կոդը:"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Իսկապե՞ս ջնջել այս WeatherPlugin գրառումը:"
+
+msgid "Search Code"
+msgstr "Որոնման կոդը"
+
+msgid "Show Weather Forecast"
+msgstr "Ցույց տալ եղանակի կանխատեսումը"
+
+msgid "System"
+msgstr "Համակարգ"
+
+msgid "Weather Plugin"
+msgstr "Եղանակի պլագին"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin. Խմբագրել մուտքը"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin. Գրառումների ցանկ"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Տեղադրության կոդը որոնելու համար դուք պետք է մուտքագրեք վավեր քաղաքի անունը:"
+
+msgid "imperial system"
+msgstr "կայսերական համակարգ"
+
+msgid "metric system"
+msgstr "մետրային համակարգ"

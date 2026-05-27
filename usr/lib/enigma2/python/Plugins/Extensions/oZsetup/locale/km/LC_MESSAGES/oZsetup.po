@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--នាំចូលដោយស្វ័យប្រវត្តិពីកម្មវិធីជំនួយ\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--ប្រើក្តារចុចនិម្មិត ឬនាំចូលពីកម្មវិធីជំនួយកំណត់រចនាសម្ព័ន្ធលំនាំដើម"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "បន្ថែម"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "របៀបវិទ្យុជម្មើសជំនួស=បាទ\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ព័ត៌មាន ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "ត្រឡប់មកវិញ"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo បានផ្លាស់ប្តូរ និងបម្រុងទុកទៅ default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "បោះបង់"
 
 msgid "City"
-msgstr ""
+msgstr "ទីក្រុង"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "ចុច ចេញ ដើម្បីបិទបង្អួចនេះ។"
 
 msgid "Console"
-msgstr ""
+msgstr "កុងសូល។"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "ទិន្នន័យដែលបានបញ្ចូលសម្រាប់អាកាសធាតុ តើអ្នកចង់បន្តដូចគ្នាទេ?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "បន្ទាត់ Del"
 
 msgid "Delete"
-msgstr ""
+msgstr "លុប"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "តើអ្នកពិតជាចង់ផ្លាស់ប្តូររូបភាព Bootlogo មែនទេ?"
 
 msgid "Edit"
-msgstr ""
+msgstr "កែសម្រួល"
 
 msgid "Exit"
-msgstr ""
+msgstr "ចេញ"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "មេបញ្ជាការឯកសារ - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "សម្រាប់ការប្រើប្រាស់ OMDB Covers សូមចម្លងឯកសារ omdbkey នៅក្នុងថតស្បែក៖\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "សម្រាប់ការប្រើប្រាស់ THETMDB Covers សូមចម្លងឯកសារ apikey នៅក្នុងថតស្បែក៖\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "សម្រាប់ការប្រើប្រាស់ The TMDB Covers សូមចម្លងឯកសារ apikey នៅក្នុងថតស្បែក៖\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "សម្រាប់ការប្រើប្រាស់កម្មវិធី WeatherPlugin៖\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "សម្រាប់ការប្រើប្រាស់ VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "លាក់/បង្ហាញ"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "ប្រអប់រូបភាពមិនបានសាកល្បងទេ!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "នាំចូល Api Key OMDB ពី /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "នាំចូល Api Key THETVDB ពី /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "នាំចូល Api Key TMDB ពី /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "នាំចូល Api Key VISUALWEATHER ពី /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "បន្ទាត់ Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "ដំឡើងកម្មវិធីជំនួយ OAWeather ហើយចាប់ផ្ដើមឡើងវិញ"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "ដំឡើង OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "ដំឡើង Skin Zeta សម្រាប់កម្មវិធីជំនួយ XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "ដំឡើងកម្មវិធីជំនួយអាកាសធាតុ ហើយចាប់ផ្ដើមឡើងវិញ"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "ដំឡើងកម្មវិធី WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "ដំឡើង ឬអាប់ដេតដោយស្វ័យប្រវត្តិ oZeta Plugin & Skin នៅលើទាំងពីរ"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "ការដំឡើងកម្មវិធីជំនួយ mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "ការដំឡើង oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "ការដំឡើង oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "ការដំឡើងជម្រើស oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "ផ្ទុក OMDB Apikey ពី /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "ផ្ទុក THETVDB Apikey ពី /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "ផ្ទុក TMDB Apikey ពី /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "ផ្ទុក VISUALWEATHER Apikey ពី /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "លេខកូដទីតាំង"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "លទ្ធផលស្វែងរកទីតាំង MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "ម៉ឺនុយ/ដំឡើង/ចំណុចប្រទាក់ក្រាហ្វិក/ការដំឡើង OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "បាត់ %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "បាត់កម្មវិធីជំនួយ XStreamity!"
 
 msgid "OK"
-msgstr ""
+msgstr "យល់ព្រម"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey នាំចូល និងរក្សាទុក!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN៖ បានដំឡើងហើយ ប៉ុន្តែមិនមានសកម្មភាពទេ។"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "បើក OAWeather តើអ្នកចង់បន្តទេ?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "ឬបញ្ចូលសោដោយដៃ បង្កើតនៅលើវិបផតថល OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "ឬបញ្ចូលសោដោយដៃ បង្កើតនៅលើវិបផតថល THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "ឬបញ្ចូលសោដោយដៃ បង្កើតនៅលើវិបផតថល TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "សូមបញ្ចូលឈ្មោះទីក្រុងត្រឹមត្រូវ។"
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "សូមបញ្ចូលលេខកូដទីតាំងត្រឹមត្រូវសម្រាប់ទីក្រុង។"
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "កម្មវិធីជំនួយ OAWeatherPlugin មិនបានដំឡើងទេ!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "មិនបានដំឡើងកម្មវិធីជំនួយ TheWeather !!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "កម្មវិធីជំនួយ WeatherPlugin មិនបានដំឡើងទេ!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "មើលជាមុន"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "ព័ត៌មានមើលជាមុន"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "ពិតជាលុបធាតុ WeatherPlugin នេះមែនទេ?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "កំណត់ការកំណត់ឡើងវិញទៅប៉ារ៉ាម៉ែត្រលំនាំដើម?"
 
 msgid "Restart"
-msgstr ""
+msgstr "ចាប់ផ្ដើមឡើងវិញ"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "ចាប់ផ្ដើម E2 ឡើងវិញ ប៉ុន្តែមិនអនុវត្តការផ្លាស់ប្ដូរទេ\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "ព័ត៌មានចាប់ផ្តើមឡើងវិញ"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ជ្រើសរើសជម្រើសរបស់អ្នក។"
 
 msgid "Save"
-msgstr ""
+msgstr "រក្សាទុក"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "រក្សាទុក និងចម្លងការផ្លាស់ប្តូរនៅក្នុងការកំណត់ឯកសារ xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "ស្វែងរកលេខកូដ"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "កំណត់​បន្ទះ​ឆានែល"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "ការកំណត់កម្មវិធីជំនួយអាកាសធាតុទីក្រុង"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "ការកំណត់ផ្ទាំងទិដ្ឋភាពព្រឹត្តិការណ៍"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "ការកំណត់ផ្ទាំងព័ត៌មានរបារ"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "ការកំណត់ ឡូហ្គោ រូបភាពខាងក្រោម"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "ការកំណត់និមិត្តសញ្ញារូបភាពខាងលើ"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "ការកំណត់បន្ទះ MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "ការកំណត់ម៉ឺនុយផ្ទាំងរូបភាព"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "ការកំណត់ OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "ការកំណត់ PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "ការកំណត់ផ្ទាំងវិទ្យុ"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "ការកំណត់ផ្ទាំង SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "ការកំណត់ THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "ការកំណត់ TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "ការកំណត់ VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "ការកំណត់បន្ទះកម្រិតសំឡេង"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "ការកំណត់ oZeta Apkey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "ការកំណត់ oZeta អាកាសធាតុ"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "ចុះឈ្មោះនៅលើ OMDB ហើយបញ្ចូល ApiKey ផ្ទាល់ខ្លួនដោយឥតគិតថ្លៃ"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "ចុះឈ្មោះនៅលើ THETVDB ហើយបញ្ចូល ApiKey ផ្ទាល់ខ្លួនដោយឥតគិតថ្លៃ"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "ចុះឈ្មោះនៅលើ TMDB ហើយបញ្ចូល ApiKey ផ្ទាល់ខ្លួនដោយឥតគិតថ្លៃ"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "ចុះឈ្មោះនៅលើគេហទំព័រ www.visualcrossing.com ហើយបញ្ចូល ApiKey ផ្ទាល់ខ្លួនដោយឥតគិតថ្លៃ"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "ស្បែកមានហើយ!! តើអ្នកពិតជាចង់អាប់ដេត Conponent មែនទេ?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "ស្បែកមានហើយ!! តើអ្នកពិតជាចង់ Upgrade មែនទេ?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "បង្កើត Skin ដោយជោគជ័យ!"
 
 msgid "System"
-msgstr ""
+msgstr "ប្រព័ន្ធ"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey នាំចូល និងរក្សាទុក!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey នាំចូល និងរក្សាទុក!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey នាំចូល និងរក្សាទុក!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin៖ កែសម្រួលធាតុ"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin៖ បញ្ជីនៃធាតុ"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "អ្នកត្រូវបញ្ចូលឈ្មោះទីក្រុងដែលមានសុពលភាព មុនពេលអ្នកអាចស្វែងរកលេខកូដទីតាំង។"
 
 msgid "imperial system"
-msgstr ""
+msgstr "ប្រព័ន្ធអធិរាជ"
 
 msgid "metric system"
-msgstr ""
+msgstr "ប្រព័ន្ធម៉ែត្រ"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "លេង / បង្ហាញឯកសារ"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "ប្រើក្តារចុចនិម្មិត។\n"

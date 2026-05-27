@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:49+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Mongolian <openmn-translation@lists.sourceforge.net>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Нэмэх"
+
+msgid "Back"
+msgstr "Буцах"
+
+msgid "Cancel"
+msgstr "Цуцлах"
+
+msgid "City"
+msgstr "Хот"
+
+msgid "Delete"
+msgstr "Устгах"
+
+msgid "Edit"
+msgstr "Засварлах"
+
+msgid "Feels like %s"
+msgstr "%s шиг санагдаж байна"
+
+msgid "Getting weather information..."
+msgstr "Цаг агаарын мэдээлэл авах..."
+
+msgid "Humidity: %s %%"
+msgstr "Чийгшил: %s %%"
+
+msgid "Location code"
+msgstr "Байршлын код"
+
+msgid "MSN location search result"
+msgstr "MSN байршлын хайлтын үр дүн"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Ажиглалтын цэг: %s"
+
+msgid "Observation time: %s"
+msgstr "Ажиглалтын хугацаа: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Хүчинтэй хотын нэрийг оруулна уу."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Хотын зөв байршлын кодыг оруулна уу."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Энэ WeatherPlugin оруулгыг үнэхээр устгах уу?"
+
+msgid "Search Code"
+msgstr "Хайлтын код"
+
+msgid "Show Weather Forecast"
+msgstr "Цаг агаарын урьдчилсан мэдээг харуулах"
+
+msgid "System"
+msgstr "Систем"
+
+msgid "Weather Plugin"
+msgstr "Цаг агаарын нэмэлт өргөтгөл"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Бичлэгийг засах"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Оруулсан жагсаалт"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Та байршлын кодыг хайхаасаа өмнө хүчинтэй хотын нэрийг оруулах шаардлагатай."
+
+msgid "imperial system"
+msgstr "эзэн хааны систем"
+
+msgid "metric system"
+msgstr "хэмжүүрийн систем"

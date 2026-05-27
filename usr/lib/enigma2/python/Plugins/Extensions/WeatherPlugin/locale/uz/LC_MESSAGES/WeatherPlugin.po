@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 19:00+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Qo'shish"
+
+msgid "Back"
+msgstr "Orqaga"
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "City"
+msgstr "Shahar"
+
+msgid "Delete"
+msgstr "Oʻchirish"
+
+msgid "Edit"
+msgstr "Tahrirlash"
+
+msgid "Feels like %s"
+msgstr "%s kabi tuyuladi"
+
+msgid "Getting weather information..."
+msgstr "Ob-havo maʼlumotlarini olish..."
+
+msgid "Humidity: %s %%"
+msgstr "Namlik: %s %%"
+
+msgid "Location code"
+msgstr "Joylashuv kodi"
+
+msgid "MSN location search result"
+msgstr "MSN joylashuv qidiruvi natijasi"
+
+msgid "OK"
+msgstr "KELISHDIKMI"
+
+msgid "Observation point: %s"
+msgstr "Kuzatish nuqtasi: %s"
+
+msgid "Observation time: %s"
+msgstr "Kuzatish vaqti: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Yaroqli shahar nomini kiriting."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Shahar uchun yaroqli joylashuv kodini kiriting."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Haqiqatan ham ushbu WeatherPlugin yozuvi o'chirilsinmi?"
+
+msgid "Search Code"
+msgstr "Qidiruv kodi"
+
+msgid "Show Weather Forecast"
+msgstr "Ob-havo ma'lumotlarini ko'rsatish"
+
+msgid "System"
+msgstr "Tizim"
+
+msgid "Weather Plugin"
+msgstr "Ob-havo plagini"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: yozuvni tahrirlash"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: yozuvlar ro'yxati"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Joylashuv kodini qidirishdan oldin siz haqiqiy shahar nomini kiritishingiz kerak."
+
+msgid "imperial system"
+msgstr "imperiya tizimi"
+
+msgid "metric system"
+msgstr "metrik tizim"

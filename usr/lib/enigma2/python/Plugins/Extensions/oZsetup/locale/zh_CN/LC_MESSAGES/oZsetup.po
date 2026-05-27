@@ -59,13 +59,13 @@ msgid "Click Exit for close this window"
 msgstr "单击 \"退出 \"关闭该窗口"
 
 msgid "Console"
-msgstr ""
+msgstr "安慰"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "已输入天气数据，是否要继续？"
 
 msgid "Del Line"
-msgstr ""
+msgstr "德尔线"
 
 msgid "Delete"
 msgstr "删除"
@@ -104,7 +104,7 @@ msgid "For use VisualWeather\n"
 msgstr "用于 VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "隐藏/显示"
 
 msgid "Image Box Not Tested!!"
 msgstr "这边没有这个盒子的固件"
@@ -122,7 +122,7 @@ msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
 msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 导入 Api 密钥 VISUALWEATHER？"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "INS线"
 
 msgid "Install OAWeather Plugin and Reboot"
 msgstr "安装 OAWeather 插件并重新启动"
@@ -131,7 +131,7 @@ msgid "Install OAWeatherPlugin"
 msgstr "安装 OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "安装 Skin Zeta for XStreamity 插件"
 "安装可选的 XStreamity 皮肤\n"
 "按确定"
 
@@ -253,7 +253,7 @@ msgstr "保存"
 
 #, fuzzy
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "保存并复制 xml 文件配置中的更改\n"
 "         保存并复制设置 xml 文件中的更改\n"
 "\n"
 

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:40+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Catalan <ca@dodds.net>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Afegeix"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgid "City"
+msgstr "Ciutat"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "Feels like %s"
+msgstr "Sembla que %s"
+
+msgid "Getting weather information..."
+msgstr "S'està rebent informació meteorològica..."
+
+msgid "Humidity: %s %%"
+msgstr "Humitat: %s %%"
+
+msgid "Location code"
+msgstr "Codi d'ubicació"
+
+msgid "MSN location search result"
+msgstr "Resultat de la cerca d'ubicació de MSN"
+
+msgid "OK"
+msgstr "D'acord"
+
+msgid "Observation point: %s"
+msgstr "Punt d'observació: %s"
+
+msgid "Observation time: %s"
+msgstr "Temps d'observació: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Introduïu un nom de ciutat vàlid."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Introduïu un codi d'ubicació vàlid per a la ciutat."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Suprimiu realment aquesta entrada de WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Codi de cerca"
+
+msgid "Show Weather Forecast"
+msgstr "Mostra la previsió meteorològica"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Weather Plugin"
+msgstr "Connector del temps"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Edita l'entrada"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: llista d'entrades"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Heu d'introduir un nom de ciutat vàlid abans de poder cercar el codi d'ubicació."
+
+msgid "imperial system"
+msgstr "sistema imperial"
+
+msgid "metric system"
+msgstr "sistema mètric"

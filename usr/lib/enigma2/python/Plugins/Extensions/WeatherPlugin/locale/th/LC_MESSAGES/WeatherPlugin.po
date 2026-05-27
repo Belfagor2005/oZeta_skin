@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:57+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Thai <(nothing)>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "เพิ่ม"
+
+msgid "Back"
+msgstr "กลับ"
+
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+msgid "City"
+msgstr "เมือง"
+
+msgid "Delete"
+msgstr "ลบ"
+
+msgid "Edit"
+msgstr "แก้ไข"
+
+msgid "Feels like %s"
+msgstr "รู้สึกเหมือน %s"
+
+msgid "Getting weather information..."
+msgstr "กำลังรับข้อมูลสภาพอากาศ..."
+
+msgid "Humidity: %s %%"
+msgstr "ความชื้น: %s %%"
+
+msgid "Location code"
+msgstr "รหัสสถานที่"
+
+msgid "MSN location search result"
+msgstr "ผลการค้นหาตำแหน่ง MSN"
+
+msgid "OK"
+msgstr "ตกลง"
+
+msgid "Observation point: %s"
+msgstr "จุดสังเกต: %s"
+
+msgid "Observation time: %s"
+msgstr "เวลาในการสังเกต: %s"
+
+msgid "Please enter a valid city name."
+msgstr "กรุณากรอกชื่อเมืองที่ถูกต้อง"
+
+msgid "Please enter a valid location code for the city."
+msgstr "โปรดป้อนรหัสสถานที่ที่ถูกต้องสำหรับเมือง"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ลบรายการ WeatherPlugin นี้จริงหรือ"
+
+msgid "Search Code"
+msgstr "ค้นหารหัส"
+
+msgid "Show Weather Forecast"
+msgstr "แสดงพยากรณ์อากาศ"
+
+msgid "System"
+msgstr "ระบบ"
+
+msgid "Weather Plugin"
+msgstr "ปลั๊กอินสภาพอากาศ"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: แก้ไขรายการ"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: รายการรายการ"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "คุณต้องป้อนชื่อเมืองที่ถูกต้องก่อนจึงจะค้นหารหัสสถานที่ได้"
+
+msgid "imperial system"
+msgstr "ระบบจักรวรรดิ"
+
+msgid "metric system"
+msgstr "ระบบเมตริก"

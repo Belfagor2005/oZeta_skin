@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Αυτόματη εισαγωγή από την προσθήκη\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--χρησιμοποιήστε το εικονικό πληκτρολόγιο ή εισαγάγετε από την προεπιλεγμένη προσθήκη διαμόρφωσης"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Προσθέτω"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Εναλλακτική λειτουργία ραδιοφώνου= Ναι\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Πληροφορίες ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Πίσω"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Το Bootlogo άλλαξε και έγινε backup σε default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Ματαίωση"
 
 msgid "City"
-msgstr ""
+msgstr "Πόλη"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Κάντε κλικ στο Exit για να κλείσετε αυτό το παράθυρο"
 
 msgid "Console"
-msgstr ""
+msgstr "Κονσόλα"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Δεδομένα που εισάγονται για τον Καιρό, θέλετε να συνεχίσετε το ίδιο;"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Διαγράφω"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Θέλετε πραγματικά να αλλάξετε την εικόνα του Bootlogo;"
 
 msgid "Edit"
-msgstr ""
+msgstr "Εκδίδω"
 
 msgid "Exit"
-msgstr ""
+msgstr "Εξοδος"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Για χρήση των εξωφύλλων OMDB, αντιγράψτε το αρχείο omdbkey στο φάκελο skin:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Για χρήση των καλυμμάτων THETMDB, αντιγράψτε το αρχείο apikey στο φάκελο skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Για να χρησιμοποιήσετε το The TMDB Covers, αντιγράψτε το αρχείο apikey στο φάκελο skin:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Για χρήση The WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Για χρήση VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Απόκρυψη/Εμφάνιση"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Το πλαίσιο εικόνας δεν έχει δοκιμαστεί!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Εισαγωγή κλειδιού Api OMDB από το /tmp/omdbkey.txt;"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Εισαγωγή κλειδιού Api THETVDB από το /tmp/thetvdbkey.txt;"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Εισαγωγή κλειδιού Api TMDB από το /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Εισαγωγή κλειδιού Api VISUALWEATHER από το /etc/enigma2/VisualWeather/apikey.txt;"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Εγκαταστήστε το πρόσθετο OAWeather και επανεκκινήστε"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Εγκαταστήστε το OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Εγκαταστήστε το Skin Zeta for XStreamity Plugin"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Εγκαταστήστε το Weather Plugin και επανεκκινήστε"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Εγκαταστήστε το WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Εγκαταστήστε ή ενημερώστε αυτόματα το πρόσθετο και το δέρμα oZeta και στα δύο"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Εγκατάσταση mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Εγκατάσταση oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Εγκατάσταση oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Εγκατάσταση Επιλογές oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Φόρτωση OMDB Apikey από /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Φορτώστε το THETVDB Apikey από /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Φόρτωση TMDB Apikey από /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Φόρτωση VISUALWEATHER Apikey από /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Κωδικός τοποθεσίας"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Αποτέλεσμα αναζήτησης τοποθεσίας MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Μενού/Ρύθμιση/Διεπαφή γραφικών/Ρύθμιση OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Λείπει %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Λείπουν πρόσθετα XStreamity!"
 
 msgid "OK"
-msgstr ""
+msgstr "ΕΝΤΑΞΕΙ"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "Το OMDB ApiKey εισήχθη και αποθηκεύτηκε!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "ΔΕΡΜΑ OZETA: ΕΓΚΑΤΑΣΤΑΘΗΚΕ ΑΛΛΑ ΟΧΙ ΕΝΕΡΓΟ"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Ανοίξτε το OAWeather, θέλετε να συνεχίσετε;"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Ή πληκτρολογήστε χειροκίνητα το κλειδί που δημιουργήθηκε στην πύλη TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Εισαγάγετε ένα έγκυρο όνομα πόλης."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Εισαγάγετε έναν έγκυρο κωδικό τοποθεσίας για την πόλη."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Πρόσθετο Το OAWeatherPlugin δεν έχει εγκατασταθεί!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Το πρόσθετο TheWeather δεν έχει εγκατασταθεί!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Το πρόσθετο WeatherPlugin δεν έχει εγκατασταθεί!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Πρεμιέρα"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Προεπισκόπηση πληροφοριών"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Να διαγραφεί πραγματικά αυτή η καταχώριση WeatherPlugin;"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Επαναφορά ρυθμίσεων στις προεπιλεγμένες παραμέτρους;"
 
 msgid "Restart"
-msgstr ""
+msgstr "Επανεκκίνηση"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Επανεκκινήστε το E2 αλλά μην εφαρμόσετε αλλαγές\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Πληροφορίες επανεκκίνησης"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ΕΠΙΛΕΞΤΕ ΤΗΝ ΕΠΙΛΟΓΗ ΣΑΣ"
 
 msgid "Save"
-msgstr ""
+msgstr "Εκτός"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Αποθηκεύστε και αντιγράψτε τις αλλαγές στο αρχείο xml config\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Κωδικός αναζήτησης"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες καναλιών"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Ρυθμίσεις City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες προβολής συμβάντων"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Πίνακες γραμμής πληροφοριών ρυθμίσεων"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Ρυθμίσεις λογότυπο Εικόνα κάτω"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Ρυθμίσεις Logo Image Top"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Πίνακας εικόνας μενού ρυθμίσεων"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Ρυθμίσεις OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Ρυθμίσεις PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες ραδιοφώνου"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Ρυθμίσεις THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Ρυθμίσεις TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Ρυθμίσεις VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Ρυθμίσεις Πίνακες έντασης ήχου"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Ρυθμίσεις oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Ρυθμίσεις oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Εγγραφείτε στο OMDB και εισάγετε δωρεάν προσωπικό ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Εγγραφείτε στο THETVDB και εισάγετε δωρεάν προσωπικό ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Εγγραφείτε στο TMDB και εισάγετε δωρεάν προσωπικό ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Εγγραφείτε στο www.visualcrossing.com και εισάγετε δωρεάν προσωπικό ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Το δέρμα υπάρχει!! Θέλετε πραγματικά να ενημερώσετε το Conponent;"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Το δέρμα υπάρχει!! Θέλετε πραγματικά να κάνετε αναβάθμιση;"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Δημιουργία Skin με επιτυχία!"
 
 msgid "System"
-msgstr ""
+msgstr "Σύστημα"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "Το THETVDB ApiKey εισήχθη και αποθηκεύτηκε!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "Το TMDB ApiKey εισήχθη και αποθηκεύτηκε!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "Το VISUALWEATHER ApiKey εισήχθη και αποθηκεύτηκε!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Επεξεργασία καταχώρισης"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Λίστα καταχωρήσεων"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Πρέπει να εισαγάγετε ένα έγκυρο όνομα πόλης για να μπορέσετε να αναζητήσετε τον κωδικό τοποθεσίας."
 
 msgid "imperial system"
-msgstr ""
+msgstr "αυτοκρατορικό σύστημα"
 
 msgid "metric system"
-msgstr ""
+msgstr "μετρικό σύστημα"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "αναπαραγωγή/εμφάνιση Αρχείων"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "χρησιμοποιήστε το εικονικό πληκτρολόγιο.\n"

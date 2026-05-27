@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--ပလပ်အင်မှ အလိုအလျောက် တင်သွင်းခြင်း\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "-- virtual keyboard ကိုသုံးပါ သို့မဟုတ် မူရင်း config plugin မှ တင်သွင်းပါ။"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "ထည့်ပါ။"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "အခြားရေဒီယိုမုဒ်= Yes\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey အချက်အလက်"
 
 msgid "Back"
-msgstr ""
+msgstr "ကျော"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo ကို ပြောင်းပြီး default_bootlogo.mvi သို့ အရန်ကူးထားသည်။"
 
 msgid "Cancel"
-msgstr ""
+msgstr "မလုပ်တော့"
 
 msgid "City"
-msgstr ""
+msgstr "မြို"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "ဤဝင်းဒိုးကိုပိတ်ရန် Exit ကိုနှိပ်ပါ။"
 
 msgid "Console"
-msgstr ""
+msgstr "ဖြေသိမ့်"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "မိုးလေဝသအတွက် ထည့်သွင်းထားသော ဒေတာ၊ သင်သည် အလားတူ ဆက်လုပ်လိုပါသလား။"
 
 msgid "Del Line"
-msgstr ""
+msgstr "ဒယ်လ်လိုင်း"
 
 msgid "Delete"
-msgstr ""
+msgstr "ဖျက်ပါ။"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Bootlogo ပုံကို သင် အမှန်တကယ် ပြောင်းလဲလိုပါသလား။"
 
 msgid "Edit"
-msgstr ""
+msgstr "တည်းဖြတ်ပါ။"
 
 msgid "Exit"
-msgstr ""
+msgstr "ထွက်ပေါက်"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ omdbkey ဖိုင်ကို ကူးယူပါ-\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugin ကိုအသုံးပြုရန်အတွက်-\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather\n အသုံးပြုရန်အတွက်"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "ဖျောက်/ပြပါ။"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "ပုံသေတ္တာကို စမ်းသပ်မထားပါ။"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "/tmp/omdbkey.txt မှ Api Key OMDB ကို တင်သွင်းမလား။"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Api Key THETVDB ကို /tmp/thetvdbkey.txt မှ တင်သွင်းမလား။"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "/tmp/apikey.txt မှ Api Key TMDB ကို တင်သွင်းမလား။"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt မှ Api Key VISUALWEATHER ကို တင်သွင်းမလား။"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Ins လိုင်း"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather Plugin ကို ထည့်သွင်းပြီး ပြန်လည်စတင်ပါ။"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin ကို ထည့်သွင်းပါ။"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "XStreamity Plugin အတွက် Skin Zeta ကို ထည့်သွင်းပါ။"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Weather Plugin ကို Install လုပ်ပြီး Reboot လုပ်ပါ။"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin ကိုထည့်သွင်းပါ။"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "oZeta Plugin & Skin နှစ်ခုလုံးကို install သို့မဟုတ် အလိုအလျောက်အပ်ဒိတ်လုပ်ပါ။"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "mmpicons ပလပ်အင် ထည့်သွင်းခြင်း။"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "oZeta Skin ထည့်သွင်းခြင်း။"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "oZeta Skin Component ကို ထည့်သွင်းခြင်း။"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "ထည့်သွင်းခြင်း oZeta Skin ရွေးချယ်မှုများ"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "/tmp/omdbkey.txt မှ OMDB Apikey ကို တင်ပါ။"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "THETVDB Apikey ကို /tmp/thetvdbkey.txt မှ ရယူပါ။"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "/tmp/apikey.txt မှ TMDB Apikey ကို တင်ပါ။"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt မှ VISUALWEATHER Apikey ကို တင်ပါ"
 
 msgid "Location code"
-msgstr ""
+msgstr "တည်နေရာကုဒ်"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN တည်နေရာရှာဖွေမှုရလဒ်"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "မီနူး/တည်ဆောက်မှု/ဂရပ်ဖစ် အင်တာဖေ့စ်/OSD စနစ်ထည့်သွင်းခြင်း\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s ပျောက်နေသည် !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "XStreamity ပလပ်အင်များ ပျောက်ဆုံးနေပါသည်။"
 
 msgid "OK"
-msgstr ""
+msgstr "အိုကေ"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey ကို တင်သွင်းပြီး သိမ်းဆည်းထားသည်။"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA အရေပြား- တပ်ဆင်ထားသော်လည်း အသက်ဝင်ခြင်းမရှိပါ။"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather ကိုဖွင့်ပါ၊ ဆက်လုပ်လိုပါသလား။"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "သို့မဟုတ် OMDB ပေါ်တယ်'\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "သို့မဟုတ် THETMDB ပေါ်တယ်\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "သို့မဟုတ် TMDB ပေါ်တယ်\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "ကျေးဇူးပြု၍ တရားဝင်မြို့အမည်ကို ထည့်ပါ။"
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "ကျေးဇူးပြု၍ မြို့အတွက် မှန်ကန်သော တည်နေရာကုဒ်ကို ထည့်ပါ။"
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "ပလပ်အင် OAWeatherPlugin ကို ထည့်သွင်းမထားပါ။"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "TheWeather Plugin မတပ်ဆင်ထားပါ!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "ပလပ်အင် WeatherPlugin မထည့်သွင်းပါ!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "စမ်းကြည့်ပါ။"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "အချက်အလက်ကို အစမ်းကြည့်ရှုပါ။"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "ဤ WeatherPlugin ထည့်သွင်းမှုကို အမှန်တကယ် ဖျက်လိုပါသလား။"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "ဆက်တင်များကို မူရင်းဘောင်များအဖြစ် ပြန်လည်သတ်မှတ်မလား။"
 
 msgid "Restart"
-msgstr ""
+msgstr "ပြန်စတင်သည်"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2 ကို ပြန်လည်စတင်သော်လည်း အပြောင်းအလဲများကို အသုံးမပြုပါ\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "အချက်အလက်ကို ပြန်လည်စတင်ပါ။"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "သင့်ရွေးချယ်မှုကို ရွေးချယ်ပါ။"
 
 msgid "Save"
-msgstr ""
+msgstr "သိမ်းဆည်းပါ။"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "xml ဖိုင် config\nတွင် ပြောင်းလဲမှုများကို သိမ်းဆည်းပြီး ကူးယူပါ။"
 
 msgid "Search Code"
-msgstr ""
+msgstr "ကုဒ်ကိုရှာပါ။"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "ဆက်တင်များ ချန်နယ် အကန့်များ"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "ဆက်တင်များ City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "ဆက်တင်များ Eventview Panels"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "ဆက်တင်များ အင်ဖိုဘား အကန့်များ"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "ဆက်တင်များ လိုဂိုပုံ အောက်ခြေ"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "ဆက်တင်များ လိုဂိုပုံ ထိပ်တန်း"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "MediaPlayer Panels ဆက်တင်များ"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "ဆက်တင်များ မီနူး ရုပ်ပုံအကန့်"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "ဆက်တင်များ OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "ဆက်တင်များ PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "ရေဒီယိုအကန့်များ ဆက်တင်များ"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "ဆက်တင်များ SecInfobar Panels"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "THETVDB APIKEY ဆက်တင်များ"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "ဆက်တင်များ TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "VISUALWEATHER APIKEY ဆက်တင်များ"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "ဆက်တင်များ အသံအကန့်များ"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "ဆက်တင်များ oZeta Apikey ဆာဗာ"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "ဆက်တင်များ oZeta မိုးလေဝသ"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDB တွင် စာရင်းသွင်းပြီး အခမဲ့ ကိုယ်ပိုင် ApiKey ထည့်သွင်းပါ။"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDB တွင် စာရင်းသွင်းပြီး အခမဲ့ ကိုယ်ပိုင် ApiKey ထည့်သွင်းပါ။"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "TMDB တွင် စာရင်းသွင်းပြီး အခမဲ့ ကိုယ်ပိုင် ApiKey ထည့်သွင်းပါ။"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com တွင် စာရင်းသွင်းပြီး အခမဲ့ ကိုယ်ပိုင် ApiKey ထည့်သွင်းပါ။"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "အသားအရည်ရှိတယ်နော်!! Conponent ကို အမှန်တကယ် အပ်ဒိတ်လုပ်လိုပါသလား။"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "အသားအရည်ရှိတယ်နော်!! သင် အမှန်တကယ် အဆင့်မြှင့်လိုပါသလား။"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Skin ကို အောင်မြင်စွာ ဖန်တီးနိုင်ပါပြီ။"
 
 msgid "System"
-msgstr ""
+msgstr "စနစ်"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey တင်သွင်းပြီး သိမ်းဆည်းထားသည်။"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey ကို တင်သွင်းပြီး သိမ်းဆည်းထားသည်။"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey ကို တင်သွင်းပြီး သိမ်းဆည်းထားသည်။"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin- ထည့်သွင်းမှုကို တည်းဖြတ်ပါ။"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin- ထည့်သွင်းမှုများစာရင်း"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "တည်နေရာကုဒ်ကို မရှာဖွေမီ မှန်ကန်သောမြို့အမည်ကို ထည့်သွင်းရန် လိုအပ်သည်။"
 
 msgid "imperial system"
-msgstr ""
+msgstr "နယ်ချဲ့စနစ်"
 
 msgid "metric system"
-msgstr ""
+msgstr "မက်ထရစ်စနစ်"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "ဖိုင်များကိုဖွင့်/ပြသပါ။"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "ပကတိ ကီးဘုတ်ကို သုံးပါ။\n"

@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Automaatne import pluginast\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--kasutage virtuaalset klaviatuuri või importige vaikekonfiguratsiooni pistikprogrammist"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Lisa"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Alternatiivne raadiorežiim= Jah\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey teave"
 
 msgid "Back"
-msgstr ""
+msgstr "Tagasi"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo muudetud ja varundada faili default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Tühista"
 
 msgid "City"
-msgstr ""
+msgstr "Linn"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Selle akna sulgemiseks klõpsake nuppu Välju"
 
 msgid "Console"
-msgstr ""
+msgstr "konsool"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Ilma jaoks sisestatud andmed, kas soovite sama jätkata?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Kustuta"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Kas soovite tõesti Bootlogo pilti muuta?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Muuda"
 
 msgid "Exit"
-msgstr ""
+msgstr "Välju"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Failiülem – lisand"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB kaante kasutamiseks kopeerige omdbkey fail nahakausta:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TheTMDB kaante kasutamiseks kopeerige apikey fail nahakausta:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB kaante kasutamiseks kopeerige apikey fail nahakausta:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugini kasutamiseks:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Kasutamiseks VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Peida/Kuva"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Pildikarp pole testitud!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Kas importida Api võtme OMDB failist /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Kas importida Api Key THETVDB failist /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Kas importida Api Key TMDB failist /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Kas importida Api võti VISUALWEATHER failist /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Installige OAWeatheri pistikprogramm ja taaskäivitage"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Installige OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Installige Skin Zeta XStreamity pluginale"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Installige Weather Plugin ja taaskäivitage"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Installige WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Installige või värskendage automaatselt oZeta Plugin & Skin mõlemasse"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Plugin mmpicons installimine"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Paigaldamine oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "oZeta Skin Component paigaldamine"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "oZeta Skini paigaldusvalikud"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Laadige OMDB Apikey failist /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Laadige THETVDB Apikey failist /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Laadige TMDB Apikey failist /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Laadi VISUALWEATHER Apikey failist /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Asukohakood"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN-i asukohaotsingu tulemus"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menüü/Seadistus/Graafiline liides/OSD seadistamine\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s puudub!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Puuduvad XStreamity pluginad!"
 
 msgid "OK"
 msgstr ""
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey imporditud ja salvestatud!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA NAHK: PAIGALDATUD, KUID EI OLE AKTIIVNE"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Avage OAWeather, kas soovite jätkata?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Või sisestage käsitsi võti, mis on loodud OMDB portaalis\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Või sisestage käsitsi THETMDB portaalis loodud võti\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Või sisestage käsitsi TMDB portaalis loodud võti\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Sisestage kehtiv linna nimi."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Sisestage linna kehtiv asukohakood."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin pole installitud!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather pole installitud!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin pole installitud!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Eelvaade"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Eelvaate teave"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Kas tõesti kustutada see WeatherPlugin kirje?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Kas lähtestada seaded vaikeparameetritele?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Taaskäivitage"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Taaskäivitage E2, kuid ärge rakendage muudatusi\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Taaskäivitage teave"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "VALI OMA VALIK"
 
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Salvestage ja kopeerige muudatused xml-faili konfiguratsioonis\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Otsingukood"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Seadistused Kanalipaneelid"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Seadistused City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Seaded Sündmusvaate paneelid"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Seadete teaberiba paneelid"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Seaded Logo Pilt Alumine"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Seaded Logo Pilt Üles"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Seadistused MediaPlayeri paneelid"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Seadete menüü Pildipaneel"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Seaded OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Seadistused PluginBrowser paneelid"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Seadistused Raadiopaneelid"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Seadistused SecInfobari paneelid"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Seaded THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Seaded TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Seaded VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Seadistused Helitugevuse paneelid"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Seaded oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Seaded oZeta Ilm"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Registreeruge OMDB-s ja sisestage tasuta isiklik ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Registreeruge THETVDB-s ja sisestage tasuta isiklik ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Registreeruge TMDB-s ja sisestage tasuta isiklik ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Registreeruge saidil www.visualcrossing.com ja sisestage tasuta isiklik ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Nahk on olemas!! Kas soovite tõesti Conponenti värskendada?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Nahk on olemas!! Kas soovite tõesti uuendada?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Skini loomine õnnestus!"
 
 msgid "System"
-msgstr ""
+msgstr "Süsteem"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey imporditud ja salvestatud!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey imporditud ja salvestatud!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey imporditud ja salvestatud!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Redigeeri kirjet"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: kirjete loend"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Enne asukohakoodi otsimist peate sisestama kehtiva linna nime."
 
 msgid "imperial system"
-msgstr ""
+msgstr "keiserlik süsteem"
 
 msgid "metric system"
-msgstr ""
+msgstr "meetriline süsteem"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "esita/näita faile"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "kasutage virtuaalset klaviatuuri.\n"

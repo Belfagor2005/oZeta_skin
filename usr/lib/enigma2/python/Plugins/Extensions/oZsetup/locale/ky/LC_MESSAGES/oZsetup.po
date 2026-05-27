@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Плагинден автоматтык түрдө импорттоо\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "- виртуалдык клавиатураны колдонуңуз же демейки конфигурация плагининен импорттоо"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "кошуу"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Альтернативдик радио режими= Ооба\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey маалыматы"
 
 msgid "Back"
-msgstr ""
+msgstr "Артка"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo өзгөртүлдү жана default_bootlogo.mviге камдык көчүрмөсүн көчүрүңүз!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Жокко чыгаруу"
 
 msgid "City"
 msgstr ""
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Бул терезени жабуу үчүн Чыгууну басыңыз"
 
 msgid "Console"
 msgstr ""
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Аба ырайы үчүн берилиштер киргизилди, ошону улантууну каалайсызбы?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Жок кылуу"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Чын эле Bootlogo сүрөтүн өзгөрткүңүз келеби?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Түзөтүү"
 
 msgid "Exit"
-msgstr ""
+msgstr "Чыгыңыз"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB Covers колдонуу үчүн тери папкасына omdbkey файлын көчүрүңүз:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB Covers колдонуу үчүн apikey файлын тери папкасына көчүрүңүз:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB Covers колдонуу үчүн, apikey файлын тери папкасына көчүрүңүз:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugin колдонуу үчүн:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather колдонуу үчүн\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Жашыруу/Көрсөтүү"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Сүрөт кутусу текшерилген эмес!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "/tmp/omdbkey.txt файлынан Api ачкычы OMDB импорттойсузбу?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Api ачкычы THETVDB /tmp/thetvdbkey.txt файлынан импорттолсунбу?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Api ачкычы TMDB /tmp/apikey.txt файлынан импорттолсунбу?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt дарегинен Api ачкычы VISUALWEATHER импорттойсузбу?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather плагинди орнотуп, кайра жүктөө"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin орнотуу"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "XStreamity Plugin үчүн Skin Zeta орнотуу"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Аба ырайы плагинин орнотуп, кайра жүктөө"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin орнотуу"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Экөөнө тең oZeta Plugin & Skin орнотуу же автожаңыртуу"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Орнотуу mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Орнотуу oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Орнотуу oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Орнотуу oZeta Skin параметрлери"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "/tmp/omdbkey.txt сайтынан OMDB Apikey жүктөңүз"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "THETVDB Apikey жүктөө /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "/tmp/apikey.txt сайтынан TMDB Apikey жүктөңүз"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "VISUALWEATHER Apikeyди /etc/enigma2/VisualWeather/apikey.txt дарегинен жүктөңүз"
 
 msgid "Location code"
-msgstr ""
+msgstr "Жайгашкан жер коду"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN жайгашкан жерди издөө натыйжасы"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Меню/Орнотуу/Графикалык интерфейс/OSD орнотуу\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s жок!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "XStreamity плагиндери жок!"
 
 msgid "OK"
-msgstr ""
+msgstr "макул"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey импорттолгон жана сакталган!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "ОЗЕТА ТЕРИ: ОРНОТУЛГАН БИРОК АКТИВДУУ ЭМЕС"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather ачыңыз, уланткыңыз келеби?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Же OMDB порталында түзүлгөн ачкычты кол менен киргизиңиз'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Же THETMDB порталында түзүлгөн ачкычты кол менен киргизиңиз\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Же TMDB порталында түзүлгөн ачкычты кол менен киргизиңиз\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Жарактуу шаардын атын киргизиңиз."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Сураныч, шаар үчүн жарактуу жайгашкан жер кодун киргизиңиз."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin орнотулган эмес!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "TheWeather плагини орнотулган эмес!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin орнотулган эмес!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Алдын ала көрүү"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Маалыматты алдын ала көрүү"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Бул WeatherPlugin жазуусу чын эле өчүрүлсүнбү?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Орнотууларды Демейки Параметрлерге кайтарыңызбы?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Кайра баштоо"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2ди өчүрүп күйгүзүңүз, бирок өзгөртүүлөрдү колдонбоңуз\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Маалыматты кайра баштоо"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ТАНДООҢУЗДУ ТАНДАЙТ"
 
 msgid "Save"
-msgstr ""
+msgstr "Сактоо"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "xml файл конфигурациясындагы өзгөртүүлөрдү сактоо жана көчүрүү\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Издөө коду"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Орнотуулар Канал панелдери"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Орнотуулар Шаардык аба ырайы плагини"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Орнотуулар Окуяларды көрүү панелдери"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Орнотуулар Инфобар панелдери"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Орнотуулар логотип сүрөтү Төмөнкү"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Орнотуулар логотип сүрөтү Жогорку"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Орнотуулар MediaPlayer панелдери"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Орнотуулар менюсу Сүрөт панели"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Орнотуулар OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Орнотуулар PluginBrowser панелдери"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Орнотуулар Радио панелдер"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Орнотуулар SecInfobar панелдери"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Орнотуулар THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Орнотуулар TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Орнотуулар VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Орнотуулар Көлөм панелдери"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Орнотуулар oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Орнотуулар oZeta Аба ырайы"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDBге катталып, акысыз жеке ApiKey киргизиңиз"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDBге катталып, акысыз жеке ApiKey киргизиңиз"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "TMDBге катталып, акысыз жеке ApiKey киргизиңиз"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com сайтына катталып, акысыз жеке ApiKey киргизиңиз"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Тери бар!! Конпонентти жаңырткыңыз келеби?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Тери бар!! Сиз чын эле жаңырткыңыз келеби?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Терини ийгиликтүү түзүү!"
 
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey импорттолгон жана сакталган!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey импорттолгон жана сакталган!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUAL WEATER ApiKey импорттолгон жана сакталган!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Жазууну түзөтүү"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Жазуулардын тизмеси"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Жайгашкан жердин кодун издөөдөн мурун жарактуу шаардын атын киргизишиңиз керек."
 
 msgid "imperial system"
-msgstr ""
+msgstr "империялык система"
 
 msgid "metric system"
-msgstr ""
+msgstr "метрикалык система"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "Файлдарды ойнотуу/көрсөтүү"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "виртуалдык баскычтопту колдонуңуз.\n"

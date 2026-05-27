@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--ავტომატური იმპორტი დანამატიდან\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--გამოიყენეთ ვირტუალური კლავიატურა ან შემოიტანეთ ნაგულისხმევი კონფიგურაციის მოდულიდან"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "დამატება"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "ალტერნატიული რადიოს რეჟიმი= დიახ\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "ApiKey ინფორმაცია"
 
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo შეიცვალა და სარეზერვო ასლი default_bootlogo.mvi-ზე!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 msgid "City"
-msgstr ""
+msgstr "ქალაქი"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "ამ ფანჯრის დახურვისთვის დააჭირეთ გასვლას"
 
 msgid "Console"
-msgstr ""
+msgstr "კონსოლი"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "ამინდისთვის შეყვანილი მონაცემები, გსურთ იგივე გააგრძელოთ?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "დელ ლაინი"
 
 msgid "Delete"
-msgstr ""
+msgstr "წაშლა"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "ნამდვილად გსურთ Bootlogo სურათის შეცვლა?"
 
 msgid "Edit"
-msgstr ""
+msgstr "რედაქტირება"
 
 msgid "Exit"
-msgstr ""
+msgstr "გასვლა"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "ფაილის მეთაური - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB Covers-ის გამოსაყენებლად დააკოპირეთ omdbkey ფაილი კანის საქაღალდეში:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TheTMDB Covers-ის გამოსაყენებლად დააკოპირეთ apikey ფაილი კანის საქაღალდეში:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB Covers-ის გამოსაყენებლად დააკოპირეთ apikey ფაილი კანის საქაღალდეში:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "The WeatherPlugin-ის გამოსაყენებლად:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather გამოსაყენებლად\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "დამალვა/ჩვენება"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "სურათის ყუთი არ არის გამოცდილი!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "გსურთ Api Key OMDB-ის იმპორტი /tmp/omdbkey.txt-დან?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "იმპორტირებული Api გასაღები THETVDB /tmp/thetvdbkey.txt-დან?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "გსურთ Api Key TMDB-ის იმპორტი /tmp/apikey.txt-დან?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "გსურთ Api Key VISUALWEATHER-ის იმპორტი /etc/enigma2/VisualWeather/apikey.txt-დან?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "დააინსტალირეთ OAWeather Plugin და გადატვირთეთ"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "დააინსტალირეთ OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "დააინსტალირეთ Skin Zeta XStreamity Plugin-ისთვის"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "დააინსტალირეთ ამინდის დანამატი და გადატვირთეთ"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "დააინსტალირეთ WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "დააინსტალირეთ ან განაახლეთ oZeta Plugin & Skin ორივეზე"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "mmpicons Plugin-ის ინსტალაცია"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "oZeta Skin-ის ინსტალაცია"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "oZeta Skin კომპონენტის დაყენება"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "ინსტალაცია oZeta Skin პარამეტრები"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "ჩატვირთეთ OMDB Apikey-დან /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "ჩატვირთეთ THETVDB Apikey /tmp/thetvdbkey.txt-დან"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "ჩატვირთეთ TMDB Apikey /tmp/apikey.txt-დან"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "ჩატვირთეთ VISUALWEATHER Apikey-დან /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "მდებარეობის კოდი"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN მდებარეობის ძიების შედეგი"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "მენიუ/დაყენება/გრაფიკული ინტერფეისი/OSD-ის დაყენება\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "აკლია %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "აკლია XStreamity დანამატები!"
 
 msgid "OK"
 msgstr ""
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey იმპორტირებული და შენახული!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: დაყენებული, მაგრამ არა აქტიური"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "გახსენით OAWeather, გსურთ გააგრძელოთ?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "ან ხელით შეიყვანეთ OMDB პორტალზე შექმნილი გასაღები'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "ან ხელით შეიყვანეთ THETMDB პორტალზე შექმნილი გასაღები\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "ან ხელით შეიყვანეთ TMDB პორტალზე შექმნილი გასაღები\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "გთხოვთ, შეიყვანოთ ქალაქის სწორი სახელი."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "გთხოვთ, შეიყვანოთ ქალაქის სწორი მდებარეობის კოდი."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "დანამატი OAWeatherPlugin არ არის დაინსტალირებული!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "მოდული TheWeather არ არის დაინსტალირებული!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "მოდული WeatherPlugin არ არის დაინსტალირებული!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "გადახედვა"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "წინასწარი გადახედვის ინფორმაცია"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "მართლა წაშალოთ ეს WeatherPlugin ჩანაწერი?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "დააყენოთ პარამეტრები ნაგულისხმევ პარამეტრებზე?"
 
 msgid "Restart"
-msgstr ""
+msgstr "გადატვირთეთ"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "გადატვირთეთ E2, მაგრამ არ გამოიყენოთ ცვლილებები\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "გადატვირთეთ ინფორმაცია"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "აირჩიეთ თქვენი არჩევანი"
 
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "შეინახეთ და დააკოპირეთ ცვლილებები xml ფაილის კონფიგურაციაში\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "ძებნის კოდი"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "არხის პანელის პარამეტრები"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "პარამეტრები ქალაქის ამინდის მოდული"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "ღონისძიების პანელის პარამეტრები"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "პარამეტრების საინფორმაციო ზოლის პანელები"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "პარამეტრების ლოგო სურათის ქვედა ნაწილი"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "პარამეტრები ლოგო სურათის ზედა"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "პარამეტრები MediaPlayer პანელები"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "პარამეტრების მენიუ სურათის პანელი"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "პარამეტრები OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "პარამეტრები PluginBrowser პანელები"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "რადიო პანელის პარამეტრები"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "პარამეტრები SecInfobar პანელები"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "პარამეტრები THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "პარამეტრები TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "პარამეტრები VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "პარამეტრების ხმის პანელები"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "პარამეტრები oZeta Apikey სერვერი"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "პარამეტრები oZeta ამინდი"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "დარეგისტრირდით OMDB-ზე და შეიყვანეთ უფასო პერსონალური ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "დარეგისტრირდით THETVDB-ზე და შეიყვანეთ უფასო პერსონალური ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "დარეგისტრირდით TMDB-ზე და შეიყვანეთ უფასო პერსონალური ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "დარეგისტრირდით www.visualcrossing.com-ზე და შეიყვანეთ უფასო პერსონალური ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "კანი არსებობს!! ნამდვილად გსურთ კონპონენტის განახლება?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "კანი არსებობს!! ნამდვილად გსურთ განახლება?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Skin-ის შექმნა წარმატებით!"
 
 msgid "System"
-msgstr ""
+msgstr "სისტემა"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey იმპორტირებული და შენახულია!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey იმპორტირებული და შენახული!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey იმპორტირებული და შენახული!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: ჩანაწერის რედაქტირება"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: ჩანაწერების სია"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "მდებარეობის კოდის მოძიებამდე უნდა შეიყვანოთ ქალაქის სწორი სახელი."
 
 msgid "imperial system"
-msgstr ""
+msgstr "იმპერიული სისტემა"
 
 msgid "metric system"
-msgstr ""
+msgstr "მეტრულ სისტემას"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "ფაილების დაკვრა/ჩვენება"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "გამოიყენეთ ვირტუალური კლავიატურა.\n"

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:56+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <tamil@systemreboot.net>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "சேர்"
+
+msgid "Back"
+msgstr "மீண்டும்"
+
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+msgid "City"
+msgstr "நகரம்"
+
+msgid "Delete"
+msgstr "நீக்கு"
+
+msgid "Edit"
+msgstr "திருத்தவும்"
+
+msgid "Feels like %s"
+msgstr "%s போல் உணர்கிறேன்"
+
+msgid "Getting weather information..."
+msgstr "வானிலை தகவலைப் பெறுகிறது..."
+
+msgid "Humidity: %s %%"
+msgstr "ஈரப்பதம்: %s %%"
+
+msgid "Location code"
+msgstr "இருப்பிடக் குறியீடு"
+
+msgid "MSN location search result"
+msgstr "MSN இருப்பிடத் தேடல் முடிவு"
+
+msgid "OK"
+msgstr "சரி"
+
+msgid "Observation point: %s"
+msgstr "கண்காணிப்பு புள்ளி: %s"
+
+msgid "Observation time: %s"
+msgstr "கண்காணிப்பு நேரம்: %s"
+
+msgid "Please enter a valid city name."
+msgstr "சரியான நகரப் பெயரை உள்ளிடவும்."
+
+msgid "Please enter a valid location code for the city."
+msgstr "நகரத்திற்கான சரியான இருப்பிடக் குறியீட்டை உள்ளிடவும்."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "இந்த WeatherPlugin உள்ளீட்டை உண்மையில் நீக்கவா?"
+
+msgid "Search Code"
+msgstr "தேடல் குறியீடு"
+
+msgid "Show Weather Forecast"
+msgstr "வானிலை முன்னறிவிப்பைக் காட்டு"
+
+msgid "System"
+msgstr "அமைப்பு"
+
+msgid "Weather Plugin"
+msgstr "வானிலை செருகுநிரல்"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: திருத்து நுழைவு"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: உள்ளீடுகளின் பட்டியல்"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "இருப்பிடக் குறியீட்டைத் தேடுவதற்கு முன், சரியான நகரப் பெயரை உள்ளிட வேண்டும்."
+
+msgid "imperial system"
+msgstr "ஏகாதிபத்திய அமைப்பு"
+
+msgid "metric system"
+msgstr "மெட்ரிக் அமைப்பு"

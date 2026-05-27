@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:59+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Add"
+msgstr "додати"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "City"
+msgstr "Місто"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Feels like %s"
+msgstr "Відчуття як %s"
+
+msgid "Getting weather information..."
+msgstr "Отримання інформації про погоду..."
+
+msgid "Humidity: %s %%"
+msgstr "Вологість: %s %%"
+
+msgid "Location code"
+msgstr "Код місця розташування"
+
+msgid "MSN location search result"
+msgstr "Результат пошуку місцезнаходження MSN"
+
+msgid "OK"
+msgstr "добре"
+
+msgid "Observation point: %s"
+msgstr "Точка спостереження: %s"
+
+msgid "Observation time: %s"
+msgstr "Час спостереження: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Введіть дійсну назву міста."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Введіть дійсний код місця для міста."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Справді видалити цей запис WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Код пошуку"
+
+msgid "Show Weather Forecast"
+msgstr "Показати прогноз погоди"
+
+msgid "System"
+msgstr "система"
+
+msgid "Weather Plugin"
+msgstr "Плагін погоди"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Редагувати запис"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: список записів"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Вам потрібно ввести дійсну назву міста, перш ніж ви зможете шукати код місця."
+
+msgid "imperial system"
+msgstr "імперська система"
+
+msgid "metric system"
+msgstr "метрична система"

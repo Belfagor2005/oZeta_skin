@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:53+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "Add"
+msgstr "Adăuga"
+
+msgid "Back"
+msgstr "Spate"
+
+msgid "Cancel"
+msgstr "Anula"
+
+msgid "City"
+msgstr "Oraş"
+
+msgid "Delete"
+msgstr "Şterge"
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "Feels like %s"
+msgstr "Se simte ca %s"
+
+msgid "Getting weather information..."
+msgstr "Se obține informații despre vreme..."
+
+msgid "Humidity: %s %%"
+msgstr "Umiditate: %s %%"
+
+msgid "Location code"
+msgstr "Codul locației"
+
+msgid "MSN location search result"
+msgstr "Rezultatul căutării locației MSN"
+
+msgid "OK"
+msgstr "Bine"
+
+msgid "Observation point: %s"
+msgstr "Punct de observare: %s"
+
+msgid "Observation time: %s"
+msgstr "Timp de observare: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Vă rugăm să introduceți un nume de oraș valid."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Vă rugăm să introduceți un cod de locație valid pentru oraș."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Ștergeți cu adevărat această intrare WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Cod de căutare"
+
+msgid "Show Weather Forecast"
+msgstr "Afișați Prognoza meteo"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Weather Plugin"
+msgstr "Plugin meteo"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Editați intrarea"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Lista de intrări"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Trebuie să introduceți un nume valid de oraș înainte de a putea căuta codul de locație."
+
+msgid "imperial system"
+msgstr "sistem imperial"
+
+msgid "metric system"
+msgstr "sistem metric"

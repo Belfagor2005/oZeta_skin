@@ -10,337 +10,337 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Аутоматски увоз из додатка\н"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--користите виртуелну тастатуру или увезите из подразумеваног конфигурационог додатка"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
-msgstr ""
+msgstr "/уср/схаре/енигма2/оЗета-ФХД/апикеи\н"
 
 msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
-msgstr ""
+msgstr "/уср/схаре/енигма2/оЗета-ФХД/омдбкеи\н"
 
 msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
-msgstr ""
+msgstr "/уср/схаре/енигма2/оЗета-ФХД/тхетвдбкеи\н"
 
 msgid "Add"
-msgstr ""
+msgstr "Додај"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Алтернативни радио режим= Да\н"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "АпиКеи Инфо"
 
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Боотлого је промењен и резервна копија на дефаулт_боотлого.мви!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Откажи"
 
 msgid "City"
-msgstr ""
+msgstr "Цити"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Кликните на Изађи да затворите овај прозор"
 
 msgid "Console"
-msgstr ""
+msgstr "Конзола"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Подаци унети за временску прогнозу, да ли желите да наставите исто?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Дел Лине"
 
 msgid "Delete"
-msgstr ""
+msgstr "Избриши"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Да ли заиста желите да промените Боотлого слику?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Уреди"
 
 msgid "Exit"
-msgstr ""
+msgstr "Изађи"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Филе Цоммандер - Аддон"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "За коришћење Тхе ОМДБ Цоверс, копирајте омдбкеи датотеку у фолдер скин:\н"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "За коришћење ТхеТМДБ Цоверс, копирајте апикеи датотеку у фолдер скин:\н"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "За коришћење Тхе ТМДБ Цоверс, копирајте апикеи датотеку у фолдер скин:\н"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "За коришћење ВеатхерПлугин-а:\н"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "За коришћење ВисуалВеатхер\н"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Сакриј/Прикажи"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Кутија за слике није тестирана!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Да увезете Апи кључ ОМДБ из /тмп/омдбкеи.ткт?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Увезите Апи кључ ТХЕТВДБ из /тмп/тхетвдбкеи.ткт?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Да увезете Апи кључ ТМДБ из /тмп/апикеи.ткт?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Увезите Апи кључ ВИСУАЛВЕАТХЕР из /етц/енигма2/ВисуалВеатхер/апикеи.ткт?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Инс Лине"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Инсталирајте ОАВеатхер додатак и поново покрените систем"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Инсталирајте ОАВеатхерПлугин"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Инсталирајте додатак Скин Зета за КССтреамити"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Инсталирајте Веатхер Плугин и поново покрените систем"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Инсталирајте ВеатхерПлугин"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Инсталирајте или аутоматски ажурирајте оЗета додатак и скин на оба"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Инсталациони додатак ммпицонс"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Инсталација оЗета Скин"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Инсталација оЗета Скин Цомпонент"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Инсталација оЗета Скин опције"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Учитајте ОМДБ Апикеи из /тмп/омдбкеи.ткт"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Учитајте ТХЕТВДБ Апикеи из /тмп/тхетвдбкеи.ткт"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Учитајте ТМДБ Апикеи из /тмп/апикеи.ткт"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Учитајте ВИСУАЛВЕАТХЕР Апикеи из /етц/енигма2/ВисуалВеатхер/апикеи.ткт"
 
 msgid "Location code"
-msgstr ""
+msgstr "Шифра локације"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "МСН резултат претраге локације"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Мени/Подешавање/Графички интерфејс/Подешавање менија на екрану\н"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Недостаје %с!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Недостају КССтреамити додаци!"
 
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "ОМДБ АпиКеи увезен и сачуван!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "ОЗЕТА СКИН: ИНСТАЛИРАНА АЛИ НИЈЕ АКТИВНА"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Отворите ОАВеатхер, да ли желите да наставите?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Или ручно унесите кључ, креиран на ОМДБ порталу'\н"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Или ручно унесите кључ, креиран на ТХЕТМДБ порталу\н"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Или ручно унесите кључ, креиран на ТМДБ порталу\н"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Унесите важећи назив града."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Унесите важећи код локације за град."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Додатак ОАВеатхерПлугин није инсталиран!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Додатак ТхеВеатхер није инсталиран!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Додатак ВеатхерПлугин није инсталиран!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Преглед"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Превиев Инфо"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Да ли стварно избришете овај ВеатхерПлугин унос?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Ресетовати подешавања на подразумеване параметре?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Поново покрени"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Поново покрените Е2 али не примењујте промене\н"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Рестарт Инфо"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ИЗАБЕРИТЕ СВОЈ ИЗБОР"
 
 msgid "Save"
-msgstr ""
+msgstr "Сачувај"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Сачувај и копирај промене у конфигурацији кмл датотеке\н"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Сеарцх Цоде"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Панели канала подешавања"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Додатак за подешавања за време у граду"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Подешавања Панели за приказ догађаја"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Подешавања Инфобар Панели"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Подешавања Лого Доња слика"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Подешавања Лого Слика Врх"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Подешавања МедиаПлаиер Панели"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Подешавања Мени Слика Панел"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Подешавања ОМДБ АПИКЕИ"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Подешавања ПлугинБровсер Панели"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Подешавања Радио Панели"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Подешавања СецИнфобар Панели"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Подешавања ТХЕТВДБ АПИКЕИ"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Подешавања ТМДБ АпиКеи"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Подешавања ВИСУАЛВЕАТХЕР АПИКЕИ"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Панели за јачину звука подешавања"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Подешавања оЗета Апикеи сервера"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Подешавања оЗета Време"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Региструјте се на ОМДБ и унесите бесплатан лични АпиКеи"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Региструјте се на ТХЕТВДБ и унесите бесплатан лични АпиКеи"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Региструјте се на ТМДБ и унесите бесплатан лични АпиКеи"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Региструјте се на ввв.висуалцроссинг.цом и унесите бесплатан лични АпиКеи"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Кожа постоји!! Да ли заиста желите да ажурирате компоненту?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Кожа постоји!! Да ли заиста желите да надоградите?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Успешно креирање коже!"
 
 msgid "System"
-msgstr ""
+msgstr "Систем"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "ТХЕТВДБ АпиКеи увезен и сачуван!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "ТМДБ АпиКеи увезен и сачуван!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "ВИСУАЛВЕАТХЕР АпиКеи увезен и сачуван!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "ВеатхерПлугин: Уреди унос"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "ВеатхерПлугин: Листа уноса"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Морате да унесете важећи назив града да бисте могли да тражите код локације."
 
 msgid "imperial system"
-msgstr ""
+msgstr "империјални систем"
 
 msgid "metric system"
-msgstr ""
+msgstr "метрички систем"
 
 msgid "oZsetup"
-msgstr ""
+msgstr "оЗсетуп"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "пусти/прикажи датотеке"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "користите виртуелну тастатуру.\н"

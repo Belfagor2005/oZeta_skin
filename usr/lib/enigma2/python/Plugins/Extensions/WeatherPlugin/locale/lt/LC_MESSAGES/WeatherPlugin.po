@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:47+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Add"
+msgstr "Pridėti"
+
+msgid "Back"
+msgstr "Atgal"
+
+msgid "Cancel"
+msgstr "Atšaukti"
+
+msgid "City"
+msgstr "Miestas"
+
+msgid "Delete"
+msgstr "Ištrinti"
+
+msgid "Edit"
+msgstr "Redaguoti"
+
+msgid "Feels like %s"
+msgstr "Atrodo kaip %s"
+
+msgid "Getting weather information..."
+msgstr "Gaunama orų informacija..."
+
+msgid "Humidity: %s %%"
+msgstr "Drėgmė: %s %%"
+
+msgid "Location code"
+msgstr "Vietos kodas"
+
+msgid "MSN location search result"
+msgstr "MSN vietos paieškos rezultatas"
+
+msgid "OK"
+msgstr "Gerai"
+
+msgid "Observation point: %s"
+msgstr "Stebėjimo taškas: %s"
+
+msgid "Observation time: %s"
+msgstr "Stebėjimo laikas: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Įveskite galiojantį miesto pavadinimą."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Įveskite galiojantį miesto vietos kodą."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Tikrai ištrinti šį WeatherPlugin įrašą?"
+
+msgid "Search Code"
+msgstr "Paieškos kodas"
+
+msgid "Show Weather Forecast"
+msgstr "Rodyti orų prognozę"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Weather Plugin"
+msgstr "Orų įskiepis"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "„Weather“ papildinys: redaguoti įrašą"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "„Weather“ papildinys: įrašų sąrašas"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Kad galėtumėte ieškoti vietos kodo, turite įvesti galiojantį miesto pavadinimą."
+
+msgid "imperial system"
+msgstr "imperinė sistema"
+
+msgid "metric system"
+msgstr "metrinė sistema"

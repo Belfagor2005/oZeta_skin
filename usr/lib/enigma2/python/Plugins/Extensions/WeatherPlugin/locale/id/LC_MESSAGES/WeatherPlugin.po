@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:44+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Menambahkan"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Cancel"
+msgstr "Membatalkan"
+
+msgid "City"
+msgstr "Kota"
+
+msgid "Delete"
+msgstr "Menghapus"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Feels like %s"
+msgstr "Terasa seperti %s"
+
+msgid "Getting weather information..."
+msgstr "Mendapatkan informasi cuaca..."
+
+msgid "Humidity: %s %%"
+msgstr "Kelembapan: %s %%"
+
+msgid "Location code"
+msgstr "Kode lokasi"
+
+msgid "MSN location search result"
+msgstr "Hasil pencarian lokasi MSN"
+
+msgid "OK"
+msgstr "OKE"
+
+msgid "Observation point: %s"
+msgstr "Titik pengamatan: %s"
+
+msgid "Observation time: %s"
+msgstr "Waktu observasi: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Silakan masukkan nama kota yang valid."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Silakan masukkan kode lokasi yang valid untuk kota tersebut."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Benar-benar menghapus Entri WeatherPlugin ini?"
+
+msgid "Search Code"
+msgstr "Kode Pencarian"
+
+msgid "Show Weather Forecast"
+msgstr "Tampilkan Prakiraan Cuaca"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Weather Plugin"
+msgstr "Plugin Cuaca"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Edit Entri"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Daftar Entri"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Anda harus memasukkan nama kota yang valid sebelum dapat mencari kode lokasi."
+
+msgid "imperial system"
+msgstr "sistem kekaisaran"
+
+msgid "metric system"
+msgstr "sistem metrik"

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:52+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Punjabi <punjabi-l10n@lists.sourceforge.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "ਸ਼ਾਮਲ ਕਰੋ"
+
+msgid "Back"
+msgstr "ਵਾਪਸ"
+
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+msgid "City"
+msgstr "ਸ਼ਹਿਰ"
+
+msgid "Delete"
+msgstr "ਮਿਟਾਓ"
+
+msgid "Edit"
+msgstr "ਸੰਪਾਦਿਤ ਕਰੋ"
+
+msgid "Feels like %s"
+msgstr "%s ਵਰਗਾ ਮਹਿਸੂਸ ਹੁੰਦਾ ਹੈ"
+
+msgid "Getting weather information..."
+msgstr "ਮੌਸਮ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ..."
+
+msgid "Humidity: %s %%"
+msgstr "ਨਮੀ: %s %%"
+
+msgid "Location code"
+msgstr "ਟਿਕਾਣਾ ਕੋਡ"
+
+msgid "MSN location search result"
+msgstr "MSN ਟਿਕਾਣਾ ਖੋਜ ਨਤੀਜਾ"
+
+msgid "OK"
+msgstr "ਠੀਕ ਹੈ"
+
+msgid "Observation point: %s"
+msgstr "ਨਿਰੀਖਣ ਬਿੰਦੂ: %s"
+
+msgid "Observation time: %s"
+msgstr "ਨਿਰੀਖਣ ਦਾ ਸਮਾਂ: %s"
+
+msgid "Please enter a valid city name."
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਸ਼ਹਿਰ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ।"
+
+msgid "Please enter a valid location code for the city."
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸ਼ਹਿਰ ਲਈ ਇੱਕ ਵੈਧ ਟਿਕਾਣਾ ਕੋਡ ਦਾਖਲ ਕਰੋ।"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ਕੀ ਅਸਲ ਵਿੱਚ ਇਸ WeatherPlugin ਐਂਟਰੀ ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ?"
+
+msgid "Search Code"
+msgstr "ਖੋਜ ਕੋਡ"
+
+msgid "Show Weather Forecast"
+msgstr "ਮੌਸਮ ਦੀ ਭਵਿੱਖਬਾਣੀ ਦਿਖਾਓ"
+
+msgid "System"
+msgstr "ਸਿਸਟਮ"
+
+msgid "Weather Plugin"
+msgstr "ਮੌਸਮ ਪਲੱਗਇਨ"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "ਮੌਸਮ ਪਲੱਗਇਨ: ਐਂਟਰੀ ਨੂੰ ਸੋਧੋ"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: ਐਂਟਰੀਆਂ ਦੀ ਸੂਚੀ"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "ਟਿਕਾਣਾ ਕੋਡ ਖੋਜਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਇੱਕ ਵੈਧ ਸ਼ਹਿਰ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰਨ ਦੀ ਲੋੜ ਹੈ।"
+
+msgid "imperial system"
+msgstr "ਸਾਮਰਾਜੀ ਸਿਸਟਮ"
+
+msgid "metric system"
+msgstr "ਮੀਟਰਿਕ ਸਿਸਟਮ"

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:39+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Bengali <(nothing)>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "যোগ করুন"
+
+msgid "Back"
+msgstr "ব্যাক"
+
+msgid "Cancel"
+msgstr "বাতিল করুন"
+
+msgid "City"
+msgstr "শহর"
+
+msgid "Delete"
+msgstr "মুছুন"
+
+msgid "Edit"
+msgstr "সম্পাদনা করুন"
+
+msgid "Feels like %s"
+msgstr "মনে হচ্ছে %s"
+
+msgid "Getting weather information..."
+msgstr "আবহাওয়ার তথ্য পাওয়া যাচ্ছে..."
+
+msgid "Humidity: %s %%"
+msgstr "আর্দ্রতা: %s %%"
+
+msgid "Location code"
+msgstr "অবস্থান কোড"
+
+msgid "MSN location search result"
+msgstr "MSN অবস্থান অনুসন্ধান ফলাফল"
+
+msgid "OK"
+msgstr "ঠিক আছে"
+
+msgid "Observation point: %s"
+msgstr "পর্যবেক্ষণ পয়েন্ট: %s"
+
+msgid "Observation time: %s"
+msgstr "পর্যবেক্ষণের সময়: %s"
+
+msgid "Please enter a valid city name."
+msgstr "একটি বৈধ শহরের নাম লিখুন."
+
+msgid "Please enter a valid location code for the city."
+msgstr "শহরের জন্য একটি বৈধ অবস্থান কোড লিখুন."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "সত্যিই এই WeatherPlugin এন্ট্রি মুছে ফেলবেন?"
+
+msgid "Search Code"
+msgstr "অনুসন্ধান কোড"
+
+msgid "Show Weather Forecast"
+msgstr "আবহাওয়ার পূর্বাভাস দেখান"
+
+msgid "System"
+msgstr "সিস্টেম"
+
+msgid "Weather Plugin"
+msgstr "আবহাওয়া প্লাগইন"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: এন্ট্রি সম্পাদনা করুন"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: এন্ট্রির তালিকা"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "অবস্থান কোড অনুসন্ধান করার আগে আপনাকে একটি বৈধ শহরের নাম লিখতে হবে।"
+
+msgid "imperial system"
+msgstr "সাম্রাজ্য ব্যবস্থা"
+
+msgid "metric system"
+msgstr "মেট্রিক সিস্টেম"

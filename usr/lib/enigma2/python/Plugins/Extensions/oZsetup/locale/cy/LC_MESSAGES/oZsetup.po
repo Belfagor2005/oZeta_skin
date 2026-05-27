@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Mewnforio Awtomatig o'r Ategyn\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--defnyddiwch y bysellfwrdd rhithwir neu fewnforio o'r ategyn ffurfweddu rhagosodedig"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Ychwanegu"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Modd Radio Amgen = Oes\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Gwybodaeth ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Yn ol"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Newidiodd Bootlogo a gwneud copi wrth gefn i default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Canslo"
 
 msgid "City"
-msgstr ""
+msgstr "Dinas"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Cliciwch Gadael i gau'r ffenestr hon"
 
 msgid "Console"
-msgstr ""
+msgstr "Consol"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Data a gofnodwyd ar gyfer y Tywydd, ydych chi am barhau yr un peth?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Dileu"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Ydych chi wir eisiau newid delwedd Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Golygu"
 
 msgid "Exit"
-msgstr ""
+msgstr "Ymadael"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "File Comander - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "I'w ddefnyddio Mae'r Gorchuddion OMDB, copïwch y ffeil omdbkey yn y ffolder croen:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "I'w defnyddio The THETMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "I'w defnyddio The TMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "I'w ddefnyddio The WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "I'w ddefnyddio VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Cuddio/Dangos"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Blwch Delwedd Heb ei Brofi!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Mewnforio Allwedd Api OMDB o /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Mewnforio Allwedd Api THETVDB o /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Mewnforio TMDB Allwedd Api o /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Mewnforio Allwedd Api VISUALWEATHER o /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Llinell Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Gosod Ategyn OAWeather ac Ailgychwyn"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Gosod OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Gosod Skin Zeta ar gyfer Ategyn XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Gosod Ategyn Tywydd ac Ailgychwyn"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Gosod WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Gosod neu Autoupdate oZeta Plugin & Croen ar y ddau"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Gosod Ategyn mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Gosod oZeta Croen"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Gosod Cydran Croen oZeta"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Gosod opsiynau oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Llwythwch OMDB Apikey o /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Llwythwch THETVDB Apikey o /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Llwythwch TMDB Apikey o /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Llwythwch VISUALWEATHER Apikey o /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Cod lleoliad"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Canlyniad chwiliad lleoliad MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Dewislen/Gosod/Rhyngwyneb Graffeg/Gosod OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s ar goll !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Ategion XStreamity ar goll!"
 
 msgid "OK"
-msgstr ""
+msgstr "iawn"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey Wedi'i Fewnforio a'i Storio!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "CROEN OZETA: WEDI'I OSOD OND NID YN ACTIF"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Agor OAWeather, ydych chi am barhau?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar borth THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Rhowch enw dinas dilys."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Rhowch god lleoliad dilys ar gyfer y ddinas."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Ategyn OAWeatherPlugin heb ei osod!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Ategyn TheWeather heb ei osod!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Ategyn WeatherPlugin heb ei osod!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Rhagolwg"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Gwybodaeth Rhagolwg"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Wir dileu'r Cofnod WeatherPlugin hwn?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Ailosod Gosodiadau i Baramedrau Diofyn?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Ailgychwyn"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Ailgychwyn E2 ond peidio â gweithredu'r newidiadau\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Ailgychwyn Gwybodaeth"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "DEWISWCH EICH DEWIS"
 
 msgid "Save"
-msgstr ""
+msgstr "Arbed"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Cadw a Chopio newidiadau yn y ffurfwedd ffeil xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Cod Chwilio"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Paneli Sianel Gosodiadau"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Ategyn Tywydd y Ddinas Gosodiadau"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli Eventview"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli Bar Gwybodaeth"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Gosodiadau Logo Delwedd Gwaelod"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Gosodiadau Logo Top Image"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Panel Delwedd Dewislen Gosodiadau"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Gosodiadau OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli PluginBrowser"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli Radio"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Gosodiadau Paneli SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Gosodiadau THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Gosodiadau TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Gosodiadau VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Paneli Cyfrol Gosodiadau"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Gosodiadau oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Gosodiadau oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Cofrestrwch ar OMDB a mewnbynnu ApiKey personol am ddim"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Cofrestrwch ar THETVDB a mewnbynnu ApiKey personol am ddim"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Cofrestrwch ar TMDB a mewnbynnu ApiKey personol am ddim"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Cofrestrwch ar www.visualcrossing.com a mewnbynnu ApiKey personol am ddim"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Mae croen yn bodoli!! Ydych chi wir eisiau Diweddaru Cydran?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Mae croen yn bodoli!! Ydych chi wir eisiau Uwchraddio?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Llwyddiannus i greu Skin!"
 
 msgid "System"
 msgstr ""
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey Wedi'i Fewnforio a'i Storio!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey Wedi'i Fewnforio a'i Storio!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "WELEDWATHER ApiKey Wedi'i Fewnforio a'i Storio!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Golygu Cofnod"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Rhestr o Gofrestriadau"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Mae angen i chi nodi enw dinas dilys cyn y gallwch chwilio am y cod lleoliad."
 
 msgid "imperial system"
-msgstr ""
+msgstr "system imperialaidd"
 
 msgid "metric system"
-msgstr ""
+msgstr "system fetrig"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "chwarae/dangos Ffeiliau"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "defnyddio'r bysellfwrdd rhithwir.\n"

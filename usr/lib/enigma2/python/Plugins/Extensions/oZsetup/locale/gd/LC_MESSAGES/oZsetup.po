@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--In-mhalairt fèin-ghluasadach bhon plugan\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--cleachd am meur-chlàr brìgheil no cuir a-steach bhon plugan config bunaiteach"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,247 +25,247 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Cuir ris"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Modh Rèidio Eile = Tha\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Fiosrachadh ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Air ais"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Dh'atharraich Bootlogo agus cuir air ais gu default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Sguir dheth"
 
 msgid "City"
-msgstr ""
+msgstr "Cathair-bhaile"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Cliog air Exit airson an uinneag seo a dhùnadh"
 
 msgid "Console"
 msgstr ""
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Dàta a chaidh a chuir a-steach airson na h-Aimsire, a bheil thu airson leantainn air adhart mar an ceudna?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Loidhne Del"
 
 msgid "Delete"
-msgstr ""
+msgstr "Sguab às"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "A bheil thu dha-rìribh ag iarraidh ìomhaigh Bootlogo atharrachadh?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Deasaich"
 
 msgid "Exit"
-msgstr ""
+msgstr "Ar-a-mach"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Airson a chleachdadh Na còmhdaichean OMDB, dèan lethbhreac den fhaidhle omdbkey ann am pasgan a’ chraicinn:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Airson a chleachdadh Na còmhdach THETMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Airson a chleachdadh Na còmhdaichean TMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Airson a chleachdadh The WeatherPlugin: \n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Airson cleachdadh VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Falaich/Seall"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Bogsa ìomhaigh gun deuchainn !!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Cuir a-steach Api Key OMDB bho /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Cuir a-steach Api Key THETVDB bho /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Cuir a-steach Api Key TMDB bho /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Cuir a-steach Api Key VISUALWEATHER bho /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Loidhne a-staigh"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Stàlaich OAWeather Plugin agus Ath-thòisich"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Stàlaich OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Stàlaich Skin Zeta airson Plugin XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Stàlaich Plugin Aimsir agus Ath-thòisich"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Stàlaich WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Stàlaich no ùraich oZeta Plugin & Skin air gach cuid"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Plugin mmpicons stàladh"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Stàladh ozeta skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Stàladh co-phàirt craiceann oZeta"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Stàladh roghainnean oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Luchdaich OMDB Apikey bho /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Luchdaich THETVDB Apikey bho /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Luchdaich TMDB Apikey bho /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Luchdaich VISUALWEATHER Apikey bho /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Còd àite"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Toradh rannsachaidh àite MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Clàr-taice/Suiteachadh/Eadar-aghaidh Grafaigeach/Setup OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s a dhìth!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Plugins XStreamity a dhìth!"
 
 msgid "OK"
-msgstr ""
+msgstr "ceart gu leòr"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey air a thoirt a-steach & air a stòradh!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "Craiceann OZETA: air a stàladh ach chan eil e gnìomhach"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Fosgail OAWeather, a bheil thu airson leantainn air adhart?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "No cuir a-steach an iuchair le làimh, air a chruthachadh air portal TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Feuch an cuir thu a-steach ainm baile-mòr dligheach."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Feuch an cuir thu a-steach còd àite dligheach airson a’ bhaile."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin gun a chuir a-steach !!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather gun a bhith air a chuir a-steach !!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin gun a chuir a-steach !!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Ro-shealladh"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Fiosrachadh ro-shealladh"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Dìreach sguab às an inntrigeadh WeatherPlugin seo?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Ath-shuidhich roghainnean gu paramadairean bunaiteach?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Ath-thòisich"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Ath-thòisich E2 ach na cuir an sàs atharraichean\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Ath-thòiseachadh Fiosrachadh"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ROGHAINN DO ROGHA"
 
 msgid "Save"
-msgstr ""
+msgstr "Sàbhail"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Sàbhail is dèan lethbhreac de dh'atharraichean san fhaidhle xml config\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Còd-rannsachaidh"
 
 msgid "Settings Channel Panels"
 msgstr ""
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Plugin aimsir roghainnean baile-mòr"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Suidhich pannalan Eventview"
 
 msgid "Settings Infobar Panels"
 msgstr ""
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Suidhichidhean Logo Image Bottom"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Suidhich Suaicheantas Image Top"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Suidhich pannalan MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Pannal Ìomhaigh Clàr-taice Settings"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Roghainnean OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
 msgstr ""
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Suidhich pannalan rèidio"
 
 msgid "Settings SecInfobar Panels"
 msgstr ""
@@ -274,73 +274,73 @@ msgid "Settings THETVDB APIKEY"
 msgstr ""
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Roghainnean TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Suidhichidhean VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
 msgstr ""
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Roghainnean oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Suidhichidhean oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Clàraich air OMDB agus cuir a-steach ApiKey pearsanta an-asgaidh"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Clàraich air THETVDB agus cuir a-steach ApiKey pearsanta an-asgaidh"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Clàraich air TMDB agus cuir a-steach ApiKey pearsanta an-asgaidh"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Clàraich air www.visualcrossing.com agus cuir a-steach ApiKey pearsanta an-asgaidh"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Tha craiceann ann!! A bheil thu dha-rìribh ag iarraidh Conponent Ùrachadh?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Tha craiceann ann!! A bheil thu dha-rìribh ag iarraidh ùrachadh?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Cruthaich gu soirbheachail Skin!"
 
 msgid "System"
-msgstr ""
+msgstr "Siostam"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey air a thoirt a-steach & air a stòradh!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey air a thoirt a-steach & air a stòradh!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey air a thoirt a-steach & air a stòradh!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Deasaich Inntrigeadh"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Liosta inntrigidhean"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Feumaidh tu ainm baile-mòr dligheach a chuir a-steach mus urrainn dhut còd an àite a lorg."
 
 msgid "imperial system"
-msgstr ""
+msgstr "siostam ìmpireil"
 
 msgid "metric system"
-msgstr ""
+msgstr "siostam meatrach"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "cluich / seall Faidhlichean"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "cleachd am meur-chlàr brìgheil.\n"

@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--አውቶማቲክ ከፕለጊን ማስመጣት\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--ቨርቹዋል ኪቦርድ ይጠቀሙ ወይም ከነባሪው የማዋቀሪያ ተሰኪ ያስመጡ"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "አክል"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "አማራጭ የሬዲዮ ሞድ= አዎ\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "የApiKey መረጃ"
 
 msgid "Back"
-msgstr ""
+msgstr "ተመለስ"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo ተቀይሯል እና ምትኬ ወደ default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "ሰርዝ"
 
 msgid "City"
-msgstr ""
+msgstr "ከተማ"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "ይህንን መስኮት ለመዝጋት ውጣ የሚለውን ጠቅ ያድርጉ"
 
 msgid "Console"
-msgstr ""
+msgstr "ኮንሶል"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "ለአየር ሁኔታ የገባው ውሂብ፣ በተመሳሳይ መቀጠል ይፈልጋሉ?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "ዴል መስመር"
 
 msgid "Delete"
-msgstr ""
+msgstr "ሰርዝ"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "የBootlogo ምስልን መለወጥ ይፈልጋሉ?"
 
 msgid "Edit"
-msgstr ""
+msgstr "አርትዕ"
 
 msgid "Exit"
-msgstr ""
+msgstr "ውጣ"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "የፋይል አዛዥ - አዶን"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "የOMDB ሽፋኖችን ለመጠቀም፣ የ omdbkey ፋይል በቆዳ አቃፊ ውስጥ ይቅዱ፡\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "የ THETMDB ሽፋኖችን ለመጠቀም፣ የ apikey ፋይል በቆዳ አቃፊ ውስጥ ይቅዱ፡\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "የTMDB ሽፋኖችን ለመጠቀም፣ የ apikey ፋይል በቆዳ አቃፊ ውስጥ ይቅዱ፡\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "የአየር ሁኔታ ፕለጊን ለመጠቀም፡\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "ለ VisualWeather\n ለመጠቀም"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "ደብቅ/ አሳይ"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "የምስል ሳጥን አልተሞከረም!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Api Key OMDB ከ /tmp/omdbkey.txt አስመጣ?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "አፒ ቁልፍ THETVDB ከ /tmp/thetvdbkey.txt አስመጣ?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "የኤፒ ቁልፍ TMDB ከ /tmp/apikey.txt አስመጣ?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "የApi ቁልፍ VISUALWEATHER ከ /etc/enigma2/VisualWeather/apikey.txt አስመጣ?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "ኢንስ መስመር"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather ፕለጊን ጫን እና ዳግም አስነሳ"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPluginን ይጫኑ"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "ለXStreamity Plugin Skin Zeta ን ይጫኑ"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "የአየር ሁኔታ ፕለጊን ጫን እና ዳግም አስነሳ"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin ን ይጫኑ"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "በሁለቱም ላይ oZeta Plugin & Skinን ይጫኑ ወይም ያዘምኑ"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "የመጫኛ ሚሜፒኮን ፕለጊን።"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "መጫን oZeta ቆዳ"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "መጫን oZeta የቆዳ አካል"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "የመጫኛ oZeta ቆዳ አማራጮች"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "OMDB Apikey ከ /tmp/omdbkey.txt ጫን"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "THETVDB Apikey ከ /tmp/thetvdbkey.txt ጫን"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "TMDB Apikey ከ /tmp/apikey.txt ጫን"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "VISUALWEATHER Apikey ከ /etc/enigma2/VisualWeather/apikey.txt ጫን"
 
 msgid "Location code"
-msgstr ""
+msgstr "የአካባቢ ኮድ"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "የ MSN አካባቢ ፍለጋ ውጤት"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "ሜኑ/ማዋቀር/ግራፊክ በይነገጽ/ኦኤስዲ ማዋቀር\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s ይጎድላል!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "የXStreamity Plugins ይጎድላሉ!"
 
 msgid "OK"
-msgstr ""
+msgstr "እሺ"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey መጥቷል እና ተከማችቷል!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA ቆዳ፡ ተጭኗል ግን ገቢር አይደለም።"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeatherን ይክፈቱ፣ መቀጠል ይፈልጋሉ?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "ወይም በOMDB ፖርታል ላይ የተፈጠረውን ቁልፍ እራስዎ ያስገቡ\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "ወይም በ THETMDB ፖርታል ላይ የተፈጠረውን ቁልፍ እራስዎ ያስገቡ\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "ወይም በTMDB ፖርታል ላይ የተፈጠረውን ቁልፍ እራስዎ ያስገቡ\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "እባክዎ የሚሰራ የከተማ ስም ያስገቡ።"
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "እባክዎ ለከተማው የሚሰራ የአካባቢ ኮድ ያስገቡ።"
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin አልተጫነም!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "TheWeather ፕለጊን አልተጫነም!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin አልተጫነም!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "ቅድመ እይታ"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "ቅድመ እይታ መረጃ"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "ይህ የአየር ሁኔታ ፕለጊን ግቤት በእርግጥ ይሰረዝ?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "ቅንጅቶች ወደ ነባሪ መለኪያዎች ዳግም ይጀመር?"
 
 msgid "Restart"
-msgstr ""
+msgstr "እንደገና ጀምር"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2ን እንደገና ያስጀምሩ ግን ለውጦችን አይተገበሩ\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "መረጃን ዳግም አስጀምር"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ምርጫዎን ይምረጡ"
 
 msgid "Save"
-msgstr ""
+msgstr "አስቀምጥ"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "ለውጦችን ያስቀምጡ እና በ xml ፋይል ውቅር ውስጥ ይቅዱ\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "የፍለጋ ኮድ"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "የሰርጥ ፓነሎች ቅንጅቶች"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "የከተማ የአየር ሁኔታ ተሰኪ ቅንብሮች"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "የዝግጅት እይታ ፓነሎች"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "ቅንብሮች Infobar ፓነሎች"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "የቅንብሮች አርማ ምስል ከታች"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "የቅንጅቶች አርማ ምስል ከላይ"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "የ MediaPlayer ፓነሎች ቅንብሮች"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "የቅንጅቶች ምናሌ ምስል ፓነል"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "ቅንብሮች OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "የፕለጊን አሳሽ ፓነሎች ቅንጅቶች"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "የሬዲዮ ፓነሎች ቅንጅቶች"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "SecInfobar ፓነሎች ቅንብሮች"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "THETVDB APIKEY ቅንብሮች"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "ቅንብሮች TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "VISUALWEATHER APIKEY ቅንብሮች"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "ቅንጅቶች የድምጽ ፓነሎች"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "ቅንብሮች oZeta Apikey አገልጋይ"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "ቅንብሮች oZeta የአየር ሁኔታ"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDB ላይ ይመዝገቡ እና ነፃ የግል አፒኬይ ያስገቡ"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "በTHETVDB ይመዝገቡ እና ነፃ የግል አፒኬይ ያስገቡ"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "በTMDB ይመዝገቡ እና ነፃ የግል አፒኬይ ያስገቡ"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com ላይ ይመዝገቡ እና ነፃ የግል አፒኬይ ያስገቡ"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "ቆዳ አለ!! የምር ተካፋይ ማዘመን ይፈልጋሉ?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "ቆዳ አለ!! በእርግጥ ማሻሻል ይፈልጋሉ?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "ቆዳን በተሳካ ሁኔታ መፍጠር!"
 
 msgid "System"
-msgstr ""
+msgstr "ስርዓት"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey መጥቷል እና ተከማችቷል!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey መጥቷል እና ተከማችቷል!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "ቪዥዋልWeather ApiKey መጥቷል እና ተከማችቷል!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin፡ ግቤትን ያርትዑ"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin፡ የመግቢያ ዝርዝር"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "የአካባቢ ኮዱን ከመፈለግዎ በፊት የሚሰራ የከተማ ስም ማስገባት ያስፈልግዎታል።"
 
 msgid "imperial system"
-msgstr ""
+msgstr "ኢምፔሪያል ስርዓት"
 
 msgid "metric system"
-msgstr ""
+msgstr "የሜትሪክ ስርዓት"
 
 msgid "oZsetup"
-msgstr ""
+msgstr "oZ ማዋቀር"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "ፋይሎችን አጫውት/አሳይ"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "ምናባዊ የቁልፍ ሰሌዳውን ተጠቀም።\n"

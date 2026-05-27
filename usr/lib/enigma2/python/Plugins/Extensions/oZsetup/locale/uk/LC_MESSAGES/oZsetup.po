@@ -15,10 +15,10 @@ msgstr ""
 "X-Poedit-SearchPath-0: plugin.py\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Автоматичний імпорт із плагіна\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--використовувати віртуальну клавіатуру або імпортувати з плагіна конфігурації за замовчуванням"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -30,322 +30,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "додати"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Альтернативний режим радіо= Так\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Інформація про ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo змінено та створено резервну копію на default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 msgid "City"
-msgstr ""
+msgstr "Місто"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Натисніть Вихід, щоб закрити це вікно"
 
 msgid "Console"
-msgstr ""
+msgstr "Консоль"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Дані введено для Погода, продовжити так само?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Дель Лайн"
 
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Ви дійсно хочете змінити зображення Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Редагувати"
 
 msgid "Exit"
-msgstr ""
+msgstr "Вихід"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "File Commander - аддон"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Щоб використовувати обкладинки OMDB, скопіюйте файл omdbkey у папку шкіри:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Щоб використовувати The THETMDB Covers, скопіюйте файл apikey у папку skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Щоб використовувати обкладинки TMDB, скопіюйте файл apikey у папку шкіри:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Для використання WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Для використання VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Приховати/Показати"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Image Box не перевірено!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Імпортувати ключ API OMDB із /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Імпортувати ключ API THETVDB з /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Імпортувати ключ API TMDB з /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Імпортувати ключ API VISUALWEATHER з /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Лінія Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Встановіть плагін OAWeather і перезавантажте"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Встановіть OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Встановіть плагін Skin Zeta для XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Встановіть плагін Weather і перезавантажте"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Встановіть WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Встановіть або автоматично оновіть oZeta Plugin & Skin на обох"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Установка плагіна mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Установка oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Установка oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Параметри установки oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Завантажте OMDB Apikey з /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Завантажте THETVDB Apikey з /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Завантажте TMDB Apikey з /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Завантажте VISUALWEATHER Apikey з /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Код місця розташування"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Результат пошуку місцезнаходження MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Меню/Налаштування/Графічний інтерфейс/Налаштування екранного меню\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Відсутня %s!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Відсутні плагіни XStreamity!"
 
 msgid "OK"
-msgstr ""
+msgstr "добре"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey імпортовано та збережено!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "SKIN OZETA: ВСТАНОВЛЕНО, АЛЕ НЕ АКТИВНО"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Відкрийте OAWeather, бажаєте продовжити?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Або вручну введіть ключ, створений на порталі OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Або вручну введіть ключ, створений на порталі THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Або вручну введіть ключ, створений на порталі TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Введіть дійсну назву міста."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Введіть дійсний код місця для міста."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Плагін OAWeatherPlugin не встановлено!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Плагін TheWeather не встановлений!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Плагін WeatherPlugin не встановлено!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Попередній перегляд"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Попередній перегляд інформації"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Справді видалити цей запис WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Скинути налаштування до параметрів за замовчуванням?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Перезапустіть"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Перезапустіть E2, але не застосовуйте зміни\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Перезапустити інформацію"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ОБЕРІТЬ СВІЙ ВИБІР"
 
 msgid "Save"
-msgstr ""
+msgstr "зберегти"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Збережіть і скопіюйте зміни в xml-файл config\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Код пошуку"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Налаштування панелей каналів"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Плагін налаштувань City Weather"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Параметри Панелі перегляду подій"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Інформаційна панель налаштувань Панелі"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Налаштування Логотип Зображення знизу"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Налаштування Логотип Зображення Вгорі"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Параметри MediaPlayer Панелі"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Меню налаштувань Панель зображення"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Налаштування OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Параметри PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Налаштування радіопанелі"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Параметри SecInfobar Панелі"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Налаштування THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Налаштування TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Налаштування VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Панелі налаштувань гучності"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Налаштування oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Налаштування oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Зареєструйтеся на OMDB і введіть безкоштовний персональний ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Зареєструйтеся на THETVDB і введіть безкоштовний особистий ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Зареєструйтеся на TMDB і введіть безкоштовний особистий ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Зареєструйтеся на сайті www.visualcrossing.com і введіть безкоштовний персональний ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Шкіра існує!! Ви дійсно хочете оновити компонент?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Шкіра існує!! Ви дійсно хочете оновити?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Успішно створено Skin!"
 
 msgid "System"
-msgstr ""
+msgstr "система"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey імпортовано та збережено!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey імпортовано та збережено!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey імпортовано та збережено!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Редагувати запис"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: список записів"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Вам потрібно ввести дійсну назву міста, перш ніж ви зможете шукати код місця."
 
 msgid "imperial system"
-msgstr ""
+msgstr "імперська система"
 
 msgid "metric system"
-msgstr ""
+msgstr "метрична система"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "відтворити/показати файли"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "використовувати віртуальну клавіатуру.\n"

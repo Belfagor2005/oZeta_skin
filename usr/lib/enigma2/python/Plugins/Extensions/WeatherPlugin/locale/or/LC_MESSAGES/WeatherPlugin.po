@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:52+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Oriya <translation-team-or@lists.sourceforge.net>\n"
+"Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "ଯୋଡନ୍ତୁ |"
+
+msgid "Back"
+msgstr "ପଛକୁ"
+
+msgid "Cancel"
+msgstr "ବାତିଲ୍ କରନ୍ତୁ |"
+
+msgid "City"
+msgstr "ସହର"
+
+msgid "Delete"
+msgstr "ବିଲୋପ କରନ୍ତୁ |"
+
+msgid "Edit"
+msgstr "ସଂପାଦନା କରନ୍ତୁ |"
+
+msgid "Feels like %s"
+msgstr "% S ପରି ଅନୁଭବ କରେ |"
+
+msgid "Getting weather information..."
+msgstr "ପାଣିପାଗ ସୂଚନା ପାଇବା ..."
+
+msgid "Humidity: %s %%"
+msgstr "ଆର୍ଦ୍ରତା:% s %%"
+
+msgid "Location code"
+msgstr "ଅବସ୍ଥାନ କୋଡ୍"
+
+msgid "MSN location search result"
+msgstr "MSN ଅବସ୍ଥାନ ସନ୍ଧାନ ଫଳାଫଳ |"
+
+msgid "OK"
+msgstr "ଠିକ ଅଛି |"
+
+msgid "Observation point: %s"
+msgstr "ପର୍ଯ୍ୟବେକ୍ଷଣ ବିନ୍ଦୁ:% s"
+
+msgid "Observation time: %s"
+msgstr "ପର୍ଯ୍ୟବେକ୍ଷଣ ସମୟ:% s"
+
+msgid "Please enter a valid city name."
+msgstr "ଦୟାକରି ଏକ ବ city ଧ ସହର ନାମ ପ୍ରବେଶ କରନ୍ତୁ |"
+
+msgid "Please enter a valid location code for the city."
+msgstr "ଦୟାକରି ସହର ପାଇଁ ଏକ ବ location ଧ ଅବସ୍ଥାନ କୋଡ୍ ପ୍ରବେଶ କରନ୍ତୁ |"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ପ୍ରକୃତରେ ଏହି ପାଣିପାଗ ପ୍ଲଗଇନ୍ ଏଣ୍ଟ୍ରି ବିଲୋପ କରନ୍ତୁ କି?"
+
+msgid "Search Code"
+msgstr "ସନ୍ଧାନ କୋଡ୍"
+
+msgid "Show Weather Forecast"
+msgstr "ପାଣିପାଗ ପୂର୍ବାନୁମାନ ଦେଖାନ୍ତୁ |"
+
+msgid "System"
+msgstr "ସିଷ୍ଟମ୍"
+
+msgid "Weather Plugin"
+msgstr "ପାଣିପାଗ ପ୍ଲଗଇନ୍ |"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: ଏଣ୍ଟ୍ରି ସଂପାଦନ କରନ୍ତୁ |"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "ପାଣିପାଗ ପ୍ଲଗଇନ୍: ଏଣ୍ଟ୍ରିଗୁଡିକର ତାଲିକା |"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "ଲୋକେସନ କୋଡ୍ ଖୋଜିବା ପୂର୍ବରୁ ଆପଣଙ୍କୁ ଏକ ବ valid ଧ ସହର ନାମ ପ୍ରବେଶ କରିବାକୁ ପଡିବ |"
+
+msgid "imperial system"
+msgstr "ସାମ୍ରାଜ୍ୟ ପ୍ରଣାଳୀ |"
+
+msgid "metric system"
+msgstr "ମେଟ୍ରିକ୍ ସିଷ୍ଟମ୍ |"

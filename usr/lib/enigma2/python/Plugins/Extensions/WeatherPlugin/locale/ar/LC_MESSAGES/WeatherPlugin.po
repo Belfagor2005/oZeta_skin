@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:39+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Arabic <(nothing)>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "يضيف"
+
+msgid "Back"
+msgstr "خلف"
+
+msgid "Cancel"
+msgstr "يلغي"
+
+msgid "City"
+msgstr "مدينة"
+
+msgid "Delete"
+msgstr "يمسح"
+
+msgid "Edit"
+msgstr "يحرر"
+
+msgid "Feels like %s"
+msgstr "يبدو وكأنه %s"
+
+msgid "Getting weather information..."
+msgstr "الحصول على معلومات الطقس..."
+
+msgid "Humidity: %s %%"
+msgstr "الرطوبة: %s %%"
+
+msgid "Location code"
+msgstr "رمز الموقع"
+
+msgid "MSN location search result"
+msgstr "نتيجة بحث موقع MSN"
+
+msgid "OK"
+msgstr "نعم"
+
+msgid "Observation point: %s"
+msgstr "نقطة المراقبة: %s"
+
+msgid "Observation time: %s"
+msgstr "وقت المراقبة: %s"
+
+msgid "Please enter a valid city name."
+msgstr "الرجاء إدخال اسم مدينة صالح."
+
+msgid "Please enter a valid location code for the city."
+msgstr "الرجاء إدخال رمز موقع صالح للمدينة."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "هل تريد حقًا حذف إدخال WeatherPlugin هذا؟"
+
+msgid "Search Code"
+msgstr "كود البحث"
+
+msgid "Show Weather Forecast"
+msgstr "عرض توقعات الطقس"
+
+msgid "System"
+msgstr "نظام"
+
+msgid "Weather Plugin"
+msgstr "البرنامج المساعد الطقس"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: تحرير الإدخال"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: قائمة الإدخالات"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "تحتاج إلى إدخال اسم مدينة صالح قبل أن تتمكن من البحث عن رمز الموقع."
+
+msgid "imperial system"
+msgstr "النظام الإمبراطوري"
+
+msgid "metric system"
+msgstr "النظام المتري"

@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:49+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Back"
+msgstr "belakang"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "City"
+msgstr "Bandar"
+
+msgid "Delete"
+msgstr "Padam"
+
+msgid "Edit"
+msgstr "Sunting"
+
+msgid "Feels like %s"
+msgstr "Terasa seperti %s"
+
+msgid "Getting weather information..."
+msgstr "Mendapatkan maklumat cuaca..."
+
+msgid "Humidity: %s %%"
+msgstr "Kelembapan: %s %%"
+
+msgid "Location code"
+msgstr "Kod lokasi"
+
+msgid "MSN location search result"
+msgstr "Hasil carian lokasi MSN"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Titik pemerhatian: %s"
+
+msgid "Observation time: %s"
+msgstr "Masa pemerhatian: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Sila masukkan nama bandar yang sah."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Sila masukkan kod lokasi yang sah untuk bandar."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Betul-betul padamkan Entri WeatherPlugin ini?"
+
+msgid "Search Code"
+msgstr "Kod Carian"
+
+msgid "Show Weather Forecast"
+msgstr "Tunjukkan Ramalan Cuaca"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Weather Plugin"
+msgstr "Pemalam Cuaca"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Edit Entri"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Senarai Entri"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Anda perlu memasukkan nama bandar yang sah sebelum anda boleh mencari kod lokasi."
+
+msgid "imperial system"
+msgstr "sistem empayar"
+
+msgid "metric system"
+msgstr "sistem metrik"

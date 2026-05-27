@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:41+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Basque <translation-team-eu@googlegroups.com>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Gehitu"
+
+msgid "Back"
+msgstr "Itzuli"
+
+msgid "Cancel"
+msgstr "Utzi"
+
+msgid "City"
+msgstr "Hiria"
+
+msgid "Delete"
+msgstr "Ezabatu"
+
+msgid "Edit"
+msgstr "Editatu"
+
+msgid "Feels like %s"
+msgstr "%s bezalakoa da"
+
+msgid "Getting weather information..."
+msgstr "Eguraldiaren informazioa jasotzen..."
+
+msgid "Humidity: %s %%"
+msgstr "Hezetasuna: %s %%"
+
+msgid "Location code"
+msgstr "Kokapen kodea"
+
+msgid "MSN location search result"
+msgstr "MSN kokapenaren bilaketaren emaitza"
+
+msgid "OK"
+msgstr "Ados"
+
+msgid "Observation point: %s"
+msgstr "Behaketa-puntua: %s"
+
+msgid "Observation time: %s"
+msgstr "Behaketa-denbora: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Mesedez, sartu baliozko hiri-izen bat."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Mesedez, sartu hiriaren baliozko kokapen-kode bat."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Benetan ezabatu nahi duzu WeatherPlugin sarrera hau?"
+
+msgid "Search Code"
+msgstr "Bilaketa kodea"
+
+msgid "Show Weather Forecast"
+msgstr "Erakutsi Eguraldi Iragarpena"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Weather Plugin"
+msgstr "Eguraldiaren plugina"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Editatu sarrera"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Sarreren zerrenda"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Baliozko hiri-izen bat sartu behar duzu kokapen-kodea bilatu aurretik."
+
+msgid "imperial system"
+msgstr "sistema inperiala"
+
+msgid "metric system"
+msgstr "sistema metrikoa"

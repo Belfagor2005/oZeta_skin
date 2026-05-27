@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:48+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Malayalam <smc-discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "ചേർക്കുക"
+
+msgid "Back"
+msgstr "തിരികെ"
+
+msgid "Cancel"
+msgstr "റദ്ദാക്കുക"
+
+msgid "City"
+msgstr "നഗരം"
+
+msgid "Delete"
+msgstr "ഇല്ലാതാക്കുക"
+
+msgid "Edit"
+msgstr "എഡിറ്റ് ചെയ്യുക"
+
+msgid "Feels like %s"
+msgstr "%s പോലെ തോന്നുന്നു"
+
+msgid "Getting weather information..."
+msgstr "കാലാവസ്ഥാ വിവരങ്ങൾ ലഭിക്കുന്നു..."
+
+msgid "Humidity: %s %%"
+msgstr "ഈർപ്പം: %s %%"
+
+msgid "Location code"
+msgstr "ലൊക്കേഷൻ കോഡ്"
+
+msgid "MSN location search result"
+msgstr "MSN ലൊക്കേഷൻ തിരയൽ ഫലം"
+
+msgid "OK"
+msgstr "ശരി"
+
+msgid "Observation point: %s"
+msgstr "നിരീക്ഷണ പോയിൻ്റ്: %s"
+
+msgid "Observation time: %s"
+msgstr "നിരീക്ഷണ സമയം: %s"
+
+msgid "Please enter a valid city name."
+msgstr "സാധുവായ ഒരു നഗരത്തിൻ്റെ പേര് നൽകുക."
+
+msgid "Please enter a valid location code for the city."
+msgstr "നഗരത്തിനായുള്ള സാധുവായ ഒരു ലൊക്കേഷൻ കോഡ് നൽകുക."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ഈ WeatherPlugin എൻട്രി ശരിക്കും ഇല്ലാതാക്കണോ?"
+
+msgid "Search Code"
+msgstr "തിരയൽ കോഡ്"
+
+msgid "Show Weather Forecast"
+msgstr "കാലാവസ്ഥാ പ്രവചനം കാണിക്കുക"
+
+msgid "System"
+msgstr "സിസ്റ്റം"
+
+msgid "Weather Plugin"
+msgstr "കാലാവസ്ഥ പ്ലഗിൻ"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: എൻട്രി എഡിറ്റ് ചെയ്യുക"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: എൻട്രികളുടെ പട്ടിക"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "ലൊക്കേഷൻ കോഡിനായി തിരയുന്നതിന് മുമ്പ് നിങ്ങൾ സാധുവായ ഒരു നഗരത്തിൻ്റെ പേര് നൽകേണ്ടതുണ്ട്."
+
+msgid "imperial system"
+msgstr "സാമ്രാജ്യത്വ വ്യവസ്ഥ"
+
+msgid "metric system"
+msgstr "മെട്രിക് സിസ്റ്റം"

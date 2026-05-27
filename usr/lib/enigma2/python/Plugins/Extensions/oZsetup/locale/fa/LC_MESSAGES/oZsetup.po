@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--وارد کردن خودکار از پلاگین\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "-از صفحه کلید مجازی استفاده کنید یا از افزونه پیکربندی پیش فرض وارد کنید"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "اضافه کنید"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "حالت رادیویی جایگزین= بله\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "اطلاعات ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "برگشت"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo تغییر کرد و پشتیبان گیری به default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "لغو کنید"
 
 msgid "City"
-msgstr ""
+msgstr "شهر"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "برای بستن این پنجره روی خروج کلیک کنید"
 
 msgid "Console"
-msgstr ""
+msgstr "کنسول"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "داده های وارد شده برای آب و هوا، آیا می خواهید به همین ترتیب ادامه دهید؟"
 
 msgid "Del Line"
-msgstr ""
+msgstr "دل لاین"
 
 msgid "Delete"
-msgstr ""
+msgstr "حذف کنید"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "آیا واقعاً می خواهید تصویر بوتلوگو را تغییر دهید؟"
 
 msgid "Edit"
-msgstr ""
+msgstr "ویرایش کنید"
 
 msgid "Exit"
-msgstr ""
+msgstr "خارج شوید"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "برای استفاده از پوشش‌های OMDB، فایل omdbkey را در پوشه پوسته کپی کنید:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "برای استفاده از TheTMDB Covers، فایل apikey را در پوشه skin:\n کپی کنید"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "برای استفاده از The TMDB Covers، فایل apikey را در پوشه skin:\n کپی کنید"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "برای استفاده از The WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "برای استفاده از VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "پنهان کردن/نمایش"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "جعبه تصویر تست نشد!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "کلید Api OMDB از /tmp/omdbkey.txt وارد شود؟"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "کلید Api THETVDB از /tmp/thetvdbkey.txt وارد شود؟"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "کلید Api TMDB از /tmp/apikey.txt وارد شود؟"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "کلید Api VISUALWEATHER از /etc/enigma2/VisualWeather/apikey.txt وارد شود؟"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "اینس لاین"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "پلاگین OAWeather را نصب و راه اندازی مجدد کنید"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin را نصب کنید"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Skin Zeta for XStreamity Plugin را نصب کنید"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "پلاگین Weather را نصب و راه اندازی مجدد کنید"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin را نصب کنید"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "OZeta Plugin & Skin را در هر دو نصب یا به روز رسانی خودکار کنید"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "نصب افزونه mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "نصب oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "نصب oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "نصب گزینه های oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Apikey OMDB را از /tmp/omdbkey.txt بارگیری کنید"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Apikey THETVDB را از /tmp/thetvdbkey.txt بارگیری کنید"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Apikey TMDB را از /tmp/apikey.txt بارگیری کنید"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "بارگیری Apikey VISUALWEATHER از /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "کد مکان"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "نتیجه جستجوی مکان MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "منو/تنظیم/رابط گرافیکی/تنظیم OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s موجود نیست!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "افزونه‌های XStreamity گم شده‌اند!"
 
 msgid "OK"
-msgstr ""
+msgstr "باشه"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey وارد و ذخیره شد!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: نصب شده اما فعال نیست"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather را باز کنید، آیا می خواهید ادامه دهید؟"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "یا به صورت دستی کلید ایجاد شده در پورتال OMDB'\n را وارد کنید"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "یا کلید ایجاد شده در پورتال THETMDB را به صورت دستی وارد کنید\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "یا کلید ایجاد شده در پورتال TMDB را به صورت دستی وارد کنید\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "لطفا یک نام شهر معتبر وارد کنید."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "لطفاً یک کد مکان معتبر برای شهر وارد کنید."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "افزونه OAWeatherPlugin نصب نشده است!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "پلاگین TheWeather نصب نشده است!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "افزونه WeatherPlugin نصب نشد!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "پیش نمایش"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "اطلاعات پیش نمایش"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "آیا واقعاً این ورودی WeatherPlugin حذف می شود؟"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "تنظیمات به پارامترهای پیش فرض بازنشانی شود؟"
 
 msgid "Restart"
-msgstr ""
+msgstr "راه اندازی مجدد"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2 را مجدداً راه اندازی کنید اما تغییرات را اعمال نکنید\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "راه اندازی مجدد اطلاعات"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "انتخاب خود را انتخاب کنید"
 
 msgid "Save"
-msgstr ""
+msgstr "ذخیره کنید"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "تغییرات را در پیکربندی فایل xml ذخیره و کپی کنید"
 
 msgid "Search Code"
-msgstr ""
+msgstr "کد جستجو"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "تنظیمات پانل های کانال"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "پلاگین تنظیمات شهر آب و هوا"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "تنظیمات پانل های مشاهده رویداد"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "تنظیمات پانل های نوار اطلاعات"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "تنظیمات آرم تصویر پایین"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "تنظیمات آرم تصویر بالا"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "تنظیمات پنل های MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "پنل تصویر منوی تنظیمات"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "تنظیمات OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "تنظیمات پنل های مرورگر پلاگین"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "تنظیمات پنل های رادیویی"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "تنظیمات پانل های SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "تنظیمات THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "تنظیمات TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "تنظیمات VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "تنظیمات پانل های صدا"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "تنظیمات سرور oZeta Apikey"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "تنظیمات oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "در OMDB ثبت نام کنید و ApiKey شخصی رایگان را وارد کنید"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "در THETVDB ثبت نام کنید و ApiKey شخصی رایگان را وارد کنید"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "در TMDB ثبت نام کنید و ApiKey شخصی رایگان را وارد کنید"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "در www.visualcrossing.com ثبت نام کنید و ApiKey شخصی رایگان را وارد کنید"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "پوست وجود دارد!! آیا واقعاً می خواهید Conponent را به روز کنید؟"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "پوست وجود دارد!! آیا واقعاً می خواهید ارتقا دهید؟"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "ایجاد پوست با موفقیت!"
 
 msgid "System"
-msgstr ""
+msgstr "سیستم"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey وارد و ذخیره شد!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey وارد و ذخیره شد!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey وارد و ذخیره شد!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: ویرایش ورودی"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: فهرست ورودی ها"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "قبل از اینکه بتوانید کد مکان را جستجو کنید، باید یک نام شهر معتبر وارد کنید."
 
 msgid "imperial system"
-msgstr ""
+msgstr "نظام شاهنشاهی"
 
 msgid "metric system"
-msgstr ""
+msgstr "سیستم متریک"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "پخش/نمایش فایل ها"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "از صفحه کلید مجازی استفاده کنید.\n"

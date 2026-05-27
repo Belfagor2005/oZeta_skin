@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Automatikus importálás a beépülő modulból\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "-- használja a virtuális billentyűzetet, vagy importálja az alapértelmezett konfigurációs beépülő modulból"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Alternatív rádió mód= Igen\n"
 
 msgid "ApiKey Info"
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "A Bootlogo megváltozott, és biztonsági mentés a default_bootlogo.mvi-re!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 msgid "City"
-msgstr ""
+msgstr "Város"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Az ablak bezárásához kattintson a Kilépés gombra"
 
 msgid "Console"
-msgstr ""
+msgstr "Konzol"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Az Időjáráshoz beírt adatok, szeretné folytatni ugyanezt?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Töröl"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Biztosan módosítani szeretné a Bootlogo képét?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 msgid "Exit"
-msgstr ""
+msgstr "Kijárat"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Az OMDB Covers használatához másolja az omdbkey fájlt a skin mappába:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "A THETMDB borítók használatához másolja az apikey fájlt a skin mappába:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "A The TMDB Covers használatához másolja az apikey fájlt a skin mappába:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "A WeatherPlugin használatához:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather használatra\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Elrejtés/Megjelenítés"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Képdoboz nincs tesztelve!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Importálja az Api Key OMDB-t a /tmp/omdbkey.txt fájlból?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Importálja a THETVDB API-kulcsot a /tmp/thetvdbkey.txt fájlból?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Importálja az Api Key TMDB-t a /tmp/apikey.txt fájlból?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Importálja a VISUALWEATHER Api kulcsot az /etc/enigma2/VisualWeather/apikey.txt fájlból?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Telepítse az OAWeather beépülő modult, és indítsa újra"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Telepítse az OAWeatherPlugin-t"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Telepítse a Skin Zeta for XStreamity beépülő modult"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Telepítse az időjárási bővítményt, és indítsa újra"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Telepítse a WeatherPlugin-t"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Telepítse vagy automatikusan frissítse az oZeta Plugin & Skin-t mindkettőre"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Az mmpicons beépülő modul telepítése"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Az oZeta Skin telepítése"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Az oZeta Skin Component telepítése"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Az oZeta Skin telepítési lehetőségei"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Az OMDB Apikey betöltése a /tmp/omdbkey.txt fájlból"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "A THETVDB Apikey betöltése a /tmp/thetvdbkey.txt fájlból"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "A TMDB Apikey betöltése a /tmp/apikey.txt fájlból"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "A VISUALWEATHER Apikey betöltése a /etc/enigma2/VisualWeather/apikey.txt fájlból"
 
 msgid "Location code"
-msgstr ""
+msgstr "Helykód"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN helykeresési eredmény"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menü/Beállítás/Grafikus interfész/OSD beállítás\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s hiányzik!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Hiányzó XStreamity bővítmények!"
 
 msgid "OK"
-msgstr ""
+msgstr "RENDBEN"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey importálva és tárolva!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA BŐR: TELEPÍTETT, DE NEM AKTÍV"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Nyissa meg az OAWeathert, folytatja?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Vagy kézzel írja be az OMDB portálon létrehozott kulcsot\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Vagy kézzel írja be a THETMDB portálon létrehozott kulcsot\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Vagy kézzel írja be a TMDB portálon létrehozott kulcsot\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Adjon meg egy érvényes városnevet."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Kérjük, adjon meg egy érvényes helykódot a városhoz."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin nincs telepítve!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "A TheWeather beépülő modul nincs telepítve!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin nincs telepítve!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Előnézet"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Előnézeti információ"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Tényleg törli ezt a WeatherPlugin bejegyzést?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Visszaállítja a beállításokat az alapértelmezett paraméterekre?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Indítsa újra"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Indítsa újra az E2-t, de ne alkalmazza a változtatásokat\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Indítsa újra az Info"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "VÁLASZD A VÁLASZTÁST"
 
 msgid "Save"
-msgstr ""
+msgstr "Megtakarítás"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Mentse és másolja a módosításokat az xml fájl konfigurációjában\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Kód keresése"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Beállítások Csatornapanelek"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Beállítások City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Beállítások Eseménynézet panelek"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Beállítások Infosáv Panelek"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Beállítások Logo Kép alsó része"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Beállítások Logo Kép Felül"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Beállítások MediaPlayer panelek"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Beállítások menü Képpanel"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "OMDB APIKEY beállítások"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Beállítások PluginBrowser Panels"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Beállítások Rádió panelek"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Beállítások SecInfobar panelek"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Beállítások THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "TMDB ApiKey beállításai"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Beállítások VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Beállítások Hangerő panelek"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Beállítások oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Beállítások oZeta Weather"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Regisztráljon az OMDB-n, és adja meg az ingyenes személyes ApiKey-t"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Regisztráljon a THETVDB-n, és vigye be az ingyenes személyes ApiKey-t"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Regisztráljon a TMDB-n, és adja meg az ingyenes személyes ApiKey-t"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Regisztráljon a www.visualcrossing.com oldalon, és adja meg az ingyenes személyes ApiKey-t"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "A bőr létezik!! Valóban frissíteni szeretné a Conponentet?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "A bőr létezik!! Valóban frissíteni akar?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Sikeres Skin létrehozása!"
 
 msgid "System"
-msgstr ""
+msgstr "Rendszer"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey importálva és tárolva!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey importálva és tárolva!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey importálva és tárolva!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Bejegyzés szerkesztése"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Bejegyzések listája"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "A helykód keresése előtt meg kell adnia egy érvényes városnevet."
 
 msgid "imperial system"
-msgstr ""
+msgstr "birodalmi rendszer"
 
 msgid "metric system"
-msgstr ""
+msgstr "metrikus rendszer"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "Fájlok lejátszása/megjelenítése"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "használja a virtuális billentyűzetet.\n"

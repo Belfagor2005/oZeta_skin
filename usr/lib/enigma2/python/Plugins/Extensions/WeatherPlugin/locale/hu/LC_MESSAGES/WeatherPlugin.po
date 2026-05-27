@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:43+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "Hozzáadás"
+
+msgid "Back"
+msgstr "Vissza"
+
+msgid "Cancel"
+msgstr "Mégse"
+
+msgid "City"
+msgstr "Város"
+
+msgid "Delete"
+msgstr "Töröl"
+
+msgid "Edit"
+msgstr "Szerkesztés"
+
+msgid "Feels like %s"
+msgstr "Úgy érzi, %s"
+
+msgid "Getting weather information..."
+msgstr "Időjárási információk lekérése..."
+
+msgid "Humidity: %s %%"
+msgstr "Páratartalom: %s %%"
+
+msgid "Location code"
+msgstr "Helykód"
+
+msgid "MSN location search result"
+msgstr "MSN helykeresési eredmény"
+
+msgid "OK"
+msgstr "RENDBEN"
+
+msgid "Observation point: %s"
+msgstr "Megfigyelési pont: %s"
+
+msgid "Observation time: %s"
+msgstr "Megfigyelési idő: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Adjon meg egy érvényes városnevet."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Kérjük, adjon meg egy érvényes helykódot a városhoz."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Tényleg törli ezt a WeatherPlugin bejegyzést?"
+
+msgid "Search Code"
+msgstr "Kód keresése"
+
+msgid "Show Weather Forecast"
+msgstr "Időjárás-előrejelzés megjelenítése"
+
+msgid "System"
+msgstr "Rendszer"
+
+msgid "Weather Plugin"
+msgstr "Időjárás plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Bejegyzés szerkesztése"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Bejegyzések listája"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "A helykód keresése előtt meg kell adnia egy érvényes városnevet."
+
+msgid "imperial system"
+msgstr "birodalmi rendszer"
+
+msgid "metric system"
+msgstr "metrikus rendszer"

@@ -138,7 +138,7 @@ msgid "Installation oZeta Skin"
 msgstr ""
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Installation oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
 msgstr ""

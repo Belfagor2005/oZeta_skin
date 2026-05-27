@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:41+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Persian <translation-team-fa@lists.sourceforge.net>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "اضافه کنید"
+
+msgid "Back"
+msgstr "برگشت"
+
+msgid "Cancel"
+msgstr "لغو کنید"
+
+msgid "City"
+msgstr "شهر"
+
+msgid "Delete"
+msgstr "حذف کنید"
+
+msgid "Edit"
+msgstr "ویرایش کنید"
+
+msgid "Feels like %s"
+msgstr "شبیه %s است"
+
+msgid "Getting weather information..."
+msgstr "دریافت اطلاعات آب و هوا..."
+
+msgid "Humidity: %s %%"
+msgstr "رطوبت: %s %%"
+
+msgid "Location code"
+msgstr "کد مکان"
+
+msgid "MSN location search result"
+msgstr "نتیجه جستجوی مکان MSN"
+
+msgid "OK"
+msgstr "باشه"
+
+msgid "Observation point: %s"
+msgstr "نقطه مشاهده: %s"
+
+msgid "Observation time: %s"
+msgstr "زمان مشاهده: %s"
+
+msgid "Please enter a valid city name."
+msgstr "لطفا یک نام شهر معتبر وارد کنید."
+
+msgid "Please enter a valid location code for the city."
+msgstr "لطفاً یک کد مکان معتبر برای شهر وارد کنید."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "آیا واقعاً این ورودی WeatherPlugin حذف می شود؟"
+
+msgid "Search Code"
+msgstr "کد جستجو"
+
+msgid "Show Weather Forecast"
+msgstr "نمایش پیش بینی آب و هوا"
+
+msgid "System"
+msgstr "سیستم"
+
+msgid "Weather Plugin"
+msgstr "پلاگین آب و هوا"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: ویرایش ورودی"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: فهرست ورودی ها"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "قبل از اینکه بتوانید کد مکان را جستجو کنید، باید یک نام شهر معتبر وارد کنید."
+
+msgid "imperial system"
+msgstr "نظام شاهنشاهی"
+
+msgid "metric system"
+msgstr "سیستم متریک"

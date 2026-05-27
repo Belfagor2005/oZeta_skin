@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Воридоти худкор аз плагин\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--клавиатураи виртуалиро истифода баред ё аз плагини танзимоти пешфарз ворид кунед"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,322 +25,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Илова"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Ҳолати радиои алтернативӣ= Ҳа\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Маълумоти ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Бозгашт"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo тағир ёфт ва ба default_bootlogo.mvi нусхабардорӣ кунед!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Бекор кардан"
 
 msgid "City"
-msgstr ""
+msgstr "Шаҳр"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Барои пӯшидани ин тиреза Хуруҷро клик кунед"
 
 msgid "Console"
-msgstr ""
+msgstr "Консол"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Маълумоте, ки барои обу ҳаво ворид шудааст, оё шумо мехоҳед ҳамин корро идома диҳед?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Нобуд кунед"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Оё шумо дар ҳақиқат мехоҳед тасвири Bootlogo-ро тағир диҳед?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Таҳрир"
 
 msgid "Exit"
-msgstr ""
+msgstr "Баромадгоҳ"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Фармондеҳи файл - Addon"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Барои истифода OMDB Covers, файли omdbkey-ро дар ҷузвдони пӯст нусхабардорӣ кунед:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Барои истифодаи TheTMDB Covers, файли apikey-ро дар ҷузвдони пӯст нусхабардорӣ кунед:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Барои истифода The TMDB Covers, файли apikey-ро дар ҷузвдони пӯст нусхабардорӣ кунед:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Барои истифода WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Барои истифода VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Пинҳон / Намоиш"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Қуттии тасвир санҷида нашудааст !!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Api Key OMDB-ро аз /tmp/omdbkey.txt ворид кунед?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Api калиди THETVDB аз /tmp/thetvdbkey.txt ворид кунед?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Api Key TMDB-ро аз /tmp/apikey.txt ворид кунед?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Api Калиди VISUALWeather-ро аз /etc/enigma2/VisualWeather/apikey.txt ворид кунед?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Васлкунаки OAWeather насб кунед ва бозоғоз кунед"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin насб кунед"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Skin Zeta барои плагини XStreamity насб кунед"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Васлкунаки обу ҳаво насб кунед ва аз нав оғоз кунед"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin насб кунед"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Дар ҳардуи oZeta Plugin & Skin насб кунед ё худкор навсозӣ кунед"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Васлкунаки mmpicons насб кунед"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Насбкунии oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Насби oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Вариантҳои насби oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "OMDB Apikey-ро аз /tmp/omdbkey.txt бор кунед"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "THETVDB Apikey-ро аз /tmp/thetvdbkey.txt бор кунед"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "TMDB Apikey-ро аз /tmp/apikey.txt бор кунед"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "VISUALWEATHER Apikey-ро аз /etc/enigma2/VisualWeather/apikey.txt бор кунед"
 
 msgid "Location code"
-msgstr ""
+msgstr "Рамзи ҷойгиршавӣ"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Натиҷаи ҷустуҷӯи макони MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Меню/Танзим/Интерфейси графикӣ/Танзими OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s нест!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Васлкунакҳои XStreamity гум шудаанд!"
 
 msgid "OK"
-msgstr ""
+msgstr "ДУРУСТ"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey воридот ва нигоҳ дошта мешавад!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "Пӯсти OZETA: ОРНА ШУДААСТ, АММО ФАЪОЛ НЕСТ"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather-ро кушоед, оё мехоҳед идома диҳед?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Ё калиди дар портали OMDB сохташударо дастӣ ворид кунед'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Ё калиди дар портали THETMDB сохташударо дастӣ ворид кунед\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Ё калиди дар портали TMDB сохташударо дастӣ ворид кунед\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Лутфан номи дурусти шаҳрро ворид кунед."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Лутфан рамзи ҷойгиршавии дурусти шаҳрро ворид кунед."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Васлкунаки OAWeatherPlugin насб нашудааст!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Васлкунаки TheWeather насб нашудааст!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Васлкунаки WeatherPlugin насб нашудааст!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Пешнамоиш"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Маълумоти пешакӣ"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Дар ҳақиқат ин Вуруди WeatherPlugin нест кунед?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Танзимотҳоро ба Параметрҳои пешфарз барқарор кунед?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Оғози дубора"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2-ро аз нав оғоз кунед, аммо тағиротро татбиқ накунед\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Маълумотро аз нав оғоз кунед"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "ИНТИХОБИ ХУДРО ИНТИХОБ КУНЕД"
 
 msgid "Save"
-msgstr ""
+msgstr "Захира кунед"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Тағиротро дар конфигуратсияи файли xml захира ва нусхабардорӣ кунед\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Рамзи ҷустуҷӯ"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Танзимотҳо Панелҳои канал"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Васлкунаки обу ҳавои шаҳр"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Танзимотҳо Панелҳои Намоиши рӯйдодҳо"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Танзимот Панелҳои иттилоотӣ"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Танзимот Тасвири логотипи поён"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Танзимоти логотипи тасвири боло"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Танзимотҳо панелҳои MediaPlayer"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Танзимотҳо Меню Панели тасвир"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Танзимоти OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Танзимотҳо Панелҳои Browser Plugin"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Танзимоти панелҳои радио"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Танзимотҳо панелҳои SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Танзимоти THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Танзимоти TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Танзимоти VISUALWATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Танзимотҳо Панелҳои баландии овоз"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Танзимоти oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Танзимоти обу ҳаво oZeta"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Дар OMDB сабти ном кунед ва ApiKey-и шахсии ройгонро ворид кунед"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Дар THETVDB сабти ном кунед ва ApiKey-и шахсии ройгонро ворид кунед"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Дар TMDB сабти ном кунед ва ApiKey-и шахсии ройгонро ворид кунед"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Дар www.visualcrossing.com сабти ном кунед ва ApiKey-и шахсии ройгонро ворид кунед"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Пӯст вуҷуд дорад !! Оё шумо дар ҳақиқат мехоҳед Conponent-ро навсозӣ кунед?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Пӯст вуҷуд дорад !! Оё шумо дар ҳақиқат мехоҳед навсозӣ кунед?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Бомуваффақият эҷод кардани пӯст!"
 
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey воридот ва нигоҳ дошта мешавад!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey воридот ва нигоҳ дошта мешавад!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUAL WEATER ApiKey воридот ва нигоҳ дошта мешавад!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Таҳрири вуруд"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Рӯйхати вурудот"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Пеш аз ҷустуҷӯи рамзи ҷойгиршавӣ, шумо бояд номи дурусти шаҳрро ворид кунед."
 
 msgid "imperial system"
-msgstr ""
+msgstr "системаи империалистй"
 
 msgid "metric system"
-msgstr ""
+msgstr "системаи метрӣ"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "Файлҳоро бозӣ/намоиш диҳед"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "клавиатураи виртуалиро истифода баред.\n"

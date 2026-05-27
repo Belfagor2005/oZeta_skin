@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:40+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Cancel"
+msgstr "Stornieren"
+
+msgid "City"
+msgstr "Stadt"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Feels like %s"
+msgstr "Fühlt sich an wie %s"
+
+msgid "Getting weather information..."
+msgstr "Wetterinformationen abrufen..."
+
+msgid "Humidity: %s %%"
+msgstr "Luftfeuchtigkeit: %s %%"
+
+msgid "Location code"
+msgstr "Standortcode"
+
+msgid "MSN location search result"
+msgstr "MSN-Standortsuchergebnis"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Beobachtungspunkt: %s"
+
+msgid "Observation time: %s"
+msgstr "Beobachtungszeit: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Bitte geben Sie einen gültigen Städtenamen ein."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Bitte geben Sie einen gültigen Standortcode für die Stadt ein."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Diesen WeatherPlugin-Eintrag wirklich löschen?"
+
+msgid "Search Code"
+msgstr "Suchcode"
+
+msgid "Show Weather Forecast"
+msgstr "Wettervorhersage anzeigen"
+
+msgid "System"
+msgstr ""
+
+msgid "Weather Plugin"
+msgstr "Wetter-Plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Eintrag bearbeiten"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Liste der Einträge"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Sie müssen einen gültigen Stadtnamen eingeben, bevor Sie nach dem Standortcode suchen können."
+
+msgid "imperial system"
+msgstr "imperiales System"
+
+msgid "metric system"
+msgstr "metrisches System"

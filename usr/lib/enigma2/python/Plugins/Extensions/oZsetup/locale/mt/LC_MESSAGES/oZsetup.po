@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Importazzjoni Awtomatika minn Plugin\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--uża t-tastiera virtwali jew timporta mill-plugin tal-konfigurazzjoni default"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -25,181 +25,181 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Żid"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Modalità tar-Radju Alternattiva= Iva\n"
 
 msgid "ApiKey Info"
 msgstr ""
 
 msgid "Back"
-msgstr ""
+msgstr "Lura"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo mibdul u backup għal default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Ikkanċella"
 
 msgid "City"
-msgstr ""
+msgstr "Belt"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Ikklikkja Ħruġ biex tagħlaq din it-tieqa"
 
 msgid "Console"
 msgstr ""
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Data mdaħħla għat-Temp, trid tkompli l-istess?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Ħassar"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Verament trid tibdel l-immaġni Bootlogo?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Editja"
 
 msgid "Exit"
-msgstr ""
+msgstr "Ħruġ"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Għall-użu The OMDB Covers, kopja l-fajl omdbkey fil-folder tal-ġilda:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Għall-użu The THETMDB Covers, ikkopja l-fajl apikey fil-folder tal-ġilda:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Għall-użu The TMDB Covers, ikkopja l-fajl apikey fil-folder tal-ġilda:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Għall-użu The WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Għall-użu VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Aħbi/Uri"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Kaxxa tal-Immaġini Mhux Ittestjata!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Importa Api Key OMDB minn /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Importa Api Key THETVDB minn /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Importa Api Key TMDB minn /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Importa Api Key VISUALWEATHER minn /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Linja Ins"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Installa OAWeather Plugin u Reboot"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Installa OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Installa Skin Zeta għal XStreamity Plugin"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Installa Weather Plugin u Reboot"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Installa WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Installa jew Aġġorna awtomatikament oZeta Plugin & Skin fuq it-tnejn"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Installazzjoni mmpicons Plugin"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Installazzjoni oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Installazzjoni oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Installazzjoni oZeta Għażliet tal-ġilda"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Tagħbija OMDB Apikey minn /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Tagħbija THETVDB Apikey minn /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Tagħbija TMDB Apikey minn /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Tagħbija VISUALWEATHER Apikey minn /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Kodiċi tal-post"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Riżultat tat-tfittxija tal-post tal-MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Menu/Setup/Interface Grafika/Setup tal-OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s nieqsa!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Plugins XStreamity nieqsa!"
 
 msgid "OK"
 msgstr ""
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey Importata u Maħżuna!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "ĠILDA OZETA: INSTALLATA IMMA MHUX ATTIVA"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Iftaħ OAWeather, trid tkompli?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Jew daħħal iċ-ċavetta manwalment, maħluqa fuq il-portal OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Jew daħħal iċ-ċavetta manwalment, maħluqa fuq il-portal THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Jew daħħal iċ-ċavetta manwalment, maħluqa fuq il-portal TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Jekk jogħġbok daħħal isem tal-belt validu."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Jekk jogħġbok daħħal kodiċi tal-post validu għall-belt."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin mhux installat!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather mhux installat!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin mhux installat!!!"
 
 msgid "Preview"
 msgstr ""
@@ -208,31 +208,31 @@ msgid "Preview Info"
 msgstr ""
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Verament tħassar din id-Entry WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Irrisettja s-Settings għall-Parametri Defaults?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Ibda mill-ġdid"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Erġa' ibda l-E2 iżda ma tapplikax il-bidliet\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Ibda mill-ġdid l-Informazzjoni"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "AGĦŻEL L-GĦAŻLA TIEGĦEK"
 
 msgid "Save"
-msgstr ""
+msgstr "Ħlief"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Issejvja u Ikkopja bidliet fil-konfigurazzjoni tal-fajl xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Tiftix Kodiċi"
 
 msgid "Settings Channel Panels"
 msgstr ""
@@ -247,10 +247,10 @@ msgid "Settings Infobar Panels"
 msgstr ""
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Settings Logo Image Qiegħ"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Settings Logo Image Fuq"
 
 msgid "Settings MediaPlayer Panels"
 msgstr ""
@@ -265,7 +265,7 @@ msgid "Settings PluginBrowser Panels"
 msgstr ""
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Settings Panels tar-Radju"
 
 msgid "Settings SecInfobar Panels"
 msgstr ""
@@ -280,67 +280,67 @@ msgid "Settings VISUALWEATHER APIKEY"
 msgstr ""
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Panewijiet tal-Volum tas-Settings"
 
 msgid "Settings oZeta Apikey Server"
 msgstr ""
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Settings oZeta Temp"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Irreġistra fuq OMDB u ddaħħal ApiKey personali b'xejn"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Irreġistra fuq THETVDB u ddaħħal ApiKey personali b'xejn"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Irreġistra fuq TMDB u ddaħħal ApiKey personali b'xejn"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Irreġistra fuq www.visualcrossing.com u ddaħħal ApiKey personali b'xejn"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Ġilda jeżistu!! Verament trid taġġorna l-Konponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Ġilda jeżistu!! Verament trid Taġġorna?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Ħolqien b'suċċess tal-ġilda!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey Importata u Maħżuna!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey Importata u Maħżuna!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey Importata u Maħżuna!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Editja Dħul"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Lista ta' Daħliet"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Trid iddaħħal isem validu tal-belt qabel ma tkun tista' tfittex il-kodiċi tal-post."
 
 msgid "imperial system"
-msgstr ""
+msgstr "sistema imperjali"
 
 msgid "metric system"
-msgstr ""
+msgstr "sistema metrika"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "play/show Fajls"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "uża t-tastiera virtwali.\n"

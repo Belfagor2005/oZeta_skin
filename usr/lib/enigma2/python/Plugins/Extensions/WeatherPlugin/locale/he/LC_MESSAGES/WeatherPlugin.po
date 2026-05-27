@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:42+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Hebrew <heb-bugzap@hamakor.org.il>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "לְהוֹסִיף"
+
+msgid "Back"
+msgstr "בְּחֲזָרָה"
+
+msgid "Cancel"
+msgstr "לְבַטֵל"
+
+msgid "City"
+msgstr "עִיר"
+
+msgid "Delete"
+msgstr "לִמְחוֹק"
+
+msgid "Edit"
+msgstr "לַעֲרוֹך"
+
+msgid "Feels like %s"
+msgstr "מרגיש כמו %s"
+
+msgid "Getting weather information..."
+msgstr "מקבל מידע על מזג האוויר..."
+
+msgid "Humidity: %s %%"
+msgstr "לחות: %s %%"
+
+msgid "Location code"
+msgstr "קוד מיקום"
+
+msgid "MSN location search result"
+msgstr "תוצאת חיפוש מיקום MSN"
+
+msgid "OK"
+msgstr "בְּסֵדֶר"
+
+msgid "Observation point: %s"
+msgstr "נקודת תצפית: %s"
+
+msgid "Observation time: %s"
+msgstr "זמן תצפית: %s"
+
+msgid "Please enter a valid city name."
+msgstr "נא להזין שם עיר חוקי."
+
+msgid "Please enter a valid location code for the city."
+msgstr "אנא הזן קוד מיקום חוקי עבור העיר."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "האם באמת למחוק את הערך הזה של WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "קוד חיפוש"
+
+msgid "Show Weather Forecast"
+msgstr "הצג תחזית מזג אוויר"
+
+msgid "System"
+msgstr "מַעֲרֶכֶת"
+
+msgid "Weather Plugin"
+msgstr "תוסף מזג אוויר"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: ערוך ערך"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: רשימת ערכים"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "עליך להזין שם עיר חוקי לפני שתוכל לחפש את קוד המיקום."
+
+msgid "imperial system"
+msgstr "מערכת אימפריאלית"
+
+msgid "metric system"
+msgstr "מערכת מטרית"

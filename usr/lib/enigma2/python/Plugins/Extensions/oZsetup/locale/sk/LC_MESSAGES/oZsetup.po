@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Automatický import z doplnku\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--použite virtuálnu klávesnicu alebo importujte z predvoleného konfiguračného pluginu"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "Pridať"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "Alternatívny režim rádia= Áno\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "Informácie o ApiKey"
 
 msgid "Back"
-msgstr ""
+msgstr "Späť"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo zmenené a zálohované na default_bootlogo.mvi!"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 msgid "City"
-msgstr ""
+msgstr "Mesto"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "Kliknutím na tlačidlo Ukončiť toto okno zatvoríte"
 
 msgid "Console"
-msgstr ""
+msgstr "Konzola"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "Údaje zadané pre Počasie, chcete pokračovať rovnako?"
 
 msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Odstrániť"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Naozaj chcete zmeniť obrázok Bootloga?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 msgid "Exit"
-msgstr ""
+msgstr "VÝCHOD"
 
 msgid "File Commander - Addon"
 msgstr ""
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "Ak chcete použiť obaly OMDB, skopírujte súbor omdbkey do priečinka skin:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Ak chcete použiť obaly THETMDB, skopírujte súbor apikey do priečinka skin:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "Ak chcete použiť obaly TMDB, skopírujte súbor apikey do priečinka skin:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "Pre použitie WeatherPlugin:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "Na použitie VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Skryť/Zobraziť"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Image Box netestovaný!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "Importovať Api Key OMDB z /tmp/omdbkey.txt?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "Importovať kľúč API THETVDB z /tmp/thetvdbkey.txt?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "Importovať Api Key TMDB z /tmp/apikey.txt?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "Importovať kľúč API VISUALWEATHER z /etc/enigma2/VisualWeather/apikey.txt?"
 
 msgid "Ins Line"
 msgstr ""
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "Nainštalujte doplnok OAWeather a reštartujte počítač"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "Nainštalujte OAWeatherPlugin"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "Nainštalujte doplnok Skin Zeta pre XStreamity"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Nainštalujte doplnok Weather Plugin a reštartujte počítač"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "Nainštalujte WeatherPlugin"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "Nainštalujte alebo automaticky aktualizujte oZeta Plugin & Skin na oboch"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "Inštalácia doplnku mmpicons"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "Inštalácia oZeta Skin"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "Inštalácia oZeta Skin Component"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Možnosti inštalácie oZeta Skin"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "Načítajte OMDB Apikey z /tmp/omdbkey.txt"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "Načítajte THETVDB Apikey z /tmp/thetvdbkey.txt"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "Načítajte TMDB Apikey z /tmp/apikey.txt"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "Načítať VISUALWEATHER Apikey z /etc/enigma2/VisualWeather/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Kód miesta"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "Výsledok vyhľadávania polohy MSN"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "Ponuka/Nastavenie/Grafické rozhranie/Nastavenie OSD\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "Chýba %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Chýbajú pluginy XStreamity!"
 
 msgid "OK"
 msgstr ""
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey importované a uložené!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA SKIN: NAINŠTALOVANÁ, ALE NIE AKTÍVNA"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "Otvorte OAWeather, chcete pokračovať?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli OMDB'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli THETMDB\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli TMDB\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Zadajte platný názov mesta."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Zadajte platný kód miesta pre mesto."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin OAWeatherPlugin nie je nainštalovaný!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "Plugin TheWeather nie je nainštalovaný!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Plugin WeatherPlugin nie je nainštalovaný!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "Ukážka"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "Informácie o ukážke"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Naozaj odstrániť túto položku WeatherPlugin?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Obnoviť nastavenia na predvolené parametre?"
 
 msgid "Restart"
-msgstr ""
+msgstr "Reštartujte"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "Reštartujte E2, ale neaplikujte zmeny\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "Informácie o reštarte"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "VYBERTE SI SVOJ VÝBER"
 
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "Uložte a skopírujte zmeny v konfigurácii súboru xml\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Vyhľadávací kód"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Nastavenia Panely kanálov"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Nastavenia City Weather Plugin"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Nastavenia Panely zobrazenia udalostí"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Nastavenia Panely informačného panela"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Nastavenia Obrázok Obrázok Dolu"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Nastavenia Logo Obrázok Top"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Nastavenia Panely prehrávača médií"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Ponuka nastavení Obrazový panel"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Nastavenia OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Nastavenia Panely PluginBrowser"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Nastavenia Rádiové panely"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Nastavenia Panely SecInfobar"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Nastavenia THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Nastavenia TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Nastavenia VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Nastavenia Panely hlasitosti"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Nastavenia oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Nastavenia oZeta Počasie"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Zaregistrujte sa na OMDB a zadajte bezplatný osobný kľúč ApiKey"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "Zaregistrujte sa na THETVDB a zadajte bezplatný osobný kľúč ApiKey"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "Zaregistrujte sa na TMDB a zadajte bezplatný osobný kľúč ApiKey"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "Zaregistrujte sa na www.visualcrossing.com a zadajte bezplatný osobný kľúč ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Koža existuje!! Naozaj chcete aktualizovať komponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Koža existuje!! Naozaj chcete inovovať?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "Úspešná tvorba kože!"
 
 msgid "System"
-msgstr ""
+msgstr "Systém"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey importovaný a uložený!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey importované a uložené!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey importované a uložené!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Upravte položku"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Zoznam záznamov"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Pred vyhľadávaním kódu lokality musíte zadať platný názov mesta."
 
 msgid "imperial system"
-msgstr ""
+msgstr "imperiálny systém"
 
 msgid "metric system"
-msgstr ""
+msgstr "metrický systém"
 
 msgid "oZsetup"
 msgstr ""
 
 msgid "play/show Files"
-msgstr ""
+msgstr "prehrať/zobraziť súbory"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "použite virtuálnu klávesnicu.\n"

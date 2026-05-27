@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:51+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Occitan\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Apondre"
+
+msgid "Back"
+msgstr "Arrièr"
+
+msgid "Cancel"
+msgstr "Anullar"
+
+msgid "City"
+msgstr "Vila"
+
+msgid "Delete"
+msgstr "Escafar"
+
+msgid "Edit"
+msgstr "Modificar"
+
+msgid "Feels like %s"
+msgstr "Sembla coma %s"
+
+msgid "Getting weather information..."
+msgstr "Obténer d'informacions meteorologicas..."
+
+msgid "Humidity: %s %%"
+msgstr "Umiditat: %s %%"
+
+msgid "Location code"
+msgstr "Còdi d'emplaçament"
+
+msgid "MSN location search result"
+msgstr "Resultat de recèrca d'emplaçament MSN"
+
+msgid "OK"
+msgstr "ÒC BEN"
+
+msgid "Observation point: %s"
+msgstr "Punt d'observacion : %s"
+
+msgid "Observation time: %s"
+msgstr "Temps d'observacion : %s"
+
+msgid "Please enter a valid city name."
+msgstr "Picatz un nom de vila valid."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Picatz un còdi d'emplaçament valid per la vila."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Suprimir vertadièrament aquesta entrada WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Còde de recèrca"
+
+msgid "Show Weather Forecast"
+msgstr "Mostrar la prevision meteorologica"
+
+msgid "System"
+msgstr "Sistèma"
+
+msgid "Weather Plugin"
+msgstr "Ensamblador Meteorologic"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Modificar l'entrada"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Lista de las dintradas"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Vos cal picar un nom de vila valid abans de poder recercar lo còde d'emplaçament."
+
+msgid "imperial system"
+msgstr "sistèma imperial"
+
+msgid "metric system"
+msgstr "sistèma metric"

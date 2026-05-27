@@ -15,10 +15,10 @@ msgstr ""
 "X-Poedit-SearchPath-0: plugin.py\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Eklentiden Otomatik İçe Aktarma\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--sanal klavyeyi kullanın veya varsayılan yapılandırma eklentisinden içe aktarın"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
@@ -33,7 +33,7 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
 
 msgid "Add"
-msgstr ""
+msgstr "Eklemek"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\n"
@@ -46,68 +46,68 @@ msgid "Back"
 msgstr "Geri"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo değiştirildi ve default_bootlogo.mvi'ye yedeklendi!"
 
 msgid "Cancel"
 msgstr "İptal"
 
 msgid "City"
-msgstr ""
+msgstr "Şehir"
 
 msgid "Click Exit for close this window"
 msgstr "Bu pencereyi kapatmak için Çıkış'a tıklayın"
 
 msgid "Console"
-msgstr ""
+msgstr "Konsol"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "Hava Durumu için girilen veriler, aynı şekilde devam etmek istiyor musunuz?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "Del Hattı"
 
 msgid "Delete"
-msgstr ""
+msgstr "Silmek"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Gerçekten Bootlogo görüntüsünü değiştirmek istiyor musunuz?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Düzenlemek"
 
 msgid "Exit"
-msgstr ""
+msgstr "Çıkış"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "Dosya Komutanı - Eklenti"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB Kapaklarını kullanmak için omdbkey dosyasını dış görünüş klasörüne kopyalayın:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\n"
 
 #, fuzzy
 msgid "For use The WeatherPlugin:\n"
 msgstr "WeatherPlugin Yükle"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather'ı kullanmak için\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Gizle/Göster"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Görüntü Kutusu Test Edilmedi!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
 msgstr "Api Anahtarı OMDB'sini /tmp/omdbkey.txt dosyasından içe aktarın mı?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "API Anahtarı THETVDB /tmp/thetvdbkey.txt dosyasından içe aktarılsın mı?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
 msgstr "/tmp/apikey.txt dosyasından Api Anahtarı TMDB alınsın mı?"
@@ -117,26 +117,26 @@ msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
 msgstr "/tmp/apikey.txt dosyasından Api Anahtarı TMDB alınsın mı?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "Ins Hattı"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather Eklentisini Kurun ve Yeniden Başlatın"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWeatherPlugin'i yükleyin"
 
 #, fuzzy
 msgid "Install Skin Zeta for XStreamity Plugin"
 msgstr "WeatherPlugin Yükle"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "Hava Durumu Eklentisini Kurun ve Yeniden Başlatın"
 
 msgid "Install WeatherPlugin"
 msgstr "WeatherPlugin Yükle"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "oZeta Eklentisini ve Görünümünü her ikisine de yükleyin veya Otomatik Güncelleyin"
 
 #, fuzzy
 msgid "Installation mmpicons Plugin"
@@ -158,19 +158,19 @@ msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
 msgstr "OMDB Apikey'i /tmp/omdbkey.txt'den yükleyin"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "THETVDB Apikey'i /tmp/thetvdbkey.txt adresinden yükleyin"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
 msgstr "TMDB Apikeyi /tmp/apikey.txt den yükle"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "VISUALWEATHER Apikey'i /etc/enigma2/VisualWeather/apikey.txt adresinden yükleyin"
 
 msgid "Location code"
-msgstr ""
+msgstr "Konum kodu"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN konum arama sonucu"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
@@ -180,19 +180,19 @@ msgid "Missing %s !"
 msgstr "Eksik %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Eksik XStreamity Eklentileri!"
 
 msgid "OK"
-msgstr ""
+msgstr "TAMAM"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey İçe Aktarıldı ve Saklandı!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA CİLT: KURULDU ANCAK AKTİF DEĞİL"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather'ı açın, devam etmek istiyor musunuz?"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\n"
@@ -207,13 +207,13 @@ msgid "Or manually enter the key, created on the TMDB portal\n"
 msgstr "    Veya TMDB portalında oluşturulan anahtarı manuel olarak girin\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Lütfen geçerli bir şehir adı girin."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Lütfen şehir için geçerli bir konum kodu girin."
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "Eklenti OAWeatherPlugin yüklü değil!!!"
 
 #, fuzzy
 msgid "Plugin TheWeather not installed!!!"
@@ -229,10 +229,10 @@ msgid "Preview Info"
 msgstr "Önizleme Bilgisi"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Bu WeatherPlugin Girişi gerçekten silinsin mi?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "Ayarlar Varsayılan Parametrelere Sıfırlansın mı?"
 
 msgid "Restart"
 msgstr "Tekrar başlat"
@@ -255,119 +255,119 @@ msgid "Save and Copy changes in the xml file config\n"
 msgstr "     Değişiklikleri xml dosyası yapılandırmasında kaydedin ve kopyalayın\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Arama Kodu"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "Ayarlar Kanal Panelleri"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "Ayarlar Şehir Hava Durumu Eklentisi"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "Ayarlar Olay Görünümü Panelleri"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "Ayarlar Bilgi Çubuğu Panelleri"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "Ayarlar Logo Resmi Altta"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "Ayarlar Logo Resmi Üst"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "Ayarlar MediaPlayer Panelleri"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "Ayarlar Menüsü Görüntü Paneli"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "Ayarlar OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Ayarlar EklentiTarayıcı Panelleri"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "Ayarlar Radyo Panelleri"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "Ayarlar SecInfobar Panelleri"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Ayarlar THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "Ayarlar TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Ayarlar VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "Ayarlar Ses Panelleri"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Ayarlar oZeta Apikey Sunucusu"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Ayarlar oZeta Hava Durumu"
 
 msgid "Signup on OMDB and input free personal ApiKey"
 msgstr "OMDB'ye kaydolun ve ücretsiz kişisel ApiKey girin"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDB'ye kaydolun ve ücretsiz kişisel ApiKey'i girin"
 
 msgid "Signup on TMDB and input free personal ApiKey"
 msgstr "TMDB'ye kaydolun ve ücretsiz kişisel ApiKey girin"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com'a kaydolun ve ücretsiz kişisel ApiKey'i girin"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Cilt var!! Gerçekten Bileşeni Güncellemek istiyor musunuz?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Cilt var!! Gerçekten Yükseltmek istiyor musunuz?"
 
 msgid "Successfully creating Skin!"
 msgstr "Skin başarıyla oluşturuldu!"
 
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey İçe Aktarıldı ve Saklandı!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey İçe Aktarıldı ve Saklandı!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey İthal Edildi ve Saklandı!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "Hava Durumu Eklentisi: Girişi Düzenle"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Giriş Listesi"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Konum kodunu arayabilmeniz için önce geçerli bir şehir adı girmeniz gerekir."
 
 msgid "imperial system"
-msgstr ""
+msgstr "imparatorluk sistemi"
 
 msgid "metric system"
-msgstr ""
+msgstr "metrik sistem"
 
 msgid "oZsetup"
 msgstr "oZsetup"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "Dosyaları oynat/göster"
 
 #, fuzzy
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "sanal klavyeyi kullanın.\n"
 "    sanal klavyeyi kullanın.'\n"
 "\n"
 "\n"

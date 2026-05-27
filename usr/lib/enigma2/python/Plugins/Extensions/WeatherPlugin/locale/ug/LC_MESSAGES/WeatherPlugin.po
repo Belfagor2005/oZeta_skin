@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:59+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Uighur\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "قوش"
+
+msgid "Back"
+msgstr "قايتىش"
+
+msgid "Cancel"
+msgstr "بىكار قىلىش"
+
+msgid "City"
+msgstr "شەھەر"
+
+msgid "Delete"
+msgstr "ئۆچۈرۈش"
+
+msgid "Edit"
+msgstr "تەھرىر"
+
+msgid "Feels like %s"
+msgstr "% S غا ئوخشايدۇ"
+
+msgid "Getting weather information..."
+msgstr "ھاۋارايى ئۇچۇرىغا ئېرىشىش ..."
+
+msgid "Humidity: %s %%"
+msgstr "نەملىك:% s %%"
+
+msgid "Location code"
+msgstr "ئورۇن كودى"
+
+msgid "MSN location search result"
+msgstr "MSN ئورۇن ئىزدەش نەتىجىسى"
+
+msgid "OK"
+msgstr "ماقۇل"
+
+msgid "Observation point: %s"
+msgstr "كۆزىتىش نۇقتىسى:% s"
+
+msgid "Observation time: %s"
+msgstr "كۆزىتىش ۋاقتى:% s"
+
+msgid "Please enter a valid city name."
+msgstr "ئىناۋەتلىك شەھەر نامىنى كىرگۈزۈڭ."
+
+msgid "Please enter a valid location code for the city."
+msgstr "شەھەر ئۈچۈن ئىناۋەتلىك ئورۇن كودىنى كىرگۈزۈڭ."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "بۇ WeatherPlugin تۈرىنى راستىنلا ئۆچۈرەمسىز؟"
+
+msgid "Search Code"
+msgstr "ئىزدەش كودى"
+
+msgid "Show Weather Forecast"
+msgstr "ھاۋارايىدىن ئالدىن مەلۇمات"
+
+msgid "System"
+msgstr "سىستېما"
+
+msgid "Weather Plugin"
+msgstr "ھاۋارايى قىستۇرمىسى"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: كىرگۈزۈشنى تەھرىرلەش"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: تۈرلەرنىڭ تىزىملىكى"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "ئورۇن كودىنى ئىزدەشتىن بۇرۇن ئىناۋەتلىك شەھەر نامىنى كىرگۈزۈشىڭىز كېرەك."
+
+msgid "imperial system"
+msgstr "ئىمپېرىيە سىستېمىسى"
+
+msgid "metric system"
+msgstr ""

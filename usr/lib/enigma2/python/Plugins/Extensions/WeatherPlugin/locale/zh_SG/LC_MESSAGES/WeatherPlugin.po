@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 19:01+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Language zh-SG\n"
+"Language: zh-SG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Back"
+msgstr "后退"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "City"
+msgstr "城市"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Feels like %s"
+msgstr "感觉就像%s"
+
+msgid "Getting weather information..."
+msgstr "获取天气信息..."
+
+msgid "Humidity: %s %%"
+msgstr "湿度：%s%%"
+
+msgid "Location code"
+msgstr "位置代码"
+
+msgid "MSN location search result"
+msgstr "MSN位置搜索结果"
+
+msgid "OK"
+msgstr "好的"
+
+msgid "Observation point: %s"
+msgstr "观察点：%s"
+
+msgid "Observation time: %s"
+msgstr "观察时间：%s"
+
+msgid "Please enter a valid city name."
+msgstr "请输入有效的城市名称。"
+
+msgid "Please enter a valid location code for the city."
+msgstr "请输入该城市的有效位置代码。"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "真的删除这个WeatherPlugin条目吗？"
+
+msgid "Search Code"
+msgstr "搜寻码"
+
+msgid "Show Weather Forecast"
+msgstr "显示天气预报"
+
+msgid "System"
+msgstr "系统"
+
+msgid "Weather Plugin"
+msgstr "天气插件"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin：编辑条目"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin：条目列表"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "您需要输入有效的城市名称才能搜索位置代码。"
+
+msgid "imperial system"
+msgstr "帝国制度"
+
+msgid "metric system"
+msgstr "公制"

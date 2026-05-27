@@ -16,10 +16,10 @@ msgstr ""
 "X-Poedit-SearchPath-1: Uri.py\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--Automatisk import fra plugin\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "--bruk det virtuelle tastaturet eller importer fra standard konfigurasjonsplugin"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
@@ -34,7 +34,7 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
 
 msgid "Add"
-msgstr ""
+msgstr "Legge til"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\n"
@@ -47,19 +47,19 @@ msgid "Back"
 msgstr "Tilbake"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "Bootlogo endret og backup til default_bootlogo.mvi!"
 
 msgid "Cancel"
 msgstr "Avbryt"
 
 msgid "City"
-msgstr ""
+msgstr "By"
 
 msgid "Click Exit for close this window"
 msgstr "Klikk Avslutt for å lukke dette vinduet"
 
 msgid "Console"
-msgstr ""
+msgstr "Konsoll"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "Data som er lagt inn for været, vil du fortsette det samme?"
@@ -68,16 +68,16 @@ msgid "Del Line"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "Vil du virkelig endre Bootlogo-bildet?"
 
 msgid "Edit"
-msgstr ""
+msgstr "Redigere"
 
 msgid "Exit"
-msgstr ""
+msgstr "Gå"
 
 msgid "File Commander - Addon"
 msgstr ""
@@ -99,13 +99,13 @@ msgid "For use The WeatherPlugin:\n"
 msgstr "Installer WeatherPlugin"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "For bruk VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "Skjul/Vis"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "Bildeboks ikke testet!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
 msgstr "Importere Api Key OMDB fra /tmp/omdbkey.txt?"
@@ -160,7 +160,7 @@ msgid "Installation oZeta Skin Conponent"
 msgstr "Autooppdater oZeta Skin på begge"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "Installasjon oZeta Skin alternativer"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
 msgstr "Last inn OMDB Apikey fra /tmp/omdbkey.txt"
@@ -177,10 +177,10 @@ msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
 msgstr "Last inn TMDB Apikey fra /tmp/apikey.txt"
 
 msgid "Location code"
-msgstr ""
+msgstr "Stedskode"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN plasseringssøkeresultat"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
@@ -190,7 +190,7 @@ msgid "Missing %s !"
 msgstr "Mangler %s !"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "Mangler XStreamity-plugins!"
 
 msgid "OK"
 msgstr ""
@@ -200,7 +200,7 @@ msgid "OMDB ApiKey Imported & Stored!"
 msgstr "OMDB ApiKey importert!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA HUD: INSTALLERT MEN IKKE AKTIV"
 
 #, fuzzy
 msgid "Open OAWeather, do you want to continue?"
@@ -219,10 +219,10 @@ msgid "Or manually enter the key, created on the TMDB portal\n"
 msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "Vennligst skriv inn et gyldig bynavn."
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "Vennligst skriv inn en gyldig stedskode for byen."
 
 #, fuzzy
 msgid "Plugin OAWeatherPlugin not installed!!!"
@@ -242,7 +242,7 @@ msgid "Preview Info"
 msgstr "Forhåndsvisningsinformasjon"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "Vil du virkelig slette denne WeatherPlugin-oppføringen?"
 
 #, fuzzy
 msgid "Reset Settings to Defaults Parameters?"
@@ -269,7 +269,7 @@ msgid "Save and Copy changes in the xml file config\n"
 msgstr "     Lagre og kopier endringer i xml-filens konfigurasjon\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "Søk kode"
 
 #, fuzzy
 msgid "Settings Channel Panels"
@@ -308,7 +308,7 @@ msgid "Settings OMDB APIKEY"
 msgstr "Konfigurer OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "Innstillinger PluginBrowser-paneler"
 
 #, fuzzy
 msgid "Settings Radio Panels"
@@ -319,24 +319,24 @@ msgid "Settings SecInfobar Panels"
 msgstr "Konfigurer SecInfobar-paneler"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "Innstillinger THETVDB APIKEY"
 
 #, fuzzy
 msgid "Settings TMDB ApiKey"
 msgstr "Konfigurer TMDB ApiKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "Innstillinger VISUALWEATHER APIKEY"
 
 #, fuzzy
 msgid "Settings Volume Panels"
 msgstr "Konfigurer volumpaneler"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "Innstillinger oZeta Apikey Server"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "Innstillinger oZeta Vær"
 
 msgid "Signup on OMDB and input free personal ApiKey"
 msgstr "Registrer deg på IMDB og skriv inn gratis personlig Api-nøkkel"
@@ -353,10 +353,10 @@ msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
 msgstr "Registrer deg på TMDB og skriv inn gratis personlig ApiKey"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "Hud finnes!! Vil du virkelig oppdatere Conponent?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "Hud finnes!! Vil du virkelig oppgradere?"
 
 msgid "Successfully creating Skin!"
 msgstr "Vellykket å lage Skin!"
@@ -377,28 +377,28 @@ msgid "VISUALWEATHER ApiKey Imported & Stored!"
 msgstr "TMDB ApiKey importert!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: Rediger oppføring"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: Liste over oppføringer"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "Du må angi et gyldig bynavn før du kan søke etter stedskoden."
 
 msgid "imperial system"
-msgstr ""
+msgstr "imperialistisk system"
 
 msgid "metric system"
-msgstr ""
+msgstr "metrisk system"
 
 msgid "oZsetup"
 msgstr "oZoppsett"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "spill/vis filer"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "bruk det virtuelle tastaturet.\n"
 
 #~ msgid "ZPICONS NOT INSTALLED"
 #~ msgstr "ZPICONS IKKE INSTALLERT"

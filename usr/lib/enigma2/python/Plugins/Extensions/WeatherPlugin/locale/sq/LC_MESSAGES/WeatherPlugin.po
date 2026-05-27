@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:54+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Shtoni"
+
+msgid "Back"
+msgstr "Mbrapa"
+
+msgid "Cancel"
+msgstr "Anulo"
+
+msgid "City"
+msgstr "Qyteti"
+
+msgid "Delete"
+msgstr "Fshije"
+
+msgid "Edit"
+msgstr "Redakto"
+
+msgid "Feels like %s"
+msgstr "Ndjehet si %s"
+
+msgid "Getting weather information..."
+msgstr "Po merr informacione për motin..."
+
+msgid "Humidity: %s %%"
+msgstr "Lagështia: %s %%"
+
+msgid "Location code"
+msgstr "Kodi i vendndodhjes"
+
+msgid "MSN location search result"
+msgstr "Rezultati i kërkimit të vendndodhjes MSN"
+
+msgid "OK"
+msgstr ""
+
+msgid "Observation point: %s"
+msgstr "Pika e vëzhgimit: %s"
+
+msgid "Observation time: %s"
+msgstr "Koha e vëzhgimit: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Ju lutemi shkruani një emër të vlefshëm të qytetit."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Fut një kod të vlefshëm vendndodhjeje për qytetin."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Të fshihet vërtet kjo hyrje e shtojcave të motit?"
+
+msgid "Search Code"
+msgstr "Kodi i kërkimit"
+
+msgid "Show Weather Forecast"
+msgstr "Shfaq parashikimin e motit"
+
+msgid "System"
+msgstr "Sistemi"
+
+msgid "Weather Plugin"
+msgstr "Shtojca për motin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Redakto hyrjen"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Lista e hyrjeve"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Duhet të futni një emër të vlefshëm qyteti përpara se të mund të kërkoni për kodin e vendndodhjes."
+
+msgid "imperial system"
+msgstr "sistemi perandorak"
+
+msgid "metric system"
+msgstr "sistemi metrik"

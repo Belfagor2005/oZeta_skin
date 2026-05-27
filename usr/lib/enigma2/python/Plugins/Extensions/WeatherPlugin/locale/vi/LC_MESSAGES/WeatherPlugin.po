@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 19:00+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Add"
+msgstr "Thêm vào"
+
+msgid "Back"
+msgstr "Mặt sau"
+
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+msgid "City"
+msgstr "Thành phố"
+
+msgid "Delete"
+msgstr "Xóa bỏ"
+
+msgid "Edit"
+msgstr "Biên tập"
+
+msgid "Feels like %s"
+msgstr "Cảm giác như %s"
+
+msgid "Getting weather information..."
+msgstr "Đang lấy thông tin thời tiết..."
+
+msgid "Humidity: %s %%"
+msgstr "Độ ẩm: %s %%"
+
+msgid "Location code"
+msgstr "Mã vị trí"
+
+msgid "MSN location search result"
+msgstr "Kết quả tìm kiếm vị trí MSN"
+
+msgid "OK"
+msgstr "ĐƯỢC RỒI"
+
+msgid "Observation point: %s"
+msgstr "Điểm quan sát: %s"
+
+msgid "Observation time: %s"
+msgstr "Thời gian quan sát: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Vui lòng nhập tên thành phố hợp lệ."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Vui lòng nhập mã vị trí hợp lệ cho thành phố."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Thực sự xóa mục nhập WeatherPlugin này?"
+
+msgid "Search Code"
+msgstr "Mã tìm kiếm"
+
+msgid "Show Weather Forecast"
+msgstr "Hiển thị dự báo thời tiết"
+
+msgid "System"
+msgstr "Hệ thống"
+
+msgid "Weather Plugin"
+msgstr "Plugin thời tiết"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Chỉnh sửa mục nhập"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Danh sách các mục"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Bạn cần nhập tên thành phố hợp lệ trước khi có thể tìm kiếm mã vị trí."
+
+msgid "imperial system"
+msgstr "hệ thống đế quốc"
+
+msgid "metric system"
+msgstr "hệ mét"

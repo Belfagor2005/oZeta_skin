@@ -34,7 +34,7 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\n"
@@ -53,34 +53,34 @@ msgid "Cancel"
 msgstr "取消"
 
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 msgid "Click Exit for close this window"
 msgstr "单击 \"退出 \"关闭该窗口"
 
 msgid "Console"
-msgstr ""
+msgstr "安慰"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
 msgstr "已输入天气数据，是否要继续？"
 
 msgid "Del Line"
-msgstr ""
+msgstr "德尔线"
 
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 msgid "Do you really want to change Bootlogo image?"
 msgstr "您真的想更改 Bootlogo 图片吗？"
 
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 msgid "Exit"
-msgstr ""
+msgstr "出口"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "文件指挥官 - 插件"
 
 #, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
@@ -103,10 +103,10 @@ msgid "For use VisualWeather\n"
 msgstr "用于 VisualWeather\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "隐藏/显示"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "图像框未测试！"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
 msgstr "从 /tmp/omdbkey.txt 导入OMDB的api密钥？"
@@ -121,7 +121,7 @@ msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
 msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 导入 Api 密钥 VISUALWEATHER？"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "INS线"
 
 msgid "Install OAWeather Plugin and Reboot"
 msgstr "安装 OAWeather 插件并重新启动"
@@ -170,10 +170,10 @@ msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
 msgstr "从 /etc/enigma2/VisualWeather/apikey.txt 加载 VISUALWEATHER Apikey"
 
 msgid "Location code"
-msgstr ""
+msgstr "位置代码"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN位置搜索结果"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
@@ -186,13 +186,13 @@ msgid "Missing XStreamity Plugins!"
 msgstr "缺少 XStreamity 插件！"
 
 msgid "OK"
-msgstr ""
+msgstr "好的"
 
 msgid "OMDB ApiKey Imported & Stored!"
 msgstr "导入并存储的 OMDB ApiKey！"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "OZETA 皮肤：已安装但未激活"
 
 msgid "Open OAWeather, do you want to continue?"
 msgstr "打开 OAWeather，要继续吗？"
@@ -210,10 +210,10 @@ msgid "Or manually enter the key, created on the TMDB portal\n"
 msgstr "或手动输入在 OMDB 门户上创建的密钥.\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "请输入有效的城市名称。"
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "请输入该城市的有效位置代码。"
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
 msgstr "未安装插件 OAWeatherPlugin！！！"
@@ -232,7 +232,7 @@ msgid "Preview Info"
 msgstr "预览信息"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "真的删除这个WeatherPlugin条目吗？"
 
 msgid "Reset Settings to Defaults Parameters?"
 msgstr "将设置重置为默认参数？"
@@ -255,12 +255,12 @@ msgstr "保存"
 
 #, fuzzy
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "保存并复制 xml 文件配置中的更改\n"
 "         保存并复制设置 xml 文件中的更改\n"
 "\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "搜寻码"
 
 msgid "Settings Channel Panels"
 msgstr "设置 通道面板"
@@ -340,7 +340,7 @@ msgid "Successfully creating Skin!"
 msgstr "成功创建皮肤！"
 
 msgid "System"
-msgstr ""
+msgstr "系统"
 
 msgid "THETVDB ApiKey Imported & Stored!"
 msgstr "THETVDB ApiKey 已导入并存储！"
@@ -352,25 +352,25 @@ msgid "VISUALWEATHER ApiKey Imported & Stored!"
 msgstr "VISUALWEATHER ApiKey 导入并存储！"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin：编辑条目"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin：条目列表"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "您需要输入有效的城市名称才能搜索位置代码。"
 
 msgid "imperial system"
-msgstr ""
+msgstr "帝国制度"
 
 msgid "metric system"
-msgstr ""
+msgstr "公制"
 
 msgid "oZsetup"
 msgstr "OZ设置"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "播放/显示文件"
 
 #, fuzzy
 msgid "use the virtual keyboard.\n"

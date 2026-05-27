@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:41+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "City"
+msgstr "City"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Feels like %s"
+msgstr "Feels like %s"
+
+msgid "Getting weather information..."
+msgstr "Getting weather information..."
+
+msgid "Humidity: %s %%"
+msgstr "Humidity: %s %%"
+
+msgid "Location code"
+msgstr "Location code"
+
+msgid "MSN location search result"
+msgstr "MSN location search result"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Observation point: %s"
+msgstr "Observation point: %s"
+
+msgid "Observation time: %s"
+msgstr "Observation time: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Please enter a valid city name."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Please enter a valid location code for the city."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Really delete this WeatherPlugin Entry?"
+
+msgid "Search Code"
+msgstr "Search Code"
+
+msgid "Show Weather Forecast"
+msgstr "Show Weather Forecast"
+
+msgid "System"
+msgstr "System"
+
+msgid "Weather Plugin"
+msgstr "Weather Plugin"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Edit Entry"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: List of Entries"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "You need to enter a valid city name before you can search for the location code."
+
+msgid "imperial system"
+msgstr "imperial system"
+
+msgid "metric system"
+msgstr "metric system"

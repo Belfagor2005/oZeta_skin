@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:39+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Bulgarian <dict@ludost.net>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add"
+msgstr "Добавете"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Cancel"
+msgstr "Отказ"
+
+msgid "City"
+msgstr "град"
+
+msgid "Delete"
+msgstr "Изтриване"
+
+msgid "Edit"
+msgstr "Редактиране"
+
+msgid "Feels like %s"
+msgstr "Усеща се като %s"
+
+msgid "Getting weather information..."
+msgstr "Получаване на информация за времето..."
+
+msgid "Humidity: %s %%"
+msgstr "Влажност: %s %%"
+
+msgid "Location code"
+msgstr "Код на местоположението"
+
+msgid "MSN location search result"
+msgstr "MSN резултат от търсене на местоположение"
+
+msgid "OK"
+msgstr "добре"
+
+msgid "Observation point: %s"
+msgstr "Точка за наблюдение: %s"
+
+msgid "Observation time: %s"
+msgstr "Време за наблюдение: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Моля, въведете валидно име на град."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Моля, въведете валиден код на местоположение за града."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Наистина ли изтривате този запис на WeatherPlugin?"
+
+msgid "Search Code"
+msgstr "Код за търсене"
+
+msgid "Show Weather Forecast"
+msgstr "Показване на прогнозата за времето"
+
+msgid "System"
+msgstr "система"
+
+msgid "Weather Plugin"
+msgstr "Плъгин за времето"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Редактиране на запис"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Списък със записи"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Трябва да въведете валидно име на град, преди да можете да търсите кода на местоположението."
+
+msgid "imperial system"
+msgstr "имперска система"
+
+msgid "metric system"
+msgstr "метрична система"

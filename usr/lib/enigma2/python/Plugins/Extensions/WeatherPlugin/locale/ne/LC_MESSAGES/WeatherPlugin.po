@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:51+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Nepali <translation-team-ne@lists.sourceforge.net>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "थप्नुहोस्"
+
+msgid "Back"
+msgstr "पछाडि"
+
+msgid "Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+msgid "City"
+msgstr "सहर"
+
+msgid "Delete"
+msgstr "मेट्नुहोस्"
+
+msgid "Edit"
+msgstr "सम्पादन गर्नुहोस्"
+
+msgid "Feels like %s"
+msgstr "%s जस्तो लाग्छ"
+
+msgid "Getting weather information..."
+msgstr "मौसम जानकारी प्राप्त गर्दै..."
+
+msgid "Humidity: %s %%"
+msgstr "आर्द्रता: %s %%"
+
+msgid "Location code"
+msgstr "स्थान कोड"
+
+msgid "MSN location search result"
+msgstr "MSN स्थान खोज परिणाम"
+
+msgid "OK"
+msgstr "ठीक छ"
+
+msgid "Observation point: %s"
+msgstr "अवलोकन बिन्दु: %s"
+
+msgid "Observation time: %s"
+msgstr "अवलोकन समय: %s"
+
+msgid "Please enter a valid city name."
+msgstr "कृपया सहरको मान्य नाम प्रविष्ट गर्नुहोस्।"
+
+msgid "Please enter a valid location code for the city."
+msgstr "कृपया सहरको लागि मान्य स्थान कोड प्रविष्ट गर्नुहोस्।"
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "वास्तवमा यो WeatherPlugin प्रविष्टि मेटाउने हो?"
+
+msgid "Search Code"
+msgstr "खोज कोड"
+
+msgid "Show Weather Forecast"
+msgstr "मौसम पूर्वानुमान देखाउनुहोस्"
+
+msgid "System"
+msgstr "प्रणाली"
+
+msgid "Weather Plugin"
+msgstr "मौसम प्लगइन"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "मौसम प्लगइन: प्रविष्टि सम्पादन गर्नुहोस्"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: प्रविष्टिहरूको सूची"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "तपाईंले स्थान कोड खोज्न सक्नु अघि तपाईंले मान्य सहरको नाम प्रविष्ट गर्न आवश्यक छ।"
+
+msgid "imperial system"
+msgstr "साम्राज्यवादी व्यवस्था"
+
+msgid "metric system"
+msgstr "मेट्रिक प्रणाली"

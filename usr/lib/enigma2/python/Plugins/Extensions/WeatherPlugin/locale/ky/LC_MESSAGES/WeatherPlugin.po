@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:47+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Kirghiz <(nothing)>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "кошуу"
+
+msgid "Back"
+msgstr "Артка"
+
+msgid "Cancel"
+msgstr "Жокко чыгаруу"
+
+msgid "City"
+msgstr ""
+
+msgid "Delete"
+msgstr "Жок кылуу"
+
+msgid "Edit"
+msgstr "Түзөтүү"
+
+msgid "Feels like %s"
+msgstr "%s окшойт"
+
+msgid "Getting weather information..."
+msgstr "Аба ырайы тууралуу маалымат алуу..."
+
+msgid "Humidity: %s %%"
+msgstr "Нымдуулук: %s %%"
+
+msgid "Location code"
+msgstr "Жайгашкан жер коду"
+
+msgid "MSN location search result"
+msgstr "MSN жайгашкан жерди издөө натыйжасы"
+
+msgid "OK"
+msgstr "макул"
+
+msgid "Observation point: %s"
+msgstr "Байкоо чекити: %s"
+
+msgid "Observation time: %s"
+msgstr "Байкоо убактысы: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Жарактуу шаардын атын киргизиңиз."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Сураныч, шаар үчүн жарактуу жайгашкан жер кодун киргизиңиз."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Бул WeatherPlugin жазуусу чын эле өчүрүлсүнбү?"
+
+msgid "Search Code"
+msgstr "Издөө коду"
+
+msgid "Show Weather Forecast"
+msgstr "Аба ырайын көрсөтүү"
+
+msgid "System"
+msgstr "Система"
+
+msgid "Weather Plugin"
+msgstr ""
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Жазууну түзөтүү"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Жазуулардын тизмеси"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Жайгашкан жердин кодун издөөдөн мурун жарактуу шаардын атын киргизишиңиз керек."
+
+msgid "imperial system"
+msgstr "империялык система"
+
+msgid "metric system"
+msgstr "метрикалык система"

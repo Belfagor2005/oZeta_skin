@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:40+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Welsh\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "Ychwanegu"
+
+msgid "Back"
+msgstr "Yn ol"
+
+msgid "Cancel"
+msgstr "Canslo"
+
+msgid "City"
+msgstr "Dinas"
+
+msgid "Delete"
+msgstr "Dileu"
+
+msgid "Edit"
+msgstr "Golygu"
+
+msgid "Feels like %s"
+msgstr "Yn teimlo fel %s"
+
+msgid "Getting weather information..."
+msgstr "Cael gwybodaeth am y tywydd..."
+
+msgid "Humidity: %s %%"
+msgstr "Lleithder: %s %%"
+
+msgid "Location code"
+msgstr "Cod lleoliad"
+
+msgid "MSN location search result"
+msgstr "Canlyniad chwiliad lleoliad MSN"
+
+msgid "OK"
+msgstr "iawn"
+
+msgid "Observation point: %s"
+msgstr "Pwynt arsylwi: %s"
+
+msgid "Observation time: %s"
+msgstr "Amser arsylwi: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Rhowch enw dinas dilys."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Rhowch god lleoliad dilys ar gyfer y ddinas."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Wir dileu'r Cofnod WeatherPlugin hwn?"
+
+msgid "Search Code"
+msgstr "Cod Chwilio"
+
+msgid "Show Weather Forecast"
+msgstr "Dangos Rhagolygon Tywydd"
+
+msgid "System"
+msgstr ""
+
+msgid "Weather Plugin"
+msgstr "Ategyn Tywydd"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Golygu Cofnod"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Rhestr o Gofrestriadau"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Mae angen i chi nodi enw dinas dilys cyn y gallwch chwilio am y cod lleoliad."
+
+msgid "imperial system"
+msgstr "system imperialaidd"
+
+msgid "metric system"
+msgstr "system fetrig"

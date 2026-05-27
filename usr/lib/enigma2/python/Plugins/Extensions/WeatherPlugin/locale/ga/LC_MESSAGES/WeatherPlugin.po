@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:42+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n==2 ? 1 : 2;\n"
+
+msgid "Add"
+msgstr "Cuir"
+
+msgid "Back"
+msgstr "Ar ais"
+
+msgid "Cancel"
+msgstr "Cealaigh"
+
+msgid "City"
+msgstr "Cathair"
+
+msgid "Delete"
+msgstr "Scrios"
+
+msgid "Edit"
+msgstr "Cuir in eagar"
+
+msgid "Feels like %s"
+msgstr "Mothaíonn sé cosúil le %s"
+
+msgid "Getting weather information..."
+msgstr "Ag fáil eolais aimsire..."
+
+msgid "Humidity: %s %%"
+msgstr "Bogthaise: %s %%"
+
+msgid "Location code"
+msgstr "Cód suímh"
+
+msgid "MSN location search result"
+msgstr "Toradh cuardaigh suímh MSN"
+
+msgid "OK"
+msgstr "ceart go leor"
+
+msgid "Observation point: %s"
+msgstr "Pointe breathnadóireachta: %s"
+
+msgid "Observation time: %s"
+msgstr "Am breathnaithe: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Cuir isteach ainm cathrach bailí."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Cuir isteach cód suímh bailí don chathair."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "An bhfuil fonn ort an Iontráil WeatherPlugin seo a scriosadh?"
+
+msgid "Search Code"
+msgstr "Cód Cuardach"
+
+msgid "Show Weather Forecast"
+msgstr "Taispeáin Réamhaisnéis na hAimsire"
+
+msgid "System"
+msgstr "Córas"
+
+msgid "Weather Plugin"
+msgstr "Breiseán Aimsir"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: Cuir Iontráil in Eagar"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: Liosta Iontrálacha"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Ní mór duit ainm cathrach bailí a chur isteach sular féidir leat an cód suímh a chuardach."
+
+msgid "imperial system"
+msgstr "córas impiriúil"
+
+msgid "metric system"
+msgstr "córas méadrach"

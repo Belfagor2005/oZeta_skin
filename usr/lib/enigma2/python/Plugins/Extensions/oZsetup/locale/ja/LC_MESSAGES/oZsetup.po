@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "--Automatic Import from Plugin\n"
-msgstr ""
+msgstr "--プラグインからの自動インポート\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
-msgstr ""
+msgstr "-- 仮想キーボードを使用するか、デフォルトの構成プラグインからインポートします"
 
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
 msgstr ""
@@ -26,322 +26,322 @@ msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 msgid "Alternative Radio Mode= Yes\n"
-msgstr ""
+msgstr "代替無線モード = はい\n"
 
 msgid "ApiKey Info"
-msgstr ""
+msgstr "APIキー情報"
 
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 msgid "Bootlogo changed and backup to default_bootlogo.mvi!"
-msgstr ""
+msgstr "ブートロゴが変更され、default_bootlogo.mvi にバックアップされました。"
 
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 msgid "City"
-msgstr ""
+msgstr "市"
 
 msgid "Click Exit for close this window"
-msgstr ""
+msgstr "このウィンドウを閉じるには「終了」をクリックしてください"
 
 msgid "Console"
-msgstr ""
+msgstr "コンソール"
 
 msgid "Data entered for the Weather, do you want to continue the same?"
-msgstr ""
+msgstr "天気用にデータを入力しました。同じことを続けますか?"
 
 msgid "Del Line"
-msgstr ""
+msgstr "デルライン"
 
 msgid "Delete"
-msgstr ""
+msgstr "消去"
 
 msgid "Do you really want to change Bootlogo image?"
-msgstr ""
+msgstr "本当にブートロゴのイメージを変更しますか?"
 
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 msgid "Exit"
-msgstr ""
+msgstr "出口"
 
 msgid "File Commander - Addon"
-msgstr ""
+msgstr "ファイルコマンダー - アドオン"
 
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr ""
+msgstr "OMDB カバーを使用するには、omdbkey ファイルをスキン フォルダにコピーします:\n"
 
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "THETMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\n"
 
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr ""
+msgstr "TMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\n"
 
 msgid "For use The WeatherPlugin:\n"
-msgstr ""
+msgstr "WeatherPlugin を使用する場合:\n"
 
 msgid "For use VisualWeather\n"
-msgstr ""
+msgstr "VisualWeather を使用する場合\n"
 
 msgid "Hide/Show"
-msgstr ""
+msgstr "非表示/表示"
 
 msgid "Image Box Not Tested!!"
-msgstr ""
+msgstr "画像ボックスはテストされていません!!"
 
 msgid "Import Api Key OMDB from /tmp/omdbkey.txt?"
-msgstr ""
+msgstr "/tmp/omdbkey.txt から API キー OMDB をインポートしますか?"
 
 msgid "Import Api Key THETVDB from /tmp/thetvdbkey.txt?"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt から API キー THETVDB をインポートしますか?"
 
 msgid "Import Api Key TMDB from /tmp/apikey.txt?"
-msgstr ""
+msgstr "/tmp/apikey.txt から API キー TMDB をインポートしますか?"
 
 msgid "Import Api Key VISUALWEATHER from /etc/enigma2/VisualWeather/apikey.txt?"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt から API キー VISUALWEATHER をインポートしますか?"
 
 msgid "Ins Line"
-msgstr ""
+msgstr "インスライン"
 
 msgid "Install OAWeather Plugin and Reboot"
-msgstr ""
+msgstr "OAWeather プラグインをインストールして再起動する"
 
 msgid "Install OAWeatherPlugin"
-msgstr ""
+msgstr "OAWatherPlugin をインストールする"
 
 msgid "Install Skin Zeta for XStreamity Plugin"
-msgstr ""
+msgstr "XStreamity プラグイン用の Skin Zeta をインストールする"
 
 msgid "Install Weather Plugin and Reboot"
-msgstr ""
+msgstr "天気プラグインをインストールして再起動する"
 
 msgid "Install WeatherPlugin"
-msgstr ""
+msgstr "WeatherPlugin をインストールする"
 
 msgid "Install or Autoupdate oZeta Plugin & Skin on both"
-msgstr ""
+msgstr "oZeta プラグインとスキンを両方にインストールまたは自動更新します"
 
 msgid "Installation mmpicons Plugin"
-msgstr ""
+msgstr "mmpicons プラグインのインストール"
 
 msgid "Installation oZeta Skin"
-msgstr ""
+msgstr "oZeta スキンのインストール"
 
 msgid "Installation oZeta Skin Conponent"
-msgstr ""
+msgstr "oZeta スキン コンポーネントのインストール"
 
 msgid "Installation oZeta Skin options"
-msgstr ""
+msgstr "oZeta スキンのインストール オプション"
 
 msgid "Load OMDB Apikey from /tmp/omdbkey.txt"
-msgstr ""
+msgstr "/tmp/omdbkey.txt から OMDB Apikey をロードします"
 
 msgid "Load THETVDB Apikey from /tmp/thetvdbkey.txt"
-msgstr ""
+msgstr "/tmp/thetvdbkey.txt から THETVDB Apikey をロードします"
 
 msgid "Load TMDB Apikey from /tmp/apikey.txt"
-msgstr ""
+msgstr "/tmp/apikey.txt から TMDB Apikey をロードします"
 
 msgid "Load VISUALWEATHER Apikey from /etc/enigma2/VisualWeather/apikey.txt"
-msgstr ""
+msgstr "/etc/enigma2/VisualWeather/apikey.txt から VISUALWEATHER Apikey をロードします"
 
 msgid "Location code"
-msgstr ""
+msgstr "ロケーションコード"
 
 msgid "MSN location search result"
-msgstr ""
+msgstr "MSN 位置検索結果"
 
 msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr ""
+msgstr "メニュー/セットアップ/グラフィック インターフェイス/OSD セットアップ\n"
 
 msgid "Missing %s !"
-msgstr ""
+msgstr "%s が見つかりません!"
 
 msgid "Missing XStreamity Plugins!"
-msgstr ""
+msgstr "XStreamity プラグインがありません!"
 
 msgid "OK"
-msgstr ""
+msgstr "わかりました"
 
 msgid "OMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "OMDB ApiKey がインポートされ、保存されました!"
 
 msgid "OZETA SKIN: INSTALLED BUT NOT ACTIVE"
-msgstr ""
+msgstr "オゼタ スキン: インストールされていますが、アクティブではありません"
 
 msgid "Open OAWeather, do you want to continue?"
-msgstr ""
+msgstr "OAWeather を開きます。続行しますか?"
 
 msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr ""
+msgstr "または、OMDB ポータルで作成されたキーを手動で入力します'\n"
 
 msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr ""
+msgstr "または、THETMDB ポータルで作成されたキーを手動で入力します\n"
 
 msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr ""
+msgstr "または、TMDB ポータルで作成されたキーを手動で入力します\n"
 
 msgid "Please enter a valid city name."
-msgstr ""
+msgstr "有効な都市名を入力してください。"
 
 msgid "Please enter a valid location code for the city."
-msgstr ""
+msgstr "都市の有効な場所コードを入力してください。"
 
 msgid "Plugin OAWeatherPlugin not installed!!!"
-msgstr ""
+msgstr "プラグインOAWeatherPluginがインストールされていません!!!"
 
 msgid "Plugin TheWeather not installed!!!"
-msgstr ""
+msgstr "プラグインTheWeatherがインストールされていません!!!"
 
 msgid "Plugin WeatherPlugin not installed!!!"
-msgstr ""
+msgstr "プラグイン WeatherPlugin がインストールされていません!!!"
 
 msgid "Preview"
-msgstr ""
+msgstr "プレビュー"
 
 msgid "Preview Info"
-msgstr ""
+msgstr "プレビュー情報"
 
 msgid "Really delete this WeatherPlugin Entry?"
-msgstr ""
+msgstr "本当にこの WeatherPlugin エントリを削除しますか?"
 
 msgid "Reset Settings to Defaults Parameters?"
-msgstr ""
+msgstr "設定をデフォルトのパラメータにリセットしますか?"
 
 msgid "Restart"
-msgstr ""
+msgstr "再起動"
 
 msgid "Restart E2 but not apply changes\n"
-msgstr ""
+msgstr "E2 を再起動しますが、変更は適用しません\n"
 
 msgid "Restart Info"
-msgstr ""
+msgstr "再起動情報"
 
 msgid "SELECT YOUR CHOICE"
-msgstr ""
+msgstr "選択してください"
 
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 msgid "Save and Copy changes in the xml file config\n"
-msgstr ""
+msgstr "XML ファイル構成の変更を保存してコピーします\n"
 
 msgid "Search Code"
-msgstr ""
+msgstr "検索コード"
 
 msgid "Settings Channel Panels"
-msgstr ""
+msgstr "設定チャンネルパネル"
 
 msgid "Settings City Weather Plugin"
-msgstr ""
+msgstr "都市天気プラグインの設定"
 
 msgid "Settings Eventview Panels"
-msgstr ""
+msgstr "設定イベントビューパネル"
 
 msgid "Settings Infobar Panels"
-msgstr ""
+msgstr "設定情報バーパネル"
 
 msgid "Settings Logo Image Bottom"
-msgstr ""
+msgstr "設定ロゴ画像下部"
 
 msgid "Settings Logo Image Top"
-msgstr ""
+msgstr "設定ロゴ画像トップへ"
 
 msgid "Settings MediaPlayer Panels"
-msgstr ""
+msgstr "設定 MediaPlayer パネル"
 
 msgid "Settings Menu Image Panel"
-msgstr ""
+msgstr "設定メニューの画像パネル"
 
 msgid "Settings OMDB APIKEY"
-msgstr ""
+msgstr "設定 OMDB APIKEY"
 
 msgid "Settings PluginBrowser Panels"
-msgstr ""
+msgstr "設定プラグインブラウザパネル"
 
 msgid "Settings Radio Panels"
-msgstr ""
+msgstr "設定ラジオパネル"
 
 msgid "Settings SecInfobar Panels"
-msgstr ""
+msgstr "設定 SecInfobar パネル"
 
 msgid "Settings THETVDB APIKEY"
-msgstr ""
+msgstr "設定 THETVDB APIKEY"
 
 msgid "Settings TMDB ApiKey"
-msgstr ""
+msgstr "設定 TMDB APIKey"
 
 msgid "Settings VISUALWEATHER APIKEY"
-msgstr ""
+msgstr "設定 VISUALWEATHER APIKEY"
 
 msgid "Settings Volume Panels"
-msgstr ""
+msgstr "設定ボリュームパネル"
 
 msgid "Settings oZeta Apikey Server"
-msgstr ""
+msgstr "設定 oZeta Apikey サーバー"
 
 msgid "Settings oZeta Weather"
-msgstr ""
+msgstr "設定 oZeta 天気"
 
 msgid "Signup on OMDB and input free personal ApiKey"
-msgstr ""
+msgstr "OMDB にサインアップし、無料の個人用 ApiKey を入力します"
 
 msgid "Signup on THETVDB and input free personal ApiKey"
-msgstr ""
+msgstr "THETVDB にサインアップし、無料の個人用 ApiKey を入力してください"
 
 msgid "Signup on TMDB and input free personal ApiKey"
-msgstr ""
+msgstr "TMDB にサインアップし、無料の個人用 ApiKey を入力します"
 
 msgid "Signup on www.visualcrossing.com and input free personal ApiKey"
-msgstr ""
+msgstr "www.visualcrossing.com にサインアップし、無料の個人用 ApiKey を入力してください"
 
 msgid "Skin exist!! Do you really want to Update Conponent?"
-msgstr ""
+msgstr "スキンは存在する！！本当にコンポーネントを更新しますか?"
 
 msgid "Skin exist!! Do you really want to Upgrade?"
-msgstr ""
+msgstr "スキンは存在する！！本当にアップグレードしますか?"
 
 msgid "Successfully creating Skin!"
-msgstr ""
+msgstr "スキンの作成に成功しました！"
 
 msgid "System"
-msgstr ""
+msgstr "システム"
 
 msgid "THETVDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "THETVDB ApiKey がインポートされ、保存されました!"
 
 msgid "TMDB ApiKey Imported & Stored!"
-msgstr ""
+msgstr "TMDB ApiKey がインポートされて保存されました!"
 
 msgid "VISUALWEATHER ApiKey Imported & Stored!"
-msgstr ""
+msgstr "VISUALWEATHER ApiKey をインポートして保存しました!"
 
 msgid "WeatherPlugin: Edit Entry"
-msgstr ""
+msgstr "WeatherPlugin: エントリーの編集"
 
 msgid "WeatherPlugin: List of Entries"
-msgstr ""
+msgstr "WeatherPlugin: エントリのリスト"
 
 msgid "You need to enter a valid city name before you can search for the location code."
-msgstr ""
+msgstr "場所コードを検索する前に、有効な都市名を入力する必要があります。"
 
 msgid "imperial system"
-msgstr ""
+msgstr "天皇制"
 
 msgid "metric system"
-msgstr ""
+msgstr "メートル法"
 
 msgid "oZsetup"
-msgstr ""
+msgstr "オズセットアップ"
 
 msgid "play/show Files"
-msgstr ""
+msgstr "ファイルの再生/表示"
 
 msgid "use the virtual keyboard.\n"
-msgstr ""
+msgstr "仮想キーボードを使用してください。\n"

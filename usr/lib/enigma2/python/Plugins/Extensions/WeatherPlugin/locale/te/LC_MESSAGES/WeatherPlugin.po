@@ -1,0 +1,95 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:56+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Telugu <(nothing)>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Add"
+msgstr "జోడించు"
+
+msgid "Back"
+msgstr "వెనుకకు"
+
+msgid "Cancel"
+msgstr "రద్దు చేయి"
+
+msgid "City"
+msgstr "నగరం"
+
+msgid "Delete"
+msgstr "తొలగించు"
+
+msgid "Edit"
+msgstr "సవరించు"
+
+msgid "Feels like %s"
+msgstr "%s లాగా అనిపిస్తుంది"
+
+msgid "Getting weather information..."
+msgstr "వాతావరణ సమాచారాన్ని పొందుతోంది..."
+
+msgid "Humidity: %s %%"
+msgstr "తేమ: %s %%"
+
+msgid "Location code"
+msgstr "స్థాన కోడ్"
+
+msgid "MSN location search result"
+msgstr "MSN స్థాన శోధన ఫలితం"
+
+msgid "OK"
+msgstr "సరే"
+
+msgid "Observation point: %s"
+msgstr "పరిశీలన స్థానం: %s"
+
+msgid "Observation time: %s"
+msgstr "పరిశీలన సమయం: %s"
+
+msgid "Please enter a valid city name."
+msgstr "దయచేసి చెల్లుబాటు అయ్యే నగరం పేరును నమోదు చేయండి."
+
+msgid "Please enter a valid location code for the city."
+msgstr "దయచేసి నగరం కోసం చెల్లుబాటు అయ్యే స్థాన కోడ్‌ను నమోదు చేయండి."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "ఈ WeatherPlugin ఎంట్రీని నిజంగా తొలగించాలా?"
+
+msgid "Search Code"
+msgstr "శోధన కోడ్"
+
+msgid "Show Weather Forecast"
+msgstr "వాతావరణ సూచనను చూపు"
+
+msgid "System"
+msgstr "వ్యవస్థ"
+
+msgid "Weather Plugin"
+msgstr "వాతావరణ ప్లగిన్"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: ఎడిట్ ఎంట్రీ"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: ఎంట్రీల జాబితా"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "మీరు లొకేషన్ కోడ్ కోసం వెతకడానికి ముందు మీరు చెల్లుబాటు అయ్యే నగరం పేరును నమోదు చేయాలి."
+
+msgid "imperial system"
+msgstr "సామ్రాజ్య వ్యవస్థ"
+
+msgid "metric system"
+msgstr "మెట్రిక్ వ్యవస్థ"

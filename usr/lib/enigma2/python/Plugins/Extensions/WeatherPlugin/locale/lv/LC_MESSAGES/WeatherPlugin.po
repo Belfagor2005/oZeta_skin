@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:48+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+msgid "Add"
+msgstr "Pievienot"
+
+msgid "Back"
+msgstr "Atpakaļ"
+
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgid "City"
+msgstr "Pilsēta"
+
+msgid "Delete"
+msgstr "Dzēst"
+
+msgid "Edit"
+msgstr "Rediģēt"
+
+msgid "Feels like %s"
+msgstr "Šķiet, %s"
+
+msgid "Getting weather information..."
+msgstr "Notiek laikapstākļu informācijas iegūšana..."
+
+msgid "Humidity: %s %%"
+msgstr "Mitrums: %s %%"
+
+msgid "Location code"
+msgstr "Vietas kods"
+
+msgid "MSN location search result"
+msgstr "MSN atrašanās vietas meklēšanas rezultāts"
+
+msgid "OK"
+msgstr "Labi"
+
+msgid "Observation point: %s"
+msgstr "Novērošanas vieta: %s"
+
+msgid "Observation time: %s"
+msgstr "Novērošanas laiks: %s"
+
+msgid "Please enter a valid city name."
+msgstr "Lūdzu, ievadiet derīgu pilsētas nosaukumu."
+
+msgid "Please enter a valid location code for the city."
+msgstr "Lūdzu, ievadiet derīgu pilsētas atrašanās vietas kodu."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "Vai tiešām dzēst šo WeatherPlugin ierakstu?"
+
+msgid "Search Code"
+msgstr "Meklēšanas kods"
+
+msgid "Show Weather Forecast"
+msgstr "Rādīt laika prognozi"
+
+msgid "System"
+msgstr "Sistēma"
+
+msgid "Weather Plugin"
+msgstr "Laika spraudnis"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "Laika spraudnis: rediģēt ierakstu"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "Laika spraudnis: ierakstu saraksts"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "Lai varētu meklēt atrašanās vietas kodu, jums jāievada derīgs pilsētas nosaukums."
+
+msgid "imperial system"
+msgstr "impēriskā sistēma"
+
+msgid "metric system"
+msgstr "metriskā sistēma"

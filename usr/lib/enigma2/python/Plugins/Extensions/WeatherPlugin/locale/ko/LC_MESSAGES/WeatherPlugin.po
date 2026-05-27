@@ -1,0 +1,96 @@
+# WeatherPlugin translations
+# Copyright (C) 2025 Lululla Team
+# This file is distributed under the same license as the Lululla package.
+# [lululla] <ekekaz@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WeatherPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-05-27 18:47+0000\n"
+"Last-Translator:  <EMAIL@ADDRESS>\n"
+"Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Add"
+msgstr "추가하다"
+
+msgid "Back"
+msgstr "뒤쪽에"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "City"
+msgstr "도시"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Edit"
+msgstr "편집하다"
+
+msgid "Feels like %s"
+msgstr "%s 같은 느낌"
+
+msgid "Getting weather information..."
+msgstr "날씨 정보를 가져오는 중..."
+
+msgid "Humidity: %s %%"
+msgstr "습도: %s %%"
+
+msgid "Location code"
+msgstr "위치 코드"
+
+msgid "MSN location search result"
+msgstr "MSN 위치 검색 결과"
+
+msgid "OK"
+msgstr "좋아요"
+
+msgid "Observation point: %s"
+msgstr "관찰 지점: %s"
+
+msgid "Observation time: %s"
+msgstr "관찰 시간: %s"
+
+msgid "Please enter a valid city name."
+msgstr "올바른 도시 이름을 입력하세요."
+
+msgid "Please enter a valid location code for the city."
+msgstr "도시의 유효한 위치 코드를 입력하세요."
+
+msgid "Really delete this WeatherPlugin Entry?"
+msgstr "이 WeatherPlugin 항목을 삭제하시겠습니까?"
+
+msgid "Search Code"
+msgstr "검색 코드"
+
+msgid "Show Weather Forecast"
+msgstr "일기 예보 보기"
+
+msgid "System"
+msgstr "체계"
+
+msgid "Weather Plugin"
+msgstr "날씨 플러그인"
+
+msgid "WeatherPlugin: Edit Entry"
+msgstr "WeatherPlugin: 항목 편집"
+
+msgid "WeatherPlugin: List of Entries"
+msgstr "WeatherPlugin: 항목 목록"
+
+msgid "You need to enter a valid city name before you can search for the location code."
+msgstr "위치 코드를 검색하려면 유효한 도시 이름을 입력해야 합니다."
+
+msgid "imperial system"
+msgstr "제국 체제"
+
+msgid "metric system"
+msgstr "미터법"
