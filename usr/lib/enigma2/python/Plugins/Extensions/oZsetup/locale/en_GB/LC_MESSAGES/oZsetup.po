@@ -9,25 +9,25 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
 msgstr ""
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr ""
 
-msgid "Alternative Radio Mode= Yes\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
 msgstr ""
 
 msgid "ApiKey Info"
@@ -72,19 +72,19 @@ msgstr ""
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
 msgstr ""
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
 msgstr ""
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
 msgstr ""
 
-msgid "For use The WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
 msgstr ""
 
-msgid "For use VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
 msgstr ""
 
 msgid "Hide/Show"
@@ -156,7 +156,7 @@ msgstr ""
 msgid "MSN location search result"
 msgstr ""
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
 msgstr ""
 
 msgid "Missing %s !"
@@ -177,13 +177,13 @@ msgstr ""
 msgid "Open OAWeather, do you want to continue?"
 msgstr ""
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
 msgstr ""
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
 msgstr ""
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
 msgstr ""
 
 msgid "Please enter a valid city name."
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Restart"
 msgstr ""
 
-msgid "Restart E2 but not apply changes\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
 msgstr ""
 
 msgid "Restart Info"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-msgid "Save and Copy changes in the xml file config\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
 msgstr ""
 
 msgid "Search Code"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr ""
 
-msgid "use the virtual keyboard.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
 msgstr ""

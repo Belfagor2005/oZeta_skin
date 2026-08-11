@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Nhập tự động từ Plugin\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Nhập tự động từ Plugin\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--sử dụng bàn phím ảo hoặc nhập từ plugin cấu hình mặc định"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Thêm vào"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Chế độ vô tuyến thay thế= Có\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Chế độ vô tuyến thay thế= Có\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Thông tin về APIKey"
@@ -73,20 +73,20 @@ msgstr "Ra"
 msgid "File Commander - Addon"
 msgstr "Chỉ huy tập tin - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Để sử dụng Vỏ OMDB, hãy sao chép tệp omdbkey trong thư mục giao diện:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Để sử dụng Vỏ OMDB, hãy sao chép tệp omdbkey trong thư mục giao diện:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Để sử dụng TheTMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Để sử dụng TheTMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Để sử dụng TMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Để sử dụng TMDB Cover, hãy sao chép tệp apikey trong thư mục skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Để sử dụng WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Để sử dụng WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Để sử dụng VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Để sử dụng VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Ẩn/Hiển thị"
@@ -157,8 +157,8 @@ msgstr "Mã vị trí"
 msgid "MSN location search result"
 msgstr "Kết quả tìm kiếm vị trí MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menu/Cài đặt/Giao diện đồ họa/Cài đặt OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menu/Cài đặt/Giao diện đồ họa/Cài đặt OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Thiếu %s !"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: ĐÃ CÀI ĐẶT NHƯNG KHÔNG HOẠT ĐỘNG"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Mở OAWeather, bạn có muốn tiếp tục không?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Hoặc nhập thủ công khóa được tạo trên cổng OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Hoặc nhập thủ công khóa được tạo trên cổng OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Hoặc nhập thủ công key được tạo trên cổng THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Hoặc nhập thủ công key được tạo trên cổng THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Hoặc nhập thủ công khóa được tạo trên cổng TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Hoặc nhập thủ công khóa được tạo trên cổng TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Vui lòng nhập tên thành phố hợp lệ."
@@ -217,8 +217,8 @@ msgstr "Đặt lại cài đặt về thông số mặc định?"
 msgid "Restart"
 msgstr "Khởi động lại"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Khởi động lại E2 nhưng không áp dụng các thay đổi\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Khởi động lại E2 nhưng không áp dụng các thay đổi\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Thông tin khởi động lại"
@@ -229,8 +229,8 @@ msgstr "CHỌN LỰA CHỌN CỦA BẠN"
 msgid "Save"
 msgstr "Cứu"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Lưu và Sao chép các thay đổi trong cấu hình tệp xml\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Lưu và Sao chép các thay đổi trong cấu hình tệp xml\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Mã tìm kiếm"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "phát/hiển thị tập tin"
 
-msgid "use the virtual keyboard.\n"
-msgstr "sử dụng bàn phím ảo.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "sử dụng bàn phím ảo.\\\\\\\\n"

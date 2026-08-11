@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "- قىستۇرمىدىن ئاپتوماتىك ئىمپورت \ n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "- قىستۇرمىدىن ئاپتوماتىك ئىمپورت \\\\\\\\ n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- مەۋھۇم كۇنۇپكا تاختىسىنى ئىشلىتىڭ ياكى سۈكۈتتىكى سەپلىمە قىستۇرمىسىدىن ئەكىرىڭ"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \ n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \ n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \ n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \\\\\\\\ n"
 
 msgid "Add"
 msgstr "قوش"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "باشقا رادىئو ھالىتى = ھەئە \ n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "باشقا رادىئو ھالىتى = ھەئە \\\\\\\\ n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey ئۇچۇرى"
@@ -72,20 +72,20 @@ msgstr "چىقىش"
 msgid "File Commander - Addon"
 msgstr "ھۆججەت قوماندانى - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "OMDB Covers نى ئىشلىتىش ئۈچۈن omdbkey ھۆججىتىنى تېرە قىسقۇچقا كۆچۈرۈڭ: \ n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "OMDB Covers نى ئىشلىتىش ئۈچۈن omdbkey ھۆججىتىنى تېرە قىسقۇچقا كۆچۈرۈڭ: \\\\\\\\ n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "THETMDB Covers نى ئىشلىتىش ئۈچۈن ، تېرە قىسقۇچتىكى apikey ھۆججىتىنى كۆچۈرۈڭ: \ n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "THETMDB Covers نى ئىشلىتىش ئۈچۈن ، تېرە قىسقۇچتىكى apikey ھۆججىتىنى كۆچۈرۈڭ: \\\\\\\\ n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "TMDB Covers نى ئىشلىتىش ئۈچۈن تېرە قىسقۇچتىكى apikey ھۆججىتىنى كۆچۈرۈڭ: \ n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "TMDB Covers نى ئىشلىتىش ئۈچۈن تېرە قىسقۇچتىكى apikey ھۆججىتىنى كۆچۈرۈڭ: \\\\\\\\ n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "ئىشلىتىش ئۈچۈن WeatherPlugin: \ n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "ئىشلىتىش ئۈچۈن WeatherPlugin: \\\\\\\\ n"
 
-msgid "For use VisualWeather\n"
-msgstr "VisualWeather \ n نى ئىشلىتىش ئۈچۈن"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "VisualWeather \\\\\\\\ n نى ئىشلىتىش ئۈچۈن"
 
 msgid "Hide/Show"
 msgstr "يوشۇرۇش / كۆرسىتىش"
@@ -156,8 +156,8 @@ msgstr "ئورۇن كودى"
 msgid "MSN location search result"
 msgstr "MSN ئورۇن ئىزدەش نەتىجىسى"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "تىزىملىك ​​/ تەڭشەش / گرافىكلىق كۆرۈنمە يۈزى / OSD تەڭشەش \ n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "تىزىملىك ​​/ تەڭشەش / گرافىكلىق كۆرۈنمە يۈزى / OSD تەڭشەش \\\\\\\\ n"
 
 msgid "Missing %s !"
 msgstr "Missing% s!"
@@ -177,13 +177,13 @@ msgstr "OZETA SKIN: ئورنىتىلغان ، ئەمما ئاكتىپ ئەمەس
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather نى ئېچىڭ ، داۋاملاشتۇرماقچىمۇ؟"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "ياكى OMDB ئېغىزىدا ياسالغان ئاچقۇچنى قولدا كىرگۈزۈڭ '\ n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "ياكى OMDB ئېغىزىدا ياسالغان ئاچقۇچنى قولدا كىرگۈزۈڭ '\\\\\\\\ n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
 msgstr "ياكى THETMDB ئېغىزىدا قۇرۇلغان ئاچقۇچنى قولدا كىرگۈزۈڭ"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
 msgstr "ياكى ئاچقۇچنى قولدا كىرگۈزۈڭ ، TMDB ئېغىزىدا قۇرۇلدى"
 
 msgid "Please enter a valid city name."
@@ -216,8 +216,8 @@ msgstr "تەڭشەكلەرنى كۆڭۈلدىكى پارامېتىرلارغا �
 msgid "Restart"
 msgstr "قايتا قوزغىتىڭ"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "E2 نى قايتا قوزغىتىڭ ، ئەمما ئۆزگەرتىش قوللانماڭ \ n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "E2 نى قايتا قوزغىتىڭ ، ئەمما ئۆزگەرتىش قوللانماڭ \\\\\\\\ n"
 
 msgid "Restart Info"
 msgstr "ئۇچۇرنى قايتا قوزغىتىش"
@@ -228,8 +228,8 @@ msgstr "تاللىشىڭىزنى تاللاڭ"
 msgid "Save"
 msgstr "ساقلاش"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Xml ھۆججىتىنى تەڭشەش \ n دىكى ئۆزگەرتىشلەرنى ساقلاش ۋە كۆچۈرۈش"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Xml ھۆججىتىنى تەڭشەش \\\\\\\\ n دىكى ئۆزگەرتىشلەرنى ساقلاش ۋە كۆچۈرۈش"
 
 msgid "Search Code"
 msgstr "ئىزدەش كودى"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "ھۆججەتلەرنى كۆرسىتىش / كۆرسىتىش"
 
-msgid "use the virtual keyboard.\n"
-msgstr "مەۋھۇم كۇنۇپكا تاختىسىنى ئىشلىتىڭ. \ n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "مەۋھۇم كۇنۇپكا تاختىسىنى ئىشلىتىڭ. \\\\\\\\ n"

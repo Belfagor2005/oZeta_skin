@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Automatický import z doplnku\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Automatický import z doplnku\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--použite virtuálnu klávesnicu alebo importujte z predvoleného konfiguračného pluginu"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Pridať"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternatívny režim rádia= Áno\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternatívny režim rádia= Áno\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Informácie o ApiKey"
@@ -73,20 +73,20 @@ msgstr "VÝCHOD"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Ak chcete použiť obaly OMDB, skopírujte súbor omdbkey do priečinka skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Ak chcete použiť obaly OMDB, skopírujte súbor omdbkey do priečinka skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Ak chcete použiť obaly THETMDB, skopírujte súbor apikey do priečinka skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Ak chcete použiť obaly THETMDB, skopírujte súbor apikey do priečinka skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Ak chcete použiť obaly TMDB, skopírujte súbor apikey do priečinka skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Ak chcete použiť obaly TMDB, skopírujte súbor apikey do priečinka skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Pre použitie WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Pre použitie WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Na použitie VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Na použitie VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Skryť/Zobraziť"
@@ -157,8 +157,8 @@ msgstr "Kód miesta"
 msgid "MSN location search result"
 msgstr "Výsledok vyhľadávania polohy MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Ponuka/Nastavenie/Grafické rozhranie/Nastavenie OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Ponuka/Nastavenie/Grafické rozhranie/Nastavenie OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Chýba %s !"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: NAINŠTALOVANÁ, ALE NIE AKTÍVNA"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Otvorte OAWeather, chcete pokračovať?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Alebo ručne zadajte kľúč vytvorený na portáli OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Alebo ručne zadajte kľúč vytvorený na portáli THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Alebo ručne zadajte kľúč vytvorený na portáli TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Alebo ručne zadajte kľúč vytvorený na portáli TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Zadajte platný názov mesta."
@@ -217,8 +217,8 @@ msgstr "Obnoviť nastavenia na predvolené parametre?"
 msgid "Restart"
 msgstr "Reštartujte"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Reštartujte E2, ale neaplikujte zmeny\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Reštartujte E2, ale neaplikujte zmeny\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Informácie o reštarte"
@@ -229,8 +229,8 @@ msgstr "VYBERTE SI SVOJ VÝBER"
 msgid "Save"
 msgstr "Uložiť"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Uložte a skopírujte zmeny v konfigurácii súboru xml\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Uložte a skopírujte zmeny v konfigurácii súboru xml\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Vyhľadávací kód"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "prehrať/zobraziť súbory"
 
-msgid "use the virtual keyboard.\n"
-msgstr "použite virtuálnu klávesnicu.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "použite virtuálnu klávesnicu.\\\\\\\\n"

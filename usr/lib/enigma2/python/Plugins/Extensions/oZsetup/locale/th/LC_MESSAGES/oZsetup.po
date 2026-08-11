@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--นำเข้าอัตโนมัติจากปลั๊กอิน\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--นำเข้าอัตโนมัติจากปลั๊กอิน\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--ใช้แป้นพิมพ์เสมือนหรือนำเข้าจากปลั๊กอินกำหนดค่าเริ่มต้น"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "เพิ่ม"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "โหมดวิทยุทางเลือก= ใช่\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "โหมดวิทยุทางเลือก= ใช่\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ข้อมูล APIKey"
@@ -72,20 +72,20 @@ msgstr "ออก"
 msgid "File Commander - Addon"
 msgstr "ผู้บัญชาการไฟล์ - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "สำหรับการใช้งาน OMDB Covers ให้คัดลอกไฟล์ omdbkey ในโฟลเดอร์ skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "สำหรับการใช้งาน OMDB Covers ให้คัดลอกไฟล์ omdbkey ในโฟลเดอร์ skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "สำหรับการใช้งาน TheTMDB Covers ให้คัดลอกไฟล์ apikey ในโฟลเดอร์ skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "สำหรับการใช้งาน TheTMDB Covers ให้คัดลอกไฟล์ apikey ในโฟลเดอร์ skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "สำหรับการใช้งาน TMDB Covers ให้คัดลอกไฟล์ apikey ในโฟลเดอร์ skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "สำหรับการใช้งาน TMDB Covers ให้คัดลอกไฟล์ apikey ในโฟลเดอร์ skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "สำหรับการใช้งาน WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "สำหรับการใช้งาน WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "สำหรับการใช้งาน VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "สำหรับการใช้งาน VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "ซ่อน/แสดง"
@@ -156,8 +156,8 @@ msgstr "รหัสสถานที่"
 msgid "MSN location search result"
 msgstr "ผลการค้นหาตำแหน่ง MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "เมนู/การตั้งค่า/อินเทอร์เฟซแบบกราฟิก/การตั้งค่า OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "เมนู/การตั้งค่า/อินเทอร์เฟซแบบกราฟิก/การตั้งค่า OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "หายไป %s !"
@@ -177,14 +177,14 @@ msgstr "OZETA SKIN: ติดตั้งแล้ว แต่ไม่ได�
 msgid "Open OAWeather, do you want to continue?"
 msgstr "เปิด OAWeather คุณต้องการดำเนินการต่อหรือไม่"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "หรือป้อนคีย์ด้วยตนเองซึ่งสร้างขึ้นบนพอร์ทัล OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "หรือป้อนคีย์ด้วยตนเองซึ่งสร้างขึ้นบนพอร์ทัล OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "หรือป้อนคีย์ด้วยตนเอง ซึ่งสร้างขึ้นบนพอร์ทัล THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "หรือป้อนคีย์ด้วยตนเอง ซึ่งสร้างขึ้นบนพอร์ทัล THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "หรือป้อนคีย์ด้วยตนเองซึ่งสร้างขึ้นบนพอร์ทัล TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "หรือป้อนคีย์ด้วยตนเองซึ่งสร้างขึ้นบนพอร์ทัล TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "กรุณากรอกชื่อเมืองที่ถูกต้อง"
@@ -216,8 +216,8 @@ msgstr "รีเซ็ตการตั้งค่าเป็นพารา
 msgid "Restart"
 msgstr "รีสตาร์ท"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "รีสตาร์ท E2 แต่ไม่ได้ใช้การเปลี่ยนแปลง\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "รีสตาร์ท E2 แต่ไม่ได้ใช้การเปลี่ยนแปลง\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "รีสตาร์ทข้อมูล"
@@ -228,8 +228,8 @@ msgstr "เลือกตัวเลือกของคุณ"
 msgid "Save"
 msgstr "บันทึก"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "บันทึกและคัดลอกการเปลี่ยนแปลงในไฟล์ xml config\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "บันทึกและคัดลอกการเปลี่ยนแปลงในไฟล์ xml config\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "ค้นหารหัส"
@@ -342,5 +342,5 @@ msgstr "oZตั้งค่า"
 msgid "play/show Files"
 msgstr "เล่น/แสดงไฟล์"
 
-msgid "use the virtual keyboard.\n"
-msgstr "ใช้แป้นพิมพ์เสมือน\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "ใช้แป้นพิมพ์เสมือน\\\\\\\\n"

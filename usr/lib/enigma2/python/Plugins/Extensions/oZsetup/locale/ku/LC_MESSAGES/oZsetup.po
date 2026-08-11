@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Ji Pluginê Vekirina Otomatîk\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Ji Pluginê Vekirina Otomatîk\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- Klavyeya virtual bikar bînin an ji pêveka mîhengê ya xwerû derxînin"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Lêzêdekirin"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Moda Radyoya Alternatîf= Belê\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Moda Radyoya Alternatîf= Belê\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Agahdariya ApiKey"
@@ -72,20 +72,20 @@ msgstr "Derî"
 msgid "File Commander - Addon"
 msgstr "Fermandarê Pelê - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Ji bo karanîna The OMDB Covers, pelê omdbkey di peldanka çermê de kopî bikin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Ji bo karanîna The OMDB Covers, pelê omdbkey di peldanka çermê de kopî bikin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Ji bo karanîna TheTMDB Covers, pelê apikey di peldanka çermê de kopî bikin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Ji bo karanîna TheTMDB Covers, pelê apikey di peldanka çermê de kopî bikin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Ji bo karanîna The TMDB Covers, pelê apikey di peldanka çermê de kopî bikin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Ji bo karanîna The TMDB Covers, pelê apikey di peldanka çermê de kopî bikin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Ji bo bikaranîna WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Ji bo bikaranîna WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Ji bo bikaranîna VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Ji bo bikaranîna VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Veşêre / Nîşan bide"
@@ -156,8 +156,8 @@ msgstr "Koda cihan"
 msgid "MSN location search result"
 msgstr "Encama lêgerîna cîhê MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Pêşek / Sazkirin / Navbera Grafik / Sazkirina OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Pêşek / Sazkirin / Navbera Grafik / Sazkirina OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s winda ye !"
@@ -177,14 +177,14 @@ msgstr "ÇERMÊ OZETA: SATKIRIYE LÊ NE ÇALAKÎ"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather veke, tu dixwazî ​​bidomînî?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "An jî bi destan mifteya ku li ser portala OMDB hatî çêkirin têkevin'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "An jî bi destan mifteya ku li ser portala OMDB hatî çêkirin têkevin'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "An jî bi destan mifteya ku li ser portalê THETMDB hatî çêkirin têkevin\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "An jî bi destan mifteya ku li ser portalê THETMDB hatî çêkirin têkevin\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "An jî bi destan mifteya ku li ser portala TMDB hatî afirandin têkevin\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "An jî bi destan mifteya ku li ser portala TMDB hatî afirandin têkevin\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Ji kerema xwe navekî bajarekî derbasdar binivîse."
@@ -216,8 +216,8 @@ msgstr "Vegerandina Mîhengan li Parametreyên Pêşniyar bike?"
 msgid "Restart"
 msgstr ""
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "E2-ê ji nû ve bidin destpêkirin lê guhertinan pêk neyne\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "E2-ê ji nû ve bidin destpêkirin lê guhertinan pêk neyne\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Agahî ji nû ve bidin destpêkirin"
@@ -228,8 +228,8 @@ msgstr "HILBIJARTINA XWE HILBIJARTIN"
 msgid "Save"
 msgstr "Rizgarkirin"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Guhertinên di mîhenga pelê xml de hilînin û kopî bikin\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Guhertinên di mîhenga pelê xml de hilînin û kopî bikin\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Code Search"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "lîstin / Pelan nîşan bide"
 
-msgid "use the virtual keyboard.\n"
-msgstr "klavyeya virtual bikar bînin.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "klavyeya virtual bikar bînin.\\\\\\\\n"

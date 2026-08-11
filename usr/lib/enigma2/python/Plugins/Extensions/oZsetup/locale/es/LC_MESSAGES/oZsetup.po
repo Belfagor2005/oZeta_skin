@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Importación automática desde complemento\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Importación automática desde complemento\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--usa el teclado virtual o importa desde el complemento de configuración predeterminado"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Agregar"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Modo de radio alternativo= Sí\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Modo de radio alternativo= Sí\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Información de clave API"
@@ -73,20 +73,20 @@ msgstr "Salida"
 msgid "File Commander - Addon"
 msgstr "Comandante de archivos - Complemento"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Para usar The OMDB Covers, copie el archivo omdbkey en la carpeta skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Para usar The OMDB Covers, copie el archivo omdbkey en la carpeta skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Para usar The THETMDB Covers, copie el archivo apikey en la carpeta skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Para usar The THETMDB Covers, copie el archivo apikey en la carpeta skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Para usar The TMDB Covers, copie el archivo apikey en la carpeta skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Para usar The TMDB Covers, copie el archivo apikey en la carpeta skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Para usar The WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Para usar The WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Para usar VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Para usar VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Ocultar/Mostrar"
@@ -157,8 +157,8 @@ msgstr "Código de ubicación"
 msgid "MSN location search result"
 msgstr "Resultado de búsqueda de ubicación de MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menú/Configuración/Interfaz gráfica/Configuración OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menú/Configuración/Interfaz gráfica/Configuración OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "¡Faltan %s!"
@@ -178,14 +178,14 @@ msgstr "PIEL OZETA: INSTALADA PERO NO ACTIVA"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Abre OAWeather, ¿quieres continuar?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "O ingrese manualmente la clave, creada en el portal OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "O ingrese manualmente la clave, creada en el portal OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "O ingrese manualmente la clave, creada en el portal THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "O ingrese manualmente la clave, creada en el portal THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "O ingrese manualmente la clave, creada en el portal TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "O ingrese manualmente la clave, creada en el portal TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Por favor ingrese un nombre de ciudad válido."
@@ -217,8 +217,8 @@ msgstr "¿Restablecer la configuración a los parámetros predeterminados?"
 msgid "Restart"
 msgstr "Reanudar"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Reinicie E2 pero no aplique los cambios\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Reinicie E2 pero no aplique los cambios\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Reiniciar información"
@@ -229,8 +229,8 @@ msgstr "SELECCIONA TU ELECCIÓN"
 msgid "Save"
 msgstr "Ahorrar"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Guarde y copie los cambios en la configuración del archivo xml\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Guarde y copie los cambios en la configuración del archivo xml\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Código de búsqueda"
@@ -343,5 +343,5 @@ msgstr "oZconfiguración"
 msgid "play/show Files"
 msgstr "reproducir/mostrar archivos"
 
-msgid "use the virtual keyboard.\n"
-msgstr "usa el teclado virtual.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "usa el teclado virtual.\\\\\\\\n"

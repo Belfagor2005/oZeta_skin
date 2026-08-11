@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Impor Otomatis dari Plugin\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Impor Otomatis dari Plugin\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--gunakan keyboard virtual atau impor dari plugin konfigurasi default"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Menambahkan"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Mode Radio Alternatif= Ya\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Mode Radio Alternatif= Ya\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Info ApiKey"
@@ -72,20 +72,20 @@ msgstr "KELUAR"
 msgid "File Commander - Addon"
 msgstr "Komandan File - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Untuk menggunakan The OMDB Covers, salin file omdbkey di folder skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk menggunakan The OMDB Covers, salin file omdbkey di folder skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Untuk menggunakan TheTMDB Covers, salin file apikey di folder skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk menggunakan TheTMDB Covers, salin file apikey di folder skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Untuk menggunakan The TMDB Covers, salin file apikey di folder skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk menggunakan The TMDB Covers, salin file apikey di folder skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Untuk menggunakan WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Untuk menggunakan WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Untuk menggunakan VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Untuk menggunakan VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Sembunyikan/Tampilkan"
@@ -156,8 +156,8 @@ msgstr "Kode lokasi"
 msgid "MSN location search result"
 msgstr "Hasil pencarian lokasi MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menu/Pengaturan/Antarmuka Grafis/Pengaturan OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menu/Pengaturan/Antarmuka Grafis/Pengaturan OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Hilang %s !"
@@ -177,14 +177,14 @@ msgstr "KULIT OZETA : TERPASANG TAPI TIDAK AKTIF"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Buka OAWeather, ingin melanjutkan?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Silakan masukkan nama kota yang valid."
@@ -216,8 +216,8 @@ msgstr "Atur Ulang Pengaturan ke Parameter Default?"
 msgid "Restart"
 msgstr "Mulai ulang"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Mulai ulang E2 tetapi tidak menerapkan perubahan\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Mulai ulang E2 tetapi tidak menerapkan perubahan\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Mulai ulang Info"
@@ -228,8 +228,8 @@ msgstr "PILIH PILIHAN ANDA"
 msgid "Save"
 msgstr "Menyimpan"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Simpan dan Salin perubahan pada file xml config\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Simpan dan Salin perubahan pada file xml config\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Kode Pencarian"
@@ -342,5 +342,5 @@ msgstr "pengaturan oZ"
 msgid "play/show Files"
 msgstr "memutar/menampilkan File"
 
-msgid "use the virtual keyboard.\n"
-msgstr "gunakan keyboard virtual.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "gunakan keyboard virtual.\\\\\\\\n"

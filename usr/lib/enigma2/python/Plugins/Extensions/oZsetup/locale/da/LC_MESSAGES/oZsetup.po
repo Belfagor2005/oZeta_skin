@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Automatisk import fra plugin\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Automatisk import fra plugin\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--brug det virtuelle tastatur eller importer fra standardkonfigurationsplugin"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Tilføje"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternativ radiotilstand= Ja\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternativ radiotilstand= Ja\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr ""
@@ -73,20 +73,20 @@ msgstr "Udgang"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "For brug af OMDB-omslagene, kopier omdbkey-filen i skin-mappen:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "For brug af OMDB-omslagene, kopier omdbkey-filen i skin-mappen:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "For brug af THETMDB Covers, kopier apikey-filen i skin-mappen:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "For brug af THETMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "For at bruge The TMDB Covers, kopier apikey-filen i skin-mappen:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "For at bruge The TMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Til brug The WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Til brug The WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Til brug VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Til brug VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Skjul/Vis"
@@ -157,8 +157,8 @@ msgstr "Lokationskode"
 msgid "MSN location search result"
 msgstr "MSN placering søgeresultat"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menu/Opsætning/Grafisk grænseflade/OSD-opsætning\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menu/Opsætning/Grafisk grænseflade/OSD-opsætning\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Mangler %s!"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: INSTALLERET MEN IKKE AKTIV"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Åbn OAWeather, vil du fortsætte?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Eller indtast manuelt nøglen, oprettet på OMDB-portalen'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Eller indtast manuelt nøglen, oprettet på OMDB-portalen'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Eller indtast manuelt nøglen, oprettet på THETMDB-portalen\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Eller indtast manuelt nøglen, oprettet på THETMDB-portalen\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Eller indtast manuelt nøglen, oprettet på TMDB-portalen\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Eller indtast manuelt nøglen, oprettet på TMDB-portalen\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Indtast venligst et gyldigt bynavn."
@@ -217,8 +217,8 @@ msgstr "Nulstille indstillinger til standardparametre?"
 msgid "Restart"
 msgstr "Genstart"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Genstart E2, men anvend ikke ændringer\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Genstart E2, men anvend ikke ændringer\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Genstart Info"
@@ -229,8 +229,8 @@ msgstr "VÆLG DIT VALG"
 msgid "Save"
 msgstr "Spare"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Gem og kopier ændringer i xml-filens konfiguration\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Gem og kopier ændringer i xml-filens konfiguration\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Søg kode"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "afspil/vis filer"
 
-msgid "use the virtual keyboard.\n"
-msgstr "brug det virtuelle tastatur.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "brug det virtuelle tastatur.\\\\\\\\n"

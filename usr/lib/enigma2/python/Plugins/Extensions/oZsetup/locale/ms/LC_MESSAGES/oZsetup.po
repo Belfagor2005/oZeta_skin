@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Import Automatik daripada Pemalam\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Import Automatik daripada Pemalam\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--gunakan papan kekunci maya atau import daripada pemalam konfigurasi lalai"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Tambah"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Mod Radio Alternatif= Ya\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Mod Radio Alternatif= Ya\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Maklumat ApiKey"
@@ -72,20 +72,20 @@ msgstr "Keluar"
 msgid "File Commander - Addon"
 msgstr "Komander Fail - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Untuk menggunakan The OMDB Covers, salin fail omdbkey dalam folder kulit:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk menggunakan The OMDB Covers, salin fail omdbkey dalam folder kulit:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Untuk penggunaan THETMDB Covers, salin fail apikey dalam folder kulit:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk penggunaan THETMDB Covers, salin fail apikey dalam folder kulit:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Untuk menggunakan The TMDB Covers, salin fail apikey dalam folder kulit:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Untuk menggunakan The TMDB Covers, salin fail apikey dalam folder kulit:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Untuk menggunakan WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Untuk menggunakan WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Untuk kegunaan VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Untuk kegunaan VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Sembunyi/Tunjukkan"
@@ -156,8 +156,8 @@ msgstr "Kod lokasi"
 msgid "MSN location search result"
 msgstr "Hasil carian lokasi MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menu/Persediaan/Antara Muka Grafik/Persediaan OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menu/Persediaan/Antara Muka Grafik/Persediaan OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Hilang %s !"
@@ -177,14 +177,14 @@ msgstr "OZETA SKIN: DIPASANG TAPI TIDAK AKTIF"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Buka OAWeather, adakah anda mahu meneruskan?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat pada portal TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Sila masukkan nama bandar yang sah."
@@ -216,8 +216,8 @@ msgstr "Tetapkan Semula Tetapan kepada Parameter Lalai?"
 msgid "Restart"
 msgstr "Mulakan semula"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Mulakan semula E2 tetapi tidak menggunakan perubahan\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Mulakan semula E2 tetapi tidak menggunakan perubahan\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Mulakan semula Maklumat"
@@ -228,8 +228,8 @@ msgstr "PILIH PILIHAN ANDA"
 msgid "Save"
 msgstr "Jimat"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Simpan dan Salin perubahan dalam konfigurasi fail xml\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Simpan dan Salin perubahan dalam konfigurasi fail xml\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Kod Carian"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "main/tunjukkan Fail"
 
-msgid "use the virtual keyboard.\n"
-msgstr "gunakan papan kekunci maya.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "gunakan papan kekunci maya.\\\\\\\\n"

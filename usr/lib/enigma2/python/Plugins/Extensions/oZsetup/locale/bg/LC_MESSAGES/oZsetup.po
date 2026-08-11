@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Автоматично импортиране от приставка\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Автоматично импортиране от приставка\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--използвайте виртуалната клавиатура или импортирайте от приставката за конфигурация по подразбиране"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Добавете"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Алтернативен радио режим= Да\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Алтернативен радио режим= Да\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Информация за ApiKey"
@@ -73,20 +73,20 @@ msgstr "Изход"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "За да използвате OMDB Covers, копирайте файла omdbkey в папката на skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "За да използвате OMDB Covers, копирайте файла omdbkey в папката на skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "За да използвате The THETMDB Covers, копирайте файла apikey в папката на skin:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "За да използвате The THETMDB Covers, копирайте файла apikey в папката на skin:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "За да използвате The TMDB Covers, копирайте apikey файла в папката на skin:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "За да използвате The TMDB Covers, копирайте apikey файла в папката на skin:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "За използване на WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "За използване на WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "За използване на VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "За използване на VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Скриване/Показване"
@@ -157,8 +157,8 @@ msgstr "Код на местоположението"
 msgid "MSN location search result"
 msgstr "MSN резултат от търсене на местоположение"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Меню/Настройка/Графичен интерфейс/Настройка на екранното меню\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Меню/Настройка/Графичен интерфейс/Настройка на екранното меню\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Липсва %s!"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: ИНСТАЛИРАН, НО НЕ АКТИВЕН"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Отворете OAWeather, искате ли да продължите?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Или въведете ръчно ключа, създаден на портала OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Или въведете ръчно ключа, създаден на портала OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Или въведете ръчно ключа, създаден на портала THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Или въведете ръчно ключа, създаден на портала THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Или ръчно въведете ключа, създаден на портала TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Или ръчно въведете ключа, създаден на портала TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Моля, въведете валидно име на град."
@@ -217,8 +217,8 @@ msgstr "Нулиране на настройките до параметрите
 msgid "Restart"
 msgstr "Рестартирайте"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Рестартирайте E2, но не прилагайте промените\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Рестартирайте E2, но не прилагайте промените\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Рестартирайте информацията"
@@ -229,8 +229,8 @@ msgstr "ИЗБЕРЕТЕ ВАШИЯ ИЗБОР"
 msgid "Save"
 msgstr "Запазване"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Запазете и копирайте промените в конфигурацията на xml файла\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Запазете и копирайте промените в конфигурацията на xml файла\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Код за търсене"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "възпроизвеждане/показване на файлове"
 
-msgid "use the virtual keyboard.\n"
-msgstr "използвайте виртуалната клавиатура.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "използвайте виртуалната клавиатура.\\\\\\\\n"

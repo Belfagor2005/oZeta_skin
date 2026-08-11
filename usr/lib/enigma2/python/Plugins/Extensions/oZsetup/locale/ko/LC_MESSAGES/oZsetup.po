@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--플러그인에서 자동 가져오기\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--플러그인에서 자동 가져오기\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--가상 키보드를 사용하거나 기본 구성 플러그인에서 가져오기"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "추가하다"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "대체 라디오 모드= 예\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "대체 라디오 모드= 예\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "API키 정보"
@@ -73,20 +73,20 @@ msgstr "출구"
 msgid "File Commander - Addon"
 msgstr "파일 커맨더 - 애드온"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "OMDB 표지를 사용하려면 스킨 폴더에 omdbkey 파일을 복사하십시오.\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "OMDB 표지를 사용하려면 스킨 폴더에 omdbkey 파일을 복사하십시오.\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "THETMDB Covers를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "THETMDB Covers를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "TMDB 표지를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "TMDB 표지를 사용하려면 스킨 폴더에 apikey 파일을 복사하십시오.\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "WeatherPlugin 사용:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "WeatherPlugin 사용:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "VisualWeather 사용\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "VisualWeather 사용\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "숨기기/보이기"
@@ -157,8 +157,8 @@ msgstr "위치 코드"
 msgid "MSN location search result"
 msgstr "MSN 위치 검색 결과"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "메뉴/설정/그래픽 인터페이스/OSD 설정\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "메뉴/설정/그래픽 인터페이스/OSD 설정\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s이(가) 없습니다!"
@@ -178,14 +178,14 @@ msgstr "OZETA 스킨: 설치되었지만 활성화되지 않음"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather를 여세요. 계속하시겠습니까?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "또는 OMDB 포털에서 생성된 키를 수동으로 입력하세요'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "또는 OMDB 포털에서 생성된 키를 수동으로 입력하세요'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "또는 THETMDB 포털에서 생성된 키를 수동으로 입력하십시오.\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "또는 THETMDB 포털에서 생성된 키를 수동으로 입력하십시오.\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "또는 TMDB 포털에서 생성된 키를 수동으로 입력하십시오.\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "또는 TMDB 포털에서 생성된 키를 수동으로 입력하십시오.\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "올바른 도시 이름을 입력하세요."
@@ -217,8 +217,8 @@ msgstr "설정을 기본 매개변수로 재설정하시겠습니까?"
 msgid "Restart"
 msgstr "다시 시작"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "E2를 다시 시작하지만 변경 사항을 적용하지 않음\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "E2를 다시 시작하지만 변경 사항을 적용하지 않음\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "재시작 정보"
@@ -229,8 +229,8 @@ msgstr "원하는 것을 선택하세요"
 msgid "Save"
 msgstr "구하다"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "xml 파일 구성의 변경 사항 저장 및 복사\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "xml 파일 구성의 변경 사항 저장 및 복사\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "검색 코드"
@@ -343,5 +343,5 @@ msgstr "oZ설정"
 msgid "play/show Files"
 msgstr "파일 재생/표시"
 
-msgid "use the virtual keyboard.\n"
-msgstr "가상 키보드를 사용하십시오.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "가상 키보드를 사용하십시오.\\\\\\\\n"

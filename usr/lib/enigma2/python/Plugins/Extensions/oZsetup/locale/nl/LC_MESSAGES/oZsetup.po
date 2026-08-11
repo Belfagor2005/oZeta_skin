@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Automatisch importeren vanuit plug-in\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Automatisch importeren vanuit plug-in\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--gebruik het virtuele toetsenbord of importeer vanuit de standaard configuratieplug-in"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Toevoegen"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternatieve radiomodus= Ja\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternatieve radiomodus= Ja\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey-informatie"
@@ -73,20 +73,20 @@ msgstr "Uitgang"
 msgid "File Commander - Addon"
 msgstr "Bestandscommandant - Add-on"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Voor gebruik van The OMDB Covers kopieert u het omdbkey-bestand naar de skinmap:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Voor gebruik van The OMDB Covers kopieert u het omdbkey-bestand naar de skinmap:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Voor gebruik van TheTMDB Covers kopieert u het apikey-bestand naar de skinmap:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Voor gebruik van TheTMDB Covers kopieert u het apikey-bestand naar de skinmap:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Voor gebruik van The TMDB Covers kopieert u het apikey-bestand naar de skinmap:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Voor gebruik van The TMDB Covers kopieert u het apikey-bestand naar de skinmap:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Voor gebruik van de WeerPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Voor gebruik van de WeerPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Voor gebruik VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Voor gebruik VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Verbergen/Tonen"
@@ -157,8 +157,8 @@ msgstr "Locatiecode"
 msgid "MSN location search result"
 msgstr "Zoekresultaat MSN-locatie"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Menu/Instellingen/Grafische interface/OSD-instellingen\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Menu/Instellingen/Grafische interface/OSD-instellingen\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s ontbreekt!"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: GEÏNSTALLEERD MAAR NIET ACTIEF"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Open OAWeather, wil je doorgaan?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Of voer handmatig de sleutel in die is aangemaakt op de OMDB-portal'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Of voer handmatig de sleutel in die is aangemaakt op de OMDB-portal'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Of voer handmatig de sleutel in die is aangemaakt op de THETMDB-portal\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Of voer handmatig de sleutel in die is aangemaakt op de THETMDB-portal\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Of voer handmatig de sleutel in die is aangemaakt op de TMDB-portal\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Of voer handmatig de sleutel in die is aangemaakt op de TMDB-portal\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Voer een geldige plaatsnaam in."
@@ -217,8 +217,8 @@ msgstr "Instellingen terugzetten naar standaardparameters?"
 msgid "Restart"
 msgstr "Opnieuw opstarten"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Start E2 opnieuw, maar pas de wijzigingen niet toe\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Start E2 opnieuw, maar pas de wijzigingen niet toe\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Info opnieuw opstarten"
@@ -229,8 +229,8 @@ msgstr "SELECTEER UW KEUZE"
 msgid "Save"
 msgstr "Redden"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Bewaar en kopieer wijzigingen in het XML-bestand config\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Bewaar en kopieer wijzigingen in het XML-bestand config\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Zoekcode"
@@ -343,5 +343,5 @@ msgstr "oZopstelling"
 msgid "play/show Files"
 msgstr "bestanden afspelen/tonen"
 
-msgid "use the virtual keyboard.\n"
-msgstr "gebruik het virtuele toetsenbord.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "gebruik het virtuele toetsenbord.\\\\\\\\n"

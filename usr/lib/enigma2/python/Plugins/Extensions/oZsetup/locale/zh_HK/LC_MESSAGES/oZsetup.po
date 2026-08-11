@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
 msgstr ""
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--使用虛擬鍵盤或從預設配置插件匯入"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "添加"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "備用無線電模式= 是\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "備用無線電模式= 是\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "API金鑰資訊"
@@ -72,20 +72,20 @@ msgstr "出口"
 msgid "File Commander - Addon"
 msgstr "文件指揮官 - 插件"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "要使用 OMDB Covers，請複製皮膚資料夾中的 omdbkey 檔案:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "要使用 OMDB Covers，請複製皮膚資料夾中的 omdbkey 檔案:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "若要使用 THETMDB Covers，請將 apikey 檔案複製到皮膚資料夾中：\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "若要使用 THETMDB Covers，請將 apikey 檔案複製到皮膚資料夾中：\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "若要使用 TMDB Covers，請複製皮膚資料夾中的 apikey 檔案：\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "若要使用 TMDB Covers，請複製皮膚資料夾中的 apikey 檔案：\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "使用 Wea​​therPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "使用 Wea​​therPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "用於 VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "用於 VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "隱藏/顯示"
@@ -156,8 +156,8 @@ msgstr "位置代碼"
 msgid "MSN location search result"
 msgstr "MSN位置搜尋結果"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "選單/設定/圖形介面/OSD 設定\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "選單/設定/圖形介面/OSD 設定\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "缺%s！"
@@ -177,14 +177,14 @@ msgstr "OZETA 皮膚：已安裝但未激活"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "打開 OAWeather，是否繼續？"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "或手動輸入在 OMDB 入口網站上建立的金鑰'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "或手動輸入在 OMDB 入口網站上建立的金鑰'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "或手動輸入在 THETMDB 入口網站上建立的金鑰\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "或手動輸入在 THETMDB 入口網站上建立的金鑰\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "或手動輸入在 TMDB 入口網站上建立的金鑰\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "或手動輸入在 TMDB 入口網站上建立的金鑰\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "請輸入有效的城市名稱。"
@@ -216,7 +216,7 @@ msgstr "將設定重置為預設參數？"
 msgid "Restart"
 msgstr "重新啟動"
 
-msgid "Restart E2 but not apply changes\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
 msgstr ""
 
 msgid "Restart Info"
@@ -228,8 +228,8 @@ msgstr "選擇您的選擇"
 msgid "Save"
 msgstr "節省"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "儲存並複製 xml 檔案配置中的變更\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "儲存並複製 xml 檔案配置中的變更\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "搜尋碼"
@@ -342,5 +342,5 @@ msgstr "oZ安裝程式"
 msgid "play/show Files"
 msgstr "播放/顯示文件"
 
-msgid "use the virtual keyboard.\n"
-msgstr "使用虛擬鍵盤。 \n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "使用虛擬鍵盤。 \\\\\\\\n"

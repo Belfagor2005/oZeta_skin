@@ -14,30 +14,30 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: plugin.py\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Eklentiden Otomatik İçe Aktarma\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Eklentiden Otomatik İçe Aktarma\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--sanal klavyeyi kullanın veya varsayılan yapılandırma eklentisinden içe aktarın"
 
 #, fuzzy
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 
 #, fuzzy
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 
 #, fuzzy
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 
 msgid "Add"
 msgstr "Eklemek"
 
 #, fuzzy
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "     Alternatif Radyo Modu= Evet\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "     Alternatif Radyo Modu= Evet\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey Bilgi"
@@ -81,21 +81,21 @@ msgstr "Çıkış"
 msgid "File Commander - Addon"
 msgstr "Dosya Komutanı - Eklenti"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "OMDB Kapaklarını kullanmak için omdbkey dosyasını dış görünüş klasörüne kopyalayın:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "OMDB Kapaklarını kullanmak için omdbkey dosyasını dış görünüş klasörüne kopyalayın:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "THETMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "THETMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "TMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "TMDB Kapaklarını kullanmak için apikey dosyasını dış görünüm klasörüne kopyalayın:\\\\\\\\n"
 
 #, fuzzy
-msgid "For use The WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
 msgstr "WeatherPlugin Yükle"
 
-msgid "For use VisualWeather\n"
-msgstr "VisualWeather'ı kullanmak için\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "VisualWeather'ı kullanmak için\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Gizle/Göster"
@@ -173,8 +173,8 @@ msgid "MSN location search result"
 msgstr "MSN konum arama sonucu"
 
 #, fuzzy
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "     Menü/Kurulum/Grafik Arayüzü/OSD Kurulumu\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "     Menü/Kurulum/Grafik Arayüzü/OSD Kurulumu\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Eksik %s !"
@@ -195,16 +195,16 @@ msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather'ı açın, devam etmek istiyor musunuz?"
 
 #, fuzzy
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "    Veya OMDB portalında oluşturulan anahtarı manuel olarak girin\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "    Veya OMDB portalında oluşturulan anahtarı manuel olarak girin\\\\\\\\n"
 
 #, fuzzy
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "    Veya TMDB portalında oluşturulan anahtarı manuel olarak girin\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "    Veya TMDB portalında oluşturulan anahtarı manuel olarak girin\\\\\\\\n"
 
 #, fuzzy
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "    Veya TMDB portalında oluşturulan anahtarı manuel olarak girin\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "    Veya TMDB portalında oluşturulan anahtarı manuel olarak girin\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Lütfen geçerli bir şehir adı girin."
@@ -238,8 +238,8 @@ msgid "Restart"
 msgstr "Tekrar başlat"
 
 #, fuzzy
-msgid "Restart E2 but not apply changes\n"
-msgstr "     E2yi yeniden başlatın ancak değişiklikleri uygulamayın\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "     E2yi yeniden başlatın ancak değişiklikleri uygulamayın\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Bilgiyi Yeniden Başlat"
@@ -251,8 +251,8 @@ msgid "Save"
 msgstr "Kaydet"
 
 #, fuzzy
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "     Değişiklikleri xml dosyası yapılandırmasında kaydedin ve kopyalayın\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "     Değişiklikleri xml dosyası yapılandırmasında kaydedin ve kopyalayın\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Arama Kodu"
@@ -366,8 +366,8 @@ msgid "play/show Files"
 msgstr "Dosyaları oynat/göster"
 
 #, fuzzy
-msgid "use the virtual keyboard.\n"
-msgstr "sanal klavyeyi kullanın.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "sanal klavyeyi kullanın.\\\\\\\\n"
 "    sanal klavyeyi kullanın.'\n"
 "\n"
 "\n"

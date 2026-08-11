@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--ප්ලගිනයෙන් ස්වයංක්‍රීය ආයාත\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--ප්ලගිනයෙන් ස්වයංක්‍රීය ආයාත\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--අථත්‍ය යතුරුපුවරුව භාවිතා කරන්න හෝ පෙරනිමි වින්‍යාස ප්ලගිනයෙන් ආයාත කරන්න"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "එකතු කරන්න"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "විකල්ප ගුවන්විදුලි මාදිලිය= ඔව්\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "විකල්ප ගුවන්විදුලි මාදිලිය= ඔව්\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey තොරතුරු"
@@ -72,20 +72,20 @@ msgstr "පිටවීම"
 msgid "File Commander - Addon"
 msgstr "ගොනු කමාන්ඩර් - ඇඩෝනය"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "OMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ omdbkey ගොනුව පිටපත් කරන්න:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "OMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ omdbkey ගොනුව පිටපත් කරන්න:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "THETMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ ඇති apikey ගොනුව පිටපත් කරන්න:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "THETMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ ඇති apikey ගොනුව පිටපත් කරන්න:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "TMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ ඇති apikey ගොනුව පිටපත් කරන්න:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "TMDB ආවරණ භාවිතය සඳහා, සම ෆෝල්ඩරය තුළ ඇති apikey ගොනුව පිටපත් කරන්න:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "WeatherPlugin භාවිතය සඳහා:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "WeatherPlugin භාවිතය සඳහා:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "VisualWeather භාවිතය සඳහා\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "VisualWeather භාවිතය සඳහා\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "සඟවන්න/පෙන්වන්න"
@@ -156,8 +156,8 @@ msgstr "ස්ථාන කේතය"
 msgid "MSN location search result"
 msgstr "MSN ස්ථාන සෙවුම් ප්‍රතිඵලය"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "මෙනුව/සැකසීම/ග්‍රැෆික් අතුරුමුහුණත/OSD සැකසුම\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "මෙනුව/සැකසීම/ග්‍රැෆික් අතුරුමුහුණත/OSD සැකසුම\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s අතුරුදහන් !"
@@ -177,14 +177,14 @@ msgstr "OZETA SKIN: ස්ථාපනය කර ඇති නමුත් ස�
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather විවෘත කරන්න, ඔබට ඉදිරියට යාමට අවශ්‍යද?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "නැතහොත් OMDB ද්වාරයෙහි සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "නැතහොත් OMDB ද්වාරයෙහි සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "නැතහොත් THETMDB ද්වාරය මත සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "නැතහොත් THETMDB ද්වාරය මත සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "නැතහොත් TMDB ද්වාරය මත සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "නැතහොත් TMDB ද්වාරය මත සාදන ලද යතුර හස්තීයව ඇතුළු කරන්න\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "කරුණාකර වලංගු නගර නාමයක් ඇතුළත් කරන්න."
@@ -216,8 +216,8 @@ msgstr "පෙරනිමි පරාමිතීන් වෙත සැකස
 msgid "Restart"
 msgstr "යළි අරඹන්න"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "E2 නැවත ආරම්භ කරන්න නමුත් වෙනස්කම් යොදන්න එපා\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "E2 නැවත ආරම්භ කරන්න නමුත් වෙනස්කම් යොදන්න එපා\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "තොරතුරු නැවත ආරම්භ කරන්න"
@@ -228,8 +228,8 @@ msgstr "ඔබේ තේරීම තෝරන්න"
 msgid "Save"
 msgstr "සුරකින්න"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "xml ගොනු වින්‍යාසය තුළ වෙනස්කම් සුරකින්න සහ පිටපත් කරන්න\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "xml ගොනු වින්‍යාසය තුළ වෙනස්කම් සුරකින්න සහ පිටපත් කරන්න\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "සෙවුම් කේතය"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "ගොනු වාදනය / පෙන්වන්න"
 
-msgid "use the virtual keyboard.\n"
-msgstr "අතථ්‍ය යතුරු පුවරුව භාවිතා කරන්න.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "අතථ්‍ය යතුරු පුවරුව භාවිතා කරන්න.\\\\\\\\n"

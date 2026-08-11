@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "-- Automātiska importēšana no spraudņa\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "-- Automātiska importēšana no spraudņa\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- izmantojiet virtuālo tastatūru vai importējiet no noklusējuma konfigurācijas spraudņa"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Pievienot"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternatīvais radio režīms= Jā\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternatīvais radio režīms= Jā\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey informācija"
@@ -73,20 +73,20 @@ msgstr "Iziet"
 msgid "File Commander - Addon"
 msgstr "Failu komandieris — papildinājums"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Lai izmantotu OMDB vākus, kopējiet omdbkey failu ādas mapē:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Lai izmantotu OMDB vākus, kopējiet omdbkey failu ādas mapē:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Lai izmantotu THETMDB vākus, kopējiet apikey failu ādas mapē:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Lai izmantotu THETMDB vākus, kopējiet apikey failu ādas mapē:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Lai izmantotu TMDB vākus, kopējiet apikey failu ādas mapē:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Lai izmantotu TMDB vākus, kopējiet apikey failu ādas mapē:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Lai izmantotu Weather Plugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Lai izmantotu Weather Plugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Izmantošanai VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Izmantošanai VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Paslēpt/Rādīt"
@@ -157,8 +157,8 @@ msgstr "Vietas kods"
 msgid "MSN location search result"
 msgstr "MSN atrašanās vietas meklēšanas rezultāts"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Izvēlne/Iestatīšana/Grafiskais interfeiss/OSD iestatīšana\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Izvēlne/Iestatīšana/Grafiskais interfeiss/OSD iestatīšana\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Trūkst %s!"
@@ -178,14 +178,14 @@ msgstr "OZETA ĀDA: UZSTĀDĪTA, BET NAV AKTĪVA"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Atvērt OAWeather, vai vēlaties turpināt?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Vai arī manuāli ievadiet OMDB portālā izveidoto atslēgu'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Vai arī manuāli ievadiet OMDB portālā izveidoto atslēgu'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota portālā THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota portālā THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota TMDB portālā\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Vai arī manuāli ievadiet atslēgu, kas izveidota TMDB portālā\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Lūdzu, ievadiet derīgu pilsētas nosaukumu."
@@ -217,8 +217,8 @@ msgstr "Vai atiestatīt iestatījumus uz noklusējuma parametriem?"
 msgid "Restart"
 msgstr "Restartēt"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Restartējiet E2, bet nepiemērojiet izmaiņas\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Restartējiet E2, bet nepiemērojiet izmaiņas\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Restartējiet informāciju"
@@ -229,8 +229,8 @@ msgstr "IZVĒLIES SAVU IZVĒLI"
 msgid "Save"
 msgstr "Saglabāt"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Saglabājiet un kopējiet izmaiņas xml faila konfigurācijā\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Saglabājiet un kopējiet izmaiņas xml faila konfigurācijā\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Meklēšanas kods"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "atskaņot/rādīt failus"
 
-msgid "use the virtual keyboard.\n"
-msgstr "izmantojiet virtuālo tastatūru.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "izmantojiet virtuālo tastatūru.\\\\\\\\n"

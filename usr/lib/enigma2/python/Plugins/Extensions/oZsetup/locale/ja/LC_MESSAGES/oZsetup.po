@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--プラグインからの自動インポート\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--プラグインからの自動インポート\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "-- 仮想キーボードを使用するか、デフォルトの構成プラグインからインポートします"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "追加"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "代替無線モード = はい\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "代替無線モード = はい\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "APIキー情報"
@@ -73,20 +73,20 @@ msgstr "出口"
 msgid "File Commander - Addon"
 msgstr "ファイルコマンダー - アドオン"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "OMDB カバーを使用するには、omdbkey ファイルをスキン フォルダにコピーします:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "OMDB カバーを使用するには、omdbkey ファイルをスキン フォルダにコピーします:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "THETMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "THETMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "TMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "TMDB カバーを使用するには、apikey ファイルをスキン フォルダにコピーします:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "WeatherPlugin を使用する場合:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "WeatherPlugin を使用する場合:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "VisualWeather を使用する場合\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "VisualWeather を使用する場合\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "非表示/表示"
@@ -157,8 +157,8 @@ msgstr "ロケーションコード"
 msgid "MSN location search result"
 msgstr "MSN 位置検索結果"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "メニュー/セットアップ/グラフィック インターフェイス/OSD セットアップ\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "メニュー/セットアップ/グラフィック インターフェイス/OSD セットアップ\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s が見つかりません!"
@@ -178,14 +178,14 @@ msgstr "オゼタ スキン: インストールされていますが、アクテ
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather を開きます。続行しますか?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "または、OMDB ポータルで作成されたキーを手動で入力します'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "または、OMDB ポータルで作成されたキーを手動で入力します'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "または、THETMDB ポータルで作成されたキーを手動で入力します\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "または、THETMDB ポータルで作成されたキーを手動で入力します\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "または、TMDB ポータルで作成されたキーを手動で入力します\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "または、TMDB ポータルで作成されたキーを手動で入力します\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "有効な都市名を入力してください。"
@@ -217,8 +217,8 @@ msgstr "設定をデフォルトのパラメータにリセットしますか?"
 msgid "Restart"
 msgstr "再起動"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "E2 を再起動しますが、変更は適用しません\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "E2 を再起動しますが、変更は適用しません\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "再起動情報"
@@ -229,8 +229,8 @@ msgstr "選択してください"
 msgid "Save"
 msgstr "保存"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "XML ファイル構成の変更を保存してコピーします\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "XML ファイル構成の変更を保存してコピーします\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "検索コード"
@@ -343,5 +343,5 @@ msgstr "オズセットアップ"
 msgid "play/show Files"
 msgstr "ファイルの再生/表示"
 
-msgid "use the virtual keyboard.\n"
-msgstr "仮想キーボードを使用してください。\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "仮想キーボードを使用してください。\\\\\\\\n"

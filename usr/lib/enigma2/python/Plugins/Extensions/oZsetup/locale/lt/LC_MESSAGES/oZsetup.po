@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "-- Automatinis importavimas iš papildinio\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "-- Automatinis importavimas iš papildinio\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "– naudokite virtualiąją klaviatūrą arba importuokite iš numatytojo konfigūracijos papildinio"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Pridėti"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternatyvus radijo režimas= Taip\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternatyvus radijo režimas= Taip\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey informacija"
@@ -73,20 +73,20 @@ msgstr "Išeiti"
 msgid "File Commander - Addon"
 msgstr "Failų vadas – priedas"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Norėdami naudoti OMDB viršelius, nukopijuokite omdbkey failą į odos aplanką:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Norėdami naudoti OMDB viršelius, nukopijuokite omdbkey failą į odos aplanką:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Norėdami naudoti THETMDB viršelius, nukopijuokite apikey failą į odos aplanką:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Norėdami naudoti THETMDB viršelius, nukopijuokite apikey failą į odos aplanką:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Norėdami naudoti TMDB viršelius, nukopijuokite apikey failą į odos aplanką:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Norėdami naudoti TMDB viršelius, nukopijuokite apikey failą į odos aplanką:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Naudoti „Weather Plugin“:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Naudoti „Weather Plugin“:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Naudoti VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Naudoti VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Slėpti/Rodyti"
@@ -157,8 +157,8 @@ msgstr "Vietos kodas"
 msgid "MSN location search result"
 msgstr "MSN vietos paieškos rezultatas"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Meniu / sąranka / grafinė sąsaja / OSD sąranka\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Meniu / sąranka / grafinė sąsaja / OSD sąranka\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Trūksta %s !"
@@ -178,14 +178,14 @@ msgstr "OZETA ODA: ĮDIEGTA, BET NEAKTYVI"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Atidarykite „OAWeather“, ar norite tęsti?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Arba rankiniu būdu įveskite raktą, sukurtą OMDB portale\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Arba rankiniu būdu įveskite raktą, sukurtą OMDB portale\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Arba rankiniu būdu įveskite raktą, sukurtą THETMDB portale\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Arba rankiniu būdu įveskite raktą, sukurtą THETMDB portale\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Arba rankiniu būdu įveskite raktą, sukurtą TMDB portale\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Arba rankiniu būdu įveskite raktą, sukurtą TMDB portale\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Įveskite galiojantį miesto pavadinimą."
@@ -217,8 +217,8 @@ msgstr "Iš naujo nustatyti numatytuosius parametrus?"
 msgid "Restart"
 msgstr "Paleisti iš naujo"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Iš naujo paleiskite E2, bet netaikyti pakeitimų\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Iš naujo paleiskite E2, bet netaikyti pakeitimų\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Iš naujo paleisti informaciją"
@@ -229,8 +229,8 @@ msgstr "PASIRINKITE SAVO PASIRINKIMĄ"
 msgid "Save"
 msgstr "Išsaugoti"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Išsaugokite ir nukopijuokite pakeitimus xml failo konfigūracijoje\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Išsaugokite ir nukopijuokite pakeitimus xml failo konfigūracijoje\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Paieškos kodas"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "žaisti / rodyti failus"
 
-msgid "use the virtual keyboard.\n"
-msgstr "naudokite virtualiąją klaviatūrą.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "naudokite virtualiąją klaviatūrą.\\\\\\\\n"

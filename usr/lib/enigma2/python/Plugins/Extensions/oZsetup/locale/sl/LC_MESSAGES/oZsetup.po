@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Samodejni uvoz iz vtičnika\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Samodejni uvoz iz vtičnika\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--uporabite navidezno tipkovnico ali uvozite iz privzetega konfiguracijskega vtičnika"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Dodaj"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Alternativni radijski način= Da\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Alternativni radijski način= Da\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Informacije o ApiKey"
@@ -73,20 +73,20 @@ msgstr "Izhod"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "Za uporabo naslovnic OMDB kopirajte datoteko omdbkey v mapo skin:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "Za uporabo naslovnic OMDB kopirajte datoteko omdbkey v mapo skin:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Za uporabo naslovnic THETMDB kopirajte datoteko apikey v mapo s preobleko:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Za uporabo naslovnic THETMDB kopirajte datoteko apikey v mapo s preobleko:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "Za uporabo naslovnic TMDB kopirajte datoteko apikey v mapo preobleke:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "Za uporabo naslovnic TMDB kopirajte datoteko apikey v mapo preobleke:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "Za uporabo vtičnika WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "Za uporabo vtičnika WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "Za uporabo VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "Za uporabo VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Skrij/prikaži"
@@ -157,8 +157,8 @@ msgstr "Koda lokacije"
 msgid "MSN location search result"
 msgstr "Rezultat iskanja lokacije MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Meni/Nastavitev/Grafični vmesnik/Nastavitev OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Meni/Nastavitev/Grafični vmesnik/Nastavitev OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Manjka %s!"
@@ -178,14 +178,14 @@ msgstr "OZETA SKIN: NAMEŠČENA, VENDAR NI AKTIVNA"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Odpri OAWeather, ali želiš nadaljevati?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Ali ročno vnesite ključ, ustvarjen na portalu OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Ali ročno vnesite ključ, ustvarjen na portalu OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Ali pa ročno vnesite ključ, ustvarjen na portalu THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Ali pa ročno vnesite ključ, ustvarjen na portalu THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Ali ročno vnesite ključ, ustvarjen na portalu TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Ali ročno vnesite ključ, ustvarjen na portalu TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Vnesite veljavno ime mesta."
@@ -217,8 +217,8 @@ msgstr "Ponastaviti nastavitve na privzete parametre?"
 msgid "Restart"
 msgstr "Znova zaženite"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Znova zaženite E2, vendar ne uveljavite sprememb\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Znova zaženite E2, vendar ne uveljavite sprememb\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Informacije o ponovnem zagonu"
@@ -229,8 +229,8 @@ msgstr "IZBERITE SVOJO IZBIRO"
 msgid "Save"
 msgstr "Shrani"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Shranite in kopirajte spremembe v datoteki xml config\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Shranite in kopirajte spremembe v datoteki xml config\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Iskalna koda"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "predvajaj/prikaži datoteke"
 
-msgid "use the virtual keyboard.\n"
-msgstr "uporabite virtualno tipkovnico.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "uporabite virtualno tipkovnico.\\\\\\\\n"

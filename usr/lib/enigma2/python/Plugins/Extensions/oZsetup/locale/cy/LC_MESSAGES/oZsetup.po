@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\n"
-msgstr "--Mewnforio Awtomatig o'r Ategyn\n"
+msgid "--Automatic Import from Plugin\\\\\\\\n"
+msgstr "--Mewnforio Awtomatig o'r Ategyn\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--defnyddiwch y bysellfwrdd rhithwir neu fewnforio o'r ategyn ffurfweddu rhagosodedig"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Ychwanegu"
 
-msgid "Alternative Radio Mode= Yes\n"
-msgstr "Modd Radio Amgen = Oes\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\n"
+msgstr "Modd Radio Amgen = Oes\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Gwybodaeth ApiKey"
@@ -72,20 +72,20 @@ msgstr "Ymadael"
 msgid "File Commander - Addon"
 msgstr "File Comander - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\n"
-msgstr "I'w ddefnyddio Mae'r Gorchuddion OMDB, copïwch y ffeil omdbkey yn y ffolder croen:\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
+msgstr "I'w ddefnyddio Mae'r Gorchuddion OMDB, copïwch y ffeil omdbkey yn y ffolder croen:\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "I'w defnyddio The THETMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "I'w defnyddio The THETMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\n"
-msgstr "I'w defnyddio The TMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
+msgstr "I'w defnyddio The TMDB Covers, copïwch y ffeil apikey yn y ffolder croen:\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\n"
-msgstr "I'w ddefnyddio The WeatherPlugin:\n"
+msgid "For use The WeatherPlugin:\\\\\\\\n"
+msgstr "I'w ddefnyddio The WeatherPlugin:\\\\\\\\n"
 
-msgid "For use VisualWeather\n"
-msgstr "I'w ddefnyddio VisualWeather\n"
+msgid "For use VisualWeather\\\\\\\\n"
+msgstr "I'w ddefnyddio VisualWeather\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Cuddio/Dangos"
@@ -156,8 +156,8 @@ msgstr "Cod lleoliad"
 msgid "MSN location search result"
 msgstr "Canlyniad chwiliad lleoliad MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\n"
-msgstr "Dewislen/Gosod/Rhyngwyneb Graffeg/Gosod OSD\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
+msgstr "Dewislen/Gosod/Rhyngwyneb Graffeg/Gosod OSD\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s ar goll !"
@@ -177,14 +177,14 @@ msgstr "CROEN OZETA: WEDI'I OSOD OND NID YN ACTIF"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Agor OAWeather, ydych chi am barhau?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\n"
-msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth OMDB'\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth OMDB'\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\n"
-msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar borth THETMDB\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar borth THETMDB\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\n"
-msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth TMDB\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgstr "Neu rhowch yr allwedd â llaw, a grëwyd ar y porth TMDB\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Rhowch enw dinas dilys."
@@ -216,8 +216,8 @@ msgstr "Ailosod Gosodiadau i Baramedrau Diofyn?"
 msgid "Restart"
 msgstr "Ailgychwyn"
 
-msgid "Restart E2 but not apply changes\n"
-msgstr "Ailgychwyn E2 ond peidio â gweithredu'r newidiadau\n"
+msgid "Restart E2 but not apply changes\\\\\\\\n"
+msgstr "Ailgychwyn E2 ond peidio â gweithredu'r newidiadau\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Ailgychwyn Gwybodaeth"
@@ -228,8 +228,8 @@ msgstr "DEWISWCH EICH DEWIS"
 msgid "Save"
 msgstr "Arbed"
 
-msgid "Save and Copy changes in the xml file config\n"
-msgstr "Cadw a Chopio newidiadau yn y ffurfwedd ffeil xml\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgstr "Cadw a Chopio newidiadau yn y ffurfwedd ffeil xml\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Cod Chwilio"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "chwarae/dangos Ffeiliau"
 
-msgid "use the virtual keyboard.\n"
-msgstr "defnyddio'r bysellfwrdd rhithwir.\n"
+msgid "use the virtual keyboard.\\\\\\\\n"
+msgstr "defnyddio'r bysellfwrdd rhithwir.\\\\\\\\n"
