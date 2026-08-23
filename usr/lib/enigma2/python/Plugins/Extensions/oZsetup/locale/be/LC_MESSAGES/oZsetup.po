@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Аўтаматычны імпарт з плагіна\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--Аўтаматычны імпарт з плагіна\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--выкарыстоўвайце віртуальную клавіятуру або імпартуйце з плагіна канфігурацыі па змаўчанні"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Дадаць"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Альтэрнатыўны рэжым радыё= Так\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Альтэрнатыўны рэжым радыё= Так\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Інфармацыя пра ApiKey"
@@ -73,20 +73,20 @@ msgstr "Выхад"
 msgid "File Commander - Addon"
 msgstr "File Commander - адон"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Каб выкарыстоўваць вокладкі OMDB, скапіруйце файл omdbkey у тэчку скіна:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Каб выкарыстоўваць вокладкі OMDB, скапіруйце файл omdbkey у тэчку скіна:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Каб выкарыстоўваць вокладкі THETMDB, скапіруйце файл apikey у тэчку скіна:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Каб выкарыстоўваць вокладкі THETMDB, скапіруйце файл apikey у тэчку скіна:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Каб выкарыстоўваць вокладкі TMDB, скапіруйце файл apikey у тэчку скіна:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Каб выкарыстоўваць вокладкі TMDB, скапіруйце файл apikey у тэчку скіна:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Для выкарыстання WeatherPlugin:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Для выкарыстання WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Для выкарыстання VisualWeather\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Для выкарыстання VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Схаваць/паказаць"
@@ -157,8 +157,8 @@ msgstr "Код месцазнаходжання"
 msgid "MSN location search result"
 msgstr "Вынік пошуку месцазнаходжання MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Меню/Настройка/Графічны інтэрфейс/Настройка экраннага меню\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Меню/Настройка/Графічны інтэрфейс/Настройка экраннага меню\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Адсутнічае %s!"
@@ -178,14 +178,14 @@ msgstr "SKIN OZETA: УСТАНОВЛЕНЫ, АЛЕ НЕАКТЫЎНЫ"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Адкрыйце OAWeather, хочаце працягнуць?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Ці ўручную ўвесці ключ, створаны на партале OMDB'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ці ўручную ўвесці ключ, створаны на партале OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Ці ўручную ўвядзіце ключ, створаны на партале THETMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ці ўручную ўвядзіце ключ, створаны на партале THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Альбо ўручную ўвядзіце ключ, створаны на партале TMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Альбо ўручную ўвядзіце ключ, створаны на партале TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Увядзіце сапраўдную назву горада."
@@ -217,8 +217,8 @@ msgstr "Скінуць налады да параметраў па змаўча�
 msgid "Restart"
 msgstr "Перазапуск"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Перазапусціце E2, але не прымяняйце змены\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Перазапусціце E2, але не прымяняйце змены\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Перазапусціць інфармацыю"
@@ -229,8 +229,8 @@ msgstr "ВЫБЕРЫ СВОЙ ВЫБАР"
 msgid "Save"
 msgstr "Захаваць"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Захавайце і скапіруйце змены ў файле xml config\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Захавайце і скапіруйце змены ў файле xml config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Код пошуку"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "прайграваць/паказваць файлы"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "выкарыстоўваць віртуальную клавіятуру.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "выкарыстоўваць віртуальную клавіятуру.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

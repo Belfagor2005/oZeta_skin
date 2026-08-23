@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--استيراد تلقائي من البرنامج الإضافي\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--استيراد تلقائي من البرنامج الإضافي\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--استخدم لوحة المفاتيح الافتراضية أو قم بالاستيراد من البرنامج المساعد للتكوين الافتراضي"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "يضيف"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "وضع الراديو البديل= نعم\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "وضع الراديو البديل= نعم\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "معلومات APIKey"
@@ -46,7 +46,7 @@ msgid "City"
 msgstr "مدينة"
 
 msgid "Click Exit for close this window"
-msgstr "انقر فوق \\\\\\\"خروج\\\\\\\" لإغلاق هذه النافذة"
+msgstr "انقر فوق \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"خروج\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" لإغلاق هذه النافذة"
 
 msgid "Console"
 msgstr "وحدة التحكم"
@@ -72,20 +72,20 @@ msgstr "مخرج"
 msgid "File Commander - Addon"
 msgstr "قائد الملف - الملحق"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "لاستخدام أغلفة OMDB، انسخ ملف omdbkey الموجود في مجلد السطح:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "لاستخدام أغلفة OMDB، انسخ ملف omdbkey الموجود في مجلد السطح:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "لاستخدام أغلفة THETMDB، انسخ ملف apikey في مجلد السطح:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "لاستخدام أغلفة THETMDB، انسخ ملف apikey في مجلد السطح:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "لاستخدام أغلفة TMDB، انسخ ملف apikey في مجلد السطح:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "لاستخدام أغلفة TMDB، انسخ ملف apikey في مجلد السطح:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "لاستخدام WeatherPlugin:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "لاستخدام WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "لاستخدام VisualWeather\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "لاستخدام VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "إخفاء/إظهار"
@@ -156,8 +156,8 @@ msgstr "رمز الموقع"
 msgid "MSN location search result"
 msgstr "نتيجة بحث موقع MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "القائمة/الإعداد/الواجهة الرسومية/إعداد OSD\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "القائمة/الإعداد/الواجهة الرسومية/إعداد OSD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s مفقود!"
@@ -177,14 +177,14 @@ msgstr "واجهة OZETA: مثبتة ولكنها غير نشطة"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "افتح OAWeather، هل تريد المتابعة؟"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة OMDB'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة THETMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة TMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "أو أدخل المفتاح يدويًا، الذي تم إنشاؤه على بوابة TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "الرجاء إدخال اسم مدينة صالح."
@@ -216,8 +216,8 @@ msgstr "إعادة ضبط الإعدادات على المعلمات الافت�
 msgid "Restart"
 msgstr "إعادة تشغيل"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "أعد تشغيل E2 ولكن لا تقم بتطبيق التغييرات\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "أعد تشغيل E2 ولكن لا تقم بتطبيق التغييرات\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "معلومات إعادة التشغيل"
@@ -228,8 +228,8 @@ msgstr "حدد اختيارك"
 msgid "Save"
 msgstr "يحفظ"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "حفظ ونسخ التغييرات في تكوين ملف xml\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "حفظ ونسخ التغييرات في تكوين ملف xml\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "كود البحث"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "تشغيل/إظهار الملفات"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "استخدم لوحة المفاتيح الافتراضية.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "استخدم لوحة المفاتيح الافتراضية.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

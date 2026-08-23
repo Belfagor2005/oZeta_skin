@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Sjálfvirkur innflutningur úr viðbót\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--Sjálfvirkur innflutningur úr viðbót\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--notaðu sýndarlyklaborðið eða fluttu inn úr sjálfgefna stillingarforriti"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Bæta við"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Alternative Radio Mode= Já\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Alternative Radio Mode= Já\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey upplýsingar"
@@ -72,20 +72,20 @@ msgstr "Hætta"
 msgid "File Commander - Addon"
 msgstr "Skráarforingi - viðbót"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Til að nota The OMDB Covers, afritaðu omdbkey skrána í skinnmöppuna:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Til að nota The OMDB Covers, afritaðu omdbkey skrána í skinnmöppuna:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Til að nota THETMDB Covers, afritaðu apikey skrána í skinnmöppuna:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Til að nota THETMDB Covers, afritaðu apikey skrána í skinnmöppuna:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Til að nota The TMDB Covers, afritaðu apikey skrána í skinnmöppuna:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Til að nota The TMDB Covers, afritaðu apikey skrána í skinnmöppuna:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Til notkunar The Weather Plugin:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Til notkunar The Weather Plugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Til notkunar VisualWeather\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Til notkunar VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Fela/Sýna"
@@ -156,8 +156,8 @@ msgstr "Staðsetningarkóði"
 msgid "MSN location search result"
 msgstr "MSN staðsetningarleitarniðurstaða"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Valmynd/uppsetning/grafískt viðmót/OSD uppsetning\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Valmynd/uppsetning/grafískt viðmót/OSD uppsetning\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Vantar %s!"
@@ -177,14 +177,14 @@ msgstr "OZETA HÚÐ: UPPSETT EN EKKI VIRK"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Opnaðu OAWeather, viltu halda áfram?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á OMDB gáttinni'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á OMDB gáttinni'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á THETMDB gáttinni\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á THETMDB gáttinni\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á TMDB gáttinni\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Eða sláðu inn lykilinn handvirkt, búinn til á TMDB gáttinni\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Vinsamlegast sláðu inn gilt borgarnafn."
@@ -216,8 +216,8 @@ msgstr "Endurstilla stillingar í sjálfgefnar færibreytur?"
 msgid "Restart"
 msgstr "Endurræstu"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Endurræstu E2 en notaðu ekki breytingar\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Endurræstu E2 en notaðu ekki breytingar\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Endurræstu upplýsingar"
@@ -228,8 +228,8 @@ msgstr "VELDU ÞITT VAL"
 msgid "Save"
 msgstr "Vista"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Vista og afritaðu breytingar í xml skráarstillingunni\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Vista og afritaðu breytingar í xml skráarstillingunni\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Leitarkóði"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "spila/sýna skrár"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "notaðu sýndarlyklaborðið.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "notaðu sýndarlyklaborðið.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

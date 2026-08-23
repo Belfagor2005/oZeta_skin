@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Automatikus importálás a beépülő modulból\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--Automatikus importálás a beépülő modulból\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "-- használja a virtuális billentyűzetet, vagy importálja az alapértelmezett konfigurációs beépülő modulból"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Hozzáadás"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Alternatív rádió mód= Igen\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Alternatív rádió mód= Igen\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr ""
@@ -73,20 +73,20 @@ msgstr "Kijárat"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Az OMDB Covers használatához másolja az omdbkey fájlt a skin mappába:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Az OMDB Covers használatához másolja az omdbkey fájlt a skin mappába:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "A THETMDB borítók használatához másolja az apikey fájlt a skin mappába:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "A THETMDB borítók használatához másolja az apikey fájlt a skin mappába:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "A The TMDB Covers használatához másolja az apikey fájlt a skin mappába:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "A The TMDB Covers használatához másolja az apikey fájlt a skin mappába:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "A WeatherPlugin használatához:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "A WeatherPlugin használatához:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeather használatra\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeather használatra\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Elrejtés/Megjelenítés"
@@ -157,8 +157,8 @@ msgstr "Helykód"
 msgid "MSN location search result"
 msgstr "MSN helykeresési eredmény"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Menü/Beállítás/Grafikus interfész/OSD beállítás\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Menü/Beállítás/Grafikus interfész/OSD beállítás\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s hiányzik!"
@@ -178,14 +178,14 @@ msgstr "OZETA BŐR: TELEPÍTETT, DE NEM AKTÍV"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Nyissa meg az OAWeathert, folytatja?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Vagy kézzel írja be az OMDB portálon létrehozott kulcsot\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Vagy kézzel írja be az OMDB portálon létrehozott kulcsot\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Vagy kézzel írja be a THETMDB portálon létrehozott kulcsot\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Vagy kézzel írja be a THETMDB portálon létrehozott kulcsot\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Vagy kézzel írja be a TMDB portálon létrehozott kulcsot\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Vagy kézzel írja be a TMDB portálon létrehozott kulcsot\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Adjon meg egy érvényes városnevet."
@@ -217,8 +217,8 @@ msgstr "Visszaállítja a beállításokat az alapértelmezett paraméterekre?"
 msgid "Restart"
 msgstr "Indítsa újra"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Indítsa újra az E2-t, de ne alkalmazza a változtatásokat\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Indítsa újra az E2-t, de ne alkalmazza a változtatásokat\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Indítsa újra az Info"
@@ -229,8 +229,8 @@ msgstr "VÁLASZD A VÁLASZTÁST"
 msgid "Save"
 msgstr "Megtakarítás"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Mentse és másolja a módosításokat az xml fájl konfigurációjában\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Mentse és másolja a módosításokat az xml fájl konfigurációjában\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Kód keresése"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "Fájlok lejátszása/megjelenítése"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "használja a virtuális billentyűzetet.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "használja a virtuális billentyűzetet.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

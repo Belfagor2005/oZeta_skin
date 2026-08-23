@@ -16,8 +16,9 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: plugin.py\n"
 
+#, fuzzy
 msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Automatischer Import vom Plugin\\\\\\\\n"
+msgstr "--Automatischer Import vom Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--verwenden Sie die virtuelle Tastatur oder importieren Sie vom Standard-Konfigurations-Plugin"
@@ -34,8 +35,9 @@ msgstr ""
 msgid "Add"
 msgstr "Hinzufügen"
 
+#, fuzzy
 msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Alternativer Radiomodus = Ja\\\\\\\\n"
+msgstr "Alternativer Radiomodus = Ja\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey-Informationen"
@@ -79,20 +81,25 @@ msgstr "Ausfahrt"
 msgid "File Commander - Addon"
 msgstr "File Commander – Add-on"
 
+#, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Um The OMDB Covers zu verwenden, kopieren Sie die omdbkey-Datei in den Skin-Ordner:\\\\\\\\n"
+msgstr "Um The OMDB Covers zu verwenden, kopieren Sie die omdbkey-Datei in den Skin-Ordner:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Um TheTMDB Covers zu verwenden, kopieren Sie die APIKEY-Datei in den Skin-Ordner:\\\\\\\\n"
+msgstr "Um TheTMDB Covers zu verwenden, kopieren Sie die APIKEY-Datei in den Skin-Ordner:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Um The TMDB Covers zu verwenden, kopieren Sie die APIKEY-Datei in den Skin-Ordner:\\\\\\\\n"
+msgstr "Um The TMDB Covers zu verwenden, kopieren Sie die APIKEY-Datei in den Skin-Ordner:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Zur Verwendung des WeatherPlugin:\\\\\\\\n"
+msgstr "Zur Verwendung des WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Zur Verwendung von VisualWeather\\\\\\\\n"
+msgstr "Zur Verwendung von VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Ausblenden/Einblenden"
@@ -163,8 +170,9 @@ msgstr "Standortcode"
 msgid "MSN location search result"
 msgstr "MSN-Standortsuchergebnis"
 
+#, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Menü/Setup/Grafikschnittstelle/OSD-Setup\\\\\\\\n"
+msgstr "Menü/Setup/Grafikschnittstelle/OSD-Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s fehlt!"
@@ -184,14 +192,17 @@ msgstr "OZETA-SKIN: INSTALLIERT, ABER NICHT AKTIV"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Öffnen Sie OAWeather. Möchten Sie fortfahren?"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Oder geben Sie den im OMDB-Portal erstellten Schlüssel manuell ein'\\\\\\\\n"
+msgstr "Oder geben Sie den im OMDB-Portal erstellten Schlüssel manuell ein'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Oder geben Sie den im THETMDB-Portal erstellten Schlüssel manuell ein\\\\\\\\n"
+msgstr "Oder geben Sie den im THETMDB-Portal erstellten Schlüssel manuell ein\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Oder geben Sie den im TMDB-Portal erstellten Schlüssel manuell ein\\\\\\\\n"
+msgstr "Oder geben Sie den im TMDB-Portal erstellten Schlüssel manuell ein\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Bitte geben Sie einen gültigen Städtenamen ein."
@@ -223,8 +234,9 @@ msgstr "Einstellungen auf Standardparameter zurücksetzen?"
 msgid "Restart"
 msgstr "Neustart"
 
+#, fuzzy
 msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2 neu starten, aber die Änderungen nicht übernehmen\\\\\\\\n"
+msgstr "E2 neu starten, aber die Änderungen nicht übernehmen\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Informationen zum Neustart"
@@ -235,8 +247,9 @@ msgstr "WÄHLEN SIE IHRE WAHL"
 msgid "Save"
 msgstr "Speichern"
 
+#, fuzzy
 msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Speichern und kopieren Sie die Änderungen in der XML-Datei config\\\\\\\\n"
+msgstr "Speichern und kopieren Sie die Änderungen in der XML-Datei config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Suchcode"
@@ -349,5 +362,6 @@ msgstr ""
 msgid "play/show Files"
 msgstr "Dateien abspielen/anzeigen"
 
+#, fuzzy
 msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "Verwenden Sie die virtuelle Tastatur.\\\\\\\\n"
+msgstr "Verwenden Sie die virtuelle Tastatur.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

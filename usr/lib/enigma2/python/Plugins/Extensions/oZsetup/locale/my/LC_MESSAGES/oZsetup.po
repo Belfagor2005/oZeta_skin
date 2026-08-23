@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--ပလပ်အင်မှ အလိုအလျောက် တင်သွင်းခြင်း\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--ပလပ်အင်မှ အလိုအလျောက် တင်သွင်းခြင်း\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "-- virtual keyboard ကိုသုံးပါ သို့မဟုတ် မူရင်း config plugin မှ တင်သွင်းပါ။"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "ထည့်ပါ။"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "အခြားရေဒီယိုမုဒ်= Yes\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "အခြားရေဒီယိုမုဒ်= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey အချက်အလက်"
@@ -72,20 +72,20 @@ msgstr "ထွက်ပေါက်"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "OMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ omdbkey ဖိုင်ကို ကူးယူပါ-\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "OMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ omdbkey ဖိုင်ကို ကူးယူပါ-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "THETMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "THETMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "TMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "TMDB ကာဗာများကို အသုံးပြုရန်အတွက်၊ အရေပြားဖိုင်တွဲရှိ apikey ဖိုင်ကို ကူးယူပါ-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "WeatherPlugin ကိုအသုံးပြုရန်အတွက်-\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "WeatherPlugin ကိုအသုံးပြုရန်အတွက်-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeather\\\\\\\\n အသုံးပြုရန်အတွက်"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n အသုံးပြုရန်အတွက်"
 
 msgid "Hide/Show"
 msgstr "ဖျောက်/ပြပါ။"
@@ -156,8 +156,8 @@ msgstr "တည်နေရာကုဒ်"
 msgid "MSN location search result"
 msgstr "MSN တည်နေရာရှာဖွေမှုရလဒ်"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "မီနူး/တည်ဆောက်မှု/ဂရပ်ဖစ် အင်တာဖေ့စ်/OSD စနစ်ထည့်သွင်းခြင်း\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "မီနူး/တည်ဆောက်မှု/ဂရပ်ဖစ် အင်တာဖေ့စ်/OSD စနစ်ထည့်သွင်းခြင်း\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s ပျောက်နေသည် !"
@@ -177,14 +177,14 @@ msgstr "OZETA အရေပြား- တပ်ဆင်ထားသော်လ�
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather ကိုဖွင့်ပါ၊ ဆက်လုပ်လိုပါသလား။"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "သို့မဟုတ် OMDB ပေါ်တယ်'\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "သို့မဟုတ် OMDB ပေါ်တယ်'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "သို့မဟုတ် THETMDB ပေါ်တယ်\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "သို့မဟုတ် THETMDB ပေါ်တယ်\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "သို့မဟုတ် TMDB ပေါ်တယ်\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "သို့မဟုတ် TMDB ပေါ်တယ်\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nတွင် ဖန်တီးထားသော သော့ကို ကိုယ်တိုင်ထည့်ပါ။"
 
 msgid "Please enter a valid city name."
 msgstr "ကျေးဇူးပြု၍ တရားဝင်မြို့အမည်ကို ထည့်ပါ။"
@@ -216,8 +216,8 @@ msgstr "ဆက်တင်များကို မူရင်းဘောင�
 msgid "Restart"
 msgstr "ပြန်စတင်သည်"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2 ကို ပြန်လည်စတင်သော်လည်း အပြောင်းအလဲများကို အသုံးမပြုပါ\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2 ကို ပြန်လည်စတင်သော်လည်း အပြောင်းအလဲများကို အသုံးမပြုပါ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "အချက်အလက်ကို ပြန်လည်စတင်ပါ။"
@@ -228,8 +228,8 @@ msgstr "သင့်ရွေးချယ်မှုကို ရွေးခ�
 msgid "Save"
 msgstr "သိမ်းဆည်းပါ။"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "xml ဖိုင် config\\\\\\\\nတွင် ပြောင်းလဲမှုများကို သိမ်းဆည်းပြီး ကူးယူပါ။"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "xml ဖိုင် config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nတွင် ပြောင်းလဲမှုများကို သိမ်းဆည်းပြီး ကူးယူပါ။"
 
 msgid "Search Code"
 msgstr "ကုဒ်ကိုရှာပါ။"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "ဖိုင်များကိုဖွင့်/ပြသပါ။"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "ပကတိ ကီးဘုတ်ကို သုံးပါ။\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "ပကတိ ကီးဘုတ်ကို သုံးပါ။\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

@@ -10296,5 +10296,8 @@
   "652ac7c01c1afdd71d18ffa0215e45b0": "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n",
   "beff43f7a49ffc159030e86f034bce7a": "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n",
   "b080efccd4d483d5c0de40b4ae59c483": "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n",
-  "c99e989d520702834d038a228f6c9694": "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+  "c99e989d520702834d038a228f6c9694": "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n",
+  "91f1880e267624fc6c672d40d577b68d": "sanal klavyeyi kullanın.\\\\\\\\n",
+  "e3e1bdbc1435737222fe2302296f8bb7": "保存并复制 xml 文件 config\\\\\\\\n 中的更改",
+  "c50e7cbab62b1c1ecd48ff6096073fba": "保存并复制 xml 文件 config\\\\\\\\n 中的更改"
 }

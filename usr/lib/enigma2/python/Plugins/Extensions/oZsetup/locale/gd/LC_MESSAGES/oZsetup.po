@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--In-mhalairt fèin-ghluasadach bhon plugan\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--In-mhalairt fèin-ghluasadach bhon plugan\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--cleachd am meur-chlàr brìgheil no cuir a-steach bhon plugan config bunaiteach"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Cuir ris"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Modh Rèidio Eile = Tha\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Modh Rèidio Eile = Tha\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Fiosrachadh ApiKey"
@@ -72,20 +72,20 @@ msgstr "Ar-a-mach"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Airson a chleachdadh Na còmhdaichean OMDB, dèan lethbhreac den fhaidhle omdbkey ann am pasgan a’ chraicinn:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Airson a chleachdadh Na còmhdaichean OMDB, dèan lethbhreac den fhaidhle omdbkey ann am pasgan a’ chraicinn:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Airson a chleachdadh Na còmhdach THETMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Airson a chleachdadh Na còmhdach THETMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Airson a chleachdadh Na còmhdaichean TMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Airson a chleachdadh Na còmhdaichean TMDB, dèan lethbhreac den fhaidhle apikey ann am pasgan a’ chraicinn:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Airson a chleachdadh The WeatherPlugin: \\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Airson a chleachdadh The WeatherPlugin: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Airson cleachdadh VisualWeather\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Airson cleachdadh VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Falaich/Seall"
@@ -156,8 +156,8 @@ msgstr "Còd àite"
 msgid "MSN location search result"
 msgstr "Toradh rannsachaidh àite MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Clàr-taice/Suiteachadh/Eadar-aghaidh Grafaigeach/Setup OSD\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Clàr-taice/Suiteachadh/Eadar-aghaidh Grafaigeach/Setup OSD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s a dhìth!"
@@ -177,14 +177,14 @@ msgstr "Craiceann OZETA: air a stàladh ach chan eil e gnìomhach"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Fosgail OAWeather, a bheil thu airson leantainn air adhart?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal OMDB'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal THETMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "No cuir a-steach an iuchair le làimh, a chaidh a chruthachadh air portal THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "No cuir a-steach an iuchair le làimh, air a chruthachadh air portal TMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "No cuir a-steach an iuchair le làimh, air a chruthachadh air portal TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Feuch an cuir thu a-steach ainm baile-mòr dligheach."
@@ -216,8 +216,8 @@ msgstr "Ath-shuidhich roghainnean gu paramadairean bunaiteach?"
 msgid "Restart"
 msgstr "Ath-thòisich"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Ath-thòisich E2 ach na cuir an sàs atharraichean\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ath-thòisich E2 ach na cuir an sàs atharraichean\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Ath-thòiseachadh Fiosrachadh"
@@ -228,8 +228,8 @@ msgstr "ROGHAINN DO ROGHA"
 msgid "Save"
 msgstr "Sàbhail"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Sàbhail is dèan lethbhreac de dh'atharraichean san fhaidhle xml config\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Sàbhail is dèan lethbhreac de dh'atharraichean san fhaidhle xml config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Còd-rannsachaidh"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "cluich / seall Faidhlichean"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "cleachd am meur-chlàr brìgheil.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "cleachd am meur-chlàr brìgheil.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

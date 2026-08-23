@@ -10,26 +10,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Αυτόματη εισαγωγή από την προσθήκη\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--Αυτόματη εισαγωγή από την προσθήκη\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--χρησιμοποιήστε το εικονικό πληκτρολόγιο ή εισαγάγετε από την προεπιλεγμένη προσθήκη διαμόρφωσης"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "Προσθέτω"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Εναλλακτική λειτουργία ραδιοφώνου= Ναι\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Εναλλακτική λειτουργία ραδιοφώνου= Ναι\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Πληροφορίες ApiKey"
@@ -73,20 +73,20 @@ msgstr "Εξοδος"
 msgid "File Commander - Addon"
 msgstr ""
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Για χρήση των εξωφύλλων OMDB, αντιγράψτε το αρχείο omdbkey στο φάκελο skin:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Για χρήση των εξωφύλλων OMDB, αντιγράψτε το αρχείο omdbkey στο φάκελο skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Για χρήση των καλυμμάτων THETMDB, αντιγράψτε το αρχείο apikey στο φάκελο skin:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Για χρήση των καλυμμάτων THETMDB, αντιγράψτε το αρχείο apikey στο φάκελο skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Για να χρησιμοποιήσετε το The TMDB Covers, αντιγράψτε το αρχείο apikey στο φάκελο skin:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Για να χρησιμοποιήσετε το The TMDB Covers, αντιγράψτε το αρχείο apikey στο φάκελο skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Για χρήση The WeatherPlugin:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Για χρήση The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Για χρήση VisualWeather\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Για χρήση VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Απόκρυψη/Εμφάνιση"
@@ -157,8 +157,8 @@ msgstr "Κωδικός τοποθεσίας"
 msgid "MSN location search result"
 msgstr "Αποτέλεσμα αναζήτησης τοποθεσίας MSN"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Μενού/Ρύθμιση/Διεπαφή γραφικών/Ρύθμιση OSD\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Μενού/Ρύθμιση/Διεπαφή γραφικών/Ρύθμιση OSD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Λείπει %s !"
@@ -178,14 +178,14 @@ msgstr "ΔΕΡΜΑ OZETA: ΕΓΚΑΤΑΣΤΑΘΗΚΕ ΑΛΛΑ ΟΧΙ ΕΝΕΡΓ�
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Ανοίξτε το OAWeather, θέλετε να συνεχίσετε;"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη OMDB'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη THETMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ή εισαγάγετε μη αυτόματα το κλειδί που δημιουργήθηκε στην πύλη THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Ή πληκτρολογήστε χειροκίνητα το κλειδί που δημιουργήθηκε στην πύλη TMDB\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Ή πληκτρολογήστε χειροκίνητα το κλειδί που δημιουργήθηκε στην πύλη TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Εισαγάγετε ένα έγκυρο όνομα πόλης."
@@ -217,8 +217,8 @@ msgstr "Επαναφορά ρυθμίσεων στις προεπιλεγμέν�
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Επανεκκινήστε το E2 αλλά μην εφαρμόσετε αλλαγές\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Επανεκκινήστε το E2 αλλά μην εφαρμόσετε αλλαγές\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Πληροφορίες επανεκκίνησης"
@@ -229,8 +229,8 @@ msgstr "ΕΠΙΛΕΞΤΕ ΤΗΝ ΕΠΙΛΟΓΗ ΣΑΣ"
 msgid "Save"
 msgstr "Εκτός"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Αποθηκεύστε και αντιγράψτε τις αλλαγές στο αρχείο xml config\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Αποθηκεύστε και αντιγράψτε τις αλλαγές στο αρχείο xml config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Κωδικός αναζήτησης"
@@ -343,5 +343,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "αναπαραγωγή/εμφάνιση Αρχείων"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "χρησιμοποιήστε το εικονικό πληκτρολόγιο.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "χρησιμοποιήστε το εικονικό πληκτρολόγιο.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

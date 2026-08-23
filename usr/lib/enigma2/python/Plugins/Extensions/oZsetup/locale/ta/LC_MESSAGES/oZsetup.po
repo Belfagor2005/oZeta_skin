@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--செருகுநிரலில் இருந்து தானியங்கி இறக்குமதி\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--செருகுநிரலில் இருந்து தானியங்கி இறக்குமதி\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--மெய்நிகர் விசைப்பலகையைப் பயன்படுத்தவும் அல்லது இயல்புநிலை config செருகுநிரலில் இருந்து இறக்குமதி செய்யவும்"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "சேர்"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "மாற்று ரேடியோ பயன்முறை= ஆம்\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "மாற்று ரேடியோ பயன்முறை= ஆம்\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey தகவல்"
@@ -72,20 +72,20 @@ msgstr "வெளியேறு"
 msgid "File Commander - Addon"
 msgstr "கோப்பு தளபதி - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "OMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் omdbkey கோப்பை நகலெடுக்கவும்:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "OMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் omdbkey கோப்பை நகலெடுக்கவும்:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "THETMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் உள்ள apikey கோப்பை நகலெடுக்கவும்:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "THETMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் உள்ள apikey கோப்பை நகலெடுக்கவும்:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "TMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் உள்ள apikey கோப்பை நகலெடுக்கவும்:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "TMDB அட்டைகளைப் பயன்படுத்த, தோல் கோப்புறையில் உள்ள apikey கோப்பை நகலெடுக்கவும்:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "WeatherPlugin பயன்படுத்த:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "WeatherPlugin பயன்படுத்த:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeather பயன்படுத்த\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeather பயன்படுத்த\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "மறை/காட்டு"
@@ -156,8 +156,8 @@ msgstr "இருப்பிடக் குறியீடு"
 msgid "MSN location search result"
 msgstr "MSN இருப்பிடத் தேடல் முடிவு"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "மெனு/அமைவு/கிராஃபிக் இடைமுகம்/OSD அமைவு\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "மெனு/அமைவு/கிராஃபிக் இடைமுகம்/OSD அமைவு\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s இல்லை!"
@@ -177,14 +177,14 @@ msgstr "OZETA தோல்: நிறுவப்பட்டது ஆனால
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeatherஐத் திறக்கவும், தொடர விரும்புகிறீர்களா?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "அல்லது OMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "அல்லது OMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "அல்லது THETMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "அல்லது THETMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "அல்லது TMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "அல்லது TMDB போர்ட்டலில் உருவாக்கப்பட்ட விசையை கைமுறையாக உள்ளிடவும்\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "சரியான நகரப் பெயரை உள்ளிடவும்."
@@ -216,8 +216,8 @@ msgstr "அமைப்புகளை இயல்புநிலை அளவ�
 msgid "Restart"
 msgstr "மறுதொடக்கம்"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2 ஐ மறுதொடக்கம் செய்யுங்கள் ஆனால் மாற்றங்களைப் பயன்படுத்த வேண்டாம்\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2 ஐ மறுதொடக்கம் செய்யுங்கள் ஆனால் மாற்றங்களைப் பயன்படுத்த வேண்டாம்\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "மறுதொடக்கம் தகவல்"
@@ -228,8 +228,8 @@ msgstr "உங்கள் விருப்பத்தைத் தேர்�
 msgid "Save"
 msgstr "சேமிக்கவும்"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "xml கோப்பு கட்டமைப்பில் மாற்றங்களைச் சேமித்து நகலெடுக்கவும்\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "xml கோப்பு கட்டமைப்பில் மாற்றங்களைச் சேமித்து நகலெடுக்கவும்\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "தேடல் குறியீடு"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "கோப்புகளை இயக்கவும்/காண்பிக்கவும்"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "மெய்நிகர் விசைப்பலகையைப் பயன்படுத்தவும்.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "மெய்நிகர் விசைப்பலகையைப் பயன்படுத்தவும்.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

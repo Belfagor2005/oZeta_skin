@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "- Плагиннан автоматик импорт \\\\\\\\ n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "- Плагиннан автоматик импорт \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- виртуаль клавиатураны кулланыгыз яки килешү конфигурация плагиныннан импорт"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Add"
 msgstr "Кушу"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Альтернатив радио режимы = Әйе \\\\\\\\ n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Альтернатив радио режимы = Әйе \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey Мәгълүмат"
@@ -72,20 +72,20 @@ msgstr "Чык"
 msgid "File Commander - Addon"
 msgstr "Файл командиры - Аддон"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "OMDB Covers куллану өчен, omdbkey файлын тире папкасына күчерегез: \\\\\\\\ n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "OMDB Covers куллану өчен, omdbkey файлын тире папкасына күчерегез: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "THETMDB каплагычларын куллану өчен, апикей файлын тире папкасына күчерегез: \\\\\\\\ n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "THETMDB каплагычларын куллану өчен, апикей файлын тире папкасына күчерегез: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "TMDB Covers куллану өчен, апикей файлын тире папкасына күчерегез: \\\\\\\\ n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "TMDB Covers куллану өчен, апикей файлын тире папкасына күчерегез: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "WeatherPlugin куллану өчен: \\\\\\\\ n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "WeatherPlugin куллану өчен: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeather \\\\\\\\ n куллану өчен"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeather \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n куллану өчен"
 
 msgid "Hide/Show"
 msgstr "Яшерү / күрсәтү"
@@ -156,8 +156,8 @@ msgstr "Урын коды"
 msgid "MSN location search result"
 msgstr "MSN урынын эзләү нәтиҗәләре"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Меню / көйләү / график интерфейс / OSD урнаштыру \\\\\\\\ n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Меню / көйләү / график интерфейс / OSD урнаштыру \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Missing %s !"
 msgstr "Сагыну% s!"
@@ -177,13 +177,13 @@ msgstr "ОЗЕТА СКИН: урнаштырылган, ләкин актив �
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather ачыгыз, дәвам итәсегез киләме?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Яисә OMDB порталында ясалган ачкычны кул белән кертегез '\\\\\\\\ n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Яисә OMDB порталында ясалган ачкычны кул белән кертегез '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Яисә THETMDB порталында ясалган ачкычны кул белән кертегез"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Яисә TMDB порталында ясалган ачкычны кул белән кертегез"
 
 msgid "Please enter a valid city name."
@@ -216,8 +216,8 @@ msgstr "Килешү параметрларына көйләүләрне яңа�
 msgid "Restart"
 msgstr "Яңарту"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2-ны яңадан эшләтеп җибәрегез, ләкин үзгәртүләрне кулланмагыз \\\\\\\\ n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2-ны яңадан эшләтеп җибәрегез, ләкин үзгәртүләрне кулланмагыз \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Restart Info"
 msgstr "Мәгълүматны яңадан башлау"
@@ -228,7 +228,7 @@ msgstr "Сайлавыгызны сайлагыз"
 msgid "Save"
 msgstr "Саклагыз"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Xml файл конфигурациясендә үзгәрешләрне саклагыз һәм күчерегез"
 
 msgid "Search Code"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "Файлларны уйнау / күрсәтү"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "виртуаль клавиатура кулланыгыз. \\\\\\\\ n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "виртуаль клавиатура кулланыгыз. \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"

@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "- Pluginden awtomatiki import \\\\\\\\ n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "- Pluginden awtomatiki import \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- wirtual klawiaturany ulanyň ýa-da deslapky konfigurasiýa plagininden import ediň"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / apikey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / omdbkey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
-msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \\\\\\\\ n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "/ usr / share / enigma2 / oZeta-FHD / thetvdbkey \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Add"
 msgstr "Goş"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Alternatiw radio tertibi = Hawa \\\\\\\\ n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Alternatiw radio tertibi = Hawa \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey maglumaty"
@@ -72,20 +72,20 @@ msgstr "Çyk"
 msgid "File Commander - Addon"
 msgstr "Faýl serkerdesi - Addon"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "OMDB örtüklerini ulanmak üçin omdbkey faýlyny deri bukjasyna göçüriň: \\\\\\\\ n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "OMDB örtüklerini ulanmak üçin omdbkey faýlyny deri bukjasyna göçüriň: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "THETMDB örtüklerini ulanmak üçin deri bukjasyndaky apikey faýly göçüriň: \\\\\\\\ n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "THETMDB örtüklerini ulanmak üçin deri bukjasyndaky apikey faýly göçüriň: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "TMDB örtüklerini ulanmak üçin deri bukjasyndaky apikey faýly göçüriň: \\\\\\\\ n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "TMDB örtüklerini ulanmak üçin deri bukjasyndaky apikey faýly göçüriň: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "WeatherPlugin ulanmak üçin: \\\\\\\\ n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "WeatherPlugin ulanmak üçin: \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeather \\\\\\\\ n ulanmak üçin"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeather \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n ulanmak üçin"
 
 msgid "Hide/Show"
 msgstr "Gizlemek / görkezmek"
@@ -156,8 +156,8 @@ msgstr "Locationerleşiş kody"
 msgid "MSN location search result"
 msgstr "MSN ýerleşiş gözleg netijesi"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Menýu / Gurnama / Grafiki interfeýs / OSD gurmak \\\\\\\\ n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "Menýu / Gurnama / Grafiki interfeýs / OSD gurmak \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Missing %s !"
 msgstr "Ingitirim% s!"
@@ -177,13 +177,13 @@ msgstr "OZETA SKIN: GURLAN, ýöne işjeň däl"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather açyň, dowam etmek isleýärsiňizmi?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Ora-da OMDB portalynda döredilen açary el bilen giriziň"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Ora-da THETMDB portalynda döredilen açary el bilen giriziň"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Ora-da TMDB portalynda döredilen açary el bilen giriziň"
 
 msgid "Please enter a valid city name."
@@ -216,8 +216,8 @@ msgstr "Sazlamalary deslapky parametrlere täzeden düzüňmi?"
 msgid "Restart"
 msgstr "Gaýtadan açyň"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2-i täzeden açyň, ýöne üýtgeşmeleri ulanmaň \\\\\\\\ n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2-i täzeden açyň, ýöne üýtgeşmeleri ulanmaň \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"
 
 msgid "Restart Info"
 msgstr "Maglumatlary täzeden açyň"
@@ -228,7 +228,7 @@ msgstr "Saýlawyňyzy saýlaň"
 msgid "Save"
 msgstr "Saklaň"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr "Xml faýl konfigurasiýasyndaky üýtgeşmeleri ýazdyryň we göçüriň"
 
 msgid "Search Code"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "Faýllary oýnamak / görkezmek"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "wirtual klawiaturany ulanyň. \\\\\\\\ n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "wirtual klawiaturany ulanyň. \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ n"

@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "-- له پلگ ان څخه اتومات واردول\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "-- له پلگ ان څخه اتومات واردول\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "- مجازی کیبورډ وکاروئ یا د ډیفالټ ترتیب پلگ ان څخه وارد کړئ"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "اضافه کړئ"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "بدیل راډیو موډ= هو\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "بدیل راډیو موډ= هو\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "د ApiKey معلومات"
@@ -72,20 +72,20 @@ msgstr "وتل"
 msgid "File Commander - Addon"
 msgstr "د فایل کمانډر - اډون"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "د OMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د omdbkey فایل کاپي کړئ:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د OMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د omdbkey فایل کاپي کړئ:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "د THETMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د apikey فایل کاپي کړئ:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د THETMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د apikey فایل کاپي کړئ:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "د TMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د اپیکي فایل کاپي کړئ:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د TMDB پوښونو کارولو لپاره، د پوستکي فولډر کې د اپیکي فایل کاپي کړئ:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "د WeatherPlugin کارولو لپاره:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د WeatherPlugin کارولو لپاره:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "د VisualWeather کارولو لپاره\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د VisualWeather کارولو لپاره\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "پټول / ښکاره کول"
@@ -156,8 +156,8 @@ msgstr "د ځای کوډ"
 msgid "MSN location search result"
 msgstr "د MSN ځای لټون پایله"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "مینو/سیټ اپ/ګرافیک انٹرفیس/OSD ترتیب\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "مینو/سیټ اپ/ګرافیک انٹرفیس/OSD ترتیب\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "ورک شوی %s!"
@@ -177,14 +177,14 @@ msgstr "د اوزیټا پوستکی: نصب شوی مګر فعال ندی"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeather خلاص کړئ، ایا تاسو غواړئ دوام ورکړئ؟"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "یا په لاسي ډول کیلي دننه کړئ، چې د OMDB پورټل کې رامینځته شوی\\\\\\\\n"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "یا په لاسي ډول کیلي دننه کړئ، چې د OMDB پورټل کې رامینځته شوی\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "یا په لاسي ډول کیلي دننه کړئ، چې په THETMDB پورټل کې رامینځته شوی\\\\\\\\n"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "یا په لاسي ډول کیلي دننه کړئ، چې په THETMDB پورټل کې رامینځته شوی\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "یا په لاسي ډول کیلي دننه کړئ، چې په TMDB پورټل کې رامینځته شوی\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "یا په لاسي ډول کیلي دننه کړئ، چې په TMDB پورټل کې رامینځته شوی\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "مهرباني وکړئ د یو معتبر ښار نوم ولیکئ."
@@ -216,8 +216,8 @@ msgstr "د ډیفالټ پیرامیټونو ته تنظیمات بیا تنظی
 msgid "Restart"
 msgstr "بیا پیل کړئ"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2 بیا پیل کړئ مګر بدلونونه پلي نه کړئ\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2 بیا پیل کړئ مګر بدلونونه پلي نه کړئ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "معلومات بیا پیل کړئ"
@@ -228,8 +228,8 @@ msgstr "خپل انتخاب وټاکئ"
 msgid "Save"
 msgstr "خوندي کړئ"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "د xml فایل ترتیب کې بدلونونه خوندي او کاپي کړئ\\\\\\\\n"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "د xml فایل ترتیب کې بدلونونه خوندي او کاپي کړئ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "د لټون کوډ"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "فایلونه پلی / ښکاره کړئ"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "مجازی کیبورډ وکاروئ.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "مجازی کیبورډ وکاروئ.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

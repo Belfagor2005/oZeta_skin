@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--ప్లగిన్ నుండి ఆటోమేటిక్ దిగుమతి\\\\\\\\n"
+msgid "--Automatic Import from Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "--ప్లగిన్ నుండి ఆటోమేటిక్ దిగుమతి\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--వర్చువల్ కీబోర్డ్‌ని ఉపయోగించండి లేదా డిఫాల్ట్ కాన్ఫిగర్ ప్లగిన్ నుండి దిగుమతి చేయండి"
 
-msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
-msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 msgstr ""
 
 msgid "Add"
 msgstr "జోడించు"
 
-msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "ప్రత్యామ్నాయ రేడియో మోడ్= అవును\\\\\\\\n"
+msgid "Alternative Radio Mode= Yes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "ప్రత్యామ్నాయ రేడియో మోడ్= అవును\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey సమాచారం"
@@ -72,20 +72,20 @@ msgstr "నిష్క్రమించు"
 msgid "File Commander - Addon"
 msgstr "ఫైల్ కమాండర్ - యాడ్ఆన్"
 
-msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "OMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో omdbkey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\n"
+msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "OMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో omdbkey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "THETMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో apikey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\n"
+msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "THETMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో apikey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "TMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో apikey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\n"
+msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "TMDB కవర్‌లను ఉపయోగించడానికి, స్కిన్ ఫోల్డర్‌లో apikey ఫైల్‌ను కాపీ చేయండి:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "WeatherPluginని ఉపయోగించడానికి:\\\\\\\\n"
+msgid "For use The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "WeatherPluginని ఉపయోగించడానికి:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
-msgid "For use VisualWeather\\\\\\\\n"
-msgstr "VisualWeatherని ఉపయోగించడానికి\\\\\\\\n"
+msgid "For use VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "VisualWeatherని ఉపయోగించడానికి\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "దాచు/చూపించు"
@@ -156,8 +156,8 @@ msgstr "స్థాన కోడ్"
 msgid "MSN location search result"
 msgstr "MSN స్థాన శోధన ఫలితం"
 
-msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "మెనూ/సెటప్/గ్రాఫిక్ ఇంటర్‌ఫేస్/OSD సెటప్\\\\\\\\n"
+msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "మెనూ/సెటప్/గ్రాఫిక్ ఇంటర్‌ఫేస్/OSD సెటప్\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "%s లేదు !"
@@ -177,14 +177,14 @@ msgstr "OZETA స్కిన్: ఇన్‌స్టాల్ చేయబడ
 msgid "Open OAWeather, do you want to continue?"
 msgstr "OAWeatherని తెరవండి, మీరు కొనసాగించాలనుకుంటున్నారా?"
 
-msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "లేదా OMDB పోర్టల్'\\\\\\\\nలో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి"
+msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "లేదా OMDB పోర్టల్'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nలో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి"
 
-msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "లేదా THETMDB పోర్టల్\\\\\\\\nలో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి"
+msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "లేదా THETMDB పోర్టల్\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nలో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి"
 
-msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "లేదా TMDB పోర్టల్‌లో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి\\\\\\\\n"
+msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "లేదా TMDB పోర్టల్‌లో సృష్టించబడిన కీని మాన్యువల్‌గా నమోదు చేయండి\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "దయచేసి చెల్లుబాటు అయ్యే నగరం పేరును నమోదు చేయండి."
@@ -216,8 +216,8 @@ msgstr "సెట్టింగ్‌లను డిఫాల్ట్ పా�
 msgid "Restart"
 msgstr "పునఃప్రారంభించండి"
 
-msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "E2ని పునఃప్రారంభించండి కానీ మార్పులను వర్తింపజేయవద్దు\\\\\\\\n"
+msgid "Restart E2 but not apply changes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "E2ని పునఃప్రారంభించండి కానీ మార్పులను వర్తింపజేయవద్దు\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "సమాచారం పునఃప్రారంభించండి"
@@ -228,8 +228,8 @@ msgstr "మీ ఎంపికను ఎంచుకోండి"
 msgid "Save"
 msgstr "సేవ్ చేయండి"
 
-msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "xml ఫైల్ కాన్ఫిగర్\\\\\\\\nలో మార్పులను సేవ్ చేయండి మరియు కాపీ చేయండి"
+msgid "Save and Copy changes in the xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "xml ఫైల్ కాన్ఫిగర్\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nలో మార్పులను సేవ్ చేయండి మరియు కాపీ చేయండి"
 
 msgid "Search Code"
 msgstr "శోధన కోడ్"
@@ -342,5 +342,5 @@ msgstr ""
 msgid "play/show Files"
 msgstr "ఫైల్‌లను ప్లే/షో"
 
-msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "వర్చువల్ కీబోర్డ్‌ని ఉపయోగించండి.\\\\\\\\n"
+msgid "use the virtual keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
+msgstr "వర్చువల్ కీబోర్డ్‌ని ఉపయోగించండి.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

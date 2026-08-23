@@ -15,7 +15,7 @@ msgstr ""
 
 #, fuzzy
 msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "    --Importazione automatica dal plugin\\\\\\\\n"
+msgstr "    --Importazione automatica dal plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "--use the virtual keyboard or import from default config plugin"
@@ -23,22 +23,22 @@ msgstr "    --usa la tastiera virtuale o importa dal plugin di configurazione pr
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Add"
 msgstr "Aggiungere"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "         Modalità radio alternativa = Sì\\\\\\\\n"
+msgstr "         Modalità radio alternativa = Sì\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Info ApiKey"
@@ -84,23 +84,23 @@ msgstr "File Commander - Componente aggiuntivo"
 
 #, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\n"
+msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\n"
+msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\n"
+msgstr "    Per utilizzare le copertine TMDB, copia il file apikey nella cartella skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "    Per utilizzare il WeatherPlugin:\\\\\\\\n"
+msgstr "    Per utilizzare il WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use VisualWeather\\\\\\\\n"
-msgstr "    Per utilizzare VisualWeather\\\\\\\\n"
+msgstr "    Per utilizzare VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Nascondi/Mostra"
@@ -178,7 +178,7 @@ msgstr "Risultato della ricerca della posizione MSN"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "         Menu/Impostazione/Interfaccia grafica/Impostazione OSD\\\\\\\\n"
+msgstr "         Menu/Impostazione/Interfaccia grafica/Impostazione OSD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Non trovo %s!"
@@ -200,15 +200,15 @@ msgstr "Apri OAWeather, vuoi continuare?"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "    Oppure inserire manualmente la chiave, creata sul portale OMDB'\\\\\\\\n"
+msgstr "    Oppure inserire manualmente la chiave, creata sul portale OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "    Oppure inserire manualmente la chiave, creata sul portale  THETMDB\\\\\\\\n"
+msgstr "    Oppure inserire manualmente la chiave, creata sul portale  THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "    Oppure inserire manualmente la chiave, creata sul portale TMDB\\\\\\\\n"
+msgstr "    Oppure inserire manualmente la chiave, creata sul portale TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Inserisci un nome di città valido."
@@ -243,7 +243,7 @@ msgstr "Riavvio"
 
 #, fuzzy
 msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "         Riavvia E2 ma non applica le modifiche\\\\\\\\n"
+msgstr "         Riavvia E2 ma non applica le modifiche\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Info Riavvio"
@@ -256,7 +256,7 @@ msgstr "Salva"
 
 #, fuzzy
 msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "         Salva e copia le modifiche nel file xml config\\\\\\\\n"
+msgstr "         Salva e copia le modifiche nel file xml config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Cerca codice"
@@ -372,7 +372,7 @@ msgstr "riprodurre/mostrare file"
 
 #, fuzzy
 msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "    usa la tastiera virtuale.\\\\\\\\n"
+msgstr "    usa la tastiera virtuale.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #~ msgid "Install Options"
 #~ msgstr "Opzioni di installazione"

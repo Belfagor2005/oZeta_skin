@@ -9,8 +9,9 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#, fuzzy
 msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Impor Otomatis dari Plugin\\\\\\\\n"
+msgstr "--Impor Otomatis dari Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--gunakan keyboard virtual atau impor dari plugin konfigurasi default"
@@ -27,8 +28,9 @@ msgstr ""
 msgid "Add"
 msgstr "Menambahkan"
 
+#, fuzzy
 msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Mode Radio Alternatif= Ya\\\\\\\\n"
+msgstr "Mode Radio Alternatif= Ya\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Info ApiKey"
@@ -72,20 +74,25 @@ msgstr "KELUAR"
 msgid "File Commander - Addon"
 msgstr "Komandan File - Addon"
 
+#, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Untuk menggunakan The OMDB Covers, salin file omdbkey di folder skin:\\\\\\\\n"
+msgstr "Untuk menggunakan The OMDB Covers, salin file omdbkey di folder skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Untuk menggunakan TheTMDB Covers, salin file apikey di folder skin:\\\\\\\\n"
+msgstr "Untuk menggunakan TheTMDB Covers, salin file apikey di folder skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Untuk menggunakan The TMDB Covers, salin file apikey di folder skin:\\\\\\\\n"
+msgstr "Untuk menggunakan The TMDB Covers, salin file apikey di folder skin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Untuk menggunakan WeatherPlugin:\\\\\\\\n"
+msgstr "Untuk menggunakan WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Untuk menggunakan VisualWeather\\\\\\\\n"
+msgstr "Untuk menggunakan VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Sembunyikan/Tampilkan"
@@ -156,8 +163,9 @@ msgstr "Kode lokasi"
 msgid "MSN location search result"
 msgstr "Hasil pencarian lokasi MSN"
 
+#, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "Menu/Pengaturan/Antarmuka Grafis/Pengaturan OSD\\\\\\\\n"
+msgstr "Menu/Pengaturan/Antarmuka Grafis/Pengaturan OSD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Hilang %s !"
@@ -177,14 +185,17 @@ msgstr "KULIT OZETA : TERPASANG TAPI TIDAK AKTIF"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Buka OAWeather, ingin melanjutkan?"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal OMDB'\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal THETMDB\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal THETMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "Atau masukkan kunci secara manual, yang dibuat di portal TMDB\\\\\\\\n"
+msgstr "Atau masukkan kunci secara manual, yang dibuat di portal TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Silakan masukkan nama kota yang valid."
@@ -216,8 +227,9 @@ msgstr "Atur Ulang Pengaturan ke Parameter Default?"
 msgid "Restart"
 msgstr "Mulai ulang"
 
+#, fuzzy
 msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "Mulai ulang E2 tetapi tidak menerapkan perubahan\\\\\\\\n"
+msgstr "Mulai ulang E2 tetapi tidak menerapkan perubahan\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Mulai ulang Info"
@@ -228,8 +240,9 @@ msgstr "PILIH PILIHAN ANDA"
 msgid "Save"
 msgstr "Menyimpan"
 
+#, fuzzy
 msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "Simpan dan Salin perubahan pada file xml config\\\\\\\\n"
+msgstr "Simpan dan Salin perubahan pada file xml config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Kode Pencarian"
@@ -342,5 +355,6 @@ msgstr "pengaturan oZ"
 msgid "play/show Files"
 msgstr "memutar/menampilkan File"
 
+#, fuzzy
 msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "gunakan keyboard virtual.\\\\\\\\n"
+msgstr "gunakan keyboard virtual.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"

@@ -15,30 +15,31 @@ msgstr ""
 "X-Poedit-SearchPath-0: plugin.py\n"
 "X-Poedit-SearchPath-1: Uri.py\n"
 
+#, fuzzy
 msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Automatisk import fra plugin\\\\\\\\n"
+msgstr "--Automatisk import fra plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--bruk det virtuelle tastaturet eller importer fra standard konfigurasjonsplugin"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/apikey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "/usr/share/enigma2/oZeta-FHD/thetvdbkey\\\\\\\\n"
-msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\n"
+msgstr "    /usr/share/enigma2/oZeta-FHD/omdbkey\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Add"
 msgstr "Legge til"
 
 #, fuzzy
 msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "     Alternativ radiomodus= Ja\\\\\\\\n"
+msgstr "     Alternativ radiomodus= Ja\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "ApiKey Info"
@@ -84,22 +85,23 @@ msgstr ""
 
 #, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "    For bruk The OMDB Covers, kopier omdbkey-filen i skin-mappen:\\\\\\\\n"
+msgstr "    For bruk The OMDB Covers, kopier omdbkey-filen i skin-mappen:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "    For bruk The TMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\n"
+msgstr "    For bruk The TMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "    For bruk The TMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\n"
+msgstr "    For bruk The TMDB Covers, kopier apikey-filen i skin-mappen:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "For use The WeatherPlugin:\\\\\\\\n"
 msgstr "Installer WeatherPlugin"
 
+#, fuzzy
 msgid "For use VisualWeather\\\\\\\\n"
-msgstr "For bruk VisualWeather\\\\\\\\n"
+msgstr "For bruk VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Skjul/Vis"
@@ -184,7 +186,7 @@ msgstr "MSN plasseringssøkeresultat"
 
 #, fuzzy
 msgid "Menu/Setup/Graphic Interface/OSD Setup\\\\\\\\n"
-msgstr "     Meny/Oppsett/Grafisk grensesnitt/OSD-oppsett\\\\\\\\n"
+msgstr "     Meny/Oppsett/Grafisk grensesnitt/OSD-oppsett\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Missing %s !"
 msgstr "Mangler %s !"
@@ -208,15 +210,15 @@ msgstr "Data som er lagt inn for været, vil du fortsette det samme?"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på OMDB-portalen'\\\\\\\\n"
+msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på OMDB-portalen'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\\\\\\\\n"
+msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\\\\\\\\n"
+msgstr "    Eller skriv inn nøkkelen manuelt, opprettet på TMDB-portalen\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Vennligst skriv inn et gyldig bynavn."
@@ -253,7 +255,7 @@ msgstr "Start på nytt"
 
 #, fuzzy
 msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "     Start E2 på nytt, men ikke bruk endringer\\\\\\\\n"
+msgstr "     Start E2 på nytt, men ikke bruk endringer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "Start Info"
@@ -266,7 +268,7 @@ msgstr "Lagre"
 
 #, fuzzy
 msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "     Lagre og kopier endringer i xml-filens konfigurasjon\\\\\\\\n"
+msgstr "     Lagre og kopier endringer i xml-filens konfigurasjon\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr "Søk kode"
@@ -397,8 +399,9 @@ msgstr "oZoppsett"
 msgid "play/show Files"
 msgstr "spill/vis filer"
 
+#, fuzzy
 msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "bruk det virtuelle tastaturet.\\\\\\\\n"
+msgstr "bruk det virtuelle tastaturet.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #~ msgid "ZPICONS NOT INSTALLED"
 #~ msgstr "ZPICONS IKKE INSTALLERT"

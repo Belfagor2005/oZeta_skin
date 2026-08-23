@@ -9,8 +9,9 @@ msgstr ""
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#, fuzzy
 msgid "--Automatic Import from Plugin\\\\\\\\n"
-msgstr "--Awtomatikong Pag-import mula sa Plugin\\\\\\\\n"
+msgstr "--Awtomatikong Pag-import mula sa Plugin\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "--use the virtual keyboard or import from default config plugin"
 msgstr "--gamitin ang virtual na keyboard o pag-import mula sa default na config plugin"
@@ -27,8 +28,9 @@ msgstr ""
 msgid "Add"
 msgstr "Idagdag"
 
+#, fuzzy
 msgid "Alternative Radio Mode= Yes\\\\\\\\n"
-msgstr "Alternatibong Radio Mode= Oo\\\\\\\\n"
+msgstr "Alternatibong Radio Mode= Oo\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "ApiKey Info"
 msgstr "Impormasyon ng ApiKey"
@@ -72,20 +74,25 @@ msgstr "Lumabas"
 msgid "File Commander - Addon"
 msgstr ""
 
+#, fuzzy
 msgid "For use The OMDB Covers, copy the omdbkey file in the skin folder:\\\\\\\\n"
-msgstr "Para sa paggamit ng The OMDB Covers, kopyahin ang omdbkey file sa skin folder:\\\\\\\\n"
+msgstr "Para sa paggamit ng The OMDB Covers, kopyahin ang omdbkey file sa skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The THETMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Para sa paggamit ng TheTMDB Covers, kopyahin ang apikey file sa skin folder:\\\\\\\\n"
+msgstr "Para sa paggamit ng TheTMDB Covers, kopyahin ang apikey file sa skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The TMDB Covers, copy the apikey file in the skin folder:\\\\\\\\n"
-msgstr "Para sa paggamit ng The TMDB Covers, kopyahin ang apikey file sa skin folder:\\\\\\\\n"
+msgstr "Para sa paggamit ng The TMDB Covers, kopyahin ang apikey file sa skin folder:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use The WeatherPlugin:\\\\\\\\n"
-msgstr "Para sa paggamit ng The WeatherPlugin:\\\\\\\\n"
+msgstr "Para sa paggamit ng The WeatherPlugin:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "For use VisualWeather\\\\\\\\n"
-msgstr "Para sa paggamit ng VisualWeather\\\\\\\\n"
+msgstr "Para sa paggamit ng VisualWeather\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Hide/Show"
 msgstr "Itago/Ipakita"
@@ -177,14 +184,17 @@ msgstr "OZETA SKIN: INSTALED PERO HINDI ACTIVE"
 msgid "Open OAWeather, do you want to continue?"
 msgstr "Buksan ang OAWeather, gusto mo bang magpatuloy?"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the OMDB portal'\\\\\\\\n"
-msgstr "O manu-manong ipasok ang key, na ginawa sa portal ng OMDB'\\\\\\\\n"
+msgstr "O manu-manong ipasok ang key, na ginawa sa portal ng OMDB'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the THETMDB portal\\\\\\\\n"
-msgstr "O manu-manong ipasok ang key, na ginawa sa THETMDB portal\\\\\\\\n"
+msgstr "O manu-manong ipasok ang key, na ginawa sa THETMDB portal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
+#, fuzzy
 msgid "Or manually enter the key, created on the TMDB portal\\\\\\\\n"
-msgstr "O manu-manong ipasok ang key, na ginawa sa portal ng TMDB\\\\\\\\n"
+msgstr "O manu-manong ipasok ang key, na ginawa sa portal ng TMDB\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Please enter a valid city name."
 msgstr "Mangyaring magpasok ng wastong pangalan ng lungsod."
@@ -216,8 +226,9 @@ msgstr "I-reset ang Mga Setting sa Mga Default na Parameter?"
 msgid "Restart"
 msgstr "I-restart"
 
+#, fuzzy
 msgid "Restart E2 but not apply changes\\\\\\\\n"
-msgstr "I-restart ang E2 ngunit huwag ilapat ang mga pagbabago\\\\\\\\n"
+msgstr "I-restart ang E2 ngunit huwag ilapat ang mga pagbabago\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Restart Info"
 msgstr "I-restart ang Impormasyon"
@@ -228,8 +239,9 @@ msgstr "PUMILI NG IYONG PAGPILI"
 msgid "Save"
 msgstr "I-save"
 
+#, fuzzy
 msgid "Save and Copy changes in the xml file config\\\\\\\\n"
-msgstr "I-save at Kopyahin ang mga pagbabago sa xml file config\\\\\\\\n"
+msgstr "I-save at Kopyahin ang mga pagbabago sa xml file config\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Search Code"
 msgstr ""
@@ -342,5 +354,6 @@ msgstr ""
 msgid "play/show Files"
 msgstr "i-play/ipakita ang mga File"
 
+#, fuzzy
 msgid "use the virtual keyboard.\\\\\\\\n"
-msgstr "gamitin ang virtual na keyboard.\\\\\\\\n"
+msgstr "gamitin ang virtual na keyboard.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
